@@ -1,9 +1,8 @@
 
 # AwesomeGasssian
 
-> Contributions welcomed!
 >
-[Surface](#Surface) | [2023](#2023) | [2022](#2022) | [2021](#2021) | [2020](#2020) | [2019](#2019) | [2018](#2018) | [2017](#2017)
+[Surface](#Surface) | [Sparse View](#Sparse) | [Structured](#Structured) | [Large Scale](#Large) | [Generalizable](#Generalizable) | [High Frequency Details](#High) | [Others](#Others) 
 
 
 ## Surface
