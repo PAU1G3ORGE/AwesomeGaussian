@@ -1,4 +1,4 @@
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/2ba638eb-17d2-4dc8-9111-cdfe4baac9df)
+
 # AwesomeGasssian
 
 <br>
