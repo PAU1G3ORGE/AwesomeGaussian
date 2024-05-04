@@ -1,4 +1,4 @@
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/7c0e8c77-e9df-4648-93d4-2627040406d2)![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/2ba638eb-17d2-4dc8-9111-cdfe4baac9df)
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/2ba638eb-17d2-4dc8-9111-cdfe4baac9df)
 # AwesomeGasssian
 
 <br>
@@ -780,8 +780,7 @@ Authors: Navid Rajabi, Jana Kosecka
 <summary><b>Abstract</b></summary>
 Vision and Language Models (VLMs) continue to demonstrate remarkable zero-shot (ZS) performance across various tasks. However, many probing studies have revealed that even the best-performing VLMs struggle to capture aspects of compositional scene understanding, lacking the ability to properly ground and localize linguistic phrases in images. Recent VLM advancements include scaling up both model and dataset sizes, additional training objectives and levels of supervision, and variations in the model architectures. To characterize the grounding ability of VLMs, such as phrase grounding, referring expressions comprehension, and relationship understanding, Pointing Game has been used as an evaluation metric for datasets with bounding box annotations. In this paper, we introduce a novel suite of quantitative metrics that utilize GradCAM activations to rigorously evaluate the grounding capabilities of pre-trained VLMs like CLIP, BLIP, and ALBEF. These metrics offer an explainable and quantifiable approach for a more detailed comparison of the zero-shot capabilities of VLMs and enable measuring models' grounding uncertainty. This characterization reveals interesting tradeoffs between the size of the model, the dataset size, and their performance.
 
-![Uploading image.png…]()
-
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/7c0e8c77-e9df-4648-93d4-2627040406d2)
 
 </details>
 
