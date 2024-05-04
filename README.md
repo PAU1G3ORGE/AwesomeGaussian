@@ -219,7 +219,7 @@ We propose a novel point-based representation, Gaussian surfels, to combine the 
 
 </details>
 
-[📃 arXiv:2404](https://arxiv.org/pdf/2404.17774) | [⌨️ Code] | [🌐 Project Page](https://turandai.github.io/projects/gaussian_surfels/index.html)
+[📃 arXiv:2404](https://arxiv.org/pdf/2404.17774) | [⌨️ Code](https://github.com/turandai/gaussian_surfels) | [🌐 Project Page](https://turandai.github.io/projects/gaussian_surfels/index.html)
 
 
 <br>
