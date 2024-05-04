@@ -250,7 +250,7 @@ The problem of novel view synthesis has grown significantly in popularity recent
 
 </details>
 
-[📃 arXiv:2312](https://arxiv.org/pdf/2312.00206) | [⌨️ Code] | [🌐 Project Page](https://formycat.github.io/SparseGS-Real-Time-360-Sparse-View-Synthesis-using-Gaussian-Splatting/)
+[📃 arXiv:2312](https://arxiv.org/pdf/2312.00206) | [⌨️ Code](https://github.com/ForMyCat/SparseGS) | [🌐 Project Page](https://formycat.github.io/SparseGS-Real-Time-360-Sparse-View-Synthesis-using-Gaussian-Splatting/)
 
 #### <summary>DNGaussian: Optimizing Sparse-View 3D Gaussian Radiance Fields with Global-Local Depth Normalization
 Authors: Jiahe Li, Jiawei Zhang, Xiao Bai, Jin Zheng, Xin Ning, Jun Zhou, Lin Gu
