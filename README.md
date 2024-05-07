@@ -278,7 +278,17 @@ The field of 3D reconstruction from images has rapidly evolved in the past few y
 [📃 arXiv:2403](https://arxiv.org/pdf/2403.19495) | [⌨️ Code] | [🌐 Project Page](https://people.engr.tamu.edu/nimak/Papers/CoherentGS/index.html)
 
 
+#### <summary>A Construct-Optimize Approach to Sparse View Synthesis without Camera Pose
+Authors: Kaiwen Jiang, Yang Fu, Mukund Varma T, Yash Belhe, Xiaolong Wang, Hao Su, Ravi Ramamoorthi
+<details span>
+<summary><b>Abstract</b></summary>
+Novel view synthesis from a sparse set of input images is a challenging problem of great practical interest, especially when camera poses are absent or inaccurate. Direct optimization of camera poses and usage of estimated depths in neural radiance field algorithms usually do not produce good results because of the coupling between poses and depths, and inaccuracies in monocular depth estimation. In this paper, we leverage the recent 3D Gaussian splatting method to develop a novel construct-and-optimize method for sparse view synthesis without camera poses. Specifically, we construct a solution progressively by using monocular depth and projecting pixels back into the 3D world. During construction, we optimize the solution by detecting 2D correspondences between training views and the corresponding rendered images. We develop a unified differentiable pipeline for camera registration and adjustment of both camera poses and depths, followed by back-projection. We also introduce a novel notion of an expected surface in Gaussian splatting, which is critical to our optimization. These steps enable a coarse solution, which can then be low-pass filtered and refined using standard optimization methods. We demonstrate results on the Tanks and Temples and Static Hikes datasets with as few as three widely-spaced views, showing significantly better quality than competing methods, including those with approximate camera pose information. Moreover, our results improve with more views and outperform previous InstantNGP and Gaussian Splatting algorithms even when using half the dataset.
 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/03b3bba4-e9b4-4ff7-977b-15f4ec596be3)
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.03659) | [⌨️ Code] | [🌐 Project Page]
 
 <br>
 <br>
@@ -486,6 +496,20 @@ Authors: Zongxin Ye, Wenyu Li, Sidun Liu, Peng Qiao, Yong Dou
 </details>
 
 [📃 arXiv:2404](https://arxiv.org/pdf/2404.10484.pdf) | [⌨️ Code](https://ty424.github.io/AbsGS.github.io) | [🌐 Project Page]
+
+#### <summary>Spectrally Pruned Gaussian Fields with Neural Compensation
+Authors: Runyi Yang, Zhenxin Zhu, Zhou Jiang, Baijun Ye, Xiaoxue Chen, Yifei Zhang, Yuantao Chen, Jian Zhao, Hao Zhao
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, 3D Gaussian Splatting, as a novel 3D representation, has garnered attention for its fast rendering speed and high rendering quality. However, this comes with high memory consumption, e.g., a well-trained Gaussian field may utilize three million Gaussian primitives and over 700 MB of memory. We credit this high memory footprint to the lack of consideration for the relationship between primitives. In this paper, we propose a memory-efficient Gaussian field named SUNDAE with spectral pruning and neural compensation. On one hand, we construct a graph on the set of Gaussian primitives to model their relationship and design a spectral down-sampling module to prune out primitives while preserving desired signals. On the other hand, to compensate for the quality loss of pruning Gaussians, we exploit a lightweight neural network head to mix splatted features, which effectively compensates for quality losses while capturing the relationship between primitives in its weights. We demonstrate the performance of SUNDAE with extensive results. For example, SUNDAE can achieve 26.80 PSNR at 145 FPS using 104 MB memory while the vanilla Gaussian splatting algorithm achieves 25.60 PSNR at 160 FPS using 523 MB memory, on the Mip-NeRF360 dataset.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/a4d93065-0ce8-4986-8de0-3aea67d3b513)
+ 
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.00676) | [⌨️ Code](https://github.com/RunyiYang/SUNDAE) | [🌐 Project Page](https://runyiyang.github.io/projects/SUNDAE/)
+
+
 
 
 
@@ -786,6 +810,42 @@ Vision and Language Models (VLMs) continue to demonstrate remarkable zero-shot (
 
 [📃 arXiv:2404](https://arxiv.org/pdf/2404.19128) | [⌨️ Code](https://github.com/NavidRajabi/Q-GroundCAM) | [🌐 Project Page]
 
+#### <summary>Depth Priors in Removal Neural Radiance Fields
+Authors: Zhihao Guo, Peng Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Neural Radiance Fields (NeRF) have shown impressive results in 3D reconstruction and generating novel views. A key challenge within NeRF is the editing of reconstructed scenes, such as object removal, which requires maintaining consistency across multiple views and ensuring high-quality synthesised perspectives. Previous studies have incorporated depth priors, typically from LiDAR or sparse depth measurements provided by COLMAP, to improve the performance of object removal in NeRF. However, these methods are either costly or time-consuming. In this paper, we propose a novel approach that integrates monocular depth estimates with NeRF-based object removal models to significantly reduce time consumption and enhance the robustness and quality of scene generation and object removal. We conducted a thorough evaluation of COLMAP's dense depth reconstruction on the KITTI dataset to verify its accuracy in depth map generation. Our findings suggest that COLMAP can serve as an effective alternative to a ground truth depth map where such information is missing or costly to obtain. Additionally, we integrated various monocular depth estimation methods into the removal NeRF model, i.e., SpinNeRF, to assess their capacity to improve object removal performance. Our experimental results highlight the potential of monocular depth estimation to substantially improve NeRF applications.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/0e41b9d8-486f-4608-bdeb-94ecaee77a37)
 
 
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.00630) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>NC-SDF: Enhancing Indoor Scene Reconstruction Using Neural SDFs with View-Dependent Normal Compensation
+Authors: Ziyi Chen, Xiaolong Wu, Yu Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+State-of-the-art neural implicit surface representations have achieved impressive results in indoor scene reconstruction by incorporating monocular geometric priors as additional supervision. However, we have observed that multi-view inconsistency between such priors poses a challenge for high-quality reconstructions. In response, we present NC-SDF, a neural signed distance field (SDF) 3D reconstruction framework with view-dependent normal compensation (NC). Specifically, we integrate view-dependent biases in monocular normal priors into the neural implicit representation of the scene. By adaptively learning and correcting the biases, our NC-SDF effectively mitigates the adverse impact of inconsistent supervision, enhancing both the global consistency and local details in the reconstructions. To further refine the details, we introduce an informative pixel sampling strategy to pay more attention to intricate geometry with higher information content. Additionally, we design a hybrid geometry modeling approach to improve the neural implicit representation. Experiments on synthetic and real-world datasets demonstrate that NC-SDF outperforms existing approaches in terms of reconstruction quality.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/0cc64342-05d2-44c1-adeb-c5aac96d1311)
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.00340) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Learning High-Quality Navigation and Zooming on Omnidirectional Images in Virtual Reality
+Authors: Zidong Cao, Zhan Wang, Yexin Liu, Yan-Pei Cao, Ying Shan, Wei Zeng, Lin Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Viewing omnidirectional images (ODIs) in virtual reality (VR) represents a novel form of media that provides immersive experiences for users to navigate and interact with digital content. Nonetheless, this sense of immersion can be greatly compromised by a blur effect that masks details and hampers the user's ability to engage with objects of interest. In this paper, we present a novel system, called OmniVR, designed to enhance visual clarity during VR navigation. Our system enables users to effortlessly locate and zoom in on the objects of interest in VR. It captures user commands for navigation and zoom, converting these inputs into parameters for the Mobius transformation matrix. Leveraging these parameters, the ODI is refined using a learning-based algorithm. The resultant ODI is presented within the VR media, effectively reducing blur and increasing user engagement. To verify the effectiveness of our system, we first evaluate our algorithm with state-of-the-art methods on public datasets, which achieves the best performance. Furthermore, we undertake a comprehensive user study to evaluate viewer experiences across diverse scenarios and to gather their qualitative feedback from multiple perspectives. The outcomes reveal that our system enhances user engagement by improving the viewers' recognition, reducing discomfort, and improving the overall immersive experience. Our system makes the navigation and zoom more user-friendly.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/dbca84db-2208-4c10-8912-91fdb176d4fa)
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.00351) | [⌨️ Code] | [🌐 Project Page]
 
