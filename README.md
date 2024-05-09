@@ -833,6 +833,23 @@ Dense scene reconstruction for photo-realistic view synthesis has various applic
 [📃 arXiv:2404](https://arxiv.org/pdf/2404.06050.pdf) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>X-Ray: A Sequential 3D Representation for Generation
+Authors: Tao Hu, Wenhang Ge, Yuyang Zhao, Gim Hee Lee
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper, we introduce X-Ray, an innovative approach to 3D generation that employs a new sequential representation, drawing inspiration from the depth-revealing capabilities of X-Ray scans to meticulously capture both the external and internal features of objects. Central to our method is the utilization of ray casting techniques originating from the camera's viewpoint, meticulously recording the geometric and textural details encountered across all intersected surfaces. This process efficiently condenses complete objects or scenes into a multi-frame format, just like videos. Such a structure ensures the 3D representation is composed solely of critical surface information. Highlighting the practicality and adaptability of our X-Ray representation, we showcase its utility in synthesizing 3D objects, employing a network architecture akin to that used in video diffusion models. The outcomes reveal our representation's superior performance in enhancing both the accuracy and efficiency of 3D synthesis, heralding new directions for ongoing research and practical implementations in the field.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/71b52e28-f69a-4aa6-acc3-257e7bf176ff)
+
+
+</details>
+
+[📃 arXiv:2404](https://arxiv.org/pdf/2404.14329) | [⌨️ Code](https://github.com/tau-yihouxiang/X-Ray) | [🌐 Project Page](https://tau-yihouxiang.github.io/projects/X-Ray/X-Ray.html)
+
+
+
+
+
 #### <summary>FDCE-Net: Underwater Image Enhancement with Embedding Frequency and Dual Color Encoder
 Authors: Zheng Cheng, Guodong Fan, Jingchun Zhou, Min Gan, C. L. Philip Chen
 <details span>
