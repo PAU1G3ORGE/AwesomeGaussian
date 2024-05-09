@@ -533,6 +533,21 @@ Recently, 3D Gaussian Splatting, as a novel 3D representation, has garnered atte
 
 ## Others
 
+#### <summary>COLMAP-Free 3D Gaussian Splatting
+Authors: Yang Fu, Sifei Liu, Amey Kulkarni, Jan Kautz, Alexei A. Efros, Xiaolong Wang
+<details span>
+<summary><b>Abstract</b></summary>
+While neural rendering has led to impressive advances in scene reconstruction and novel view synthesis, it relies heavily on accurately pre-computed camera poses. To relax this constraint, multiple efforts have been made to train Neural Radiance Fields (NeRFs) without pre-processed camera poses. However, the implicit representations of NeRFs provide extra challenges to optimize the 3D structure and camera poses at the same time. On the other hand, the recently proposed 3D Gaussian Splatting provides new opportunities given its explicit point cloud representations. This paper leverages both the explicit geometric representation and the continuity of the input video stream to perform novel view synthesis without any SfM preprocessing. We process the input frames in a sequential manner and progressively grow the 3D Gaussians set by taking one input frame at a time, without the need to pre-compute the camera poses. Our method significantly improves over previous approaches in view synthesis and camera pose estimation under large motion changes.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/9c38b2b3-d229-4c27-9f85-22a0390b2a7b)
+
+
+</details>
+
+[📃 arXiv:2312](https://arxiv.org/pdf/2312.07504) | [⌨️ Code] | [🌐 Project Page]
+
+
+
 #### <summary>On the Error Analysis of 3D Gaussian Splatting and an Optimal Projection Strategy
 Authors: Letian Huang, Jiayang Bai, Jie Guo, Yuanqi Li, Yanwen Guo
 <details span>
