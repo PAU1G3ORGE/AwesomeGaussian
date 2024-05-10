@@ -711,6 +711,21 @@ We present Splat-MOVER, a modular robotics stack for open-vocabulary robotic man
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.04378) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>GDGS: Gradient Domain Gaussian Splatting for Sparse Representation of Radiance Fields
+Authors: Yuanhao Gong
+<details span>
+<summary><b>Abstract</b></summary>
+The 3D Gaussian splatting methods are getting popular. However, they work directly on the signal, leading to a dense representation of the signal. Even with some techniques such as pruning or distillation, the results are still dense. In this paper, we propose to model the gradient of the original signal. The gradients are much sparser than the original signal. Therefore, the gradients use much less Gaussian splats, leading to the more efficient storage and thus higher computational performance during both training and rendering. Thanks to the sparsity, during the view synthesis, only a small mount of pixels are needed, leading to much higher computational performance (100∼1000× faster). And the 2D image can be recovered from the gradients via solving a Poisson equation with linear computation complexity. Several experiments are performed to confirm the sparseness of the gradients and the computation performance of the proposed method. The method can be applied various applications, such as human body modeling and indoor environment modeling.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/d9ea9da8-fb06-4f00-9e39-5ed5e548178e)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.05446) | [⌨️ Code] | [🌐 Project Page]
+
+
+
 <br>
 <br>
 
