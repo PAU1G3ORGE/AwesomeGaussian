@@ -19,7 +19,7 @@ Radiance Field methods have recently revolutionized novel-view synthesis of scen
 
 </details>
 
-[📃 arXiv:2311](https://arxiv.org/pdf/2308.04079) | [⌨️ Code](https://github.com/graphdeco-inria/gaussian-splatting) | [🌐 Project Page](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/)
+[📃 arXiv:2308](https://arxiv.org/pdf/2308.04079) | [⌨️ Code](https://github.com/graphdeco-inria/gaussian-splatting) | [🌐 Project Page](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/)
 
 <br>
 
