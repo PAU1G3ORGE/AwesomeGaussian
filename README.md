@@ -1,6 +1,12 @@
 
-# AwesomeGasssian
+# AwesomeGaussian
 
+
+<br>
+
+[Surface](#Surface) | [Sparse View](#Sparse-View) | [Structured](#Structured) | [Large Scale](#Large-Scale) | [Generalizable](#Generalizable) | [High Frequency Details](#High-Frequency-Details) | [Others](#Others) 
+
+<br>
 
 #### 3D Gaussian Splatting for Real-Time Radiance Field Rendering
 Authors: Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis
@@ -14,11 +20,6 @@ Radiance Field methods have recently revolutionized novel-view synthesis of scen
 </details>
 
 [📃 arXiv:2311](https://arxiv.org/pdf/2308.04079) | [⌨️ Code](https://github.com/graphdeco-inria/gaussian-splatting) | [🌐 Project Page](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/)
-
-****
-<br>
-
-[Surface](#Surface) | [Sparse View](#Sparse-View) | [Structured](#Structured) | [Large Scale](#Large-Scale) | [Generalizable](#Generalizable) | [High Frequency Details](#High-Frequency-Details) | [Others](#Others) 
 
 <br>
 
