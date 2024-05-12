@@ -384,6 +384,21 @@ Following the advent of NeRFs, 3D Gaussian Splatting (3DGS) has paved the way to
 
 ## Large Scale
 
+#### <summary>MatrixCity: A Large-scale City Dataset for City-scale Neural Rendering and Beyond
+Authors: Yixuan Li, Lihan Jiang, Linning Xu, Yuanbo Xiangli, Zhenzhi Wang, Dahua Lin, Bo Dai
+<details span>
+<summary><b>Abstract</b></summary>
+Neural radiance fields (NeRF) and its subsequent variants have led to remarkable progress in neural rendering. While most of recent neural rendering works focus on objects and small-scale scenes, developing neural rendering methods for city-scale scenes is of great potential in many real-world applications. However, this line of research is impeded by the absence of a comprehensive and high-quality dataset, yet collecting such a dataset over real city-scale scenes is costly, sensitive, and technically difficult. To this end, we build a large-scale, comprehensive, and high-quality synthetic dataset for city-scale neural rendering researches. Leveraging the Unreal Engine 5 City Sample project, we develop a pipeline to easily collect aerial and street city views, accompanied by ground-truth camera poses and a range of additional data modalities. Flexible controls over environmental factors like light, weather, human and car crowd are also available in our pipeline, supporting the need of various tasks covering city-scale neural rendering and beyond. The resulting pilot dataset, MatrixCity, contains 67k aerial images and 452k street images from two city maps of total size 28km2. On top of MatrixCity, a thorough benchmark is also conducted, which not only reveals unique challenges of the task of city-scale neural rendering, but also highlights potential improvements for future works.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/a77a947a-2c66-42fc-bf47-134a3aa150cc)
+
+
+</details>
+
+[📃 arXiv:2309](https://arxiv.org/pdf/2309.16553) | [⌨️ Code](https://github.com/city-super/MatrixCity) | [🌐 Project Page](https://city-super.github.io/matrixcity/)
+
+
+
 #### <summary>VastGaussian: Vast 3D Gaussians for Large Scene Reconstruction
 Authors: Jiaqi Lin, Zhihao Li, Xiao Tang, Jianzhuang Liu, Shiyong Liu, Jiayue Liu, Yangdi Lu, Xiaofei Wu, Songcen Xu, Youliang Yan, Wenming Yang
 <details span>
