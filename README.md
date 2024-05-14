@@ -238,6 +238,21 @@ We propose a novel point-based representation, Gaussian surfels, to combine the 
 [📃 arXiv:2404](https://arxiv.org/pdf/2404.17774) | [⌨️ Code](https://github.com/turandai/gaussian_surfels) | [🌐 Project Page](https://turandai.github.io/projects/gaussian_surfels/index.html)
 
 
+#### <summary>Direct Learning of Mesh and Appearance via 3D Gaussian Splatting
+Authors: Ancheng Lin, Jun Li
+<details span>
+<summary><b>Abstract</b></summary>
+Accurately reconstructing a 3D scene including explicit geometry information is both attractive and challenging. Geometry reconstruction can benefit from incorporating differentiable appearance models, such as Neural Radiance Fields and 3D Gaussian Splatting (3DGS). In this work, we propose a learnable scene model that incorporates 3DGS with an explicit geometry representation, namely a mesh. Our model learns the mesh and appearance in an end-to-end manner, where we bind 3D Gaussians to the mesh faces and perform differentiable rendering of 3DGS to obtain photometric supervision. The model creates an effective information pathway to supervise the learning of the scene, including the mesh. Experimental results demonstrate that the learned scene model not only achieves state-of-the-art rendering quality but also supports manipulation using the explicit mesh. In addition, our model has a unique advantage in adapting to scene updates, thanks to the end-to-end learning of both mesh and appearance.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/06cbf0f1-83bc-491e-b1d2-ae5294ce4864)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.06945) | [⌨️ Code] | [🌐 Project Page]
+
+
+
 <br>
 <br>
 
@@ -448,7 +463,8 @@ Authors: Yang Liu, He Guan, Chuanchen Luo, Lue Fan, Junran Peng, Zhaoxiang Zhang
 <summary><b>Abstract</b></summary>
 The advancement of real-time 3D scene reconstruction and novel view synthesis has been significantly propelled by 3D Gaussian Splatting (3DGS). However, effectively training large-scale 3DGS and rendering it in real-time across various scales remains challenging. This paper introduces CityGaussian (CityGS), which employs a novel divide-and-conquer training approach and Level-of-Detail (LoD) strategy for efficient large-scale 3DGS training and rendering. Specifically, the global scene prior and adaptive training data selection enables efficient training and seamless fusion. Based on fused Gaussian primitives, we generate different detail levels through compression, and realize fast rendering across various scales through the proposed block-wise detail levels selection and aggregation strategy. Extensive experimental results on large-scale scenes demonstrate that our approach attains state-of-theart rendering quality, enabling consistent real-time rendering of largescale scenes across vastly different scales.
 
-![image](https://github.com/PAU1G3ORGE/AwosomeGaussian/assets/167790336/e7f56168-8979-4708-8269-1e49193d392b)
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/5b8a439a-f6c3-47dc-a713-0c1d59c34f86)
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/4e9d4be3-e13f-463e-8c1c-54cf45734e3a)
 
 
 </details>
@@ -1087,6 +1103,31 @@ Recent progress in large-scale scene rendering has yielded Neural Radiance Field
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.06214) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>MambaOut: Do We Really Need Mamba for Vision?
+Authors: Weihao Yu, Xinchao Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Mamba, an architecture with RNN-like token mixer of state space model (SSM), was recently introduced to address the quadratic complexity of the attention mechanism and subsequently applied to vision tasks. Nevertheless, the performance of Mamba for vision is often underwhelming when compared with convolutional and attention-based models. In this paper, we delve into the essence of Mamba, and conceptually conclude that Mamba is ideally suited for tasks with long-sequence and autoregressive characteristics. For vision tasks, as image classification does not align with either characteristic, we hypothesize that Mamba is not necessary for this task; Detection and segmentation tasks are also not autoregressive, yet they adhere to the long-sequence characteristic, so we believe it is still worthwhile to explore Mamba's potential for these tasks. To empirically verify our hypotheses, we construct a series of models named \emph{MambaOut} through stacking Mamba blocks while removing their core token mixer, SSM. Experimental results strongly support our hypotheses. Specifically, our MambaOut model surpasses all visual Mamba models on ImageNet image classification, indicating that Mamba is indeed unnecessary for this task. As for detection and segmentation, MambaOut cannot match the performance of state-of-the-art visual Mamba models, demonstrating the potential of Mamba for long-sequence visual tasks.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/35d2e85b-1a24-4041-96bf-2dc79c7ec56c)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.07992) | [⌨️ Code](https://github.com/yuweihao/MambaOut) | [🌐 Project Page]
+
+#### <summary>Synergistic Integration of Coordinate Network and Tensorial Feature for Improving Neural Radiance Fields from Sparse Inputs
+Authors: Mingyu Kim, Jun-Seong Kim, Se-Young Yun, Jin-Hwa Kim
+<details span>
+<summary><b>Abstract</b></summary>
+The multi-plane representation has been highlighted for its fast training and inference across static and dynamic neural radiance fields. This approach constructs relevant features via projection onto learnable grids and interpolating adjacent vertices. However, it has limitations in capturing low-frequency details and tends to overuse parameters for low-frequency features due to its bias toward fine details, despite its multi-resolution concept. This phenomenon leads to instability and inefficiency when training poses are sparse. In this work, we propose a method that synergistically integrates multi-plane representation with a coordinate-based network known for strong bias toward low-frequency signals. The coordinate-based network is responsible for capturing low-frequency details, while the multi-plane representation focuses on capturing fine-grained details. We demonstrate that using residual connections between them seamlessly preserves their own inherent properties. Additionally, the proposed progressive training scheme accelerates the disentanglement of these two features. We empirically show that the proposed method achieves comparable results to explicit encoding with fewer parameters, and particularly, it outperforms others for the static and dynamic NeRFs under sparse inputs.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/47f6b29c-231d-45bd-a2d3-42f10dab51cb)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.07857) | [⌨️ Code](https://github.com/MingyuKim87/SynergyNeRF) | [🌐 Project Page](https://mingyukim87.github.io/SynergyNeRF/)
 
 
 
