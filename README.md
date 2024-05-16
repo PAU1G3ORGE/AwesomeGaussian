@@ -1129,6 +1129,31 @@ The multi-plane representation has been highlighted for its fast training and in
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.07857) | [⌨️ Code](https://github.com/MingyuKim87/SynergyNeRF) | [🌐 Project Page](https://mingyukim87.github.io/SynergyNeRF/)
 
+#### <summary>A Simple Approach to Differentiable Rendering of SDFs
+Authors: Zichen Wang, Xi Deng, Ziyi Zhang, Wenzel Jakob, Steve Marschner
+<details span>
+<summary><b>Abstract</b></summary>
+We present a simple algorithm for differentiable rendering of surfaces represented by Signed Distance Fields (SDF), which makes it easy to integrate rendering into gradient-based optimization pipelines. To tackle visibility-related derivatives that make rendering non-differentiable, existing physically based differentiable rendering methods often rely on elaborate guiding data structures or reparameterization with a global impact on variance. In this article, we investigate an alternative that embraces nonzero bias in exchange for low variance and architectural simplicity. Our method expands the lower-dimensional boundary integral into a thin band that is easy to sample when the underlying surface is represented by an SDF. We demonstrate the performance and robustness of our formulation in end-to-end inverse rendering tasks, where it obtains results that are competitive with or superior to existing work.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/d53189f0-df37-498d-9704-18dcb369f54f)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.08733) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>RobustMVS: Single Domain Generalized Deep Multi-view Stereo
+Authors: Hongbin Xu, Weitao Chen, Baigui Sun, Xuansong Xie, Wenxiong Kang
+<details span>
+<summary><b>Abstract</b></summary>
+Despite the impressive performance of Multi-view Stereo (MVS) approaches given plenty of training samples, the performance degradation when generalizing to unseen domains has not been clearly explored yet. In this work, we focus on the domain generalization problem in MVS. To evaluate the generalization results, we build a novel MVS domain generalization benchmark including synthetic and real-world datasets. In contrast to conventional domain generalization benchmarks, we consider a more realistic but challenging scenario, where only one source domain is available for training. The MVS problem can be analogized back to the feature matching task, and maintaining robust feature consistency among views is an important factor for improving generalization performance. To address the domain generalization problem in MVS, we propose a novel MVS framework, namely RobustMVS. A DepthClustering-guided Whitening (DCW) loss is further introduced to preserve the feature consistency among different views, which decorrelates multi-view features from viewpoint-specific style information based on geometric priors from depth maps. The experimental results further show that our method achieves superior performance on the domain generalization benchmark.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/3dfaa398-6f1a-491c-89c5-996ebfb8bb2a)
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.09131) | [⌨️ Code](https://github.com/ToughStoneX/Robust-MVS) | [🌐 Project Page]
+
 
 
 #### <summary>
