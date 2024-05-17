@@ -757,6 +757,34 @@ Authors: Jinwei Lin
 
 
 
+#### <summary>Toon3D: Seeing Cartoons from a New Perspective
+Authors: Ethan Weber, Riley Peterlinz, Rohan Mathur, Frederik Warburg, Alexei A. Efros, Angjoo Kanazawa
+<details span>
+<summary><b>Abstract</b></summary>
+In this work, we recover the underlying 3D structure of non-geometrically consistent scenes. We focus our analysis on hand-drawn images from cartoons and anime. Many cartoons are created by artists without a 3D rendering engine, which means that any new image of a scene is hand-drawn. The hand-drawn images are usually faithful representations of the world, but only in a qualitative sense, since it is difficult for humans to draw multiple perspectives of an object or scene 3D consistently. Nevertheless, people can easily perceive 3D scenes from inconsistent inputs! In this work, we correct for 2D drawing inconsistencies to recover a plausible 3D structure such that the newly warped drawings are consistent with each other. Our pipeline consists of a user-friendly annotation tool, camera pose estimation, and image deformation to recover a dense structure. Our method warps images to obey a perspective camera model, enabling our aligned results to be plugged into novel-view synthesis reconstruction methods to experience cartoons from viewpoints never drawn before.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/a5fc1f90-cfc1-4508-a21a-16380efb7682)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.10320) | [⌨️ Code](https://github.com/ethanweber/toon3d) | [🌐 Project Page](https://toon3d.studio/)
+
+
+#### <summary>From NeRFs to Gaussian Splats, and Back
+Authors: Siming He, Zach Osman, Pratik Chaudhari
+<details span>
+<summary><b>Abstract</b></summary>
+For robotics applications where there is a limited number of (typically ego-centric) views, parametric representations such as neural radiance fields (NeRFs) generalize better than non-parametric ones such as Gaussian splatting (GS) to views that are very different from those in the training data; GS however can render much faster than NeRFs. We develop a procedure to convert back and forth between the two. Our approach achieves the best of both NeRFs (superior PSNR, SSIM, and LPIPS on dissimilar views, and a compact representation) and GS (real-time rendering and ability for easily modifying the representation); the computational cost of these conversions is minor compared to training the two from scratch.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/560d207a-149a-4830-985f-5e45132f712b)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.09717) | [⌨️ Code](https://github.com/grasp-lyrl/NeRFtoGSandBack) | [🌐 Project Page]
+
+
 <br>
 <br>
 
@@ -1154,6 +1182,19 @@ Despite the impressive performance of Multi-view Stereo (MVS) approaches given p
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.09131) | [⌨️ Code](https://github.com/ToughStoneX/Robust-MVS) | [🌐 Project Page]
 
+
+#### <summary>Grounding DINO 1.5: Advance the "Edge" of Open-Set Object Detection
+Authors: Tianhe Ren, Qing Jiang, Shilong Liu, Zhaoyang Zeng, Wenlong Liu, Han Gao, Hongjie Huang, Zhengyu Ma, Xiaoke Jiang, Yihao Chen, Yuda Xiong, Hao Zhang, Feng Li, Peijun Tang, Kent Yu, Lei Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+This paper introduces Grounding DINO 1.5, a suite of advanced open-set object detection models developed by IDEA Research, which aims to advance the "Edge" of open-set object detection. The suite encompasses two models: Grounding DINO 1.5 Pro, a high-performance model designed for stronger generalization capability across a wide range of scenarios, and Grounding DINO 1.5 Edge, an efficient model optimized for faster speed demanded in many applications requiring edge deployment. The Grounding DINO 1.5 Pro model advances its predecessor by scaling up the model architecture, integrating an enhanced vision backbone, and expanding the training dataset to over 20 million images with grounding annotations, thereby achieving a richer semantic understanding. The Grounding DINO 1.5 Edge model, while designed for efficiency with reduced feature scales, maintains robust detection capabilities by being trained on the same comprehensive dataset. Empirical results demonstrate the effectiveness of Grounding DINO 1.5, with the Grounding DINO 1.5 Pro model attaining a 54.3 AP on the COCO detection benchmark and a 55.7 AP on the LVIS-minival zero-shot transfer benchmark, setting new records for open-set object detection. Furthermore, the Grounding DINO 1.5 Edge model, when optimized with TensorRT, achieves a speed of 75.2 FPS while attaining a zero-shot performance of 36.2 AP on the LVIS-minival benchmark, making it more suitable for edge computing scenarios.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/095d0f10-5fe2-440c-a3f0-bc7e0f3ddb05)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.10300) | [⌨️ Code] | [🌐 Project Page](https://deepdataspace.com/home)
 
 
 #### <summary>
