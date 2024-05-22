@@ -1,4 +1,4 @@
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/af7b5470-7390-4958-9cbd-d02a09f62a38)
+
 # AwesomeGaussian
 
 
@@ -896,6 +896,7 @@ Authors: Stavros Diolatzis, Tobias Zirr1, Alexandr Kuznetsov1, Georgios Kopanas,
 <summary><b>Abstract</b></summary>
 In the wake of many new ML-inspired approaches for reconstruct ing and representing high-quality 3D content, recent hybrid and explicitly learned representations exhibit promising performance and quality characteristics. However, their scaling to higher dimen sions is challenging, e.g. when accounting for dynamic content with respect to additional parameters such as material properties, illumination, or time. In this paper, we tackle these challenges for an explicit representations based on Gaussian mixture models. With oursolutions, wearriveatefficientfittingofcompactN-dimensional Gaussian mixtures and enable efficient evaluation at render time: For fast fitting and evaluation, we introduce a high-dimensional culling scheme that efficiently bounds N-D Gaussians, inspired by Locality Sensitive Hashing. For adaptive refinement yet com pact representation, we introduce a loss-adaptive density control scheme that incrementally guides the use of additional capacity towards missing details. With these tools we can for the first time represent complex appearance that depends on many input dimen sions beyond position or viewing angle within a compact, explicit representation optimized in minutes and rendered in milliseconds. 
 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/1d5fb305-a161-4347-9b31-c068c3edfb5b)
 
 
 </details>
