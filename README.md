@@ -1,4 +1,4 @@
-
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/af7b5470-7390-4958-9cbd-d02a09f62a38)
 # AwesomeGaussian
 
 
@@ -252,6 +252,33 @@ Accurately reconstructing a 3D scene including explicit geometry information is 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.06945) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>GarmentDreamer: 3DGS Guided Garment Synthesis with Diverse Geometry and Texture Details
+Authors: Boqian Li, Xuan Li, Ying Jiang, Tianyi Xie, Feng Gao, Huamin Wang, Yin Yang, Chenfanfu Jiang
+<details span>
+<summary><b>Abstract</b></summary>
+Traditional 3D garment creation is labor-intensive, involving sketching, modeling, UV mapping, and texturing, which are time-consuming and costly. Recent advances in diffusion-based generative models have enabled new possibilities for 3D garment generation from text prompts, images, and videos. However, existing methods either suffer from inconsistencies among multi-view images or require additional processes to separate cloth from the underlying human model. In this paper, we propose GarmentDreamer, a novel method that leverages 3D Gaussian Splatting (GS) as guidance to generate wearable, simulation-ready 3D garment meshes from text prompts. In contrast to using multi-view images directly predicted by generative models as guidance, our 3DGS guidance ensures consistent optimization in both garment deformation and texture synthesis. Our method introduces a novel garment augmentation module, guided by normal and RGBA information, and employs implicit Neural Texture Fields (NeTF) combined with Score Distillation Sampling (SDS) to generate diverse geometric and texture details. We validate the effectiveness of our approach through comprehensive qualitative and quantitative experiments, showcasing the superior performance of GarmentDreamer over state-of-the-art alternatives.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/3815dd96-e2f6-4294-aae1-d4bb4868112e)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.12420) | [⌨️ Code] | [🌐 Project Page](https://xuan-li.github.io/GarmentDreamerDemo/)
+
+
+#### <summary>AtomGS: Atomizing Gaussian Splatting for High-Fidelity Radiance Field
+Authors: Rong Liu, Rui Xu, Yue Hu, Meida Chen, Andrew Feng
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has recently advanced radiance field reconstruction by offering superior capabilities for novel view synthesis and real-time rendering speed. However, its strategy of blending optimization and adaptive density control might lead to sub-optimal results; it can sometimes yield noisy geometry and blurry artifacts due to prioritizing optimizing large Gaussians at the cost of adequately densifying smaller ones. To address this, we introduce AtomGS, consisting of Atomized Proliferation and Geometry-Guided Optimization. The Atomized Proliferation constrains ellipsoid Gaussians of various sizes into more uniform-sized Atom Gaussians. The strategy enhances the representation of areas with fine features by placing greater emphasis on densification in accordance with scene details. In addition, we proposed a Geometry-Guided Optimization approach that incorporates an Edge-Aware Normal Loss. This optimization method effectively smooths flat surfaces while preserving intricate details. Our evaluation shows that AtomGS outperforms existing state-of-the-art methods in rendering quality. Additionally, it achieves competitive accuracy in geometry reconstruction and offers a significant improvement in training speed over other SDF-based methods.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/8d35eeff-74da-4ecf-a9c0-d38550cf938f)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.12369) | [⌨️ Code](https://github.com/RongLiu-Leo/AtomGS) | [🌐 Project Page](https://rongliu-leo.github.io/AtomGS/)
+
 
 <br>
 <br>
@@ -320,6 +347,21 @@ Novel view synthesis from a sparse set of input images is a challenging problem 
 </details>
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.03659) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>CoR-GS: Sparse-View 3D Gaussian Splatting via Co-Regularization
+Authors: Jiawei Zhang, Jiahe Li, Xiaohan Yu, Lei Huang, Lin Gu, Jin Zheng, Xiao Bai
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) creates a radiance field consisting of 3D Gaussians to represent a scene. With sparse training views, 3DGS easily suffers from overfitting, negatively impacting the reconstruction quality. This paper introduces a new co-regularization perspective for improving sparse-view 3DGS. When training two 3D Gaussian radiance fields with the same sparse views of a scene, we observe that the two radiance fields exhibit \textit{point disagreement} and \textit{rendering disagreement} that can unsupervisedly predict reconstruction quality, stemming from the sampling implementation in densification. We further quantify the point disagreement and rendering disagreement by evaluating the registration between Gaussians' point representations and calculating differences in their rendered pixels. The empirical study demonstrates the negative correlation between the two disagreements and accurate reconstruction, which allows us to identify inaccurate reconstruction without accessing ground-truth information. Based on the study, we propose CoR-GS, which identifies and suppresses inaccurate reconstruction based on the two disagreements: (\romannumeral1) Co-pruning considers Gaussians that exhibit high point disagreement in inaccurate positions and prunes them. (\romannumeral2) Pseudo-view co-regularization considers pixels that exhibit high rendering disagreement are inaccurately rendered and suppress the disagreement. Results on LLFF, Mip-NeRF360, DTU, and Blender demonstrate that CoR-GS effectively regularizes the scene geometry, reconstructs the compact representations, and achieves state-of-the-art novel view synthesis quality under sparse training views.
+
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.12110) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 <br>
 <br>
@@ -425,7 +467,7 @@ Existing NeRF-based methods for large scene reconstruction often have limitation
 
 </details>
 
-[📃 arXiv:2402](https://arxiv.org/pdf/2402.17427) | [⌨️ Code] | [🌐 Project Page](https://vastgaussian.github.io/)
+[📃 arXiv:2402](https://arxiv.org/pdf/2402.17427) | [⌨️ Code] | [🌐 Project Page](https://vastgaussian.github.io/) | [(unofficial)⌨️ Code](https://github.com/kangpeilun/VastGaussian?tab=readme-ov-file)
 
 
 #### <summary>Octree-GS: Towards Consistent Real-time Rendering with LOD-Structured 3D Gaussians
@@ -521,7 +563,17 @@ We propose MVSplat, an efficient feed-forward 3D Gaussian Splatting model learne
 
 [📃 arXiv:2403](https://arxiv.org/pdf/2403.14627) | [⌨️ Code](https://github.com/donydchen/mvsplat?tab=readme-ov-file) | [🌐 Project Page](https://donydchen.github.io/mvsplat/)
 
+#### <summary>Fast Generalizable Gaussian Splatting Reconstruction from Multi-View Stereo
+Authors: Tianqi Liu, Guangcong Wang, Shoukang Hu, Liao Shen, Xinyi Ye, Yuhang Zang, Zhiguo Cao, Wei Li, Ziwei Liu
+<details span>
+<summary><b>Abstract</b></summary>
+We present MVSGaussian, a new generalizable 3D Gaussian representation approach derived from Multi-View Stereo (MVS) that can efficiently reconstruct unseen scenes. Specifically, 1) we leverage MVS to encode geometry-aware Gaussian representations and decode them into Gaussian parameters. 2) To further enhance performance, we propose a hybrid Gaussian rendering that integrates an efficient volume rendering design for novel view synthesis. 3) To support fast fine-tuning for specific scenes, we introduce a multi-view geometric consistent aggregation strategy to effectively aggregate the point clouds generated by the generalizable model, serving as the initialization for per-scene optimization. Compared with previous generalizable NeRF-based methods, which typically require minutes of fine-tuning and seconds of rendering per image, MVSGaussian achieves real-time rendering with better synthesis quality for each scene. Compared with the vanilla 3D-GS, MVSGaussian achieves better view synthesis with less training computational cost. Extensive experiments on DTU, Real Forward-facing, NeRF Synthetic, and Tanks and Temples datasets validate that MVSGaussian attains state-of-the-art performance with convincing generalizability, real-time rendering speed, and fast per-scene optimization.
 
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.12218) | [⌨️ Code](https://github.com/TQTQliu/MVSGaussian) | [🌐 Project Page](https://mvsgaussian.github.io/)
 
 <br>
 <br>
@@ -783,6 +835,72 @@ For robotics applications where there is a limited number of (typically ego-cent
 </details>
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.09717) | [⌨️ Code](https://github.com/grasp-lyrl/NeRFtoGSandBack) | [🌐 Project Page]
+
+#### <summary>MirrorGaussian: Reflecting 3D Gaussians for Reconstructing Mirror Reflections
+Authors: Jiayue Liu, Xiao Tang, Freeman Cheng, Roy Yang, Zhihao Li, Jianzhuang Liu, Yi Huang, Jiaqi Lin, Shiyong Liu, Xiaofei Wu, Songcen Xu, Chun Yuan
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting showcases notable advancements in photo-realistic and real-time novel view synthesis. However, it faces challenges in modeling mirror reflections, which exhibit substantial appearance variations from different viewpoints. To tackle this problem, we present MirrorGaussian, the first method for mirror scene reconstruction with real-time rendering based on 3D Gaussian Splatting. The key insight is grounded on the mirror symmetry between the real-world space and the virtual mirror space. We introduce an intuitive dual-rendering strategy that enables differentiable rasterization of both the real-world 3D Gaussians and the mirrored counterpart obtained by reflecting the former about the mirror plane. All 3D Gaussians are jointly optimized with the mirror plane in an end-to-end framework. MirrorGaussian achieves high-quality and real-time rendering in scenes with mirrors, empowering scene editing like adding new mirrors and objects. Comprehensive experiments on multiple datasets demonstrate that our approach significantly outperforms existing methods, achieving state-of-the-art results.
+
+![image]()
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.11921) | [⌨️ Code] | [🌐 Project Page](https://mirror-gaussian.github.io/)
+
+
+#### <summary>MotionGS : Compact Gaussian Splatting SLAM by Motion Filter
+Authors: Xinli Guo, Peng Han, Weidong Zhang, Hongtian Chen
+<details span>
+<summary><b>Abstract</b></summary>
+With their high-fidelity scene representation capability, the attention of SLAM field is deeply attracted by the Neural Radiation Field (NeRF) and 3D Gaussian Splatting (3DGS). Recently, there has been a Surge in NeRF-based SLAM, while 3DGS-based SLAM is sparse. A novel 3DGS-based SLAM approach with a fusion of deep visual feature, dual keyframe selection and 3DGS is presented in this paper. Compared with the existing methods, the proposed selectively tracking is achieved by feature extraction and motion filter on each frame. The joint optimization of pose and 3D Gaussian runs through the entire mapping process. Additionally, the coarse-to-fine pose estimation and compact Gaussian scene representation are implemented by dual keyfeature selection and novel loss functions. Experimental results demonstrate that the proposed algorithm not only outperforms the existing methods in tracking and mapping, but also has less memory usage.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/96902341-c270-4797-a390-01cf276ff717)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.11129) | [⌨️ Code](https://github.com/Antonio521/MotionGS) | [🌐 Project Page]
+
+#### <summary>Gaussian Control with Hierarchical Semantic Graphs in 3D Human Recovery
+Authors: Hongsheng Wang, Weiyue Zhang, Sihao Liu, Xinrui Zhou, Shengyu Zhang, Fei Wu, Feng Lin
+<details span>
+<summary><b>Abstract</b></summary>
+Although 3D Gaussian Splatting (3DGS) has recently made progress in 3D human reconstruction, it primarily relies on 2D pixel-level supervision, overlooking the geometric complexity and topological relationships of different body parts. To address this gap, we introduce the Hierarchical Graph Human Gaussian Control (HUGS) framework for achieving high-fidelity 3D human reconstruction. Our approach involves leveraging explicitly semantic priors of body parts to ensure the consistency of geometric topology, thereby enabling the capture of the complex geometrical and topological associations among body parts. Additionally, we disentangle high-frequency features from global human features to refine surface details in body parts. Extensive experiments demonstrate that our method exhibits superior performance in human body reconstruction, particularly in enhancing surface details and accurately reconstructing body part junctions.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/012023eb-2fd6-4172-b112-1786a9a760c4)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.12477) | [⌨️ Code](https://github.com/3DHumanRehab/SemanticGraph-Gaussian) | [🌐 Project Page](https://wanghongsheng01.github.io/HUGS/)
+
+
+#### <summary>LAGA: Layered 3D Avatar Generation and Customization via Gaussian Splatting
+Authors: Jia Gong, Shenyu Ji, Lin Geng Foo, Kang Chen, Hossein Rahmani, Jun Liu
+<details span>
+<summary><b>Abstract</b></summary>
+Creating and customizing a 3D clothed avatar from textual descriptions is a critical and challenging task. Traditional methods often treat the human body and clothing as inseparable, limiting users' ability to freely mix and match garments. In response to this limitation, we present LAyered Gaussian Avatar (LAGA), a carefully designed framework enabling the creation of high-fidelity decomposable avatars with diverse garments. By decoupling garments from avatar, our framework empowers users to conviniently edit avatars at the garment level. Our approach begins by modeling the avatar using a set of Gaussian points organized in a layered structure, where each layer corresponds to a specific garment or the human body itself. To generate high-quality garments for each layer, we introduce a coarse-to-fine strategy for diverse garment generation and a novel dual-SDS loss function to maintain coherence between the generated garments and avatar components, including the human body and other garments. Moreover, we introduce three regularization losses to guide the movement of Gaussians for garment transfer, allowing garments to be freely transferred to various avatars. Extensive experimentation demonstrates that our approach surpasses existing methods in the generation of 3D clothed humans.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/0970f45a-e7ae-4ba0-aab2-d64cc122e9c9)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.12663) | [⌨️ Code] | [🌐 Project Page](https://gongjia0208.github.io/LAGA/)
+
+
+#### <summary>N-Dimensional Gaussians for Fitting of High Dimensional
+Authors: Stavros Diolatzis, Tobias Zirr1, Alexandr Kuznetsov1, Georgios Kopanas, Anton Kaplanyan1
+<details span>
+<summary><b>Abstract</b></summary>
+In the wake of many new ML-inspired approaches for reconstruct ing and representing high-quality 3D content, recent hybrid and explicitly learned representations exhibit promising performance and quality characteristics. However, their scaling to higher dimen sions is challenging, e.g. when accounting for dynamic content with respect to additional parameters such as material properties, illumination, or time. In this paper, we tackle these challenges for an explicit representations based on Gaussian mixture models. With oursolutions, wearriveatefficientfittingofcompactN-dimensional Gaussian mixtures and enable efficient evaluation at render time: For fast fitting and evaluation, we introduce a high-dimensional culling scheme that efficiently bounds N-D Gaussians, inspired by Locality Sensitive Hashing. For adaptive refinement yet com pact representation, we introduce a loss-adaptive density control scheme that incrementally guides the use of additional capacity towards missing details. With these tools we can for the first time represent complex appearance that depends on many input dimen sions beyond position or viewing angle within a compact, explicit representation optimized in minutes and rendered in milliseconds. 
+
+
+
+</details>
+
+[📃 arXiv:24xx](https://www.sdiolatz.info/ndg-fitting/static/files/ngd-paper-compressed.pdf) | [⌨️ Code] | [🌐 Project Page](https://www.sdiolatz.info/ndg-fitting/)
 
 
 <br>
@@ -1195,6 +1313,104 @@ This paper introduces Grounding DINO 1.5, a suite of advanced open-set object de
 </details>
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.10300) | [⌨️ Code] | [🌐 Project Page](https://deepdataspace.com/home)
+
+
+#### <summary>GEOcc: Geometrically Enhanced 3D Occupancy Network with Implicit-Explicit Depth Fusion and Contextual Self-Supervision
+Authors: Xin Tan, Wenbin Wu, Zhiwei Zhang, Chaojie Fan, Yong Peng, Zhizhong Zhang, Yuan Xie, Lizhuang Ma
+<details span>
+<summary><b>Abstract</b></summary>
+3D occupancy perception holds a pivotal role in recent vision-centric autonomous driving systems by converting surround-view images into integrated geometric and semantic representations within dense 3D grids. Nevertheless, current models still encounter two main challenges: modeling depth accurately in the 2D-3D view transformation stage, and overcoming the lack of generalizability issues due to sparse LiDAR supervision. To address these issues, this paper presents GEOcc, a Geometric-Enhanced Occupancy network tailored for vision-only surround-view perception. Our approach is three-fold: 1) Integration of explicit lift-based depth prediction and implicit projection-based transformers for depth modeling, enhancing the density and robustness of view transformation. 2) Utilization of mask-based encoder-decoder architecture for fine-grained semantic predictions; 3) Adoption of context-aware self-training loss functions in the pertaining stage to complement LiDAR supervision, involving the re-rendering of 2D depth maps from 3D occupancy features and leveraging image reconstruction loss to obtain denser depth supervision besides sparse LiDAR ground-truths. Our approach achieves State-Of-The-Art performance on the Occ3D-nuScenes dataset with the least image resolution needed and the most weightless image backbone compared with current models, marking an improvement of 3.3% due to our proposed contributions. Comprehensive experimentation also demonstrates the consistent superiority of our method over baselines and alternative approaches.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/715c4890-3386-4326-91da-0c7888ed9594)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.10591) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>NeRO: Neural Road Surface Reconstruction
+Authors: Ruibo Wang, Song Zhang, Ping Huang, Donghai Zhang, Haoyu Chen
+<details span>
+<summary><b>Abstract</b></summary>
+In computer vision and graphics, the accurate reconstruction of road surfaces is pivotal for various applications, especially in autonomous driving. This paper introduces a novel method leveraging the Multi-Layer Perceptrons (MLPs) framework to reconstruct road surfaces in height, color, and semantic information by input world coordinates x and y. Our approach NeRO uses encoding techniques based on MLPs, significantly improving the performance of the complex details, speeding up the training speed, and reducing neural network size. The effectiveness of this method is demonstrated through its superior performance, which indicates a promising direction for rendering road surfaces with semantics applications, particularly in applications demanding visualization of road conditions, 4D labeling, and semantic groupings.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/337a5755-d649-4002-8c1b-c0d35c935da4)
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.10554) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>Nonparametric Teaching of Implicit Neural Representations
+Authors: Chen Zhang, Steven Tin Sui Luo, Jason Chun Lok Li, Yik-Chung Wu, Ngai Wong
+<details span>
+<summary><b>Abstract</b></summary>
+We investigate the learning of implicit neural representation (INR) using an overparameterized multilayer perceptron (MLP) via a novel nonparametric teaching perspective. The latter offers an efficient example selection framework for teaching nonparametrically defined (viz. non-closed-form) target functions, such as image functions defined by 2D grids of pixels. To address the costly training of INRs, we propose a paradigm called Implicit Neural Teaching (INT) that treats INR learning as a nonparametric teaching problem, where the given signal being fitted serves as the target function. The teacher then selects signal fragments for iterative training of the MLP to achieve fast convergence. By establishing a connection between MLP evolution through parameter-based gradient descent and that of function evolution through functional gradient descent in nonparametric teaching, we show for the first time that teaching an overparameterized MLP is consistent with teaching a nonparametric learner. This new discovery readily permits a convenient drop-in of nonparametric teaching algorithms to broadly enhance INR training efficiency, demonstrating 30%+ training time savings across various input modalities.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/851d1748-05ef-49a3-8f3c-fcd76bb5284e)
+
+
+</details>
+
+[📃 arXiv:2405](https://export.arxiv.org/pdf/2405.10531) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>NPLMV-PS: Neural Point-Light Multi-View Photometric Stereo
+Authors: Fotios Logothetis, Ignas Budvytis, Roberto Cipolla
+<details span>
+<summary><b>Abstract</b></summary>
+In this work we present a novel multi-view photometric stereo (PS) method. Like many works in 3D reconstruction we are leveraging neural shape representations and learnt renderers. However, our work differs from the state-of-the-art multi-view PS methods such as PS-NeRF or SuperNormal we explicity leverage per-pixel intensity renderings rather than relying mainly on estimated normals.
+We model point light attenuation and explicitly raytrace cast shadows in order to best approximate each points incoming radiance. This is used as input to a fully neural material renderer that uses minimal prior assumptions and it is jointly optimised with the surface. Finally, estimated normal and segmentation maps can also incorporated in order to maximise the surface accuracy.
+Our method is among the first to outperform the classical approach of DiLiGenT-MV and achieves average 0.2mm Chamfer distance for objects imaged at approx 1.5m distance away with approximate 400x400 resolution. Moreover, we show robustness to poor normals in low light count scenario, achieving 0.27mm Chamfer distance when pixel rendering is used instead of estimated normals.
+
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.12057) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Dusk Till Dawn: Self-supervised Nighttime Stereo Depth Estimation using Visual Foundation Models
+Authors: Madhu Vankadari, Samuel Hodgson, Sangyun Shin, Kaichen Zhou Andrew Markham, Niki Trigoni
+<details span>
+<summary><b>Abstract</b></summary>
+Self-supervised depth estimation algorithms rely heavily on frame-warping relationships, exhibiting substantial performance degradation when applied in challenging circumstances, such as low-visibility and nighttime scenarios with varying illumination conditions. Addressing this challenge, we introduce an algorithm designed to achieve accurate self-supervised stereo depth estimation focusing on nighttime conditions. Specifically, we use pretrained visual foundation models to extract generalised features across challenging scenes and present an efficient method for matching and integrating these features from stereo frames. Moreover, to prevent pixels violating photometric consistency assumption from negatively affecting the depth predictions, we propose a novel masking approach designed to filter out such pixels. Lastly, addressing weaknesses in the evaluation of current depth estimation algorithms, we present novel evaluation metrics. Our experiments, conducted on challenging datasets including Oxford RobotCar and Multi-Spectral Stereo, demonstrate the robust improvements realized by our approach.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/136ab000-6390-4df6-85af-643362bdbbad)
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.11158) | [⌨️ Code](https://github.com/madhubabuv/dtd) | [🌐 Project Page]
+
+
+
+
+
+
+#### <summary>OmniGlue: Generalizable Feature Matching with Foundation Model Guidance
+Authors: Hanwen Jiang, Arjun Karpur, Bingyi Cao, Qixing Huang, Andre Araujo
+<details span>
+<summary><b>Abstract</b></summary>
+The image matching field has been witnessing a continuous emergence of novel learnable feature matching techniques, with ever-improving performance on conventional benchmarks. However, our investigation shows that despite these gains, their potential for real-world applications is restricted by their limited generalization capabilities to novel image domains. In this paper, we introduce OmniGlue, the first learnable image matcher that is designed with generalization as a core principle. OmniGlue leverages broad knowledge from a vision foundation model to guide the feature matching process, boosting generalization to domains not seen at training time. Additionally, we propose a novel keypoint position-guided attention mechanism which disentangles spatial and appearance information, leading to enhanced matching descriptors. We perform comprehensive experiments on a suite of 7 datasets with varied image domains, including scene-level, object-centric and aerial images. OmniGlue's novel components lead to relative gains on unseen domains of 20.9% with respect to a directly comparable reference model, while also outperforming the recent LightGlue method by 9.5% relatively.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/00e16630-dc75-4ec2-bd85-858228ff4809)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.12979) | [⌨️ Code](https://github.com/google-research/omniglue) | [🌐 Project Page](https://hwjiang1510.github.io/OmniGlue/)
+
+
+#### <summary>Rethink Predicting the Optical Flow with the Kinetics Perspective
+Authors: Yuhao Cheng, Siru Zhang, Yiqiang Yan
+<details span>
+<summary><b>Abstract</b></summary>
+Optical flow estimation is one of the fundamental tasks in low-level computer vision, which describes the pixel-wise displacement and can be used in many other tasks. From the apparent aspect, the optical flow can be viewed as the correlation between the pixels in consecutive frames, so continuously refining the correlation volume can achieve an outstanding performance. However, it will make the method have a catastrophic computational complexity. Not only that, the error caused by the occlusion regions of the successive frames will be amplified through the inaccurate warp operation. These challenges can not be solved only from the apparent view, so this paper rethinks the optical flow estimation from the kinetics viewpoint.We propose a method combining the apparent and kinetics information from this motivation. The proposed method directly predicts the optical flow from the feature extracted from images instead of building the correlation volume, which will improve the efficiency of the whole network. Meanwhile, the proposed method involves a new differentiable warp operation that simultaneously considers the warping and occlusion. Moreover, the proposed method blends the kinetics feature with the apparent feature through the novel self-supervised loss function. Furthermore, comprehensive experiments and ablation studies prove that the proposed novel insight into how to predict the optical flow can achieve the better performance of the state-of-the-art methods, and in some metrics, the proposed method outperforms the correlation-based method, especially in situations containing occlusion and fast moving.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/a3c2e981-f565-45cc-a5f6-8bf19661a35d)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.12512) | [⌨️ Code](https://github.com/YuhaoCheng/OpticalFlow_Kinetic) | [🌐 Project Page]
 
 
 #### <summary>
