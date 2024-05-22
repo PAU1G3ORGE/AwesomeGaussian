@@ -252,18 +252,6 @@ Accurately reconstructing a 3D scene including explicit geometry information is 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.06945) | [⌨️ Code] | [🌐 Project Page]
 
 
-#### <summary>GarmentDreamer: 3DGS Guided Garment Synthesis with Diverse Geometry and Texture Details
-Authors: Boqian Li, Xuan Li, Ying Jiang, Tianyi Xie, Feng Gao, Huamin Wang, Yin Yang, Chenfanfu Jiang
-<details span>
-<summary><b>Abstract</b></summary>
-Traditional 3D garment creation is labor-intensive, involving sketching, modeling, UV mapping, and texturing, which are time-consuming and costly. Recent advances in diffusion-based generative models have enabled new possibilities for 3D garment generation from text prompts, images, and videos. However, existing methods either suffer from inconsistencies among multi-view images or require additional processes to separate cloth from the underlying human model. In this paper, we propose GarmentDreamer, a novel method that leverages 3D Gaussian Splatting (GS) as guidance to generate wearable, simulation-ready 3D garment meshes from text prompts. In contrast to using multi-view images directly predicted by generative models as guidance, our 3DGS guidance ensures consistent optimization in both garment deformation and texture synthesis. Our method introduces a novel garment augmentation module, guided by normal and RGBA information, and employs implicit Neural Texture Fields (NeTF) combined with Score Distillation Sampling (SDS) to generate diverse geometric and texture details. We validate the effectiveness of our approach through comprehensive qualitative and quantitative experiments, showcasing the superior performance of GarmentDreamer over state-of-the-art alternatives.
-
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/3815dd96-e2f6-4294-aae1-d4bb4868112e)
-
-
-</details>
-
-[📃 arXiv:2405](https://arxiv.org/pdf/2405.12420) | [⌨️ Code] | [🌐 Project Page](https://xuan-li.github.io/GarmentDreamerDemo/)
 
 
 #### <summary>AtomGS: Atomizing Gaussian Splatting for High-Fidelity Radiance Field
@@ -862,6 +850,22 @@ With their high-fidelity scene representation capability, the attention of SLAM 
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.11129) | [⌨️ Code](https://github.com/Antonio521/MotionGS) | [🌐 Project Page]
 
+
+
+#### <summary>GarmentDreamer: 3DGS Guided Garment Synthesis with Diverse Geometry and Texture Details
+Authors: Boqian Li, Xuan Li, Ying Jiang, Tianyi Xie, Feng Gao, Huamin Wang, Yin Yang, Chenfanfu Jiang
+<details span>
+<summary><b>Abstract</b></summary>
+Traditional 3D garment creation is labor-intensive, involving sketching, modeling, UV mapping, and texturing, which are time-consuming and costly. Recent advances in diffusion-based generative models have enabled new possibilities for 3D garment generation from text prompts, images, and videos. However, existing methods either suffer from inconsistencies among multi-view images or require additional processes to separate cloth from the underlying human model. In this paper, we propose GarmentDreamer, a novel method that leverages 3D Gaussian Splatting (GS) as guidance to generate wearable, simulation-ready 3D garment meshes from text prompts. In contrast to using multi-view images directly predicted by generative models as guidance, our 3DGS guidance ensures consistent optimization in both garment deformation and texture synthesis. Our method introduces a novel garment augmentation module, guided by normal and RGBA information, and employs implicit Neural Texture Fields (NeTF) combined with Score Distillation Sampling (SDS) to generate diverse geometric and texture details. We validate the effectiveness of our approach through comprehensive qualitative and quantitative experiments, showcasing the superior performance of GarmentDreamer over state-of-the-art alternatives.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/3815dd96-e2f6-4294-aae1-d4bb4868112e)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.12420) | [⌨️ Code] | [🌐 Project Page](https://xuan-li.github.io/GarmentDreamerDemo/)
+
+
 #### <summary>Gaussian Control with Hierarchical Semantic Graphs in 3D Human Recovery
 Authors: Hongsheng Wang, Weiyue Zhang, Sihao Liu, Xinrui Zhou, Shengyu Zhang, Fei Wu, Feng Lin
 <details span>
@@ -888,6 +892,7 @@ Creating and customizing a 3D clothed avatar from textual descriptions is a crit
 </details>
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.12663) | [⌨️ Code] | [🌐 Project Page](https://gongjia0208.github.io/LAGA/)
+
 
 
 #### <summary>N-Dimensional Gaussians for Fitting of High Dimensional
