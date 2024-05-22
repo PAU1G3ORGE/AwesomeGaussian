@@ -620,6 +620,20 @@ Recently, 3D Gaussian Splatting, as a novel 3D representation, has garnered atte
 
 ## Others
 
+#### <summary>Multi-Scale 3D Gaussian Splatting for Anti-Aliased Rendering
+Authors: Zhiwen Yan, Weng Fei Low, Yu Chen, Gim Hee Lee
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussians have recently emerged as a highly efficient representation for 3D reconstruction and rendering. Despite its high rendering quality and speed at high resolutions, they both deteriorate drastically when rendered at lower resolutions or from far away camera position. During low resolution or far away rendering, the pixel size of the image can fall below the Nyquist frequency compared to the screen size of each splatted 3D Gaussian and leads to aliasing effect. The rendering is also drastically slowed down by the sequential alpha blending of more splatted Gaussians per pixel. To address these issues, we propose a multi-scale 3D Gaussian splatting algorithm, which maintains Gaussians at different scales to represent the same scene. Higher-resolution images are rendered with more small Gaussians, and lower-resolution images are rendered with fewer larger Gaussians. With similar training time, our algorithm can achieve 13\%-66\% PSNR and 160\%-2400\% rendering speed improvement at 4×-128× scale rendering on Mip-NeRF360 dataset compared to the single scale 3D Gaussian splatting.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/9c38b2b3-d229-4c27-9f85-22a0390b2a7b)
+
+
+</details>
+
+[📃 arXiv:2311](https://arxiv.org/pdf/2311.17089) | [⌨️ Code](https://github.com/JokerYan/MS-GS/tree/main) | [🌐 Project Page](https://jokeryan.github.io/projects/ms-gs/)
+
+
 #### <summary>COLMAP-Free 3D Gaussian Splatting
 Authors: Yang Fu, Sifei Liu, Amey Kulkarni, Jan Kautz, Alexei A. Efros, Xiaolong Wang
 <details span>
