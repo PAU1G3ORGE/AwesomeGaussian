@@ -613,6 +613,25 @@ Recently, 3D Gaussian Splatting, as a novel 3D representation, has garnered atte
 
 ## Others
 
+
+#### <summary>Point-Based Neural Rendering with Per-View Optimization
+
+>  *whats the diference between this paper and 3D gaussian splatting?*
+
+Authors: Georgios Kopanas, Julien Philip, Thomas Leimkühler, George Drettakis
+<details span>
+<summary><b>Abstract</b></summary>
+There has recently been great interest in neural rendering methods. Some approaches use 3D geometry reconstructed with Multi-View Stereo (MVS) but cannot recover from the errors of this process, while others directly learn a volumetric neural representation, but suffer from expensive training and inference. We introduce a general approach that is initialized with MVS, but allows further optimization of scene properties in the space of input views, including depth and reprojected features, resulting in improved novel-view synthesis. A key element of our approach is our new differentiable point-based pipeline, based on bi-directional Elliptical Weighted Average splatting, a probabilistic depth test and effective camera selection. We use these elements together in our neural renderer, that outperforms all previous methods both in quality and speed in almost all scenes we tested. Our pipeline can be applied to multi-view harmonization and stylization in addition to novel-view synthesis.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/79790b26-a993-4a5c-9c01-b5921c74bf39)
+
+
+</details>
+
+[📃 arXiv:2109](https://arxiv.org/pdf/2109.02369) | [⌨️ Code](https://github.com/daipengwa/Neural-Point-Cloud-Rendering-via-Multi-Plane-Projection) | [🌐 Project Page](https://daipengwa.github.io/NeuralPointCloudRendering_ProjectPage/)
+
+
+
 #### <summary>Multi-Scale 3D Gaussian Splatting for Anti-Aliased Rendering
 Authors: Zhiwen Yan, Weng Fei Low, Yu Chen, Gim Hee Lee
 <details span>
@@ -698,6 +717,32 @@ During the Gaussian Splatting optimization process, the scene’s geometry can g
 
 [📃 arXiv:2403](https://arxiv.org/pdf/2403.11324) | [⌨️ Code](https://github.com/yanyan-li/GeoGaussian) | [🌐 Project Page](https://yanyan-li.github.io/project/gs/geogaussian)
 
+
+#### <summary>RadSplat: Radiance Field-Informed Gaussian Splatting for Robust Real-Time Rendering with 900+ FPS
+Authors: Michael Niemeyer, Fabian Manhardt, Marie-Julie Rakotosaona, Michael Oechsle, Daniel Duckworth, Rama Gosula, Keisuke Tateno, John Bates, Dominik Kaeser, Federico Tombari
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advances in view synthesis and real-time rendering have achieved photorealistic quality at impressive rendering speeds. While Radiance Field-based methods achieve state-of-the-art quality in challenging scenarios such as in-the-wild captures and large-scale scenes, they often suffer from excessively high compute requirements linked to volumetric rendering. Gaussian Splatting-based methods, on the other hand, rely on rasterization and naturally achieve real-time rendering but suffer from brittle optimization heuristics that underperform on more challenging scenes. In this work, we present RadSplat, a lightweight method for robust real-time rendering of complex scenes. Our main contributions are threefold. First, we use radiance fields as a prior and supervision signal for optimizing point-based scene representations, leading to improved quality and more robust optimization. Next, we develop a novel pruning technique reducing the overall point count while maintaining high quality, leading to smaller and more compact scene representations with faster inference speeds. Finally, we propose a novel test-time filtering approach that further accelerates rendering and allows to scale to larger, house-sized scenes. We find that our method enables state-of-the-art synthesis of complex captures at 900+ FPS.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/f79836ac-ec64-4b5b-b3c8-fa08e3e4782f)
+
+</details>
+
+
+[📃 arXiv:2403](https://arxiv.org/pdf/2403.13806) | [⌨️ Code] | [🌐 Project Page](https://m-niemeyer.github.io/radsplat/)
+
+#### <summary>Analytic-Splatting: Anti-Aliased 3D Gaussian Splatting via Analytic Integration
+Authors: Zhihao Liang, Qi Zhang, Wenbo Hu, Ying Feng, Lei Zhu, Kui Jia
+<details span>
+<summary><b>Abstract</b></summary>
+The 3D Gaussian Splatting (3DGS) gained its popularity recently by combining the advantages of both primitive-based and volumetric 3D representations, resulting in improved quality and efficiency for 3D scene rendering. However, 3DGS is not alias-free, and its rendering at varying resolutions could produce severe blurring or jaggies. This is because 3DGS treats each pixel as an isolated, single point rather than as an area, causing insensitivity to changes in the footprints of pixels. Consequently, this discrete sampling scheme inevitably results in aliasing, owing to the restricted sampling bandwidth. In this paper, we derive an analytical solution to address this issue. More specifically, we use a conditioned logistic function as the analytic approximation of the cumulative distribution function (CDF) in a one-dimensional Gaussian signal and calculate the Gaussian integral by subtracting the CDFs. We then introduce this approximation in the two-dimensional pixel shading, and present Analytic-Splatting, which analytically approximates the Gaussian integral within the 2D-pixel window area to better capture the intensity response of each pixel. Moreover, we use the approximated response of the pixel window integral area to participate in the transmittance calculation of volume rendering, making Analytic-Splatting sensitive to the changes in pixel footprint at different resolutions. Experiments on various datasets validate that our approach has better anti-aliasing capability that gives more details and better fidelity.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/f79836ac-ec64-4b5b-b3c8-fa08e3e4782f)
+
+</details>
+
+
+[📃 arXiv:2403](https://arxiv.org/pdf/2403.11056) | [⌨️ Code](https://github.com/lzhnb/Analytic-Splatting) | [🌐 Project Page](https://lzhnb.github.io/project-pages/analytic-splatting/)
 
 
 #### <summary>EGGS: Edge Guided Gaussian Splatting for Radiance Fields
@@ -785,7 +830,17 @@ We propose GS-LRM, a scalable large reconstruction model that can predict high-q
 [📃 arXiv:2404](https://arxiv.org/pdf/2404.19702) | [⌨️ Code] | [🌐 Project Page](https://sai-bi.github.io/project/gs-lrm/)
 
 
+#### <summary>3D Gaussian Splatting as Markov Chain Monte Carlo
+Authors: Shakiba Kheradmand, Daniel Rebain, Gopal Sharma, Weiwei Sun, Jeff Tseng, Hossam Isack, Abhishek Kar, Andrea Tagliasacchi, Kwang Moo Yi
+<details span>
+<summary><b>Abstract</b></summary>
+While 3D Gaussian Splatting has recently become popular for neural rendering, current methods rely on carefully engineered cloning and splitting strategies for placing Gaussians, which does not always generalize and may lead to poor-quality renderings. In addition, for real-world scenes, they rely on a good initial point cloud to perform well. In this work, we rethink 3D Gaussians as random samples drawn from an underlying probability distribution describing the physical representation of the scene -- in other words, Markov Chain Monte Carlo (MCMC) samples. Under this view, we show that the 3D Gaussian updates are strikingly similar to a Stochastic Langevin Gradient Descent (SGLD) update. As with MCMC, samples are nothing but past visit locations, adding new Gaussians under our framework can simply be realized without heuristics as placing Gaussians at existing Gaussian locations. To encourage using fewer Gaussians for efficiency, we introduce an L1-regularizer on the Gaussians. On various standard evaluation scenes, we show that our method provides improved rendering quality, easy control over the number of Gaussians, and robustness to initialization.
 
+
+
+</details>
+
+[📃 arXiv:2404](https://arxiv.org/pdf/2404.09591) | [⌨️ Code] | [🌐 Project Page]
 
 
 
@@ -948,6 +1003,11 @@ In the wake of many new ML-inspired approaches for reconstruct ing and represent
 ## Others, not Gaussian
 
 
+
+
+
+
+
 #### <summary>BakedSDF: Meshing Neural SDFs for Real-Time View Synthesis
 Authors: Lior Yariv, Peter Hedman, Christian Reiser, Dor Verbin, Pratul P. Srinivasan, Richard Szeliski, Jonathan T. Barron, Ben Mildenhall
 <details span>
@@ -1044,6 +1104,31 @@ We propose XScale-NVS for high-fidelity cross-scale novel view synthesis of real
 [📃 arXiv:2403](https://arxiv.org/pdf/2403.19517) | [⌨️ Code](https://github.com/THU-luvision/XScale-NVS) | [🌐 Project Page](https://xscalenvs.github.io/)
 
 
+#### <summary>GeoWizard: Unleashing the Diffusion Priors for 3D Geometry Estimation from a Single Image
+Authors: Xiao Fu, Wei Yin, Mu Hu, Kaixuan Wang, Yuexin Ma, Ping Tan, Shaojie Shen, Dahua Lin, Xiaoxiao Long
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce GeoWizard, a new generative foundation model designed for estimating geometric attributes, e.g., depth and normals, from single images. While significant research has already been conducted in this area, the progress has been substantially limited by the low diversity and poor quality of publicly available datasets. As a result, the prior works either are constrained to limited scenarios or suffer from the inability to capture geometric details. In this paper, we demonstrate that generative models, as opposed to traditional discriminative models (e.g., CNNs and Transformers), can effectively address the inherently ill-posed problem. We further show that leveraging diffusion priors can markedly improve generalization, detail preservation, and efficiency in resource usage. Specifically, we extend the original stable diffusion model to jointly predict depth and normal, allowing mutual information exchange and high consistency between the two representations. More importantly, we propose a simple yet effective strategy to segregate the complex data distribution of various scenes into distinct sub-distributions. This strategy enables our model to recognize different scene layouts, capturing 3D geometry with remarkable fidelity. GeoWizard sets new benchmarks for zero-shot depth and normal prediction, significantly enhancing many downstream applications such as 3D reconstruction, 2D content creation, and novel viewpoint synthesis.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/ec58fca4-842a-4d35-97ce-90caf49467cb)
+
+</details>
+
+[📃 arXiv:2403](https://arxiv.org/pdf/2403.12013) | [⌨️ Code](https://github.com/fuxiao0719/GeoWizard) | [🌐 Project Page](https://fuxiao0719.github.io/projects/geowizard/)
+
+
+#### <summary>Scene Coordinate Reconstruction: Posing of Image Collections via Incremental Learning of a Relocalizer
+Authors: Eric Brachmann, Jamie Wynn, Shuai Chen, Tommaso Cavallari, Áron Monszpart, Daniyar Turmukhambetov, Victor Adrian Prisacariu
+<details span>
+<summary><b>Abstract</b></summary>
+We address the task of estimating camera parameters from a set of images depicting a scene. Popular feature-based structure-from-motion (SfM) tools solve this task by incremental reconstruction: they repeat triangulation of sparse 3D points and registration of more camera views to the sparse point cloud. We re-interpret incremental structure-from-motion as an iterated application and refinement of a visual relocalizer, that is, of a method that registers new views to the current state of the reconstruction. This perspective allows us to investigate alternative visual relocalizers that are not rooted in local feature matching. We show that scene coordinate regression, a learning-based relocalization approach, allows us to build implicit, neural scene representations from unposed images. Different from other learning-based reconstruction methods, we do not require pose priors nor sequential inputs, and we optimize efficiently over thousands of images. Our method, ACE0 (ACE Zero), estimates camera poses to an accuracy comparable to feature-based SfM, as demonstrated by novel view synthesis.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/34d4a7d4-8c1a-46d8-9242-dd43f022abf1)
+
+ 
+</details>
+
+[📃 arXiv:2404](https://arxiv.org/pdf/2404.14351) | [⌨️ Code] | [🌐 Project Page](https://nianticlabs.github.io/acezero/)
 
 
 #### <summary>Probing the 3D Awareness of Visual Foundation Models
@@ -1157,6 +1242,19 @@ Vision and Language Models (VLMs) continue to demonstrate remarkable zero-shot (
 </details>
 
 [📃 arXiv:2404](https://arxiv.org/pdf/2404.19128) | [⌨️ Code](https://github.com/NavidRajabi/Q-GroundCAM) | [🌐 Project Page]
+
+
+#### <summary>MonoPatchNeRF: Improving Neural Radiance Fields with Patch-based Monocular Guidance
+Authors: Yuqun Wu, Jae Yong Lee, Chuhang Zou, Shenlong Wang, Derek Hoiem
+<details span>
+<summary><b>Abstract</b></summary>
+The latest regularized Neural Radiance Field (NeRF) approaches produce poor geometry and view extrapolation for multiview stereo (MVS) benchmarks such as ETH3D. In this paper, we aim to create 3D models that provide accurate geometry and view synthesis, partially closing the large geometric performance gap between NeRF and traditional MVS methods. We propose a patch-based approach that effectively leverages monocular surface normal and relative depth predictions. The patch-based ray sampling also enables the appearance regularization of normalized cross-correlation (NCC) and structural similarity (SSIM) between randomly sampled virtual and training views. We further show that "density restrictions" based on sparse structure-from-motion points can help greatly improve geometric accuracy with a slight drop in novel view synthesis metrics. Our experiments show 4x the performance of RegNeRF and 8x that of FreeNeRF on average F1@2cm for ETH3D MVS benchmark, suggesting a fruitful research direction to improve the geometric accuracy of NeRF-based models, and sheds light on a potential future approach to enable NeRF-based optimization to eventually outperform traditional MVS.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/152c4033-c403-4b7c-8b48-cef2d27de373)
+
+</details>
+
+[📃 arXiv:2404](https://arxiv.org/pdf/2404.08252) | [⌨️ Code] | [🌐 Project Page](https://yuqunw.github.io/MonoPatchNeRF/)
 
 #### <summary>Depth Priors in Removal Neural Radiance Fields
 Authors: Zhihao Guo, Peng Wang
