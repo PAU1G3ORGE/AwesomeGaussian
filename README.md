@@ -230,7 +230,6 @@ Accurately reconstructing a 3D scene including explicit geometry information is 
 
 
 
-
 #### <summary>AtomGS: Atomizing Gaussian Splatting for High-Fidelity Radiance Field
 Authors: Rong Liu, Rui Xu, Yue Hu, Meida Chen, Andrew Feng
 <details span>
@@ -243,6 +242,19 @@ Authors: Rong Liu, Rui Xu, Yue Hu, Meida Chen, Andrew Feng
 </details>
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.12369) | [⌨️ Code](https://github.com/RongLiu-Leo/AtomGS) | [🌐 Project Page](https://rongliu-leo.github.io/AtomGS/)
+
+#### <summary>Vidu4D: Single Generated Video to High-Fidelity 4D Reconstruction with Dynamic Gaussian Surfels
+Authors: Yikai Wang, Xinzhou Wang, Zilong Chen, Zhengyi Wang, Fuchun Sun, Jun Zhu
+<details span>
+<summary><b>Abstract</b></summary>
+Video generative models are receiving particular attention given their ability to generate realistic and imaginative frames. Besides, these models are also observed to exhibit strong 3D consistency, significantly enhancing their potential to act as world simulators. In this work, we present Vidu4D, a novel reconstruction model that excels in accurately reconstructing 4D (i.e., sequential 3D) representations from single generated videos, addressing challenges associated with non-rigidity and frame distortion. This capability is pivotal for creating high-fidelity virtual contents that maintain both spatial and temporal coherence. At the core of Vidu4D is our proposed Dynamic Gaussian Surfels (DGS) technique. DGS optimizes time-varying warping functions to transform Gaussian surfels (surface elements) from a static state to a dynamically warped state. This transformation enables a precise depiction of motion and deformation over time. To preserve the structural integrity of surface-aligned Gaussian surfels, we design the warped-state geometric regularization based on continuous warping fields for estimating normals. Additionally, we learn refinements on rotation and scaling parameters of Gaussian surfels, which significantly alleviates texture flickering during the warping process and enhances the capture of fine-grained appearance details. Vidu4D also contains a novel initialization state that provides a proper start for the warping fields in DGS. Equipping Vidu4D with an existing video generative model, the overall framework demonstrates high-fidelity text-to-4D generation in both appearance and geometry.
+
+
+
+</details>
+
+[📃 arXiv:24xx] | [⌨️ Code](https://github.com/yikaiw/vidu4d) | [🌐 Project Page](https://vidu4d-dgs.github.io/)
+
 
 
 <br>
