@@ -510,6 +510,22 @@ This paper tackles the challenge of high-quality, real-time rendering of large-s
 [📃 arXiv:24xx] | [⌨️ Code](https://github.com/zju3dv/LoG) | [🌐 Project Page](https://zju3dv.github.io/LoG_webpage/)
 
 
+
+#### <summary>DoGaussian: Distributed-Oriented Gaussian Splatting for Large-Scale 3D Reconstruction Via Gaussian Consensus
+
+Authors: Yu Chen, Gim Hee Lee
+<details span>
+<summary><b>Abstract</b></summary>
+The recent advances in 3D Gaussian Splatting (3DGS) show promising results on the novel view synthesis (NVS) task. With its superior rendering performance and high-fidelity rendering quality, 3DGS is excelling at its previous NeRF counterparts. The most recent 3DGS method focuses either on improving the instability of rendering efficiency or reducing the model size. On the other hand, the training efficiency of 3DGS on large-scale scenes has not gained much attention. In this work, we propose DoGaussian, a method that trains 3DGS distributedly. Our method first decomposes a scene into K blocks and then introduces the Alternating Direction Method of Multipliers (ADMM) into the training procedure of 3DGS. During training, our DoGaussian maintains one global 3DGS model on the master node and K local 3DGS models on the slave nodes. The K local 3DGS models are dropped after training and we only query the global 3DGS model during inference. The training time is reduced by scene decomposition, and the training convergence and stability are guaranteed through the consensus on the shared 3D Gaussians. Our method accelerates the training of 3DGS by 6+ times when evaluated on large-scale scenes while concurrently achieving state-of-the-art rendering quality.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/1a533b9d-df74-4994-89d6-35a1ffc2c98a)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.13943) | [⌨️ Code](https://github.com/aibluefisher/DoGaussian) | [🌐 Project Page](https://aibluefisher.github.io/DoGaussian/)
+
+
 <br>
 <br>
 
@@ -994,6 +1010,49 @@ In the wake of many new ML-inspired approaches for reconstruct ing and represent
 </details>
 
 [📃 arXiv:24xx](https://www.sdiolatz.info/ndg-fitting/static/files/ngd-paper-compressed.pdf) | [⌨️ Code] | [🌐 Project Page](https://www.sdiolatz.info/ndg-fitting/)
+
+
+#### <summary>RoGS: Large Scale Road Surface Reconstruction based on 2D Gaussian Splatting
+Authors: Zhiheng Feng, Wenhua Wu, Hesheng Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Road surface reconstruction plays a crucial role in autonomous driving, which can be used for road lane perception and autolabeling tasks. Recently, mesh-based road surface reconstruction algorithms show promising reconstruction results. However, these mesh-based methods suffer from slow speed and poor rendering quality. In contrast, the 3D Gaussian Splatting (3DGS) shows superior rendering speed and quality. Although 3DGS employs explicit Gaussian spheres to represent the scene, it lacks the ability to directly represent the geometric information of the scene. To address this limitation, we propose a novel large-scale road surface reconstruction approach based on 2D Gaussian Splatting (2DGS), named RoGS. The geometric shape of the road is explicitly represented using 2D Gaussian surfels, where each surfel stores color, semantics, and geometric information. Compared to Gaussian spheres, the Gaussian surfels aligns more closely with the physical reality of the road. Distinct from previous initialization methods that rely on point clouds for Gaussian spheres, we introduce a trajectory-based initialization for Gaussian surfels. Thanks to the explicit representation of the Gaussian surfels and a good initialization, our method achieves a significant acceleration while improving reconstruction quality. We achieve excellent results in reconstruction of roads surfaces in a variety of challenging real-world scenes.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/4ec82687-3f42-4146-b35a-533110de7d7d)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.14342) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>Monocular Gaussian SLAM with Language Extended Loop Closure
+Authors: Tian Lan, Qinwei Lin, Haoqian Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Recently,3DGaussianSplattinghasshowngreatpotentialin visual Simultaneous Localization And Mapping (SLAM). Existing methods have achieved encouraging results on RGB-D SLAM, but studies of the monocular case are still scarce. Moreover, they also fail to correct drift errors due to the lack of loop closure and global optimization. In this paper, we present MG-SLAM, a monocular Gaussian SLAM with a language-extended loop closure module capable of performing drift-corrected tracking and high-fidelity reconstruction while achieving a high-level understanding of the environment. Our key idea is to represent the global map as 3D Gaussian and use it to guide the estimation of the scene geometry, thus mitigating the efforts of missing depth information. Further, an additional language-extended loop closure module which is based on CLIP feature is designed to continually perform global optimization to correct drift errors accumulated as the system runs. Our system shows promising results on multiple challenging datasets in both tracking and mapping and even surpasses some existing RGB-D methods.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/ec122248-f518-461a-b38d-63b3ec8162a6)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.13748) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+#### <summary>Gaussian Time Machine: A Real-Time Rendering Methodology for Time-Variant Appearances
+Authors: Licheng Shen, Ho Ngai Chow, Lingyun Wang, Tong Zhang, Mengqiu Wang, Yuxing Han
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advancements in neural rendering techniques have significantly enhanced the fidelity of 3D reconstruction. Notably, the emergence of 3D Gaussian Splatting (3DGS) has marked a significant milestone by adopting a discrete scene representation, facilitating efficient training and real-time rendering. Several studies have successfully extended the real-time rendering capability of 3DGS to dynamic scenes. However, a challenge arises when training images are captured under vastly differing weather and lighting conditions. This scenario poses a challenge for 3DGS and its variants in achieving accurate reconstructions. Although NeRF-based methods (NeRF-W, CLNeRF) have shown promise in handling such challenging conditions, their computational demands hinder real-time rendering capabilities. In this paper, we present Gaussian Time Machine (GTM) which models the time-dependent attributes of Gaussian primitives with discrete time embedding vectors decoded by a lightweight Multi-Layer-Perceptron(MLP). By adjusting the opacity of Gaussian primitives, we can reconstruct visibility changes of objects. We further propose a decomposed color model for improved geometric consistency. GTM achieved state-of-the-art rendering fidelity on 3 datasets and is 100 times faster than NeRF-based counterparts in rendering. Moreover, GTM successfully disentangles the appearance changes and renders smooth appearance interpolation.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/9eaa762d-48bf-4d2d-b208-20ddded9a3b3)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.13694) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 <br>
@@ -1549,7 +1608,19 @@ Optical flow estimation is one of the fundamental tasks in low-level computer vi
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.12512) | [⌨️ Code](https://github.com/YuhaoCheng/OpticalFlow_Kinetic) | [🌐 Project Page]
 
 
+#### <summary>NeurCross: A Self-Supervised Neural Approach for Representing Cross Fields in Quad Mesh Generation
+Authors: Qiujie Dong, Huibiao Wen, Rui Xu, Xiaokang Yu, Jiaran Zhou, Shuangmin Chen, Shiqing Xin, Changhe Tu, Wenping Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Quadrilateral mesh generation plays a crucial role in numerical simulations within Computer-Aided Design and Engineering (CAD/E). The quality of the cross field is essential for generating a quadrilateral mesh. In this paper, we propose a self-supervised neural representation of the cross field, named NeurCross, comprising two modules: one to fit the signed distance function (SDF) and another to predict the cross field. Unlike most existing approaches that operate directly on the given polygonal surface, NeurCross takes the SDF as a bridge to allow for SDF overfitting and the prediction of the cross field to proceed simultaneously. By utilizing a neural SDF, we achieve a smooth representation of the base surface, minimizing the impact of piecewise planar discretization and minor surface variations. Moreover, the principal curvatures and directions are fully encoded by the Hessian of the SDF, enabling the regularization of the overall cross field through minor adjustments to the SDF. Compared to state-of-the-art methods, NeurCross significantly improves the placement of singular points and the approximation accuracy between the input triangular surface and the output quad mesh, as demonstrated in the teaser figure.
 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/f7c2fadd-c604-4610-8bc6-5d2c71810df3)
+
+
+</details>
+
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.13745) | [⌨️ Code] | [🌐 Project Page]
 
 
 #### <summary>
