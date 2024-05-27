@@ -1065,7 +1065,60 @@ Recent advancements in neural rendering techniques have significantly enhanced t
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.13694) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>Feature Splatting for Better Novel View Synthesis with Low Overlap
+Authors: T. Berriel Martins, Javier Civera
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting has emerged as a very promising scene representation, achieving state-of-the-art quality in novel view synthesis significantly faster than competing alternatives. However, its use of spherical harmonics to represent scene colors limits the expressivity of 3D Gaussians and, as a consequence, the capability of the representation to generalize as we move away from the training views. In this paper, we propose to encode the color information of 3D Gaussians into per-Gaussian feature vectors, which we denote as Feature Splatting (FeatSplat). To synthesize a novel view, Gaussians are first "splatted" into the image plane, then the corresponding feature vectors are alpha-blended, and finally the blended vector is decoded by a small MLP to render the RGB pixel values. To further inform the model, we concatenate a camera embedding to the blended feature vector, to condition the decoding also on the viewpoint information. Our experiments show that these novel model for encoding the radiance considerably improves novel view synthesis for low overlap views that are distant from the training views. Finally, we also show the capacity and convenience of our feature vector representation, demonstrating its capability not only to generate RGB values for novel views, but also their per-pixel semantic labels. We will release the code upon acceptance.
 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/e6a694f0-bb51-45c7-8e89-ac7d71dcd2d6)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.15518) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>GSDeformer: Direct Cage-based Deformation for 3D Gaussian Splatting
+Authors: Jiajun Huang, Hongchuan Yu
+<details span>
+<summary><b>Abstract</b></summary>
+We present GSDeformer, a method that achieves free-form deformation on 3D Gaussian Splatting(3DGS) without requiring any architectural changes. Our method extends cage-based deformation, a traditional mesh deformation method, to 3DGS. This is done by converting 3DGS into a novel proxy point cloud representation, where its deformation can be used to infer the transformations to apply on the 3D gaussians making up 3DGS. We also propose an automatic cage construction algorithm for 3DGS to minimize manual work. Our method does not modify the underlying architecture of 3DGS. Therefore, any existing trained vanilla 3DGS can be easily edited by our method. We compare the deformation capability of our method against other existing methods, demonstrating the ease of use and comparable quality of our method, despite being more direct and thus easier to integrate with other concurrent developments on 3DGS.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/dab08d8a-d7ba-4443-996c-3a6f55d1672d)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.15491) | [⌨️ Code] | [🌐 Project Page](https://jhuangbu.github.io/gsdeformer/)
+
+
+#### <summary>DisC-GS: Discontinuity-aware Gaussian Splatting
+Authors: Haoxuan Qu, Zhuoling Li, Hossein Rahmani, Yujun Cai, Jun Liu
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, Gaussian Splatting, a method that represents a 3D scene as a collection of Gaussian distributions, has gained significant attention in addressing the task of novel view synthesis. In this paper, we highlight a fundamental limitation of Gaussian Splatting: its inability to accurately render discontinuities and boundaries in images due to the continuous nature of Gaussian distributions. To address this issue, we propose a novel framework enabling Gaussian Splatting to perform discontinuity-aware image rendering. Additionally, we introduce a Bézier-boundary gradient approximation strategy within our framework to keep the ``differentiability'' of the proposed discontinuity-aware rendering process. Extensive experiments demonstrate the efficacy of our framework.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/2b0f2624-d8f6-4741-b198-d8937491b686)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.15196) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>GS-Hider: Hiding Messages into 3D Gaussian Splatting
+Authors: Xuanyu Zhang, Jiarui Meng, Runyi Li, Zhipei Xu, Yongbing Zhang, Jian Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has already become the emerging research focus in the fields of 3D scene reconstruction and novel view synthesis. Given that training a 3DGS requires a significant amount of time and computational cost, it is crucial to protect the copyright, integrity, and privacy of such 3D assets. Steganography, as a crucial technique for encrypted transmission and copyright protection, has been extensively studied. However, it still lacks profound exploration targeted at 3DGS. Unlike its predecessor NeRF, 3DGS possesses two distinct features: 1) explicit 3D representation; and 2) real-time rendering speeds. These characteristics result in the 3DGS point cloud files being public and transparent, with each Gaussian point having a clear physical significance. Therefore, ensuring the security and fidelity of the original 3D scene while embedding information into the 3DGS point cloud files is an extremely challenging task. To solve the above-mentioned issue, we first propose a steganography framework for 3DGS, dubbed GS-Hider, which can embed 3D scenes and images into original GS point clouds in an invisible manner and accurately extract the hidden messages. Specifically, we design a coupled secured feature attribute to replace the original 3DGS's spherical harmonics coefficients and then use a scene decoder and a message decoder to disentangle the original RGB scene and the hidden message. Extensive experiments demonstrated that the proposed GS-Hider can effectively conceal multimodal messages without compromising rendering quality and possesses exceptional security, robustness, capacity, and flexibility.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/89e79416-e05a-414a-b62c-80fa30fe7702)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.15118) | [⌨️ Code] | [🌐 Project Page](https://xuanyuzhang21.github.io/project/gshider/)
 
 <br>
 <br>
