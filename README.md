@@ -4,7 +4,7 @@
 
 <br>
 
-[Surface](#Surface) | [Sparse View](#Sparse-View) | [Structured](#Structured) | [Large Scale](#Large-Scale) | [Generalizable](#Generalizable) | [High Frequency Details](#High-Frequency-Details) | [Others](#Others) 
+[Surface](#Surface) | [Sparse View](#Sparse-View) | [Noisy Poses](#Noisy-Poses) | [Structured](#Structured) | [Large Scale](#Large-Scale) | [Generalizable](#Generalizable) | [High Frequency Details](#High-Frequency-Details) | [Others](#Others) 
 
 <br>
 
@@ -357,7 +357,8 @@ Neural Radiance Field (NeRF) has recently emerged as a powerful representation t
 
 [📃 arXiv:2211](https://arxiv.org/pdf/2211.11738) | [⌨️ Code](https://github.com/google-research/sparf) | [🌐 Project Page](https://prunetruong.com/sparf.github.io/)
 
-
+<br>
+<br>
 
 ## Structured
 
