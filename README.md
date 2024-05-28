@@ -1845,6 +1845,20 @@ Recently, the emergence of diffusion models has opened up new opportunities for 
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.16888) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>NVS-Solver: Video Diffusion Model as Zero-Shot Novel View Synthesizer
+Authors: Meng You, Zhiyu Zhu, Hui Liu, Junhui Hou
+<details span>
+<summary><b>Abstract</b></summary>
+By harnessing the potent generative capabilities of pre-trained large video diffusion models, we propose NVS-Solver, a new novel view synthesis (NVS) paradigm that operates \textit{without} the need for training. NVS-Solver adaptively modulates the diffusion sampling process with the given views to enable the creation of remarkable visual experiences from single or multiple views of static scenes or monocular videos of dynamic scenes. Specifically, built upon our theoretical modeling, we iteratively modulate the score function with the given scene priors represented with warped input views to control the video diffusion process. Moreover, by theoretically exploring the boundary of the estimation error, we achieve the modulation in an adaptive fashion according to the view pose and the number of diffusion steps. Extensive evaluations on both static and dynamic scenes substantiate the significant superiority of our NVS-Solver over state-of-the-art methods both quantitatively and qualitatively.
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.15364) | [⌨️ Code](https://github.com/ZHU-Zhiyu/NVS_Solver) | [🌐 Project Page]
+
+
+
+
+
 #### <summary>
 Authors: 
 <details span>
