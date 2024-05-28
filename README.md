@@ -249,11 +249,12 @@ Authors: Yikai Wang, Xinzhou Wang, Zilong Chen, Zhengyi Wang, Fuchun Sun, Jun Zh
 <summary><b>Abstract</b></summary>
 Video generative models are receiving particular attention given their ability to generate realistic and imaginative frames. Besides, these models are also observed to exhibit strong 3D consistency, significantly enhancing their potential to act as world simulators. In this work, we present Vidu4D, a novel reconstruction model that excels in accurately reconstructing 4D (i.e., sequential 3D) representations from single generated videos, addressing challenges associated with non-rigidity and frame distortion. This capability is pivotal for creating high-fidelity virtual contents that maintain both spatial and temporal coherence. At the core of Vidu4D is our proposed Dynamic Gaussian Surfels (DGS) technique. DGS optimizes time-varying warping functions to transform Gaussian surfels (surface elements) from a static state to a dynamically warped state. This transformation enables a precise depiction of motion and deformation over time. To preserve the structural integrity of surface-aligned Gaussian surfels, we design the warped-state geometric regularization based on continuous warping fields for estimating normals. Additionally, we learn refinements on rotation and scaling parameters of Gaussian surfels, which significantly alleviates texture flickering during the warping process and enhances the capture of fine-grained appearance details. Vidu4D also contains a novel initialization state that provides a proper start for the warping fields in DGS. Equipping Vidu4D with an existing video generative model, the overall framework demonstrates high-fidelity text-to-4D generation in both appearance and geometry.
 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/1cc231e8-9b08-4708-a65b-d33894d96d35)
 
 
 </details>
 
-[📃 arXiv:24xx] | [⌨️ Code](https://github.com/yikaiw/vidu4d) | [🌐 Project Page](https://vidu4d-dgs.github.io/)
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.16822) | [⌨️ Code](https://github.com/yikaiw/vidu4d) | [🌐 Project Page](https://vidu4d-dgs.github.io/)
 
 
 
@@ -537,6 +538,38 @@ The recent advances in 3D Gaussian Splatting (3DGS) show promising results on th
 </details>
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.13943) | [⌨️ Code](https://github.com/aibluefisher/DoGaussian) | [🌐 Project Page](https://aibluefisher.github.io/DoGaussian/)
+
+
+#### <summary>SA-GS: Semantic-Aware Gaussian Splatting for Large Scene Reconstruction with Geometry Constrain
+
+Authors: Butian Xiong, Xiaoyu Ye, Tze Ho Elden Tse, Kai Han, Shuguang Cui, Zhen Li
+<details span>
+<summary><b>Abstract</b></summary>
+With the emergence of Gaussian Splats, recent efforts have focused on large-scale scene geometric reconstruction. However, most of these efforts either concentrate on memory reduction or spatial space division, neglecting information in the semantic space. In this paper, we propose a novel method, named SA-GS, for fine-grained 3D geometry reconstruction using semantic-aware 3D Gaussian Splats. Specifically, we leverage prior information stored in large vision models such as SAM and DINO to generate semantic masks. We then introduce a geometric complexity measurement function to serve as soft regularization, guiding the shape of each Gaussian Splat within specific semantic areas. Additionally, we present a method that estimates the expected number of Gaussian Splats in different semantic areas, effectively providing a lower bound for Gaussian Splats in these areas. Subsequently, we extract the point cloud using a novel probability density-based extraction method, transforming Gaussian Splats into a point cloud crucial for downstream tasks. Our method also offers the potential for detailed semantic inquiries while maintaining high image-based reconstruction results. We provide extensive experiments on publicly available large-scale scene reconstruction datasets with highly accurate point clouds as ground truth and our novel dataset. Our results demonstrate the superiority of our method over current state-of-the-art Gaussian Splats reconstruction methods by a significant margin in terms of geometric-based measurement metrics.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/d1ae147b-fa98-4940-9058-12fe1c8502db)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.16923) | [⌨️ Code] | [🌐 Project Page](https://saliteta.github.io/SA-GS/)
+
+
+
+#### <summary>PyGS: Large-scale Scene Representation with Pyramidal 3D Gaussian Splatting
+
+Authors: Zipeng Wang, Dan Xu
+<details span>
+<summary><b>Abstract</b></summary>
+Neural Radiance Fields (NeRFs) have demonstrated remarkable proficiency in synthesizing photorealistic images of large-scale scenes. However, they are often plagued by a loss of fine details and long rendering durations. 3D Gaussian Splatting has recently been introduced as a potent alternative, achieving both high-fidelity visual results and accelerated rendering performance. Nonetheless, scaling 3D Gaussian Splatting is fraught with challenges. Specifically, large-scale scenes grapples with the integration of objects across multiple scales and disparate viewpoints, which often leads to compromised efficacy as the Gaussians need to balance between detail levels. Furthermore, the generation of initialization points via COLMAP from large-scale dataset is both computationally demanding and prone to incomplete reconstructions. To address these challenges, we present Pyramidal 3D Gaussian Splatting (PyGS) with NeRF Initialization. Our approach represent the scene with a hierarchical assembly of Gaussians arranged in a pyramidal fashion. The top level of the pyramid is composed of a few large Gaussians, while each subsequent layer accommodates a denser collection of smaller Gaussians. We effectively initialize these pyramidal Gaussians through sampling a rapidly trained grid-based NeRF at various frequencies. We group these pyramidal Gaussians into clusters and use a compact weighting network to dynamically determine the influence of each pyramid level of each cluster considering camera viewpoint during rendering. Our method achieves a significant performance leap across multiple large-scale datasets and attains a rendering time that is over 400 times faster than current state-of-the-art approaches.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/58d48965-9dbf-4188-85ea-78b67d82b0d2)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.16829) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 <br>
@@ -1160,6 +1193,63 @@ Authors: Yuanhui Huang, Wenzhao Zheng, Yunpeng Zhang, Jie Zhou, Jiwen Lu
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.17429) | [⌨️ Code] | [🌐 Project Page](https://wzzheng.net/GaussianFormer/)
 
+#### <summary>MoSca: Dynamic Gaussian Fusion from Casual Videos via 4D Motion Scaffolds
+Authors: Jiahui Lei, Yijia Weng, Adam Harley, Leonidas Guibas, Kostas Daniilidis
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce 4D Motion Scaffolds (MoSca), a neural information processing system designed to reconstruct and synthesize novel views of dynamic scenes from monocular videos captured casually in the wild. To address such a challenging and ill-posed inverse problem, we leverage prior knowledge from foundational vision models, lift the video data to a novel Motion Scaffold (MoSca) representation, which compactly and smoothly encodes the underlying motions / deformations. The scene geometry and appearance are then disentangled from the deformation field, and are encoded by globally fusing the Gaussians anchored onto the MoSca and optimized via Gaussian Splatting. Additionally, camera poses can be seamlessly initialized and refined during the dynamic rendering process, without the need for other pose estimation tools. Experiments demonstrate state-of-the-art performance on dynamic rendering benchmarks.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/4e3073cc-469a-4d6a-b4f0-99c126bb8dce)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.17421) | [⌨️ Code] | [🌐 Project Page](https://www.cis.upenn.edu/~leijh/projects/mosca/)
+
+#### <summary>DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting for Refocusing,Defocus Rendering and Blur Removal
+Authors: Yujie Wang, Praneeth Chakravarthula, Baoquan Chen
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting-based techniques have recently advanced 3D scene reconstruction and novel view synthesis, achieving high-quality real-time rendering. However, these approaches are inherently limited by the underlying pinhole camera assumption in modeling the images and hence only work for All-in-Focus (AiF) sharp image inputs. This severely affects their applicability in real-world scenarios where images often exhibit defocus blur due to the limited depth-of-field (DOF) of imaging devices. Additionally, existing 3D Gaussian Splatting (3DGS) methods also do not support rendering of DOF effects.
+To address these challenges, we introduce DOF-GS that allows for rendering adjustable DOF effects, removing defocus blur as well as refocusing of 3D scenes, all from multi-view images degraded by defocus blur. To this end, we re-imagine the traditional Gaussian Splatting pipeline by employing a finite aperture camera model coupled with explicit, differentiable defocus rendering guided by the Circle-of-Confusion (CoC). The proposed framework provides for dynamic adjustment of DOF effects by changing the aperture and focal distance of the underlying camera model on-demand. It also enables rendering varying DOF effects of 3D scenes post-optimization, and generating AiF images from defocused training images. Furthermore, we devise a joint optimization strategy to further enhance details in the reconstructed scenes by jointly optimizing rendered defocused and AiF images. Our experimental results indicate that DOF-GS produces high-quality sharp all-in-focus renderings conditioned on inputs compromised by defocus blur, with the training process incurring only a modest increase in GPU memory consumption. We further demonstrate the applications of the proposed method for adjustable defocus rendering and refocusing of the 3D scene from input images degraded by defocus blur.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/0b30e9ac-eabf-4d07-b138-4cfb5f83666a)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.17351) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>F-3DGS: Factorized Coordinates and Representations for 3D Gaussian Splatting
+Authors: Xiangyu Sun, Joo Chan Lee, Daniel Rho, Jong Hwan Ko, Usman Ali, Eunbyung Park
+<details span>
+<summary><b>Abstract</b></summary>
+The neural radiance field (NeRF) has made significant strides in representing 3D scenes and synthesizing novel views. Despite its advancements, the high computational costs of NeRF have posed challenges for its deployment in resource-constrained environments and real-time applications. As an alternative to NeRF-like neural rendering methods, 3D Gaussian Splatting (3DGS) offers rapid rendering speeds while maintaining excellent image quality. However, as it represents objects and scenes using a myriad of Gaussians, it requires substantial storage to achieve high-quality representation. To mitigate the storage overhead, we propose Factorized 3D Gaussian Splatting (F-3DGS), a novel approach that drastically reduces storage requirements while preserving image quality. Inspired by classical matrix and tensor factorization techniques, our method represents and approximates dense clusters of Gaussians with significantly fewer Gaussians through efficient factorization. We aim to efficiently represent dense 3D Gaussians by approximating them with a limited amount of information for each axis and their combinations. This method allows us to encode a substantially large number of Gaussians along with their essential attributes -- such as color, scale, and rotation -- necessary for rendering using a relatively small number of elements. Extensive experimental results demonstrate that F-3DGS achieves a significant reduction in storage costs while maintaining comparable quality in rendered images.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/e7e24118-a938-4eb1-b697-fd52926dd08a)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.17083) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+#### <summary>Splat-SLAM: Globally Optimized RGB-only SLAM with 3D Gaussians
+Authors: Xiangyu Sun, Joo Chan Lee, Daniel Rho, Jong Hwan Ko, Usman Ali, Eunbyung Park
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting has emerged as a powerful representation of geometry and appearance for RGB-only dense Simultaneous Localization and Mapping (SLAM), as it provides a compact dense map representation while enabling efficient and high-quality map rendering. However, existing methods show significantly worse reconstruction quality than competing methods using other 3D representations, e.g. neural points clouds, since they either do not employ global map and pose optimization or make use of monocular depth. In response, we propose the first RGB-only SLAM system with a dense 3D Gaussian map representation that utilizes all benefits of globally optimized tracking by adapting dynamically to keyframe pose and depth updates by actively deforming the 3D Gaussian map. Moreover, we find that refining the depth updates in inaccurate areas with a monocular depth estimator further improves the accuracy of the 3D reconstruction. Our experiments on the Replica, TUM-RGBD, and ScanNet datasets indicate the effectiveness of globally optimized 3D Gaussians, as the approach achieves superior or on par performance with existing RGB-only SLAM methods methods in tracking, mapping and rendering accuracy while yielding small map sizes and fast runtimes.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/223b9a44-1b78-48c1-a5a8-112e2695e2cb)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.16544) | [⌨️ Code](https://github.com/eriksandstroem/Splat-SLAM) | [🌐 Project Page]
+
+
 
 <br>
 <br>
@@ -1728,6 +1818,32 @@ Quadrilateral mesh generation plays a crucial role in numerical simulations with
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.13745) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>3D Reconstruction with Fast Dipole Sums
+Authors: Hanyu Chen, Bailey Miller, Ioannis Gkioulekas
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce a technique for the reconstruction of high-fidelity surfaces from multi-view images. Our technique uses a new point-based representation, the dipole sum, which generalizes the winding number to allow for interpolation of arbitrary per-point attributes in point clouds with noisy or outlier points. Using dipole sums allows us to represent implicit geometry and radiance fields as per-point attributes of a point cloud, which we initialize directly from structure from motion. We additionally derive Barnes-Hut fast summation schemes for accelerated forward and reverse-mode dipole sum queries. These queries facilitate the use of ray tracing to efficiently and differentiably render images with our point-based representations, and thus update their point attributes to optimize scene geometry and appearance. We evaluate this inverse rendering framework against state-of-the-art alternatives, based on ray tracing of neural representations or rasterization of Gaussian point-based representations. Our technique significantly improves reconstruction quality at equal runtimes, while also supporting more general rendering techniques such as shadow rays for direct illumination. In the supplement, we provide interactive visualizations of our results.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/85d3446e-6ea8-4d39-82ee-12fd1aada720)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.16788) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Part123: Part-aware 3D Reconstruction from a Single-view Image
+Authors: Anran Liu, Cheng Lin, Yuan Liu, Xiaoxiao Long, Zhiyang Dou, Hao-Xiang Guo, Ping Luo, Wenping Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, the emergence of diffusion models has opened up new opportunities for single-view reconstruction. However, all the existing methods represent the target object as a closed mesh devoid of any structural information, thus neglecting the part-based structure, which is crucial for many downstream applications, of the reconstructed shape. Moreover, the generated meshes usually suffer from large noises, unsmooth surfaces, and blurry textures, making it challenging to obtain satisfactory part segments using 3D segmentation techniques. In this paper, we present Part123, a novel framework for part-aware 3D reconstruction from a single-view image. We first use diffusion models to generate multiview-consistent images from a given image, and then leverage Segment Anything Model (SAM), which demonstrates powerful generalization ability on arbitrary objects, to generate multiview segmentation masks. To effectively incorporate 2D part-based information into 3D reconstruction and handle inconsistency, we introduce contrastive learning into a neural rendering framework to learn a part-aware feature space based on the multiview segmentation masks. A clustering-based algorithm is also developed to automatically derive 3D part segmentation results from the reconstructed models. Experiments show that our method can generate 3D models with high-quality segmented parts on various objects. Compared to existing unstructured reconstruction methods, the part-aware 3D models from our method benefit some important applications, including feature-preserving reconstruction, primitive fitting, and 3D shape editing.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/c354e6e3-1255-42ec-986d-fa0ddb89d737)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.16888) | [⌨️ Code] | [🌐 Project Page]
 
 #### <summary>
 Authors: 
