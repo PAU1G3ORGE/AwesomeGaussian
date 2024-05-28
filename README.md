@@ -1147,6 +1147,20 @@ Authors: Liwen Wu, Sai Bi, Zexiang Xu, Fujun Luan, Kai Zhang, Iliyan Georgiev, K
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.14847) | [⌨️ Code](https://github.com/lwwu2/nde) | [🌐 Project Page](https://lwwu2.github.io/nde/)
 
 
+#### <summary>GaussianFormer: Scene as Gaussians for Vision-Based 3D Semantic Occupancy Prediction
+Authors: Yuanhui Huang, Wenzhao Zheng, Yunpeng Zhang, Jie Zhou, Jiwen Lu
+<details span>
+<summary><b>Abstract</b></summary>
+3D semantic occupancy prediction aims to obtain 3D fine-grained geometry and semantics of the surrounding scene and is an important task for the robustness of vision-centric autonomous driving. Most existing methods employ dense grids such as voxels as scene representations, which ignore the sparsity of occupancy and the diversity of object scales and thus lead to unbalanced allocation of resources. To address this, we propose an object-centric representation to describe 3D scenes with sparse 3D semantic Gaussians where each Gaussian represents a flexible region of interest and its semantic features. We aggregate information from images through the attention mechanism and iteratively refine the properties of 3D Gaussians including position, covariance, and semantics. We then propose an efficient Gaussian-to-voxel splatting method to generate 3D occupancy predictions, which only aggregates the neighboring Gaussians for a certain position. We conduct extensive experiments on the widely adopted nuScenes and KITTI-360 datasets. Experimental results demonstrate that GaussianFormer achieves comparable performance with state-of-the-art methods with only 17.8% - 24.8% of their memory consumption.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/c217d630-4080-43e3-bc91-418d0ee8fcab)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.17429) | [⌨️ Code] | [🌐 Project Page](https://wzzheng.net/GaussianFormer/)
+
+
 <br>
 <br>
 
