@@ -414,7 +414,7 @@ The recent 3D Gaussian splatting (3D-GS) has shown remarkable rendering fidelity
 
 </details>
 
-[📃 arXiv:2403](https://city-super.github.io/octree-gs/) | [⌨️ Code](https://github.com/city-super/Octree-GS) | [🌐 Project Page](https://city-super.github.io/octree-gs/)
+[📃 arXiv:2403](https://arxiv.org/pdf/2403.17898) | [⌨️ Code](https://github.com/city-super/Octree-GS) | [🌐 Project Page](https://city-super.github.io/octree-gs/)
 
 
 #### <summary>GSDF: 3DGS Meets SDF for Improved Rendering and Reconstruction
