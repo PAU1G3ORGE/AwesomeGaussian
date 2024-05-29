@@ -346,6 +346,20 @@ Authors: Jiawei Zhang, Jiahe Li, Xiaohan Yu, Lei Huang, Lin Gu, Jin Zheng, Xiao 
 
 ## Noisy Poses
 
+
+#### <summary>Robust Gaussian Splatting
+Authors: François Darmon, Lorenzo Porzi, Samuel Rota-Bulò, Peter Kontschieder
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper, we address common error sources for 3D Gaussian Splatting (3DGS) including blur, imperfect camera poses, and color inconsistencies, with the goal of improving its robustness for practical applications like reconstructions from handheld phone captures. Our main contribution involves modeling motion blur as a Gaussian distribution over camera poses, allowing us to address both camera pose refinement and motion blur correction in a unified way. Additionally, we propose mechanisms for defocus blur compensation and for addressing color in-consistencies caused by ambient light, shadows, or due to camera-related factors like varying white balancing settings. Our proposed solutions integrate in a seamless way with the 3DGS formulation while maintaining its benefits in terms of training efficiency and rendering speed. We experimentally validate our contributions on relevant benchmark datasets including Scannet++ and Deblur-NeRF, obtaining state-of-the-art results and thus consistent improvements over relevant baselines.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/73f17da8-961d-47b3-a641-2e597816861e)
+
+</details>
+
+[📃 arXiv:2404](https://arxiv.org/pdf/2404.04211) | [⌨️ Code] | [🌐 Project Page]
+
+
 #### <summary>SPARF: Neural Radiance Fields from Sparse and Noisy Poses
 Authors: Tao Lu, Mulin Yu, Linning Xu, Yuanbo Xiangli, Limin Wang, Dahua Lin, Bo Dai
 <details span>
