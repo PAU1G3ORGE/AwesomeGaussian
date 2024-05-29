@@ -651,6 +651,20 @@ We present MVSGaussian, a new generalizable 3D Gaussian representation approach 
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.12218) | [⌨️ Code](https://github.com/TQTQliu/MVSGaussian) | [🌐 Project Page](https://mvsgaussian.github.io/)
 
+
+#### <summary>FreeSplat: Generalizable 3D Gaussian Splatting Towards Free-View Synthesis of Indoor Scenes
+Authors: Yunsong Wang, Tianxin Huang, Hanlin Chen, Gim Hee Lee
+<details span>
+<summary><b>Abstract</b></summary>
+Empowering 3D Gaussian Splatting with generalization ability is appealing. However, existing generalizable 3D Gaussian Splatting methods are largely confined to narrow-range interpolation between stereo images due to their heavy backbones, thus lacking the ability to accurately localize 3D Gaussian and support free-view synthesis across wide view range. In this paper, we present a novel framework FreeSplat that is capable of reconstructing geometrically consistent 3D scenes from long sequence input towards free-view synthesis.Specifically, we firstly introduce Low-cost Cross-View Aggregation achieved by constructing adaptive cost volumes among nearby views and aggregating features using a multi-scale structure. Subsequently, we present the Pixel-wise Triplet Fusion to eliminate redundancy of 3D Gaussians in overlapping view regions and to aggregate features observed across multiple views. Additionally, we propose a simple but effective free-view training strategy that ensures robust view synthesis across broader view range regardless of the number of views. Our empirical results demonstrate state-of-the-art novel view synthesis peformances in both novel view rendered color maps quality and depth maps accuracy across different numbers of input views. We also show that FreeSplat performs inference more efficiently and can effectively reduce redundant Gaussians, offering the possibility of feed-forward large scene reconstruction without depth priors.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/9d6fcc96-b8ca-4743-9c2f-638d8533a545)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.17958) | [⌨️ Code](https://github.com/wangys16/FreeSplat) | [🌐 Project Page]
+
 <br>
 <br>
 
@@ -1281,6 +1295,90 @@ Authors: Xiangyu Sun, Joo Chan Lee, Daniel Rho, Jong Hwan Ko, Usman Ali, Eunbyun
 </details>
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.16544) | [⌨️ Code](https://github.com/eriksandstroem/Splat-SLAM) | [🌐 Project Page]
+
+
+#### <summary>3D StreetUnveiler with Semantic-Aware 2DGS
+Authors: Jingwei Xu, Yikai Wang, Yiqun Zhao, Yanwei Fu, Shenghua Gao
+<details span>
+<summary><b>Abstract</b></summary>
+Unveiling an empty street from crowded observations captured by in-car cameras is crucial for autonomous driving. However, removing all temporary static objects, such as stopped vehicles and standing pedestrians, presents a significant challenge. Unlike object-centric 3D inpainting, which relies on thorough observation in a small scene, street scenes involve long trajectories that differ from previous 3D inpainting tasks. The camera-centric moving environment of captured videos further complicates the task due to the limited degree and time duration of object observation. To address these obstacles, we introduce StreetUnveiler to reconstruct an empty street. StreetUnveiler learns a 3D representation of the empty street from crowded observations. Our representation is based on the hard-label semantic 2D Gaussian Splatting (2DGS) for its scalability and ability to identify Gaussians to be removed. We inpaint rendered image after removing unwanted Gaussians to provide pseudo-labels and subsequently re-optimize the 2DGS. Given its temporal continuous movement, we divide the empty street scene into observed, partial-observed, and unobserved regions, which we propose to locate through a rendered alpha map. This decomposition helps us to minimize the regions that need to be inpainted. To enhance the temporal consistency of the inpainting, we introduce a novel time-reversal framework to inpaint frames in reverse order and use later frames as references for earlier frames to fully utilize the long-trajectory observations. Our experiments conducted on the street scene dataset successfully reconstructed a 3D representation of the empty street. The mesh representation of the empty street can be extracted for further applications.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/0dec50e5-4307-42f2-9b9e-60df2157d45c)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.18416) | [⌨️ Code](https://github.com/DavidXu-JJ/StreetUnveiler) | [🌐 Project Page](https://streetunveiler.github.io/)
+
+#### <summary>RT-GS2: Real-Time Generalizable Semantic Segmentation for 3D Gaussian Representations of Radiance Fields
+Authors: Mihnea-Bogdan Jurca, Remco Royen, Ion Giosan, Adrian Munteanu
+<details span>
+<summary><b>Abstract</b></summary>
+Gaussian Splatting has revolutionized the world of novel view synthesis by achieving high rendering performance in real-time. Recently, studies have focused on enriching these 3D representations with semantic information for downstream tasks. In this paper, we introduce RT-GS2, the first generalizable semantic segmentation method employing Gaussian Splatting. While existing Gaussian Splatting-based approaches rely on scene-specific training, RT-GS2 demonstrates the ability to generalize to unseen scenes. Our method adopts a new approach by first extracting view-independent 3D Gaussian features in a self-supervised manner, followed by a novel View-Dependent / View-Independent (VDVI) feature fusion to enhance semantic consistency over different views. Extensive experimentation on three different datasets showcases RT-GS2's superiority over the state-of-the-art methods in semantic segmentation quality, exemplified by a 8.01% increase in mIoU on the Replica dataset. Moreover, our method achieves real-time performance of 27.03 FPS, marking an astonishing 901 times speedup compared to existing approaches. This work represents a significant advancement in the field by introducing, to the best of our knowledge, the first real-time generalizable semantic segmentation method for 3D Gaussian representations of radiance fields.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/e3fe86c4-5f0b-4b6d-82f1-9fd85c97aa52)
+
+
+</details>
+
+[📃 arXiv:2405](https://export.arxiv.org/pdf/2405.18033) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>A Refined 3D Gaussian Representation for High-Quality Dynamic Scene Reconstruction
+Authors: Bin Zhang, Bi Zeng, Zexin Peng
+<details span>
+<summary><b>Abstract</b></summary>
+In recent years, Neural Radiance Fields (NeRF) has revolutionized three-dimensional (3D) reconstruction with its implicit representation. Building upon NeRF, 3D Gaussian Splatting (3D-GS) has departed from the implicit representation of neural networks and instead directly represents scenes as point clouds with Gaussian-shaped distributions. While this shift has notably elevated the rendering quality and speed of radiance fields but inevitably led to a significant increase in memory usage. Additionally, effectively rendering dynamic scenes in 3D-GS has emerged as a pressing challenge. To address these concerns, this paper purposes a refined 3D Gaussian representation for high-quality dynamic scene reconstruction. Firstly, we use a deformable multi-layer perceptron (MLP) network to capture the dynamic offset of Gaussian points and express the color features of points through hash encoding and a tiny MLP to reduce storage requirements. Subsequently, we introduce a learnable denoising mask coupled with denoising loss to eliminate noise points from the scene, thereby further compressing 3D Gaussian model. Finally, motion noise of points is mitigated through static constraints and motion consistency constraints. Experimental results demonstrate that our method surpasses existing approaches in rendering quality and speed, while significantly reducing the memory usage associated with 3D-GS, making it highly suitable for various tasks such as novel view synthesis, and dynamic mapping.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/18024421-4ee6-47d0-b37b-07a5d2bf3a00)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.17891) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>SafeguardGS: 3D Gaussian Primitive Pruning While Avoiding Catastrophic Scene Destruction
+Authors: Yongjae Lee, Zhaoliang Zhang, Deliang Fan
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has made a significant stride in novel view synthesis, demonstrating top-notch rendering quality while achieving real-time rendering speed. However, the excessively large number of Gaussian primitives resulting from 3DGS' suboptimal densification process poses a major challenge, slowing down frame-per-second (FPS) and demanding considerable memory cost, making it unfavorable for low-end devices. To cope with this issue, many follow-up studies have suggested various pruning techniques, often in combination with different score functions, to optimize rendering performance. Nonetheless, a comprehensive discussion regarding their effectiveness and implications across all techniques is missing. In this paper, we first categorize 3DGS pruning techniques into two types: Cross-view pruning and pixel-wise pruning, which differ in their approaches to rank primitives. Our subsequent experiments reveal that while cross-view pruning leads to disastrous quality drops under extreme Gaussian primitives decimation, the pixel-wise pruning technique not only sustains relatively high rendering quality with minuscule performance degradation but also provides a reasonable minimum boundary for pruning. Building on this observation, we further propose multiple variations of score functions and empirically discover that the color-weighted score function outperforms others for discriminating insignificant primitives for rendering. We believe our research provides valuable insights for optimizing 3DGS pruning strategies for future works.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/a3b84696-75d4-4c67-a780-b2b03decd532)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.17793) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+#### <summary>DC-Gaussian: Improving 3D Gaussian Splatting for Reflective Dash Cam Videos
+Authors: Linhan Wang, Kai Cheng, Shuo Lei, Shengkun Wang, Wei Yin, Chenyang Lei, Xiaoxiao Long, Chang-Tien Lu
+<details span>
+<summary><b>Abstract</b></summary>
+We present DC-Gaussian, a new method for generating novel views from in-vehicle dash cam videos. While neural rendering techniques have made significant strides in driving scenarios, existing methods are primarily designed for videos collected by autonomous vehicles. However, these videos are limited in both quantity and diversity compared to dash cam videos, which are more widely used across various types of vehicles and capture a broader range of scenarios. Dash cam videos often suffer from severe obstructions such as reflections and occlusions on the windshields, which significantly impede the application of neural rendering techniques. To address this challenge, we develop DC-Gaussian based on the recent real-time neural rendering technique 3D Gaussian Splatting (3DGS). Our approach includes an adaptive image decomposition module to model reflections and occlusions in a unified manner. Additionally, we introduce illumination-aware obstruction modeling to manage reflections and occlusions under varying lighting conditions. Lastly, we employ a geometry-guided Gaussian enhancement strategy to improve rendering details by incorporating additional geometry priors. Experiments on self-captured and public dash cam videos show that our method not only achieves state-of-the-art performance in novel view synthesis, but also accurately reconstructing captured scenes getting rid of obstructions.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/bfe756fb-bc69-4e02-87b1-bde4c69e745a)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.17705) | [⌨️ Code](https://github.com/linhanwang/DC-Gaussian) | [🌐 Project Page](https://linhanwang.github.io/dcgaussian/)
+
+
+#### <summary>Mani-GS: Gaussian Splatting Manipulation with Triangular Mesh
+Authors: Xiangjun Gao, Xiaoyu Li, Yiyu Zhuang, Qi Zhang, Wenbo Hu, Chaopeng Zhang, Yao Yao, Ying Shan, Long Quan
+<details span>
+<summary><b>Abstract</b></summary>
+Neural 3D representations such as Neural Radiance Fields (NeRF), excel at producing photo-realistic rendering results but lack the flexibility for manipulation and editing which is crucial for content creation. Previous works have attempted to address this issue by deforming a NeRF in canonical space or manipulating the radiance field based on an explicit mesh. However, manipulating NeRF is not highly controllable and requires a long training and inference time. With the emergence of 3D Gaussian Splatting (3DGS), extremely high-fidelity novel view synthesis can be achieved using an explicit point-based 3D representation with much faster training and rendering speed. However, there is still a lack of effective means to manipulate 3DGS freely while maintaining rendering quality. In this work, we aim to tackle the challenge of achieving manipulable photo-realistic rendering. We propose to utilize a triangular mesh to manipulate 3DGS directly with self-adaptation. This approach reduces the need to design various algorithms for different types of Gaussian manipulation. By utilizing a triangle shape-aware Gaussian binding and adapting method, we can achieve 3DGS manipulation and preserve high-fidelity rendering after manipulation. Our approach is capable of handling large deformations, local manipulations, and soft body simulations while keeping high-quality rendering. Furthermore, we demonstrate that our method is also effective with inaccurate meshes extracted from 3DGS. Experiments conducted demonstrate the effectiveness of our method and its superiority over baseline approaches.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/6b776e2e-1ed4-4eae-8345-bf1425fc06da)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.17811) | [⌨️ Code](https://github.com/gaoxiangjun/Mani-GS) | [🌐 Project Page](https://gaoxiangjun.github.io/mani_gs/)
 
 
 
