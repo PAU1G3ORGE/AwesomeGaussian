@@ -740,6 +740,22 @@ There has recently been great interest in neural rendering methods. Some approac
 [📃 arXiv:2109](https://arxiv.org/pdf/2109.02369) | [⌨️ Code](https://github.com/daipengwa/Neural-Point-Cloud-Rendering-via-Multi-Plane-Projection) | [🌐 Project Page](https://daipengwa.github.io/NeuralPointCloudRendering_ProjectPage/)
 
 
+#### <summary>SurfelNeRF: Neural Surfel Radiance Fields for Online Photorealistic Reconstruction of Indoor Scenes
+
+Authors: Yiming Gao, Yan-Pei Cao, Ying Shan
+<details span>
+<summary><b>Abstract</b></summary>
+Online reconstructing and rendering of large-scale indoor scenes is a long-standing challenge. SLAM-based methods can reconstruct 3D scene geometry progressively in real time but can not render photorealistic results. While NeRF-based methods produce promising novel view synthesis results, their long offline optimization time and lack of geometric constraints pose challenges to efficiently handling online input. Inspired by the complementary advantages of classical 3D reconstruction and NeRF, we thus investigate marrying explicit geometric representation with NeRF rendering to achieve efficient online reconstruction and high-quality rendering. We introduce SurfelNeRF, a variant of neural radiance field which employs a flexible and scalable neural surfel representation to store geometric attributes and extracted appearance features from input images. We further extend the conventional surfel-based fusion scheme to progressively integrate incoming input frames into the reconstructed global neural scene representation. In addition, we propose a highly-efficient differentiable rasterization scheme for rendering neural surfel radiance fields, which helps SurfelNeRF achieve 10× speedups in training and inference time, respectively. Experimental results show that our method achieves the state-of-the-art 23.82 PSNR and 29.58 PSNR on ScanNet in feedforward inference and per-scene optimization settings, respectively.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/47434049-c6ed-43ee-9e10-ac154179f977)
+
+
+</details>
+
+[📃 arXiv:2304](https://arxiv.org/pdf/2304.08971) | [⌨️ Code](https://github.com/TencentARC/SurfelNeRF) | [🌐 Project Page](https://gymat.github.io/SurfelNeRF-web/)
+
+
+
 
 #### <summary>Multi-Scale 3D Gaussian Splatting for Anti-Aliased Rendering
 Authors: Zhiwen Yan, Weng Fei Low, Yu Chen, Gim Hee Lee
