@@ -1396,6 +1396,47 @@ Neural 3D representations such as Neural Radiance Fields (NeRF), excel at produc
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.17811) | [⌨️ Code](https://github.com/gaoxiangjun/Mani-GS) | [🌐 Project Page](https://gaoxiangjun.github.io/mani_gs/)
 
+#### <summary>DGD: Dynamic 3D Gaussians Distillation
+Authors: Isaac Labe, Noam Issachar, Itai Lang, Sagie Benaim
+<details span>
+<summary><b>Abstract</b></summary>
+We tackle the task of learning dynamic 3D semantic radiance fields given a single monocular video as input. Our learned semantic radiance field captures per-point semantics as well as color and geometric properties for a dynamic 3D scene, enabling the generation of novel views and their corresponding semantics. This enables the segmentation and tracking of a diverse set of 3D semantic entities, specified using a simple and intuitive interface that includes a user click or a text prompt. To this end, we present DGD, a unified 3D representation for both the appearance and semantics of a dynamic 3D scene, building upon the recently proposed dynamic 3D Gaussians representation. Our representation is optimized over time with both color and semantic information. Key to our method is the joint optimization of the appearance and semantic attributes, which jointly affect the geometric properties of the scene. We evaluate our approach in its ability to enable dense semantic 3D object tracking and demonstrate high-quality results that are fast to render, for a diverse set of scenes.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/958228dc-b761-4172-998c-dde812fd7912)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.19321) | [⌨️ Code](https://github.com/Isaaclabe/DGD-Dynamic-3D-Gaussians-Distillation) | [🌐 Project Page](https://isaaclabe.github.io/DGD-Website/)
+
+
+#### <summary>3D Neural Edge Reconstruction
+Authors: Lei Li, Songyou Peng, Zehao Yu, Shaohui Liu, Rémi Pautrat, Xiaochuan Yin, Marc Pollefeys
+<details span>
+<summary><b>Abstract</b></summary>
+Real-world objects and environments are predominantly composed of edge features, including straight lines and curves. Such edges are crucial elements for various applications, such as CAD modeling, surface meshing, lane mapping, etc. However, existing traditional methods only prioritize lines over curves for simplicity in geometric modeling. To this end, we introduce EMAP, a new method for learning 3D edge representations with a focus on both lines and curves. Our method implicitly encodes 3D edge distance and direction in Unsigned Distance Functions (UDF) from multi-view edge maps. On top of this neural representation, we propose an edge extraction algorithm that robustly abstracts parametric 3D edges from the inferred edge points and their directions. Comprehensive evaluations demonstrate that our method achieves better 3D edge reconstruction on multiple challenging datasets. We further show that our learned UDF field enhances neural surface reconstruction by capturing more details.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/b6566200-16c5-4765-bc3b-1453681f5f54)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.19295) | [⌨️ Code](https://github.com/cvg/EMAP) | [🌐 Project Page](https://neural-edge-map.github.io/)
+
+
+#### <summary>LP-3DGS: Learning to Prune 3D Gaussian Splatting
+Authors: Zhaoliang Zhang, Tianchen Song, Yongjae Lee, Li Yang, Cheng Peng, Rama Chellappa, Deliang Fan
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, 3D Gaussian Splatting (3DGS) has become one of the mainstream methodologies for novel view synthesis (NVS) due to its high quality and fast rendering speed. However, as a point-based scene representation, 3DGS potentially generates a large number of Gaussians to fit the scene, leading to high memory usage. Improvements that have been proposed require either an empirical and preset pruning ratio or importance score threshold to prune the point cloud. Such hyperparamter requires multiple rounds of training to optimize and achieve the maximum pruning ratio, while maintaining the rendering quality for each scene. In this work, we propose learning-to-prune 3DGS (LP-3DGS), where a trainable binary mask is applied to the importance score that can find optimal pruning ratio automatically. Instead of using the traditional straight-through estimator (STE) method to approximate the binary mask gradient, we redesign the masking function to leverage the Gumbel-Sigmoid method, making it differentiable and compatible with the existing training process of 3DGS. Extensive experiments have shown that LP-3DGS consistently produces a good balance that is both efficient and high quality.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/bc7f074e-7dd4-4abb-95dc-53fafad5d6af)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.18784) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 <br>
@@ -2001,6 +2042,46 @@ By harnessing the potent generative capabilities of pre-trained large video diff
 </details>
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.15364) | [⌨️ Code](https://github.com/ZHU-Zhiyu/NVS_Solver) | [🌐 Project Page]
+
+#### <summary>PanoNormal: Monocular Indoor 360° Surface Normal Estimation
+Authors: Kun Huang, Fanglue Zhang, Neil Dodgson
+<details span>
+<summary><b>Abstract</b></summary>
+The presence of spherical distortion on the Equirectangular image is an acknowledged challenge in dense regression computer vision tasks, such as surface normal estimation. Recent advances in convolutional neural networks (CNNs) strive to mitigate spherical distortion but often fall short in capturing holistic structures effectively, primarily due to their fixed receptive field. On the other hand, vision transformers (ViTs) excel in establishing long-range dependencies through a global self-attention mechanism, yet they encounter limitations in preserving local details. We introduce \textit{PanoNormal}, a monocular surface normal estimation architecture designed for 360° images, which combines the strengths of CNNs and ViTs. Specifically, we employ a multi-level global self-attention scheme with the consideration of the spherical feature distribution, enhancing the comprehensive understanding of the scene. Our experimental results demonstrate that our approach achieves state-of-the-art performance across multiple popular 360° monocular datasets. The code and models will be released.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/748bfcd3-7934-43eb-ba8d-17ebcf2798b7)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.18745) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Correctable Landmark Discovery via Large Models for Vision-Language Navigation
+Authors: Bingqian Lin, Yunshuang Nie, Ziming Wei, Yi Zhu, Hang Xu, Shikui Ma, Jianzhuang Liu, Xiaodan Liang
+<details span>
+<summary><b>Abstract</b></summary>
+Vision-Language Navigation (VLN) requires the agent to follow language instructions to reach a target position. A key factor for successful navigation is to align the landmarks implied in the instruction with diverse visual observations. However, previous VLN agents fail to perform accurate modality alignment especially in unexplored scenes, since they learn from limited navigation data and lack sufficient open-world alignment knowledge. In this work, we propose a new VLN paradigm, called COrrectable LaNdmark DiScOvery via Large ModEls (CONSOLE). In CONSOLE, we cast VLN as an open-world sequential landmark discovery problem, by introducing a novel correctable landmark discovery scheme based on two large models ChatGPT and CLIP. Specifically, we use ChatGPT to provide rich open-world landmark cooccurrence commonsense, and conduct CLIP-driven landmark discovery based on these commonsense priors. To mitigate the noise in the priors due to the lack of visual constraints, we introduce a learnable cooccurrence scoring module, which corrects the importance of each cooccurrence according to actual observations for accurate landmark discovery. We further design an observation enhancement strategy for an elegant combination of our framework with different VLN agents, where we utilize the corrected landmark features to obtain enhanced observation features for action decision. Extensive experimental results on multiple popular VLN benchmarks (R2R, REVERIE, R4R, RxR) show the significant superiority of CONSOLE over strong baselines. Especially, our CONSOLE establishes the new state-of-the-art results on R2R and R4R in unseen scenarios.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/0dcaf652-c553-4016-bc82-94b501c23338)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.18721) | [⌨️ Code](https://github.com/expectorlin/CONSOLE) | [🌐 Project Page]
+
+#### <summary>NeRF On-the-go: Exploiting Uncertainty for Distractor-free NeRFs in the Wild
+Authors: Weining Ren, Zihan Zhu, Boyang Sun, Jiaqi Chen, Marc Pollefeys, Songyou Peng
+<details span>
+<summary><b>Abstract</b></summary>
+Neural Radiance Fields (NeRFs) have shown remarkable success in synthesizing photorealistic views from multi-view images of static scenes, but face challenges in dynamic, real-world environments with distractors like moving objects, shadows, and lighting changes. Existing methods manage controlled environments and low occlusion ratios but fall short in render quality, especially under high occlusion scenarios. In this paper, we introduce NeRF On-the-go, a simple yet effective approach that enables the robust synthesis of novel views in complex, in-the-wild scenes from only casually captured image sequences. Delving into uncertainty, our method not only efficiently eliminates distractors, even when they are predominant in captures, but also achieves a notably faster convergence speed. Through comprehensive experiments on various scenes, our method demonstrates a significant improvement over state-of-the-art techniques. This advancement opens new avenues for NeRF in diverse and dynamic real-world applications.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/e440ed80-e7a5-4aaa-80e5-1e693d928258)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.18715) | [⌨️ Code] | [🌐 Project Page]
 
 
 
