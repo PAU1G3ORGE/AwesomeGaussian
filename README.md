@@ -289,6 +289,22 @@ Authors: Yuqing Zhang, Yuan Liu, Zhiyu Xie, Lei Yang, Zhongyuan Liu, Mengzhou Ya
 <br>
 
 ## Sparse View
+
+#### <summary>Depth-Regularized Optimization for 3D Gaussian Splatting in Few-Shot Images
+Authors: Jaeyoung Chung, Jeongtaek Oh, Kyoung Mu Lee
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper, we present a method to optimize Gaussian splatting with a limited number of images while avoiding overfitting. Representing a 3D scene by combining numerous Gaussian splats has yielded outstanding visual quality. However, it tends to overfit the training views when only a small number of images are available. To address this issue, we introduce a dense depth map as a geometry guide to mitigate overfitting. We obtained the depth map using a pre-trained monocular depth estimation model and aligning the scale and offset using sparse COLMAP feature points. The adjusted depth aids in the color-based optimization of 3D Gaussian splatting, mitigating floating artifacts, and ensuring adherence to geometric constraints. We verify the proposed method on the NeRF-LLFF dataset with varying numbers of few images. Our approach demonstrates robust geometry compared to the original method that relies solely on images.
+
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/4453dd18-8e1a-4b18-bd6a-250484919aab)
+
+</details>
+
+[📃 arXiv:2311](https://arxiv.org/pdf/2311.13398) | [⌨️ Code](https://github.com/robot0321/DepthRegularizedGS) | [🌐 Project Page](https://robot0321.github.io/DepthRegGS/)
+
+
+
 #### <summary>FSGS: Real-Time Few-shot View Synthesis using Gaussian Splatting
 Authors: Zehao Zhu, Zhiwen Fan, Yifan Jiang, Zhangyang Wang
 <details span>
