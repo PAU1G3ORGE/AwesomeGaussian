@@ -488,6 +488,25 @@ Following the advent of NeRFs, 3D Gaussian Splatting (3DGS) has paved the way to
 [📃 arXiv:2404](https://arxiv.org/pdf/2404.19149) | [⌨️ Code] | [🌐 Project Page](https://eververas.github.io/SAGS/)
 
 
+
+
+#### <summary>ContextGS: Compact 3D Gaussian Splatting with Anchor Level Context Model
+Authors: Yufei Wang, Zhihao Li, Lanqing Guo, Wenhan Yang, Alex C. Kot, Bihan Wen
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, 3D Gaussian Splatting (3DGS) has become a promising framework for novel view synthesis, offering fast rendering speeds and high fidelity. However, the large number of Gaussians and their associated attributes require effective compression techniques. Existing methods primarily compress neural Gaussians individually and independently, i.e., coding all the neural Gaussians at the same time, with little design for their interactions and spatial dependence. Inspired by the effectiveness of the context model in image compression, we propose the first autoregressive model at the anchor level for 3DGS compression in this work. We divide anchors into different levels and the anchors that are not coded yet can be predicted based on the already coded ones in all the coarser levels, leading to more accurate modeling and higher coding efficiency. To further improve the efficiency of entropy coding, e.g., to code the coarsest level with no already coded anchors, we propose to introduce a low-dimensional quantized feature as the hyperprior for each anchor, which can be effectively compressed. Our work pioneers the context model in the anchor level for 3DGS representation, yielding an impressive size reduction of over 100 times compared to vanilla 3DGS and 15 times compared to the most recent state-of-the-art work Scaffold-GS, while achieving comparable or even higher rendering quality.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/996e5c55-1ed7-41d1-a928-24e26ed624ef)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.20721) | [⌨️ Code](https://github.com/wyf0912/ContextGS) | [🌐 Project Page]
+
+
+
+
+
 <br>
 <br>
 
@@ -1537,6 +1556,36 @@ Gaussian SLAM systems have made significant advancements in improving the effici
 </details>
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.20031) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+#### <summary>Neural Gaussian Scale-Space Fields
+Authors: Felix Mujkanovic, Ntumba Elie Nsampi, Christian Theobalt, Hans-Peter Seidel, Thomas Leimkühler
+<details span>
+<summary><b>Abstract</b></summary>
+Gaussian scale spaces are a cornerstone of signal representation and processing, with applications in filtering, multiscale analysis, anti-aliasing, and many more. However, obtaining such a scale space is costly and cumbersome, in particular for continuous representations such as neural fields. We present an efficient and lightweight method to learn the fully continuous, anisotropic Gaussian scale space of an arbitrary signal. Based on Fourier feature modulation and Lipschitz bounding, our approach is trained self-supervised, i.e., training does not require any manual filtering. Our neural Gaussian scale-space fields faithfully capture multiscale representations across a broad range of modalities, and support a diverse set of applications. These include images, geometry, light-stage data, texture anti-aliasing, and multiscale optimization.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/792da5e6-d8dd-40c0-8a81-023d18962d6a)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.20980) | [⌨️ Code](https://github.com/LoadingByte/neural-gaussian-scale-space-fields) | [🌐 Project Page](https://neural-gaussian-scale-space-fields.mpi-inf.mpg.de/)
+
+
+
+#### <summary>R2-Gaussian: Rectifying Radiative Gaussian Splatting for Tomographic Reconstruction
+Authors: Ruyi Zha, Tao Jun Lin, Yuanhao Cai, Jiwen Cao, Yanhao Zhang, Hongdong Li
+<details span>
+<summary><b>Abstract</b></summary>
+Gaussian scale spaces are a cornerstone of signal representation and processing, with applications in filtering, multiscale analysis, anti-aliasing, and many more. However, obtaining such a scale space is costly and cumbersome, in particular for continuous representations such as neural fields. We present an efficient and lightweight method to learn the fully continuous, anisotropic Gaussian scale space of an arbitrary signal. Based on Fourier feature modulation and Lipschitz bounding, our approach is trained self-supervised, i.e., training does not require any manual filtering. Our neural Gaussian scale-space fields faithfully capture multiscale representations across a broad range of modalities, and support a diverse set of applications. These include images, geometry, light-stage data, texture anti-aliasing, and multiscale optimization.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/e430065b-d5cc-44c7-bf10-01ddf09a41b0)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.20693) | [⌨️ Code] | [🌐 Project Page]
 
 
 
