@@ -257,6 +257,33 @@ Video generative models are receiving particular attention given their ability t
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.16822) | [⌨️ Code](https://github.com/yikaiw/vidu4d) | [🌐 Project Page](https://vidu4d-dgs.github.io/)
 
 
+#### <summary>GaussianRoom: Improving 3D Gaussian Splatting with SDF Guidance and Monocular Cues for Indoor Scene Reconstruction
+Authors: Haodong Xiang, Xinghui Li, Xiansong Lai, Wanting Zhang, Zhichao Liao, Kai Cheng, Xueping Liu
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, 3D Gaussian Splatting(3DGS) has revolutionized neural rendering with its high-quality rendering and real-time speed. However, when it comes to indoor scenes with a significant number of textureless areas, 3DGS yields incomplete and noisy reconstruction results due to the poor initialization of the point cloud and under-constrained optimization. Inspired by the continuity of signed distance field (SDF), which naturally has advantages in modeling surfaces, we present a unified optimizing framework integrating neural SDF with 3DGS. This framework incorporates a learnable neural SDF field to guide the densification and pruning of Gaussians, enabling Gaussians to accurately model scenes even with poor initialized point clouds. At the same time, the geometry represented by Gaussians improves the efficiency of the SDF field by piloting its point sampling. Additionally, we regularize the optimization with normal and edge priors to eliminate geometry ambiguity in textureless areas and improve the details. Extensive experiments in ScanNet and ScanNet++ show that our method achieves state-of-the-art performance in both surface reconstruction and novel view synthesis.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/0a64d87f-d434-41e9-978e-bde39acea4e5)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.19671) | [⌨️ Code](https://github.com/xhd0612/GaussianRoom) | [🌐 Project Page](https://xhd0612.github.io/GaussianRoom.github.io/)
+
+
+#### <summary>DreamMat: High-quality PBR Material Generation with Geometry- and Light-aware Diffusion Models
+Authors: Yuqing Zhang, Yuan Liu, Zhiyu Xie, Lei Yang, Zhongyuan Liu, Mengzhou Yang, Runze Zhang, Qilong Kou, Cheng Lin, Wenping Wang, Xiaogang Jin
+<details span>
+<summary><b>Abstract</b></summary>
+2D diffusion model, which often contains unwanted baked-in shading effects and results in unrealistic rendering effects in the downstream applications. Generating Physically Based Rendering (PBR) materials instead of just RGB textures would be a promising solution. However, directly distilling the PBR material parameters from 2D diffusion models still suffers from incorrect material decomposition, such as baked-in shading effects in albedo. We introduce DreamMat, an innovative approach to resolve the aforementioned problem, to generate high-quality PBR materials from text descriptions. We find out that the main reason for the incorrect material distillation is that large-scale 2D diffusion models are only trained to generate final shading colors, resulting in insufficient constraints on material decomposition during distillation. To tackle this problem, we first finetune a new light-aware 2D diffusion model to condition on a given lighting environment and generate the shading results on this specific lighting condition. Then, by applying the same environment lights in the material distillation, DreamMat can generate high-quality PBR materials that are not only consistent with the given geometry but also free from any baked-in shading effects in albedo. Extensive experiments demonstrate that the materials produced through our methods exhibit greater visual appeal to users and achieve significantly superior rendering quality compared to baseline methods, which are preferable for downstream tasks such as game and film production.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/4340dd21-05dc-468b-9450-c8dd06af7863)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.17176) | [⌨️ Code] | [🌐 Project Page]
+
 
 <br>
 <br>
@@ -338,6 +365,22 @@ Authors: Jiawei Zhang, Jiahe Li, Xiaohan Yu, Lei Huang, Lin Gu, Jin Zheng, Xiao 
 </details>
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.12110) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+#### <summary>Uncertainty-guided Optimal Transport in Depth Supervised Sparse-View 3D Gaussian
+Authors: Wei Sun, Qi Zhang, Yanzhao Zhou, Qixiang Ye, Jianbin Jiao, Yuan Li
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian splatting has demonstrated impressive performance in real-time novel view synthesis. However, achieving successful reconstruction from RGB images generally requires multiple input views captured under static conditions. To address the challenge of sparse input views, previous approaches have incorporated depth supervision into the training of 3D Gaussians to mitigate overfitting, using dense predictions from pretrained depth networks as pseudo-ground truth. Nevertheless, depth predictions from monocular depth estimation models inherently exhibit significant uncertainty in specific areas. Relying solely on pixel-wise L2 loss may inadvertently incorporate detrimental noise from these uncertain areas. In this work, we introduce a novel method to supervise the depth distribution of 3D Gaussians, utilizing depth priors with integrated uncertainty estimates. To address these localized errors in depth predictions, we integrate a patch-wise optimal transport strategy to complement traditional L2 loss in depth supervision. Extensive experiments conducted on the LLFF, DTU, and Blender datasets demonstrate that our approach, UGOT, achieves superior novel view synthesis and consistently outperforms state-of-the-art methods.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/cfee31c9-1738-46b7-9e4f-cfec7a5d9bd8)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.19657) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 
@@ -1436,6 +1479,66 @@ Recently, 3D Gaussian Splatting (3DGS) has become one of the mainstream methodol
 </details>
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.18784) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>S3Gaussian: Self-Supervised Street Gaussians for Autonomous Driving
+Authors: Nan Huang, Xiaobao Wei, Wenzhao Zheng, Pengju An, Ming Lu, Wei Zhan, Masayoshi Tomizuka, Kurt Keutzer, Shanghang Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+Photorealistic 3D reconstruction of street scenes is a critical technique for developing real-world simulators for autonomous driving. Despite the efficacy of Neural Radiance Fields (NeRF) for driving scenes, 3D Gaussian Splatting (3DGS) emerges as a promising direction due to its faster speed and more explicit representation. However, most existing street 3DGS methods require tracked 3D vehicle bounding boxes to decompose the static and dynamic elements for effective reconstruction, limiting their applications for in-the-wild scenarios. To facilitate efficient 3D scene reconstruction without costly annotations, we propose a self-supervised street Gaussian (S3Gaussian) method to decompose dynamic and static elements from 4D consistency. We represent each scene with 3D Gaussians to preserve the explicitness and further accompany them with a spatial-temporal field network to compactly model the 4D dynamics. We conduct extensive experiments on the challenging Waymo-Open dataset to evaluate the effectiveness of our method. Our S3Gaussian demonstrates the ability to decompose static and dynamic scenes and achieves the best performance without using 3D annotations.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/cd6040d0-1145-4b68-a204-5eb96a13fc71)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.20323) | [⌨️ Code](https://github.com/nnanhuang/S3Gaussian/) | [🌐 Project Page](https://wzzheng.net/S3Gaussian/)
+
+
+#### <summary>A Pixel Is Worth More Than One 3D Gaussians in Single-View 3D Reconstruction
+Authors: Jianghao Shen, Xue Nan, Tianfu Wu
+<details span>
+<summary><b>Abstract</b></summary>
+Learning 3D scene representation from a single-view image is a long-standing fundamental problem in computer vision, with the inherent ambiguity in predicting contents unseen from the input view. Built on the recently proposed 3D Gaussian Splatting (3DGS), the Splatter Image method has made promising progress on fast single-image novel view synthesis via learning a single 3D Gaussian for each pixel based on the U-Net feature map of an input image. However, it has limited expressive power to represent occluded components that are not observable in the input view. To address this problem, this paper presents a Hierarchical Splatter Image method in which a pixel is worth more than one 3D Gaussians. Specifically, each pixel is represented by a parent 3D Gaussian and a small number of child 3D Gaussians. Parent 3D Gaussians are learned as done in the vanilla Splatter Image. Child 3D Gaussians are learned via a lightweight Multi-Layer Perceptron (MLP) which takes as input the projected image features of a parent 3D Gaussian and the embedding of a target camera view. Both parent and child 3D Gaussians are learned end-to-end in a stage-wise way. The joint condition of input image features from eyes of the parent Gaussians and the target camera position facilitates learning to allocate child Gaussians to ``see the unseen'', recovering the occluded details that are often missed by parent Gaussians.
+In experiments, the proposed method is tested on the ShapeNet-SRN and CO3D datasets with state-of-the-art performance obtained, especially showing promising capabilities of reconstructing occluded contents in the input view.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/0efd709d-4fe7-4594-a049-386281612742)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.20310) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+#### <summary>GaussianPrediction: Dynamic 3D Gaussian Prediction for Motion Extrapolation and Free View Synthesis
+Authors: Boming Zhao, Yuan Li, Ziyu Sun, Lin Zeng, Yujun Shen, Rui Ma, Yinda Zhang, Hujun Bao, Zhaopeng Cui
+<details span>
+<summary><b>Abstract</b></summary>
+Forecasting future scenarios in dynamic environments is essential for intelligent decision-making and navigation, a challenge yet to be fully realized in computer vision and robotics. Traditional approaches like video prediction and novel-view synthesis either lack the ability to forecast from arbitrary viewpoints or to predict temporal dynamics. In this paper, we introduce GaussianPrediction, a novel framework that empowers 3D Gaussian representations with dynamic scene modeling and future scenario synthesis in dynamic environments. GaussianPrediction can forecast future states from any viewpoint, using video observations of dynamic scenes. To this end, we first propose a 3D Gaussian canonical space with deformation modeling to capture the appearance and geometry of dynamic scenes, and integrate the lifecycle property into Gaussians for irreversible deformations. To make the prediction feasible and efficient, a concentric motion distillation approach is developed by distilling the scene motion with key points. Finally, a Graph Convolutional Network is employed to predict the motions of key points, enabling the rendering of photorealistic images of future scenarios. Our framework shows outstanding performance on both synthetic and real-world datasets, demonstrating its efficacy in predicting and rendering future environments.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/424b3998-ce1f-46e5-80d4-c1a3338ff5e2)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.19745) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Structure Gaussian SLAM with Manhattan World Hypothesis
+Authors: Shuhong Liu, Heng Zhou, Liuzhuozheng Li, Yun Liu, Tianchen Deng, Yiming Zhou, Mingrui Li
+<details span>
+<summary><b>Abstract</b></summary>
+Gaussian SLAM systems have made significant advancements in improving the efficiency and fidelity of real-time reconstructions. However, these systems often encounter incomplete reconstructions in complex indoor environments, characterized by substantial holes due to unobserved geometry caused by obstacles or limited view angles. To address this challenge, we present Manhattan Gaussian SLAM (MG-SLAM), an RGB-D system that leverages the Manhattan World hypothesis to enhance geometric accuracy and completeness. By seamlessly integrating fused line segments derived from structured scenes, MG-SLAM ensures robust tracking in textureless indoor areas. Moreover, The extracted lines and planar surface assumption allow strategic interpolation of new Gaussians in regions of missing geometry, enabling efficient scene completion. Extensive experiments conducted on both synthetic and real-world scenes demonstrate that these advancements enable our method to achieve state-of-the-art performance, marking a substantial improvement in the capabilities of Gaussian SLAM systems.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/703df897-a955-4bac-b95e-dac8e2a3f317)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.20031) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 
 
