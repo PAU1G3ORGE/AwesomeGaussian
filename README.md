@@ -110,7 +110,7 @@ The advent of 3D Gaussian Splatting (3DGS) has recently brought about a revoluti
 </details>
 
 
-[📃 arXiv:2402](https://arxiv.org/pdf/2402.14650.pdf) | [⌨️ Code](https://github.com/flyingGH/GaussianPro/tree/main?tab=readme-ov-file) | [🌐 Project Page](https://kcheng1021.github.io/gaussianpro.github.io/)
+[📃 arXiv:2402](https://arxiv.org/pdf/2402.14650.pdf) | [⌨️ Code](https://github.com/kcheng1021/GaussianPro) | [🌐 Project Page](https://kcheng1021.github.io/gaussianpro.github.io/)
 
 
 
