@@ -1,4 +1,4 @@
-
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/622bf986-45e9-434b-b16f-79019531edde)
 # AwesomeGaussian
 
 
@@ -283,6 +283,22 @@ Authors: Yuqing Zhang, Yuan Liu, Zhiyu Xie, Lei Yang, Zhongyuan Liu, Mengzhou Ya
 </details>
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.17176) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+#### <summary>RaDe-GS: Rasterizing Depth in Gaussian Splatting
+Authors: Baowen Zhang, Chuan Fang, Rakesh Shrestha, Yixun Liang, Xiaoxiao Long, Ping Tan
+<details span>
+<summary><b>Abstract</b></summary>
+Gaussian Splatting (GS) has proven to be highly effective in novel view synthesis, achieving high-quality and real-time rendering. However, its potential for reconstructing detailed 3D shapes has not been fully explored. Existing methods often suffer from limited shape accuracy due to the discrete and unstructured nature of Gaussian splats, which complicates the shape extraction. While recent techniques like 2D GS have attempted to improve shape reconstruction, they often reformulate the Gaussian primitives in ways that reduce both rendering quality and computational efficiency. To address these problems, our work introduces a rasterized approach to render the depth maps and surface normal maps of general 3D Gaussian splats. Our method not only significantly enhances shape reconstruction accuracy but also maintains the computational efficiency intrinsic to Gaussian Splatting. Our approach achieves a Chamfer distance error comparable to NeuraLangelo on the DTU dataset and similar training and rendering time as traditional Gaussian Splatting on the Tanks & Temples dataset. Our method is a significant advancement in Gaussian Splatting and can be directly integrated into existing Gaussian Splatting-based methods.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/86c35cf2-d3b7-4e10-a4fd-26e7e0ed47c5)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.01467) | [⌨️ Code](https://github.com/BaowenZ/RaDe-GS) | [🌐 Project Page](https://baowenz.github.io/radegs/)
+
 
 
 <br>
@@ -1604,6 +1620,53 @@ Gaussian scale spaces are a cornerstone of signal representation and processing,
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.20693) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Tetrahedron Splatting for 3D Generation
+Authors: Chun Gu, Zeyu Yang, Zijie Pan, Xiatian Zhu, Li Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+3D representation is essential to the significant advance of 3D generation with 2D diffusion priors. As a flexible representation, NeRF has been first adopted for 3D representation. With density-based volumetric rendering, it however suffers both intensive computational overhead and inaccurate mesh extraction. Using a signed distance field and Marching Tetrahedra, DMTet allows for precise mesh extraction and real-time rendering but is limited in handling large topological changes in meshes, leading to optimization challenges. Alternatively, 3D Gaussian Splatting (3DGS) is favored in both training and rendering efficiency while falling short in mesh extraction. In this work, we introduce a novel 3D representation, Tetrahedron Splatting (TeT-Splatting), that supports easy convergence during optimization, precise mesh extraction, and real-time rendering simultaneously. This is achieved by integrating surface-based volumetric rendering within a structured tetrahedral grid while preserving the desired ability of precise mesh extraction, and a tile-based differentiable tetrahedron rasterizer. Furthermore, we incorporate eikonal and normal consistency regularization terms for the signed distance field to improve generation quality and stability. Critically, our representation can be trained without mesh extraction, making the optimization process easier to converge. Our TeT-Splatting can be readily integrated in existing 3D generation pipelines, along with polygonal mesh for texture optimization. Extensive experiments show that our TeT-Splatting strikes a superior tradeoff among convergence speed, render efficiency, and mesh quality as compared to previous alternatives under varying 3D generation settings.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/e8ae569d-9242-47e4-ba2c-b6184fe6ef69)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.01579) | [⌨️ Code](https://github.com/fudan-zvg/tet-splatting) | [🌐 Project Page]
+
+
+
+#### <summary>SuperGaussian: Repurposing Video Models for 3D Super Resolution
+Authors: Yuan Shen, Duygu Ceylan, Paul Guerrero, Zexiang Xu, Niloy J. Mitra, Shenlong Wang, Anna Früstück
+<details span>
+<summary><b>Abstract</b></summary>
+We present a simple, modular, and generic method that upsamples coarse 3D models by adding geometric and appearance details. While generative 3D models now exist, they do not yet match the quality of their counterparts in image and video domains. We demonstrate that it is possible to directly repurpose existing (pretrained) video models for 3D super-resolution and thus sidestep the problem of the shortage of large repositories of high-quality 3D training models. We describe how to repurpose video upsampling models, which are not 3D consistent, and combine them with 3D consolidation to produce 3D-consistent results. As output, we produce high quality Gaussian Splat models, which are object centric and effective. Our method is category agnostic and can be easily incorporated into existing 3D workflows. We evaluate our proposed SuperGaussian on a variety of 3D inputs, which are diverse both in terms of complexity and representation (e.g., Gaussian Splats or NeRFs), and demonstrate that our simple method significantly improves the fidelity of the final 3D models.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/25c557de-1883-4fd9-b760-b1f600c0be90)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.00609) | [⌨️ Code] | [🌐 Project Page](https://supergaussian.github.io/)
+
+
+
+#### <summary>MoDGS: Dynamic Gaussian Splatting from Causually-captured Monocular Videos
+Authors: Qingming Liu, Yuan Liu, Jiepeng Wang, Xianqiang Lv, Peng Wang, Wenping Wang, Junhui Hou
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper, we propose MoDGS, a new pipeline to render novel-view images in dynamic scenes using only casually captured monocular videos. Previous monocular dynamic NeRF or Gaussian Splatting methods strongly rely on the rapid movement of input cameras to construct multiview consistency but fail to reconstruct dynamic scenes on casually captured input videos whose cameras are static or move slowly. To address this challenging task, MoDGS adopts recent single-view depth estimation methods to guide the learning of the dynamic scene. Then, a novel 3D-aware initialization method is proposed to learn a reasonable deformation field and a new robust depth loss is proposed to guide the learning of dynamic scene geometry. Comprehensive experiments demonstrate that MoDGS is able to render high-quality novel view images of dynamic scenes from just a casually captured monocular video, which outperforms baseline methods by a significant margin.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/69188581-68ff-4ffe-ab5c-62e35a7a3713)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.00434) | [⌨️ Code] | [🌐 Project Page](https://modgs.github.io/)
+
+
+
+
+
 
 
 
@@ -2253,6 +2316,33 @@ Neural Radiance Fields (NeRFs) have shown remarkable success in synthesizing pho
 
 
 
+#### <summary>Towards Point Cloud Compression for Machine Perception: A Simple and Strong Baseline by Learning the Octree Depth Level Predictor
+Authors: Lei Liu, Zhihao Hu, Zhenghao Chen
+<details span>
+<summary><b>Abstract</b></summary>
+Point cloud compression has garnered significant interest in computer vision. However, existing algorithms primarily cater to human vision, while most point cloud data is utilized for machine vision tasks. To address this, we propose a point cloud compression framework that simultaneously handles both human and machine vision tasks. Our framework learns a scalable bit-stream, using only subsets for different machine vision tasks to save bit-rate, while employing the entire bit-stream for human vision tasks. Building on mainstream octree-based frameworks like VoxelContext-Net, OctAttention, and G-PCC, we introduce a new octree depth-level predictor. This predictor adaptively determines the optimal depth level for each octree constructed from a point cloud, controlling the bit-rate for machine vision tasks. For simpler tasks (\textit{e.g.}, classification) or objects/scenarios, we use fewer depth levels with fewer bits, saving bit-rate. Conversely, for more complex tasks (\textit{e.g}., segmentation) or objects/scenarios, we use deeper depth levels with more bits to enhance performance. Experimental results on various datasets (\textit{e.g}., ModelNet10, ModelNet40, ShapeNet, ScanNet, and KITTI) show that our point cloud compression approach improves performance for machine vision tasks without compromising human vision quality.
+
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/6de1cbd5-08fa-4082-804e-226f0102f5fe)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.00791) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>Details Enhancement in Unsigned Distance Field Learning for High-fidelity 3D Surface Reconstruction
+Authors: Cheng Xu, Fei Hou, Wencheng Wang, Hong Qin, Zhebin Zhang, Ying He
+<details span>
+<summary><b>Abstract</b></summary>
+While Signed Distance Fields (SDF) are well-established for modeling watertight surfaces, Unsigned Distance Fields (UDF) broaden the scope to include open surfaces and models with complex inner structures. Despite their flexibility, UDFs encounter significant challenges in high-fidelity 3D reconstruction, such as non-differentiability at the zero level set, difficulty in achieving the exact zero value, numerous local minima, vanishing gradients, and oscillating gradient directions near the zero level set. To address these challenges, we propose Details Enhanced UDF (DEUDF) learning that integrates normal alignment and the SIREN network for capturing fine geometric details, adaptively weighted Eikonal constraints to address vanishing gradients near the target surface, unconditioned MLP-based UDF representation to relax non-negativity constraints, and a UDF-tailored method for extracting iso-surface with non-constant iso-values. These strategies collectively stabilize the learning process from unoriented point clouds and enhance the accuracy of UDFs. Our computational results demonstrate that DEUDF outperforms existing UDF learning methods in both accuracy and the quality of reconstructed surfaces.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/46011ab9-662c-4b0a-8b5e-0b81652ef34e)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.00346) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 #### <summary>
@@ -2265,4 +2355,4 @@ Authors:
 
 </details>
 
-[📃 arXiv:2405] | [⌨️ Code] | [🌐 Project Page]
+[📃 arXiv:2406] | [⌨️ Code] | [🌐 Project Page]
