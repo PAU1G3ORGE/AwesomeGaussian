@@ -1665,8 +1665,74 @@ In this paper, we propose MoDGS, a new pipeline to render novel-view images in d
 
 
 
+#### <summary>Enhancing Temporal Consistency in Video Editing by Reconstructing Videos with 3D Gaussian Splatting
+Authors: Inkyu Shin, Qihang Yu, Xiaohui Shen, In So Kweon, Kuk-Jin Yoon, Liang-Chieh Chen
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advancements in zero-shot video diffusion models have shown promise for text-driven video editing, but challenges remain in achieving high temporal consistency. To address this, we introduce Video-3DGS, a 3D Gaussian Splatting (3DGS)-based video refiner designed to enhance temporal consistency in zero-shot video editors. Our approach utilizes a two-stage 3D Gaussian optimizing process tailored for editing dynamic monocular videos. In the first stage, Video-3DGS employs an improved version of COLMAP, referred to as MC-COLMAP, which processes original videos using a Masked and Clipped approach. For each video clip, MC-COLMAP generates the point clouds for dynamic foreground objects and complex backgrounds. These point clouds are utilized to initialize two sets of 3D Gaussians (Frg-3DGS and Bkg-3DGS) aiming to represent foreground and background views. Both foreground and background views are then merged with a 2D learnable parameter map to reconstruct full views. In the second stage, we leverage the reconstruction ability developed in the first stage to impose the temporal constraints on the video diffusion model. To demonstrate the efficacy of Video-3DGS on both stages, we conduct extensive experiments across two related tasks: Video Reconstruction and Video Editing. Video-3DGS trained with 3k iterations significantly improves video reconstruction quality (+3 PSNR, +7 PSNR increase) and training efficiency (x1.9, x4.5 times faster) over NeRF-based and 3DGS-based state-of-art methods on DAVIS dataset, respectively. Moreover, it enhances video editing by ensuring temporal consistency across 58 dynamic monocular videos.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/80510b95-071d-4cb8-b845-4ae10275e700)
 
 
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.02541) | [⌨️ Code] | [🌐 Project Page](https://video-3dgs-project.github.io/)
+
+
+
+#### <summary>WE-GS: An In-the-wild Efficient 3D Gaussian Representation for Unconstrained Photo Collections
+Authors: Yuze Wang, Junyi Wang, Yue Qi
+<details span>
+<summary><b>Abstract</b></summary>
+Novel View Synthesis (NVS) from unconstrained photo collections is challenging in computer graphics. Recently, 3D Gaussian Splatting (3DGS) has shown promise for photorealistic and real-time NVS of static scenes. Building on 3DGS, we propose an efficient point-based differentiable rendering framework for scene reconstruction from photo collections. Our key innovation is a residual-based spherical harmonic coefficients transfer module that adapts 3DGS to varying lighting conditions and photometric post-processing. This lightweight module can be pre-computed and ensures efficient gradient propagation from rendered images to 3D Gaussian attributes. Additionally, we observe that the appearance encoder and the transient mask predictor, the two most critical parts of NVS from unconstrained photo collections, can be mutually beneficial. We introduce a plug-and-play lightweight spatial attention module to simultaneously predict transient occluders and latent appearance representation for each image. After training and preprocessing, our method aligns with the standard 3DGS format and rendering pipeline, facilitating seamlessly integration into various 3DGS applications. Extensive experiments on diverse datasets show our approach outperforms existing approaches on the rendering quality of novel view and appearance synthesis with high converge and rendering speed.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/4c6ef8c7-ddab-4da9-a3ee-816267af4d76)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.02407) | [⌨️ Code] | [🌐 Project Page](https://yuzewang1998.github.io/we-gs.github.io/)
+
+
+#### <summary>OpenGaussian: Towards Point-Level 3D Gaussian-based Open Vocabulary Understanding
+Authors: Yanmin Wu, Jiarui Meng, Haijie Li, Chenming Wu, Yahao Shi, Xinhua Cheng, Chen Zhao, Haocheng Feng, Errui Ding, Jingdong Wang, Jian Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+This paper introduces OpenGaussian, a method based on 3D Gaussian Splatting (3DGS) capable of 3D point-level open vocabulary understanding. Our primary motivation stems from observing that existing 3DGS-based open vocabulary methods mainly focus on 2D pixel-level parsing. These methods struggle with 3D point-level tasks due to weak feature expressiveness and inaccurate 2D-3D feature associations. To ensure robust feature presentation and 3D point-level understanding, we first employ SAM masks without cross-frame associations to train instance features with 3D consistency. These features exhibit both intra-object consistency and inter-object distinction. Then, we propose a two-stage codebook to discretize these features from coarse to fine levels. At the coarse level, we consider the positional information of 3D points to achieve location-based clustering, which is then refined at the fine level. Finally, we introduce an instance-level 3D-2D feature association method that links 3D points to 2D masks, which are further associated with 2D CLIP features. Extensive experiments, including open vocabulary-based 3D object selection, 3D point cloud understanding, click-based 3D object selection, and ablation studies, demonstrate the effectiveness of our proposed method.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/6a25a8b4-78ca-4277-a2ae-05c01b03fcde)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.02058) | [⌨️ Code] | [🌐 Project Page](https://3d-aigc.github.io/OpenGaussian/)
+
+#### <summary>FastLGS: Speeding up Language Embedded Gaussians with Feature Grid Mapping
+Authors: Yuzhou Ji, He Zhu, Junshu Tang, Wuyi Liu, Zhizhong Zhang, Yuan Xie, Lizhuang Ma, Xin Tan
+<details span>
+<summary><b>Abstract</b></summary>
+The semantically interactive radiance field has always been an appealing task for its potential to facilitate user-friendly and automated real-world 3D scene understanding applications. However, it is a challenging task to achieve high quality, efficiency and zero-shot ability at the same time with semantics in radiance fields. In this work, we present FastLGS, an approach that supports real-time open-vocabulary query within 3D Gaussian Splatting (3DGS) under high resolution. We propose the semantic feature grid to save multi-view CLIP features which are extracted based on Segment Anything Model (SAM) masks, and map the grids to low dimensional features for semantic field training through 3DGS. Once trained, we can restore pixel-aligned CLIP embeddings through feature grids from rendered features for open-vocabulary queries. Comparisons with other state-of-the-art methods prove that FastLGS can achieve the first place performance concerning both speed and accuracy, where FastLGS is 98x faster than LERF and 4x faster than LangSplat. Meanwhile, experiments show that FastLGS is adaptive and compatible with many downstream tasks, such as 3D segmentation and 3D object inpainting, which can be easily applied to other 3D manipulation systems.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/e7524948-f1e0-4237-b719-00fe0f34cc2b)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.01916) | [⌨️ Code] | [🌐 Project Page](https://george-attano.github.io/FastLGS/)
+
+
+#### <summary>End-to-End Rate-Distortion Optimized 3D Gaussian Representation
+Authors: Henan Wang, Hanxin Zhu, Tianyu He, Runsen Feng, Jiajun Deng, Jiang Bian, Zhibo Chen
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has become an emerging technique with remarkable potential in 3D representation and image rendering. However, the substantial storage overhead of 3DGS significantly impedes its practical applications. In this work, we formulate the compact 3D Gaussian learning as an end-to-end Rate-Distortion Optimization (RDO) problem and propose RDO-Gaussian that can achieve flexible and continuous rate control. RDO-Gaussian addresses two main issues that exist in current schemes: 1) Different from prior endeavors that minimize the rate under the fixed distortion, we introduce dynamic pruning and entropy-constrained vector quantization (ECVQ) that optimize the rate and distortion at the same time. 2) Previous works treat the colors of each Gaussian equally, while we model the colors of different regions and materials with learnable numbers of parameters. We verify our method on both real and synthetic scenes, showcasing that RDO-Gaussian greatly reduces the size of 3D Gaussian over 40x, and surpasses existing methods in rate-distortion performance.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/660d9847-1f6f-48fb-bdca-ac251dd52d66)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.01597) | [⌨️ Code](https://github.com/USTC-IMCL/RDO-Gaussian) | [🌐 Project Page]
 
 
 <br>
@@ -2341,6 +2407,20 @@ While Signed Distance Fields (SDF) are well-established for modeling watertight 
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.00346) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>GenS: Generalizable Neural Surface Reconstruction from Multi-View Images
+Authors: Rui Peng, Xiaodong Gu, Luyang Tang, Shihe Shen, Fanqi Yu, Ronggang Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Combining the signed distance function (SDF) and differentiable volume rendering has emerged as a powerful paradigm for surface reconstruction from multi-view images without 3D supervision. However, current methods are impeded by requiring long-time per-scene optimizations and cannot generalize to new scenes. In this paper, we present GenS, an end-to-end generalizable neural surface reconstruction model. Unlike coordinate-based methods that train a separate network for each scene, we construct a generalized multi-scale volume to directly encode all scenes. Compared with existing solutions, our representation is more powerful, which can recover high-frequency details while maintaining global smoothness. Meanwhile, we introduce a multi-scale feature-metric consistency to impose the multi-view consistency in a more discriminative multi-scale feature space, which is robust to the failures of the photometric consistency. And the learnable feature can be self-enhanced to continuously improve the matching accuracy and mitigate aggregation ambiguity. Furthermore, we design a view contrast loss to force the model to be robust to those regions covered by few viewpoints through distilling the geometric prior from dense input to sparse input. Extensive experiments on popular benchmarks show that our model can generalize well to new scenes and outperform existing state-of-the-art methods even those employing ground-truth depth supervision.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/6bd2d4a8-d5e7-4c2e-9b06-cc75bbe10f62)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.02495) | [⌨️ Code](https://github.com/prstrive/GenS) | [🌐 Project Page]
 
 
 
