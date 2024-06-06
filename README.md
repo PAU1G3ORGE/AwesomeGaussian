@@ -535,7 +535,18 @@ Recently, 3D Gaussian Splatting (3DGS) has become a promising framework for nove
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.20721) | [⌨️ Code](https://github.com/wyf0912/ContextGS) | [🌐 Project Page]
 
 
+#### <summary>3D-HGS: 3D Half-Gaussian Splatting
+Authors: Haolin Li, Jinyang Liu, Mario Sznaier, Octavia Camps
+<details span>
+<summary><b>Abstract</b></summary>
+Photo-realistic 3D Reconstruction is a fundamental problem in 3D computer vision. This domain has seen considerable advancements owing to the advent of recent neural rendering techniques. These techniques predominantly aim to focus on learning volumetric representations of 3D scenes and refining these representations via loss functions derived from rendering. Among these, 3D Gaussian Splatting (3D-GS) has emerged as a significant method, surpassing Neural Radiance Fields (NeRFs). 3D-GS uses parameterized 3D Gaussians for modeling both spatial locations and color information, combined with a tile-based fast rendering technique. Despite its superior rendering performance and speed, the use of 3D Gaussian kernels has inherent limitations in accurately representing discontinuous functions, notably at edges and corners for shape discontinuities, and across varying textures for color discontinuities. To address this problem, we propose to employ 3D Half-Gaussian (3D-HGS) kernels, which can be used as a plug-and-play kernel. Our experiments demonstrate their capability to improve the performance of current 3D-GS related methods and achieve state-of-the-art rendering performance on various datasets without compromising rendering speed.
 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/e737cfb0-2afd-4f05-9b6e-73cdcfa86c42)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.02720) | [⌨️ Code] | [🌐 Project Page]
 
 
 <br>
@@ -695,6 +706,22 @@ Neural Radiance Fields (NeRFs) have demonstrated remarkable proficiency in synth
 </details>
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.16829) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+#### <summary>Dynamic 3D Gaussian Fields for Urban Areas
+
+Authors: Tobias Fischer, Jonas Kulhanek, Samuel Rota Bulò, Lorenzo Porzi, Marc Pollefeys, Peter Kontschieder
+<details span>
+<summary><b>Abstract</b></summary>
+We present an efficient neural 3D scene representation for novel-view synthesis (NVS) in large-scale, dynamic urban areas. Existing works are not well suited for applications like mixed-reality or closed-loop simulation due to their limited visual quality and non-interactive rendering speeds. Recently, rasterization-based approaches have achieved high-quality NVS at impressive speeds. However, these methods are limited to small-scale, homogeneous data, i.e. they cannot handle severe appearance and geometry variations due to weather, season, and lighting and do not scale to larger, dynamic areas with thousands of images. We propose 4DGF, a neural scene representation that scales to large-scale dynamic urban areas, handles heterogeneous input data, and substantially improves rendering speeds. We use 3D Gaussians as an efficient geometry scaffold while relying on neural fields as a compact and flexible appearance model. We integrate scene dynamics via a scene graph at global scale while modeling articulated motions on a local level via deformations. This decomposed approach enables flexible scene composition suitable for real-world applications. In experiments, we surpass the state-of-the-art by over 3 dB in PSNR and more than 200 times in rendering speed.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/bdea228e-d324-4ca0-bd0a-ba9194c73a3e)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.03175) | [⌨️ Code](https://github.com/tobiasfshr/map4d) | [🌐 Project Page](https://tobiasfshr.github.io/pub/4dgf/)
 
 
 
@@ -1362,7 +1389,7 @@ We introduce 4D Motion Scaffolds (MoSca), a neural information processing system
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.17421) | [⌨️ Code] | [🌐 Project Page](https://www.cis.upenn.edu/~leijh/projects/mosca/)
 
-#### <summary>DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting for Refocusing,Defocus Rendering and Blur Removal
+#### <summary>DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting for Refocusing, Defocus Rendering and Blur Removal
 Authors: Yujie Wang, Praneeth Chakravarthula, Baoquan Chen
 <details span>
 <summary><b>Abstract</b></summary>
@@ -1733,6 +1760,20 @@ Authors: Henan Wang, Hanxin Zhu, Tianyu He, Runsen Feng, Jiajun Deng, Jiang Bian
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.01597) | [⌨️ Code](https://github.com/USTC-IMCL/RDO-Gaussian) | [🌐 Project Page]
+
+#### <summary>Event3DGS: Event-based 3D Gaussian Splatting for Fast Egomotion
+Authors: Tianyi Xiong, Jiayi Wu, Botao He, Cornelia Fermuller, Yiannis Aloimonos, Heng Huang, Christopher A. Metzler
+<details span>
+<summary><b>Abstract</b></summary>
+The recent emergence of 3D Gaussian splatting (3DGS) leverages the advantage of explicit point-based representations, which significantly improves the rendering speed and quality of novel-view synthesis. However, 3D radiance field rendering in environments with high-dynamic motion or challenging illumination condition remains problematic in real-world robotic tasks. The reason is that fast egomotion is prevalent real-world robotic tasks, which induces motion blur, leading to inaccuracies and artifacts in the reconstructed structure. To alleviate this problem, we propose Event3DGS, the first method that learns Gaussian Splatting solely from raw event streams. By exploiting the high temporal resolution of event cameras and explicit point-based representation, Event3DGS can reconstruct high-fidelity 3D structures solely from the event streams under fast egomotion. Our sparsity-aware sampling and progressive training approaches allow for better reconstruction quality and consistency. To further enhance the fidelity of appearance, we explicitly incorporate the motion blur formation process into a differentiable rasterizer, which is used with a limited set of blurred RGB images to refine the appearance. Extensive experiments on multiple datasets validate the superior rendering quality of Event3DGS compared with existing approaches, with over 95% lower training time and faster rendering speed in orders of magnitude.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/7a9eae92-d15b-4f6e-9682-4bdfbcb3c270)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.02972) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 <br>
@@ -2421,6 +2462,19 @@ Combining the signed distance function (SDF) and differentiable volume rendering
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.02495) | [⌨️ Code](https://github.com/prstrive/GenS) | [🌐 Project Page]
+
+#### <summary>CoFie: Learning Compact Neural Surface Representations with Coordinate Fields
+Authors: Hanwen Jiang, Haitao Yang, Georgios Pavlakos, Qixing Huang
+<details span>
+<summary><b>Abstract</b></summary>
+This paper introduces CoFie, a novel local geometry-aware neural surface representation. CoFie is motivated by the theoretical analysis of local SDFs with quadratic approximation. We find that local shapes are highly compressive in an aligned coordinate frame defined by the normal and tangent directions of local shapes. Accordingly, we introduce Coordinate Field, which is a composition of coordinate frames of all local shapes. The Coordinate Field is optimizable and is used to transform the local shapes from the world coordinate frame to the aligned shape coordinate frame. It largely reduces the complexity of local shapes and benefits the learning of MLP-based implicit representations. Moreover, we introduce quadratic layers into the MLP to enhance expressiveness concerning local shape geometry. CoFie is a generalizable surface representation. It is trained on a curated set of 3D shapes and works on novel shape instances during testing. When using the same amount of parameters with prior works, CoFie reduces the shape error by 48% and 56% on novel instances of both training and unseen shape categories. Moreover, CoFie demonstrates comparable performance to prior works when using only 70% fewer parameters.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/91adbfc3-64ff-4d27-854c-807604d7830c)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.03417) | [⌨️ Code](https://github.com/hwjiang1510/CoFie) | [🌐 Project Page](https://hwjiang1510.github.io/CoFie/)
 
 
 
