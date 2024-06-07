@@ -1776,6 +1776,34 @@ The recent emergence of 3D Gaussian splatting (3DGS) leverages the advantage of 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.02972) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Neural Surface Reconstruction from Sparse Views Using Epipolar Geometry
+Authors: Kaichen Zhou
+<details span>
+<summary><b>Abstract</b></summary>
+This paper addresses the challenge of reconstructing surfaces from sparse view inputs, where ambiguity and occlusions due to missing information pose significant hurdles. We present a novel approach, named EpiS, that incorporates Epipolar information into the reconstruction process. Existing methods in sparse-view neural surface learning have mainly focused on mean and variance considerations using cost volumes for feature extraction. In contrast, our method aggregates coarse information from the cost volume into Epipolar features extracted from multiple source views, enabling the generation of fine-grained Signal Distance Function (SDF)-aware features. Additionally, we employ an attention mechanism along the line dimension to facilitate feature fusion based on the SDF feature. Furthermore, to address the information gaps in sparse conditions, we integrate depth information from monocular depth estimation using global and local regularization techniques. The global regularization utilizes a triplet loss function, while the local regularization employs a derivative loss function. Extensive experiments demonstrate that our approach outperforms state-of-the-art methods, especially in cases with sparse and generalizable conditions.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/26ebd05c-de45-4012-82f3-8046009669f2)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.04301) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>Superpoint Gaussian Splatting for Real-Time High-Fidelity Dynamic Scene Reconstruction
+Authors: Diwen Wan, Ruijie Lu, Gang Zeng
+<details span>
+<summary><b>Abstract</b></summary>
+Rendering novel view images in dynamic scenes is a crucial yet challenging task. Current methods mainly utilize NeRF-based methods to represent the static scene and an additional time-variant MLP to model scene deformations, resulting in relatively low rendering quality as well as slow inference speed. To tackle these challenges, we propose a novel framework named Superpoint Gaussian Splatting (SP-GS). Specifically, our framework first employs explicit 3D Gaussians to reconstruct the scene and then clusters Gaussians with similar properties (e.g., rotation, translation, and location) into superpoints. Empowered by these superpoints, our method manages to extend 3D Gaussian splatting to dynamic scenes with only a slight increase in computational expense. Apart from achieving state-of-the-art visual quality and real-time rendering under high resolutions, the superpoint representation provides a stronger manipulation capability. Extensive experiments demonstrate the practicality and effectiveness of our approach on both synthetic and real-world datasets.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/d164cbfc-74bb-4a08-bc3a-d91e52dd6a68)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.03697) | [⌨️ Code] | [🌐 Project Page](https://dnvtmf.github.io/SP_GS.github.io)
+
+
+
 
 <br>
 <br>
@@ -2476,6 +2504,38 @@ This paper introduces CoFie, a novel local geometry-aware neural surface represe
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.03417) | [⌨️ Code](https://github.com/hwjiang1510/CoFie) | [🌐 Project Page](https://hwjiang1510.github.io/CoFie/)
+
+
+#### <summary>How Far Can We Compress Instant-NGP-Based NeRF?
+
+>  *read together with HAC*
+
+Authors: Yihang Chen, Qianyi Wu, Mehrtash Harandi, Jianfei Cai
+<details span>
+<summary><b>Abstract</b></summary>
+In recent years, Neural Radiance Field (NeRF) has demonstrated remarkable capabilities in representing 3D scenes. To expedite the rendering process, learnable explicit representations have been introduced for combination with implicit NeRF representation, which however results in a large storage space requirement. In this paper, we introduce the Context-based NeRF Compression (CNC) framework, which leverages highly efficient context models to provide a storage-friendly NeRF representation. Specifically, we excavate both level-wise and dimension-wise context dependencies to enable probability prediction for information entropy reduction. Additionally, we exploit hash collision and occupancy grids as strong prior knowledge for better context modeling. To the best of our knowledge, we are the first to construct and exploit context models for NeRF compression. We achieve a size reduction of 100× and 70× with improved fidelity against the baseline Instant-NGP on Synthesic-NeRF and Tanks and Temples datasets, respectively. Additionally, we attain 86.7\% and 82.3\% storage size reduction against the SOTA NeRF compression method BiRF.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/6b0036b5-3dd7-4b3c-bb80-80585710c393)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.04101) | [⌨️ Code](https://github.com/YihangChen-ee/CNC) | [🌐 Project Page](https://yihangchen-ee.github.io/project_cnc/)
+
+
+#### <summary>Matching Anything by Segmenting Anything
+
+Authors: Siyuan Li, Lei Ke, Martin Danelljan, Luigi Piccinelli, Mattia Segu, Luc Van Gool, Fisher Yu
+<details span>
+<summary><b>Abstract</b></summary>
+The robust association of the same objects across video frames in complex scenes is crucial for many applications, especially Multiple Object Tracking (MOT). Current methods predominantly rely on labeled domain-specific video datasets, which limits the cross-domain generalization of learned similarity embeddings. We propose MASA, a novel method for robust instance association learning, capable of matching any objects within videos across diverse domains without tracking labels. Leveraging the rich object segmentation from the Segment Anything Model (SAM), MASA learns instance-level correspondence through exhaustive data transformations. We treat the SAM outputs as dense object region proposals and learn to match those regions from a vast image collection. We further design a universal MASA adapter which can work in tandem with foundational segmentation or detection models and enable them to track any detected objects. Those combinations present strong zero-shot tracking ability in complex domains. Extensive tests on multiple challenging MOT and MOTS benchmarks indicate that the proposed method, using only unlabeled static images, achieves even better performance than state-of-the-art methods trained with fully annotated in-domain video sequences, in zero-shot association.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/3c149bc6-6c3a-4c92-b505-bcfaaf9dc248)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.04221) | [⌨️ Code](https://github.com/siyuanliii/masa) | [🌐 Project Page](https://matchinganything.github.io/)
 
 
 
