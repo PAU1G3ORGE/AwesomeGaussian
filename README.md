@@ -2537,6 +2537,20 @@ The robust association of the same objects across video frames in complex scenes
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.04221) | [⌨️ Code](https://github.com/siyuanliii/masa) | [🌐 Project Page](https://matchinganything.github.io/)
 
+#### <summary>Bilateral Guided Radiance Field Processing
+Authors: Yuehao Wang, Chaoyi Wang, Bingchen Gong, Tianfan Xue
+<details span>
+<summary><b>Abstract</b></summary>
+Neural Radiance Fields (NeRF) achieves unprecedented performance in synthesizing novel view synthesis, utilizing multi-view consistency. When capturing multiple inputs, image signal processing (ISP) in modern cameras will independently enhance them, including exposure adjustment, color correction, local tone mapping, etc. While these processings greatly improve image quality, they often break the multi-view consistency assumption, leading to "floaters" in the reconstructed radiance fields. To address this concern without compromising visual aesthetics, we aim to first disentangle the enhancement by ISP at the NeRF training stage and re-apply user-desired enhancements to the reconstructed radiance fields at the finishing stage. Furthermore, to make the re-applied enhancements consistent between novel views, we need to perform imaging signal processing in 3D space (i.e. "3D ISP"). For this goal, we adopt the bilateral grid, a locally-affine model, as a generalized representation of ISP processing. Specifically, we optimize per-view 3D bilateral grids with radiance fields to approximate the effects of camera pipelines for each input view. To achieve user-adjustable 3D finishing, we propose to learn a low-rank 4D bilateral grid from a given single view edit, lifting photo enhancements to the whole 3D scene. We demonstrate our approach can boost the visual quality of novel view synthesis by effectively removing floaters and performing enhancements from user retouching.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/0c18cabc-7d81-4e5f-8e6c-a87abbef0573)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.00448) | [⌨️ Code](https://github.com/yuehaowang/bilarf) | [🌐 Project Page](https://bilarfpro.github.io/)
+
+
 
 
 #### <summary>
