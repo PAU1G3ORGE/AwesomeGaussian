@@ -2550,6 +2550,59 @@ Neural Radiance Fields (NeRF) achieves unprecedented performance in synthesizing
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.00448) | [⌨️ Code](https://github.com/yuehaowang/bilarf) | [🌐 Project Page](https://bilarfpro.github.io/)
 
+#### <summary>3DRealCar: An In-the-wild RGB-D Car Dataset with 360-degree Views
+Authors: Xiaobiao Du, Haiyang Sun, Shuyun Wang, Zhuojie Wu, Hongwei Sheng, Jiaying Ying, Ming Lu, Tianqing Zhu, Kun Zhan, Xin Yu
+<details span>
+<summary><b>Abstract</b></summary>
+3D cars are commonly used in self-driving systems, virtual/augmented reality, and games. However, existing 3D car datasets are either synthetic or low-quality, presenting a significant gap toward the high-quality real-world 3D car datasets and limiting their applications in practical scenarios. In this paper, we propose the first large-scale 3D real car dataset, termed 3DRealCar, offering three distinctive features. (1) \textbf{High-Volume}: 2,500 cars are meticulously scanned by 3D scanners, obtaining car images and point clouds with real-world dimensions; (2) \textbf{High-Quality}: Each car is captured in an average of 200 dense, high-resolution 360-degree RGB-D views, enabling high-fidelity 3D reconstruction; (3) \textbf{High-Diversity}: The dataset contains various cars from over 100 brands, collected under three distinct lighting conditions, including reflective, standard, and dark. Additionally, we offer detailed car parsing maps for each instance to promote research in car parsing tasks. Moreover, we remove background point clouds and standardize the car orientation to a unified axis for the reconstruction only on cars without background and controllable rendering. We benchmark 3D reconstruction results with state-of-the-art methods across each lighting condition in 3DRealCar. Extensive experiments demonstrate that the standard lighting condition part of 3DRealCar can be used to produce a large number of high-quality 3D cars, improving various 2D and 3D tasks related to cars. Notably, our dataset brings insight into the fact that recent 3D reconstruction methods face challenges in reconstructing high-quality 3D cars under reflective and dark lighting conditions.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/ef047611-37aa-46bd-a467-fe3e8fb00e27)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.04875) | [⌨️ Code] | [🌐 Project Page](https://xiaobiaodu.github.io/3drealcar/)
+
+
+#### <summary>Normal-guided Detail-Preserving Neural Implicit Functions for High-Fidelity 3D Surface Reconstruction
+Authors: Aarya Patel, Hamid Laga, Ojaswa Sharma
+<details span>
+<summary><b>Abstract</b></summary>
+Neural implicit representations have emerged as a powerful paradigm for 3D reconstruction. However, despite their success, existing methods fail to capture fine geometric details and thin structures, especially in scenarios where only sparse RGB views of the objects of interest are available. We hypothesize that current methods for learning neural implicit representations from RGB or RGBD images produce 3D surfaces with missing parts and details because they only rely on 0-order differential properties, i.e. the 3D surface points and their projections, as supervisory signals. Such properties, however, do not capture the local 3D geometry around the points and also ignore the interactions between points. This paper demonstrates that training neural representations with first-order differential properties, i.e. surface normals, leads to highly accurate 3D surface reconstruction even in situations where only as few as two RGB (front and back) images are available. Given multiview RGB images of an object of interest, we first compute the approximate surface normals in the image space using the gradient of the depth maps produced using an off-the-shelf monocular depth estimator such as Depth Anything model. An implicit surface regressor is then trained using a loss function that enforces the first-order differential properties of the regressed surface to match those estimated from Depth Anything. Our extensive experiments on a wide range of real and synthetic datasets show that the proposed method achieves an unprecedented level of reconstruction accuracy even when using as few as two RGB views. The detailed ablation study also demonstrates that normal-based supervision plays a key role in this significant improvement in performance, enabling the 3D reconstruction of intricate geometric details and thin structures that were previously challenging to capture.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/3822b40d-dde8-444f-ac10-e7756ad2e233)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.04861) | [⌨️ Code](https://github.com/sn-nir/sn-nir) | [🌐 Project Page](https://sn-nir.github.io/)
+
+#### <summary>1st Place Solution for MOSE Track in CVPR 2024 PVUW Workshop: Complex Video Object Segmentation
+Authors: Deshui Miao, Xin Li, Zhenyu He, Yaowei Wang, Ming-Hsuan Yang
+<details span>
+<summary><b>Abstract</b></summary>
+Tracking and segmenting multiple objects in complex scenes has always been a challenge in the field of video object segmentation, especially in scenarios where objects are occluded and split into parts. In such cases, the definition of objects becomes very ambiguous. The motivation behind the MOSE dataset is how to clearly recognize and distinguish objects in complex scenes. In this challenge, we propose a semantic embedding video object segmentation model and use the salient features of objects as query representations. The semantic understanding helps the model to recognize parts of the objects and the salient feature captures the more discriminative features of the objects. Trained on a large-scale video object segmentation dataset, our model achieves first place (\textbf{84.45\%}) in the test set of PVUW Challenge 2024: Complex Video Object Segmentation Track.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/872d3b14-2e2a-415c-9de9-7d507c4d58b2)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.04600) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>InstructNav: Zero-shot System for Generic Instruction Navigation in Unexplored Environment
+Authors: Yuxing Long, Wenzhe Cai, Hongcheng Wang, Guanqi Zhan, Hao Dong
+<details span>
+<summary><b>Abstract</b></summary>
+Enabling robots to navigate following diverse language instructions in unexplored environments is an attractive goal for human-robot interaction. However, this goal is challenging because different navigation tasks require different strategies. The scarcity of instruction navigation data hinders training an instruction navigation model with varied strategies. Therefore, previous methods are all constrained to one specific type of navigation instruction. In this work, we propose InstructNav, a generic instruction navigation system. InstructNav makes the first endeavor to handle various instruction navigation tasks without any navigation training or pre-built maps. To reach this goal, we introduce Dynamic Chain-of-Navigation (DCoN) to unify the planning process for different types of navigation instructions. Furthermore, we propose Multi-sourced Value Maps to model key elements in instruction navigation so that linguistic DCoN planning can be converted into robot actionable trajectories. With InstructNav, we complete the R2R-CE task in a zero-shot way for the first time and outperform many task-training methods. Besides, InstructNav also surpasses the previous SOTA method by 10.48% on the zero-shot Habitat ObjNav and by 86.34% on demand-driven navigation DDN. Real robot experiments on diverse indoor scenes further demonstrate our method's robustness in coping with the environment and instruction variations.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/1eecab15-c927-4042-8d10-126a54351cc8)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.04882) | [⌨️ Code] | [🌐 Project Page](https://sites.google.com/view/instructnavA)
 
 
 
