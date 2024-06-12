@@ -299,6 +299,34 @@ Gaussian Splatting (GS) has proven to be highly effective in novel view synthesi
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.01467) | [⌨️ Code](https://github.com/BaowenZ/RaDe-GS) | [🌐 Project Page](https://baowenz.github.io/radegs/)
 
 
+#### <summary>PGSR: Planar-based Gaussian Splatting for Efficient and High-Fidelity Surface Reconstruction
+Authors: Danpeng Chen, Hai Li, Weicai Ye, Yifan Wang, Weijian Xie, Shangjin Zhai, Nan Wang, Haomin Liu, Hujun Bao, Guofeng Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, 3D Gaussian Splatting (3DGS) has attracted widespread attention due to its high-quality rendering, and ultra-fast training and rendering speed. However, due to the unstructured and irregular nature of Gaussian point clouds, it is difficult to guarantee geometric reconstruction accuracy and multi-view consistency simply by relying on image reconstruction loss. Although many studies on surface reconstruction based on 3DGS have emerged recently, the quality of their meshes is generally unsatisfactory. To address this problem, we propose a fast planar-based Gaussian splatting reconstruction representation (PGSR) to achieve high-fidelity surface reconstruction while ensuring high-quality rendering. Specifically, we first introduce an unbiased depth rendering method, which directly renders the distance from the camera origin to the Gaussian plane and the corresponding normal map based on the Gaussian distribution of the point cloud, and divides the two to obtain the unbiased depth. We then introduce single-view geometric, multi-view photometric, and geometric regularization to preserve global geometric accuracy. We also propose a camera exposure compensation model to cope with scenes with large illumination variations. Experiments on indoor and outdoor scenes show that our method achieves fast training and rendering while maintaining high-fidelity rendering and geometric reconstruction, outperforming 3DGS-based and NeRF-based methods.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/65dcf5d4-93a8-4fa9-9d5a-23252ed35dcf)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.06521) | [⌨️ Code](https://github.com/zju3dv/PGSR) | [🌐 Project Page](https://zju3dv.github.io/pgsr/)
+
+
+#### <summary>VCR-GauS: View Consistent Depth-Normal Regularizer for Gaussian Surface Reconstruction
+Authors: Hanlin Chen, Fangyin Wei, Chen Li, Tianxin Huang, Yunsong Wang, Gim Hee Lee
+<details span>
+<summary><b>Abstract</b></summary>
+Although 3D Gaussian Splatting has been widely studied because of its realistic and efficient novel-view synthesis, it is still challenging to extract a high-quality surface from the point-based representation. Previous works improve the surface by incorporating geometric priors from the off-the-shelf normal estimator. However, there are two main limitations: 1) Supervising normal rendered from 3D Gaussians updates only the rotation parameter while neglecting other geometric parameters; 2) The inconsistency of predicted normal maps across multiple views may lead to severe reconstruction artifacts. In this paper, we propose a Depth-Normal regularizer that directly couples normal with other geometric parameters, leading to full updates of the geometric parameters from normal regularization. We further propose a confidence term to mitigate inconsistencies of normal predictions across multiple views. Moreover, we also introduce a densification and splitting strategy to regularize the size and distribution of 3D Gaussians for more accurate surface modeling. Compared with Gaussian-based baselines, experiments show that our approach obtains better reconstruction quality and maintains competitive appearance quality at faster training speed and 100+ FPS rendering. Our code will be made open-source upon paper acceptance.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/69bbb5e9-b6b2-4a6d-bb3f-a7d9be950bbf)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.05774) | [⌨️ Code](https://github.com/HLinChen/VCR-GauS) | [🌐 Project Page](https://hlinchen.github.io/projects/VCR-GauS/)
+
+
 
 <br>
 <br>
@@ -548,6 +576,21 @@ Photo-realistic 3D Reconstruction is a fundamental problem in 3D computer vision
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.02720) | [⌨️ Code] | [🌐 Project Page]
 
+<br>
+<br>
+
+#### <summary>InfoGaussian: Structure-Aware Dynamic Gaussians through Lightweight Information Shaping
+Authors: Yunchao Zhang, Guandao Yang, Leonidas Guibas, Yanchao Yang
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussians, as a low-level scene representation, typically involve thousands to millions of Gaussians. This makes it difficult to control the scene in ways that reflect the underlying dynamic structure, where the number of independent entities is typically much smaller. In particular, it can be challenging to animate and move objects in the scene, which requires coordination among many Gaussians. To address this issue, we develop a mutual information shaping technique that enforces movement resonance between correlated Gaussians in a motion network. Such correlations can be learned from putative 2D object masks in different views. By approximating the mutual information with the Jacobians of the motions, our method ensures consistent movements of the Gaussians composing different objects under various perturbations. In particular, we develop an efficient contrastive training pipeline with lightweight optimization to shape the motion network, avoiding the need for re-shaping throughout the motion sequence. Notably, our training only touches a small fraction of all Gaussians in the scene yet attains the desired compositional behavior according to the underlying dynamic structure. The proposed technique is evaluated on challenging scenes and demonstrates significant performance improvement in promoting consistent movements and 3D object segmentation while inducing low computation and memory requirements.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/99c2f56f-ed1c-475a-a4cd-af7dee6231e7)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.05897) | [⌨️ Code] | [🌐 Project Page]
 
 <br>
 <br>
@@ -723,6 +766,20 @@ We present an efficient neural 3D scene representation for novel-view synthesis 
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.03175) | [⌨️ Code](https://github.com/tobiasfshr/map4d) | [🌐 Project Page](https://tobiasfshr.github.io/pub/4dgf/)
 
+
+#### <summary>GaussianCity: Generative Gaussian Splatting for Unbounded 3D City Generation
+
+Authors: Haozhe Xie, Zhaoxi Chen, Fangzhou Hong, Ziwei Liu
+<details span>
+<summary><b>Abstract</b></summary>
+3D city generation with NeRF-based methods shows promising generation results but is computationally inefficient. Recently 3D Gaussian Splatting (3D-GS) has emerged as a highly efficient alternative for object-level 3D generation. However, adapting 3D-GS from finite-scale 3D objects and humans to infinite-scale 3D cities is non-trivial. Unbounded 3D city generation entails significant storage overhead (out-of-memory issues), arising from the need to expand points to billions, often demanding hundreds of Gigabytes of VRAM for a city scene spanning 10km^2. In this paper, we propose GaussianCity, a generative Gaussian Splatting framework dedicated to efficiently synthesizing unbounded 3D cities with a single feed-forward pass. Our key insights are two-fold: 1) Compact 3D Scene Representation: We introduce BEV-Point as a highly compact intermediate representation, ensuring that the growth in VRAM usage for unbounded scenes remains constant, thus enabling unbounded city generation. 2) Spatial-aware Gaussian Attribute Decoder: We present spatial-aware BEV-Point decoder to produce 3D Gaussian attributes, which leverages Point Serializer to integrate the structural and contextual characteristics of BEV points. Extensive experiments demonstrate that GaussianCity achieves state-of-the-art results in both drone-view and street-view 3D city generation. Notably, compared to CityDreamer, GaussianCity exhibits superior performance with a speedup of 60 times (10.72 FPS v.s. 0.18 FPS).
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/66803887-d85f-4705-a097-0cd1a8760d70)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.06526) | [⌨️ Code](https://github.com/hzxie/GaussianCity) | [🌐 Project Page](https://www.infinitescript.com/project/gaussian-city)
 
 
 <br>
@@ -1776,18 +1833,6 @@ The recent emergence of 3D Gaussian splatting (3DGS) leverages the advantage of 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.02972) | [⌨️ Code] | [🌐 Project Page]
 
 
-#### <summary>Neural Surface Reconstruction from Sparse Views Using Epipolar Geometry
-Authors: Kaichen Zhou
-<details span>
-<summary><b>Abstract</b></summary>
-This paper addresses the challenge of reconstructing surfaces from sparse view inputs, where ambiguity and occlusions due to missing information pose significant hurdles. We present a novel approach, named EpiS, that incorporates Epipolar information into the reconstruction process. Existing methods in sparse-view neural surface learning have mainly focused on mean and variance considerations using cost volumes for feature extraction. In contrast, our method aggregates coarse information from the cost volume into Epipolar features extracted from multiple source views, enabling the generation of fine-grained Signal Distance Function (SDF)-aware features. Additionally, we employ an attention mechanism along the line dimension to facilitate feature fusion based on the SDF feature. Furthermore, to address the information gaps in sparse conditions, we integrate depth information from monocular depth estimation using global and local regularization techniques. The global regularization utilizes a triplet loss function, while the local regularization employs a derivative loss function. Extensive experiments demonstrate that our approach outperforms state-of-the-art methods, especially in cases with sparse and generalizable conditions.
-
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/26ebd05c-de45-4012-82f3-8046009669f2)
-
-
-</details>
-
-[📃 arXiv:2406](https://arxiv.org/pdf/2406.04301) | [⌨️ Code] | [🌐 Project Page]
 
 #### <summary>Superpoint Gaussian Splatting for Real-Time High-Fidelity Dynamic Scene Reconstruction
 Authors: Diwen Wan, Ruijie Lu, Gang Zeng
@@ -1804,9 +1849,38 @@ Rendering novel view images in dynamic scenes is a crucial yet challenging task.
 
 
 
+#### <summary>Lighting Every Darkness with 3DGS: Fast Training and Real-Time Rendering for HDR View Synthesis
+Authors: Xin Jin, Pengyi Jiao, Zheng-Peng Duan, Xingchao Yang, Chun-Le Guo, Bo Ren, Chongyi Li
+<details span>
+<summary><b>Abstract</b></summary>
+Volumetric rendering based methods, like NeRF, excel in HDR view synthesis from RAWimages, especially for nighttime scenes. While, they suffer from long training times and cannot perform real-time rendering due to dense sampling requirements. The advent of 3D Gaussian Splatting (3DGS) enables real-time rendering and faster training. However, implementing RAW image-based view synthesis directly using 3DGS is challenging due to its inherent drawbacks: 1) in nighttime scenes, extremely low SNR leads to poor structure-from-motion (SfM) estimation in distant views; 2) the limited representation capacity of spherical harmonics (SH) function is unsuitable for RAW linear color space; and 3) inaccurate scene structure hampers downstream tasks such as refocusing. To address these issues, we propose LE3D (Lighting Every darkness with 3DGS). Our method proposes Cone Scatter Initialization to enrich the estimation of SfM, and replaces SH with a Color MLP to represent the RAW linear color space. Additionally, we introduce depth distortion and near-far regularizations to improve the accuracy of scene structure for downstream tasks. These designs enable LE3D to perform real-time novel view synthesis, HDR rendering, refocusing, and tone-mapping changes. Compared to previous volumetric rendering based methods, LE3D reduces training time to 1% and improves rendering speed by up to 4,000 times for 2K resolution images in terms of FPS.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/0b2677d7-2915-4959-9f57-8ac55969fd68)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.06216) | [⌨️ Code](https://github.com/Srameo/LE3D) | [🌐 Project Page](https://srameo.github.io/projects/le3d/)
+
+
+
+#### <summary>RefGaussian: Disentangling Reflections from 3D Gaussian Splatting for Realistic Rendering
+Authors: Rui Zhang, Tianyue Luo, Weidong Yang, Ben Fei, Jingyi Xu, Qingyuan Zhou, Keyi Liu, Ying He
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3D-GS) has made a notable advancement in the field of neural rendering, 3D scene reconstruction, and novel view synthesis. Nevertheless, 3D-GS encounters the main challenge when it comes to accurately representing physical reflections, especially in the case of total reflection and semi-reflection that are commonly found in real-world scenes. This limitation causes reflections to be mistakenly treated as independent elements with physical presence, leading to imprecise reconstructions. Herein, to tackle this challenge, we propose RefGaussian to disentangle reflections from 3D-GS for realistically modeling reflections. Specifically, we propose to split a scene into transmitted and reflected components and represent these components using two Spherical Harmonics (SH). Given that this decomposition is not fully determined, we employ local regularization techniques to ensure local smoothness for both the transmitted and reflected components, thereby achieving more plausible decomposition outcomes than 3D-GS. Experimental results demonstrate that our approach achieves superior novel view synthesis and accurate depth estimation outcomes. Furthermore, it enables the utilization of scene editing applications, ensuring both high-quality results and physical coherence.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/562e128f-6d93-42e2-bf8e-5c1d1136316f)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.05852) | [⌨️ Code] | [🌐 Project Page]
 
 <br>
 <br>
+
+
 
 
 ## Others, not Gaussian
@@ -2603,6 +2677,21 @@ Enabling robots to navigate following diverse language instructions in unexplore
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.04882) | [⌨️ Code] | [🌐 Project Page](https://sites.google.com/view/instructnavA)
+
+
+
+#### <summary>Neural Surface Reconstruction from Sparse Views Using Epipolar Geometry
+Authors: Kaichen Zhou
+<details span>
+<summary><b>Abstract</b></summary>
+This paper addresses the challenge of reconstructing surfaces from sparse view inputs, where ambiguity and occlusions due to missing information pose significant hurdles. We present a novel approach, named EpiS, that incorporates Epipolar information into the reconstruction process. Existing methods in sparse-view neural surface learning have mainly focused on mean and variance considerations using cost volumes for feature extraction. In contrast, our method aggregates coarse information from the cost volume into Epipolar features extracted from multiple source views, enabling the generation of fine-grained Signal Distance Function (SDF)-aware features. Additionally, we employ an attention mechanism along the line dimension to facilitate feature fusion based on the SDF feature. Furthermore, to address the information gaps in sparse conditions, we integrate depth information from monocular depth estimation using global and local regularization techniques. The global regularization utilizes a triplet loss function, while the local regularization employs a derivative loss function. Extensive experiments demonstrate that our approach outperforms state-of-the-art methods, especially in cases with sparse and generalizable conditions.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/26ebd05c-de45-4012-82f3-8046009669f2)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.04301) | [⌨️ Code] | [🌐 Project Page]
 
 
 
