@@ -689,7 +689,7 @@ With the emergence of Gaussian Splats, recent efforts have focused on large-scal
 
 </details>
 
-[📃 arXiv:2405](https://arxiv.org/pdf/2405.16923) | [⌨️ Code] | [🌐 Project Page](https://saliteta.github.io/SA-GS/)
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.16923) | [⌨️ Code](https://github.com/saliteta/SA-GS-CODE) | [🌐 Project Page](https://saliteta.github.io/SA-GS/)
 
 
 
