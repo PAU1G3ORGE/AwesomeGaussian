@@ -1,4 +1,4 @@
-# AwesomeGaussian
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/4fe5a159-520b-4cfa-a9be-5dd71c9e2361)# AwesomeGaussian
 
 
 <br>
@@ -1909,6 +1909,19 @@ Radiance field methods represent the state of the art in reconstructing complex 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.07329) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>From Chaos to Clarity: 3DGS in the Dark
+Authors: Zhihao Li, Yufei Wang, Alex Kot, Bihan Wen
+<details span>
+<summary><b>Abstract</b></summary>
+Novel view synthesis from raw images provides superior high dynamic range (HDR) information compared to reconstructions from low dynamic range RGB images. However, the inherent noise in unprocessed raw images compromises the accuracy of 3D scene representation. Our study reveals that 3D Gaussian Splatting (3DGS) is particularly susceptible to this noise, leading to numerous elongated Gaussian shapes that overfit the noise, thereby significantly degrading reconstruction quality and reducing inference speed, especially in scenarios with limited views. To address these issues, we introduce a novel self-supervised learning framework designed to reconstruct HDR 3DGS from a limited number of noisy raw images. This framework enhances 3DGS by integrating a noise extractor and employing a noise-robust reconstruction loss that leverages a noise distribution prior. Experimental results show that our method outperforms LDR/HDR 3DGS and previous state-of-the-art (SOTA) self-supervised and supervised pre-trained models in both reconstruction quality and inference speed on the RawNeRF dataset across a broad range of training views.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/3837ecae-1c62-4dbc-b580-7240197432b2)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.08300) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 <br>
@@ -2838,6 +2851,58 @@ Pose refinement is an interesting and practically relevant research direction. P
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2404.10438) | [⌨️ Code](https://github.com/ga1i13o/mcloc_poseref) | [🌐 Project Page]
+
+
+#### <summary>Self-supervised Learning of Neural Implicit Feature Fields for Camera Pose Refinement
+Authors: Maxime Pietrantoni, Gabriela Csurka, Martin Humenberger, Torsten Sattler
+<details span>
+<summary><b>Abstract</b></summary>
+Visual localization techniques rely upon some underlying scene representation to localize against. These representations can be explicit such as 3D SFM map or implicit, such as a neural network that learns to encode the scene. The former requires sparse feature extractors and matchers to build the scene representation. The latter might lack geometric grounding not capturing the 3D structure of the scene well enough. This paper proposes to jointly learn the scene representation along with a 3D dense feature field and a 2D feature extractor whose outputs are embedded in the same metric space. Through a contrastive framework we align this volumetric field with the image-based extractor and regularize the latter with a ranking loss from learned surface information. We learn the underlying geometry of the scene with an implicit field through volumetric rendering and design our feature field to leverage intermediate geometric information encoded in the implicit field. The resulting features are discriminative and robust to viewpoint change while maintaining rich encoded information. Visual localization is then achieved by aligning the image-based features and the rendered volumetric features. We show the effectiveness of our approach on real-world scenes, demonstrating that our approach outperforms prior and concurrent work on leveraging implicit scene representations for localization.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/84ea350d-d78b-4009-9399-9e96346a5e8f)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.08463) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>Category-level Neural Field for Reconstruction of Partially Observed Objects in Indoor Environment
+Authors: Taekbeom Lee, Youngseok Jang, H. Jin Kim
+<details span>
+<summary><b>Abstract</b></summary>
+Neural implicit representation has attracted attention in 3D reconstruction through various success cases. For further applications such as scene understanding or editing, several works have shown progress towards object compositional reconstruction. Despite their superior performance in observed regions, their performance is still limited in reconstructing objects that are partially observed. To better treat this problem, we introduce category-level neural fields that learn meaningful common 3D information among objects belonging to the same category present in the scene. Our key idea is to subcategorize objects based on their observed shape for better training of the category-level model. Then we take advantage of the neural field to conduct the challenging task of registering partially observed objects by selecting and aligning against representative objects selected by ray-based uncertainty. Experiments on both simulation and real-world datasets demonstrate that our method improves the reconstruction of unobserved parts for several categories.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/0b659197-b8c0-41a8-b310-9f20f8148f18)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.08176) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>Spatial Annealing Smoothing for Efficient Few-shot Neural Rendering
+Authors: Yuru Xiao, Xianming Liu, Deming Zhai, Kui Jiang, Junjun Jiang, Xiangyang Ji
+<details span>
+<summary><b>Abstract</b></summary>
+Neural Radiance Fields (NeRF) with hybrid representations have shown impressive capabilities in reconstructing scenes for view synthesis, delivering high efficiency. Nonetheless, their performance significantly drops with sparse view inputs, due to the issue of overfitting. While various regularization strategies have been devised to address these challenges, they often depend on inefficient assumptions or are not compatible with hybrid models. There is a clear need for a method that maintains efficiency and improves resilience to sparse views within a hybrid framework. In this paper, we introduce an accurate and efficient few-shot neural rendering method named Spatial Annealing smoothing regularized NeRF (SANeRF), which is specifically designed for a pre-filtering-driven hybrid representation architecture. We implement an exponential reduction of the sample space size from an initially large value. This methodology is crucial for stabilizing the early stages of the training phase and significantly contributes to the enhancement of the subsequent process of detail refinement. Our extensive experiments reveal that, by adding merely one line of code, SANeRF delivers superior rendering quality and much faster reconstruction speed compared to current few-shot NeRF methods. Notably, SANeRF outperforms FreeNeRF by 0.3 dB in PSNR on the Blender dataset, while achieving 700x faster reconstruction speed.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/f78d7a98-4b10-479f-8a46-9781bd7ba3c2)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.07828) | [⌨️ Code](https://github.com/pulangk97/SANeRF) | [🌐 Project Page]
+
+#### <summary>From Variance to Veracity: Unbundling and Mitigating Gradient Variance in Differentiable Bundle Adjustment Layers
+Authors: Swaminathan Gurumurthy, Karnik Ram, Bingqing Chen, Zachary Manchester, Zico Kolter
+<details span>
+<summary><b>Abstract</b></summary>
+Various pose estimation and tracking problems in robotics can be decomposed into a correspondence estimation problem (often computed using a deep network) followed by a weighted least squares optimization problem to solve for the poses. Recent work has shown that coupling the two problems by iteratively refining one conditioned on the other's output yields SOTA results across domains. However, training these models has proved challenging, requiring a litany of tricks to stabilize and speed up training. In this work, we take the visual odometry problem as an example and identify three plausible causes: (1) flow loss interference, (2) linearization errors in the bundle adjustment (BA) layer, and (3) dependence of weight gradients on the BA residual. We show how these issues result in noisy and higher variance gradients, potentially leading to a slow down in training and instabilities. We then propose a simple, yet effective solution to reduce the gradient variance by using the weights predicted by the network in the inner optimization loop to weight the correspondence objective in the training problem. This helps the training objective `focus' on the more important points, thereby reducing the variance and mitigating the influence of outliers. We show that the resulting method leads to faster training and can be more flexibly trained in varying training setups without sacrificing performance. In particular we show 2--2.5× training speedups over a baseline visual odometry model we modify.
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.07785) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 
