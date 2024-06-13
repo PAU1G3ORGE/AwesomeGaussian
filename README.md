@@ -593,8 +593,7 @@ Photo-realistic 3D Reconstruction is a fundamental problem in 3D computer vision
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.02720) | [⌨️ Code] | [🌐 Project Page]
 
-<br>
-<br>
+
 
 #### <summary>InfoGaussian: Structure-Aware Dynamic Gaussians through Lightweight Information Shaping
 Authors: Yunchao Zhang, Guandao Yang, Leonidas Guibas, Yanchao Yang
