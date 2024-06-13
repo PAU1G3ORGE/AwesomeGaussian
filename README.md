@@ -327,6 +327,23 @@ Although 3D Gaussian Splatting has been widely studied because of its realistic 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.05774) | [⌨️ Code](https://github.com/HLinChen/VCR-GauS) | [🌐 Project Page](https://hlinchen.github.io/projects/VCR-GauS/)
 
 
+#### <summary>Trim 3D Gaussian Splatting for Accurate Geometry Representation
+Authors: Lue Fan, Yuxue Yang, Minxing Li, Hongsheng Li, Zhaoxiang Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper, we introduce Trim 3D Gaussian Splatting (TrimGS) to reconstruct accurate 3D geometry from images. Previous arts for geometry reconstruction from 3D Gaussians mainly focus on exploring strong geometry regularization. Instead, from a fresh perspective, we propose to obtain accurate 3D geometry of a scene by Gaussian trimming, which selectively removes the inaccurate geometry while preserving accurate structures. To achieve this, we analyze the contributions of individual 3D Gaussians and propose a contribution-based trimming strategy to remove the redundant or inaccurate Gaussians. Furthermore, our experimental and theoretical analyses reveal that a relatively small Gaussian scale is a non-negligible factor in representing and optimizing the intricate details. Therefore the proposed TrimGS maintains relatively small Gaussian scales. In addition, TrimGS is also compatible with the effective geometry regularization strategies in previous arts. When combined with the original 3DGS and the state-of-the-art 2DGS, TrimGS consistently yields more accurate geometry and higher perceptual quality.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/69bbb5e9-b6b2-4a6d-bb3f-a7d9be950bbf)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.07499) | [⌨️ Code](https://github.com/YuxueYang1204/TrimGS) | [🌐 Project Page](https://trimgs.github.io/)
+
+
+
+
+
 
 <br>
 <br>
@@ -1877,6 +1894,24 @@ Authors: Rui Zhang, Tianyue Luo, Weidong Yang, Ben Fei, Jingyi Xu, Qingyuan Zhou
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.05852) | [⌨️ Code] | [🌐 Project Page]
 
+
+
+#### <summary>Cinematic Gaussians: Real-Time HDR Radiance Fields with Depth of Field
+Authors: Chao Wang, Krzysztof Wolski, Bernhard Kerbl, Ana Serrano, Mojtaba Bemana, Hans-Peter Seidel, Karol Myszkowski, Thomas Leimkühler
+<details span>
+<summary><b>Abstract</b></summary>
+Radiance field methods represent the state of the art in reconstructing complex scenes from multi-view photos. However, these reconstructions often suffer from one or both of the following limitations: First, they typically represent scenes in low dynamic range (LDR), which restricts their use to evenly lit environments and hinders immersive viewing experiences. Secondly, their reliance on a pinhole camera model, assuming all scene elements are in focus in the input images, presents practical challenges and complicates refocusing during novel-view synthesis. Addressing these limitations, we present a lightweight method based on 3D Gaussian Splatting that utilizes multi-view LDR images of a scene with varying exposure times, apertures, and focus distances as input to reconstruct a high-dynamic-range (HDR) radiance field. By incorporating analytical convolutions of Gaussians based on a thin-lens camera model as well as a tonemapping module, our reconstructions enable the rendering of HDR content with flexible refocusing capabilities. We demonstrate that our combined treatment of HDR and depth of field facilitates real-time cinematic rendering, outperforming the state of the art.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/d952b2ff-132f-4ce4-b9d5-aad3ef76e64a)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.07329) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+
 <br>
 <br>
 
@@ -2720,6 +2755,91 @@ We propose ExtraNeRF, a novel method for extrapolating the range of views handle
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.06133) | [⌨️ Code] | [🌐 Project Page](https://shihmengli.github.io/extranerf-website)
+
+#### <summary>VoxNeuS: Enhancing Voxel-Based Neural Surface Reconstruction via Gradient Interpolation
+Authors: Sidun Liu, Peng Qiao, Zongxin Ye, Wenyu Li, Yong Dou
+<details span>
+<summary><b>Abstract</b></summary>
+Neural Surface Reconstruction learns a Signed Distance Field~(SDF) to reconstruct the 3D model from multi-view images. Previous works adopt voxel-based explicit representation to improve efficiency. However, they ignored the gradient instability of interpolation in the voxel grid, leading to degradation on convergence and smoothness. Besides, previous works entangled the optimization of geometry and radiance, which leads to the deformation of geometry to explain radiance, causing artifacts when reconstructing textured planes.
+In this work, we reveal that the instability of gradient comes from its discontinuity during trilinear interpolation, and propose to use the interpolated gradient instead of the original analytical gradient to eliminate the discontinuity. Based on gradient interpolation, we propose VoxNeuS, a lightweight surface reconstruction method for computational and memory efficient neural surface reconstruction. Thanks to the explicit representation, the gradient of regularization terms, i.e. Eikonal and curvature loss, are directly solved, avoiding computation and memory-access overhead.
+Further, VoxNeuS adopts a geometry-radiance disentangled architecture to handle the geometry deformation from radiance optimization.
+The experimental results show that VoxNeuS achieves better reconstruction quality than previous works. The entire training process takes 15 minutes and less than 3 GB of memory on a single 2080ti GPU.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/b937f571-8da2-46e2-81a8-0bacde54ad5b)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.07170) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Generative Lifting of Multiview to 3D from Unknown Pose: Wrapping NeRF inside Diffusion
+Authors: Xin Yuan, Rana Hanocka, Michael Maire
+<details span>
+<summary><b>Abstract</b></summary>
+We cast multiview reconstruction from unknown pose as a generative modeling problem. From a collection of unannotated 2D images of a scene, our approach simultaneously learns both a network to predict camera pose from 2D image input, as well as the parameters of a Neural Radiance Field (NeRF) for the 3D scene. To drive learning, we wrap both the pose prediction network and NeRF inside a Denoising Diffusion Probabilistic Model (DDPM) and train the system via the standard denoising objective. Our framework requires the system accomplish the task of denoising an input 2D image by predicting its pose and rendering the NeRF from that pose. Learning to denoise thus forces the system to concurrently learn the underlying 3D NeRF representation and a mapping from images to camera extrinsic parameters. To facilitate the latter, we design a custom network architecture to represent pose as a distribution, granting implicit capacity for discovering view correspondences when trained end-to-end for denoising alone. This technique allows our system to successfully build NeRFs, without pose knowledge, for challenging scenes where competing methods fail. At the conclusion of training, our learned NeRF can be extracted and used as a 3D scene model; our full system can be used to sample novel camera poses and generate novel-view images.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/dff892ae-98e8-456b-b9ea-554d05c1be3e)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.06972) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>SPIN: Spacecraft Imagery for Navigation
+Authors: 
+<details span>
+<summary><b>Abstract</b></summary>
+Data acquired in space operational conditions is scarce due to the costs and complexity of space operations. This poses a challenge to learning-based visual-based navigation algorithms employed in autonomous spacecraft navigation. Existing datasets, which largely depend on computer-simulated data, have partially filled this gap. However, the image generation tools they use are proprietary, which limits the evaluation of methods to unseen scenarios. Furthermore, these datasets provide limited ground-truth data, primarily focusing on the spacecraft's translation and rotation relative to the camera. To address these limitations, we present SPIN (SPacecraft Imagery for Navigation), an open-source realistic spacecraft image generation tool for relative navigation between two spacecrafts. SPIN provides a wide variety of ground-truth data and allows researchers to employ custom 3D models of satellites, define specific camera-relative poses, and adjust various settings such as camera parameters and environmental illumination conditions. For the task of spacecraft pose estimation, we compare the results of training with a SPIN-generated dataset against existing synthetic datasets. We show a %50 average error reduction in common testbed data (that simulates realistic space conditions).
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/03a0c698-ffbb-4b31-8f3c-53ca727dfa4e)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.07500) | [⌨️ Code](https://github.com/vpulab/SPIN) | [🌐 Project Page]
+
+
+#### <summary>PanoSSC: Exploring Monocular Panoptic 3D Scene Reconstruction for Autonomous Driving
+Authors: Yining Shi, Jiusi Li, Kun Jiang, Ke Wang, Yunlong Wang, Mengmeng Yang, Diange Yang
+<details span>
+<summary><b>Abstract</b></summary>
+Vision-centric occupancy networks, which represent the surrounding environment with uniform voxels with semantics, have become a new trend for safe driving of camera-only autonomous driving perception systems, as they are able to detect obstacles regardless of their shape and occlusion. Modern occupancy networks mainly focus on reconstructing visible voxels from object surfaces with voxel-wise semantic prediction. Usually, they suffer from inconsistent predictions of one object and mixed predictions for adjacent objects. These confusions may harm the safety of downstream planning modules. To this end, we investigate panoptic segmentation on 3D voxel scenarios and propose an instance-aware occupancy network, PanoSSC. We predict foreground objects and backgrounds separately and merge both in post-processing. For foreground instance grouping, we propose a novel 3D instance mask decoder that can efficiently extract individual objects. we unify geometric reconstruction, 3D semantic segmentation, and 3D instance segmentation into PanoSSC framework and propose new metrics for evaluating panoptic voxels. Extensive experiments show that our method achieves competitive results on SemanticKITTI semantic scene completion benchmark.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/cd729eca-3a6c-4509-ac70-7e8e6c543df2)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.07037) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>Active Scout: Multi-Target Tracking Using Neural Radiance Fields in Dense Urban Environments
+Authors: 
+<details span>
+<summary><b>Abstract</b></summary>
+We study pursuit-evasion games in highly occluded urban environments, e.g. tall buildings in a city, where a scout (quadrotor) tracks multiple dynamic targets on the ground. We show that we can build a neural radiance field (NeRF) representation of the city -- online -- using RGB and depth images from different vantage points. This representation is used to calculate the information gain to both explore unknown parts of the city and track the targets -- thereby giving a completely first-principles approach to actively tracking dynamic targets. We demonstrate, using a custom-built simulator using Open Street Maps data of Philadelphia and New York City, that we can explore and locate 20 stationary targets within 300 steps. This is slower than a greedy baseline which which does not use active perception. But for dynamic targets that actively hide behind occlusions, we show that our approach maintains, at worst, a tracking error of 200m; the greedy baseline can have a tracking error as large as 600m. We observe a number of interesting properties in the scout's policies, e.g., it switches its attention to track a different target periodically, as the quality of the NeRF representation improves over time, the scout also becomes better in terms of target tracking.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/d9f60d6e-0c71-40d4-be42-fb64e91063de)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.07431) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>The Unreasonable Effectiveness of Pre-Trained Features for Camera Pose Refinement
+Authors: Gabriele Trivigno, Carlo Masone, Barbara Caputo, Torsten Sattler
+<details span>
+<summary><b>Abstract</b></summary>
+Pose refinement is an interesting and practically relevant research direction. Pose refinement can be used to (1) obtain a more accurate pose estimate from an initial prior (e.g., from retrieval), (2) as pre-processing, i.e., to provide a better starting point to a more expensive pose estimator, (3) as post-processing of a more accurate localizer. Existing approaches focus on learning features / scene representations for the pose refinement task. This involves training an implicit scene representation or learning features while optimizing a camera pose-based loss. A natural question is whether training specific features / representations is truly necessary or whether similar results can be already achieved with more generic features. In this work, we present a simple approach that combines pre-trained features with a particle filter and a renderable representation of the scene. Despite its simplicity, it achieves state-of-the-art results, demonstrating that one can easily build a pose refiner without the need for specific training.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/0e0d871a-da39-4f4a-8bdf-4a1ccfaa3fb7)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2404.10438) | [⌨️ Code](https://github.com/ga1i13o/mcloc_poseref) | [🌐 Project Page]
+
 
 
 #### <summary>
