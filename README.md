@@ -608,6 +608,24 @@ Authors: Yunchao Zhang, Guandao Yang, Leonidas Guibas, Yanchao Yang
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.05897) | [⌨️ Code] | [🌐 Project Page]
 
+
+#### <summary>Gaussian-Forest: Hierarchical-Hybrid 3D Gaussian Splatting for Compressed Scene Modeling
+Authors: Fengyi Zhang, Tianjun Zhang, Lin Zhang, Helen Huang, Yadan Luo
+<details span>
+<summary><b>Abstract</b></summary>
+The field of novel-view synthesis has recently witnessed the emergence of 3D Gaussian Splatting, which represents scenes in a point-based manner and renders through rasterization. This methodology, in contrast to Radiance Fields that rely on ray tracing, demonstrates superior rendering quality and speed. However, the explicit and unstructured nature of 3D Gaussians poses a significant storage challenge, impeding its broader application. To address this challenge, we introduce the Gaussian-Forest modeling framework, which hierarchically represents a scene as a forest of hybrid 3D Gaussians. Each hybrid Gaussian retains its unique explicit attributes while sharing implicit ones with its sibling Gaussians, thus optimizing parameterization with significantly fewer variables. Moreover, adaptive growth and pruning strategies are designed, ensuring detailed representation in complex regions and a notable reduction in the number of required Gaussians. Extensive experiments demonstrate that Gaussian-Forest not only maintains comparable speed and quality but also achieves a compression rate surpassing 10 times, marking a significant advancement in efficient scene modeling.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/dbd9bfaa-20d7-4d2e-858e-32de7553fb41)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.08759) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+
+
 <br>
 <br>
 
@@ -2918,6 +2936,44 @@ Various pose estimation and tracking problems in robotics can be decomposed into
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.07785) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>Depth Anything V2
+Authors: Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, Hengshuang Zhao
+<details span>
+<summary><b>Abstract</b></summary>
+This work presents Depth Anything V2. Without pursuing fancy techniques, we aim to reveal crucial findings to pave the way towards building a powerful monocular depth estimation model. Notably, compared with V1, this version produces much finer and more robust depth predictions through three key practices: 1) replacing all labeled real images with synthetic images, 2) scaling up the capacity of our teacher model, and 3) teaching student models via the bridge of large-scale pseudo-labeled real images. Compared with the latest models built on Stable Diffusion, our models are significantly more efficient (more than 10x faster) and more accurate. We offer models of different scales (ranging from 25M to 1.3B params) to support extensive scenarios. Benefiting from their strong generalization capability, we fine-tune them with metric depth labels to obtain our metric depth models. In addition to our models, considering the limited diversity and frequent noise in current test sets, we construct a versatile evaluation benchmark with precise annotations and diverse scenes to facilitate future research.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/795809b4-b51e-4e85-be66-d33745f02cb7)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.09414) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>Explore the Limits of Omni-modal Pretraining at Scale
+Authors: Yiyuan Zhang, Handong Li, Jing Liu, Xiangyu Yue
+<details span>
+<summary><b>Abstract</b></summary>
+We propose to build omni-modal intelligence, which is capable of understanding any modality and learning universal representations. In specific, we propose a scalable pretraining paradigm, named Multimodal Context (MiCo), which can scale up the numbers of modalities and amount of data, together with the model parameters, in the pretraining process. With MiCo, the pretrained models show significant emergent abilities in multimodal learning, which are evaluated on the following tasks: i) single-modality perception benchmarks of 10 different modalities, ii) 25 cross-modality understanding tasks of retrieval, question-answering, captioning, and iii) 18 multimodal large language model benchmarks. Our models establish 37 new records for state-of-the-art performance. We hope that our research could contribute to the development of omni-modal intelligence.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/93f25897-b8cb-4cc0-ac13-3038d7cdea59)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.09412) | [⌨️ Code](https://github.com/invictus717/MiCo) | [🌐 Project Page]
+
+#### <summary>Scale-Invariant Monocular Depth Estimation via SSI Depth
+Authors: S. Mahdi H. Miangoleh, Mahesh Reddy, Yağız Aksoy
+<details span>
+<summary><b>Abstract</b></summary>
+Existing methods for scale-invariant monocular depth estimation (SI MDE) often struggle due to the complexity of the task, and limited and non-diverse datasets, hindering generalizability in real-world scenarios. This is while shift-and-scale-invariant (SSI) depth estimation, simplifying the task and enabling training with abundant stereo datasets achieves high performance. We present a novel approach that leverages SSI inputs to enhance SI depth estimation, streamlining the network's role and facilitating in-the-wild generalization for SI depth estimation while only using a synthetic dataset for training. Emphasizing the generation of high-resolution details, we introduce a novel sparse ordinal loss that substantially improves detail generation in SSI MDE, addressing critical limitations in existing approaches. Through in-the-wild qualitative examples and zero-shot evaluation we substantiate the practical utility of our approach in computational photography applications, showcasing its ability to generate highly detailed SI depth maps and achieve generalization in diverse scenarios.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/4ab2e79c-87a6-4a33-af7a-ebfe92a9035e)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.09374) | [⌨️ Code] | [🌐 Project Page](https://yaksoy.github.io/sidepth/)
 
 
 
