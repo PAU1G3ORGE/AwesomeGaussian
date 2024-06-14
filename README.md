@@ -623,6 +623,18 @@ The field of novel-view synthesis has recently witnessed the emergence of 3D Gau
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.08759) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Gaussian Splatting with Localized Points Management
+Authors: Haosen Yang, Chenhao Zhang, Wenqing Wang, Marco Volino, Adrian Hilton, Li Zhang, Xiatian Zhu
+<details span>
+<summary><b>Abstract</b></summary>
+Point management is a critical component in optimizing 3D Gaussian Splatting (3DGS) models, as the point initiation (e.g., via structure from motion) is distributionally inappropriate. Typically, the Adaptive Density Control (ADC) algorithm is applied, leveraging view-averaged gradient magnitude thresholding for point densification, opacity thresholding for pruning, and regular all-points opacity reset. However, we reveal that this strategy is limited in tackling intricate/special image regions (e.g., transparent) as it is unable to identify all the 3D zones that require point densification, and lacking an appropriate mechanism to handle the ill-conditioned points with negative impacts (occlusion due to false high opacity). To address these limitations, we propose a Localized Point Management (LPM) strategy, capable of identifying those error-contributing zones in the highest demand for both point addition and geometry calibration. Zone identification is achieved by leveraging the underlying multiview geometry constraints, with the guidance of image rendering errors. We apply point densification in the identified zone, whilst resetting the opacity of those points residing in front of these regions so that a new opportunity is created to correct ill-conditioned points. Serving as a versatile plugin, LPM can be seamlessly integrated into existing 3D Gaussian Splatting models. Experimental evaluation across both static 3D and dynamic 4D scenes validate the efficacy of our LPM strategy in boosting a variety of existing 3DGS models both quantitatively and qualitatively. Notably, LPM improves both vanilla 3DGS and SpaceTimeGS to achieve state-of-the-art rendering quality while retaining real-time speeds, outperforming on challenging datasets such as Tanks & Temples and the Neural 3D Video Dataset.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/cf43d4da-650b-44f7-afde-4d059c02d6dd)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.04251) | [⌨️ Code](https://github.com/Surrey-UPLab/Localized-Gaussian-Point-Management) | [🌐 Project Page](https://surrey-uplab.github.io/research/LPM/)
 
 
 
@@ -1956,6 +1968,49 @@ Novel view synthesis from raw images provides superior high dynamic range (HDR) 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.08300) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Physically Embodied Gaussian Splatting: A Realtime Correctable World Model for Robotics
+Authors: Anonymous 
+<details span>
+<summary><b>Abstract</b></summary>
+For robots to robustly understand and interact with the physical world, it is highly beneficial to have a comprehensive representation - modelling geometry, physics, and visual observations - that informs perception, planning, and control algorithms. We propose a novel dual "Gaussian-Particle" representation that models the physical world while (i) enabling predictive simulation of future states and (ii) allowing online correction from visual observations in a dynamic world. Our representation comprises particles that capture the geometrical aspect of objects in the world and can be used alongside a particle-based physics system to anticipate physically plausible future states. Attached to these particles are 3D Gaussians that render images from any viewpoint through a splatting process thus capturing the visual state. By comparing the predicted and observed images, our approach generates "visual forces" that correct the particle positions while respecting known physical constraints. By integrating predictive physical modeling with continuous visually-derived corrections, our unified representation reasons about the present and future while synchronizing with reality. We validate our approach on 2D and 3D tracking tasks as well as photometric reconstruction quality. Our system runs in realtime at 30Hz using only 3 cameras.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/32a17335-576f-4afb-937a-03ca7507495f)
+
+
+</details>
+
+[📃 arXiv:24xx]| [⌨️ Code] | [🌐 Project Page](https://embodied-gaussians.github.io/)
+
+
+
+#### <summary>SV-Gaussians: 4D Gaussian Splatting for High-Fidelity Dynamic Reconstruction of Single-View Scenes
+Authors: Anonymous 
+<details span>
+<summary><b>Abstract</b></summary>
+With the introduction of differentiable rendering frameworks, many advanced reconstruction techniques are proposed for both static and dynamic scenes, such as NeRFs and 3D Gaussian Splatting methods. However, there is a type of video on social platforms that is shot by users through fixed monocular cameras. For the reconstruction of such dynamic scenes under single-view observation, existing reconstruction techniques are difficult to produce satisfactory results. The problems include reconstruction blur in high-frequency details of objects and inaccurate estimation of geometry. These issues motivate us to study high-quality reconstruction method for single-view videos. Inspired by 3D Gaussian Splatting, we propose a framework specifically designed for single-view dynamic scene reconstruction and editing, SV-Gaussians. Our method utilizes sparse point cloud of the scene as initialization for 3D Gaussians, and designs a deformation module to model the changes in Gaussian properties over time. We propose deformation regularization to ensure the consistency of adjacent Gaussian motions. To remove obstacles in the scene during reconstruction, we define color constraints based on obstacle mask to help Gaussians learn the true appearance of invisible regions. We conduct extensive experiments to evaluate our method and compare it with SOTA single-view reconstruction methods. Experiments show that our method has strong advantages in reconstruction quality and can achieve real-time rendering.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/9052cb4e-be5b-4e24-9198-21d431398257)
+
+
+</details>
+
+[📃 arXiv:24xx]| [⌨️ Code] | [🌐 Project Page](https://embodied-gaussians.github.io/)
+
+
+
+#### <summary>3D-Aware Manipulation with Object-Centric Gaussian Splatting
+Authors: Anonymous 
+<details span>
+<summary><b>Abstract</b></summary>
+3D Understanding of the environment is critical for the robustness and performance of robot learning systems. As an example, 2D image-based policies can easily fail due to a slight change in camera viewpoints. However, when constructing a 3D representation, previous approaches often either sacriﬁce the rich semantic abilities of 2D foundation models or a fast update rate that is crucial real-time robotic manipulation. In this work, we propose a 3D representation based on 3D Gaussians that is both semantic and dynamic. With only a single or a few camera views, our proposed representation is able to capture a dynamic scene at 30 Hz in real-time in response to robot and object movements, which is sufﬁcient for most manipulation tasks. Our key insight in achieving this fast update frequency is to make object-centric updates to the representation. Semantic information can be extracted at the initial step from pretrained foundation models, thus circumventing the inference bottleneck of large models during policy rollouts. Leveraging our object-centric Gaussian representation, we demonstrate a straightforward yet effective way to achieve view-robustness for visuomotor policies. Our representation also enables language-conditioned dynamic grasping, for which the robot perform geometric grasp of moving objects speciﬁed by open vocabulary queries.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/7492a206-ef44-47d1-a0bb-a0bd9204f923)
+
+
+</details>
+
+[📃 arXiv:24xx]| [⌨️ Code] | [🌐 Project Page](https://object-aware-gaussian.github.io/)
+
 
 <br>
 <br>
@@ -2023,6 +2078,23 @@ Recently, neural implicit functions have demonstrated remarkable results in the 
 </details>
 
 [📃 arXiv:2312](https://arxiv.org/pdf/2312.13977.pdf) | [⌨️ Code](https://github.com/leonwu0108/NeuSurf) | [🌐 Project Page](https://alvin528.github.io/NeuSurf/)
+
+
+#### <summary>SuperPrimitive: Scene Reconstruction at a Primitive Level
+Authors: Kirill Mazur, Gwangbin Bae, Andrew J. Davison
+<details span>
+<summary><b>Abstract</b></summary>
+Joint camera pose and dense geometry estimation from a set of images or a monocular video remains a challenging problem due to its computational complexity and inherent visual ambiguities. Most dense incremental reconstruction systems operate directly on image pixels and solve for their 3D positions using multi-view geometry cues. Such pixel-level approaches suffer from ambiguities or violations of multi-view consistency (e.g. caused by textureless or specular surfaces).
+We address this issue with a new image representation which we call a SuperPrimitive. SuperPrimitives are obtained by splitting images into semantically correlated local regions and enhancing them with estimated surface normal directions, both of which are predicted by state-of-the-art single image neural networks. This provides a local geometry estimate per SuperPrimitive, while their relative positions are adjusted based on multi-view observations.
+We demonstrate the versatility of our new representation by addressing three 3D reconstruction tasks: depth completion, few-view structure from motion, and monocular dense visual odometry.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/d53c698d-3a4f-429f-a7de-d691472e233a)
+
+ 
+</details>
+
+[📃 arXiv:2312](https://arxiv.org/pdf/2312.05889) | [⌨️ Code](https://github.com/makezur/super_primitive) | [🌐 Project Page](https://makezur.github.io/SuperPrimitive/)
+
 
 
 
@@ -2974,6 +3046,32 @@ Existing methods for scale-invariant monocular depth estimation (SI MDE) often s
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.09374) | [⌨️ Code] | [🌐 Project Page](https://yaksoy.github.io/sidepth/)
+
+#### <summary>MultiPly: Reconstruction of Multiple People from Monocular Video in the Wild
+Authors: Zeren Jiang, Chen Guo, Manuel Kaufmann, Tianjian Jiang, Julien Valentin, Otmar Hilliges, Jie Song
+<details span>
+<summary><b>Abstract</b></summary>
+We present MultiPly, a novel framework to reconstruct multiple people in 3D from monocular in-the-wild videos. Reconstructing multiple individuals moving and interacting naturally from monocular in-the-wild videos poses a challenging task. Addressing it necessitates precise pixel-level disentanglement of individuals without any prior knowledge about the subjects. Moreover, it requires recovering intricate and complete 3D human shapes from short video sequences, intensifying the level of difficulty. To tackle these challenges, we first define a layered neural representation for the entire scene, composited by individual human and background models. We learn the layered neural representation from videos via our layer-wise differentiable volume rendering. This learning process is further enhanced by our hybrid instance segmentation approach which combines the self-supervised 3D segmentation and the promptable 2D segmentation module, yielding reliable instance segmentation supervision even under close human interaction. A confidence-guided optimization formulation is introduced to optimize the human poses and shape/appearance alternately. We incorporate effective objectives to refine human poses via photometric information and impose physically plausible constraints on human dynamics, leading to temporally consistent 3D reconstructions with high fidelity. The evaluation of our method shows the superiority over prior art on publicly available datasets and in-the-wild videos.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/3f7e4bbc-b3dc-4316-8769-37dd1eec55d4)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.01595) | [⌨️ Code] | [🌐 Project Page](https://eth-ait.github.io/MultiPly/)
+
+#### <summary>Flash3D: Feed-Forward Generalisable 3D Scene Reconstruction from a Single Image
+Authors: Stanislaw Szymanowicz, Eldar Insafutdinov, Chuanxia Zheng, Dylan Campbell, João F. Henriques, Christian Rupprecht, Andrea Vedaldi
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper, we propose Flash3D, a method for scene reconstruction and novel view synthesis from a single image which is both very generalisable and efficient. For generalisability, we start from a "foundation" model for monocular depth estimation and extend it to a full 3D shape and appearance reconstructor. For efficiency, we base this extension on feed-forward Gaussian Splatting. Specifically, we predict a first layer of 3D Gaussians at the predicted depth, and then add additional layers of Gaussians that are offset in space, allowing the model to complete the reconstruction behind occlusions and truncations. Flash3D is very efficient, trainable on a single GPU in a day, and thus accessible to most researchers. It achieves state-of-the-art results when trained and tested on RealEstate10k. When transferred to unseen datasets like NYU it outperforms competitors by a large margin. More impressively, when transferred to KITTI, Flash3D achieves better PSNR than methods trained specifically on that dataset. In some instances, it even outperforms recent methods that use multiple views as input.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/86b28ad4-3ec3-42a3-8941-595eb9c2a891)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.04343) | [⌨️ Code] | [🌐 Project Page](https://www.robots.ox.ac.uk/~vgg/research/flash3d/)
 
 
 
