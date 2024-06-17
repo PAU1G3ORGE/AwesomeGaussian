@@ -2012,6 +2012,20 @@ Authors: Anonymous
 [📃 arXiv:24xx]| [⌨️ Code] | [🌐 Project Page](https://object-aware-gaussian.github.io/)
 
 
+#### <summary>PUP 3D-GS: Principled Uncertainty Pruning for 3D Gaussian Splatting
+Authors: Alex Hanson, Allen Tu, Vasu Singla, Mayuka Jayawardhana, Matthias Zwicker, Tom Goldstein 
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advancements in novel view synthesis have enabled real-time rendering speeds and high reconstruction accuracy. 3D Gaussian Splatting (3D-GS), a foundational point-based parametric 3D scene representation, models scenes as large sets of 3D Gaussians. Complex scenes can comprise of millions of Gaussians, amounting to large storage and memory requirements that limit the viability of 3D-GS on devices with limited resources. Current techniques for compressing these pretrained models by pruning Gaussians rely on combining heuristics to determine which ones to remove. In this paper, we propose a principled spatial sensitivity pruning score that outperforms these approaches. It is computed as a second-order approximation of the reconstruction error on the training views with respect to the spatial parameters of each Gaussian. Additionally, we propose a multi-round prune-refine pipeline that can be applied to any pretrained 3D-GS model without changing the training pipeline. After pruning 88.44% of the Gaussians, we observe that our PUP 3D-GS pipeline increases the average rendering speed of 3D-GS by 2.65× while retaining more salient foreground information and achieving higher image quality metrics than previous pruning techniques on scenes from the Mip-NeRF 360, Tanks & Temples, and Deep Blending datasets.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/b706ab8e-74b4-43d2-bc3b-16cc7ba138d5)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.10219))| [⌨️ Code] | [🌐 Project Page]
+
+
 <br>
 <br>
 
@@ -3072,6 +3086,20 @@ In this paper, we propose Flash3D, a method for scene reconstruction and novel v
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.04343) | [⌨️ Code] | [🌐 Project Page](https://www.robots.ox.ac.uk/~vgg/research/flash3d/)
+
+#### <summary>MeshAnything: Artist-Created Mesh Generation with Autoregressive Transformers
+Authors: Yiwen Chen, Tong He, Di Huang, Weicai Ye, Sijin Chen, Jiaxiang Tang, Xin Chen, Zhongang Cai, Lei Yang, Gang Yu, Guosheng Lin, Chi Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, 3D assets created via reconstruction and generation have matched the quality of manually crafted assets, highlighting their potential for replacement. However, this potential is largely unrealized because these assets always need to be converted to meshes for 3D industry applications, and the meshes produced by current mesh extraction methods are significantly inferior to Artist-Created Meshes (AMs), i.e., meshes created by human artists. Specifically, current mesh extraction methods rely on dense faces and ignore geometric features, leading to inefficiencies, complicated post-processing, and lower representation quality. To address these issues, we introduce MeshAnything, a model that treats mesh extraction as a generation problem, producing AMs aligned with specified shapes. By converting 3D assets in any 3D representation into AMs, MeshAnything can be integrated with various 3D asset production methods, thereby enhancing their application across the 3D industry. The architecture of MeshAnything comprises a VQ-VAE and a shape-conditioned decoder-only transformer. We first learn a mesh vocabulary using the VQ-VAE, then train the shape-conditioned decoder-only transformer on this vocabulary for shape-conditioned autoregressive mesh generation. Our extensive experiments show that our method generates AMs with hundreds of times fewer faces, significantly improving storage, rendering, and simulation efficiencies, while achieving precision comparable to previous methods.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/874f4b8c-2cbd-43d4-8412-477d832a33a7)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.10163) | [⌨️ Code](https://github.com/buaacyw/MeshAnything) | [🌐 Project Page](https://buaacyw.github.io/mesh-anything/)
+
 
 
 
