@@ -3100,7 +3100,18 @@ Recently, 3D assets created via reconstruction and generation have matched the q
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.10163) | [⌨️ Code](https://github.com/buaacyw/MeshAnything) | [🌐 Project Page](https://buaacyw.github.io/mesh-anything/)
 
+#### <summary>RaNeuS: Ray-adaptive Neural Surface Reconstruction
+Authors: Yida Wang, David Joseph Tan, Nassir Navab, Federico Tombari
+<details span>
+<summary><b>Abstract</b></summary>
+Our objective is to leverage a differentiable radiance field \eg NeRF to reconstruct detailed 3D surfaces in addition to producing the standard novel view renderings. There have been related methods that perform such tasks, usually by utilizing a signed distance field (SDF). However, the state-of-the-art approaches still fail to correctly reconstruct the small-scale details, such as the leaves, ropes, and textile surfaces. Considering that different methods formulate and optimize the projection from SDF to radiance field with a globally constant Eikonal regularization, we improve with a ray-wise weighting factor to prioritize the rendering and zero-crossing surface fitting on top of establishing a perfect SDF. We propose to adaptively adjust the regularization on the signed distance field so that unsatisfying rendering rays won't enforce strong Eikonal regularization which is ineffective, and allow the gradients from regions with well-learned radiance to effectively back-propagated to the SDF. Consequently, balancing the two objectives in order to generate accurate and detailed surfaces. Additionally, concerning whether there is a geometric bias between the zero-crossing surface in SDF and rendering points in the radiance field, the projection becomes adjustable as well depending on different 3D locations during optimization. Our proposed \textit{RaNeuS} are extensively evaluated on both synthetic and real datasets, achieving state-of-the-art results on both novel view synthesis and geometric reconstruction.
 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/e2c00fd1-7076-4fb3-9ed3-b5cbd09140b4)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.09801) | [⌨️ Code](https://github.com/wangyida/ra-neus) | [🌐 Project Page]
 
 
 #### <summary>
