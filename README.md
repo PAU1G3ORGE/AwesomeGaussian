@@ -340,7 +340,18 @@ In this paper, we introduce Trim 3D Gaussian Splatting (TrimGS) to reconstruct a
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.07499) | [⌨️ Code](https://github.com/YuxueYang1204/TrimGS) | [🌐 Project Page](https://trimgs.github.io/)
 
+#### <summary>Effective Rank Analysis and Regularization for Enhanced 3D Gaussian Splatting
+Authors: Junha Hyung, Susung Hong, Sungwon Hwang, Jaeseong Lee, Jaegul Choo, Jin-Hwa Kim
+<details span>
+<summary><b>Abstract</b></summary>
+3D reconstruction from multi-view images is one of the fundamental challenges in computer vision and graphics. Recently, 3D Gaussian Splatting (3DGS) has emerged as a promising technique capable of real-time rendering with high-quality 3D reconstruction. This method utilizes 3D Gaussian representation and tile-based splatting techniques, bypassing the expensive neural field querying. Despite its potential, 3DGS encounters challenges, including needle-like artifacts, suboptimal geometries, and inaccurate normals, due to the Gaussians converging into anisotropic Gaussians with one dominant variance. We propose using effective rank analysis to examine the shape statistics of 3D Gaussian primitives, and identify the Gaussians indeed converge into needle-like shapes with the effective rank 1. To address this, we introduce effective rank as a regularization, which constrains the structure of the Gaussians. Our new regularization method enhances normal and geometry reconstruction while reducing needle-like artifacts. The approach can be integrated as an add-on module to other 3DGS variants, improving their quality without compromising visual fidelity.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/035d5962-97ce-4621-9e9d-370687a6b0f1)
 
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.11672) | [⌨️ Code] | [🌐 Project Page]
 
 
 
@@ -826,6 +837,21 @@ Authors: Haozhe Xie, Zhaoxi Chen, Fangzhou Hong, Ziwei Liu
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.06526) | [⌨️ Code](https://github.com/hzxie/GaussianCity) | [🌐 Project Page](https://www.infinitescript.com/project/gaussian-city)
+
+
+#### <summary>RetinaGS: Scalable Training for Dense Scene Rendering with Billion-Scale 3D Gaussians
+
+Authors: Bingling Li, Shengyi Chen, Luchao Wang, Kaimin He, Sijie Yan, Yuanjun Xiong
+<details span>
+<summary><b>Abstract</b></summary>
+In this work, we explore the possibility of training high-parameter 3D Gaussian splatting (3DGS) models on large-scale, high-resolution datasets. We design a general model parallel training method for 3DGS, named RetinaGS, which uses a proper rendering equation and can be applied to any scene and arbitrary distribution of Gaussian primitives. It enables us to explore the scaling behavior of 3DGS in terms of primitive numbers and training resolutions that were difficult to explore before and surpass previous state-of-the-art reconstruction quality. We observe a clear positive trend of increasing visual quality when increasing primitive numbers with our method. We also demonstrate the first attempt at training a 3DGS model with more than one billion primitives on the full MatrixCity dataset that attains a promising visual quality.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/51b3ea3d-206f-415e-ba01-830405ffe9d8)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.11836) | [⌨️ Code] | [🌐 Project Page]
 
 
 <br>
@@ -2023,7 +2049,36 @@ Recent advancements in novel view synthesis have enabled real-time rendering spe
 
 </details>
 
-[📃 arXiv:2406](https://arxiv.org/pdf/2406.10219))| [⌨️ Code] | [🌐 Project Page]
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.10219) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Wild-GS: Real-Time Novel View Synthesis from Unconstrained Photo Collections
+Authors: Jiacong Xu, Yiqun Mei, Vishal M. Patel
+<details span>
+<summary><b>Abstract</b></summary>
+Photographs captured in unstructured tourist environments frequently exhibit variable appearances and transient occlusions, challenging accurate scene reconstruction and inducing artifacts in novel view synthesis. Although prior approaches have integrated the Neural Radiance Field (NeRF) with additional learnable modules to handle the dynamic appearances and eliminate transient objects, their extensive training demands and slow rendering speeds limit practical deployments. Recently, 3D Gaussian Splatting (3DGS) has emerged as a promising alternative to NeRF, offering superior training and inference efficiency along with better rendering quality. This paper presents Wild-GS, an innovative adaptation of 3DGS optimized for unconstrained photo collections while preserving its efficiency benefits. Wild-GS determines the appearance of each 3D Gaussian by their inherent material attributes, global illumination and camera properties per image, and point-level local variance of reflectance. Unlike previous methods that model reference features in image space, Wild-GS explicitly aligns the pixel appearance features to the corresponding local Gaussians by sampling the triplane extracted from the reference image. This novel design effectively transfers the high-frequency detailed appearance of the reference view to 3D space and significantly expedites the training process. Furthermore, 2D visibility maps and depth regularization are leveraged to mitigate the transient effects and constrain the geometry, respectively. Extensive experiments demonstrate that Wild-GS achieves state-of-the-art rendering performance and the highest efficiency in both training and inference among all the existing techniques.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/51841d20-81f2-4bba-aa5d-6ff70123153e)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.10373) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>L4GM: Large 4D Gaussian Reconstruction Model
+Authors: Jiawei Ren, Kevin Xie, Ashkan Mirzaei, Hanxue Liang, Xiaohui Zeng, Karsten Kreis, Ziwei Liu, Antonio Torralba, Sanja Fidler, Seung Wook Kim, Huan Ling
+<details span>
+<summary><b>Abstract</b></summary>
+We present L4GM, the first 4D Large Reconstruction Model that produces animated objects from a single-view video input -- in a single feed-forward pass that takes only a second. Key to our success is a novel dataset of multiview videos containing curated, rendered animated objects from Objaverse. This dataset depicts 44K diverse objects with 110K animations rendered in 48 viewpoints, resulting in 12M videos with a total of 300M frames. We keep our L4GM simple for scalability and build directly on top of LGM, a pretrained 3D Large Reconstruction Model that outputs 3D Gaussian ellipsoids from multiview image input. L4GM outputs a per-frame 3D Gaussian Splatting representation from video frames sampled at a low fps and then upsamples the representation to a higher fps to achieve temporal smoothness. We add temporal self-attention layers to the base LGM to help it learn consistency across time, and utilize a per-timestep multiview rendering loss to train the model. The representation is upsampled to a higher framerate by training an interpolation model which produces intermediate 3D Gaussian representations. We showcase that L4GM that is only trained on synthetic data generalizes extremely well on in-the-wild videos, producing high quality animated 3D assets.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/51841d20-81f2-4bba-aa5d-6ff70123153e)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.10324) | [⌨️ Code] | [🌐 Project Page](https://research.nvidia.com/labs/toronto-ai/l4gm)
+
 
 
 <br>
@@ -3112,6 +3167,33 @@ Our objective is to leverage a differentiable radiance field \eg NeRF to reconst
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.09801) | [⌨️ Code](https://github.com/wangyida/ra-neus) | [🌐 Project Page]
+
+#### <summary>Matching Query Image Against Selected NeRF Feature for Efficient and Scalable Localization
+Authors: Huaiji Zhou, Bing Wang, Changhao Chen
+<details span>
+<summary><b>Abstract</b></summary>
+Neural implicit representations such as NeRF have revolutionized 3D scene representation with photo-realistic quality. However, existing methods for visual localization within NeRF representations suffer from inefficiency and scalability issues, particularly in large-scale environments. This work proposes MatLoc-NeRF, a novel matching-based localization framework using selected NeRF features. It addresses efficiency by employing a learnable feature selection mechanism that identifies informative NeRF features for matching with query images. This eliminates the need for all NeRF features or additional descriptors, leading to faster and more accurate pose estimation. To tackle large-scale scenes, MatLoc-NeRF utilizes a pose-aware scene partitioning strategy. It ensures that only the most relevant NeRF sub-block generates key features for a specific pose. Additionally, scene segmentation and a place predictor provide fast coarse initial pose estimation. Evaluations on public large-scale datasets demonstrate that MatLoc-NeRF achieves superior efficiency and accuracy compared to existing NeRF-based localization methods.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/77ff1049-5e9f-47cc-8606-dedff9fa180e)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.11766) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>fNeRF: High Quality Radiance Fields from Practical Cameras
+Authors: Yi Hua, Christoph Lassner, Carsten Stoll, Iain Matthews
+<details span>
+<summary><b>Abstract</b></summary>
+In recent years, the development of Neural Radiance Fields has enabled a previously unseen level of photo-realistic 3D reconstruction of scenes and objects from multi-view camera data. However, previous methods use an oversimplified pinhole camera model resulting in defocus blur being `baked' into the reconstructed radiance field. We propose a modification to the ray casting that leverages the optics of lenses to enhance scene reconstruction in the presence of defocus blur. This allows us to improve the quality of radiance field reconstructions from the measurements of a practical camera with finite aperture. We show that the proposed model matches the defocus blur behavior of practical cameras more closely than pinhole models and other approximations of defocus blur models, particularly in the presence of partial occlusions. This allows us to achieve sharper reconstructions, improving the PSNR on validation of all-in-focus images, on both synthetic and real datasets, by up to 3 dB.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/a92f2afe-f2e1-4a75-ad9c-0babea8dd8ca)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.10633) | [⌨️ Code] | [🌐 Project Page]
 
 
 #### <summary>
