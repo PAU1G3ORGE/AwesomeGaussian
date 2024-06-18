@@ -1243,6 +1243,18 @@ While 3D Gaussian Splatting has recently become popular for neural rendering, cu
 
 [📃 arXiv:2404](https://arxiv.org/pdf/2404.09591) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>RTG-SLAM: Real-time 3D Reconstruction at Scale Using Gaussian Splatting
+Authors: Zhexi Peng, Tianjia Shao, Liu Yong, Jingke Zhou, Yin Yang, Jingdong Wang, Kun Zhou
+<details span>
+<summary><b>Abstract</b></summary>
+We present Real-time Gaussian SLAM (RTG-SLAM), a real-time 3D reconstruction system with an RGBD camera for large-scale environments using Gaussian splatting. The system features a compact Gaussian representation and a highly efficient on-the-fly Gaussian optimization scheme. We force each Gaussian to be either opaque or nearly transparent, with the opaque ones fitting the surface and dominant colors, and transparent ones fitting residual colors. By rendering depth in a different way from color rendering, we let a single opaque Gaussian well fit a local surface region without the need of multiple overlapping Gaussians, hence largely reducing the memory and computation cost. For on-the-fly Gaussian optimization, we explicitly add Gaussians for three types of pixels per frame: newly observed, with large color errors, and with large depth errors. We also categorize all Gaussians into stable and unstable ones, where the stable Gaussians are expected to well fit previously observed RGBD images and otherwise unstable. We only optimize the unstable Gaussians and only render the pixels occupied by unstable Gaussians. In this way, both the number of Gaussians to be optimized and pixels to be rendered are largely reduced, and the optimization can be done in real time. We show real-time reconstructions of a variety of large scenes. Compared with the state-of-the-art NeRF-based RGBD SLAM, our system achieves comparable high-quality reconstruction but with around twice the speed and half the memory cost, and shows superior performance in the realism of novel view synthesis and camera tracking accuracy.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/0bebbf2c-ad5d-47e9-871a-2c5136387ce5)
+
+
+</details>
+
+[📃 arXiv:2404](https://arxiv.org/pdf/2404.19706) | [⌨️ Code](https://github.com/MisEty/RTG-SLAM) | [🌐 Project Page](https://gapszju.github.io/RTG-SLAM/)
 
 
 
@@ -2079,6 +2091,31 @@ We present L4GM, the first 4D Large Reconstruction Model that produces animated 
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.10324) | [⌨️ Code] | [🌐 Project Page](https://research.nvidia.com/labs/toronto-ai/l4gm)
 
+#### <summary>Modeling Ambient Scene Dynamics for Free-view Synthesis
+Authors: Meng-Li Shih, Jia-Bin Huang, Changil Kim, Rajvi Shah, Johannes Kopf, Chen Gao
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce a novel method for dynamic free-view synthesis of an ambient scenes from a monocular capture bringing a immersive quality to the viewing experience. Our method builds upon the recent advancements in 3D Gaussian Splatting (3DGS) that can faithfully reconstruct complex static scenes. Previous attempts to extend 3DGS to represent dynamics have been confined to bounded scenes or require multi-camera captures, and often fail to generalize to unseen motions, limiting their practical application. Our approach overcomes these constraints by leveraging the periodicity of ambient motions to learn the motion trajectory model, coupled with careful regularization. We also propose important practical strategies to improve the visual quality of the baseline 3DGS static reconstructions and to improve memory efficiency critical for GPU-memory intensive learning. We demonstrate high-quality photorealistic novel view synthesis of several ambient natural scenes with intricate textures and fine structural elements.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/a2aa2b78-6e76-4514-9705-56b8bf25162e)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.09395) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>Unified Gaussian Primitives for Scene Representation and Rendering
+Authors: Yang Zhou, Songyin Wu, Ling-Qi Yan
+<details span>
+<summary><b>Abstract</b></summary>
+Searching for a unified scene representation remains a research challenge in computer graphics. Traditional mesh-based representations are unsuitable for dense, fuzzy elements, and introduce additional complexity for filtering and differentiable rendering. Conversely, voxel-based representations struggle to model hard surfaces and suffer from intensive memory requirement. We propose a general-purpose rendering primitive based on 3D Gaussian distribution for unified scene representation, featuring versatile appearance ranging from glossy surfaces to fuzzy elements, as well as physically based scattering to enable accurate global illumination. We formulate the rendering theory for the primitive based on non-exponential transport and derive efficient rendering operations to be compatible with Monte Carlo path tracing. The new representation can be converted from different sources, including meshes and 3D Gaussian splatting, and further refined via transmittance optimization thanks to its differentiability. We demonstrate the versatility of our representation in various rendering applications such as global illumination and appearance editing, while supporting arbitrary lighting conditions by nature. Additionally, we compare our representation to existing volumetric representations, highlighting its efficiency to reproduce details.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/a2aa2b78-6e76-4514-9705-56b8bf25162e)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.09733v1) | [⌨️ Code] | [🌐 Project Page]
 
 
 <br>
@@ -3194,6 +3231,35 @@ In recent years, the development of Neural Radiance Fields has enabled a previou
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.10633) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Neural Geometry Fields for Meshes
+Authors: Venkataram Sivaram, Ravi Ramamoorthi, Tzu-Mao Li
+<details span>
+<summary><b>Abstract</b></summary>
+Recent work on using neural fields to represent surfaces has re- sulted in significant improvements in representational capability and computational efficiency. However, to our knowledge, most existing work has focused on implicit representations such as signed distance fields or volumes, and little work has explored their appli- cation to discrete surface geometry, i.e., 3D meshes, limiting the applicability of neural surface representations.
+
+We present Neural Geometry Fields, a neural representation for discrete surface geometry represented by triangle meshes. Our idea is to represent the target surface using a coarse set of quadrangular patches, and add surface details using coordinate neural networks by displacing the patches. We then extract a traditional triangular mesh from a neural geometry field instance by sampling the displacement. We show that our representation excels in mesh compression, where it significantly reduces the memory footprint of meshes without compromising on surface details.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/39b86d61-f22d-45e1-b500-375276df7e89)
+
+
+</details>
+
+[📃 arXiv:24xx](https://iveevi.github.io/ngf/pdf/main.pdf) | [⌨️ Code](https://github.com/iveevi/ngf) | [🌐 Project Page](https://iveevi.github.io/ngf/index.html)
+
+#### <summary>MegaScenes: Scene-Level View Synthesis at Scale
+Authors: Joseph Tung, Gene Chou, Ruojin Cai, Guandao Yang, Kai Zhang, Gordon Wetzstein, Bharath Hariharan, Noah Snavely
+<details span>
+<summary><b>Abstract</b></summary>
+Scene-level novel view synthesis (NVS) is fundamental to many vision and graphics applications. Recently, pose-conditioned diffusion models have led to significant progress by extracting 3D information from 2D foundation models, but these methods are limited by the lack of scene-level training data. Common dataset choices either consist of isolated objects (Objaverse), or of object-centric scenes with limited pose distributions (DTU, CO3D). In this paper, we create a large-scale scene-level dataset from Internet photo collections, called MegaScenes, which contains over 100K structure from motion (SfM) reconstructions from around the world. Internet photos represent a scalable data source but come with challenges such as lighting and transient objects. We address these issues to further create a subset suitable for the task of NVS. Additionally, we analyze failure cases of state-of-the-art NVS methods and significantly improve generation consistency. Through extensive experiments, we validate the effectiveness of both our dataset and method on generating in-the-wild scenes.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/897975f0-05e1-4f67-86cf-b19edf7b0f8c)
+
+
+</details>
+
+[📃 arXiv:24xx](https://arxiv.org/pdf/2406.11819v1) | [⌨️ Code](https://github.com/MegaScenes/nvs) | [🌐 Project Page](https://megascenes.github.io/)
 
 
 #### <summary>
