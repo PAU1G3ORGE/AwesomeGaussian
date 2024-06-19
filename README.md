@@ -3261,6 +3261,20 @@ Scene-level novel view synthesis (NVS) is fundamental to many vision and graphic
 
 [📃 arXiv:24xx](https://arxiv.org/pdf/2406.11819v1) | [⌨️ Code](https://github.com/MegaScenes/nvs) | [🌐 Project Page](https://megascenes.github.io/)
 
+#### <summary>FAWN: Floor-And-Walls Normal Regularization for Direct Neural TSDF Reconstruction
+Authors: Anna Sokolova, Anna Vorontsova, Bulat Gabdullin, Alexander Limonov
+<details span>
+<summary><b>Abstract</b></summary>
+Leveraging 3D semantics for direct 3D reconstruction has a great potential yet unleashed. For instance, by assuming that walls are vertical, and a floor is planar and horizontal, we can correct distorted room shapes and eliminate local artifacts such as holes, pits, and hills. In this paper, we propose FAWN, a modification of truncated signed distance function (TSDF) reconstruction methods, which considers scene structure by detecting walls and floor in a scene, and penalizing the corresponding surface normals for deviating from the horizontal and vertical directions. Implemented as a 3D sparse convolutional module, FAWN can be incorporated into any trainable pipeline that predicts TSDF. Since FAWN requires 3D semantics only for training, no additional limitations on further use are imposed. We demonstrate, that FAWN-modified methods use semantics more effectively, than existing semantic-based approaches. Besides, we apply our modification to state-of-the-art TSDF reconstruction methods, and demonstrate a quality gain in SCANNET, ICL-NUIM, TUM RGB-D, and 7SCENES benchmarks.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/ab351cb8-000d-44da-8d0e-8b64c2cceab5)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.12054) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 #### <summary>
 Authors: 
