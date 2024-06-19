@@ -757,7 +757,7 @@ Very large captures typically have sparse coverage of the scene, presenting many
 
 </details>
 
-[📃 arXiv:2405](https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/hierarchical-3d-gaussians_low.pdf) | [⌨️ Code] | [🌐 Project Page](https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/)
+[📃 2405](https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/hierarchical-3d-gaussians_low.pdf) | [📃 arXiv:2406](https://arxiv.org/pdf/2406.12080) | [⌨️ Code] | [🌐 Project Page](https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/)
 
 
 
