@@ -2118,6 +2118,20 @@ Searching for a unified scene representation remains a research challenge in com
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.09733v1) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Splatter a Video: Video Gaussian Representation for Versatile Processing
+Authors: Yang-Tian Sun, Yi-Hua Huang, Lin Ma, Xiaoyang Lyu, Yan-Pei Cao, Xiaojuan Qi
+<details span>
+<summary><b>Abstract</b></summary>
+Video representation is a long-standing problem that is crucial for various down-stream tasks, such as tracking,depth prediction,segmentation,view synthesis,and editing. However, current methods either struggle to model complex motions due to the absence of 3D structure or rely on implicit 3D representations that are ill-suited for manipulation tasks. To address these challenges, we introduce a novel explicit 3D representation-video Gaussian representation -- that embeds a video into 3D Gaussians. Our proposed representation models video appearance in a 3D canonical space using explicit Gaussians as proxies and associates each Gaussian with 3D motions for video motion. This approach offers a more intrinsic and explicit representation than layered atlas or volumetric pixel matrices. To obtain such a representation, we distill 2D priors, such as optical flow and depth, from foundation models to regularize learning in this ill-posed setting. Extensive applications demonstrate the versatility of our new video representation. It has been proven effective in numerous video processing tasks, including tracking, consistent video depth and feature refinement, motion and appearance editing, and stereoscopic video generation.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/9113df61-e81c-43d0-aa6b-a9438d05e678)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.13870) | [⌨️ Code](https://github.com/SunYangtian/Splatter_A_Video) | [🌐 Project Page](https://sunyangtian.github.io/spatter_a_video_web/)
+
+
 <br>
 <br>
 
@@ -3274,6 +3288,46 @@ Leveraging 3D semantics for direct 3D reconstruction has a great potential yet u
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.12054) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>CityNav: Language-Goal Aerial Navigation Dataset with Geographic Information
+Authors: Jungdae Lee, Taiki Miyanishi, Shuhei Kurita, Koya Sakamoto, Daichi Azuma, Yutaka Matsuo, Nakamasa Inoue
+<details span>
+<summary><b>Abstract</b></summary>
+Vision-and-language navigation (VLN) aims to guide autonomous agents through real-world environments by integrating visual and linguistic cues. While substantial progress has been made in understanding these interactive modalities in ground-level navigation, aerial navigation remains largely underexplored. This is primarily due to the scarcity of resources suitable for real-world, city-scale aerial navigation studies. To bridge this gap, we introduce CityNav, a new dataset for language-goal aerial navigation using a 3D point cloud representation from real-world cities. CityNav includes 32,637 natural language descriptions paired with human demonstration trajectories, collected from participants via a new web-based 3D simulator developed for this research. Each description specifies a navigation goal, leveraging the names and locations of landmarks within real-world cities. We also provide baseline models of navigation agents that incorporate an internal 2D spatial map representing landmarks referenced in the descriptions. We benchmark the latest aerial navigation baselines and our proposed model on the CityNav dataset. The results using this dataset reveal the following key findings: (i) Our aerial agent models trained on human demonstration trajectories outperform those trained on shortest path trajectories, highlighting the importance of human-driven navigation strategies; (ii) The integration of a 2D spatial map significantly enhances navigation efficiency at city scale.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/ec8e80a3-3478-454b-827a-366a3a5991b4)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.14240) | [⌨️ Code] | [🌐 Project Page](https://water-cookie.github.io/city-nav-proj/)
+
+
+#### <summary>Freq-Mip-AA : Frequency Mip Representation for Anti-Aliasing Neural Radiance Fields
+Authors: Youngin Park, Seungtae Nam, Cheul-hee Hahm, Eunbyung Park
+<details span>
+<summary><b>Abstract</b></summary>
+Neural Radiance Fields (NeRF) have shown remarkable success in representing 3D scenes and generating novel views. However, they often struggle with aliasing artifacts, especially when rendering images from different camera distances from the training views. To address the issue, Mip-NeRF proposed using volumetric frustums to render a pixel and suggested integrated positional encoding (IPE). While effective, this approach requires long training times due to its reliance on MLP architecture. In this work, we propose a novel anti-aliasing technique that utilizes grid-based representations, usually showing significantly faster training time. In addition, we exploit frequency-domain representation to handle the aliasing problem inspired by the sampling theorem. The proposed method, FreqMipAA, utilizes scale-specific low-pass filtering (LPF) and learnable frequency masks. Scale-specific low-pass filters (LPF) prevent aliasing and prioritize important image details, and learnable masks effectively remove problematic high-frequency elements while retaining essential information. By employing a scale-specific LPF and trainable masks, FreqMipAA can effectively eliminate the aliasing factor while retaining important details. We validated the proposed technique by incorporating it into a widely used grid-based method. The experimental results have shown that the FreqMipAA effectively resolved the aliasing issues and achieved state-of-the-art results in the multi-scale Blender dataset.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/912b8b95-4c54-4bee-9612-8e8fd5b34b38)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.13251) | [⌨️ Code](https://github.com/yi0109/FreqMipAA) | [🌐 Project Page]
+
+
+#### <summary>Straight Through Gumbel Softmax Estimator based Bimodal Neural Architecture Search for Audio-Visual Deepfake Detection
+Authors: Aravinda Reddy PN, Raghavendra Ramachandra, Krothapalli Sreenivasa Rao, Pabitra Mitra, Vinod Rathod
+<details span>
+<summary><b>Abstract</b></summary>
+Deepfakes are a major security risk for biometric authentication. This technology creates realistic fake videos that can impersonate real people, fooling systems that rely on facial features and voice patterns for identification. Existing multimodal deepfake detectors rely on conventional fusion methods, such as majority rule and ensemble voting, which often struggle to adapt to changing data characteristics and complex patterns. In this paper, we introduce the Straight-through Gumbel-Softmax (STGS) framework, offering a comprehensive approach to search multimodal fusion model architectures. Using a two-level search approach, the framework optimizes the network architecture, parameters, and performance. Initially, crucial features were efficiently identified from backbone networks, whereas within the cell structure, a weighted fusion operation integrated information from various sources. An architecture that maximizes the classification performance is derived by varying parameters such as temperature and sampling time. The experimental results on the FakeAVCeleb and SWAN-DF datasets demonstrated an impressive AUC value 94.4\% achieved with minimal model parameters.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/3f8b7036-9812-4b87-bd77-2ec3efb75be0)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.13384) | [⌨️ Code] | [🌐 Project Page]
 
 
 #### <summary>
