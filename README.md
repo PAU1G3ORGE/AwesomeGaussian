@@ -2132,6 +2132,36 @@ Video representation is a long-standing problem that is crucial for various down
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.13870) | [⌨️ Code](https://github.com/SunYangtian/Splatter_A_Video) | [🌐 Project Page](https://sunyangtian.github.io/spatter_a_video_web/)
 
 
+
+#### <summary>GeoLRM: Geometry-Aware Large Reconstruction Model for High-Quality 3D Gaussian Generation
+Authors: Chubin Zhang, Hongliang Song, Yi Wei, Yu Chen, Jiwen Lu, Yansong Tang
+<details span>
+<summary><b>Abstract</b></summary>
+In this work, we introduce the Geometry-Aware Large Reconstruction Model (GeoLRM), an approach which can predict high-quality assets with 512k Gaussians and 21 input images in only 11 GB GPU memory. Previous works neglect the inherent sparsity of 3D structure and do not utilize explicit geometric relationships between 3D and 2D images. This limits these methods to a low-resolution representation and makes it difficult to scale up to the dense views for better quality. GeoLRM tackles these issues by incorporating a novel 3D-aware transformer structure that directly processes 3D points and uses deformable cross-attention mechanisms to effectively integrate image features into 3D representations. We implement this solution through a two-stage pipeline: initially, a lightweight proposal network generates a sparse set of 3D anchor points from the posed image inputs; subsequently, a specialized reconstruction transformer refines the geometry and retrieves textural details. Extensive experimental results demonstrate that GeoLRM significantly outperforms existing models, especially for dense view inputs. We also demonstrate the practical applicability of our model with 3D generation tasks, showcasing its versatility and potential for broader adoption in real-world applications.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/a49b356c-53e4-4494-8694-4481f1bdb646)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.15333) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>E2GS: Event Enhanced Gaussian Splatting
+Authors: Hiroyuki Deguchi, Mana Masuda, Takuya Nakabayashi, Hideo Saito
+<details span>
+<summary><b>Abstract</b></summary>
+Event cameras, known for their high dynamic range, absence of motion blur, and low energy usage, have recently found a wide range of applications thanks to these attributes. In the past few years, the field of event-based 3D reconstruction saw remarkable progress, with the Neural Radiance Field (NeRF) based approach demonstrating photorealistic view synthesis results. However, the volume rendering paradigm of NeRF necessitates extensive training and rendering times. In this paper, we introduce Event Enhanced Gaussian Splatting (E2GS), a novel method that incorporates event data into Gaussian Splatting, which has recently made significant advances in the field of novel view synthesis. Our E2GS effectively utilizes both blurry images and event data, significantly improving image deblurring and producing high-quality novel view synthesis. Our comprehensive experiments on both synthetic and real-world datasets demonstrate our E2GS can generate visually appealing renderings while offering faster training and rendering speed (140 FPS).
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/f7dacef0-5803-4207-b613-c701a4f42bb9)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.14978) | [⌨️ Code](https://github.com/deguchihiroyuki/E2GS) | [🌐 Project Page]
+
+
+
 <br>
 <br>
 
@@ -3328,6 +3358,19 @@ Deepfakes are a major security risk for biometric authentication. This technolog
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.13384) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>Relighting Scenes with Object Insertions in Neural Radiance Fields
+Authors: Xuening Zhu, Renjiao Yi, Xin Wen, Chenyang Zhu, Kai Xu
+<details span>
+<summary><b>Abstract</b></summary>
+The insertion of objects into a scene and relighting are commonly utilized applications in augmented reality (AR). Previous methods focused on inserting virtual objects using CAD models or real objects from single-view images, resulting in highly limited AR application scenarios. We propose a novel NeRF-based pipeline for inserting object NeRFs into scene NeRFs, enabling novel view synthesis and realistic relighting, supporting physical interactions like casting shadows onto each other, from two sets of images depicting the object and scene. The lighting environment is in a hybrid representation of Spherical Harmonics and Spherical Gaussians, representing both high- and low-frequency lighting components very well, and supporting non-Lambertian surfaces. Specifically, we leverage the benefits of volume rendering and introduce an innovative approach for efficient shadow rendering by comparing the depth maps between the camera view and the light source view and generating vivid soft shadows. The proposed method achieves realistic relighting effects in extensive experimental evaluations.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/1b5e7a1f-5a07-44c7-84c7-240fed207fad)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.14806) | [⌨️ Code] | [🌐 Project Page]
 
 
 #### <summary>
