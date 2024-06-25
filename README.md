@@ -3373,6 +3373,20 @@ The insertion of objects into a scene and relighting are commonly utilized appli
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.14806) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Crowd-Sourced NeRF: Collecting Data from Production Vehicles for 3D Street View Reconstruction
+Authors: Tong Qin, Changze Li, Haoyang Ye, Shaowei Wan, Minzhen Li, Hongwei Liu, Ming Yang
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, Neural Radiance Fields (NeRF) achieved impressive results in novel view synthesis. Block-NeRF showed the capability of leveraging NeRF to build large city-scale models. For large-scale modeling, a mass of image data is necessary. Collecting images from specially designed data-collection vehicles can not support large-scale applications. How to acquire massive high-quality data remains an opening problem. Noting that the automotive industry has a huge amount of image data, crowd-sourcing is a convenient way for large-scale data collection. In this paper, we present a crowd-sourced framework, which utilizes substantial data captured by production vehicles to reconstruct the scene with the NeRF model. This approach solves the key problem of large-scale reconstruction, that is where the data comes from and how to use them. Firstly, the crowd-sourced massive data is filtered to remove redundancy and keep a balanced distribution in terms of time and space. Then a structure-from-motion module is performed to refine camera poses. Finally, images, as well as poses, are used to train the NeRF model in a certain block. We highlight that we present a comprehensive framework that integrates multiple modules, including data selection, sparse 3D reconstruction, sequence appearance embedding, depth supervision of ground surface, and occlusion completion. The complete system is capable of effectively processing and reconstructing high-quality 3D scenes from crowd-sourced data. Extensive quantitative and qualitative experiments were conducted to validate the performance of our system. Moreover, we proposed an application, named first-view navigation, which leveraged the NeRF model to generate 3D street view and guide the driver with a synthesized video.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/488523b6-4f73-4a5a-89e3-dd0b01de271b)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.16289) | [⌨️ Code] | [🌐 Project Page]
+
+
 #### <summary>
 Authors: 
 <details span>
