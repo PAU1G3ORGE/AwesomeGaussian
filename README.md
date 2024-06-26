@@ -2174,6 +2174,20 @@ Authors: Saswat Subhajyoti Mallick, Rahul Goel, Bernhard Kerbl, Francisco Vicent
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.15643) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Reducing the Memory Footprint of 3D Gaussian Splatting
+Authors: Panagiotis Papantonakis, Georgios Kopanas, Bernhard Kerbl, Alexandre Lanvin, George Drettakis
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian splatting provides excellent visual quality for novel view synthesis, with fast training and real-time rendering; unfortunately, the memory requirements of this method for storing and transmission are unreasonably high. We first analyze the reasons for this, identifying three main areas where storage can be reduced: the number of 3D Gaussian primitives used to represent a scene, the number of coefficients for the spherical harmonics used to represent directional radiance, and the precision required to store Gaussian primitive attributes. We present a solution to each of these issues. First, we propose an efficient, resolution-aware primitive pruning approach, reducing the primitive count by half. Second, we introduce an adaptive adjustment method to choose the number of coefficients used to represent directional radiance for each Gaussian primitive, and finally a codebook-based quantization method, together with a half-float representation for further memory reduction. Taken together, these three components result in a 27 reduction in overall size on disk on the standard datasets we tested, along with a 1.7 speedup in rendering speed. We demonstrate our method on standard datasets and show how our solution results in significantly reduced download times when using the method on a mobile device.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/9840e8f6-ab3d-40b5-a2eb-2fc92697b83c)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.17074) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 <br>
 <br>
@@ -3398,6 +3412,21 @@ Recently, Neural Radiance Fields (NeRF) achieved impressive results in novel vie
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.16289) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>NerfBaselines: Consistent and Reproducible Evaluation of Novel View Synthesis Methods
+Authors: Jonas Kulhanek, Torsten Sattler
+<details span>
+<summary><b>Abstract</b></summary>
+Novel view synthesis is an important problem with many applications, including AR/VR, gaming, and simulations for robotics. With the recent rapid development of Neural Radiance Fields (NeRFs) and 3D Gaussian Splatting (3DGS) methods, it is becoming difficult to keep track of the current state of the art (SoTA) due to methods using different evaluation protocols, codebases being difficult to install and use, and methods not generalizing well to novel 3D scenes. Our experiments support this claim by showing that tiny differences in evaluation protocols of various methods can lead to inconsistent reported metrics. To address these issues, we propose a framework called NerfBaselines, which simplifies the installation of various methods, provides consistent benchmarking tools, and ensures reproducibility. We validate our implementation experimentally by reproducing numbers reported in the original papers. To further improve the accessibility, we release a web platform where commonly used methods are compared on standard benchmarks.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/0c1b7424-4c79-4838-b267-c6d3aec9b895)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.17345) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 #### <summary>
