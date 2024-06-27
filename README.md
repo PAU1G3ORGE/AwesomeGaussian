@@ -1235,6 +1235,24 @@ During the Gaussian Splatting optimization process, the scene’s geometry can g
 [📃 arXiv:2403](https://arxiv.org/pdf/2403.11324) | [⌨️ Code](https://github.com/yanyan-li/GeoGaussian) | [🌐 Project Page](https://yanyan-li.github.io/project/gs/geogaussian)
 
 
+#### <summary>3DGS-Calib: 3D Gaussian Splatting for Multimodal SpatioTemporal Calibration
+Authors: Quentin Herau, Moussab Bennehar, Arthur Moreau, Nathan Piasco, Luis Roldao, Dzmitry Tsishkou, Cyrille Migniot, Pascal Vasseur, Cédric Demonceaux
+<details span>
+<summary><b>Abstract</b></summary>
+Reliable multimodal sensor fusion algorithms require accurate spatiotemporal calibration. Recently, targetless calibration techniques based on implicit neural representations have proven to provide precise and robust results. Nevertheless, such methods are inherently slow to train given the high computational overhead caused by the large number of sampled points required for volume rendering. With the recent introduction of 3D Gaussian Splatting as a faster alternative to implicit representation methods, we propose to leverage this new rendering approach to achieve faster multi-sensor calibration. We introduce 3DGS-Calib, a new calibration method that relies on the speed and rendering accuracy of 3D Gaussian Splatting to achieve multimodal spatiotemporal calibration that is accurate, robust, and with a substantial speed-up compared to methods relying on implicit neural representations. We demonstrate the superiority of our proposal with experimental results on sequences from KITTI-360, a widely used driving dataset.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/08f7bcc0-f92a-4f9c-b17e-5c0bc7276ea4)
+
+
+</details>
+
+
+[📃 arXiv:2403](https://arxiv.org/pdf/2403.11577) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+
+
 #### <summary>RadSplat: Radiance Field-Informed Gaussian Splatting for Robust Real-Time Rendering with 900+ FPS
 Authors: Michael Niemeyer, Fabian Manhardt, Marie-Julie Rakotosaona, Michael Oechsle, Daniel Duckworth, Rama Gosula, Keisuke Tateno, John Bates, Dominik Kaeser, Federico Tombari
 <details span>
