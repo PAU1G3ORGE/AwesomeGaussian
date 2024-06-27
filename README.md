@@ -3,7 +3,7 @@
 
 <br>
 
-[Surface](#Surface) | [Sparse View](#Sparse-View) | [Noisy Poses](#Noisy-Poses) | [Structured](#Structured) | [Large Scale](#Large-Scale) | [Generalizable](#Generalizable) | [High Frequency Details](#High-Frequency-Details) | [SLAM](#SLAM) | [Others](#Others) 
+[Surface](#Surface) | [Sparse View](#Sparse-View) | [Noisy Poses](#Noisy-Poses) | [Structured](#Structured) | [Large Scale](#Large-Scale) | [Generalizable](#Generalizable) | [High Frequency Details](#High-Frequency-Details) | [SLAM](#SLAM) | [Others](#Others)  | [Not Gaussian](#Not-Gaussian)
 
 <br>
 
@@ -606,6 +606,20 @@ Photo-realistic 3D Reconstruction is a fundamental problem in 3D computer vision
 
 
 
+#### <summary>Superpoint Gaussian Splatting for Real-Time High-Fidelity Dynamic Scene Reconstruction
+Authors: Diwen Wan, Ruijie Lu, Gang Zeng
+<details span>
+<summary><b>Abstract</b></summary>
+Rendering novel view images in dynamic scenes is a crucial yet challenging task. Current methods mainly utilize NeRF-based methods to represent the static scene and an additional time-variant MLP to model scene deformations, resulting in relatively low rendering quality as well as slow inference speed. To tackle these challenges, we propose a novel framework named Superpoint Gaussian Splatting (SP-GS). Specifically, our framework first employs explicit 3D Gaussians to reconstruct the scene and then clusters Gaussians with similar properties (e.g., rotation, translation, and location) into superpoints. Empowered by these superpoints, our method manages to extend 3D Gaussian splatting to dynamic scenes with only a slight increase in computational expense. Apart from achieving state-of-the-art visual quality and real-time rendering under high resolutions, the superpoint representation provides a stronger manipulation capability. Extensive experiments demonstrate the practicality and effectiveness of our approach on both synthetic and real-world datasets.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/d164cbfc-74bb-4a08-bc3a-d91e52dd6a68)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.03697) | [⌨️ Code] | [🌐 Project Page](https://dnvtmf.github.io/SP_GS.github.io)
+
+
 #### <summary>InfoGaussian: Structure-Aware Dynamic Gaussians through Lightweight Information Shaping
 Authors: Yunchao Zhang, Guandao Yang, Leonidas Guibas, Yanchao Yang
 <details span>
@@ -646,6 +660,9 @@ Point management is a critical component in optimizing 3D Gaussian Splatting (3D
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.04251) | [⌨️ Code](https://github.com/Surrey-UPLab/Localized-Gaussian-Point-Management) | [🌐 Project Page](https://surrey-uplab.github.io/research/LPM/)
+
+
+
 
 
 
@@ -727,6 +744,9 @@ The advancement of real-time 3D scene reconstruction and novel view synthesis ha
 [📃 arXiv:2404](https://arxiv.org/pdf/2404.01133) | [⌨️ Code](https://github.com/DekuLiuTesla/CityGaussian) | [🌐 Project Page](https://dekuliutesla.github.io/citygs/)
 
 
+
+
+
 #### <summary>Real-Time View Synthesis for Large Scenes with Millions of Square Meters
 
 Authors: Qing Shuai  Haoyu Guo  Zhen Xu  Haotong Lin   Sida Peng   Hujun Bao   Xiaowei Zhou
@@ -759,6 +779,19 @@ Very large captures typically have sparse coverage of the scene, presenting many
 
 [📃 2405](https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/hierarchical-3d-gaussians_low.pdf) | [📃 arXiv:2406](https://arxiv.org/pdf/2406.12080) | [⌨️ Code] | [🌐 Project Page](https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/)
 
+
+#### <summary>S3Gaussian: Self-Supervised Street Gaussians for Autonomous Driving
+Authors: Nan Huang, Xiaobao Wei, Wenzhao Zheng, Pengju An, Ming Lu, Wei Zhan, Masayoshi Tomizuka, Kurt Keutzer, Shanghang Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+Photorealistic 3D reconstruction of street scenes is a critical technique for developing real-world simulators for autonomous driving. Despite the efficacy of Neural Radiance Fields (NeRF) for driving scenes, 3D Gaussian Splatting (3DGS) emerges as a promising direction due to its faster speed and more explicit representation. However, most existing street 3DGS methods require tracked 3D vehicle bounding boxes to decompose the static and dynamic elements for effective reconstruction, limiting their applications for in-the-wild scenarios. To facilitate efficient 3D scene reconstruction without costly annotations, we propose a self-supervised street Gaussian (S3Gaussian) method to decompose dynamic and static elements from 4D consistency. We represent each scene with 3D Gaussians to preserve the explicitness and further accompany them with a spatial-temporal field network to compactly model the 4D dynamics. We conduct extensive experiments on the challenging Waymo-Open dataset to evaluate the effectiveness of our method. Our S3Gaussian demonstrates the ability to decompose static and dynamic scenes and achieves the best performance without using 3D annotations.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/cd6040d0-1145-4b68-a204-5eb96a13fc71)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.20323) | [⌨️ Code](https://github.com/nnanhuang/S3Gaussian/) | [🌐 Project Page](https://wzzheng.net/S3Gaussian/)
 
 
 
@@ -998,6 +1031,50 @@ We present Real-time Gaussian SLAM (RTG-SLAM), a real-time 3D reconstruction sys
 </details>
 
 [📃 arXiv:2404](https://arxiv.org/pdf/2404.19706) | [⌨️ Code](https://github.com/MisEty/RTG-SLAM?tab=readme-ov-file) | [🌐 Project Page]
+
+
+#### <summary>Monocular Gaussian SLAM with Language Extended Loop Closure
+Authors: Tian Lan, Qinwei Lin, Haoqian Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Recently,3DGaussianSplattinghasshowngreatpotentialin visual Simultaneous Localization And Mapping (SLAM). Existing methods have achieved encouraging results on RGB-D SLAM, but studies of the monocular case are still scarce. Moreover, they also fail to correct drift errors due to the lack of loop closure and global optimization. In this paper, we present MG-SLAM, a monocular Gaussian SLAM with a language-extended loop closure module capable of performing drift-corrected tracking and high-fidelity reconstruction while achieving a high-level understanding of the environment. Our key idea is to represent the global map as 3D Gaussian and use it to guide the estimation of the scene geometry, thus mitigating the efforts of missing depth information. Further, an additional language-extended loop closure module which is based on CLIP feature is designed to continually perform global optimization to correct drift errors accumulated as the system runs. Our system shows promising results on multiple challenging datasets in both tracking and mapping and even surpasses some existing RGB-D methods.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/ec122248-f518-461a-b38d-63b3ec8162a6)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.13748) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>Splat-SLAM: Globally Optimized RGB-only SLAM with 3D Gaussians
+Authors: Xiangyu Sun, Joo Chan Lee, Daniel Rho, Jong Hwan Ko, Usman Ali, Eunbyung Park
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting has emerged as a powerful representation of geometry and appearance for RGB-only dense Simultaneous Localization and Mapping (SLAM), as it provides a compact dense map representation while enabling efficient and high-quality map rendering. However, existing methods show significantly worse reconstruction quality than competing methods using other 3D representations, e.g. neural points clouds, since they either do not employ global map and pose optimization or make use of monocular depth. In response, we propose the first RGB-only SLAM system with a dense 3D Gaussian map representation that utilizes all benefits of globally optimized tracking by adapting dynamically to keyframe pose and depth updates by actively deforming the 3D Gaussian map. Moreover, we find that refining the depth updates in inaccurate areas with a monocular depth estimator further improves the accuracy of the 3D reconstruction. Our experiments on the Replica, TUM-RGBD, and ScanNet datasets indicate the effectiveness of globally optimized 3D Gaussians, as the approach achieves superior or on par performance with existing RGB-only SLAM methods methods in tracking, mapping and rendering accuracy while yielding small map sizes and fast runtimes.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/223b9a44-1b78-48c1-a5a8-112e2695e2cb)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.16544) | [⌨️ Code](https://github.com/eriksandstroem/Splat-SLAM) | [🌐 Project Page]
+
+
+#### <summary>Structure Gaussian SLAM with Manhattan World Hypothesis
+Authors: Shuhong Liu, Heng Zhou, Liuzhuozheng Li, Yun Liu, Tianchen Deng, Yiming Zhou, Mingrui Li
+<details span>
+<summary><b>Abstract</b></summary>
+Gaussian SLAM systems have made significant advancements in improving the efficiency and fidelity of real-time reconstructions. However, these systems often encounter incomplete reconstructions in complex indoor environments, characterized by substantial holes due to unobserved geometry caused by obstacles or limited view angles. To address this challenge, we present Manhattan Gaussian SLAM (MG-SLAM), an RGB-D system that leverages the Manhattan World hypothesis to enhance geometric accuracy and completeness. By seamlessly integrating fused line segments derived from structured scenes, MG-SLAM ensures robust tracking in textureless indoor areas. Moreover, The extracted lines and planar surface assumption allow strategic interpolation of new Gaussians in regions of missing geometry, enabling efficient scene completion. Extensive experiments conducted on both synthetic and real-world scenes demonstrate that these advancements enable our method to achieve state-of-the-art performance, marking a substantial improvement in the capabilities of Gaussian SLAM systems.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/703df897-a955-4bac-b95e-dac8e2a3f317)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.20031) | [⌨️ Code] | [🌐 Project Page]
+
+
+
 
 
 <br>
@@ -1266,19 +1343,6 @@ While 3D Gaussian Splatting has recently become popular for neural rendering, cu
 
 [📃 arXiv:2404](https://arxiv.org/pdf/2404.09591) | [⌨️ Code] | [🌐 Project Page]
 
-#### <summary>RTG-SLAM: Real-time 3D Reconstruction at Scale Using Gaussian Splatting
-Authors: Zhexi Peng, Tianjia Shao, Liu Yong, Jingke Zhou, Yin Yang, Jingdong Wang, Kun Zhou
-<details span>
-<summary><b>Abstract</b></summary>
-We present Real-time Gaussian SLAM (RTG-SLAM), a real-time 3D reconstruction system with an RGBD camera for large-scale environments using Gaussian splatting. The system features a compact Gaussian representation and a highly efficient on-the-fly Gaussian optimization scheme. We force each Gaussian to be either opaque or nearly transparent, with the opaque ones fitting the surface and dominant colors, and transparent ones fitting residual colors. By rendering depth in a different way from color rendering, we let a single opaque Gaussian well fit a local surface region without the need of multiple overlapping Gaussians, hence largely reducing the memory and computation cost. For on-the-fly Gaussian optimization, we explicitly add Gaussians for three types of pixels per frame: newly observed, with large color errors, and with large depth errors. We also categorize all Gaussians into stable and unstable ones, where the stable Gaussians are expected to well fit previously observed RGBD images and otherwise unstable. We only optimize the unstable Gaussians and only render the pixels occupied by unstable Gaussians. In this way, both the number of Gaussians to be optimized and pixels to be rendered are largely reduced, and the optimization can be done in real time. We show real-time reconstructions of a variety of large scenes. Compared with the state-of-the-art NeRF-based RGBD SLAM, our system achieves comparable high-quality reconstruction but with around twice the speed and half the memory cost, and shows superior performance in the realism of novel view synthesis and camera tracking accuracy.
- 
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/0bebbf2c-ad5d-47e9-871a-2c5136387ce5)
-
-
-</details>
-
-[📃 arXiv:2404](https://arxiv.org/pdf/2404.19706) | [⌨️ Code](https://github.com/MisEty/RTG-SLAM) | [🌐 Project Page](https://gapszju.github.io/RTG-SLAM/)
-
 
 
 #### <summary>Splat-MOVER: Multi-Stage, Open-Vocabulary Robotic Manipulation via Editable Gaussian Splatting
@@ -1360,7 +1424,7 @@ Authors: Jiayue Liu, Xiao Tang, Freeman Cheng, Roy Yang, Zhihao Li, Jianzhuang L
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.11921) | [⌨️ Code] | [🌐 Project Page](https://mirror-gaussian.github.io/)
 
 
-#### <summary>MotionGS : Compact Gaussian Splatting SLAM by Motion Filter
+#### <summary>MotionGS: Compact Gaussian Splatting SLAM by Motion Filter
 Authors: Xinli Guo, Peng Han, Weidong Zhang, Hongtian Chen
 <details span>
 <summary><b>Abstract</b></summary>
@@ -1445,18 +1509,7 @@ Road surface reconstruction plays a crucial role in autonomous driving, which ca
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.14342) | [⌨️ Code] | [🌐 Project Page]
 
-#### <summary>Monocular Gaussian SLAM with Language Extended Loop Closure
-Authors: Tian Lan, Qinwei Lin, Haoqian Wang
-<details span>
-<summary><b>Abstract</b></summary>
-Recently,3DGaussianSplattinghasshowngreatpotentialin visual Simultaneous Localization And Mapping (SLAM). Existing methods have achieved encouraging results on RGB-D SLAM, but studies of the monocular case are still scarce. Moreover, they also fail to correct drift errors due to the lack of loop closure and global optimization. In this paper, we present MG-SLAM, a monocular Gaussian SLAM with a language-extended loop closure module capable of performing drift-corrected tracking and high-fidelity reconstruction while achieving a high-level understanding of the environment. Our key idea is to represent the global map as 3D Gaussian and use it to guide the estimation of the scene geometry, thus mitigating the efforts of missing depth information. Further, an additional language-extended loop closure module which is based on CLIP feature is designed to continually perform global optimization to correct drift errors accumulated as the system runs. Our system shows promising results on multiple challenging datasets in both tracking and mapping and even surpasses some existing RGB-D methods.
 
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/ec122248-f518-461a-b38d-63b3ec8162a6)
-
-
-</details>
-
-[📃 arXiv:2405](https://arxiv.org/pdf/2405.13748) | [⌨️ Code] | [🌐 Project Page]
 
 
 
@@ -1599,18 +1652,7 @@ The neural radiance field (NeRF) has made significant strides in representing 3D
 
 
 
-#### <summary>Splat-SLAM: Globally Optimized RGB-only SLAM with 3D Gaussians
-Authors: Xiangyu Sun, Joo Chan Lee, Daniel Rho, Jong Hwan Ko, Usman Ali, Eunbyung Park
-<details span>
-<summary><b>Abstract</b></summary>
-3D Gaussian Splatting has emerged as a powerful representation of geometry and appearance for RGB-only dense Simultaneous Localization and Mapping (SLAM), as it provides a compact dense map representation while enabling efficient and high-quality map rendering. However, existing methods show significantly worse reconstruction quality than competing methods using other 3D representations, e.g. neural points clouds, since they either do not employ global map and pose optimization or make use of monocular depth. In response, we propose the first RGB-only SLAM system with a dense 3D Gaussian map representation that utilizes all benefits of globally optimized tracking by adapting dynamically to keyframe pose and depth updates by actively deforming the 3D Gaussian map. Moreover, we find that refining the depth updates in inaccurate areas with a monocular depth estimator further improves the accuracy of the 3D reconstruction. Our experiments on the Replica, TUM-RGBD, and ScanNet datasets indicate the effectiveness of globally optimized 3D Gaussians, as the approach achieves superior or on par performance with existing RGB-only SLAM methods methods in tracking, mapping and rendering accuracy while yielding small map sizes and fast runtimes.
- 
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/223b9a44-1b78-48c1-a5a8-112e2695e2cb)
 
-
-</details>
-
-[📃 arXiv:2405](https://arxiv.org/pdf/2405.16544) | [⌨️ Code](https://github.com/eriksandstroem/Splat-SLAM) | [🌐 Project Page]
 
 
 #### <summary>3D StreetUnveiler with Semantic-Aware 2DGS
@@ -1738,18 +1780,7 @@ Recently, 3D Gaussian Splatting (3DGS) has become one of the mainstream methodol
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.18784) | [⌨️ Code] | [🌐 Project Page]
 
 
-#### <summary>S3Gaussian: Self-Supervised Street Gaussians for Autonomous Driving
-Authors: Nan Huang, Xiaobao Wei, Wenzhao Zheng, Pengju An, Ming Lu, Wei Zhan, Masayoshi Tomizuka, Kurt Keutzer, Shanghang Zhang
-<details span>
-<summary><b>Abstract</b></summary>
-Photorealistic 3D reconstruction of street scenes is a critical technique for developing real-world simulators for autonomous driving. Despite the efficacy of Neural Radiance Fields (NeRF) for driving scenes, 3D Gaussian Splatting (3DGS) emerges as a promising direction due to its faster speed and more explicit representation. However, most existing street 3DGS methods require tracked 3D vehicle bounding boxes to decompose the static and dynamic elements for effective reconstruction, limiting their applications for in-the-wild scenarios. To facilitate efficient 3D scene reconstruction without costly annotations, we propose a self-supervised street Gaussian (S3Gaussian) method to decompose dynamic and static elements from 4D consistency. We represent each scene with 3D Gaussians to preserve the explicitness and further accompany them with a spatial-temporal field network to compactly model the 4D dynamics. We conduct extensive experiments on the challenging Waymo-Open dataset to evaluate the effectiveness of our method. Our S3Gaussian demonstrates the ability to decompose static and dynamic scenes and achieves the best performance without using 3D annotations.
- 
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/cd6040d0-1145-4b68-a204-5eb96a13fc71)
 
-
-</details>
-
-[📃 arXiv:2405](https://arxiv.org/pdf/2405.20323) | [⌨️ Code](https://github.com/nnanhuang/S3Gaussian/) | [🌐 Project Page](https://wzzheng.net/S3Gaussian/)
 
 
 #### <summary>A Pixel Is Worth More Than One 3D Gaussians in Single-View 3D Reconstruction
@@ -1782,18 +1813,7 @@ Forecasting future scenarios in dynamic environments is essential for intelligen
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.19745) | [⌨️ Code] | [🌐 Project Page]
 
 
-#### <summary>Structure Gaussian SLAM with Manhattan World Hypothesis
-Authors: Shuhong Liu, Heng Zhou, Liuzhuozheng Li, Yun Liu, Tianchen Deng, Yiming Zhou, Mingrui Li
-<details span>
-<summary><b>Abstract</b></summary>
-Gaussian SLAM systems have made significant advancements in improving the efficiency and fidelity of real-time reconstructions. However, these systems often encounter incomplete reconstructions in complex indoor environments, characterized by substantial holes due to unobserved geometry caused by obstacles or limited view angles. To address this challenge, we present Manhattan Gaussian SLAM (MG-SLAM), an RGB-D system that leverages the Manhattan World hypothesis to enhance geometric accuracy and completeness. By seamlessly integrating fused line segments derived from structured scenes, MG-SLAM ensures robust tracking in textureless indoor areas. Moreover, The extracted lines and planar surface assumption allow strategic interpolation of new Gaussians in regions of missing geometry, enabling efficient scene completion. Extensive experiments conducted on both synthetic and real-world scenes demonstrate that these advancements enable our method to achieve state-of-the-art performance, marking a substantial improvement in the capabilities of Gaussian SLAM systems.
- 
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/703df897-a955-4bac-b95e-dac8e2a3f317)
 
-
-</details>
-
-[📃 arXiv:2405](https://arxiv.org/pdf/2405.20031) | [⌨️ Code] | [🌐 Project Page]
 
 
 
@@ -1956,18 +1976,7 @@ The recent emergence of 3D Gaussian splatting (3DGS) leverages the advantage of 
 
 
 
-#### <summary>Superpoint Gaussian Splatting for Real-Time High-Fidelity Dynamic Scene Reconstruction
-Authors: Diwen Wan, Ruijie Lu, Gang Zeng
-<details span>
-<summary><b>Abstract</b></summary>
-Rendering novel view images in dynamic scenes is a crucial yet challenging task. Current methods mainly utilize NeRF-based methods to represent the static scene and an additional time-variant MLP to model scene deformations, resulting in relatively low rendering quality as well as slow inference speed. To tackle these challenges, we propose a novel framework named Superpoint Gaussian Splatting (SP-GS). Specifically, our framework first employs explicit 3D Gaussians to reconstruct the scene and then clusters Gaussians with similar properties (e.g., rotation, translation, and location) into superpoints. Empowered by these superpoints, our method manages to extend 3D Gaussian splatting to dynamic scenes with only a slight increase in computational expense. Apart from achieving state-of-the-art visual quality and real-time rendering under high resolutions, the superpoint representation provides a stronger manipulation capability. Extensive experiments demonstrate the practicality and effectiveness of our approach on both synthetic and real-world datasets.
 
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/d164cbfc-74bb-4a08-bc3a-d91e52dd6a68)
-
-
-</details>
-
-[📃 arXiv:2406](https://arxiv.org/pdf/2406.03697) | [⌨️ Code] | [🌐 Project Page](https://dnvtmf.github.io/SP_GS.github.io)
 
 
 
