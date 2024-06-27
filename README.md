@@ -2246,12 +2246,73 @@ The 3D Gaussian Splatting technique has significantly advanced the construction 
 
 
 
-## Others, not Gaussian
+## Not Gaussian
 
 
 
+### NVS
 
 
+#### <summary>FouriScale: A Frequency Perspective on Training-Free High-Resolution Image Synthesis
+Authors: Linjiang Huang, Rongyao Fang, Aiping Zhang, Guanglu Song, Si Liu, Yu Liu, Hongsheng Li
+<details span>
+<summary><b>Abstract</b></summary>
+In this study, we delve into the generation of high-resolution images from pre-trained diffusion models, addressing persistent challenges, such as repetitive patterns and structural distortions, that emerge when models are applied beyond their trained resolutions. To address this issue, we introduce an innovative, training-free approach FouriScale from the perspective of frequency domain analysis. We replace the original convolutional layers in pre-trained diffusion models by incorporating a dilation technique along with a low-pass operation, intending to achieve structural consistency and scale consistency across resolutions, respectively. Further enhanced by a padding-then-crop strategy, our method can flexibly handle text-to-image generation of various aspect ratios. By using the FouriScale as guidance, our method successfully balances the structural integrity and fidelity of generated images, achieving an astonishing capacity of arbitrary-size, high-resolution, and high-quality generation. With its simplicity and compatibility, our method can provide valuable insights for future explorations into the synthesis of ultra-high-resolution images.
+
+![image](https://github.com/PAU1G3ORGE/AwosomeGaussian/assets/167790336/9286c6c4-2d8d-415b-a784-8ac94212f575)
+
+
+ 
+</details>
+
+[📃 arXiv:2403](https://arxiv.org/pdf/2403.12963.pdf) | [⌨️ Code](https://github.com/LeonHLJ/FouriScale) | [🌐 Project Page]
+
+
+#### <summary>XScale-NVS: Cross-Scale Novel View Synthesis with Hash Featurized Manifold
+Authors: Guangyu Wang, Jinzhi Zhang, Fan Wang, Ruqi Huang, Lu Fang
+<details span>
+<summary><b>Abstract</b></summary>
+We propose XScale-NVS for high-fidelity cross-scale novel view synthesis of real-world large-scale scenes. Existing representations based on explicit surface suffer from discretization resolution or UV distortion, while implicit volumetric representations lack scalability for large scenes due to the dispersed weight distribution and surface ambiguity. In light of the above challenges, we introduce hash featurized manifold, a novel hash-based featurization coupled with a deferred neural rendering framework. This approach fully unlocks the expressivity of the representation by explicitly concentrating the hash entries on the 2D manifold, thus effectively representing highly detailed contents independent of the discretization resolution. We also introduce a novel dataset, namely GigaNVS, to benchmark cross-scale, high-resolution novel view synthesis of realworld large-scale scenes. Our method significantly outperforms competing baselines on various real-world scenes, yielding an average LPIPS that is 40% lower than prior state-of-the-art on the challenging GigaNVS benchmark.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/470fcbba-6f21-42d1-a4b4-599df025e624)
+
+</details>
+
+[📃 arXiv:2403](https://arxiv.org/pdf/2403.19517) | [⌨️ Code](https://github.com/THU-luvision/XScale-NVS) | [🌐 Project Page](https://xscalenvs.github.io/)
+
+
+
+#### <summary>NVS-Solver: Video Diffusion Model as Zero-Shot Novel View Synthesizer
+Authors: Meng You, Zhiyu Zhu, Hui Liu, Junhui Hou
+<details span>
+<summary><b>Abstract</b></summary>
+By harnessing the potent generative capabilities of pre-trained large video diffusion models, we propose NVS-Solver, a new novel view synthesis (NVS) paradigm that operates \textit{without} the need for training. NVS-Solver adaptively modulates the diffusion sampling process with the given views to enable the creation of remarkable visual experiences from single or multiple views of static scenes or monocular videos of dynamic scenes. Specifically, built upon our theoretical modeling, we iteratively modulate the score function with the given scene priors represented with warped input views to control the video diffusion process. Moreover, by theoretically exploring the boundary of the estimation error, we achieve the modulation in an adaptive fashion according to the view pose and the number of diffusion steps. Extensive evaluations on both static and dynamic scenes substantiate the significant superiority of our NVS-Solver over state-of-the-art methods both quantitatively and qualitatively.
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.15364) | [⌨️ Code](https://github.com/ZHU-Zhiyu/NVS_Solver) | [🌐 Project Page]
+
+
+
+#### <summary>MultiDiff: Consistent Novel View Synthesis from a Single Image
+Authors: Norman Müller, Katja Schwarz, Barbara Roessle, Lorenzo Porzi, Samuel Rota Bulò, Matthias Nießner, Peter Kontschieder
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce MultiDiff, a novel approach for consistent novel view synthesis of scenes from a single RGB image. The task of synthesizing novel views from a single reference image is highly ill-posed by nature, as there exist multiple, plausible explanations for unobserved areas. To address this issue, we incorporate strong priors in form of monocular depth predictors and video-diffusion models. Monocular depth enables us to condition our model on warped reference images for the target views, increasing geometric stability. The video-diffusion prior provides a strong proxy for 3D scenes, allowing the model to learn continuous and pixel-accurate correspondences across generated images. In contrast to approaches relying on autoregressive image generation that are prone to drifts and error accumulation, MultiDiff jointly synthesizes a sequence of frames yielding high-quality and multi-view consistent results -- even for long-term scene generation with large camera movements, while reducing inference time by an order of magnitude. For additional consistency and image quality improvements, we introduce a novel, structured noise distribution. Our experimental results demonstrate that MultiDiff outperforms state-of-the-art methods on the challenging, real-world datasets RealEstate10K and ScanNet. Finally, our model naturally supports multi-view consistent editing without the need for further tuning.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/ba69a9b1-29fe-41b6-a92d-cec31209b0c3)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.18524) | [⌨️ Code] | [🌐 Project Page](https://sirwyver.github.io/MultiDiff)
+
+
+<br>
+<br>
+
+
+### Others
 
 
 #### <summary>BakedSDF: Meshing Neural SDFs for Real-Time View Synthesis
@@ -2339,32 +2400,6 @@ While surface-based view synthesis algorithms are appealing due to their low com
 
 
 
-#### <summary>FouriScale: A Frequency Perspective on Training-Free High-Resolution Image Synthesis
-Authors: Linjiang Huang, Rongyao Fang, Aiping Zhang, Guanglu Song, Si Liu, Yu Liu, Hongsheng Li
-<details span>
-<summary><b>Abstract</b></summary>
-In this study, we delve into the generation of high-resolution images from pre-trained diffusion models, addressing persistent challenges, such as repetitive patterns and structural distortions, that emerge when models are applied beyond their trained resolutions. To address this issue, we introduce an innovative, training-free approach FouriScale from the perspective of frequency domain analysis. We replace the original convolutional layers in pre-trained diffusion models by incorporating a dilation technique along with a low-pass operation, intending to achieve structural consistency and scale consistency across resolutions, respectively. Further enhanced by a padding-then-crop strategy, our method can flexibly handle text-to-image generation of various aspect ratios. By using the FouriScale as guidance, our method successfully balances the structural integrity and fidelity of generated images, achieving an astonishing capacity of arbitrary-size, high-resolution, and high-quality generation. With its simplicity and compatibility, our method can provide valuable insights for future explorations into the synthesis of ultra-high-resolution images.
-
-![image](https://github.com/PAU1G3ORGE/AwosomeGaussian/assets/167790336/9286c6c4-2d8d-415b-a784-8ac94212f575)
-
-
- 
-</details>
-
-[📃 arXiv:2403](https://arxiv.org/pdf/2403.12963.pdf) | [⌨️ Code](https://github.com/LeonHLJ/FouriScale) | [🌐 Project Page]
-
-
-#### <summary>XScale-NVS: Cross-Scale Novel View Synthesis with Hash Featurized Manifold
-Authors: Guangyu Wang, Jinzhi Zhang, Fan Wang, Ruqi Huang, Lu Fang
-<details span>
-<summary><b>Abstract</b></summary>
-We propose XScale-NVS for high-fidelity cross-scale novel view synthesis of real-world large-scale scenes. Existing representations based on explicit surface suffer from discretization resolution or UV distortion, while implicit volumetric representations lack scalability for large scenes due to the dispersed weight distribution and surface ambiguity. In light of the above challenges, we introduce hash featurized manifold, a novel hash-based featurization coupled with a deferred neural rendering framework. This approach fully unlocks the expressivity of the representation by explicitly concentrating the hash entries on the 2D manifold, thus effectively representing highly detailed contents independent of the discretization resolution. We also introduce a novel dataset, namely GigaNVS, to benchmark cross-scale, high-resolution novel view synthesis of realworld large-scale scenes. Our method significantly outperforms competing baselines on various real-world scenes, yielding an average LPIPS that is 40% lower than prior state-of-the-art on the challenging GigaNVS benchmark.
-
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/470fcbba-6f21-42d1-a4b4-599df025e624)
-
-</details>
-
-[📃 arXiv:2403](https://arxiv.org/pdf/2403.19517) | [⌨️ Code](https://github.com/THU-luvision/XScale-NVS) | [🌐 Project Page](https://xscalenvs.github.io/)
 
 
 #### <summary>GeoWizard: Unleashing the Diffusion Priors for 3D Geometry Estimation from a Single Image
@@ -3471,33 +3506,6 @@ Novel view synthesis is an important problem with many applications, including A
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.17345) | [⌨️ Code] | [🌐 Project Page]
 
 
-
-## Diffusion for NVS
-
-#### <summary>NVS-Solver: Video Diffusion Model as Zero-Shot Novel View Synthesizer
-Authors: Meng You, Zhiyu Zhu, Hui Liu, Junhui Hou
-<details span>
-<summary><b>Abstract</b></summary>
-By harnessing the potent generative capabilities of pre-trained large video diffusion models, we propose NVS-Solver, a new novel view synthesis (NVS) paradigm that operates \textit{without} the need for training. NVS-Solver adaptively modulates the diffusion sampling process with the given views to enable the creation of remarkable visual experiences from single or multiple views of static scenes or monocular videos of dynamic scenes. Specifically, built upon our theoretical modeling, we iteratively modulate the score function with the given scene priors represented with warped input views to control the video diffusion process. Moreover, by theoretically exploring the boundary of the estimation error, we achieve the modulation in an adaptive fashion according to the view pose and the number of diffusion steps. Extensive evaluations on both static and dynamic scenes substantiate the significant superiority of our NVS-Solver over state-of-the-art methods both quantitatively and qualitatively.
-
-</details>
-
-[📃 arXiv:2405](https://arxiv.org/pdf/2405.15364) | [⌨️ Code](https://github.com/ZHU-Zhiyu/NVS_Solver) | [🌐 Project Page]
-
-
-
-#### <summary>MultiDiff: Consistent Novel View Synthesis from a Single Image
-Authors: Norman Müller, Katja Schwarz, Barbara Roessle, Lorenzo Porzi, Samuel Rota Bulò, Matthias Nießner, Peter Kontschieder
-<details span>
-<summary><b>Abstract</b></summary>
-We introduce MultiDiff, a novel approach for consistent novel view synthesis of scenes from a single RGB image. The task of synthesizing novel views from a single reference image is highly ill-posed by nature, as there exist multiple, plausible explanations for unobserved areas. To address this issue, we incorporate strong priors in form of monocular depth predictors and video-diffusion models. Monocular depth enables us to condition our model on warped reference images for the target views, increasing geometric stability. The video-diffusion prior provides a strong proxy for 3D scenes, allowing the model to learn continuous and pixel-accurate correspondences across generated images. In contrast to approaches relying on autoregressive image generation that are prone to drifts and error accumulation, MultiDiff jointly synthesizes a sequence of frames yielding high-quality and multi-view consistent results -- even for long-term scene generation with large camera movements, while reducing inference time by an order of magnitude. For additional consistency and image quality improvements, we introduce a novel, structured noise distribution. Our experimental results demonstrate that MultiDiff outperforms state-of-the-art methods on the challenging, real-world datasets RealEstate10K and ScanNet. Finally, our model naturally supports multi-view consistent editing without the need for further tuning.
-
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/ba69a9b1-29fe-41b6-a92d-cec31209b0c3)
-
-
-</details>
-
-[📃 arXiv:2406](https://arxiv.org/pdf/2406.18524) | [⌨️ Code] | [🌐 Project Page](https://sirwyver.github.io/MultiDiff)
 
 
 
