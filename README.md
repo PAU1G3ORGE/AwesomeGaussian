@@ -3480,6 +3480,21 @@ Novel view synthesis is an important problem with many applications, including A
 
 
 
+#### <summary>MultiDiff: Consistent Novel View Synthesis from a Single Image
+Authors: Norman Müller, Katja Schwarz, Barbara Roessle, Lorenzo Porzi, Samuel Rota Bulò, Matthias Nießner, Peter Kontschieder
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce MultiDiff, a novel approach for consistent novel view synthesis of scenes from a single RGB image. The task of synthesizing novel views from a single reference image is highly ill-posed by nature, as there exist multiple, plausible explanations for unobserved areas. To address this issue, we incorporate strong priors in form of monocular depth predictors and video-diffusion models. Monocular depth enables us to condition our model on warped reference images for the target views, increasing geometric stability. The video-diffusion prior provides a strong proxy for 3D scenes, allowing the model to learn continuous and pixel-accurate correspondences across generated images. In contrast to approaches relying on autoregressive image generation that are prone to drifts and error accumulation, MultiDiff jointly synthesizes a sequence of frames yielding high-quality and multi-view consistent results -- even for long-term scene generation with large camera movements, while reducing inference time by an order of magnitude. For additional consistency and image quality improvements, we introduce a novel, structured noise distribution. Our experimental results demonstrate that MultiDiff outperforms state-of-the-art methods on the challenging, real-world datasets RealEstate10K and ScanNet. Finally, our model naturally supports multi-view consistent editing without the need for further tuning.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/ba69a9b1-29fe-41b6-a92d-cec31209b0c3)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.18524) | [⌨️ Code] | [🌐 Project Page](https://sirwyver.github.io/MultiDiff)
+
+
+
 #### <summary>
 Authors: 
 <details span>
