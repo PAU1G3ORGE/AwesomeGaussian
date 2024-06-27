@@ -854,6 +854,22 @@ In this work, we explore the possibility of training high-parameter 3D Gaussian 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.11836) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>On Scaling Up 3D Gaussian Splatting Training
+
+Authors: Hexu Zhao, Haoyang Weng, Daohan Lu, Ang Li, Jinyang Li, Aurojit Panda, Saining Xie
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) is increasingly popular for 3D reconstruction due to its superior visual quality and rendering speed. However, 3DGS training currently occurs on a single GPU, limiting its ability to handle high-resolution and large-scale 3D reconstruction tasks due to memory constraints. We introduce Grendel, a distributed system designed to partition 3DGS parameters and parallelize computation across multiple GPUs. As each Gaussian affects a small, dynamic subset of rendered pixels, Grendel employs sparse all-to-all communication to transfer the necessary Gaussians to pixel partitions and performs dynamic load balancing. Unlike existing 3DGS systems that train using one camera view image at a time, Grendel supports batched training with multiple views. We explore various optimization hyperparameter scaling strategies and find that a simple sqrt(batch size) scaling rule is highly effective. Evaluations using large-scale, high-resolution scenes show that Grendel enhances rendering quality by scaling up 3DGS parameters across multiple GPUs. On the Rubble dataset, we achieve a test PSNR of 27.28 by distributing 40.4 million Gaussians across 16 GPUs, compared to a PSNR of 26.28 using 11.2 million Gaussians on a single GPU.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/1cfd6eaf-73ef-4beb-9d75-b1d3d7845460)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.18533) | [⌨️ Code](https://github.com/nyu-systems/Grendel-GS) | [🌐 Project Page](https://daohanlu.github.io/scaling-up-3dgs/)
+
+
+
 <br>
 <br>
 
@@ -2194,6 +2210,32 @@ Authors: Panagiotis Papantonakis, Georgios Kopanas, Bernhard Kerbl, Alexandre La
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.17074) | [⌨️ Code] | [🌐 Project Page]
 
+
+
+#### <summary>Trimming the Fat: Efficient Compression of 3D Gaussian Splats through Pruning
+Authors: Muhammad Salman Ali, Maryam Qamar, Sung-Ho Bae, Enzo Tartaglione
+<details span>
+<summary><b>Abstract</b></summary>
+In recent times, the utilization of 3D models has gained traction, owing to the capacity for end-to-end training initially offered by Neural Radiance Fields and more recently by 3D Gaussian Splatting (3DGS) models. The latter holds a significant advantage by inherently easing rapid convergence during training and offering extensive editability. However, despite rapid advancements, the literature still lives in its infancy regarding the scalability of these models. In this study, we take some initial steps in addressing this gap, showing an approach that enables both the memory and computational scalability of such models. Specifically, we propose "Trimming the fat", a post-hoc gradient-informed iterative pruning technique to eliminate redundant information encoded in the model. Our experimental findings on widely acknowledged benchmarks attest to the effectiveness of our approach, revealing that up to 75% of the Gaussians can be removed while maintaining or even improving upon baseline performance. Our approach achieves around 50× compression while preserving performance similar to the baseline model, and is able to speed-up computation up to 600~FPS.
+ 
+ 
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.18214) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>GS-Octree: Octree-based 3D Gaussian Splatting for Robust Object-level 3D Reconstruction Under Strong Lighting
+Authors: Jiaze Li, Zhengyu Wen, Luo Zhang, Jiangbei Hu, Fei Hou, Zhebin Zhang, Ying He
+<details span>
+<summary><b>Abstract</b></summary>
+The 3D Gaussian Splatting technique has significantly advanced the construction of radiance fields from multi-view images, enabling real-time rendering. While point-based rasterization effectively reduces computational demands for rendering, it often struggles to accurately reconstruct the geometry of the target object, especially under strong lighting. To address this challenge, we introduce a novel approach that combines octree-based implicit surface representations with Gaussian splatting. Our method consists of four stages. Initially, it reconstructs a signed distance field (SDF) and a radiance field through volume rendering, encoding them in a low-resolution octree. The initial SDF represents the coarse geometry of the target object. Subsequently, it introduces 3D Gaussians as additional degrees of freedom, which are guided by the SDF. In the third stage, the optimized Gaussians further improve the accuracy of the SDF, allowing it to recover finer geometric details compared to the initial SDF obtained in the first stage. Finally, it adopts the refined SDF to further optimize the 3D Gaussians via splatting, eliminating those that contribute little to visual appearance. Experimental results show that our method, which leverages the distribution of 3D Gaussians with SDFs, reconstructs more accurate geometry, particularly in images with specular highlights caused by strong lighting.
+
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.18199) | [⌨️ Code] | [🌐 Project Page]
 
 
 <br>
