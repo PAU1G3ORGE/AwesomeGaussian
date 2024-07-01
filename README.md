@@ -353,6 +353,18 @@ Authors: Junha Hyung, Susung Hong, Sungwon Hwang, Jaeseong Lee, Jaegul Choo, Jin
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.11672) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>GS-Octree: Octree-based 3D Gaussian Splatting for Robust Object-level 3D Reconstruction Under Strong Lighting
+Authors: Jiaze Li, Zhengyu Wen, Luo Zhang, Jiangbei Hu, Fei Hou, Zhebin Zhang, Ying He
+<details span>
+<summary><b>Abstract</b></summary>
+The 3D Gaussian Splatting technique has significantly advanced the construction of radiance fields from multi-view images, enabling real-time rendering. While point-based rasterization effectively reduces computational demands for rendering, it often struggles to accurately reconstruct the geometry of the target object, especially under strong lighting. To address this challenge, we introduce a novel approach that combines octree-based implicit surface representations with Gaussian splatting. Our method consists of four stages. Initially, it reconstructs a signed distance field (SDF) and a radiance field through volume rendering, encoding them in a low-resolution octree. The initial SDF represents the coarse geometry of the target object. Subsequently, it introduces 3D Gaussians as additional degrees of freedom, which are guided by the SDF. In the third stage, the optimized Gaussians further improve the accuracy of the SDF, allowing it to recover finer geometric details compared to the initial SDF obtained in the first stage. Finally, it adopts the refined SDF to further optimize the 3D Gaussians via splatting, eliminating those that contribute little to visual appearance. Experimental results show that our method, which leverages the distribution of 3D Gaussians with SDFs, reconstructs more accurate geometry, particularly in images with specular highlights caused by strong lighting.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/5359fe1c-4052-4477-8279-62b67cd01002)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.18199) | [⌨️ Code] | [🌐 Project Page]
 
 
 
@@ -2258,18 +2270,39 @@ In recent times, the utilization of 3D models has gained traction, owing to the 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.18214) | [⌨️ Code] | [🌐 Project Page]
 
 
-#### <summary>GS-Octree: Octree-based 3D Gaussian Splatting for Robust Object-level 3D Reconstruction Under Strong Lighting
-Authors: Jiaze Li, Zhengyu Wen, Luo Zhang, Jiangbei Hu, Fei Hou, Zhebin Zhang, Ying He
+
+#### <summary>SpotlessSplats: Ignoring Distractors in 3D Gaussian Splatting
+Authors: Muhammad Salman Ali, Maryam Qamar, Sung-Ho Bae, Enzo Tartaglione
 <details span>
 <summary><b>Abstract</b></summary>
-The 3D Gaussian Splatting technique has significantly advanced the construction of radiance fields from multi-view images, enabling real-time rendering. While point-based rasterization effectively reduces computational demands for rendering, it often struggles to accurately reconstruct the geometry of the target object, especially under strong lighting. To address this challenge, we introduce a novel approach that combines octree-based implicit surface representations with Gaussian splatting. Our method consists of four stages. Initially, it reconstructs a signed distance field (SDF) and a radiance field through volume rendering, encoding them in a low-resolution octree. The initial SDF represents the coarse geometry of the target object. Subsequently, it introduces 3D Gaussians as additional degrees of freedom, which are guided by the SDF. In the third stage, the optimized Gaussians further improve the accuracy of the SDF, allowing it to recover finer geometric details compared to the initial SDF obtained in the first stage. Finally, it adopts the refined SDF to further optimize the 3D Gaussians via splatting, eliminating those that contribute little to visual appearance. Experimental results show that our method, which leverages the distribution of 3D Gaussians with SDFs, reconstructs more accurate geometry, particularly in images with specular highlights caused by strong lighting.
-
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/5359fe1c-4052-4477-8279-62b67cd01002)
+3D Gaussian Splatting (3DGS) is a promising technique for 3D reconstruction, offering efficient training and rendering speeds, making it suitable for real-time applications.However, current methods require highly controlled environments (no moving people or wind-blown elements, and consistent lighting) to meet the inter-view consistency assumption of 3DGS. This makes reconstruction of real-world captures problematic. We present SpotlessSplats, an approach that leverages pre-trained and general-purpose features coupled with robust optimization to effectively ignore transient distractors. Our method achieves state-of-the-art reconstruction quality both visually and quantitatively, on casual captures.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/47e61d0c-43ac-4bf4-85bd-045a70f44a2d)
 
 
 </details>
 
-[📃 arXiv:2406](https://arxiv.org/pdf/2406.18199) | [⌨️ Code] | [🌐 Project Page]
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.20055) | [⌨️ Code] | [🌐 Project Page](https://spolesssplats.github.io/)
+
+
+
+#### <summary>EgoGaussian: Dynamic Scene Understanding from Egocentric Video with 3D Gaussian Splatting
+Authors: Daiwei Zhang, Gengyan Li, Jiajie Li, Mickaël Bressieux, Otmar Hilliges, Marc Pollefeys, Luc Van Gool, Xi Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Human activities are inherently complex, and even simple household tasks involve numerous object interactions. To better understand these activities and behaviors, it is crucial to model their dynamic interactions with the environment. The recent availability of affordable head-mounted cameras and egocentric data offers a more accessible and efficient means to understand dynamic human-object interactions in 3D environments. However, most existing methods for human activity modeling either focus on reconstructing 3D models of hand-object or human-scene interactions or on mapping 3D scenes, neglecting dynamic interactions with objects. The few existing solutions often require inputs from multiple sources, including multi-camera setups, depth-sensing cameras, or kinesthetic sensors. To this end, we introduce EgoGaussian, the first method capable of simultaneously reconstructing 3D scenes and dynamically tracking 3D object motion from RGB egocentric input alone. We leverage the uniquely discrete nature of Gaussian Splatting and segment dynamic interactions from the background. Our approach employs a clip-level online learning pipeline that leverages the dynamic nature of human activities, allowing us to reconstruct the temporal evolution of the scene in chronological order and track rigid object motion. Additionally, our method automatically segments object and background Gaussians, providing 3D representations for both static scenes and dynamic objects. EgoGaussian outperforms previous NeRF and Dynamic Gaussian methods in challenging in-the-wild videos and we also qualitatively demonstrate the high quality of the reconstructed models.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/e0ffec64-9f8a-4675-9095-0c76271991fd)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.19811) | [⌨️ Code] | [🌐 Project Page](https://zdwww.github.io/egogs.github.io/)
+
+
+
+
+
 
 
 <br>
@@ -3537,6 +3570,33 @@ Novel view synthesis is an important problem with many applications, including A
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.17345) | [⌨️ Code] | [🌐 Project Page]
 
+
+#### <summary>Segment Anything without Supervision
+Authors: XuDong Wang, Jingfeng Yang, Trevor Darrell
+<details span>
+<summary><b>Abstract</b></summary>
+The Segmentation Anything Model (SAM) requires labor-intensive data labeling. We present Unsupervised SAM (UnSAM) for promptable and automatic whole-image segmentation that does not require human annotations. UnSAM utilizes a divide-and-conquer strategy to "discover" the hierarchical structure of visual scenes. We first leverage top-down clustering methods to partition an unlabeled image into instance/semantic level segments. For all pixels within a segment, a bottom-up clustering method is employed to iteratively merge them into larger groups, thereby forming a hierarchical structure. These unsupervised multi-granular masks are then utilized to supervise model training. Evaluated across seven popular datasets, UnSAM achieves competitive results with the supervised counterpart SAM, and surpasses the previous state-of-the-art in unsupervised segmentation by 11% in terms of AR. Moreover, we show that supervised SAM can also benefit from our self-supervised labels. By integrating our unsupervised pseudo masks into SA-1B's ground-truth masks and training UnSAM with only 1% of SA-1B, a lightly semi-supervised UnSAM can often segment entities overlooked by supervised SAM, exceeding SAM's AR by over 6.7% and AP by 3.9% on SA-1B.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/95b95842-16a1-4d1f-b65c-e69375553e7c)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.20081) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>A Survey on Deep Clustering: From the Prior Perspective
+Authors: Yiding Lu, Haobin Li, Yunfan Li, Yijie Lin, Xi Peng
+<details span>
+<summary><b>Abstract</b></summary>
+Facilitated by the powerful feature extraction ability of neural networks, deep clustering has achieved great success in analyzing high-dimensional and complex real-world data. The performance of deep clustering methods is affected by various factors such as network structures and learning objectives. However, as pointed out in this survey, the essence of deep clustering lies in the incorporation and utilization of prior knowledge, which is largely ignored by existing works. From pioneering deep clustering methods based on data structure assumptions to recent contrastive clustering methods based on data augmentation invariances, the development of deep clustering intrinsically corresponds to the evolution of prior knowledge. In this survey, we provide a comprehensive review of deep clustering methods by categorizing them into six types of prior knowledge. We find that in general the prior innovation follows two trends, namely, i) from mining to constructing, and ii) from internal to external. Besides, we provide a benchmark on five widely-used datasets and analyze the performance of methods with diverse priors. By providing a novel prior knowledge perspective, we hope this survey could provide some novel insights and inspire future research in the deep clustering community.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/9b2b2fec-3153-49a9-8925-fad6cace67b7)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.19602) | [⌨️ Code] | [🌐 Project Page]
 
 
 
