@@ -1130,6 +1130,22 @@ There has recently been great interest in neural rendering methods. Some approac
 [📃 arXiv:2109](https://arxiv.org/pdf/2109.02369) | [⌨️ Code](https://github.com/daipengwa/Neural-Point-Cloud-Rendering-via-Multi-Plane-Projection) | [🌐 Project Page](https://daipengwa.github.io/NeuralPointCloudRendering_ProjectPage/)
 
 
+
+#### <summary>GES: Generalized Exponential Splatting for Efficient Radiance Field Rendering
+
+Authors: Abdullah Hamdi, Luke Melas-Kyriazi, Jinjie Mai, Guocheng Qian, Ruoshi Liu, Carl Vondrick, Bernard Ghanem, Andrea Vedaldi
+<details span>
+<summary><b>Abstract</b></summary>
+Advancements in 3D Gaussian Splatting have significantly accelerated 3D reconstruction and generation. However, it may require a large number of Gaussians, which creates a substantial memory footprint. This paper introduces GES (Generalized Exponential Splatting), a novel representation that employs Generalized Exponential Function (GEF) to model 3D scenes, requiring far fewer particles to represent a scene and thus significantly outperforming Gaussian Splatting methods in efficiency with a plug-and-play replacement ability for Gaussian-based utilities. GES is validated theoretically and empirically in both principled 1D setup and realistic 3D scenes. It is shown to represent signals with sharp edges more accurately, which are typically challenging for Gaussians due to their inherent low-pass characteristics. Our empirical analysis demonstrates that GEF outperforms Gaussians in fitting natural-occurring signals (e.g. squares, triangles, and parabolic signals), thereby reducing the need for extensive splitting operations that increase the memory footprint of Gaussian Splatting. With the aid of a frequency-modulated loss, GES achieves competitive performance in novel-view synthesis benchmarks while requiring less than half the memory storage of Gaussian Splatting and increasing the rendering speed by up to 39%.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/518d0fc8-db05-408f-b1c4-27d444b1f34d)
+
+
+</details>
+
+[📃 arXiv:2302](https://arxiv.org/pdf/2402.10128) | [⌨️ Code](https://github.com/ajhamdi/ges-splatting) | [🌐 Project Page](https://abdullahamdi.com/ges/)
+
+
 #### <summary>SurfelNeRF: Neural Surfel Radiance Fields for Online Photorealistic Reconstruction of Indoor Scenes
 
 Authors: Yiming Gao, Yan-Pei Cao, Ying Shan
