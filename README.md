@@ -2421,6 +2421,20 @@ By harnessing the potent generative capabilities of pre-trained large video diff
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.15364) | [⌨️ Code](https://github.com/ZHU-Zhiyu/NVS_Solver) | [🌐 Project Page]
 
+#### <summary>Generative Lifting of Multiview to 3D from Unknown Pose: Wrapping NeRF inside Diffusion
+Authors: Xin Yuan, Rana Hanocka, Michael Maire
+<details span>
+<summary><b>Abstract</b></summary>
+We cast multiview reconstruction from unknown pose as a generative modeling problem. From a collection of unannotated 2D images of a scene, our approach simultaneously learns both a network to predict camera pose from 2D image input, as well as the parameters of a Neural Radiance Field (NeRF) for the 3D scene. To drive learning, we wrap both the pose prediction network and NeRF inside a Denoising Diffusion Probabilistic Model (DDPM) and train the system via the standard denoising objective. Our framework requires the system accomplish the task of denoising an input 2D image by predicting its pose and rendering the NeRF from that pose. Learning to denoise thus forces the system to concurrently learn the underlying 3D NeRF representation and a mapping from images to camera extrinsic parameters. To facilitate the latter, we design a custom network architecture to represent pose as a distribution, granting implicit capacity for discovering view correspondences when trained end-to-end for denoising alone. This technique allows our system to successfully build NeRFs, without pose knowledge, for challenging scenes where competing methods fail. At the conclusion of training, our learned NeRF can be extracted and used as a 3D scene model; our full system can be used to sample novel camera poses and generate novel-view images.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/dff892ae-98e8-456b-b9ea-554d05c1be3e)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.06972) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 
 #### <summary>MultiDiff: Consistent Novel View Synthesis from a Single Image
@@ -2435,6 +2449,36 @@ We introduce MultiDiff, a novel approach for consistent novel view synthesis of 
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.18524) | [⌨️ Code] | [🌐 Project Page](https://sirwyver.github.io/MultiDiff)
+
+
+
+#### <summary>DiffusioNeRF: Regularizing Neural Radiance Fields with Denoising Diffusion Models
+Authors: Jamie Wynn, Daniyar Turmukhambetov
+<details span>
+<summary><b>Abstract</b></summary>
+Under good conditions, Neural Radiance Fields (NeRFs) have shown impressive results on novel view synthesis tasks. NeRFs learn a scene's color and density fields by minimizing the photometric discrepancy between training views and differentiable renderings of the scene. Once trained from a sufficient set of views, NeRFs can generate novel views from arbitrary camera positions. However, the scene geometry and color fields are severely under-constrained, which can lead to artifacts, especially when trained with few input views.
+To alleviate this problem we learn a prior over scene geometry and color, using a denoising diffusion model (DDM). Our DDM is trained on RGBD patches of the synthetic Hypersim dataset and can be used to predict the gradient of the logarithm of a joint probability distribution of color and depth patches. We show that, these gradients of logarithms of RGBD patch priors serve to regularize geometry and color of a scene. During NeRF training, random RGBD patches are rendered and the estimated gradient of the log-likelihood is backpropagated to the color and density fields. Evaluations on LLFF, the most relevant dataset, show that our learned prior achieves improved quality in the reconstructed geometry and improved generalization to novel views. Evaluations on DTU show improved reconstruction quality among NeRF methods.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/b6b3c6c4-7fef-4ea5-842c-d23199306985)
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2302.12231) | [⌨️ Code](https://www.github.com/nianticlabs/diffusionerf) | [🌐 Project Page]
+
+
+#### <summary>ExtraNeRF: Visibility-Aware View Extrapolation of Neural Radiance Fields with Diffusion Models
+Authors: Meng-Li Shih, Wei-Chiu Ma, Lorenzo Boyice, Aleksander Holynski, Forrester Cole, Brian L. Curless, Janne Kontkanen
+<details span>
+<summary><b>Abstract</b></summary>
+We propose ExtraNeRF, a novel method for extrapolating the range of views handled by a Neural Radiance Field (NeRF). Our main idea is to leverage NeRFs to model scene-specific, fine-grained details, while capitalizing on diffusion models to extrapolate beyond our observed data. A key ingredient is to track visibility to determine what portions of the scene have not been observed, and focus on reconstructing those regions consistently with diffusion models. Our primary contributions include a visibility-aware diffusion-based inpainting module that is fine-tuned on the input imagery, yielding an initial NeRF with moderate quality (often blurry) inpainted regions, followed by a second diffusion model trained on the input imagery to consistently enhance, notably sharpen, the inpainted imagery from the first pass. We demonstrate high-quality results, extrapolating beyond a small number of (typically six or fewer) input views, effectively outpainting the NeRF as well as inpainting newly disoccluded regions inside the original viewing volume. We compare with related work both quantitatively and qualitatively and show significant gains over prior art.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/48598b65-bca0-43f5-a179-905cab25cf9d)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.06133) | [⌨️ Code] | [🌐 Project Page](https://shihmengli.github.io/extranerf-website)
+
 
 
 <br>
@@ -3230,33 +3274,6 @@ This paper addresses the challenge of reconstructing surfaces from sparse view i
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.04301) | [⌨️ Code] | [🌐 Project Page]
 
 
-#### <summary>DiffusioNeRF: Regularizing Neural Radiance Fields with Denoising Diffusion Models
-Authors: Jamie Wynn, Daniyar Turmukhambetov
-<details span>
-<summary><b>Abstract</b></summary>
-Under good conditions, Neural Radiance Fields (NeRFs) have shown impressive results on novel view synthesis tasks. NeRFs learn a scene's color and density fields by minimizing the photometric discrepancy between training views and differentiable renderings of the scene. Once trained from a sufficient set of views, NeRFs can generate novel views from arbitrary camera positions. However, the scene geometry and color fields are severely under-constrained, which can lead to artifacts, especially when trained with few input views.
-To alleviate this problem we learn a prior over scene geometry and color, using a denoising diffusion model (DDM). Our DDM is trained on RGBD patches of the synthetic Hypersim dataset and can be used to predict the gradient of the logarithm of a joint probability distribution of color and depth patches. We show that, these gradients of logarithms of RGBD patch priors serve to regularize geometry and color of a scene. During NeRF training, random RGBD patches are rendered and the estimated gradient of the log-likelihood is backpropagated to the color and density fields. Evaluations on LLFF, the most relevant dataset, show that our learned prior achieves improved quality in the reconstructed geometry and improved generalization to novel views. Evaluations on DTU show improved reconstruction quality among NeRF methods.
-
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/b6b3c6c4-7fef-4ea5-842c-d23199306985)
-
-</details>
-
-[📃 arXiv:2406](https://arxiv.org/pdf/2302.12231) | [⌨️ Code](https://www.github.com/nianticlabs/diffusionerf) | [🌐 Project Page]
-
-
-#### <summary>ExtraNeRF: Visibility-Aware View Extrapolation of Neural Radiance Fields with Diffusion Models
-Authors: Meng-Li Shih, Wei-Chiu Ma, Lorenzo Boyice, Aleksander Holynski, Forrester Cole, Brian L. Curless, Janne Kontkanen
-<details span>
-<summary><b>Abstract</b></summary>
-We propose ExtraNeRF, a novel method for extrapolating the range of views handled by a Neural Radiance Field (NeRF). Our main idea is to leverage NeRFs to model scene-specific, fine-grained details, while capitalizing on diffusion models to extrapolate beyond our observed data. A key ingredient is to track visibility to determine what portions of the scene have not been observed, and focus on reconstructing those regions consistently with diffusion models. Our primary contributions include a visibility-aware diffusion-based inpainting module that is fine-tuned on the input imagery, yielding an initial NeRF with moderate quality (often blurry) inpainted regions, followed by a second diffusion model trained on the input imagery to consistently enhance, notably sharpen, the inpainted imagery from the first pass. We demonstrate high-quality results, extrapolating beyond a small number of (typically six or fewer) input views, effectively outpainting the NeRF as well as inpainting newly disoccluded regions inside the original viewing volume. We compare with related work both quantitatively and qualitatively and show significant gains over prior art.
-
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/48598b65-bca0-43f5-a179-905cab25cf9d)
-
-
-</details>
-
-[📃 arXiv:2406](https://arxiv.org/pdf/2406.06133) | [⌨️ Code] | [🌐 Project Page](https://shihmengli.github.io/extranerf-website)
-
 #### <summary>VoxNeuS: Enhancing Voxel-Based Neural Surface Reconstruction via Gradient Interpolation
 Authors: Sidun Liu, Peng Qiao, Zongxin Ye, Wenyu Li, Yong Dou
 <details span>
@@ -3274,18 +3291,7 @@ The experimental results show that VoxNeuS achieves better reconstruction qualit
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.07170) | [⌨️ Code] | [🌐 Project Page]
 
 
-#### <summary>Generative Lifting of Multiview to 3D from Unknown Pose: Wrapping NeRF inside Diffusion
-Authors: Xin Yuan, Rana Hanocka, Michael Maire
-<details span>
-<summary><b>Abstract</b></summary>
-We cast multiview reconstruction from unknown pose as a generative modeling problem. From a collection of unannotated 2D images of a scene, our approach simultaneously learns both a network to predict camera pose from 2D image input, as well as the parameters of a Neural Radiance Field (NeRF) for the 3D scene. To drive learning, we wrap both the pose prediction network and NeRF inside a Denoising Diffusion Probabilistic Model (DDPM) and train the system via the standard denoising objective. Our framework requires the system accomplish the task of denoising an input 2D image by predicting its pose and rendering the NeRF from that pose. Learning to denoise thus forces the system to concurrently learn the underlying 3D NeRF representation and a mapping from images to camera extrinsic parameters. To facilitate the latter, we design a custom network architecture to represent pose as a distribution, granting implicit capacity for discovering view correspondences when trained end-to-end for denoising alone. This technique allows our system to successfully build NeRFs, without pose knowledge, for challenging scenes where competing methods fail. At the conclusion of training, our learned NeRF can be extracted and used as a 3D scene model; our full system can be used to sample novel camera poses and generate novel-view images.
 
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/dff892ae-98e8-456b-b9ea-554d05c1be3e)
-
-
-</details>
-
-[📃 arXiv:2406](https://arxiv.org/pdf/2406.06972) | [⌨️ Code] | [🌐 Project Page]
 
 
 #### <summary>SPIN: Spacecraft Imagery for Navigation
