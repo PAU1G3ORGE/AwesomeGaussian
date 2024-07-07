@@ -2423,6 +2423,19 @@ We propose XScale-NVS for high-fidelity cross-scale novel view synthesis of real
 
 [📃 arXiv:2403](https://arxiv.org/pdf/2403.19517) | [⌨️ Code](https://github.com/THU-luvision/XScale-NVS) | [🌐 Project Page](https://xscalenvs.github.io/)
 
+#### <summary>Aerial-NeRF: Adaptive Spatial Partitioning and Sampling for Large-Scale Aerial Rendering
+Authors: Xiaohan Zhang, Yukui Qiu, Zhenyu Sun, Qi Liu
+<details span>
+<summary><b>Abstract</b></summary>
+Recent progress in large-scale scene rendering has yielded Neural Radiance Fields (NeRF)-based models with an impressive ability to synthesize scenes across small objects and indoor scenes. Nevertheless, extending this idea to large-scale aerial rendering poses two critical problems. Firstly, a single NeRF cannot render the entire scene with high-precision for complex large-scale aerial datasets since the sampling range along each view ray is insufficient to cover buildings adequately. Secondly, traditional NeRFs are infeasible to train on one GPU to enable interactive fly-throughs for modeling massive images. Instead, existing methods typically separate the whole scene into multiple regions and train a NeRF on each region, which are unaccustomed to different flight trajectories and difficult to achieve fast rendering. To that end, we propose Aerial-NeRF with three innovative modifications for jointly adapting NeRF in large-scale aerial rendering: (1) Designing an adaptive spatial partitioning and selection method based on drones' poses to adapt different flight trajectories; (2) Using similarity of poses instead of (expert) network for rendering speedup to determine which region a new viewpoint belongs to; (3) Developing an adaptive sampling approach for rendering performance improvement to cover the entire buildings at different heights. Extensive experiments have conducted to verify the effectiveness and efficiency of Aerial-NeRF, and new state-of-the-art results have been achieved on two public large-scale aerial datasets and presented SCUTic dataset. Note that our model allows us to perform rendering over 4 times as fast as compared to multiple competitors.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/6bf1d383-7d7d-4395-9ed8-01690ae7065b)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.06214) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 #### <summary>NVS-Solver: Video Diffusion Model as Zero-Shot Novel View Synthesizer
@@ -2434,6 +2447,10 @@ By harnessing the potent generative capabilities of pre-trained large video diff
 </details>
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.15364) | [⌨️ Code](https://github.com/ZHU-Zhiyu/NVS_Solver) | [🌐 Project Page]
+
+
+
+
 
 #### <summary>Generative Lifting of Multiview to 3D from Unknown Pose: Wrapping NeRF inside Diffusion
 Authors: Xin Yuan, Rana Hanocka, Michael Maire
@@ -2845,18 +2862,7 @@ Neural fields (NeRF) have emerged as a promising approach for representing conti
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.05010) | [⌨️ Code] | [🌐 Project Page]
 
 
-#### <summary>Aerial-NeRF: Adaptive Spatial Partitioning and Sampling for Large-Scale Aerial Rendering
-Authors: Xiaohan Zhang, Yukui Qiu, Zhenyu Sun, Qi Liu
-<details span>
-<summary><b>Abstract</b></summary>
-Recent progress in large-scale scene rendering has yielded Neural Radiance Fields (NeRF)-based models with an impressive ability to synthesize scenes across small objects and indoor scenes. Nevertheless, extending this idea to large-scale aerial rendering poses two critical problems. Firstly, a single NeRF cannot render the entire scene with high-precision for complex large-scale aerial datasets since the sampling range along each view ray is insufficient to cover buildings adequately. Secondly, traditional NeRFs are infeasible to train on one GPU to enable interactive fly-throughs for modeling massive images. Instead, existing methods typically separate the whole scene into multiple regions and train a NeRF on each region, which are unaccustomed to different flight trajectories and difficult to achieve fast rendering. To that end, we propose Aerial-NeRF with three innovative modifications for jointly adapting NeRF in large-scale aerial rendering: (1) Designing an adaptive spatial partitioning and selection method based on drones' poses to adapt different flight trajectories; (2) Using similarity of poses instead of (expert) network for rendering speedup to determine which region a new viewpoint belongs to; (3) Developing an adaptive sampling approach for rendering performance improvement to cover the entire buildings at different heights. Extensive experiments have conducted to verify the effectiveness and efficiency of Aerial-NeRF, and new state-of-the-art results have been achieved on two public large-scale aerial datasets and presented SCUTic dataset. Note that our model allows us to perform rendering over 4 times as fast as compared to multiple competitors.
 
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/6bf1d383-7d7d-4395-9ed8-01690ae7065b)
-
-
-</details>
-
-[📃 arXiv:2405](https://arxiv.org/pdf/2405.06214) | [⌨️ Code] | [🌐 Project Page]
 
 #### <summary>MambaOut: Do We Really Need Mamba for Vision?
 Authors: Weihao Yu, Xinchao Wang
