@@ -281,7 +281,7 @@ Authors: Yuqing Zhang, Yuan Liu, Zhiyu Xie, Lei Yang, Zhongyuan Liu, Mengzhou Ya
 
 </details>
 
-[📃 arXiv:2405](https://arxiv.org/pdf/2405.17176) | [⌨️ Code] | [🌐 Project Page]
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.17176) | [⌨️ Code](https://github.com/zzzyuqing/DreamMat) | [🌐 Project Page](https://zzzyuqing.github.io/dreammat.github.io/)
 
 
 
