@@ -2381,6 +2381,20 @@ Real-time 3D reconstruction of surgical scenes plays a vital role in computer-as
 
 ### NVS
 
+#### <summary>DiffusioNeRF: Regularizing Neural Radiance Fields with Denoising Diffusion Models
+Authors: Jamie Wynn, Daniyar Turmukhambetov
+<details span>
+<summary><b>Abstract</b></summary>
+Under good conditions, Neural Radiance Fields (NeRFs) have shown impressive results on novel view synthesis tasks. NeRFs learn a scene's color and density fields by minimizing the photometric discrepancy between training views and differentiable renderings of the scene. Once trained from a sufficient set of views, NeRFs can generate novel views from arbitrary camera positions. However, the scene geometry and color fields are severely under-constrained, which can lead to artifacts, especially when trained with few input views.
+To alleviate this problem we learn a prior over scene geometry and color, using a denoising diffusion model (DDM). Our DDM is trained on RGBD patches of the synthetic Hypersim dataset and can be used to predict the gradient of the logarithm of a joint probability distribution of color and depth patches. We show that, these gradients of logarithms of RGBD patch priors serve to regularize geometry and color of a scene. During NeRF training, random RGBD patches are rendered and the estimated gradient of the log-likelihood is backpropagated to the color and density fields. Evaluations on LLFF, the most relevant dataset, show that our learned prior achieves improved quality in the reconstructed geometry and improved generalization to novel views. Evaluations on DTU show improved reconstruction quality among NeRF methods.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/b6b3c6c4-7fef-4ea5-842c-d23199306985)
+
+</details>
+
+[📃 arXiv:2302](https://arxiv.org/pdf/2302.12231) | [⌨️ Code](https://www.github.com/nianticlabs/diffusionerf) | [🌐 Project Page]
+
+
 
 #### <summary>FouriScale: A Frequency Perspective on Training-Free High-Resolution Image Synthesis
 Authors: Linjiang Huang, Rongyao Fang, Aiping Zhang, Guanglu Song, Si Liu, Yu Liu, Hongsheng Li
@@ -2452,18 +2466,6 @@ We introduce MultiDiff, a novel approach for consistent novel view synthesis of 
 
 
 
-#### <summary>DiffusioNeRF: Regularizing Neural Radiance Fields with Denoising Diffusion Models
-Authors: Jamie Wynn, Daniyar Turmukhambetov
-<details span>
-<summary><b>Abstract</b></summary>
-Under good conditions, Neural Radiance Fields (NeRFs) have shown impressive results on novel view synthesis tasks. NeRFs learn a scene's color and density fields by minimizing the photometric discrepancy between training views and differentiable renderings of the scene. Once trained from a sufficient set of views, NeRFs can generate novel views from arbitrary camera positions. However, the scene geometry and color fields are severely under-constrained, which can lead to artifacts, especially when trained with few input views.
-To alleviate this problem we learn a prior over scene geometry and color, using a denoising diffusion model (DDM). Our DDM is trained on RGBD patches of the synthetic Hypersim dataset and can be used to predict the gradient of the logarithm of a joint probability distribution of color and depth patches. We show that, these gradients of logarithms of RGBD patch priors serve to regularize geometry and color of a scene. During NeRF training, random RGBD patches are rendered and the estimated gradient of the log-likelihood is backpropagated to the color and density fields. Evaluations on LLFF, the most relevant dataset, show that our learned prior achieves improved quality in the reconstructed geometry and improved generalization to novel views. Evaluations on DTU show improved reconstruction quality among NeRF methods.
-
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/b6b3c6c4-7fef-4ea5-842c-d23199306985)
-
-</details>
-
-[📃 arXiv:2406](https://arxiv.org/pdf/2302.12231) | [⌨️ Code](https://www.github.com/nianticlabs/diffusionerf) | [🌐 Project Page]
 
 
 #### <summary>ExtraNeRF: Visibility-Aware View Extrapolation of Neural Radiance Fields with Diffusion Models
