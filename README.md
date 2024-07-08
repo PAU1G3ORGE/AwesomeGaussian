@@ -2367,6 +2367,63 @@ Real-time 3D reconstruction of surgical scenes plays a vital role in computer-as
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.02918) | [⌨️ Code](https://github.com/wrld/Free-SurGS) | [🌐 Project Page]
 
+#### <summary>Gaussian Eigen Models for Human Heads
+Authors: Wojciech Zielonka, Timo Bolkart, Thabo Beeler, Justus Thies
+<details span>
+<summary><b>Abstract</b></summary>
+We present personalized Gaussian Eigen Models (GEMs) for human heads, a novel method that compresses dynamic 3D Gaussians into low-dimensional linear spaces. Our approach is inspired by the seminal work of Blanz and Vetter, where a mesh-based 3D morphable model (3DMM) is constructed from registered meshes. Based on dynamic 3D Gaussians, we create a lower-dimensional representation of primitives that applies to most 3DGS head avatars. Specifically, we propose a universal method to distill the appearance of a mesh-controlled UNet Gaussian avatar using an ensemble of linear eigenbasis. We replace heavy CNN-based architectures with a single linear layer improving speed and enabling a range of real-time downstream applications. To create a particular facial expression, one simply needs to perform a dot product between the eigen coefficients and the distilled basis. This efficient method removes the requirement for an input mesh during testing, enhancing simplicity and speed in expression generation. This process is highly efficient and supports real-time rendering on everyday devices, leveraging the effectiveness of standard Gaussian Splatting. In addition, we demonstrate how the GEM can be controlled using a ResNet-based regression architecture. We show and compare self-reenactment and cross-person reenactment to state-of-the-art 3D avatar methods, demonstrating higher quality and better control. A real-time demo showcases the applicability of the GEM representation.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/0b34bebb-6e58-4356-9f86-bb7cc702311d)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.04545) | [⌨️ Code] | [🌐 Project Page](https://zielon.github.io/gem/)
+
+#### <summary>GSD: View-Guided Gaussian Splatting Diffusion for 3D Reconstruction
+Authors: Yuxuan Mu, Xinxin Zuo, Chuan Guo, Yilin Wang, Juwei Lu, Xiaofeng Wu, Songcen Xu, Peng Dai, Youliang Yan, Li Cheng
+<details span>
+<summary><b>Abstract</b></summary>
+We present GSD, a diffusion model approach based on Gaussian Splatting (GS) representation for 3D object reconstruction from a single view. Prior works suffer from inconsistent 3D geometry or mediocre rendering quality due to improper representations. We take a step towards resolving these shortcomings by utilizing the recent state-of-the-art 3D explicit representation, Gaussian Splatting, and an unconditional diffusion model. This model learns to generate 3D objects represented by sets of GS ellipsoids. With these strong generative 3D priors, though learning unconditionally, the diffusion model is ready for view-guided reconstruction without further model fine-tuning. This is achieved by propagating fine-grained 2D features through the efficient yet flexible splatting function and the guided denoising sampling process. In addition, a 2D diffusion model is further employed to enhance rendering fidelity, and improve reconstructed GS quality by polishing and re-using the rendered images. The final reconstructed objects explicitly come with high-quality 3D structure and texture, and can be efficiently rendered in arbitrary views. Experiments on the challenging real-world CO3D dataset demonstrate the superiority of our approach.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/fa359089-2cc8-48f3-8c5c-25ca5ccb9c9f)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.04237) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+#### <summary>CRiM-GS: Continuous Rigid Motion-Aware Gaussian Splatting from Motion Blur Images
+Authors: Junghe Lee, Donghyeong Kim, Dogyoon Lee, Suhwan Cho, Sangyoun Lee
+<details span>
+<summary><b>Abstract</b></summary>
+Neural radiance fields (NeRFs) have received significant attention due to their high-quality novel view rendering ability, prompting research to address various real-world cases. One critical challenge is the camera motion blur caused by camera movement during exposure time, which prevents accurate 3D scene reconstruction. In this study, we propose continuous rigid motion-aware gaussian splatting (CRiM-GS) to reconstruct accurate 3D scene from blurry images with real-time rendering speed. Considering the actual camera motion blurring process, which consists of complex motion patterns, we predict the continuous movement of the camera based on neural ordinary differential equations (ODEs). Specifically, we leverage rigid body transformations to model the camera motion with proper regularization, preserving the shape and size of the object. Furthermore, we introduce a continuous deformable 3D transformation in the \textit{SE(3)} field to adapt the rigid body transformation to real-world problems by ensuring a higher degree of freedom. By revisiting fundamental camera theory and employing advanced neural network training techniques, we achieve accurate modeling of continuous camera trajectories. We conduct extensive experiments, demonstrating state-of-the-art performance both quantitatively and qualitatively on benchmark datasets.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/58dca935-df48-4ef2-a217-edda4ea97f42)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.03923) | [⌨️ Code](https://github.com/Jho-Yonsei/CRiM-GS) | [🌐 Project Page](https://jho-yonsei.github.io/CRiM-Gaussian/)
+
+
+
+#### <summary>PFGS: High Fidelity Point Cloud Rendering via Feature Splatting
+Authors: Jiaxu Wang, Ziyi Zhang, Junhao He, Renjing Xu
+<details span>
+<summary><b>Abstract</b></summary>
+Rendering high-fidelity images from sparse point clouds is still challenging. Existing learning-based approaches suffer from either hole artifacts, missing details, or expensive computations. In this paper, we propose a novel framework to render high-quality images from sparse points. This method first attempts to bridge the 3D Gaussian Splatting and point cloud rendering, which includes several cascaded modules. We first use a regressor to estimate Gaussian properties in a point-wise manner, the estimated properties are used to rasterize neural feature descriptors into 2D planes which are extracted from a multiscale extractor. The projected feature volume is gradually decoded toward the final prediction via a multiscale and progressive decoder. The whole pipeline experiences a two-stage training and is driven by our well-designed progressive and multiscale reconstruction loss. Experiments on different benchmarks show the superiority of our method in terms of rendering qualities and the necessities of our main components.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/57f2151e-68f1-41cd-96c4-2a0ce8163d70)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.03857) | [⌨️ Code](https://github.com/Mercerai/PFGS) | [🌐 Project Page]
+
+
 
 
 <br>
@@ -2497,6 +2554,20 @@ We propose ExtraNeRF, a novel method for extrapolating the range of views handle
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.06133) | [⌨️ Code] | [🌐 Project Page](https://shihmengli.github.io/extranerf-website)
+
+
+#### <summary>LaRa: Efficient Large-Baseline Radiance Fields
+Authors: Anpei Chen, Haofei Xu, Stefano Esposito, Siyu Tang, Andreas Geiger
+<details span>
+<summary><b>Abstract</b></summary>
+Radiance field methods have achieved photorealistic novel view synthesis and geometry reconstruction. But they are mostly applied in per-scene optimization or small-baseline settings. While several recent works investigate feed-forward reconstruction with large baselines by utilizing transformers, they all operate with a standard global attention mechanism and hence ignore the local nature of 3D reconstruction. We propose a method that unifies local and global reasoning in transformer layers, resulting in improved quality and faster convergence. Our model represents scenes as Gaussian Volumes and combines this with an image encoder and Group Attention Layers for efficient feed-forward reconstruction. Experimental results demonstrate that our model, trained for two days on four GPUs, demonstrates high fidelity in reconstructing 360&deg radiance fields, and robustness to zero-shot and out-of-domain testing.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/844cccd5-3bd5-40c8-bfbb-1fce46817848)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2407.04699) | [⌨️ Code] | [🌐 Project Page](https://apchenstu.github.io/LaRa/)
 
 
 
@@ -3676,6 +3747,18 @@ Facilitated by the powerful feature extraction ability of neural networks, deep 
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.19602) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>SfM on-the-fly: Get better 3D from What You Capture
+Authors: Zhan Zongqian, Yu Yifei, Xia Rui, Gan Wentian, Xie Hong, Perda Giulio, Morelli Luca, Remondino Fabio, Wang Xin
+<details span>
+<summary><b>Abstract</b></summary>
+In the last twenty years, Structure from Motion (SfM) has been a constant research hotspot in the fields of photogrammetry, computer vision, robotics etc., whereas real-time performance is just a recent topic of growing interest. This work builds upon the original on-the-fly SfM (Zhan et al., 2024) and presents an updated version with three new advancements to get better 3D from what you capture: (i) real-time image matching is further boosted by employing the Hierarchical Navigable Small World (HNSW) graphs, thus more true positive overlapping image candidates are faster identified; (ii) a self-adaptive weighting strategy is proposed for robust hierarchical local bundle adjustment to improve the SfM results; (iii) multiple agents are included for supporting collaborative SfM and seamlessly merge multiple 3D reconstructions into a complete 3D scene when commonly registered images appear. Various comprehensive experiments demonstrate that the proposed SfM method (named on-the-fly SfMv2) can generate more complete and robust 3D reconstructions in a high time-efficient way.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/f511b04f-305a-470c-9b0d-1f88622fdf51)
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.03939) | [⌨️ Code](https://github.com/RayShark0605/On_the_fly_SfM) | [🌐 Project Page](https://yifeiyu225.github.io/on-the-flySfMv2.github.io/)
+
 
 
 
@@ -3689,4 +3772,4 @@ Authors:
 
 </details>
 
-[📃 arXiv:2406] | [⌨️ Code] | [🌐 Project Page]
+[📃 arXiv:2407] | [⌨️ Code] | [🌐 Project Page]
