@@ -574,18 +574,6 @@ Recently, 3D Gaussian Splatting (3DGS) has become a promising framework for nove
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.20721) | [⌨️ Code](https://github.com/wyf0912/ContextGS) | [🌐 Project Page]
 
 
-#### <summary>3D-HGS: 3D Half-Gaussian Splatting
-Authors: Haolin Li, Jinyang Liu, Mario Sznaier, Octavia Camps
-<details span>
-<summary><b>Abstract</b></summary>
-Photo-realistic 3D Reconstruction is a fundamental problem in 3D computer vision. This domain has seen considerable advancements owing to the advent of recent neural rendering techniques. These techniques predominantly aim to focus on learning volumetric representations of 3D scenes and refining these representations via loss functions derived from rendering. Among these, 3D Gaussian Splatting (3D-GS) has emerged as a significant method, surpassing Neural Radiance Fields (NeRFs). 3D-GS uses parameterized 3D Gaussians for modeling both spatial locations and color information, combined with a tile-based fast rendering technique. Despite its superior rendering performance and speed, the use of 3D Gaussian kernels has inherent limitations in accurately representing discontinuous functions, notably at edges and corners for shape discontinuities, and across varying textures for color discontinuities. To address this problem, we propose to employ 3D Half-Gaussian (3D-HGS) kernels, which can be used as a plug-and-play kernel. Our experiments demonstrate their capability to improve the performance of current 3D-GS related methods and achieve state-of-the-art rendering performance on various datasets without compromising rendering speed.
-
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/e737cfb0-2afd-4f05-9b6e-73cdcfa86c42)
-
-
-</details>
-
-[📃 arXiv:2406](https://arxiv.org/pdf/2406.02720) | [⌨️ Code] | [🌐 Project Page]
 
 
 
@@ -2055,6 +2043,18 @@ The recent emergence of 3D Gaussian splatting (3DGS) leverages the advantage of 
 
 
 
+#### <summary>3D-HGS: 3D Half-Gaussian Splatting
+Authors: Haolin Li, Jinyang Liu, Mario Sznaier, Octavia Camps
+<details span>
+<summary><b>Abstract</b></summary>
+Photo-realistic 3D Reconstruction is a fundamental problem in 3D computer vision. This domain has seen considerable advancements owing to the advent of recent neural rendering techniques. These techniques predominantly aim to focus on learning volumetric representations of 3D scenes and refining these representations via loss functions derived from rendering. Among these, 3D Gaussian Splatting (3D-GS) has emerged as a significant method, surpassing Neural Radiance Fields (NeRFs). 3D-GS uses parameterized 3D Gaussians for modeling both spatial locations and color information, combined with a tile-based fast rendering technique. Despite its superior rendering performance and speed, the use of 3D Gaussian kernels has inherent limitations in accurately representing discontinuous functions, notably at edges and corners for shape discontinuities, and across varying textures for color discontinuities. To address this problem, we propose to employ 3D Half-Gaussian (3D-HGS) kernels, which can be used as a plug-and-play kernel. Our experiments demonstrate their capability to improve the performance of current 3D-GS related methods and achieve state-of-the-art rendering performance on various datasets without compromising rendering speed.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/e737cfb0-2afd-4f05-9b6e-73cdcfa86c42)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.02720) | [⌨️ Code] | [🌐 Project Page]
 
 
 
@@ -2115,6 +2115,8 @@ Novel view synthesis from raw images provides superior high dynamic range (HDR) 
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.08300) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 
 #### <summary>Physically Embodied Gaussian Splatting: A Realtime Correctable World Model for Robotics
@@ -2312,6 +2314,7 @@ In recent times, the utilization of 3D models has gained traction, owing to the 
 </details>
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.18214) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 
