@@ -1074,6 +1074,22 @@ Authors: Zheng Zhang, Wenbo Hu, Yixing Lao, Tong He, Hengshuang Zhao
 [📃 arXiv:2403](https://arxiv.org/pdf/2403.15530) | [⌨️ Code](https://github.com/zhengzhang01/Pixel-GS) | [🌐 Project Page](https://pixelgs.github.io/)
 
 
+#### <summary>Revising Densification in Gaussian Splatting
+Authors: Samuel Rota Bulò, Lorenzo Porzi, Peter Kontschieder
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper, we address the limitations of Adaptive Density Control (ADC) in 3D Gaussian Splatting (3DGS), a scene representation method achieving high-quality, photorealistic results for novel view synthesis. ADC has been introduced for automatic 3D point primitive management, controlling densification and pruning, however, with certain limitations in the densification logic. Our main contribution is a more principled, pixel-error driven formulation for density control in 3DGS, leveraging an auxiliary, per-pixel error function as the criterion for densification. We further introduce a mechanism to control the total number of primitives generated per scene and correct a bias in the current opacity handling strategy of ADC during cloning operations. Our approach leads to consistent quality improvements across a variety of benchmark scenes, without sacrificing the method's efficiency.
+
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/611d9108-0909-42c3-a946-4045fd8dd072)
+
+ 
+</details>
+
+[📃 arXiv:2404](https://arxiv.org/pdf/2404.06109) | [⌨️ Code] | [🌐 Project Page]
+
+
+
 
 #### <summary>AbsGS: Recovering Fine Details for 3D Gaussian Splatting
 Authors: Zongxin Ye, Wenyu Li, Sidun Liu, Peng Qiao, Yong Dou
