@@ -2442,6 +2442,20 @@ Rendering high-fidelity images from sparse point clouds is still challenging. Ex
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.03857) | [⌨️ Code](https://github.com/Mercerai/PFGS) | [🌐 Project Page]
 
+#### <summary>GaussReg: Fast 3D Registration with Gaussian Splatting
+Authors: Jiahao Chang, Yinglin Xu, Yihao Li, Yuantao Chen, Xiaoguang Han
+<details span>
+<summary><b>Abstract</b></summary>
+Point cloud registration is a fundamental problem for large-scale 3D scene scanning and reconstruction. With the help of deep learning, registration methods have evolved significantly, reaching a nearly-mature stage. As the introduction of Neural Radiance Fields (NeRF), it has become the most popular 3D scene representation as its powerful view synthesis capabilities. Regarding NeRF representation, its registration is also required for large-scale scene reconstruction. However, this topic extremly lacks exploration. This is due to the inherent challenge to model the geometric relationship among two scenes with implicit representations. The existing methods usually convert the implicit representation to explicit representation for further registration. Most recently, Gaussian Splatting (GS) is introduced, employing explicit 3D Gaussian. This method significantly enhances rendering speed while maintaining high rendering quality. Given two scenes with explicit GS representations, in this work, we explore the 3D registration task between them. To this end, we propose GaussReg, a novel coarse-to-fine framework, both fast and accurate. The coarse stage follows existing point cloud registration methods and estimates a rough alignment for point clouds from GS. We further newly present an image-guided fine registration approach, which renders images from GS to provide more detailed geometric information for precise alignment. To support comprehensive evaluation, we carefully build a scene-level dataset called ScanNet-GSReg with 1379 scenes obtained from the ScanNet dataset and collect an in-the-wild dataset called GSReg. Experimental results demonstrate our method achieves state-of-the-art performance on multiple datasets. Our GaussReg is 44 times faster than HLoc (SuperPoint as the feature extractor and SuperGlue as the matcher) with comparable accuracy.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/7dcdb111-d2b3-4869-8685-52aa620fea74)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.05254) | [⌨️ Code] | [🌐 Project Page](https://jiahao620.github.io/gaussreg/)
+
+
 
 
 
@@ -2665,6 +2679,20 @@ We demonstrate the versatility of our new representation by addressing three 3D 
 </details>
 
 [📃 arXiv:2312](https://arxiv.org/pdf/2312.05889) | [⌨️ Code](https://github.com/makezur/super_primitive) | [🌐 Project Page](https://makezur.github.io/SuperPrimitive/)
+
+
+#### <summary>Spacetime Gaussian Feature Splatting for Real-Time Dynamic View Synthesis
+Authors: Zhan Li, Zhang Chen, Zhong Li, Yi Xu
+<details span>
+<summary><b>Abstract</b></summary>
+Novel view synthesis of dynamic scenes has been an intriguing yet challenging problem. Despite recent advancements, simultaneously achieving high-resolution photorealistic results, real-time rendering, and compact storage remains a formidable task. To address these challenges, we propose Spacetime Gaussian Feature Splatting as a novel dynamic scene representation, composed of three pivotal components. First, we formulate expressive Spacetime Gaussians by enhancing 3D Gaussians with temporal opacity and parametric motion/rotation. This enables Spacetime Gaussians to capture static, dynamic, as well as transient content within a scene. Second, we introduce splatted feature rendering, which replaces spherical harmonics with neural features. These features facilitate the modeling of view- and time-dependent appearance while maintaining small size. Third, we leverage the guidance of training error and coarse depth to sample new Gaussians in areas that are challenging to converge with existing pipelines. Experiments on several established real-world datasets demonstrate that our method achieves state-of-the-art rendering quality and speed, while retaining compact storage. At 8K resolution, our lite-version model can render at 60 FPS on an Nvidia RTX 4090 GPU.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/d53c698d-3a4f-429f-a7de-d691472e233a)
+
+ 
+</details>
+
+[📃 arXiv:2312](https://arxiv.org/pdf/2312.16812) | [⌨️ Code](https://github.com/oppo-us-research/SpacetimeGaussians) | [🌐 Project Page](https://oppo-us-research.github.io/SpacetimeGaussians-website/)
 
 
 
@@ -3778,6 +3806,17 @@ In the last twenty years, Structure from Motion (SfM) has been a constant resear
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.03939) | [⌨️ Code](https://github.com/RayShark0605/On_the_fly_SfM) | [🌐 Project Page](https://yifeiyu225.github.io/on-the-flySfMv2.github.io/)
 
+#### <summary>Enhancing Neural Radiance Fields with Depth and Normal Completion Priors from Sparse Views
+Authors: Jiawei Guo, HungChyun Chou, Ning Ding
+<details span>
+<summary><b>Abstract</b></summary>
+Neural Radiance Fields (NeRF) are an advanced technology that creates highly realistic images by learning about scenes through a neural network model. However, NeRF often encounters issues when there are not enough images to work with, leading to problems in accurately rendering views. The main issue is that NeRF lacks sufficient structural details to guide the rendering process accurately. To address this, we proposed a Depth and Normal Dense Completion Priors for NeRF (CP\_NeRF) framework. This framework enhances view rendering by adding depth and normal dense completion priors to the NeRF optimization process. Before optimizing NeRF, we obtain sparse depth maps using the Structure from Motion (SfM) technique used to get camera poses. Based on the sparse depth maps and a normal estimator, we generate sparse normal maps for training a normal completion prior with precise standard deviations. During optimization, we apply depth and normal completion priors to transform sparse data into dense depth and normal maps with their standard deviations. We use these dense maps to guide ray sampling, assist distance sampling and construct a normal loss function for better training accuracy. To improve the rendering of NeRF's normal outputs, we incorporate an optical centre position embedder that helps synthesize more accurate normals through volume rendering. Additionally, we employ a normal patch matching technique to choose accurate rendered normal maps, ensuring more precise supervision for the model. Our method is superior to leading techniques in rendering detailed indoor scenes, even with limited input views.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/908b1caa-d340-4f63-b475-8ba93b94ddea)
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.05666) | [⌨️ Code] | [🌐 Project Page]
 
 
 
