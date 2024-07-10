@@ -1135,19 +1135,7 @@ There has recently been great interest in neural rendering methods. Some approac
 
 
 
-#### <summary>GES: Generalized Exponential Splatting for Efficient Radiance Field Rendering
 
-Authors: Abdullah Hamdi, Luke Melas-Kyriazi, Jinjie Mai, Guocheng Qian, Ruoshi Liu, Carl Vondrick, Bernard Ghanem, Andrea Vedaldi
-<details span>
-<summary><b>Abstract</b></summary>
-Advancements in 3D Gaussian Splatting have significantly accelerated 3D reconstruction and generation. However, it may require a large number of Gaussians, which creates a substantial memory footprint. This paper introduces GES (Generalized Exponential Splatting), a novel representation that employs Generalized Exponential Function (GEF) to model 3D scenes, requiring far fewer particles to represent a scene and thus significantly outperforming Gaussian Splatting methods in efficiency with a plug-and-play replacement ability for Gaussian-based utilities. GES is validated theoretically and empirically in both principled 1D setup and realistic 3D scenes. It is shown to represent signals with sharp edges more accurately, which are typically challenging for Gaussians due to their inherent low-pass characteristics. Our empirical analysis demonstrates that GEF outperforms Gaussians in fitting natural-occurring signals (e.g. squares, triangles, and parabolic signals), thereby reducing the need for extensive splitting operations that increase the memory footprint of Gaussian Splatting. With the aid of a frequency-modulated loss, GES achieves competitive performance in novel-view synthesis benchmarks while requiring less than half the memory storage of Gaussian Splatting and increasing the rendering speed by up to 39%.
-
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/518d0fc8-db05-408f-b1c4-27d444b1f34d)
-
-
-</details>
-
-[📃 arXiv:2302](https://arxiv.org/pdf/2402.10128) | [⌨️ Code](https://github.com/ajhamdi/ges-splatting) | [🌐 Project Page](https://abdullahamdi.com/ges/)
 
 
 #### <summary>SurfelNeRF: Neural Surfel Radiance Fields for Online Photorealistic Reconstruction of Indoor Scenes
@@ -1210,6 +1198,20 @@ While neural rendering has led to impressive advances in scene reconstruction an
 [📃 arXiv:2312](https://arxiv.org/pdf/2312.07504) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Splatter Image: Ultra-Fast Single-View 3D Reconstruction
+
+Authors: Stanislaw Szymanowicz, Christian Rupprecht, Andrea Vedaldi
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce the \method, an ultra-efficient approach for monocular 3D object reconstruction. Splatter Image is based on Gaussian Splatting, which allows fast and high-quality reconstruction of 3D scenes from multiple images. We apply Gaussian Splatting to monocular reconstruction by learning a neural network that, at test time, performs reconstruction in a feed-forward manner, at 38 FPS. Our main innovation is the surprisingly straightforward design of this network, which, using 2D operators, maps the input image to one 3D Gaussian per pixel. The resulting set of Gaussians thus has the form an image, the Splatter Image. We further extend the method take several images as input via cross-view attention. Owning to the speed of the renderer (588 FPS), we use a single GPU for training while generating entire images at each iteration to optimize perceptual metrics like LPIPS. On several synthetic, real, multi-category and large-scale benchmark datasets, we achieve better results in terms of PSNR, LPIPS, and other metrics while training and evaluating much faster than prior works. 
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/a579032d-05f5-4b78-b276-bb1ad0fe7d65)
+
+
+</details>
+
+[📃 arXiv:2312](https://arxiv.org/pdf/2312.13150) | [⌨️ Code](https://github.com/szymanowiczs/splatter-image) | [🌐 Project Page]
+
 
 #### <summary>On the Error Analysis of 3D Gaussian Splatting and an Optimal Projection Strategy
 Authors: Letian Huang, Jiayang Bai, Jie Guo, Yuanqi Li, Yanwen Guo
@@ -1234,6 +1236,22 @@ Gaussian Splatting has emerged as a prominent model for constructing 3D represen
 </details>
 
 [📃 arXiv:2402](https://arxiv.org/pdf/2402.00525) | [⌨️ Code](https://github.com/r4dl/StopThePop) | [🌐 Project Page](https://r4dl.github.io/StopThePop/)
+
+
+
+#### <summary>GES: Generalized Exponential Splatting for Efficient Radiance Field Rendering
+
+Authors: Abdullah Hamdi, Luke Melas-Kyriazi, Jinjie Mai, Guocheng Qian, Ruoshi Liu, Carl Vondrick, Bernard Ghanem, Andrea Vedaldi
+<details span>
+<summary><b>Abstract</b></summary>
+Advancements in 3D Gaussian Splatting have significantly accelerated 3D reconstruction and generation. However, it may require a large number of Gaussians, which creates a substantial memory footprint. This paper introduces GES (Generalized Exponential Splatting), a novel representation that employs Generalized Exponential Function (GEF) to model 3D scenes, requiring far fewer particles to represent a scene and thus significantly outperforming Gaussian Splatting methods in efficiency with a plug-and-play replacement ability for Gaussian-based utilities. GES is validated theoretically and empirically in both principled 1D setup and realistic 3D scenes. It is shown to represent signals with sharp edges more accurately, which are typically challenging for Gaussians due to their inherent low-pass characteristics. Our empirical analysis demonstrates that GEF outperforms Gaussians in fitting natural-occurring signals (e.g. squares, triangles, and parabolic signals), thereby reducing the need for extensive splitting operations that increase the memory footprint of Gaussian Splatting. With the aid of a frequency-modulated loss, GES achieves competitive performance in novel-view synthesis benchmarks while requiring less than half the memory storage of Gaussian Splatting and increasing the rendering speed by up to 39%.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/518d0fc8-db05-408f-b1c4-27d444b1f34d)
+
+
+</details>
+
+[📃 arXiv:2402](https://arxiv.org/pdf/2402.10128) | [⌨️ Code](https://github.com/ajhamdi/ges-splatting) | [🌐 Project Page](https://abdullahamdi.com/ges/)
 
 
 #### <summary>InstantSplat: Unbounded Sparse-view Pose-free Gaussian Splatting in 40 Seconds
