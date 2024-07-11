@@ -3,7 +3,7 @@
 
 <br>
 
-[Surface](#Surface) | [Sparse View](#Sparse-View) | [Structured](#Structured) | [Large Scale](#Large-Scale) | [SLAM](#SLAM) | [Noisy Poses](#Noisy-Poses) | [Generalizable](#Generalizable) | [High Frequency Details](#High-Frequency-Details) | [Others](#Others)  | [Not Gaussian](#Not-Gaussian)
+[Surface](#Surface) | [Sparse View](#Sparse-View) | [Structured](#Structured) | [Large Scale](#Large-Scale) | [Stylization](#Stylization) | [SLAM](#SLAM) | [Noisy Poses](#Noisy-Poses) | [Generalizable](#Generalizable) | [High Frequency Details](#High-Frequency-Details) | [Others](#Others)  | [Not Gaussian](#Not-Gaussian)
 
 <br>
 
@@ -877,6 +877,41 @@ Authors: Hexu Zhao, Haoyang Weng, Daohan Lu, Ang Li, Jinyang Li, Aurojit Panda, 
 <br>
 <br>
 
+## Stylization
+
+
+#### <summary>StylizedGS: Controllable Stylization for 3D Gaussian Splatting
+
+Authors: Dingxi Zhang, Zhuoxun Chen, Yu-Jie Yuan, Fang-Lue Zhang, Zhenliang He, Shiguang Shan, Lin Gao
+<details span>
+<summary><b>Abstract</b></summary>
+With the rapid development of XR, 3D generation and editing are becoming more and more important, among which, stylization is an important tool of 3D appearance editing. It can achieve consistent 3D artistic stylization given a single reference style image and thus is a user-friendly editing way. However, recent NeRF-based 3D stylization methods face efficiency issues that affect the actual user experience and the implicit nature limits its ability to transfer the geometric pattern styles. Additionally, the ability for artists to exert flexible control over stylized scenes is considered highly desirable, fostering an environment conducive to creative exploration. In this paper, we introduce StylizedGS, a 3D neural style transfer framework with adaptable control over perceptual factors based on 3D Gaussian Splatting (3DGS) representation. The 3DGS brings the benefits of high efficiency. We propose a GS filter to eliminate floaters in the reconstruction which affects the stylization effects before stylization. Then the nearest neighbor-based style loss is introduced to achieve stylization by fine-tuning the geometry and color parameters of 3DGS, while a depth preservation loss with other regularizations is proposed to prevent the tampering of geometry content. Moreover, facilitated by specially designed losses, StylizedGS enables users to control color, stylized scale and regions during the stylization to possess customized capabilities. Our method can attain high-quality stylization results characterized by faithful brushstrokes and geometric consistency with flexible controls. Extensive experiments across various scenes and styles demonstrate the effectiveness and efficiency of our method concerning both stylization quality and inference FPS.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/aab5e330-0233-43d2-96a7-8e6cbf9d13d8)
+
+
+</details>
+
+[📃 arXiv:2404](https://arxiv.org/pdf/2404.05220v1) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Reference-based Controllable Scene Stylization with Gaussian Splatting
+
+Authors: Yiqun Mei, Jiacong Xu, Vishal M. Patel
+<details span>
+<summary><b>Abstract</b></summary>
+Referenced-based scene stylization that edits the appearance based on a content-aligned reference image is an emerging research area. Starting with a pretrained neural radiance field (NeRF), existing methods typically learn a novel appearance that matches the given style. Despite their effectiveness, they inherently suffer from time-consuming volume rendering, and thus are impractical for many real-time applications. In this work, we propose ReGS, which adapts 3D Gaussian Splatting (3DGS) for reference-based stylization to enable real-time stylized view synthesis. Editing the appearance of a pretrained 3DGS is challenging as it uses discrete Gaussians as 3D representation, which tightly bind appearance with geometry. Simply optimizing the appearance as prior methods do is often insufficient for modeling continuous textures in the given reference image. To address this challenge, we propose a novel texture-guided control mechanism that adaptively adjusts local responsible Gaussians to a new geometric arrangement, serving for desired texture details. The proposed process is guided by texture clues for effective appearance editing, and regularized by scene depth for preserving original geometric structure. With these novel designs, we show ReGs can produce state-of-the-art stylization results that respect the reference texture while embracing real-time rendering speed for free-view navigation.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/d759a470-45d6-4ca8-940d-b51104608eed)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.07220) | [⌨️ Code] | [🌐 Project Page]
+
+
+<br>
+<br>
 
 ## SLAM
 
@@ -1010,6 +1045,7 @@ Authors: Tianqi Liu, Guangcong Wang, Shoukang Hu, Liao Shen, Xinyi Ye, Yuhang Za
 <summary><b>Abstract</b></summary>
 We present MVSGaussian, a new generalizable 3D Gaussian representation approach derived from Multi-View Stereo (MVS) that can efficiently reconstruct unseen scenes. Specifically, 1) we leverage MVS to encode geometry-aware Gaussian representations and decode them into Gaussian parameters. 2) To further enhance performance, we propose a hybrid Gaussian rendering that integrates an efficient volume rendering design for novel view synthesis. 3) To support fast fine-tuning for specific scenes, we introduce a multi-view geometric consistent aggregation strategy to effectively aggregate the point clouds generated by the generalizable model, serving as the initialization for per-scene optimization. Compared with previous generalizable NeRF-based methods, which typically require minutes of fine-tuning and seconds of rendering per image, MVSGaussian achieves real-time rendering with better synthesis quality for each scene. Compared with the vanilla 3D-GS, MVSGaussian achieves better view synthesis with less training computational cost. Extensive experiments on DTU, Real Forward-facing, NeRF Synthetic, and Tanks and Temples datasets validate that MVSGaussian attains state-of-the-art performance with convincing generalizability, real-time rendering speed, and fast per-scene optimization.
 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/ac046c9d-a95f-4f52-9bf4-559215733ce8)
 
 
 </details>
@@ -2629,7 +2665,35 @@ Radiance field methods have achieved photorealistic novel view synthesis and geo
 
 </details>
 
-[📃 arXiv:2406](https://arxiv.org/pdf/2407.04699) | [⌨️ Code] | [🌐 Project Page](https://apchenstu.github.io/LaRa/)
+[📃 arXiv:2406](https://arxiv.org/pdf/2407.04699) | [⌨️ Code](https://github.com/autonomousvision/LaRa) | [🌐 Project Page](https://apchenstu.github.io/LaRa/)
+
+#### <summary>Controlling Space and Time with Diffusion Models
+Authors: Daniel Watson, Saurabh Saxena, Lala Li, Andrea Tagliasacchi, David J. Fleet
+<details span>
+<summary><b>Abstract</b></summary>
+We present 4DiM, a cascaded diffusion model for 4D novel view synthesis (NVS), conditioned on one or more images of a general scene, and a set of camera poses and timestamps. To overcome challenges due to limited availability of 4D training data, we advocate joint training on 3D (with camera pose), 4D (pose+time) and video (time but no pose) data and propose a new architecture that enables the same. We further advocate the calibration of SfM posed data using monocular metric depth estimators for metric scale camera control. For model evaluation, we introduce new metrics to enrich and overcome shortcomings of current evaluation schemes, demonstrating state-of-the-art results in both fidelity and pose control compared to existing diffusion models for 3D NVS, while at the same time adding the ability to handle temporal dynamics. 4DiM is also used for improved panorama stitching, pose-conditioned video to video translation, and several other tasks.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/f98c287d-37ac-4da7-bcb1-1ce539d5c30a)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.07860) | [⌨️ Code] | [🌐 Project Page](https://4d-diffusion.github.io/)
+
+#### <summary>Drantal-NeRF: Diffusion-Based Restoration for Anti-aliasing Neural Radiance Field
+Authors: Ganlin Yang, Kaidong Zhang, Jingjing Fu, Dong Liu
+<details span>
+<summary><b>Abstract</b></summary>
+Aliasing artifacts in renderings produced by Neural Radiance Field (NeRF) is a long-standing but complex issue in the field of 3D implicit representation, which arises from a multitude of intricate causes and was mitigated by designing more advanced but complex scene parameterization methods before. In this paper, we present a Diffusion-based restoration method for anti-aliasing Neural Radiance Field (Drantal-NeRF). We consider the anti-aliasing issue from a low-level restoration perspective by viewing aliasing artifacts as a kind of degradation model added to clean ground truths. By leveraging the powerful prior knowledge encapsulated in diffusion model, we could restore the high-realism anti-aliasing renderings conditioned on aliased low-quality counterparts. We further employ a feature-wrapping operation to ensure multi-view restoration consistency and finetune the VAE decoder to better adapt to the scene-specific data distribution. Our proposed method is easy to implement and agnostic to various NeRF backbones. We conduct extensive experiments on challenging large-scale urban scenes as well as unbounded 360-degree scenes and achieve substantial qualitative and quantitative improvements.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/b5f6bb81-eebd-4379-80b7-56786ccbcce2)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.07461) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 
 
@@ -2679,6 +2743,19 @@ Neural surface reconstruction has been shown to be powerful for recovering dense
 </details>
 
 [📃 arXiv:2306](https://arxiv.org/pdf/2306.03092) | [⌨️ Code](https://github.com/nvlabs/neuralangelo) | [🌐 Project Page](https://research.nvidia.com/labs/dir/neuralangelo/)
+
+
+#### <summary>Zero-Shot Metric Depth with a Field-of-View Conditioned Diffusion Model
+Authors: Saurabh Saxena, Junhwa Hur, Charles Herrmann, Deqing Sun, David J. Fleet
+<details span>
+<summary><b>Abstract</b></summary>
+While methods for monocular depth estimation have made significant strides on standard benchmarks, zero-shot metric depth estimation remains unsolved. Challenges include the joint modeling of indoor and outdoor scenes, which often exhibit significantly different distributions of RGB and depth, and the depth-scale ambiguity due to unknown camera intrinsics. Recent work has proposed specialized multi-head architectures for jointly modeling indoor and outdoor scenes. In contrast, we advocate a generic, task-agnostic diffusion model, with several advancements such as log-scale depth parameterization to enable joint modeling of indoor and outdoor scenes, conditioning on the field-of-view (FOV) to handle scale ambiguity and synthetically augmenting FOV during training to generalize beyond the limited camera intrinsics in training datasets. Furthermore, by employing a more diverse training mixture than is common, and an efficient diffusion parameterization, our method, DMD (Diffusion for Metric Depth) achieves a 25\% reduction in relative error (REL) on zero-shot indoor and 33\% reduction on zero-shot outdoor datasets over the current SOTA using only a small number of denoising steps.
+
+</details>
+
+[📃 arXiv:2312](https://arxiv.org/pdf/2312.13252) | [⌨️ Code] | [🌐 Project Page](https://diffusion-vision.github.io/dmd/)
+
+
 
 #### <summary>NeuSurf: On-Surface Priors for Neural Surface Reconstruction from Sparse Input Views
 Authors: Han Huang, Yulun Wu, Junsheng Zhou, Ge Gao, Ming Gu, Yu-Shen Liu
@@ -3860,6 +3937,10 @@ We study the 3D object understanding task for manipulating everyday objects with
 </details>
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.06984) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+
 
 
 #### <summary>
