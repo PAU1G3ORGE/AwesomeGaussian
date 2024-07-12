@@ -1012,6 +1012,39 @@ Neural Radiance Field (NeRF) has recently emerged as a powerful representation t
 
 ## Generalizable
 
+
+#### <summary>GPS-Gaussian: Generalizable Pixel-wise 3D Gaussian Splatting for Real-time Human Novel View Synthesis
+
+Authors: Shunyuan Zheng, Boyao Zhou, Ruizhi Shao, Boning Liu, Shengping Zhang, Liqiang Nie, Yebin Liu
+<details span>
+<summary><b>Abstract</b></summary>
+We present a new approach, termed GPS-Gaussian, for synthesizing novel views of a character in a real-time manner. The proposed method enables 2K-resolution rendering under a sparse-view camera setting. Unlike the original Gaussian Splatting or neural implicit rendering methods that necessitate per-subject optimizations, we introduce Gaussian parameter maps defined on the source views and regress directly Gaussian Splatting properties for instant novel view synthesis without any fine-tuning or optimization. To this end, we train our Gaussian parameter regression module on a large amount of human scan data, jointly with a depth estimation module to lift 2D parameter maps to 3D space. The proposed framework is fully differentiable and experiments on several datasets demonstrate that our method outperforms state-of-the-art methods while achieving an exceeding rendering speed.
+
+![image](https://github.com/user-attachments/assets/24ca6e12-ea69-404f-a137-5fa0bd79fd4d)
+
+
+</details>
+
+[📃 arXiv:2312](https://arxiv.org/pdf/2312.02155) | [⌨️ Code](https://github.com/ShunyuanZheng/GPS-Gaussian) | [🌐 Project Page](https://shunyuanzheng.github.io/GPS-Gaussian)
+
+
+
+#### <summary>Triplane Meets Gaussian Splatting: Fast and Generalizable Single-View 3D Reconstruction with Transformers
+
+Authors: Zi-Xin Zou, Zhipeng Yu, Yuan-Chen Guo, Yangguang Li, Ding Liang, Yan-Pei Cao, Song-Hai Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advancements in 3D reconstruction from single images have been driven by the evolution of generative models. Prominent among these are methods based on Score Distillation Sampling (SDS) and the adaptation of diffusion models in the 3D domain. Despite their progress, these techniques often face limitations due to slow optimization or rendering processes, leading to extensive training and optimization times. In this paper, we introduce a novel approach for single-view reconstruction that efficiently generates a 3D model from a single image via feed-forward inference. Our method utilizes two transformer-based networks, namely a point decoder and a triplane decoder, to reconstruct 3D objects using a hybrid Triplane-Gaussian intermediate representation. This hybrid representation strikes a balance, achieving a faster rendering speed compared to implicit representations while simultaneously delivering superior rendering quality than explicit representations. The point decoder is designed for generating point clouds from single images, offering an explicit representation which is then utilized by the triplane decoder to query Gaussian features for each point. This design choice addresses the challenges associated with directly regressing explicit 3D Gaussian attributes characterized by their non-structural nature. Subsequently, the 3D Gaussians are decoded by an MLP to enable rapid rendering through splatting. Both decoders are built upon a scalable, transformer-based architecture and have been efficiently trained on large-scale 3D datasets. The evaluations conducted on both synthetic datasets and real-world images demonstrate that our method not only achieves higher quality but also ensures a faster runtime in comparison to previous state-of-the-art techniques.
+
+![image](https://github.com/user-attachments/assets/ebc265ff-3c2a-49f5-8d56-d8279876960b)
+
+
+</details>
+
+[📃 arXiv:2312](https://arxiv.org/pdf/2312.09147) | [⌨️ Code](https://github.com/VAST-AI-Research/TriplaneGaussian) | [🌐 Project Page](https://zouzx.github.io/TriplaneGaussian/)
+
+
+
 #### <summary>pixelSplat: 3D Gaussian Splats from Image Pairs for Scalable Generalizable 3D Reconstruction
 
 Authors: David Charatan, Sizhe Li, Andrea Tagliasacchi, Vincent Sitzmann
@@ -1026,6 +1059,18 @@ We introduce pixelSplat, a feed-forward model that learns to reconstruct 3D radi
 
 [📃 arXiv:2312](https://arxiv.org/pdf/2312.12337) | [⌨️ Code](https://github.com/dcharatan/pixelsplat) | [🌐 Project Page](https://davidcharatan.com/pixelsplat/)
 
+#### <summary>GGRt: Towards Pose-free Generalizable 3D Gaussian Splatting in Real-time
+Authors: Hao Li, Yuanyuan Gao, Chenming Wu, Dingwen Zhang, Yalun Dai, Chen Zhao, Haocheng Feng, Errui Ding, Jingdong Wang, Junwei Han
+<details span>
+<summary><b>Abstract</b></summary>
+This paper presents GGRt, a novel approach to generalizable novel view synthesis that alleviates the need for real camera poses, complexity in processing high-resolution images, and lengthy optimization processes, thus facilitating stronger applicability of 3D Gaussian Splatting (3D-GS) in real-world scenarios. Specifically, we design a novel joint learning framework that consists of an Iterative Pose Optimization Network (IPO-Net) and a Generalizable 3D-Gaussians (G-3DG) model. With the joint learning mechanism, the proposed framework can inherently estimate robust relative pose information from the image observations and thus primarily alleviate the requirement of real camera poses. Moreover, we implement a deferred back-propagation mechanism that enables high-resolution training and inference, overcoming the resolution constraints of previous methods. To enhance the speed and efficiency, we further introduce a progressive Gaussian cache module that dynamically adjusts during training and inference. As the first pose-free generalizable 3D-GS framework, GGRt achieves inference at ≥ 5 FPS and real-time rendering at ≥ 100 FPS. Through extensive experimentation, we demonstrate that our method outperforms existing NeRF-based pose-free techniques in terms of inference speed and effectiveness. It can also approach the real pose-based 3D-GS methods. Our contributions provide a significant leap forward for the integration of computer vision and computer graphics into practical applications, offering state-of-the-art results on LLFF, KITTI, and Waymo Open datasets and enabling real-time rendering for immersive experiences.
+
+![image](https://github.com/user-attachments/assets/eba387ee-6661-4324-9eae-ff25a09aa072)
+
+</details>
+
+[📃 arXiv:2403](https://arxiv.org/pdf/2403.10147) | [⌨️ Code] | [🌐 Project Page](https://3d-aigc.github.io/GGRt/)
+
 
 #### <summary>MVSplat: Efficient 3D Gaussian Splatting from Sparse Multi-View Images
 Authors: Yuedong Chen, Haofei Xu, Chuanxia Zheng, Bohan Zhuang, Marc Pollefeys, Andreas Geiger, Tat-Jen Cham, Jianfei Cai
@@ -1038,6 +1083,21 @@ We propose MVSplat, an efficient feed-forward 3D Gaussian Splatting model learne
 </details>
 
 [📃 arXiv:2403](https://arxiv.org/pdf/2403.14627) | [⌨️ Code](https://github.com/donydchen/mvsplat?tab=readme-ov-file) | [🌐 Project Page](https://donydchen.github.io/mvsplat/)
+
+
+#### <summary>latentSplat: Autoencoding Variational Gaussians for Fast Generalizable 3D Reconstruction
+Authors: Christopher Wewer, Kevin Raj, Eddy Ilg, Bernt Schiele, Jan Eric Lenssen
+<details span>
+<summary><b>Abstract</b></summary>
+We present latentSplat, a method to predict semantic Gaussians in a 3D latent space that can be splatted and decoded by a light-weight generative 2D architecture. Existing methods for generalizable 3D reconstruction either do not enable fast inference of high resolution novel views due to slow volume rendering, or are limited to interpolation of close input views, even in simpler settings with a single central object, where 360-degree generalization is possible. In this work, we combine a regression-based approach with a generative model, moving towards both of these capabilities within the same method, trained purely on readily available real video data. The core of our method are variational 3D Gaussians, a representation that efficiently encodes varying uncertainty within a latent space consisting of 3D feature Gaussians. From these Gaussians, specific instances can be sampled and rendered via efficient Gaussian splatting and a fast, generative decoder network. We show that latentSplat outperforms previous works in reconstruction quality and generalization, while being fast and scalable to high-resolution data.
+
+![image](https://github.com/user-attachments/assets/ab1c6edb-96f3-4fd5-b9d5-07f2033c9beb)
+
+</details>
+
+[📃 arXiv:2403](https://arxiv.org/pdf/2403.16292) | [⌨️ Code](https://github.com/Chrixtar/latentsplat) | [🌐 Project Page](https://geometric-rl.mpi-inf.mpg.de/latentsplat/)
+
+
 
 #### <summary>Fast Generalizable Gaussian Splatting Reconstruction from Multi-View Stereo
 Authors: Tianqi Liu, Guangcong Wang, Shoukang Hu, Liao Shen, Xinyi Ye, Yuhang Zang, Zhiguo Cao, Wei Li, Ziwei Liu
@@ -1065,6 +1125,22 @@ Empowering 3D Gaussian Splatting with generalization ability is appealing. Howev
 </details>
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.17958) | [⌨️ Code](https://github.com/wangys16/FreeSplat) | [🌐 Project Page]
+
+
+#### <summary>LaRa: Efficient Large-Baseline Radiance Fields
+Authors: Anpei Chen, Haofei Xu, Stefano Esposito, Siyu Tang, Andreas Geiger
+<details span>
+<summary><b>Abstract</b></summary>
+Radiance field methods have achieved photorealistic novel view synthesis and geometry reconstruction. But they are mostly applied in per-scene optimization or small-baseline settings. While several recent works investigate feed-forward reconstruction with large baselines by utilizing transformers, they all operate with a standard global attention mechanism and hence ignore the local nature of 3D reconstruction. We propose a method that unifies local and global reasoning in transformer layers, resulting in improved quality and faster convergence. Our model represents scenes as Gaussian Volumes and combines this with an image encoder and Group Attention Layers for efficient feed-forward reconstruction. Experimental results demonstrate that our model, trained for two days on four GPUs, demonstrates high fidelity in reconstructing 360&deg radiance fields, and robustness to zero-shot and out-of-domain testing.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/844cccd5-3bd5-40c8-bfbb-1fce46817848)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2407.04699) | [⌨️ Code](https://github.com/autonomousvision/LaRa) | [🌐 Project Page](https://apchenstu.github.io/LaRa/)
+
+
 
 <br>
 <br>
@@ -2666,18 +2742,7 @@ We propose ExtraNeRF, a novel method for extrapolating the range of views handle
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.06133) | [⌨️ Code] | [🌐 Project Page](https://shihmengli.github.io/extranerf-website)
 
 
-#### <summary>LaRa: Efficient Large-Baseline Radiance Fields
-Authors: Anpei Chen, Haofei Xu, Stefano Esposito, Siyu Tang, Andreas Geiger
-<details span>
-<summary><b>Abstract</b></summary>
-Radiance field methods have achieved photorealistic novel view synthesis and geometry reconstruction. But they are mostly applied in per-scene optimization or small-baseline settings. While several recent works investigate feed-forward reconstruction with large baselines by utilizing transformers, they all operate with a standard global attention mechanism and hence ignore the local nature of 3D reconstruction. We propose a method that unifies local and global reasoning in transformer layers, resulting in improved quality and faster convergence. Our model represents scenes as Gaussian Volumes and combines this with an image encoder and Group Attention Layers for efficient feed-forward reconstruction. Experimental results demonstrate that our model, trained for two days on four GPUs, demonstrates high fidelity in reconstructing 360&deg radiance fields, and robustness to zero-shot and out-of-domain testing.
 
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/844cccd5-3bd5-40c8-bfbb-1fce46817848)
-
-
-</details>
-
-[📃 arXiv:2406](https://arxiv.org/pdf/2407.04699) | [⌨️ Code](https://github.com/autonomousvision/LaRa) | [🌐 Project Page](https://apchenstu.github.io/LaRa/)
 
 #### <summary>Controlling Space and Time with Diffusion Models
 Authors: Daniel Watson, Saurabh Saxena, Lala Li, Andrea Tagliasacchi, David J. Fleet
