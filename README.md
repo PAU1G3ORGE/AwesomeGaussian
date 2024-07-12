@@ -2522,6 +2522,18 @@ Particle-based representations of radiance fields such as 3D Gaussian Splatting 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.07090) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>WildGaussians: 3D Gaussian Splatting in the Wild
+Authors: Jonas Kulhanek, Songyou Peng, Zuzana Kukelova, Marc Pollefeys, Torsten Sattler
+<details span>
+<summary><b>Abstract</b></summary>
+While the field of 3D scene reconstruction is dominated by NeRFs due to their photorealistic quality, 3D Gaussian Splatting (3DGS) has recently emerged, offering similar quality with real-time rendering speeds. However, both methods primarily excel with well-controlled 3D scenes, while in-the-wild data - characterized by occlusions, dynamic objects, and varying illumination - remains challenging. NeRFs can adapt to such conditions easily through per-image embedding vectors, but 3DGS struggles due to its explicit representation and lack of shared parameters. To address this, we introduce WildGaussians, a novel approach to handle occlusions and appearance changes with 3DGS. By leveraging robust DINO features and integrating an appearance modeling module within 3DGS, our method achieves state-of-the-art results. We demonstrate that WildGaussians matches the real-time rendering speed of 3DGS while surpassing both 3DGS and NeRF baselines in handling in-the-wild data, all within a simple architectural framework.
+ 
+![image](https://github.com/user-attachments/assets/57b7aad8-afa8-4eb3-a546-cf94131fe605)
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.08447) | [⌨️ Code](https://github.com/jkulhanek/wild-gaussians/) | [🌐 Project Page](https://wild-gaussians.github.io/)
+
 
 
 <br>
@@ -3939,8 +3951,58 @@ We study the 3D object understanding task for manipulating everyday objects with
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.06984) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>BiEquiFormer: Bi-Equivariant Representations for Global Point Cloud Registration
+Authors: Stefanos Pertigkiozoglou, Evangelos Chatzipantazis, Kostas Daniilidis
+<details span>
+<summary><b>Abstract</b></summary>
+The goal of this paper is to address the problem of \textit{global} point cloud registration (PCR) i.e., finding the optimal alignment between point clouds irrespective of the initial poses of the scans. This problem is notoriously challenging for classical optimization methods due to computational constraints. First, we show that state-of-the-art deep learning methods suffer from huge performance degradation when the point clouds are arbitrarily placed in space. We propose that \textit{equivariant deep learning} should be utilized for solving this task and we characterize the specific type of bi-equivariance of PCR. Then, we design BiEquiformer a novel and scalable \textit{bi-equivariant} pipeline i.e. equivariant to the independent transformations of the input point clouds. While a naive approach would process the point clouds independently we design expressive bi-equivariant layers that fuse the information from both point clouds. This allows us to extract high-quality superpoint correspondences and in turn, robust point-cloud registration. Extensive comparisons against state-of-the-art methods show that our method achieves comparable performance in the canonical setting and superior performance in the robust setting in both the 3DMatch and the challenging low-overlap 3DLoMatch dataset.
+
+![image](https://github.com/user-attachments/assets/d92c9c64-b53f-403a-ac57-49a9a547630d)
 
 
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.08729) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>OmniNOCS: A unified NOCS dataset and model for 3D lifting of 2D objects
+Authors: Akshay Krishnan, Abhijit Kundu, Kevis-Kokitsi Maninis, James Hays, Matthew Brown
+<details span>
+<summary><b>Abstract</b></summary>
+We propose OmniNOCS, a large-scale monocular dataset with 3D Normalized Object Coordinate Space (NOCS) maps, object masks, and 3D bounding box annotations for indoor and outdoor scenes. OmniNOCS has 20 times more object classes and 200 times more instances than existing NOCS datasets (NOCS-Real275, Wild6D). We use OmniNOCS to train a novel, transformer-based monocular NOCS prediction model (NOCSformer) that can predict accurate NOCS, instance masks and poses from 2D object detections across diverse classes. It is the first NOCS model that can generalize to a broad range of classes when prompted with 2D boxes. We evaluate our model on the task of 3D oriented bounding box prediction, where it achieves comparable results to state-of-the-art 3D detection methods such as Cube R-CNN. Unlike other 3D detection methods, our model also provides detailed and accurate 3D object shape and segmentation. We propose a novel benchmark for the task of NOCS prediction based on OmniNOCS, which we hope will serve as a useful baseline for future work in this area.
+
+![image](https://github.com/user-attachments/assets/47a7899d-7166-451c-9f62-9acaa5652feb)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.08711) | [⌨️ Code](https://github.com/google-deepmind/omninocs) | [🌐 Project Page](https://omninocs.github.io/)
+
+#### <summary>SRPose: Two-view Relative Pose Estimation with Sparse Keypoints
+Authors: Rui Yin, Yulun Zhang, Zherong Pan, Jianjun Zhu, Cheng Wang, Biao Jia
+<details span>
+<summary><b>Abstract</b></summary>
+Two-view pose estimation is essential for map-free visual relocalization and object pose tracking tasks. However, traditional matching methods suffer from time-consuming robust estimators, while deep learning-based pose regressors only cater to camera-to-world pose estimation, lacking generalizability to different image sizes and camera intrinsics. In this paper, we propose SRPose, a sparse keypoint-based framework for two-view relative pose estimation in camera-to-world and object-to-camera scenarios. SRPose consists of a sparse keypoint detector, an intrinsic-calibration position encoder, and promptable prior knowledge-guided attention layers. Given two RGB images of a fixed scene or a moving object, SRPose estimates the relative camera or 6D object pose transformation. Extensive experiments demonstrate that SRPose achieves competitive or superior performance compared to state-of-the-art methods in terms of accuracy and speed, showing generalizability to both scenarios. It is robust to different image sizes and camera intrinsics, and can be deployed with low computing resources.
+
+![image](https://github.com/user-attachments/assets/a8ce5d31-0fa4-4150-92ef-8bc832ae6d8f)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.08199) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>ScaleDepth: Decomposing Metric Depth Estimation into Scale Prediction and Relative Depth Estimation
+Authors: Ruijie Zhu, Chuxin Wang, Ziyang Song, Li Liu, Tianzhu Zhang, Yongdong Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+Estimating depth from a single image is a challenging visual task. Compared to relative depth estimation, metric depth estimation attracts more attention due to its practical physical significance and critical applications in real-life scenarios. However, existing metric depth estimation methods are typically trained on specific datasets with similar scenes, facing challenges in generalizing across scenes with significant scale variations. To address this challenge, we propose a novel monocular depth estimation method called ScaleDepth. Our method decomposes metric depth into scene scale and relative depth, and predicts them through a semantic-aware scale prediction (SASP) module and an adaptive relative depth estimation (ARDE) module, respectively. The proposed ScaleDepth enjoys several merits. First, the SASP module can implicitly combine structural and semantic features of the images to predict precise scene scales. Second, the ARDE module can adaptively estimate the relative depth distribution of each image within a normalized depth space. Third, our method achieves metric depth estimation for both indoor and outdoor scenes in a unified framework, without the need for setting the depth range or fine-tuning model. Extensive experiments demonstrate that our method attains state-of-the-art performance across indoor, outdoor, unconstrained, and unseen scenes.
+
+![image](https://github.com/user-attachments/assets/cc893f0a-af77-49c3-bb7e-e0aea78b1d14)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.08187) | [⌨️ Code] | [🌐 Project Page](https://ruijiezhu94.github.io/ScaleDepth/)
 
 
 #### <summary>
