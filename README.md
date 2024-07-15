@@ -910,6 +910,23 @@ Referenced-based scene stylization that edits the appearance based on a content-
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.07220) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>StyleSplat: 3D Object Style Transfer with Gaussian Splatting
+
+Authors: Sahil Jain, Avik Kuthiala, Prabhdeep Singh Sethi, Prakanshul Saxena
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advancements in radiance fields have opened new avenues for creating high-quality 3D assets and scenes. Style transfer can enhance these 3D assets with diverse artistic styles, transforming creative expression. However, existing techniques are often slow or unable to localize style transfer to specific objects. We introduce StyleSplat, a lightweight method for stylizing 3D objects in scenes represented by 3D Gaussians from reference style images. Our approach first learns a photorealistic representation of the scene using 3D Gaussian splatting while jointly segmenting individual 3D objects. We then use a nearest-neighbor feature matching loss to finetune the Gaussians of the selected objects, aligning their spherical harmonic coefficients with the style image to ensure consistency and visual appeal. StyleSplat allows for quick, customizable style transfer and localized stylization of multiple objects within a scene, each with a different style. We demonstrate its effectiveness across various 3D scenes and styles, showcasing enhanced control and customization in 3D creation.
+
+![image](https://github.com/user-attachments/assets/3ceea64b-4b03-4a7b-9d9f-ce586e0c1f7c)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.09473) | [⌨️ Code] | [🌐 Project Page](https://bernard0047.github.io/stylesplat/)
+
+
+
+
 <br>
 <br>
 
@@ -2771,7 +2788,18 @@ Aliasing artifacts in renderings produced by Neural Radiance Field (NeRF) is a l
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.07461) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Radiance Fields from Photons
+Authors: Sacha Jungerman, Mohit Gupta
+<details span>
+<summary><b>Abstract</b></summary>
+Neural radiance fields, or NeRFs, have become the de facto approach for high-quality view synthesis from a collection of images captured from multiple viewpoints. However, many issues remain when capturing images in-the-wild under challenging conditions, such as low light, high dynamic range, or rapid motion leading to smeared reconstructions with noticeable artifacts. In this work, we introduce quanta radiance fields, a novel class of neural radiance fields that are trained at the granularity of individual photons using single-photon cameras (SPCs). We develop theory and practical computational techniques for building radiance fields and estimating dense camera poses from unconventional, stochastic, and high-speed binary frame sequences captured by SPCs. We demonstrate, both via simulations and a SPC hardware prototype, high-fidelity reconstructions under high-speed motion, in low light, and for extreme dynamic range settings.
 
+![image](https://github.com/user-attachments/assets/2160046e-61d1-477c-ada8-2627a84064e6)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.09386) | [⌨️ Code] | [🌐 Project Page]
 
 
 <br>
