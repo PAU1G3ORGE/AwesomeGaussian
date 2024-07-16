@@ -2628,6 +2628,30 @@ While the field of 3D scene reconstruction is dominated by NeRFs due to their ph
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.08447) | [⌨️ Code](https://github.com/jkulhanek/wild-gaussians/) | [🌐 Project Page](https://wild-gaussians.github.io/)
 
 
+#### <summary>Textured-GS: Gaussian Splatting with Spatially Defined Color and Opacity
+Authors: Zhentao Huang, Minglun Gong
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper, we introduce Textured-GS, an innovative method for rendering Gaussian splatting that incorporates spatially defined color and opacity variations using Spherical Harmonics (SH). This approach enables each Gaussian to exhibit a richer representation by accommodating varying colors and opacities across its surface, significantly enhancing rendering quality compared to traditional methods. To demonstrate the merits of our approach, we have adapted the Mini-Splatting architecture to integrate textured Gaussians without increasing the number of Gaussians. Our experiments across multiple real-world datasets show that Textured-GS consistently outperforms both the baseline Mini-Splatting and standard 3DGS in terms of visual fidelity. The results highlight the potential of Textured-GS to advance Gaussian-based rendering technologies, promising more efficient and high-quality scene reconstructions.
+ 
+![image](https://github.com/user-attachments/assets/56d9bcc8-7e8b-42dd-b6ae-e6c51251d1c8)
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.09733) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>3DGS.zip: A survey on 3D Gaussian Splatting Compression Methods
+Authors: Milena T. Bagdasarian, Paul Knoll, Florian Barthel, Wieland Morgenstern
+<details span>
+<summary><b>Abstract</b></summary>
+We present a work-in-progress survey on 3D Gaussian Splatting compression methods, focusing on their statistical performance across various benchmarks. This survey aims to facilitate comparability by summarizing key statistics of different compression approaches in a tabulated format. The datasets evaluated include TanksAndTemples, MipNeRF360, DeepBlending, and SyntheticNeRF. For each method, we report the Peak Signal-to-Noise Ratio (PSNR), Structural Similarity Index (SSIM), Learned Perceptual Image Patch Similarity (LPIPS), and the resultant size in megabytes (MB), as provided by the respective authors. This is an ongoing, open project, and we invite contributions from the research community as GitHub issues or pull requests. Please visit this http URL for more information and a sortable version of the table.
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.09510) | [⌨️ Code](https://github.com/w-m/3dgs-compression-survey) | [🌐 Project Page](https://w-m.github.io/3dgs-compression-survey/)
+
+
+
 
 <br>
 <br>
@@ -2800,6 +2824,36 @@ Neural radiance fields, or NeRFs, have become the de facto approach for high-qua
 </details>
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.09386) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Boost Your NeRF: A Model-Agnostic Mixture of Experts Framework for High Quality and Efficient Rendering
+Authors: Francesco Di Sario, Riccardo Renzulli, Enzo Tartaglione, Marco Grangetto
+<details span>
+<summary><b>Abstract</b></summary>
+Since the introduction of NeRFs, considerable attention has been focused on improving their training and inference times, leading to the development of Fast-NeRFs models. Despite demonstrating impressive rendering speed and quality, the rapid convergence of such models poses challenges for further improving reconstruction quality. Common strategies to improve rendering quality involves augmenting model parameters or increasing the number of sampled points. However, these computationally intensive approaches encounter limitations in achieving significant quality enhancements. This study introduces a model-agnostic framework inspired by Sparsely-Gated Mixture of Experts to enhance rendering quality without escalating computational complexity. Our approach enables specialization in rendering different scene components by employing a mixture of experts with varying resolutions. We present a novel gate formulation designed to maximize expert capabilities and propose a resolution-based routing technique to effectively induce sparsity and decompose scenes. Our work significantly improves reconstruction quality while maintaining competitive performance.
+
+![image](https://github.com/user-attachments/assets/093af40b-62ce-4ace-89b2-0b787ae03d94)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.10389) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>RS-NeRF: Neural Radiance Fields from Rolling Shutter Images
+Authors: Muyao Niu, Tong Chen, Yifan Zhan, Zhuoxiao Li, Xiang Ji, Yinqiang Zheng
+<details span>
+<summary><b>Abstract</b></summary>
+Neural Radiance Fields (NeRFs) have become increasingly popular because of their impressive ability for novel view synthesis. However, their effectiveness is hindered by the Rolling Shutter (RS) effects commonly found in most camera systems. To solve this, we present RS-NeRF, a method designed to synthesize normal images from novel views using input with RS distortions. This involves a physical model that replicates the image formation process under RS conditions and jointly optimizes NeRF parameters and camera extrinsic for each image row. We further address the inherent shortcomings of the basic RS-NeRF model by delving into the RS characteristics and developing algorithms to enhance its functionality. First, we impose a smoothness regularization to better estimate trajectories and improve the synthesis quality, in line with the camera movement prior. We also identify and address a fundamental flaw in the vanilla RS model by introducing a multi-sampling algorithm. This new approach improves the model's performance by comprehensively exploiting the RGB data across different rows for each intermediate camera pose. Through rigorous experimentation, we demonstrate that RS-NeRF surpasses previous methods in both synthetic and real-world scenarios, proving its ability to correct RS-related distortions effectively.
+
+![image](https://github.com/user-attachments/assets/bab22aaf-e5d9-4ab3-b8ed-19f26f921e04)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.10267) | [⌨️ Code](https://github.com/MyNiuuu/RS-NeRF) | [🌐 Project Page]
+
+
+
 
 
 <br>
