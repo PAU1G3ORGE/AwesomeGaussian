@@ -366,6 +366,18 @@ The 3D Gaussian Splatting technique has significantly advanced the construction 
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.18199) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>MVG-Splatting: Multi-View Guided Gaussian Splatting with Adaptive Quantile-Based Geometric Consistency Densification
+Authors: Zhuoxiao Li, Shanliang Yao, Yijie Chu, Angel F. Garcia-Fernandez, Yong Yue, Eng Gee Lim, Xiaohui Zhu
+<details span>
+<summary><b>Abstract</b></summary>
+In the rapidly evolving field of 3D reconstruction, 3D Gaussian Splatting (3DGS) and 2D Gaussian Splatting (2DGS) represent significant advancements. Although 2DGS compresses 3D Gaussian primitives into 2D Gaussian surfels to effectively enhance mesh extraction quality, this compression can potentially lead to a decrease in rendering quality. Additionally, unreliable densification processes and the calculation of depth through the accumulation of opacity can compromise the detail of mesh extraction. To address this issue, we introduce MVG-Splatting, a solution guided by Multi-View considerations. Specifically, we integrate an optimized method for calculating normals, which, combined with image gradients, helps rectify inconsistencies in the original depth computations. Additionally, utilizing projection strategies akin to those in Multi-View Stereo (MVS), we propose an adaptive quantile-based method that dynamically determines the level of additional densification guided by depth maps, from coarse to fine detail. Experimental evidence demonstrates that our method not only resolves the issues of rendering quality degradation caused by depth discrepancies but also facilitates direct mesh extraction from dense Gaussian point clouds using the Marching Cubes algorithm. This approach significantly enhances the overall fidelity and accuracy of the 3D reconstruction process, ensuring that both the geometric details and visual quality.
+
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.11840) | [⌨️ Code] | [🌐 Project Page](https://mvgsplatting.github.io/)
+
 
 
 <br>
@@ -2651,6 +2663,46 @@ We present a work-in-progress survey on 3D Gaussian Splatting compression method
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.09510) | [⌨️ Code](https://github.com/w-m/3dgs-compression-survey) | [🌐 Project Page](https://w-m.github.io/3dgs-compression-survey/)
 
 
+#### <summary>Click-Gaussian: Interactive Segmentation to Any 3D Gaussians
+Authors: Seokhun Choi, Hyeonseop Song, Jaechul Kim, Taehyeong Kim, Hoseok Do
+<details span>
+<summary><b>Abstract</b></summary>
+Interactive segmentation of 3D Gaussians opens a great opportunity for real-time manipulation of 3D scenes thanks to the real-time rendering capability of 3D Gaussian Splatting. However, the current methods suffer from time-consuming post-processing to deal with noisy segmentation output. Also, they struggle to provide detailed segmentation, which is important for fine-grained manipulation of 3D scenes. In this study, we propose Click-Gaussian, which learns distinguishable feature fields of two-level granularity, facilitating segmentation without time-consuming post-processing. We delve into challenges stemming from inconsistently learned feature fields resulting from 2D segmentation obtained independently from a 3D scene. 3D segmentation accuracy deteriorates when 2D segmentation results across the views, primary cues for 3D segmentation, are in conflict. To overcome these issues, we propose Global Feature-guided Learning (GFL). GFL constructs the clusters of global feature candidates from noisy 2D segments across the views, which smooths out noises when training the features of 3D Gaussians. Our method runs in 10 ms per click, 15 to 130 times as fast as the previous methods, while also significantly improving segmentation accuracy.
+
+![image](https://github.com/user-attachments/assets/08a07fc6-4309-46ce-b886-9955b7803086)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.11793) | [⌨️ Code] | [🌐 Project Page](https://seokhunchoi.github.io/Click-Gaussian/)
+
+
+#### <summary>Ev-GS: Event-based Gaussian splatting for Efficient and Accurate Radiance Field Rendering
+Authors: Jingqian Wu, Shuo Zhu, Chutian Wang, Edmund Y. Lam
+<details span>
+<summary><b>Abstract</b></summary>
+Computational neuromorphic imaging (CNI) with event cameras offers advantages such as minimal motion blur and enhanced dynamic range, compared to conventional frame-based methods. Existing event-based radiance field rendering methods are built on neural radiance field, which is computationally heavy and slow in reconstruction speed. Motivated by the two aspects, we introduce Ev-GS, the first CNI-informed scheme to infer 3D Gaussian splatting from a monocular event camera, enabling efficient novel view synthesis. Leveraging 3D Gaussians with pure event-based supervision, Ev-GS overcomes challenges such as the detection of fast-moving objects and insufficient lighting. Experimental results show that Ev-GS outperforms the method that takes frame-based signals as input by rendering realistic views with reduced blurring and improved visual quality. Moreover, it demonstrates competitive reconstruction quality and reduced computing occupancy compared to existing methods, which paves the way to a highly efficient CNI approach for signal processing.
+
+![image](https://github.com/user-attachments/assets/3241bc0a-534e-4a1b-8845-7aa04f35b032)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.11343) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Gaussian Splatting LK
+Authors: Liuyue Xie, Joel Julin, Koichiro Niinuma, Laszlo A. Jeni
+<details span>
+<summary><b>Abstract</b></summary>
+Reconstructing dynamic 3D scenes from 2D images and generating diverse views over time presents a significant challenge due to the inherent complexity and temporal dynamics involved. While recent advancements in neural implicit models and dynamic Gaussian Splatting have shown promise, limitations persist, particularly in accurately capturing the underlying geometry of highly dynamic scenes. Some approaches address this by incorporating strong semantic and geometric priors through diffusion models. However, we explore a different avenue by investigating the potential of regularizing the native warp field within the dynamic Gaussian Splatting framework. Our method is grounded on the key intuition that an accurate warp field should produce continuous space-time motions. While enforcing the motion constraints on warp fields is non-trivial, we show that we can exploit knowledge innate to the forward warp field network to derive an analytical velocity field, then time integrate for scene flows to effectively constrain both the 2D motion and 3D positions of the Gaussians. This derived Lucas-Kanade style analytical regularization enables our method to achieve superior performance in reconstructing highly dynamic scenes, even under minimal camera movement, extending the boundaries of what existing dynamic Gaussian Splatting frameworks can achieve.
+
+![image](https://github.com/user-attachments/assets/50bf8e84-85bb-484a-9473-a41674e9ac76)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.11309) | [⌨️ Code] | [🌐 Project Page]
 
 
 <br>
@@ -4150,6 +4202,35 @@ Estimating depth from a single image is a challenging visual task. Compared to r
 </details>
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.08187) | [⌨️ Code] | [🌐 Project Page](https://ruijiezhu94.github.io/ScaleDepth/)
+
+
+#### <summary>Efficient Training with Denoised Neural Weights
+Authors: Yifan Gong, Zheng Zhan, Yanyu Li, Yerlan Idelbayev, Andrey Zharkov, Kfir Aberman, Sergey Tulyakov, Yanzhi Wang, Jian Ren
+<details span>
+<summary><b>Abstract</b></summary>
+Good weight initialization serves as an effective measure to reduce the training cost of a deep neural network (DNN) model. The choice of how to initialize parameters is challenging and may require manual tuning, which can be time-consuming and prone to human error. To overcome such limitations, this work takes a novel step towards building a weight generator to synthesize the neural weights for initialization. We use the image-to-image translation task with generative adversarial networks (GANs) as an example due to the ease of collecting model weights spanning a wide range. Specifically, we first collect a dataset with various image editing concepts and their corresponding trained weights, which are later used for the training of the weight generator. To address the different characteristics among layers and the substantial number of weights to be predicted, we divide the weights into equal-sized blocks and assign each block an index. Subsequently, a diffusion model is trained with such a dataset using both text conditions of the concept and the block indexes. By initializing the image translation model with the denoised weights predicted by our diffusion model, the training requires only 43.3 seconds. Compared to training from scratch (i.e., Pix2pix), we achieve a 15x training time acceleration for a new concept while obtaining even better image generation quality.
+
+![image](https://github.com/user-attachments/assets/e025a189-a9d2-4574-a8bc-d9d9df0a3a51)
+
+
+</details>
+
+[📃 arXiv:2407] | [⌨️ Code](https://github.com/Yifanfanfanfan/Yifanfanfanfan.github.io/tree/main/e2gan) | [🌐 Project Page](https://yifanfanfanfan.github.io/denoised-weights/)
+
+#### <summary>Segment, Lift and Fit: Automatic 3D Shape Labeling from 2D Prompts
+Authors: Jianhao Li, Tianyu Sun, Zhongdao Wang, Enze Xie, Bailan Feng, Hongbo Zhang, Ze Yuan, Ke Xu, Jiaheng Liu, Ping Luo
+<details span>
+<summary><b>Abstract</b></summary>
+This paper proposes an algorithm for automatically labeling 3D objects from 2D point or box prompts, especially focusing on applications in autonomous driving. Unlike previous arts, our auto-labeler predicts 3D shapes instead of bounding boxes and does not require training on a specific dataset. We propose a Segment, Lift, and Fit (SLF) paradigm to achieve this goal. Firstly, we segment high-quality instance masks from the prompts using the Segment Anything Model (SAM) and transform the remaining problem into predicting 3D shapes from given 2D masks. Due to the ill-posed nature of this problem, it presents a significant challenge as multiple 3D shapes can project into an identical mask. To tackle this issue, we then lift 2D masks to 3D forms and employ gradient descent to adjust their poses and shapes until the projections fit the masks and the surfaces conform to surrounding LiDAR points. Notably, since we do not train on a specific dataset, the SLF auto-labeler does not overfit to biased annotation patterns in the training set as other methods do. Thus, the generalization ability across different datasets improves. Experimental results on the KITTI dataset demonstrate that the SLF auto-labeler produces high-quality bounding box annotations, achieving an AP@0.5 IoU of nearly 90\%. Detectors trained with the generated pseudo-labels perform nearly as well as those trained with actual ground-truth annotations. Furthermore, the SLF auto-labeler shows promising results in detailed shape predictions, providing a potential alternative for the occupancy annotation of dynamic objects.
+
+![image](https://github.com/user-attachments/assets/36863121-cf96-4a39-854d-3db00538702c)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.11382) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 
 #### <summary>
