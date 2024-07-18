@@ -2704,6 +2704,21 @@ Reconstructing dynamic 3D scenes from 2D images and generating diverse views ove
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.11309) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>Splatfacto-W: A Nerfstudio Implementation of Gaussian Splatting for Unconstrained Photo Collections
+Authors: Congrong Xu, Justin Kerr, Angjoo Kanazawa
+<details span>
+<summary><b>Abstract</b></summary>
+Novel view synthesis from unconstrained in-the-wild image collections remains a significant yet challenging task due to photometric variations and transient occluders that complicate accurate scene reconstruction. Previous methods have approached these issues by integrating per-image appearance features embeddings in Neural Radiance Fields (NeRFs). Although 3D Gaussian Splatting (3DGS) offers faster training and real-time rendering, adapting it for unconstrained image collections is non-trivial due to the substantially different architecture. In this paper, we introduce Splatfacto-W, an approach that integrates per-Gaussian neural color features and per-image appearance embeddings into the rasterization process, along with a spherical harmonics-based background model to represent varying photometric appearances and better depict backgrounds. Our key contributions include latent appearance modeling, efficient transient object handling, and precise background modeling. Splatfacto-W delivers high-quality, real-time novel view synthesis with improved scene consistency in in-the-wild scenarios. Our method improves the Peak Signal-to-Noise Ratio (PSNR) by an average of 5.3 dB compared to 3DGS, enhances training speed by 150 times compared to NeRF-based methods, and achieves a similar rendering speed to 3DGS.
+
+![image](https://github.com/user-attachments/assets/8c35b82a-0f5c-49ef-9c60-04f112b8bd64)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.12306) | [⌨️ Code](https://github.com/KevinXu02/splatfacto-w) | [🌐 Project Page](https://kevinxu02.github.io/splatfactow/)
+
+
+
 
 <br>
 <br>
@@ -2904,8 +2919,45 @@ Neural Radiance Fields (NeRFs) have become increasingly popular because of their
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.10267) | [⌨️ Code](https://github.com/MyNiuuu/RS-NeRF) | [🌐 Project Page]
 
+#### <summary>Invertible Neural Warp for NeRF
+Authors: Shin-Fang Chng, Ravi Garg, Hemanth Saratchandran, Simon Lucey
+<details span>
+<summary><b>Abstract</b></summary>
+This paper tackles the simultaneous optimization of pose and Neural Radiance Fields (NeRF). Departing from the conventional practice of using explicit global representations for camera pose, we propose a novel overparameterized representation that models camera poses as learnable rigid warp functions. We establish that modeling the rigid warps must be tightly coupled with constraints and regularization imposed. Specifically, we highlight the critical importance of enforcing invertibility when learning rigid warp functions via neural network and propose the use of an Invertible Neural Network (INN) coupled with a geometry-informed constraint for this purpose. We present results on synthetic and real-world datasets, and demonstrate that our approach outperforms existing baselines in terms of pose estimation and high-fidelity reconstruction due to enhanced optimization convergence.
+
+![image](https://github.com/user-attachments/assets/364a2073-0f85-4f9d-93b0-f6f18e09a360)
 
 
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.12354) | [⌨️ Code](https://github.com/sfchng/neural_invertible_warp) | [🌐 Project Page](https://sfchng.github.io/ineurowarping-github.io/)
+
+
+#### <summary>Invertible Neural Warp for NeRF
+Authors: Shin-Fang Chng, Ravi Garg, Hemanth Saratchandran, Simon Lucey
+<details span>
+<summary><b>Abstract</b></summary>
+This paper tackles the simultaneous optimization of pose and Neural Radiance Fields (NeRF). Departing from the conventional practice of using explicit global representations for camera pose, we propose a novel overparameterized representation that models camera poses as learnable rigid warp functions. We establish that modeling the rigid warps must be tightly coupled with constraints and regularization imposed. Specifically, we highlight the critical importance of enforcing invertibility when learning rigid warp functions via neural network and propose the use of an Invertible Neural Network (INN) coupled with a geometry-informed constraint for this purpose. We present results on synthetic and real-world datasets, and demonstrate that our approach outperforms existing baselines in terms of pose estimation and high-fidelity reconstruction due to enhanced optimization convergence.
+
+![image](https://github.com/user-attachments/assets/364a2073-0f85-4f9d-93b0-f6f18e09a360)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.12354) | [⌨️ Code](https://github.com/sfchng/neural_invertible_warp) | [🌐 Project Page](https://sfchng.github.io/ineurowarping-github.io/)
+
+#### <summary>Efficient Depth-Guided Urban View Synthesis
+Authors: Sheng Miao, Jiaxin Huang, Dongfeng Bai, Weichao Qiu, Bingbing Liu, Andreas Geiger, Yiyi Liao
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advances in implicit scene representation enable high-fidelity street view novel view synthesis. However, existing methods optimize a neural radiance field for each scene, relying heavily on dense training images and extensive computation resources. To mitigate this shortcoming, we introduce a new method called Efficient Depth-Guided Urban View Synthesis (EDUS) for fast feed-forward inference and efficient per-scene fine-tuning. Different from prior generalizable methods that infer geometry based on feature matching, EDUS leverages noisy predicted geometric priors as guidance to enable generalizable urban view synthesis from sparse input images. The geometric priors allow us to apply our generalizable model directly in the 3D space, gaining robustness across various sparsity levels. Through comprehensive experiments on the KITTI-360 and Waymo datasets, we demonstrate promising generalization abilities on novel street scenes. Moreover, our results indicate that EDUS achieves state-of-the-art performance in sparse view settings when combined with fast test-time optimization.
+
+![image](https://github.com/user-attachments/assets/0f9e894b-c23d-4166-8224-d3fb0e99fb16)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.12395) | [⌨️ Code] | [🌐 Project Page](https://xdimlab.github.io/EDUS/)
 
 
 <br>
@@ -4230,7 +4282,45 @@ This paper proposes an algorithm for automatically labeling 3D objects from 2D p
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.11382) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>GroundUp: Rapid Sketch-Based 3D City Massing
+Authors: Gizem Esra Unlu, Mohamed Sayed, Yulia Gryaditskaya, Gabriel Brostow
+<details span>
+<summary><b>Abstract</b></summary>
+We propose GroundUp, the first sketch-based ideation tool for 3D city massing of urban areas. We focus on early-stage urban design, where sketching is a common tool and the design starts from balancing building volumes (masses) and open spaces. With Human-Centered AI in mind, we aim to help architects quickly revise their ideas by easily switching between 2D sketches and 3D models, allowing for smoother iteration and sharing of ideas. Inspired by feedback from architects and existing workflows, our system takes as a first input a user sketch of multiple buildings in a top-down view. The user then draws a perspective sketch of the envisioned site. Our method is designed to exploit the complementarity of information in the two sketches and allows users to quickly preview and adjust the inferred 3D shapes. Our model has two main components. First, we propose a novel sketch-to-depth prediction network for perspective sketches that exploits top-down sketch shapes. Second, we use depth cues derived from the perspective sketch as a condition to our diffusion model, which ultimately completes the geometry in a top-down view. Thus, our final 3D geometry is represented as a heightfield, allowing users to construct the city `from the ground up'.
 
+![image](https://github.com/user-attachments/assets/09fc7dfd-0b75-44e1-83c8-051023c57173)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.12739) | [⌨️ Code] | [🌐 Project Page](http://visual.cs.ucl.ac.uk/pubs/groundup/index.html)
+
+#### <summary>SG-NeRF: Neural Surface Reconstruction with Scene Graph Optimization
+Authors: Yiyang Chen, Siyan Dong, Xulong Wang, Lulu Cai, Youyi Zheng, Yanchao Yang
+<details span>
+<summary><b>Abstract</b></summary>
+3D surface reconstruction from images is essential for numerous applications. Recently, Neural Radiance Fields (NeRFs) have emerged as a promising framework for 3D modeling. However, NeRFs require accurate camera poses as input, and existing methods struggle to handle significantly noisy pose estimates (i.e., outliers), which are commonly encountered in real-world scenarios. To tackle this challenge, we present a novel approach that optimizes radiance fields with scene graphs to mitigate the influence of outlier poses. Our method incorporates an adaptive inlier-outlier confidence estimation scheme based on scene graphs, emphasizing images of high compatibility with the neighborhood and consistency in the rendering quality. We also introduce an effective intersection-over-union (IoU) loss to optimize the camera pose and surface geometry, together with a coarse-to-fine strategy to facilitate the training. Furthermore, we propose a new dataset containing typical outlier poses for a detailed evaluation. Experimental results on various datasets consistently demonstrate the effectiveness and superiority of our method over existing approaches, showcasing its robustness in handling outliers and producing high-quality 3D reconstructions.
+
+![image](https://github.com/user-attachments/assets/dd6a8f2d-2b93-4274-9443-7fcf1596e392)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.12667) | [⌨️ Code](https://github.com/Iris-cyy/SG-NeRF) | [🌐 Project Page]
+
+
+#### <summary>InfoNorm: Mutual Information Shaping of Normals for Sparse-View Reconstruction
+Authors: Xulong Wang, Siyan Dong, Youyi Zheng, Yanchao Yang
+<details span>
+<summary><b>Abstract</b></summary>
+3D surface reconstruction from multi-view images is essential for scene understanding and interaction. However, complex indoor scenes pose challenges such as ambiguity due to limited observations. Recent implicit surface representations, such as Neural Radiance Fields (NeRFs) and signed distance functions (SDFs), employ various geometric priors to resolve the lack of observed information. Nevertheless, their performance heavily depends on the quality of the pre-trained geometry estimation models. To ease such dependence, we propose regularizing the geometric modeling by explicitly encouraging the mutual information among surface normals of highly correlated scene points. In this way, the geometry learning process is modulated by the second-order correlations from noisy (first-order) geometric priors, thus eliminating the bias due to poor generalization. Additionally, we introduce a simple yet effective scheme that utilizes semantic and geometric features to identify correlated points, enhancing their mutual information accordingly. The proposed technique can serve as a plugin for SDF-based neural surface representations. Our experiments demonstrate the effectiveness of the proposed in improving the surface reconstruction quality of major states of the arts.
+
+![image](https://github.com/user-attachments/assets/75855334-e4f7-4049-a3c9-30907fe1cc02)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.12661) | [⌨️ Code](https://github.com/Muliphein/InfoNorm) | [🌐 Project Page]
 
 
 #### <summary>
