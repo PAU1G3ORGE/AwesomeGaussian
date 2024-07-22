@@ -2720,6 +2720,19 @@ Novel view synthesis from unconstrained in-the-wild image collections remains a 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.12306) | [⌨️ Code](https://github.com/KevinXu02/splatfacto-w) | [🌐 Project Page](https://kevinxu02.github.io/splatfactow/)
 
 
+#### <summary>GaussianBeV: 3D Gaussian Representation meets Perception Models for BeV Segmentation
+Authors: Florian Chabot, Nicolas Granger, Guillaume Lapouge
+<details span>
+<summary><b>Abstract</b></summary>
+The Bird's-eye View (BeV) representation is widely used for 3D perception from multi-view camera images. It allows to merge features from different cameras into a common space, providing a unified representation of the 3D scene. The key component is the view transformer, which transforms image views into the BeV. However, actual view transformer methods based on geometry or cross-attention do not provide a sufficiently detailed representation of the scene, as they use a sub-sampling of the 3D space that is non-optimal for modeling the fine structures of the environment. In this paper, we propose GaussianBeV, a novel method for transforming image features to BeV by finely representing the scene using a set of 3D gaussians located and oriented in 3D space. This representation is then splattered to produce the BeV feature map by adapting recent advances in 3D representation rendering based on gaussian splatting. GaussianBeV is the first approach to use this 3D gaussian modeling and 3D scene rendering process online, i.e. without optimizing it on a specific scene and directly integrated into a single stage model for BeV scene understanding. Experiments show that the proposed representation is highly effective and place GaussianBeV as the new state-of-the-art on the BeV semantic segmentation task on the nuScenes dataset.
+
+![image](https://github.com/user-attachments/assets/005469fb-024a-42dd-b115-5ac666ba2bf3)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.14108) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 <br>
@@ -2935,18 +2948,6 @@ This paper tackles the simultaneous optimization of pose and Neural Radiance Fie
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.12354) | [⌨️ Code](https://github.com/sfchng/neural_invertible_warp) | [🌐 Project Page](https://sfchng.github.io/ineurowarping-github.io/)
 
 
-#### <summary>Invertible Neural Warp for NeRF
-Authors: Shin-Fang Chng, Ravi Garg, Hemanth Saratchandran, Simon Lucey
-<details span>
-<summary><b>Abstract</b></summary>
-This paper tackles the simultaneous optimization of pose and Neural Radiance Fields (NeRF). Departing from the conventional practice of using explicit global representations for camera pose, we propose a novel overparameterized representation that models camera poses as learnable rigid warp functions. We establish that modeling the rigid warps must be tightly coupled with constraints and regularization imposed. Specifically, we highlight the critical importance of enforcing invertibility when learning rigid warp functions via neural network and propose the use of an Invertible Neural Network (INN) coupled with a geometry-informed constraint for this purpose. We present results on synthetic and real-world datasets, and demonstrate that our approach outperforms existing baselines in terms of pose estimation and high-fidelity reconstruction due to enhanced optimization convergence.
-
-![image](https://github.com/user-attachments/assets/364a2073-0f85-4f9d-93b0-f6f18e09a360)
-
-
-</details>
-
-[📃 arXiv:2407](https://arxiv.org/pdf/2407.12354) | [⌨️ Code](https://github.com/sfchng/neural_invertible_warp) | [🌐 Project Page](https://sfchng.github.io/ineurowarping-github.io/)
 
 #### <summary>Efficient Depth-Guided Urban View Synthesis
 Authors: Sheng Miao, Jiaxin Huang, Dongfeng Bai, Weichao Qiu, Bingbing Liu, Andreas Geiger, Yiyi Liao
@@ -2960,6 +2961,22 @@ Recent advances in implicit scene representation enable high-fidelity street vie
 </details>
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.12395) | [⌨️ Code] | [🌐 Project Page](https://xdimlab.github.io/EDUS/)
+
+
+#### <summary>SparseCraft: Few-Shot Neural Reconstruction through Stereopsis Guided Geometric Linearization
+Authors: Mae Younes, Amine Ouasfi, Adnane Boukhayma
+<details span>
+<summary><b>Abstract</b></summary>
+We present a novel approach for recovering 3D shape and view dependent appearance from a few colored images, enabling efficient 3D reconstruction and novel view synthesis. Our method learns an implicit neural representation in the form of a Signed Distance Function (SDF) and a radiance field. The model is trained progressively through ray marching enabled volumetric rendering, and regularized with learning-free multi-view stereo (MVS) cues. Key to our contribution is a novel implicit neural shape function learning strategy that encourages our SDF field to be as linear as possible near the level-set, hence robustifying the training against noise emanating from the supervision and regularization signals. Without using any pretrained priors, our method, called SparseCraft, achieves state-of-the-art performances both in novel-view synthesis and reconstruction from sparse views in standard benchmarks, while requiring less than 10 minutes for training.
+
+![image](https://github.com/user-attachments/assets/18dc3077-b499-4ff2-9129-1607a2dd16e7)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.14257) | [⌨️ Code](https://github.com/maeyounes/SparseCraft) | [🌐 Project Page](https://sparsecraft.github.io/)
+
+
 
 
 <br>
