@@ -3010,6 +3010,22 @@ Neural surface reconstruction has been shown to be powerful for recovering dense
 [📃 arXiv:2306](https://arxiv.org/pdf/2306.03092) | [⌨️ Code](https://github.com/nvlabs/neuralangelo) | [🌐 Project Page](https://research.nvidia.com/labs/dir/neuralangelo/)
 
 
+
+#### <summary>Visual Geometry Grounded Deep Structure From Motion
+Authors: Jianyuan Wang, Nikita Karaev, Christian Rupprecht, David Novotny
+<details span>
+<summary><b>Abstract</b></summary>
+Structure-from-motion (SfM) is a long-standing problem in the computer vision community, which aims to reconstruct the camera poses and 3D structure of a scene from a set of unconstrained 2D images. Classical frameworks solve this problem in an incremental manner by detecting and matching keypoints, registering images, triangulating 3D points, and conducting bundle adjustment. Recent research efforts have predominantly revolved around harnessing the power of deep learning techniques to enhance specific elements (e.g., keypoint matching), but are still based on the original, non-differentiable pipeline. Instead, we propose a new deep pipeline VGGSfM, where each component is fully differentiable and thus can be trained in an end-to-end manner. To this end, we introduce new mechanisms and simplifications. First, we build on recent advances in deep 2D point tracking to extract reliable pixel-accurate tracks, which eliminates the need for chaining pairwise matches. Furthermore, we recover all cameras simultaneously based on the image and track features instead of gradually registering cameras. Finally, we optimise the cameras and triangulate 3D points via a differentiable bundle adjustment layer. We attain state-of-the-art performance on three popular datasets, CO3D, IMC Phototourism, and ETH3D.
+
+![image](https://github.com/user-attachments/assets/488e4803-ed40-407d-a0e1-92619bf397d6)
+
+
+</details>
+
+[📃 arXiv:2312](https://arxiv.org/pdf/2312.04563) | [⌨️ Code] | [🌐 Project Page](https://vggsfm.github.io/)
+
+
+
 #### <summary>Zero-Shot Metric Depth with a Field-of-View Conditioned Diffusion Model
 Authors: Saurabh Saxena, Junhwa Hur, Charles Herrmann, Deqing Sun, David J. Fleet
 <details span>
@@ -4323,6 +4339,21 @@ Authors: Xulong Wang, Siyan Dong, Youyi Zheng, Yanchao Yang
 </details>
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.12661) | [⌨️ Code](https://github.com/Muliphein/InfoNorm) | [🌐 Project Page]
+
+#### <summary>SCAPE: A Simple and Strong Category-Agnostic Pose Estimator
+Authors: Yujia Liang, Zixuan Ye, Wenze Liu, Hao Lu
+<details span>
+<summary><b>Abstract</b></summary>
+Category-Agnostic Pose Estimation (CAPE) aims to localize keypoints on an object of any category given few exemplars in an in-context manner. Prior arts involve sophisticated designs, e.g., sundry modules for similarity calculation and a two-stage framework, or takes in extra heatmap generation and supervision. We notice that CAPE is essentially a task about feature matching, which can be solved within the attention process. Therefore we first streamline the architecture into a simple baseline consisting of several pure self-attention layers and an MLP regression head -- this simplification means that one only needs to consider the attention quality to boost the performance of CAPE. Towards an effective attention process for CAPE, we further introduce two key modules: i) a global keypoint feature perceptor to inject global semantic information into support keypoints, and ii) a keypoint attention refiner to enhance inter-node correlation between keypoints. They jointly form a Simple and strong Category-Agnostic Pose Estimator (SCAPE). Experimental results show that SCAPE outperforms prior arts by 2.2 and 1.3 PCK under 1-shot and 5-shot settings with faster inference speed and lighter model capacity, excelling in both accuracy and efficiency.
+
+![image](https://github.com/user-attachments/assets/958a1ec9-9cd7-43c5-9df4-1a88ea4fffd7)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.13483) | [⌨️ Code](https://github.com/tiny-smart/SCAPE?tab=readme-ov-file) | [🌐 Project Page]
+
+
 
 
 #### <summary>
