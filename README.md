@@ -4353,8 +4353,30 @@ Category-Agnostic Pose Estimation (CAPE) aims to localize keypoints on an object
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.13483) | [⌨️ Code](https://github.com/tiny-smart/SCAPE?tab=readme-ov-file) | [🌐 Project Page]
 
+#### <summary>Implicit Filtering for Learning Neural Signed Distance Functions from 3D Point Clouds
+Authors: Shengtao Li, Ge Gao, Yudong Liu, Ming Gu, Yu-Shen Liu
+<details span>
+<summary><b>Abstract</b></summary>
+Neural signed distance functions (SDFs) have shown powerful ability in fitting the shape geometry. However, inferring continuous signed distance fields from discrete unoriented point clouds still remains a challenge. The neural network typically fits the shape with a rough surface and omits fine-grained geometric details such as shape edges and corners. In this paper, we propose a novel non-linear implicit filter to smooth the implicit field while preserving high-frequency geometry details. Our novelty lies in that we can filter the surface (zero level set) by the neighbor input points with gradients of the signed distance field. By moving the input raw point clouds along the gradient, our proposed implicit filtering can be extended to non-zero level sets to keep the promise consistency between different level sets, which consequently results in a better regularization of the zero level set. We conduct comprehensive experiments in surface reconstruction from objects and complex scene point clouds, the numerical and visual comparisons demonstrate our improvements over the state-of-the-art methods under the widely used benchmarks.
+
+![image](https://github.com/user-attachments/assets/db3c8d86-438d-41f7-b3e7-c9f4f066cb7f)
+
+</details>
+
+[📃 arXiv:2407])(https://arxiv.org/pdf/2407.13342) | [⌨️ Code] | [🌐 Project Page](https://list17.github.io/ImplicitFilter)
+
+#### <summary>GenRC: Generative 3D Room Completion from Sparse Image Collections
+Authors: Ming-Feng Li, Yueh-Feng Ku, Hong-Xuan Yen, Chi Liu, Yu-Lun Liu, Albert Y. C. Chen, Cheng-Hao Kuo, Min Sun
+<details span>
+<summary><b>Abstract</b></summary>
+Sparse RGBD scene completion is a challenging task especially when considering consistent textures and geometries throughout the entire scene. Different from existing solutions that rely on human-designed text prompts or predefined camera trajectories, we propose GenRC, an automated training-free pipeline to complete a room-scale 3D mesh with high-fidelity textures. To achieve this, we first project the sparse RGBD images to a highly incomplete 3D mesh. Instead of iteratively generating novel views to fill in the void, we utilized our proposed E-Diffusion to generate a view-consistent panoramic RGBD image which ensures global geometry and appearance consistency. Furthermore, we maintain the input-output scene stylistic consistency through textual inversion to replace human-designed text prompts. To bridge the domain gap among datasets, E-Diffusion leverages models trained on large-scale datasets to generate diverse appearances. GenRC outperforms state-of-the-art methods under most appearance and geometric metrics on ScanNet and ARKitScenes datasets, even though GenRC is not trained on these datasets nor using predefined camera trajectories.
+
+![image](https://github.com/user-attachments/assets/b72c0d14-7adc-4c8a-ba1b-55b131a8fd9d)
 
 
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.12939) | [⌨️ Code](https://github.com/minfenli/GenRC) | [🌐 Project Page](https://minfenli.github.io/GenRC/)
 
 #### <summary>
 Authors: 
