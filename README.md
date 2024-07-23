@@ -774,7 +774,7 @@ Very large captures typically have sparse coverage of the scene, presenting many
 
 </details>
 
-[📃 2405](https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/hierarchical-3d-gaussians_low.pdf) | [📃 arXiv:2406](https://arxiv.org/pdf/2406.12080) | [⌨️ Code] | [🌐 Project Page](https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/)
+[📃 2405](https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/hierarchical-3d-gaussians_low.pdf) | [📃 arXiv:2406](https://arxiv.org/pdf/2406.12080) | [⌨️ Code](https://github.com/graphdeco-inria/hierarchical-3d-gaussians) | [🌐 Project Page](https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/)
 
 
 #### <summary>S3Gaussian: Self-Supervised Street Gaussians for Autonomous Driving
@@ -898,7 +898,18 @@ Authors: Hexu Zhao, Haoyang Weng, Daohan Lu, Ang Li, Jinyang Li, Aurojit Panda, 
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.18533) | [⌨️ Code](https://github.com/nyu-systems/Grendel-GS) | [🌐 Project Page](https://daohanlu.github.io/scaling-up-3dgs/)
 
+#### <summary>Enhancement of 3D Gaussian Splatting using Raw Mesh for Photorealistic Recreation of Architectures
 
+Authors: Ruizhe Wang, Chunliang Hua, Tomakayev Shingys, Mengyuan Niu, Qingxin Yang, Lizhong Gao, Yi Zheng, Junyan Yang, Qiao Wang
+<details span>
+<summary><b>Abstract</b></summary>
+The photorealistic reconstruction and rendering of architectural scenes have extensive applications in industries such as film, games, and transportation. It also plays an important role in urban planning, architectural design, and the city's promotion, especially in protecting historical and cultural relics. The 3D Gaussian Splatting, due to better performance over NeRF, has become a mainstream technology in 3D reconstruction. Its only input is a set of images but it relies heavily on geometric parameters computed by the SfM process. At the same time, there is an existing abundance of raw 3D models, that could inform the structural perception of certain buildings but cannot be applied. In this paper, we propose a straightforward method to harness these raw 3D models to guide 3D Gaussians in capturing the basic shape of the building and improve the visual quality of textures and details when photos are captured non-systematically. This exploration opens up new possibilities for improving the effectiveness of 3D reconstruction techniques in the field of architectural design.
+
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.15435) | [⌨️ Code] | [🌐 Project Page]
 
 <br>
 <br>
@@ -2735,6 +2746,21 @@ The Bird's-eye View (BeV) representation is widely used for 3D perception from m
 
 
 
+#### <summary>6DGS: 6D Pose Estimation from a Single Image and a 3D Gaussian Splatting Model
+Authors: Matteo Bortolon, Theodore Tsesmelis, Stuart James, Fabio Poiesi, Alessio Del Bue
+<details span>
+<summary><b>Abstract</b></summary>
+We propose 6DGS to estimate the camera pose of a target RGB image given a 3D Gaussian Splatting (3DGS) model representing the scene. 6DGS avoids the iterative process typical of analysis-by-synthesis methods (e.g. iNeRF) that also require an initialization of the camera pose in order to converge. Instead, our method estimates a 6DoF pose by inverting the 3DGS rendering process. Starting from the object surface, we define a radiant Ellicell that uniformly generates rays departing from each ellipsoid that parameterize the 3DGS model. Each Ellicell ray is associated with the rendering parameters of each ellipsoid, which in turn is used to obtain the best bindings between the target image pixels and the cast rays. These pixel-ray bindings are then ranked to select the best scoring bundle of rays, which their intersection provides the camera center and, in turn, the camera rotation. The proposed solution obviates the necessity of an "a priori" pose for initialization, and it solves 6DoF pose estimation in closed form, without the need for iterations. Moreover, compared to the existing Novel View Synthesis (NVS) baselines for pose estimation, 6DGS can improve the overall average rotational accuracy by 12% and translation accuracy by 22% on real scenes, despite not requiring any initialization pose. At the same time, our method operates near real-time, reaching 15fps on consumer hardware.
+
+![image](https://github.com/user-attachments/assets/0a15b55d-0d93-430f-855c-5d319675b42c)
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.15484) | [⌨️ Code](https://github.com/mbortolon97/6dgs) | [🌐 Project Page](https://mbortolon97.github.io/6dgs/)
+
+
+
+
 <br>
 <br>
 
@@ -4422,6 +4448,22 @@ Sparse RGBD scene completion is a challenging task especially when considering c
 </details>
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.12939) | [⌨️ Code](https://github.com/minfenli/GenRC) | [🌐 Project Page](https://minfenli.github.io/GenRC/)
+
+#### <summary>Learning Where to Look: Self-supervised Viewpoint Selection for Active Localization using Geometrical Information
+Authors: Luca Di Giammarino, Boyang Sun, Giorgio Grisetti, Marc Pollefeys, Hermann Blum, Daniel Barath
+<details span>
+<summary><b>Abstract</b></summary>
+Accurate localization in diverse environments is a fundamental challenge in computer vision and robotics. The task involves determining a sensor's precise position and orientation, typically a camera, within a given space. Traditional localization methods often rely on passive sensing, which may struggle in scenarios with limited features or dynamic environments. In response, this paper explores the domain of active localization, emphasizing the importance of viewpoint selection to enhance localization accuracy. Our contributions involve using a data-driven approach with a simple architecture designed for real-time operation, a self-supervised data training method, and the capability to consistently integrate our map into a planning framework tailored for real-world robotics applications. Our results demonstrate that our method performs better than the existing one, targeting similar problems and generalizing on synthetic and real data. We also release an open-source implementation to benefit the community.
+
+![image](https://github.com/user-attachments/assets/57c8de49-2304-4c02-8373-d989c8b629d6)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.15593) | [⌨️ Code](https://github.com/rvp-group/learning-where-to-look) | [🌐 Project Page]
+
+
+
 
 #### <summary>
 Authors: 
