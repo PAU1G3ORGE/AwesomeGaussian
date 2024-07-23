@@ -2976,6 +2976,34 @@ We present a novel approach for recovering 3D shape and view dependent appearanc
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.14257) | [⌨️ Code](https://github.com/maeyounes/SparseCraft) | [🌐 Project Page](https://sparsecraft.github.io/)
 
+#### <summary>BoostMVSNeRFs: Boosting MVS-based NeRFs to Generalizable View Synthesis in Large-scale Scenes
+Authors: Chih-Hai Su, Chih-Yao Hu, Shr-Ruei Tsai, Jie-Ying Lee, Chin-Yang Lin, Yu-Lun Liu
+<details span>
+<summary><b>Abstract</b></summary>
+While Neural Radiance Fields (NeRFs) have demonstrated exceptional quality, their protracted training duration remains a limitation. Generalizable and MVS-based NeRFs, although capable of mitigating training time, often incur tradeoffs in quality. This paper presents a novel approach called BoostMVSNeRFs to enhance the rendering quality of MVS-based NeRFs in large-scale scenes. We first identify limitations in MVS-based NeRF methods, such as restricted viewport coverage and artifacts due to limited input views. Then, we address these limitations by proposing a new method that selects and combines multiple cost volumes during volume rendering. Our method does not require training and can adapt to any MVS-based NeRF methods in a feed-forward fashion to improve rendering quality. Furthermore, our approach is also end-to-end trainable, allowing fine-tuning on specific scenes. We demonstrate the effectiveness of our method through experiments on large-scale datasets, showing significant rendering quality improvements in large-scale scenes and unbounded outdoor scenarios.
+
+![image](https://github.com/user-attachments/assets/4b6edbe0-7b7f-4fbf-bf99-2c4756d3916a)
+
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.15848) | [⌨️ Code](https://github.com/Su-Terry/BoostMVSNeRFs) | [🌐 Project Page](https://su-terry.github.io/BoostMVSNeRFs/)
+
+
+#### <summary>Self-training Room Layout Estimation via Geometry-aware Ray-casting
+Authors: Bolivar Solarte, Chin-Hsuan Wu, Jin-Cheng Jhang, Jonathan Lee, Yi-Hsuan Tsai, Min Sun
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper, we introduce a novel geometry-aware self-training framework for room layout estimation models on unseen scenes with unlabeled data. Our approach utilizes a ray-casting formulation to aggregate multiple estimates from different viewing positions, enabling the computation of reliable pseudo-labels for self-training. In particular, our ray-casting approach enforces multi-view consistency along all ray directions and prioritizes spatial proximity to the camera view for geometry reasoning. As a result, our geometry-aware pseudo-labels effectively handle complex room geometries and occluded walls without relying on assumptions such as Manhattan World or planar room walls. Evaluation on publicly available datasets, including synthetic and real-world scenarios, demonstrates significant improvements in current state-of-the-art layout models without using any human annotation.
+
+![image](https://github.com/user-attachments/assets/80ab66bd-1171-44be-8577-7c173f78ef0a)
+
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.15041) | [⌨️ Code] | [🌐 Project Page]
 
 
 
