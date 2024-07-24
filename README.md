@@ -378,6 +378,32 @@ In the rapidly evolving field of 3D reconstruction, 3D Gaussian Splatting (3DGS)
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.11840) | [⌨️ Code] | [🌐 Project Page](https://mvgsplatting.github.io/)
 
+#### <summary>DHGS: Decoupled Hybrid Gaussian Splatting for Driving Scene
+Authors: Xi Shi, Lingli Chen, Peng Wei, Xi Wu, Tian Jiang, Yonggang Luo, Lecheng Xie
+<details span>
+<summary><b>Abstract</b></summary>
+Existing Gaussian splatting methods struggle to achieve satisfactory novel view synthesis in driving scenes due to the lack of crafty design and geometric constraints of related elements. This paper introduces a novel method called Decoupled Hybrid Gaussian Splatting (DHGS), which aims at promoting the rendering quality of novel view synthesis for driving scenes. The novelty of this work lies in the decoupled and hybrid pixel-level blender for road and non-road layers, without conventional unified differentiable rendering logic for the entire scene, meanwhile maintaining consistent and continuous superimposition through the proposed depth-ordered rendering strategy. Beyond that, an implicit road representation comprised of Signed Distance Field (SDF) is trained to supervise the road surface with subtle geometric attributes. Accompanied by the use of auxiliary transmittance loss and consistency loss, novel images with imperceptible boundary and elevated fidelity are ultimately obtained. Substantial experiments on Waymo dataset prove that DHGS outperforms the state-of-the-art methods.
+
+![image](https://github.com/user-attachments/assets/ba88a8cf-b324-40d8-a0b3-7de6892ea80f)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.16600) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Integrating Meshes and 3D Gaussians for Indoor Scene Reconstruction with SAM Mask Guidance
+Authors: Jiyeop Kim, Jongwoo Lim
+<details span>
+<summary><b>Abstract</b></summary>
+We present a novel approach for 3D indoor scene reconstruction that combines 3D Gaussian Splatting (3DGS) with mesh representations. We use meshes for the room layout of the indoor scene, such as walls, ceilings, and floors, while employing 3D Gaussians for other objects. This hybrid approach leverages the strengths of both representations, offering enhanced flexibility and ease of editing. However, joint training of meshes and 3D Gaussians is challenging because it is not clear which primitive should affect which part of the rendered image. Objects close to the room layout often struggle during training, particularly when the room layout is textureless, which can lead to incorrect optimizations and unnecessary 3D Gaussians. To overcome these challenges, we employ Segment Anything Model (SAM) to guide the selection of primitives. The SAM mask loss enforces each instance to be represented by either Gaussians or meshes, ensuring clear separation and stable training. Furthermore, we introduce an additional densification stage without resetting the opacity after the standard densification. This stage mitigates the degradation of image quality caused by a limited number of 3D Gaussians after the standard densification.
+
+![image](https://github.com/user-attachments/assets/da41901d-cff1-421c-a147-24c5f4ecc74e)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.16173) | [⌨️ Code] | [🌐 Project Page]
 
 
 <br>
@@ -4462,7 +4488,18 @@ Accurate localization in diverse environments is a fundamental challenge in comp
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.15593) | [⌨️ Code](https://github.com/rvp-group/learning-where-to-look) | [🌐 Project Page]
 
+#### <summary>MonoWAD: Weather-Adaptive Diffusion Model for Robust Monocular 3D Object Detection
+Authors: Youngmin Oh, Hyung-Il Kim, Seong Tae Kim, Jung Uk Kim
+<details span>
+<summary><b>Abstract</b></summary>
+Monocular 3D object detection is an important challenging task in autonomous driving. Existing methods mainly focus on performing 3D detection in ideal weather conditions, characterized by scenarios with clear and optimal visibility. However, the challenge of autonomous driving requires the ability to handle changes in weather conditions, such as foggy weather, not just clear weather. We introduce MonoWAD, a novel weather-robust monocular 3D object detector with a weather-adaptive diffusion model. It contains two components: (1) the weather codebook to memorize the knowledge of the clear weather and generate a weather-reference feature for any input, and (2) the weather-adaptive diffusion model to enhance the feature representation of the input feature by incorporating a weather-reference feature. This serves an attention role in indicating how much improvement is needed for the input feature according to the weather conditions. To achieve this goal, we introduce a weather-adaptive enhancement loss to enhance the feature representation under both clear and foggy weather conditions. Extensive experiments under various weather conditions demonstrate that MonoWAD achieves weather-robust monocular 3D object detection.
 
+![image](https://github.com/user-attachments/assets/0ae66e45-a5f0-44fd-bfbf-f48e1ec1a93b)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.16448) | [⌨️ Code](https://github.com/VisualAIKHU/MonoWAD) | [🌐 Project Page]
 
 
 #### <summary>
