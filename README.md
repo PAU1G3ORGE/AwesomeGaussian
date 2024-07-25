@@ -2017,18 +2017,6 @@ We tackle the task of learning dynamic 3D semantic radiance fields given a singl
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.19321) | [⌨️ Code](https://github.com/Isaaclabe/DGD-Dynamic-3D-Gaussians-Distillation) | [🌐 Project Page](https://isaaclabe.github.io/DGD-Website/)
 
 
-#### <summary>3D Neural Edge Reconstruction
-Authors: Lei Li, Songyou Peng, Zehao Yu, Shaohui Liu, Rémi Pautrat, Xiaochuan Yin, Marc Pollefeys
-<details span>
-<summary><b>Abstract</b></summary>
-Real-world objects and environments are predominantly composed of edge features, including straight lines and curves. Such edges are crucial elements for various applications, such as CAD modeling, surface meshing, lane mapping, etc. However, existing traditional methods only prioritize lines over curves for simplicity in geometric modeling. To this end, we introduce EMAP, a new method for learning 3D edge representations with a focus on both lines and curves. Our method implicitly encodes 3D edge distance and direction in Unsigned Distance Functions (UDF) from multi-view edge maps. On top of this neural representation, we propose an edge extraction algorithm that robustly abstracts parametric 3D edges from the inferred edge points and their directions. Comprehensive evaluations demonstrate that our method achieves better 3D edge reconstruction on multiple challenging datasets. We further show that our learned UDF field enhances neural surface reconstruction by capturing more details.
- 
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/b6566200-16c5-4765-bc3b-1453681f5f54)
-
-
-</details>
-
-[📃 arXiv:2405](https://arxiv.org/pdf/2405.19295) | [⌨️ Code](https://github.com/cvg/EMAP) | [🌐 Project Page](https://neural-edge-map.github.io/)
 
 
 #### <summary>LP-3DGS: Learning to Prune 3D Gaussian Splatting
@@ -3386,6 +3374,20 @@ Viewing omnidirectional images (ODIs) in virtual reality (VR) represents a novel
 </details>
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.00351) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>3D Neural Edge Reconstruction
+Authors: Lei Li, Songyou Peng, Zehao Yu, Shaohui Liu, Rémi Pautrat, Xiaochuan Yin, Marc Pollefeys
+<details span>
+<summary><b>Abstract</b></summary>
+Real-world objects and environments are predominantly composed of edge features, including straight lines and curves. Such edges are crucial elements for various applications, such as CAD modeling, surface meshing, lane mapping, etc. However, existing traditional methods only prioritize lines over curves for simplicity in geometric modeling. To this end, we introduce EMAP, a new method for learning 3D edge representations with a focus on both lines and curves. Our method implicitly encodes 3D edge distance and direction in Unsigned Distance Functions (UDF) from multi-view edge maps. On top of this neural representation, we propose an edge extraction algorithm that robustly abstracts parametric 3D edges from the inferred edge points and their directions. Comprehensive evaluations demonstrate that our method achieves better 3D edge reconstruction on multiple challenging datasets. We further show that our learned UDF field enhances neural surface reconstruction by capturing more details.
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/b6566200-16c5-4765-bc3b-1453681f5f54)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.19295) | [⌨️ Code](https://github.com/cvg/EMAP) | [🌐 Project Page](https://neural-edge-map.github.io/)
 
 
 #### <summary>Language-Image Models with 3D Understanding
