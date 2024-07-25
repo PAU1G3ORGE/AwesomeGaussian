@@ -3046,6 +3046,20 @@ In this paper, we introduce a novel geometry-aware self-training framework for r
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.15041) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Efficient Depth-Guided Urban View Synthesis
+Authors: Sheng Miao, Jiaxin Huang, Dongfeng Bai, Weichao Qiu, Bingbing Liu, Andreas Geiger, Yiyi Liao
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advances in implicit scene representation enable high-fidelity street view novel view synthesis. However, existing methods optimize a neural radiance field for each scene, relying heavily on dense training images and extensive computation resources. To mitigate this shortcoming, we introduce a new method called Efficient Depth-Guided Urban View Synthesis (EDUS) for fast feed-forward inference and efficient per-scene fine-tuning. Different from prior generalizable methods that infer geometry based on feature matching, EDUS leverages noisy predicted geometric priors as guidance to enable generalizable urban view synthesis from sparse input images. The geometric priors allow us to apply our generalizable model directly in the 3D space, gaining robustness across various sparsity levels. Through comprehensive experiments on the KITTI-360 and Waymo datasets, we demonstrate promising generalization abilities on novel street scenes. Moreover, our results indicate that EDUS achieves state-of-the-art performance in sparse view settings when combined with fast test-time optimization.
+
+![image](https://github.com/user-attachments/assets/9b7c4759-3947-4cf9-a224-4a6def6fafc6)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.12395) | [⌨️ Code] | [🌐 Project Page](https://xdimlab.github.io/EDUS/)
+
+
 
 <br>
 <br>
