@@ -2787,6 +2787,19 @@ We propose 6DGS to estimate the camera pose of a target RGB image given a 3D Gau
 
 ### NVS
 
+#### <summary>MixNeRF: Modeling a Ray with Mixture Density for Novel View Synthesis from Sparse Inputs
+Authors: Seunghyeon Seo, Donghoon Han, Yeonjin Chang, Nojun Kwak
+<details span>
+<summary><b>Abstract</b></summary>
+Neural Radiance Field (NeRF) has broken new ground in the novel view synthesis due to its simple concept and state-of-the-art quality. However, it suffers from severe performance degradation unless trained with a dense set of images with different camera poses, which hinders its practical applications. Although previous methods addressing this problem achieved promising results, they relied heavily on the additional training resources, which goes against the philosophy of sparse-input novel-view synthesis pursuing the training efficiency. In this work, we propose MixNeRF, an effective training strategy for novel view synthesis from sparse inputs by modeling a ray with a mixture density model. Our MixNeRF estimates the joint distribution of RGB colors along the ray samples by modeling it with mixture of distributions. We also propose a new task of ray depth estimation as a useful training objective, which is highly correlated with 3D scene geometry. Moreover, we remodel the colors with regenerated blending weights based on the estimated ray depth and further improves the robustness for colors and viewpoints. Our MixNeRF outperforms other state-of-the-art methods in various standard benchmarks with superior efficiency of training and inference.
+
+![image](https://github.com/user-attachments/assets/82a5f8e6-94b5-44b8-95f3-22a9c66cc84f)
+
+</details>
+
+[📃 arXiv:2302](https://arxiv.org/pdf/2302.08788) | [⌨️ Code](https://github.com/shawn615/MixNeRF/tree/main?tab=readme-ov-file) | [🌐 Project Page](https://shawn615.github.io/mixnerf/)
+
+
 #### <summary>DiffusioNeRF: Regularizing Neural Radiance Fields with Denoising Diffusion Models
 Authors: Jamie Wynn, Daniyar Turmukhambetov
 <details span>
