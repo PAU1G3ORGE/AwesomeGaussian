@@ -2773,6 +2773,17 @@ We propose 6DGS to estimate the camera pose of a target RGB image given a 3D Gau
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.15484) | [⌨️ Code](https://github.com/mbortolon97/6dgs) | [🌐 Project Page](https://mbortolon97.github.io/6dgs/)
 
 
+#### <summary>3D Gaussian Splatting: Survey, Technologies, Challenges, and Opportunities
+Authors: Yanqi Bao, Tianyu Ding, Jing Huo, Yaoli Liu, Yuxin Li, Wenbin Li, Yang Gao, Jiebo Luo
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has emerged as a prominent technique with the potential to become a mainstream method for 3D representations. It can effectively transform multi-view images into explicit 3D Gaussian representations through efficient training, and achieve real-time rendering of novel views. This survey aims to analyze existing 3DGS-related works from multiple intersecting perspectives, including related tasks, technologies, challenges, and opportunities. The primary objective is to provide newcomers with a rapid understanding of the field and to assist researchers in methodically organizing existing technologies and challenges. Specifically, we delve into the optimization, application, and extension of 3DGS, categorizing them based on their focuses or motivations. Additionally, we summarize and classify nine types of technical modules and corresponding improvements identified in existing works. Based on these analyses, we further examine the common challenges and technologies across various tasks, proposing potential research opportunities.
+
+![image](https://github.com/user-attachments/assets/d59eba55-1d28-4f95-b566-ea37cc589ff6)
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.17418) | [⌨️ Code] | [🌐 Project Page]
 
 
 <br>
