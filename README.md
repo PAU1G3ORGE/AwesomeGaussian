@@ -3083,6 +3083,30 @@ Recent advances in implicit scene representation enable high-fidelity street vie
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.12395) | [⌨️ Code] | [🌐 Project Page](https://xdimlab.github.io/EDUS/)
 
+#### <summary>PIV3CAMS: a multi-camera dataset for multiple computer vision problems and its application to novel view-point synthesis
+Authors: Sohyeong Kim, Martin Danelljan, Radu Timofte, Luc Van Gool, Jean-Philippe Thiran
+<details span>
+<summary><b>Abstract</b></summary>
+The modern approaches for computer vision tasks significantly rely on machine learning, which requires a large number of quality images. While there is a plethora of image datasets with a single type of images, there is a lack of datasets collected from multiple cameras. In this thesis, we introduce Paired Image and Video data from three CAMeraS, namely PIV3CAMS, aimed at multiple computer vision tasks. The PIV3CAMS dataset consists of 8385 pairs of images and 82 pairs of videos taken from three different cameras: Canon D5 Mark IV, Huawei P20, and ZED stereo camera. The dataset includes various indoor and outdoor scenes from different locations in Zurich (Switzerland) and Cheonan (South Korea). Some of the computer vision applications that can benefit from the PIV3CAMS dataset are image/video enhancement, view interpolation, image matching, and much more. We provide a careful explanation of the data collection process and detailed analysis of the data. The second part of this thesis studies the usage of depth information in the view synthesizing task. In addition to the regeneration of a current state-of-the-art algorithm, we investigate several proposed alternative models that integrate depth information geometrically. Through extensive experiments, we show that the effect of depth is crucial in small view changes. Finally, we apply our model to the introduced PIV3CAMS dataset to synthesize novel target views as an example application of PIV3CAMS.
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.18695) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>IOVS4NeRF:Incremental Optimal View Selection for Large-Scale NeRFs
+Authors: Jingpeng Xie, Shiyu Tan, Yuanlei Wang, Yizhen Lao
+<details span>
+<summary><b>Abstract</b></summary>
+Urban-level three-dimensional reconstruction for modern applications demands high rendering fidelity while minimizing computational costs. The advent of Neural Radiance Fields (NeRF) has enhanced 3D reconstruction, yet it exhibits artifacts under multiple viewpoints. In this paper, we propose a new NeRF framework method to address these issues. Our method uses image content and pose data to iteratively plan the next best view. A crucial aspect of this method involves uncertainty estimation, guiding the selection of views with maximum information gain from a candidate set. This iterative process enhances rendering quality over time. Simultaneously, we introduce the Vonoroi diagram and threshold sampling together with flight classifier to boost the efficiency, while keep the original NeRF network intact. It can serve as a plug-in tool to assist in better rendering, outperforming baselines and similar prior works.
+
+![image](https://github.com/user-attachments/assets/4dee1e3f-1f31-46b9-b1b7-3809f2710bfd)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.18611) | [⌨️ Code] | [🌐 Project Page]
 
 
 <br>
