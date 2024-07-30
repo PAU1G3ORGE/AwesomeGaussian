@@ -2786,6 +2786,19 @@ Authors: Yanqi Bao, Tianyu Ding, Jing Huo, Yaoli Liu, Yuxin Li, Wenbin Li, Yang 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.17418) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>ScalingGaussian: Enhancing 3D Content Creation with Generative Gaussian Splatting
+Authors: Shen Chen, Jiale Zhou, Zhongyu Jiang, Tianfang Zhang, Zongkai Wu, Jenq-Neng Hwang, Lei Li
+<details span>
+<summary><b>Abstract</b></summary>
+The creation of high-quality 3D assets is paramount for applications in digital heritage preservation, entertainment, and robotics. Traditionally, this process necessitates skilled professionals and specialized software for the modeling, texturing, and rendering of 3D objects. However, the rising demand for 3D assets in gaming and virtual reality (VR) has led to the creation of accessible image-to-3D technologies, allowing non-professionals to produce 3D content and decreasing dependence on expert input. Existing methods for 3D content generation struggle to simultaneously achieve detailed textures and strong geometric consistency. We introduce a novel 3D content creation framework, ScalingGaussian, which combines 3D and 2D diffusion models to achieve detailed textures and geometric consistency in generated 3D assets. Initially, a 3D diffusion model generates point clouds, which are then densified through a process of selecting local regions, introducing Gaussian noise, followed by using local density-weighted selection. To refine the 3D gaussians, we utilize a 2D diffusion model with Score Distillation Sampling (SDS) loss, guiding the 3D Gaussians to clone and split. Finally, the 3D Gaussians are converted into meshes, and the surface textures are optimized using Mean Square Error(MSE) and Gradient Profile Prior(GPP) losses. Our method addresses the common issue of sparse point clouds in 3D diffusion, resulting in improved geometric structure and detailed textures. Experiments on image-to-3D tasks demonstrate that our approach efficiently generates high-quality 3D assets.
+
+![image](https://github.com/user-attachments/assets/81caff75-261c-4689-89f2-cd27ec2e7492)
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.19035) | [⌨️ Code] | [🌐 Project Page]
+
+
 <br>
 <br>
 
@@ -4564,6 +4577,46 @@ Monocular 3D object detection is an important challenging task in autonomous dri
 </details>
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.16448) | [⌨️ Code](https://github.com/VisualAIKHU/MonoWAD) | [🌐 Project Page]
+
+#### <summary>Global Structure-from-Motion Revisited
+Authors: Linfei Pan, Dániel Baráth, Marc Pollefeys, Johannes L. Schönberger
+<details span>
+<summary><b>Abstract</b></summary>
+Recovering 3D structure and camera motion from images has been a long-standing focus of computer vision research and is known as Structure-from-Motion (SfM). Solutions to this problem are categorized into incremental and global approaches. Until now, the most popular systems follow the incremental paradigm due to its superior accuracy and robustness, while global approaches are drastically more scalable and efficient. With this work, we revisit the problem of global SfM and propose GLOMAP as a new general-purpose system that outperforms the state of the art in global SfM. In terms of accuracy and robustness, we achieve results on-par or superior to COLMAP, the most widely used incremental SfM, while being orders of magnitude faster.
+
+![image](https://github.com/user-attachments/assets/2e8cffe5-caa7-4713-bbc4-2d54011a462a)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.20219) | [⌨️ Code](https://github.com/colmap/glomap) | [🌐 Project Page](https://lpanaf.github.io/eccv24_glomap/)
+
+#### <summary>Text2LiDAR: Text-guided LiDAR Point Cloud Generation via Equirectangular Transformer
+Authors: Yang Wu, Kaihua Zhang, Jianjun Qian, Jin Xie, Jian Yang
+<details span>
+<summary><b>Abstract</b></summary>
+The complex traffic environment and various weather conditions make the collection of LiDAR data expensive and challenging. Achieving high-quality and controllable LiDAR data generation is urgently needed, controlling with text is a common practice, but there is little research in this field. To this end, we propose Text2LiDAR, the first efficient, diverse, and text-controllable LiDAR data generation model. Specifically, we design an equirectangular transformer architecture, utilizing the designed equirectangular attention to capture LiDAR features in a manner with data characteristics. Then, we design a control-signal embedding injector to efficiently integrate control signals through the global-to-focused attention mechanism. Additionally, we devise a frequency modulator to assist the model in recovering high-frequency details, ensuring the clarity of the generated point cloud. To foster development in the field and optimize text-controlled generation performance, we construct nuLiDARtext which offers diverse text descriptors for 34,149 LiDAR point clouds from 850 scenes. Experiments on uncontrolled and text-controlled generation in various forms on KITTI-360 and nuScenes datasets demonstrate the superiority of our approach.
+
+![image](https://github.com/user-attachments/assets/4824516e-bae6-4a79-9e8c-36bed3ab66b5)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.19628) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>MSP-MVS: Multi-granularity Segmentation Prior Guided Multi-View Stereo
+Authors: Zhenlong Yuan, Cong Liu, Fei Shen, Zhaoxin Li, Tianlu Mao, Zhaoqi Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Reconstructing textureless areas in MVS poses challenges due to the absence of reliable pixel correspondences within fixed patch. Although certain methods employ patch deformation to expand the receptive field, their patches mistakenly skip depth edges to calculate areas with depth discontinuity, thereby causing ambiguity. Consequently, we introduce Multi-granularity Segmentation Prior Multi-View Stereo (MSP-MVS). Specifically, we first propose multi-granularity segmentation prior by integrating multi-granularity depth edges to restrict patch deformation within homogeneous areas. Moreover, we present anchor equidistribution that bring deformed patches with more uniformly distributed anchors to ensure an adequate coverage of their own homogeneous areas. Furthermore, we introduce iterative local search optimization to represent larger patch with sparse representative candidates, significantly boosting the expressive capacity for each patch. The state-of-the-art results on ETH3D and Tanks & Temples benchmarks demonstrate the effectiveness and robust generalization ability of our proposed method.
+
+![image](https://github.com/user-attachments/assets/0f257b3d-01ed-4184-a7b8-02cee60c19da)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.19323) | [⌨️ Code] | [🌐 Project Page]
 
 
 #### <summary>
