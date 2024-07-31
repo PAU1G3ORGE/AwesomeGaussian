@@ -4618,6 +4618,20 @@ Reconstructing textureless areas in MVS poses challenges due to the absence of r
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.19323) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>A Comparative Study of Neural Surface Reconstruction for Scientific Visualization
+Authors: Siyuan Yao, Weixi Song, Chaoli Wang
+<details span>
+<summary><b>Abstract</b></summary>
+This comparative study evaluates various neural surface reconstruction methods, particularly focusing on their implications for scientific visualization through reconstructing 3D surfaces via multi-view rendering images. We categorize ten methods into neural radiance fields and neural implicit surfaces, uncovering the benefits of leveraging distance functions (i.e., SDFs and UDFs) to enhance the accuracy and smoothness of the reconstructed surfaces. Our findings highlight the efficiency and quality of NeuS2 for reconstructing closed surfaces and identify NeUDF as a promising candidate for reconstructing open surfaces despite some limitations. By sharing our benchmark dataset, we invite researchers to test the performance of their methods, contributing to the advancement of surface reconstruction solutions for scientific visualization.
+
+![image](https://github.com/user-attachments/assets/0468e8a1-95ad-43c1-8eeb-35ed2071f392)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.20868) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 #### <summary>
 Authors: 
