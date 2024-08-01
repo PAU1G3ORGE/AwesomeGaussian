@@ -4631,6 +4631,18 @@ This comparative study evaluates various neural surface reconstruction methods, 
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.20868) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>Forecasting Future Videos from Novel Views via Disentangled 3D Scene Representation
+Authors: Sudhir Yarram, Junsong Yuan
+<details span>
+<summary><b>Abstract</b></summary>
+Video extrapolation in space and time (VEST) enables viewers to forecast a 3D scene into the future and view it from novel viewpoints. Recent methods propose to learn an entangled representation, aiming to model layered scene geometry, motion forecasting and novel view synthesis together, while assuming simplified affine motion and homography-based warping at each scene layer, leading to inaccurate video extrapolation. Instead of entangled scene representation and rendering, our approach chooses to disentangle scene geometry from scene motion, via lifting the 2D scene to 3D point clouds, which enables high quality rendering of future videos from novel views. To model future 3D scene motion, we propose a disentangled two-stage approach that initially forecasts ego-motion and subsequently the residual motion of dynamic objects (e.g., cars, people). This approach ensures more precise motion predictions by reducing inaccuracies from entanglement of ego-motion with dynamic object motion, where better ego-motion forecasting could significantly enhance the visual outcomes. Extensive experimental analysis on two urban scene datasets demonstrate superior performance of our proposed method in comparison to strong baselines.
+
+![image](https://github.com/user-attachments/assets/6b33a117-ed42-4481-9def-50a6a810de86)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.21450) | [⌨️ Code] | [🌐 Project Page](https://skrya.github.io/projects/ffn-dsr/)
 
 
 #### <summary>
