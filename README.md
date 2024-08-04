@@ -2799,6 +2799,32 @@ The creation of high-quality 3D assets is paramount for applications in digital 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.19035) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Forecasting Future Videos from Novel Views via Disentangled 3D Scene Representation
+Authors: Sudhir Yarram, Junsong Yuan
+<details span>
+<summary><b>Abstract</b></summary>
+Video extrapolation in space and time (VEST) enables viewers to forecast a 3D scene into the future and view it from novel viewpoints. Recent methods propose to learn an entangled representation, aiming to model layered scene geometry, motion forecasting and novel view synthesis together, while assuming simplified affine motion and homography-based warping at each scene layer, leading to inaccurate video extrapolation. Instead of entangled scene representation and rendering, our approach chooses to disentangle scene geometry from scene motion, via lifting the 2D scene to 3D point clouds, which enables high quality rendering of future videos from novel views. To model future 3D scene motion, we propose a disentangled two-stage approach that initially forecasts ego-motion and subsequently the residual motion of dynamic objects (e.g., cars, people). This approach ensures more precise motion predictions by reducing inaccuracies from entanglement of ego-motion with dynamic object motion, where better ego-motion forecasting could significantly enhance the visual outcomes. Extensive experimental analysis on two urban scene datasets demonstrate superior performance of our proposed method in comparison to strong baselines.
+
+![image](https://github.com/user-attachments/assets/1cb7333c-c0bc-4fc7-a67d-105ff143262c)
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.21450) | [⌨️ Code] | [🌐 Project Page](https://skrya.github.io/projects/ffn-dsr/)
+
+
+#### <summary>Localized Gaussian Splatting Editing with Contextual Awareness
+>  *how to localize? using LangSplat!*
+Authors: Hanyuan Xiao, Yingshu Chen, Huajian Huang, Haolin Xiong, Jing Yang, Pratusha Prasad, Yajie Zhao
+<details span>
+<summary><b>Abstract</b></summary>
+Recent text-guided generation of individual 3D object has achieved great success using diffusion priors. However, these methods are not suitable for object insertion and replacement tasks as they do not consider the background, leading to illumination mismatches within the environment. To bridge the gap, we introduce an illumination-aware 3D scene editing pipeline for 3D Gaussian Splatting (3DGS) representation. Our key observation is that inpainting by the state-of-the-art conditional 2D diffusion model is consistent with background in lighting. To leverage the prior knowledge from the well-trained diffusion models for 3D object generation, our approach employs a coarse-to-fine objection optimization pipeline with inpainted views. In the first coarse step, we achieve image-to-3D lifting given an ideal inpainted view. The process employs 3D-aware diffusion prior from a view-conditioned diffusion model, which preserves illumination present in the conditioning image. To acquire an ideal inpainted image, we introduce an Anchor View Proposal (AVP) algorithm to find a single view that best represents the scene illumination in target region. In the second Texture Enhancement step, we introduce a novel Depth-guided Inpainting Score Distillation Sampling (DI-SDS), which enhances geometry and texture details with the inpainting diffusion prior, beyond the scope of the 3D-aware diffusion prior knowledge in the first coarse step. DI-SDS not only provides fine-grained texture enhancement, but also urges optimization to respect scene lighting. Our approach efficiently achieves local editing with global illumination consistency without explicitly modeling light transport. We demonstrate robustness of our method by evaluating editing in real scenes containing explicit highlight and shadows, and compare against the state-of-the-art text-to-3D editing methods.
+
+![image](https://github.com/user-attachments/assets/e0663407-dedf-4aae-b8c8-066b31daf7bf)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.00083) | [⌨️ Code] | [🌐 Project Page]
+
 <br>
 <br>
 
