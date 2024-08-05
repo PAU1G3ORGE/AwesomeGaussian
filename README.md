@@ -2825,6 +2825,22 @@ Recent text-guided generation of individual 3D object has achieved great success
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.00083) | [⌨️ Code] | [🌐 Project Page]
 
+
+#### <summary>A General Framework to Boost 3D GS Initialization for Text-to-3D Generation by Lexical Richness
+>  *how to localize? using LangSplat!*
+Authors: Lutao Jiang, Hangyu Li, Lin Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Text-to-3D content creation has recently received much attention, especially with the prevalence of 3D Gaussians Splatting. In general, GS-based methods comprise two key stages: initialization and rendering optimization. To achieve initialization, existing works directly apply random sphere initialization or 3D diffusion models, e.g., Point-E, to derive the initial shapes. However, such strategies suffer from two critical yet challenging problems: 1) the final shapes are still similar to the initial ones even after training; 2) shapes can be produced only from simple texts, e.g., "a dog", not for lexically richer texts, e.g., "a dog is sitting on the top of the airplane". To address these problems, this paper proposes a novel general framework to boost the 3D GS Initialization for text-to-3D generation upon the lexical richness. Our key idea is to aggregate 3D Gaussians into spatially uniform voxels to represent complex shapes while enabling the spatial interaction among the 3D Gaussians and semantic interaction between Gaussians and texts. Specifically, we first construct a voxelized representation, where each voxel holds a 3D Gaussian with its position, scale, and rotation fixed while setting opacity as the sole factor to determine a position's occupancy. We then design an initialization network mainly consisting of two novel components: 1) Global Information Perception (GIP) block and 2) Gaussians-Text Fusion (GTF) block. Such a design enables each 3D Gaussian to assimilate the spatial information from other areas and semantic information from texts. Extensive experiments show the superiority of our framework of high-quality 3D GS initialization against the existing methods, e.g., Shap-E, by taking lexically simple, medium, and hard texts. Also, our framework can be seamlessly plugged into SoTA training frameworks, e.g., LucidDreamer, for semantically consistent text-to-3D generation.
+
+![image](https://github.com/user-attachments/assets/8385c947-f738-4ad3-9ad1-20dea8f51a20)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.01269) | [⌨️ Code] | [🌐 Project Page](https://vlislab22.github.io/DreamInit/)
+
+
+
 <br>
 <br>
 
