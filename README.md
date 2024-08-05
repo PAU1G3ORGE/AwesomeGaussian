@@ -2814,6 +2814,7 @@ Video extrapolation in space and time (VEST) enables viewers to forecast a 3D sc
 
 #### <summary>Localized Gaussian Splatting Editing with Contextual Awareness
 >  *how to localize? using LangSplat!*
+
 Authors: Hanyuan Xiao, Yingshu Chen, Huajian Huang, Haolin Xiong, Jing Yang, Pratusha Prasad, Yajie Zhao
 <details span>
 <summary><b>Abstract</b></summary>
@@ -2827,7 +2828,6 @@ Recent text-guided generation of individual 3D object has achieved great success
 
 
 #### <summary>A General Framework to Boost 3D GS Initialization for Text-to-3D Generation by Lexical Richness
->  *how to localize? using LangSplat!*
 Authors: Lutao Jiang, Hangyu Li, Lin Wang
 <details span>
 <summary><b>Abstract</b></summary>
