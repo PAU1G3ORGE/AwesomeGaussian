@@ -2841,6 +2841,8 @@ Text-to-3D content creation has recently received much attention, especially wit
 
 
 
+
+
 <br>
 <br>
 
@@ -3162,6 +3164,32 @@ Urban-level three-dimensional reconstruction for modern applications demands hig
 </details>
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.18611) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>View-consistent Object Removal in Radiance Fields
+Authors: Yiren Lu, Jing Ma, Yu Yin
+<details span>
+<summary><b>Abstract</b></summary>
+Radiance Fields (RFs) have emerged as a crucial technology for 3D scene representation, enabling the synthesis of novel views with remarkable realism. However, as RFs become more widely used, the need for effective editing techniques that maintain coherence across different perspectives becomes evident. Current methods primarily depend on per-frame 2D image inpainting, which often fails to maintain consistency across views, thus compromising the realism of edited RF scenes. In this work, we introduce a novel RF editing pipeline that significantly enhances consistency by requiring the inpainting of only a single reference image. This image is then projected across multiple views using a depth-based approach, effectively reducing the inconsistencies observed with per-frame inpainting. However, projections typically assume photometric consistency across views, which is often impractical in real-world settings. To accommodate realistic variations in lighting and viewpoint, our pipeline adjusts the appearance of the projected views by generating multiple directional variants of the inpainted image, thereby adapting to different photometric conditions. Additionally, we present an effective and robust multi-view object segmentation approach as a valuable byproduct of our pipeline. Extensive experiments demonstrate that our method significantly surpasses existing frameworks in maintaining content consistency across views and enhancing visual quality.
+
+![image](https://github.com/user-attachments/assets/ed71adf2-897a-4cac-84fc-fe1b99cb2c8a)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.02100) | [⌨️ Code] | [🌐 Project Page](https://vulab-ai.github.io/View-consistent_Object_Removal_in_Radiance_Fields/)
+
+#### <summary>Improving Neural Surface Reconstruction with Feature Priors from Multi-View Image
+Authors: Xinlin Ren, Chenjie Cao, Yanwei Fu, Xiangyang Xue
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advancements in Neural Surface Reconstruction (NSR) have significantly improved multi-view reconstruction when coupled with volume rendering. However, relying solely on photometric consistency in image space falls short of addressing complexities posed by real-world data, including occlusions and non-Lambertian surfaces. To tackle these challenges, we propose an investigation into feature-level consistent loss, aiming to harness valuable feature priors from diverse pretext visual tasks and overcome current limitations. It is crucial to note the existing gap in determining the most effective pretext visual task for enhancing NSR. In this study, we comprehensively explore multi-view feature priors from seven pretext visual tasks, comprising thirteen methods. Our main goal is to strengthen NSR training by considering a wide range of possibilities. Additionally, we examine the impact of varying feature resolutions and evaluate both pixel-wise and patch-wise consistent losses, providing insights into effective strategies for improving NSR performance. By incorporating pre-trained representations from MVSFormer and QuadTree, our approach can generate variations of MVS-NeuS and Match-NeuS, respectively. Our results, analyzed on DTU and EPFL datasets, reveal that feature priors from image matching and multi-view stereo outperform other pretext tasks. Moreover, we discover that extending patch-wise photometric consistency to the feature level surpasses the performance of pixel-wise approaches. These findings underscore the effectiveness of these techniques in enhancing NSR outcomes.
+
+![image](https://github.com/user-attachments/assets/744c954e-10c8-424f-8e69-50dcf6b88659)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.02079) | [⌨️ Code](https://github.com/maybeLx/MVS_NeuS) | [🌐 Project Page]
+
 
 
 <br>
@@ -4686,6 +4714,33 @@ Video extrapolation in space and time (VEST) enables viewers to forecast a 3D sc
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.21450) | [⌨️ Code] | [🌐 Project Page](https://skrya.github.io/projects/ffn-dsr/)
 
+#### <summary>PanoFree: Tuning-Free Holistic Multi-view Image Generation with Cross-view Self-Guidance
+Authors: Aoming Liu, Zhong Li, Zhang Chen, Nannan Li, Yi Xu, Bryan A. Plummer
+<details span>
+<summary><b>Abstract</b></summary>
+Immersive scene generation, notably panorama creation, benefits significantly from the adaptation of large pre-trained text-to-image (T2I) models for multi-view image generation. Due to the high cost of acquiring multi-view images, tuning-free generation is preferred. However, existing methods are either limited to simple correspondences or require extensive fine-tuning to capture complex ones. We present PanoFree, a novel method for tuning-free multi-view image generation that supports an extensive array of correspondences. PanoFree sequentially generates multi-view images using iterative warping and inpainting, addressing the key issues of inconsistency and artifacts from error accumulation without the need for fine-tuning. It improves error accumulation by enhancing cross-view awareness and refines the warping and inpainting processes via cross-view guidance, risky area estimation and erasing, and symmetric bidirectional guided generation for loop closure, alongside guidance-based semantic and density control for scene structure preservation. In experiments on Planar, 360°, and Full Spherical Panoramas, PanoFree demonstrates significant error reduction, improves global consistency, and boosts image quality without extra fine-tuning. Compared to existing methods, PanoFree is up to 5x more efficient in time and 3x more efficient in GPU memory usage, and maintains superior diversity of results (2x better in our user study). PanoFree offers a viable alternative to costly fine-tuning or the use of additional pre-trained models.
+
+![image](https://github.com/user-attachments/assets/de188b8e-739f-4da7-bda9-c57add82ba20)
+
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.02157) | [⌨️ Code](https://github.com/zxcvfd13502/PanoFree) | [🌐 Project Page](https://panofree.github.io/)
+
+#### <summary>LEGO: Self-Supervised Representation Learning for Scene Text Images
+Authors: Yujin Ren, Jiaxin Zhang, Lianwen Jin
+<details span>
+<summary><b>Abstract</b></summary>
+In recent years, significant progress has been made in scene text recognition by data-driven methods. However, due to the scarcity of annotated real-world data, the training of these methods predominantly relies on synthetic data. The distribution gap between synthetic and real data constrains the further performance improvement of these methods in real-world applications. To tackle this problem, a highly promising approach is to utilize massive amounts of unlabeled real data for self-supervised training, which has been widely proven effective in many NLP and CV tasks. Nevertheless, generic self-supervised methods are unsuitable for scene text images due to their sequential nature. To address this issue, we propose a Local Explicit and Global Order-aware self-supervised representation learning method (LEGO) that accounts for the characteristics of scene text images. Inspired by the human cognitive process of learning words, which involves spelling, reading, and writing, we propose three novel pre-text tasks for LEGO to model sequential, semantic, and structural features, respectively. The entire pre-training process is optimized by using a consistent Text Knowledge Codebook. Extensive experiments validate that LEGO outperforms previous scene text self-supervised methods. The recognizer incorporated with our pre-trained model achieves superior or comparable performance compared to state-of-the-art scene text recognition methods on six benchmarks. Furthermore, we demonstrate that LEGO can achieve superior performance in other text-related tasks.
+
+![image](https://github.com/user-attachments/assets/760c3ceb-e727-42b9-89f6-2859f94861d5)
+
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.02036) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 #### <summary>
 Authors: 
@@ -4697,4 +4752,4 @@ Authors:
 
 </details>
 
-[📃 arXiv:2407] | [⌨️ Code] | [🌐 Project Page]
+[📃 arXiv:2408] | [⌨️ Code] | [🌐 Project Page]
