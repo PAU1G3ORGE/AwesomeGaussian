@@ -4741,6 +4741,32 @@ In recent years, significant progress has been made in scene text recognition by
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.02036) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>An Object is Worth 64x64 Pixels: Generating 3D Object via Image Diffusion
+Authors: Xingguang Yan, Han-Hung Lee, Ziyu Wan, Angel X. Chang
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce a new approach for generating realistic 3D models with UV maps through a representation termed "Object Images." This approach encapsulates surface geometry, appearance, and patch structures within a 64x64 pixel image, effectively converting complex 3D shapes into a more manageable 2D format. By doing so, we address the challenges of both geometric and semantic irregularity inherent in polygonal meshes. This method allows us to use image generation models, such as Diffusion Transformers, directly for 3D shape generation. Evaluated on the ABO dataset, our generated shapes with patch structures achieve point cloud FID comparable to recent 3D generative models, while naturally supporting PBR material generation.
+
+![image](https://github.com/user-attachments/assets/c4776857-8438-4191-922f-f2d59c9a6a8e)
+
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.03178) | [⌨️ Code] | [🌐 Project Page](https://omages.github.io/)
+
+
+#### <summary>Gaussian Mixture based Evidential Learning for Stereo Matching
+Authors: Weide Liu, Xingxing Wang, Lu Wang, Jun Cheng, Fayao Liu, Xulei Yang
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper, we introduce a novel Gaussian mixture based evidential learning solution for robust stereo matching. Diverging from previous evidential deep learning approaches that rely on a single Gaussian distribution, our framework posits that individual image data adheres to a mixture-of-Gaussian distribution in stereo matching. This assumption yields more precise pixel-level predictions and more accurately mirrors the real-world image distribution. By further employing the inverse-Gamma distribution as an intermediary prior for each mixture component, our probabilistic model achieves improved depth estimation compared to its counterpart with the single Gaussian and effectively captures the model uncertainty, which enables a strong cross-domain generation ability. We evaluated our method for stereo matching by training the model using the Scene Flow dataset and testing it on KITTI 2015 and Middlebury 2014. The experiment results consistently show that our method brings improvements over the baseline methods in a trustworthy manner. Notably, our approach achieved new state-of-the-art results on both the in-domain validated data and the cross-domain datasets, demonstrating its effectiveness and robustness in stereo matching tasks.
+
+![image](https://github.com/user-attachments/assets/e0dc220a-687c-4576-aed9-e6dbe2de8ab8)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.02796) | [⌨️ Code] | [🌐 Project Page]
+
 
 #### <summary>
 Authors: 
