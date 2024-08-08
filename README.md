@@ -2840,7 +2840,43 @@ Text-to-3D content creation has recently received much attention, especially wit
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.01269) | [⌨️ Code] | [🌐 Project Page](https://vlislab22.github.io/DreamInit/)
 
 
+#### <summary>Compact 3D Gaussian Splatting for Static and Dynamic Radiance Fields
+Authors: Joo Chan Lee, Daniel Rho, Xiangyu Sun, Jong Hwan Ko, Eunbyung Park
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian splatting (3DGS) has recently emerged as an alternative representation that leverages a 3D Gaussian-based representation and introduces an approximated volumetric rendering, achieving very fast rendering speed and promising image quality. Furthermore, subsequent studies have successfully extended 3DGS to dynamic 3D scenes, demonstrating its wide range of applications. However, a significant drawback arises as 3DGS and its following methods entail a substantial number of Gaussians to maintain the high fidelity of the rendered images, which requires a large amount of memory and storage. To address this critical issue, we place a specific emphasis on two key objectives: reducing the number of Gaussian points without sacrificing performance and compressing the Gaussian attributes, such as view-dependent color and covariance. To this end, we propose a learnable mask strategy that significantly reduces the number of Gaussians while preserving high performance. In addition, we propose a compact but effective representation of view-dependent color by employing a grid-based neural field rather than relying on spherical harmonics. Finally, we learn codebooks to compactly represent the geometric and temporal attributes by residual vector quantization. With model compression techniques such as quantization and entropy coding, we consistently show over 25x reduced storage and enhanced rendering speed compared to 3DGS for static scenes, while maintaining the quality of the scene representation. For dynamic scenes, our approach achieves more than 12x storage efficiency and retains a high-quality reconstruction compared to the existing state-of-the-art methods. Our work provides a comprehensive framework for 3D scene representation, achieving high performance, fast training, compactness, and real-time rendering.
 
+![image](https://github.com/user-attachments/assets/8385c947-f738-4ad3-9ad1-20dea8f51a20)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.03822) | [⌨️ Code] | [🌐 Project Page](https://maincold2.github.io/c3dgs/)
+
+
+#### <summary>3iGS: Factorised Tensorial Illumination for 3D Gaussian Splatting
+Authors: Zhe Jun Tang, Tat-Jen Cham
+<details span>
+<summary><b>Abstract</b></summary>
+The use of 3D Gaussians as representation of radiance fields has enabled high quality novel view synthesis at real-time rendering speed. However, the choice of optimising the outgoing radiance of each Gaussian independently as spherical harmonics results in unsatisfactory view dependent effects. In response to these limitations, our work, Factorised Tensorial Illumination for 3D Gaussian Splatting, or 3iGS, improves upon 3D Gaussian Splatting (3DGS) rendering quality. Instead of optimising a single outgoing radiance parameter, 3iGS enhances 3DGS view-dependent effects by expressing the outgoing radiance as a function of a local illumination field and Bidirectional Reflectance Distribution Function (BRDF) features. We optimise a continuous incident illumination field through a Tensorial Factorisation representation, while separately fine-tuning the BRDF features of each 3D Gaussian relative to this illumination field. Our methodology significantly enhances the rendering quality of specular view-dependent effects of 3DGS, while maintaining rapid training and rendering speeds.
+
+![image](https://github.com/user-attachments/assets/c74cbdb2-d7cf-413f-becb-f90450c76053)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.03753) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>RayGauss: Volumetric Gaussian-Based Ray Casting for Photorealistic Novel View Synthesis
+Authors: Hugo Blanc, Jean-Emmanuel Deschaud, Alexis Paljic
+<details span>
+<summary><b>Abstract</b></summary>
+Differentiable volumetric rendering-based methods made significant progress in novel view synthesis. On one hand, innovative methods have replaced the Neural Radiance Fields (NeRF) network with locally parameterized structures, enabling high-quality renderings in a reasonable time. On the other hand, approaches have used differentiable splatting instead of NeRF's ray casting to optimize radiance fields rapidly using Gaussian kernels, allowing for fine adaptation to the scene. However, differentiable ray casting of irregularly spaced kernels has been scarcely explored, while splatting, despite enabling fast rendering times, is susceptible to clearly visible artifacts.
+Our work closes this gap by providing a physically consistent formulation of the emitted radiance c and density {\sigma}, decomposed with Gaussian functions associated with Spherical Gaussians/Harmonics for all-frequency colorimetric representation. We also introduce a method enabling differentiable ray casting of irregularly distributed Gaussians using an algorithm that integrates radiance fields slab by slab and leverages a BVH structure. This allows our approach to finely adapt to the scene while avoiding splatting artifacts. As a result, we achieve superior rendering quality compared to the state-of-the-art while maintaining reasonable training times and achieving inference speeds of 25 FPS on the Blender dataset.
+
+![image](https://github.com/user-attachments/assets/a3168f69-8c53-4eb5-bf87-4ec4442107b7)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.03356) | [⌨️ Code] | [🌐 Project Page](https://raygauss.github.io/)
 
 
 <br>
