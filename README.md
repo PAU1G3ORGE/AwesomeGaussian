@@ -2878,6 +2878,32 @@ Our work closes this gap by providing a physically consistent formulation of the
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.03356) | [⌨️ Code] | [🌐 Project Page](https://raygauss.github.io/)
 
+#### <summary>Evaluating Modern Approaches in 3D Scene Reconstruction: NeRF vs Gaussian-Based Methods
+Authors: Yiming Zhou, Zixuan Zeng, Andi Chen, Xiaofan Zhou, Haowei Ni, Shiyao Zhang, Panfeng Li, Liangxi Liu, Mengyao Zheng, Xupeng Chen
+<details span>
+<summary><b>Abstract</b></summary>
+Exploring the capabilities of Neural Radiance Fields (NeRF) and Gaussian-based methods in the context of 3D scene reconstruction, this study contrasts these modern approaches with traditional Simultaneous Localization and Mapping (SLAM) systems. Utilizing datasets such as Replica and ScanNet, we assess performance based on tracking accuracy, mapping fidelity, and view synthesis. Findings reveal that NeRF excels in view synthesis, offering unique capabilities in generating new perspectives from existing data, albeit at slower processing speeds. Conversely, Gaussian-based methods provide rapid processing and significant expressiveness but lack comprehensive scene completion. Enhanced by global optimization and loop closure techniques, newer methods like NICE-SLAM and SplaTAM not only surpass older frameworks such as ORB-SLAM2 in terms of robustness but also demonstrate superior performance in dynamic and complex environments. This comparative analysis bridges theoretical research with practical implications, shedding light on future developments in robust 3D scene reconstruction across various real-world applications.
+
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.04268) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>InstantStyleGaussian: Efficient Art Style Transfer with 3D Gaussian Splatting
+Authors: Xin-Yi Yu, Jun-Xin Yu, Li-Bo Zhou, Yan Wei, Lin-Lin Ou
+<details span>
+<summary><b>Abstract</b></summary>
+We present InstantStyleGaussian, an innovative 3D style transfer method based on the 3D Gaussian Splatting (3DGS) scene representation. By inputting a target style image, it quickly generates new 3D GS scenes. Our approach operates on pre-reconstructed GS scenes, combining diffusion models with an improved iterative dataset update strategy. It utilizes diffusion models to generate target style images, adds these new images to the training dataset, and uses this dataset to iteratively update and optimize the GS scenes. Extensive experimental results demonstrate that our method ensures high-quality stylized scenes while offering significant advantages in style transfer speed and consistency.
+
+![image](https://github.com/user-attachments/assets/b2a46930-0e70-4710-987e-4cfef8cac3cc)
+
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.04249) | [⌨️ Code] | [🌐 Project Page]
+
+
+
 
 <br>
 <br>
@@ -4803,6 +4829,19 @@ In this paper, we introduce a novel Gaussian mixture based evidential learning s
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.02796) | [⌨️ Code] | [🌐 Project Page]
 
+
+#### <summary>Cross-View Meets Diffusion: Aerial Image Synthesis with Geometry and Text Guidance
+Authors: Ahmad Arrabi, Xiaohan Zhang, Waqas Sultan, Chen Chen, Safwan Wshah
+<details span>
+<summary><b>Abstract</b></summary>
+Aerial imagery analysis is critical for many research fields. However, obtaining frequent high-quality aerial images is not always accessible due to its high effort and cost requirements. One solution is to use the Ground-to-Aerial (G2A) technique to synthesize aerial images from easily collectible ground images. However, G2A is rarely studied, because of its challenges, including but not limited to, the drastic view changes, occlusion, and range of visibility. In this paper, we present a novel Geometric Preserving Ground-to-Aerial (G2A) image synthesis (GPG2A) model that can generate realistic aerial images from ground images. GPG2A consists of two stages. The first stage predicts the Bird's Eye View (BEV) segmentation (referred to as the BEV layout map) from the ground image. The second stage synthesizes the aerial image from the predicted BEV layout map and text descriptions of the ground image. To train our model, we present a new multi-modal cross-view dataset, namely VIGORv2 which is built upon VIGOR with newly collected aerial images, maps, and text descriptions. Our extensive experiments illustrate that GPG2A synthesizes better geometry-preserved aerial images than existing models. We also present two applications, data augmentation for cross-view geo-localization and sketch-based region search, to further verify the effectiveness of our GPG2A. The code and data will be publicly available.
+
+![image](https://github.com/user-attachments/assets/7f32ffeb-0b1f-4681-9296-019ca8d73da5)
+
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.04224) | [⌨️ Code] | [🌐 Project Page]
 
 #### <summary>
 Authors: 
