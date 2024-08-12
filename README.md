@@ -519,6 +519,19 @@ Authors: Wei Sun, Qi Zhang, Yanzhao Zhou, Qixiang Ye, Jianbin Jiao, Yuan Li
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.19657) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Self-augmented Gaussian Splatting with Structure-aware Masks for Sparse-view 3D Reconstruction
+Authors: Lingbei Meng, Bi'an Du, Wei Hu
+<details span>
+<summary><b>Abstract</b></summary>
+Sparse-view 3D reconstruction stands as a formidable challenge in computer vision, aiming to build complete three-dimensional models from a limited array of viewing perspectives. This task confronts several difficulties: 1) the limited number of input images that lack consistent information; 2) dependence on the quality of input images; and 3) the substantial size of model parameters. To address these challenges, we propose a self-augmented coarse-to-fine Gaussian splatting paradigm, enhanced with a structure-aware mask, for sparse-view 3D reconstruction. In particular, our method initially employs a coarse Gaussian model to obtain a basic 3D representation from sparse-view inputs. Subsequently, we develop a fine Gaussian network to enhance consistent and detailed representation of the output with both 3D geometry augmentation and perceptual view augmentation. During training, we design a structure-aware masking strategy to further improve the model's robustness against sparse inputs and noise.Experimental results on the MipNeRF360 and OmniObject3D datasets demonstrate that the proposed method achieves state-of-the-art performances for sparse input views in both perceptual quality and efficiency.
+ 
+![image](https://github.com/user-attachments/assets/770d39cb-e357-4c63-ba49-07499df92baa)
+
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.04831) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 <br>
