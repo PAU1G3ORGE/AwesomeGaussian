@@ -1343,6 +1343,19 @@ Authors: Zhiwen Yan, Weng Fei Low, Yu Chen, Gim Hee Lee
 
 [📃 arXiv:2311](https://arxiv.org/pdf/2311.17089) | [⌨️ Code](https://github.com/JokerYan/MS-GS/tree/main) | [🌐 Project Page](https://jokeryan.github.io/projects/ms-gs/)
 
+#### <summary>Analytic-Splatting: Anti-Aliased 3D Gaussian Splatting via Analytic Integration
+Authors: Zhihao Liang, Qi Zhang, Wenbo Hu, Ying Feng, Lei Zhu, Kui Jia
+<details span>
+<summary><b>Abstract</b></summary>
+The 3D Gaussian Splatting (3DGS) gained its popularity recently by combining the advantages of both primitive-based and volumetric 3D representations, resulting in improved quality and efficiency for 3D scene rendering. However, 3DGS is not alias-free, and its rendering at varying resolutions could produce severe blurring or jaggies. This is because 3DGS treats each pixel as an isolated, single point rather than as an area, causing insensitivity to changes in the footprints of pixels. Consequently, this discrete sampling scheme inevitably results in aliasing, owing to the restricted sampling bandwidth. In this paper, we derive an analytical solution to address this issue. More specifically, we use a conditioned logistic function as the analytic approximation of the cumulative distribution function (CDF) in a one-dimensional Gaussian signal and calculate the Gaussian integral by subtracting the CDFs. We then introduce this approximation in the two-dimensional pixel shading, and present Analytic-Splatting, which analytically approximates the Gaussian integral within the 2D-pixel window area to better capture the intensity response of each pixel. Moreover, we use the approximated response of the pixel window integral area to participate in the transmittance calculation of volume rendering, making Analytic-Splatting sensitive to the changes in pixel footprint at different resolutions. Experiments on various datasets validate that our approach has better anti-aliasing capability that gives more details and better fidelity.
+
+![image](https://github.com/user-attachments/assets/ef6b4b2c-ecae-4ec5-8ef0-ba5c81e0f230)
+
+</details>
+
+[📃 arXiv:2403](https://arxiv.org/pdf/2403.11056) | [⌨️ Code](https://github.com/lzhnb/Analytic-Splatting) | [🌐 Project Page](https://lzhnb.github.io/project-pages/analytic-splatting/)
+
+
 
 #### <summary>Mipmap-GS: Let Gaussians Deform with Scale-specific Mipmap for Anti-aliasing Rendering
 Authors: Jiameng Li, Yue Shi, Jiezhang Cao, Bingbing Ni, Wenjun Zhang, Kai Zhang, Luc Van Gool
@@ -2945,7 +2958,18 @@ We present InstantStyleGaussian, an innovative 3D style transfer method based on
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.04249) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>Novel View Synthesis from a Single Image with Pretrained Diffusion Guidance
+Authors: Taewon Kang, Divya Kothandaraman, Dinesh Manocha, Ming C. Lin
+<details span>
+<summary><b>Abstract</b></summary>
+Recent 3D novel view synthesis (NVS) methods are limited to single-object-centric scenes generated from new viewpoints and struggle with complex environments. They often require extensive 3D data for training, lacking generalization beyond training distribution. Conversely, 3D-free methods can generate text-controlled views of complex, in-the-wild scenes using a pretrained stable diffusion model without tedious fine-tuning, but lack camera control. In this paper, we introduce HawkI++, a method capable of generating camera-controlled viewpoints from a single input image. HawkI++ excels in handling complex and diverse scenes without additional 3D data or extensive training. It leverages widely available pretrained NVS models for weak guidance, integrating this knowledge into a 3D-free view synthesis approach to achieve the desired results efficiently. Our experimental results demonstrate that HawkI++ outperforms existing models in both qualitative and quantitative evaluations, providing high-fidelity and consistent novel view synthesis at desired camera angles across a wide variety of scenes.
 
+![image](https://github.com/user-attachments/assets/8b031b1b-ecf2-4ed0-aaf8-56c7e10d3df6)
+
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.06157) | [⌨️ Code] | [🌐 Project Page]
 
 
 <br>
@@ -4885,6 +4909,23 @@ Aerial imagery analysis is critical for many research fields. However, obtaining
 </details>
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.04224) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>RISurConv: Rotation Invariant Surface Attention-Augmented Convolutions for 3D Point Cloud Classification and Segmentation
+>  *ECCV2024 oral*
+> 
+Authors: Zhiyuan Zhang, Licheng Yang, Zhiyu Xiang
+<details span>
+<summary><b>Abstract</b></summary>
+Despite the progress on 3D point cloud deep learning, most prior works focus on learning features that are invariant to translation and point permutation, and very limited efforts have been devoted for rotation invariant property. Several recent studies achieve rotation invariance at the cost of lower accuracies. In this work, we close this gap by proposing a novel yet effective rotation invariant architecture for 3D point cloud classification and segmentation. Instead of traditional pointwise operations, we construct local triangle surfaces to capture more detailed surface structure, based on which we can extract highly expressive rotation invariant surface properties which are then integrated into an attention-augmented convolution operator named RISurConv to generate refined attention features via self-attention layers. Based on RISurConv we build an effective neural network for 3D point cloud analysis that is invariant to arbitrary rotations while maintaining high accuracy. We verify the performance on various benchmarks with supreme results obtained surpassing the previous state-of-the-art by a large margin. We achieve an overall accuracy of 96.0% (+4.7%) on ModelNet40, 93.1% (+12.8%) on ScanObjectNN, and class accuracies of 91.5% (+3.6%), 82.7% (+5.1%), and 78.5% (+9.2%) on the three categories of the FG3D dataset for the fine-grained classification task. Additionally, we achieve 81.5% (+1.0%) mIoU on ShapeNet for the segmentation task.
+
+![image](https://github.com/user-attachments/assets/599aacb3-9edb-482a-976b-5d6ab13ae5f2)
+
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.06110) | [⌨️ Code](https://github.com/cszyzhang/RISurConv) | [🌐 Project Page]
+
+
 
 #### <summary>
 Authors: 
