@@ -3,7 +3,7 @@
 
 <br>
 
-[Surface](#Surface) | [Sparse View](#Sparse-View) | [Structured](#Structured) | [Large Scale](#Large-Scale) | [Stylization](#Stylization) | [SLAM](#SLAM) | [Noisy Poses](#Noisy-Poses) | [Generalizable](#Generalizable) | [High Frequency Details](#High-Frequency-Details) | [Anti-Aliasing](#Anti-Aliasing) | [Others](#Others)  | [Not Gaussian](#Not-Gaussian)
+[Surface](#Surface) | [Sparse View](#Sparse-View) | [Structured](#Structured) | [Large Scale](#Large-Scale) | [Stylization](#Stylization) | [SLAM](#SLAM) | [Noisy Poses](#Noisy-Poses) | [Generalizable](#Generalizable) | [High Frequency Details](#High-Frequency-Details) | [Anti-Aliasing](#Anti-Aliasing) | [Hyperspectral](#Hyperspectral) | [Others](#Others)  | [Not Gaussian](#Not-Gaussian)
 
 <br>
 
@@ -1368,6 +1368,26 @@ Authors: Jiameng Li, Yue Shi, Jiezhang Cao, Bingbing Ni, Wenjun Zhang, Kai Zhang
 </details>
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.06286) | [⌨️ Code](https://github.com/renaissanceee/Mipmap-GS) | [🌐 Project Page]
+
+
+<br>
+<br>
+
+
+
+## Hyperspectral
+
+#### <summary>SpectralGaussians: Semantic, spectral 3D Gaussian splatting for multi-spectral scene representation, visualization and analysis
+Authors: Saptarshi Neil Sinha, Holger Graf, Michael Weinmann
+<details span>
+<summary><b>Abstract</b></summary>
+We propose a novel cross-spectral rendering framework based on 3D Gaussian Splatting (3DGS) that generates realistic and semantically meaningful splats from registered multi-view spectrum and segmentation maps. This extension enhances the representation of scenes with multiple spectra, providing insights into the underlying materials and segmentation. We introduce an improved physically-based rendering approach for Gaussian splats, estimating reflectance and lights per spectra, thereby enhancing accuracy and realism. In a comprehensive quantitative and qualitative evaluation, we demonstrate the superior performance of our approach with respect to other recent learning-based spectral scene representation approaches (i.e., XNeRF and SpectralNeRF) as well as other non-spectral state-of-the-art learning-based approaches. Our work also demonstrates the potential of spectral scene understanding for precise scene editing techniques like style transfer, inpainting, and removal. Thereby, our contributions address challenges in multi-spectral scene representation, rendering, and editing, offering new possibilities for diverse applications.
+
+![image](https://github.com/user-attachments/assets/305f29c4-69c1-4972-9d1d-7eea2bde8fae)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.06975) | [⌨️ Code] | [🌐 Project Page]
 
 
 <br>
@@ -2971,6 +2991,19 @@ Recent 3D novel view synthesis (NVS) methods are limited to single-object-centri
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.06157) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>HDRGS: High Dynamic Range Gaussian Splatting
+Authors: Jiahao Wu, Lu Xiao, Chao Wang, Rui Peng, Kaiqiang Xiong, Ronggang Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Recent years have witnessed substantial advancements in the field of 3D reconstruction from 2D images, particularly following the introduction of the neural radiance field (NeRF) technique. However, reconstructing a 3D high dynamic range (HDR) radiance field, which aligns more closely with real-world conditions, from 2D multi-exposure low dynamic range (LDR) images continues to pose significant challenges. Approaches to this issue fall into two categories: grid-based and implicit-based. Implicit methods, using multi-layer perceptrons (MLP), face inefficiencies, limited solvability, and overfitting risks. Conversely, grid-based methods require significant memory and struggle with image quality and long training times. In this paper, we introduce Gaussian Splatting-a recent, high-quality, real-time 3D reconstruction technique-into this domain. We further develop the High Dynamic Range Gaussian Splatting (HDR-GS) method, designed to address the aforementioned challenges. This method enhances color dimensionality by including luminance and uses an asymmetric grid for tone-mapping, swiftly and precisely converting pixel irradiance to color. Our approach improves HDR scene recovery accuracy and integrates a novel coarse-to-fine strategy to speed up model convergence, enhancing robustness against sparse viewpoints and exposure extremes, and preventing local optima. Extensive testing confirms that our method surpasses current state-of-the-art techniques in both synthetic and real-world scenarios.
+
+![image](https://github.com/user-attachments/assets/aaf6782f-a2bc-4e52-a6a5-ce841f498ca5)
+
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.06543) | [⌨️ Code](https://github.com/WuJH2001/HDRGS) | [🌐 Project Page]
+
 
 <br>
 <br>
@@ -3320,6 +3353,17 @@ Recent advancements in Neural Surface Reconstruction (NSR) have significantly im
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.02079) | [⌨️ Code](https://github.com/maybeLx/MVS_NeuS) | [🌐 Project Page]
 
 
+#### <summary>ActiveNeRF: Learning Accurate 3D Geometry by Active Pattern Projection
+Authors: Jianyu Tao, Changping Hu, Edward Yang, Jing Xu, Rui Chen
+<details span>
+<summary><b>Abstract</b></summary>
+NeRFs have achieved incredible success in novel view synthesis. However, the accuracy of the implicit geometry is unsatisfactory because the passive static environmental illumination has low spatial frequency and cannot provide enough information for accurate geometry reconstruction. In this work, we propose ActiveNeRF, a 3D geometry reconstruction framework, which improves the geometry quality of NeRF by actively projecting patterns of high spatial frequency onto the scene using a projector which has a constant relative pose to the camera. We design a learnable active pattern rendering pipeline which jointly learns the scene geometry and the active pattern. We find that, by adding the active pattern and imposing its consistency across different views, our proposed method outperforms state of the art geometry reconstruction methods qualitatively and quantitatively in both simulation and real experiments.
+
+![image](https://github.com/user-attachments/assets/8f275f8c-2670-42de-817a-a80f80604c12)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.06592) | [⌨️ Code](https://github.com/hcp16/active_nerf) | [🌐 Project Page]
 
 <br>
 <br>
