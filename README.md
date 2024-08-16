@@ -3,7 +3,7 @@
 
 <br>
 
-[Surface](#Surface) | [Sparse View](#Sparse-View) | [Structured](#Structured) | [Large Scale](#Large-Scale) | [Stylization](#Stylization) | [SLAM](#SLAM) | [Noisy Poses](#Noisy-Poses) | [Generalizable](#Generalizable) | [High Frequency Details](#High-Frequency-Details) | [Anti-Aliasing](#Anti-Aliasing) | [Hyperspectral](#Hyperspectral) | [Others](#Others)  | [Not Gaussian](#Not-Gaussian)
+[Surface](#Surface) | [Sparse View](#Sparse-View) | [Structured](#Structured) | [Large Scale](#Large-Scale) | [Edit](#Edit) | [SLAM](#SLAM) | [Noisy Poses](#Noisy-Poses) | [Generalizable](#Generalizable) | [High Frequency Details](#High-Frequency-Details) | [Anti-Aliasing](#Anti-Aliasing) | [Hyperspectral](#Hyperspectral) | [Others](#Others)  | [Not Gaussian](#Not-Gaussian)
 
 <br>
 
@@ -953,7 +953,7 @@ The photorealistic reconstruction and rendering of architectural scenes have ext
 <br>
 <br>
 
-## Stylization
+## Edit
 
 
 #### <summary>StylizedGS: Controllable Stylization for 3D Gaussian Splatting
@@ -1000,7 +1000,18 @@ Recent advancements in radiance fields have opened new avenues for creating high
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.09473) | [⌨️ Code] | [🌐 Project Page](https://bernard0047.github.io/stylesplat/)
 
+#### <summary>3D Gaussian Editing with A Single Image
+Authors: Guan Luo, Tian-Xing Xu, Ying-Tian Liu, Xiao-Xiong Fan, Fang-Lue Zhang, Song-Hai Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+The modeling and manipulation of 3D scenes captured from the real world are pivotal in various applications, attracting growing research interest. While previous works on editing have achieved interesting results through manipulating 3D meshes, they often require accurately reconstructed meshes to perform editing, which limits their application in 3D content generation. To address this gap, we introduce a novel single-image-driven 3D scene editing approach based on 3D Gaussian Splatting, enabling intuitive manipulation via directly editing the content on a 2D image plane. Our method learns to optimize the 3D Gaussians to align with an edited version of the image rendered from a user-specified viewpoint of the original scene. To capture long-range object deformation, we introduce positional loss into the optimization process of 3D Gaussian Splatting and enable gradient propagation through reparameterization. To handle occluded 3D Gaussians when rendering from the specified viewpoint, we build an anchor-based structure and employ a coarse-to-fine optimization strategy capable of handling long-range deformation while maintaining structural stability. Furthermore, we design a novel masking strategy to adaptively identify non-rigid deformation regions for fine-scale modeling. Extensive experiments show the effectiveness of our method in handling geometric details, long-range, and non-rigid deformation, demonstrating superior editing flexibility and quality compared to previous approaches.
 
+![image](https://github.com/user-attachments/assets/59305693-d048-499c-804f-f327ef26731d)
+
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.07540) | [⌨️ Code] | [🌐 Project Page]
 
 
 <br>
