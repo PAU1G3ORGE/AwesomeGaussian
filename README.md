@@ -950,6 +950,22 @@ The photorealistic reconstruction and rendering of architectural scenes have ext
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.15435) | [⌨️ Code] | [🌐 Project Page]
 
+
+#### <summary>FlashGS: Efficient 3D Gaussian Splatting for Large-scale and High-resolution Rendering
+
+Authors: Guofeng Feng, Siyan Chen, Rong Fu, Zimu Liao, Yi Wang, Tao Liu, Zhilin Pei, Hengjie Li, Xingcheng Zhang, Bo Dai
+<details span>
+<summary><b>Abstract</b></summary>
+This work introduces FlashGS, an open-source CUDA Python library, designed to facilitate the efficient differentiable rasterization of 3D Gaussian Splatting through algorithmic and kernel-level optimizations. FlashGS is developed based on the observations from a comprehensive analysis of the rendering process to enhance computational efficiency and bring the technique to wide adoption. The paper includes a suite of optimization strategies, encompassing redundancy elimination, efficient pipelining, refined control and scheduling mechanisms, and memory access optimizations, all of which are meticulously integrated to amplify the performance of the rasterization process. An extensive evaluation of FlashGS' performance has been conducted across a diverse spectrum of synthetic and real-world large-scale scenes, encompassing a variety of image resolutions. The empirical findings demonstrate that FlashGS consistently achieves an average 4x acceleration over mobile consumer GPUs, coupled with reduced memory consumption. These results underscore the superior performance and resource optimization capabilities of FlashGS, positioning it as a formidable tool in the domain of 3D rendering.
+
+![image](https://github.com/user-attachments/assets/8fb5029d-03a7-4ecb-b2a9-48de2139f17b)
+
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.07967) | [⌨️ Code](https://github.com/InternLandMark/FlashGS) | [🌐 Project Page]
+
+
 <br>
 <br>
 
@@ -3024,6 +3040,18 @@ Recent years have witnessed substantial advancements in the field of 3D reconstr
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.06543) | [⌨️ Code](https://github.com/WuJH2001/HDRGS) | [🌐 Project Page]
 
+
+#### <summary>WaterSplatting: Fast Underwater 3D Scene Reconstruction Using Gaussian Splatting
+Authors: Huapeng Li, Wenxuan Song, Tianao Xu, Alexandre Elsig, Jonas Kulhanek
+<details span>
+<summary><b>Abstract</b></summary>
+The underwater 3D scene reconstruction is a challenging, yet interesting problem with applications ranging from naval robots to VR experiences. The problem was successfully tackled by fully volumetric NeRF-based methods which can model both the geometry and the medium (water). Unfortunately, these methods are slow to train and do not offer real-time rendering. More recently, 3D Gaussian Splatting (3DGS) method offered a fast alternative to NeRFs. However, because it is an explicit method that renders only the geometry, it cannot render the medium and is therefore unsuited for underwater reconstruction. Therefore, we propose a novel approach that fuses volumetric rendering with 3DGS to handle underwater data effectively. Our method employs 3DGS for explicit geometry representation and a separate volumetric field (queried once per pixel) for capturing the scattering medium. This dual representation further allows the restoration of the scenes by removing the scattering medium. Our method outperforms state-of-the-art NeRF-based methods in rendering quality on the underwater SeaThru-NeRF dataset. Furthermore, it does so while offering real-time rendering performance, addressing the efficiency limitations of existing methods.
+
+![image](https://github.com/user-attachments/assets/b36a8e91-f5d3-43f7-8efa-d0e61c11a5de)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.08206) | [⌨️ Code] | [🌐 Project Page](https://water-splatting.github.io/)
 
 <br>
 <br>
