@@ -3077,6 +3077,17 @@ We present GS-ID, a novel framework for illumination decomposition on Gaussian S
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.08524) | [⌨️ Code](https://github.com/dukang/GS-ID.) | [🌐 Project Page]
 
+#### <summary>CHASE: 3D-Consistent Human Avatars with Sparse Inputs via Gaussian Splatting and Contrastive Learning
+Authors: Haoyu Zhao, Hao Wang, Chen Yang, Wei Shen
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advancements in human avatar synthesis have utilized radiance fields to reconstruct photo-realistic animatable human avatars. However, both NeRFs-based and 3DGS-based methods struggle with maintaining 3D consistency and exhibit suboptimal detail reconstruction, especially with sparse inputs. To address this challenge, we propose CHASE, which introduces supervision from intrinsic 3D consistency across poses and 3D geometry contrastive learning, achieving performance comparable with sparse inputs to that with full inputs. Following previous work, we first integrate a skeleton-driven rigid deformation and a non-rigid cloth dynamics deformation to coordinate the movements of individual Gaussians during animation, reconstructing basic avatar with coarse 3D consistency. To improve 3D consistency under sparse inputs, we design Dynamic Avatar Adjustment(DAA) to adjust deformed Gaussians based on a selected similar pose/image from the dataset. Minimizing the difference between the image rendered by adjusted Gaussians and the image with the similar pose serves as an additional form of supervision for avatar. Furthermore, we propose a 3D geometry contrastive learning strategy to maintain the 3D global consistency of generated avatars. Though CHASE is designed for sparse inputs, it surprisingly outperforms current SOTA methods \textbf{in both full and sparse settings} on the ZJU-MoCap and H36M datasets, demonstrating that our CHASE successfully maintains avatar's 3D consistency, hence improving rendering quality.
+
+![image](https://github.com/user-attachments/assets/d5900cf3-1191-4ab8-9adf-f53e5504aa0f)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.09663) | [⌨️ Code] | [🌐 Project Page]
 
 <br>
 <br>
@@ -3449,6 +3460,32 @@ Implicit surfaces via neural radiance fields (NeRF) have shown surprising accura
 </details>
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.08766) | [⌨️ Code](https://github.com/albertgassol1/vf-nerf) | [🌐 Project Page]
+
+#### <summary>DiscoNeRF: Class-Agnostic Object Field for 3D Object Discovery
+>  *using and processing SAM for render feature*
+
+Authors: Corentin Dumery, Aoxiang Fan, Ren Li, Nicolas Talabot, Pascal Fua
+<details span>
+<summary><b>Abstract</b></summary>
+Neural Radiance Fields (NeRFs) have become a powerful tool for modeling 3D scenes from multiple images. However, NeRFs remain difficult to segment into semantically meaningful regions. Previous approaches to 3D segmentation of NeRFs either require user interaction to isolate a single object, or they rely on 2D semantic masks with a limited number of classes for supervision. As a consequence, they generalize poorly to class-agnostic masks automatically generated in real scenes. This is attributable to the ambiguity arising from zero-shot segmentation, yielding inconsistent masks across views. In contrast, we propose a method that is robust to inconsistent segmentations and successfully decomposes the scene into a set of objects of any class. By introducing a limited number of competing object slots against which masks are matched, a meaningful object representation emerges that best explains the 2D supervision and minimizes an additional regularization term. Our experiments demonstrate the ability of our method to generate 3D panoptic segmentations on complex scenes, and extract high-quality 3D assets from NeRFs that can then be used in virtual 3D environments.
+
+![image](https://github.com/user-attachments/assets/100860d3-d499-45b0-bd27-d13ba1ee643b)
+
+</details>
+
+[📃 arXiv:2408](https://web3.arxiv.org/pdf/2408.09928) | [⌨️ Code] | [🌐 Project Page] 
+
+#### <summary>Photorealistic Object Insertion with Diffusion-Guided Inverse Rendering
+Authors: Ruofan Liang, Zan Gojcic, Merlin Nimier-David, David Acuna, Nandita Vijaykumar, Sanja Fidler, Zian Wang
+<details span>
+<summary><b>Abstract</b></summary>
+The correct insertion of virtual objects in images of real-world scenes requires a deep understanding of the scene's lighting, geometry and materials, as well as the image formation process. While recent large-scale diffusion models have shown strong generative and inpainting capabilities, we find that current models do not sufficiently "understand" the scene shown in a single picture to generate consistent lighting effects (shadows, bright reflections, etc.) while preserving the identity and details of the composited object. We propose using a personalized large diffusion model as guidance to a physically based inverse rendering process. Our method recovers scene lighting and tone-mapping parameters, allowing the photorealistic composition of arbitrary virtual objects in single frames or videos of indoor or outdoor scenes. Our physically based pipeline further enables automatic materials and tone-mapping refinement.
+
+![image](https://github.com/user-attachments/assets/50897d1d-419d-4737-8d04-a03d088931b7)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.09702) | [⌨️ Code] | [🌐 Project Page](https://research.nvidia.com/labs/toronto-ai/DiPIR/)
 
 
 <br>
