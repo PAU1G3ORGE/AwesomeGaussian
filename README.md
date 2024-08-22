@@ -1144,17 +1144,7 @@ In this paper, we address common error sources for 3D Gaussian Splatting (3DGS) 
 [📃 arXiv:2404](https://arxiv.org/pdf/2404.04211) | [⌨️ Code] | [🌐 Project Page]
 
 
-#### <summary>TrackNeRF: Bundle Adjusting NeRF from Sparse and Noisy Views via Feature Tracks
-Authors: Jinjie Mai, Wenxuan Zhu, Sara Rojas, Jesus Zarzar, Abdullah Hamdi, Guocheng Qian, Bing Li, Silvio Giancola, Bernard Ghanem
-<details span>
-<summary><b>Abstract</b></summary>
-Neural radiance fields (NeRFs) generally require many images with accurate poses for accurate novel view synthesis, which does not reflect realistic setups where views can be sparse and poses can be noisy. Previous solutions for learning NeRFs with sparse views and noisy poses only consider local geometry consistency with pairs of views. Closely following \textit{bundle adjustment} in Structure-from-Motion (SfM), we introduce TrackNeRF for more globally consistent geometry reconstruction and more accurate pose optimization. TrackNeRF introduces \textit{feature tracks}, \ie connected pixel trajectories across \textit{all} visible views that correspond to the \textit{same} 3D points. By enforcing reprojection consistency among feature tracks, TrackNeRF encourages holistic 3D consistency explicitly. Through extensive experiments, TrackNeRF sets a new benchmark in noisy and sparse view reconstruction. In particular, TrackNeRF shows significant improvements over the state-of-the-art BARF and SPARF by ∼8 and ∼1 in terms of PSNR on DTU under various sparse and noisy view setups.
 
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/256f55eb-747d-49d2-ae35-baa4c993a30f)
-
-</details>
-
-[📃 arXiv:2408](https://arxiv.org/pdf/2408.10739) | [⌨️ Code](https://github.com/Wayne-Mai/traf_public) | [🌐 Project Page](https://tracknerf.github.io/)
 
 
 #### <summary>SPARF: Neural Radiance Fields from Sparse and Noisy Poses
@@ -1169,7 +1159,17 @@ Neural Radiance Field (NeRF) has recently emerged as a powerful representation t
 
 [📃 arXiv:2211](https://arxiv.org/pdf/2211.11738) | [⌨️ Code](https://github.com/google-research/sparf) | [🌐 Project Page](https://prunetruong.com/sparf.github.io/)
 
+#### <summary>TrackNeRF: Bundle Adjusting NeRF from Sparse and Noisy Views via Feature Tracks
+Authors: Jinjie Mai, Wenxuan Zhu, Sara Rojas, Jesus Zarzar, Abdullah Hamdi, Guocheng Qian, Bing Li, Silvio Giancola, Bernard Ghanem
+<details span>
+<summary><b>Abstract</b></summary>
+Neural radiance fields (NeRFs) generally require many images with accurate poses for accurate novel view synthesis, which does not reflect realistic setups where views can be sparse and poses can be noisy. Previous solutions for learning NeRFs with sparse views and noisy poses only consider local geometry consistency with pairs of views. Closely following \textit{bundle adjustment} in Structure-from-Motion (SfM), we introduce TrackNeRF for more globally consistent geometry reconstruction and more accurate pose optimization. TrackNeRF introduces \textit{feature tracks}, \ie connected pixel trajectories across \textit{all} visible views that correspond to the \textit{same} 3D points. By enforcing reprojection consistency among feature tracks, TrackNeRF encourages holistic 3D consistency explicitly. Through extensive experiments, TrackNeRF sets a new benchmark in noisy and sparse view reconstruction. In particular, TrackNeRF shows significant improvements over the state-of-the-art BARF and SPARF by ∼8 and ∼1 in terms of PSNR on DTU under various sparse and noisy view setups.
 
+![image](https://github.com/user-attachments/assets/29204efb-0e80-40d2-93dc-23ead3214a61)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.10739) | [⌨️ Code](https://github.com/Wayne-Mai/traf_public) | [🌐 Project Page](https://tracknerf.github.io/)
 
 <br>
 <br>
