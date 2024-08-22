@@ -1144,6 +1144,19 @@ In this paper, we address common error sources for 3D Gaussian Splatting (3DGS) 
 [📃 arXiv:2404](https://arxiv.org/pdf/2404.04211) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>TrackNeRF: Bundle Adjusting NeRF from Sparse and Noisy Views via Feature Tracks
+Authors: Jinjie Mai, Wenxuan Zhu, Sara Rojas, Jesus Zarzar, Abdullah Hamdi, Guocheng Qian, Bing Li, Silvio Giancola, Bernard Ghanem
+<details span>
+<summary><b>Abstract</b></summary>
+Neural radiance fields (NeRFs) generally require many images with accurate poses for accurate novel view synthesis, which does not reflect realistic setups where views can be sparse and poses can be noisy. Previous solutions for learning NeRFs with sparse views and noisy poses only consider local geometry consistency with pairs of views. Closely following \textit{bundle adjustment} in Structure-from-Motion (SfM), we introduce TrackNeRF for more globally consistent geometry reconstruction and more accurate pose optimization. TrackNeRF introduces \textit{feature tracks}, \ie connected pixel trajectories across \textit{all} visible views that correspond to the \textit{same} 3D points. By enforcing reprojection consistency among feature tracks, TrackNeRF encourages holistic 3D consistency explicitly. Through extensive experiments, TrackNeRF sets a new benchmark in noisy and sparse view reconstruction. In particular, TrackNeRF shows significant improvements over the state-of-the-art BARF and SPARF by ∼8 and ∼1 in terms of PSNR on DTU under various sparse and noisy view setups.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/256f55eb-747d-49d2-ae35-baa4c993a30f)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.10739) | [⌨️ Code](https://github.com/Wayne-Mai/traf_public) | [🌐 Project Page](https://tracknerf.github.io/)
+
+
 #### <summary>SPARF: Neural Radiance Fields from Sparse and Noisy Poses
 Authors: Tao Lu, Mulin Yu, Linning Xu, Yuanbo Xiangli, Limin Wang, Dahua Lin, Bo Dai
 <details span>
@@ -1155,6 +1168,8 @@ Neural Radiance Field (NeRF) has recently emerged as a powerful representation t
 </details>
 
 [📃 arXiv:2211](https://arxiv.org/pdf/2211.11738) | [⌨️ Code](https://github.com/google-research/sparf) | [🌐 Project Page](https://prunetruong.com/sparf.github.io/)
+
+
 
 <br>
 <br>
@@ -3088,6 +3103,31 @@ Recent advancements in human avatar synthesis have utilized radiance fields to r
 </details>
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.09663) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>ShapeSplat: A Large-scale Dataset of Gaussian Splats and Their Self-Supervised Pretraining
+Authors: Qi Ma, Yue Li, Bin Ren, Nicu Sebe, Ender Konukoglu, Theo Gevers, Luc Van Gool, Danda Pani Paudel
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has become the de facto method of 3D representation in many vision tasks. This calls for the 3D understanding directly in this representation space. To facilitate the research in this direction, we first build a large-scale dataset of 3DGS using the commonly used ShapeNet and ModelNet datasets. Our dataset ShapeSplat consists of 65K objects from 87 unique categories, whose labels are in accordance with the respective datasets. The creation of this dataset utilized the compute equivalent of 2 GPU years on a TITAN XP GPU.
+We utilize our dataset for unsupervised pretraining and supervised finetuning for classification and segmentation tasks. To this end, we introduce \textbf{\textit{Gaussian-MAE}}, which highlights the unique benefits of representation learning from Gaussian parameters. Through exhaustive experiments, we provide several valuable insights. In particular, we show that (1) the distribution of the optimized GS centroids significantly differs from the uniformly sampled point cloud (used for initialization) counterpart; (2) this change in distribution results in degradation in classification but improvement in segmentation tasks when using only the centroids; (3) to leverage additional Gaussian parameters, we propose Gaussian feature grouping in a normalized feature space, along with splats pooling layer, offering a tailored solution to effectively group and embed similar Gaussians, which leads to notable improvement in finetuning tasks.
+
+![image](https://github.com/user-attachments/assets/6401b2bf-2c62-4da8-b366-7aa0b54e0e5d)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.10906) | [⌨️ Code] | [🌐 Project Page](https://unique1i.github.io/ShapeSplat/)
+
+#### <summary>Learning Part-aware 3D Representations by Fusing 2D Gaussians and Superquadrics
+Authors: Zhirui Gao, Renjiao Yi, Yuhang Huang, Wei Chen, Chenyang Zhu, Kai Xu
+<details span>
+<summary><b>Abstract</b></summary>
+Low-level 3D representations, such as point clouds, meshes, NeRFs, and 3D Gaussians, are commonly used to represent 3D objects or scenes. However, humans usually perceive 3D objects or scenes at a higher level as a composition of parts or structures rather than points or voxels. Representing 3D as semantic parts can benefit further understanding and applications. We aim to solve part-aware 3D reconstruction, which parses objects or scenes into semantic parts. In this paper, we introduce a hybrid representation of superquadrics and 2D Gaussians, trying to dig 3D structural clues from multi-view image inputs. Accurate structured geometry reconstruction and high-quality rendering are achieved at the same time. We incorporate parametric superquadrics in mesh forms into 2D Gaussians by attaching Gaussian centers to faces in meshes. During the training, superquadrics parameters are iteratively optimized, and Gaussians are deformed accordingly, resulting in an efficient hybrid representation. On the one hand, this hybrid representation inherits the advantage of superquadrics to represent different shape primitives, supporting flexible part decomposition of scenes. On the other hand, 2D Gaussians are incorporated to model the complex texture and geometry details, ensuring high-quality rendering and geometry reconstruction. The reconstruction is fully unsupervised. We conduct extensive experiments on data from DTU and ShapeNet datasets, in which the method decomposes scenes into reasonable parts, outperforming existing state-of-the-art approaches.
+
+![image](https://github.com/user-attachments/assets/c9363efc-edf4-4040-bd07-1e050b5f9e47)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.10789) | [⌨️ Code] | [🌐 Project Page]
 
 <br>
 <br>
