@@ -3129,6 +3129,32 @@ Low-level 3D representations, such as point clouds, meshes, NeRFs, and 3D Gaussi
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.10789) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>DeRainGS: Gaussian Splatting for Enhanced Scene Reconstruction in Rainy Environments
+Authors: Shuhong Liu, Xiang Chen, Hongming Chen, Quanfeng Xu, Mingrui Li
+<details span>
+<summary><b>Abstract</b></summary>
+Reconstruction under adverse rainy conditions poses significant challenges due to reduced visibility and the distortion of visual perception. These conditions can severely impair the quality of geometric maps, which is essential for applications ranging from autonomous planning to environmental monitoring. In response to these challenges, this study introduces the novel task of 3D Reconstruction in Rainy Environments (3DRRE), specifically designed to address the complexities of reconstructing 3D scenes under rainy conditions. To benchmark this task, we construct the HydroViews dataset that comprises a diverse collection of both synthesized and real-world scene images characterized by various intensities of rain streaks and raindrops. Furthermore, we propose DeRainGS, the first 3DGS method tailored for reconstruction in adverse rainy environments. Extensive experiments across a wide range of rain scenarios demonstrate that our method delivers state-of-the-art performance, remarkably outperforming existing occlusion-free methods.
+
+![image](https://github.com/user-attachments/assets/1184e89e-a923-48c3-bf94-23e10705d8e2)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.11540) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>GSLoc: Efficient Camera Pose Refinement via 3D Gaussian Splatting
+Authors: Changkun Liu, Shuai Chen, Yash Bhalgat, Siyan Hu, Zirui Wang, Ming Cheng, Victor Adrian Prisacariu, Tristan Braud
+<details span>
+<summary><b>Abstract</b></summary>
+We leverage 3D Gaussian Splatting (3DGS) as a scene representation and propose a novel test-time camera pose refinement framework, GSLoc. This framework enhances the localization accuracy of state-of-the-art absolute pose regression and scene coordinate regression methods. The 3DGS model renders high-quality synthetic images and depth maps to facilitate the establishment of 2D-3D correspondences. GSLoc obviates the need for training feature extractors or descriptors by operating directly on RGB images, utilizing the 3D vision foundation model, MASt3R, for precise 2D matching. To improve the robustness of our model in challenging outdoor environments, we incorporate an exposure-adaptive module within the 3DGS framework. Consequently, GSLoc enables efficient pose refinement given a single RGB query and a coarse initial pose estimation. Our proposed approach surpasses leading NeRF-based optimization methods in both accuracy and runtime across indoor and outdoor visual localization benchmarks, achieving state-of-the-art accuracy on two indoor datasets.
+
+![image](https://github.com/user-attachments/assets/a503a7df-9db5-4c70-9776-7b6a1e75e0ee)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.11085) | [⌨️ Code] | [🌐 Project Page](https://gsloc.active.vision/)
+
+
 <br>
 <br>
 
