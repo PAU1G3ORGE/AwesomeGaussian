@@ -3154,6 +3154,19 @@ We leverage 3D Gaussian Splatting (3DGS) as a scene representation and propose a
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.11085) | [⌨️ Code] | [🌐 Project Page](https://gsloc.active.vision/)
 
+#### <summary>Subsurface Scattering for 3D Gaussian Splatting
+Authors: Jan-Niklas Dihlmann, Arjun Majumdar, Andreas Engelhardt, Raphael Braun, Hendrik P.A. Lensch
+<details span>
+<summary><b>Abstract</b></summary>
+3D reconstruction and relighting of objects made from scattering materials present a significant challenge due to the complex light transport beneath the surface. 3D Gaussian Splatting introduced high-quality novel view synthesis at real-time speeds. While 3D Gaussians efficiently approximate an object's surface, they fail to capture the volumetric properties of subsurface scattering. We propose a framework for optimizing an object's shape together with the radiance transfer field given multi-view OLAT (one light at a time) data. Our method decomposes the scene into an explicit surface represented as 3D Gaussians, with a spatially varying BRDF, and an implicit volumetric representation of the scattering component. A learned incident light field accounts for shadowing. We optimize all parameters jointly via ray-traced differentiable rendering. Our approach enables material editing, relighting and novel view synthesis at interactive rates. We show successful application on synthetic data and introduce a newly acquired multi-view multi-light dataset of objects in a light-stage setup. Compared to previous work we achieve comparable or better results at a fraction of optimization and rendering time while enabling detailed control over material attributes.
+
+![image](https://github.com/user-attachments/assets/5748f252-f95e-4c8a-b72a-f3292d0365ab)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.12282) | [⌨️ Code](https://github.com/cgtuebingen/SSS-GS) | [🌐 Project Page](https://sss.jdihlmann.com/)
+
+
 
 <br>
 <br>
@@ -3552,6 +3565,21 @@ The correct insertion of virtual objects in images of real-world scenes requires
 </details>
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.09702) | [⌨️ Code] | [🌐 Project Page](https://research.nvidia.com/labs/toronto-ai/DiPIR/)
+
+
+#### <summary>ND-SDF: Learning Normal Deflection Fields for High-Fidelity Indoor Reconstruction
+>  *Normal Deflection field for mono normal ambiguity*
+
+Authors: Ziyu Tang, Weicai Ye, Yifan Wang, Di Huang, Hujun Bao, Tong He, Guofeng Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+Neural implicit reconstruction via volume rendering has demonstrated its effectiveness in recovering dense 3D surfaces. However, it is non-trivial to simultaneously recover meticulous geometry and preserve smoothness across regions with differing characteristics. To address this issue, previous methods typically employ geometric priors, which are often constrained by the performance of the prior models. In this paper, we propose ND-SDF, which learns a Normal Ddeflection field to represent the angular deviation between the scene normal and the prior normal. Unlike previous methods that uniformly apply geometric priors on all samples, introducing significant bias in accuracy, our proposed normal deflection field dynamically learns and adapts the utilization of samples based on their specific characteristics, thereby improving both the accuracy and effectiveness of the model. Our method not only obtains smooth weakly textured regions such as walls and floors but also preserves the geometric details of complex structures. In addition, we introduce a novel ray sampling strategy based on the deflection angle to facilitate the unbiased rendering process, which significantly improves the quality and accuracy of intricate surfaces, especially on thin structures. Consistent improvements on various challenging datasets demonstrate the superiority of our method.
+
+![image](https://github.com/user-attachments/assets/4ed52a9f-5241-4336-831f-be3838c8b7af)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.12598) | [⌨️ Code](https://github.com/zju3dv/ND-SDF) | [🌐 Project Page](https://zju3dv.github.io/nd-sdf/)
 
 
 <br>
@@ -5158,7 +5186,17 @@ Despite the progress on 3D point cloud deep learning, most prior works focus on 
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.06110) | [⌨️ Code](https://github.com/cszyzhang/RISurConv) | [🌐 Project Page]
 
+#### <summary>Sapiens: Foundation for Human Vision Models
+>  *ECCV2024 oral*
+> 
+Authors: Rawal Khirodkar, Timur Bagautdinov, Julieta Martinez, Su Zhaoen, Austin James, Peter Selednik, Stuart Anderson, Shunsuke Saito
+<details span>
+<summary><b>Abstract</b></summary>
+We present Sapiens, a family of models for four fundamental human-centric vision tasks - 2D pose estimation, body-part segmentation, depth estimation, and surface normal prediction. Our models natively support 1K high-resolution inference and are extremely easy to adapt for individual tasks by simply fine-tuning models pretrained on over 300 million in-the-wild human images. We observe that, given the same computational budget, self-supervised pretraining on a curated dataset of human images significantly boosts the performance for a diverse set of human-centric tasks. The resulting models exhibit remarkable generalization to in-the-wild data, even when labeled data is scarce or entirely synthetic. Our simple model design also brings scalability - model performance across tasks improves as we scale the number of parameters from 0.3 to 2 billion. Sapiens consistently surpasses existing baselines across various human-centric benchmarks. We achieve significant improvements over the prior state-of-the-art on Humans-5K (pose) by 7.6 mAP, Humans-2K (part-seg) by 17.1 mIoU, Hi4D (depth) by 22.4% relative RMSE, and THuman2 (normal) by 53.5% relative angular error.
 
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.12569)| [⌨️ Code](https://github.com/facebookresearch/sapiens) | [🌐 Project Page](https://about.meta.com/realitylabs/codecavatars/sapiens/)
 
 #### <summary>
 Authors: 
