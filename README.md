@@ -5039,7 +5039,7 @@ Neural signed distance functions (SDFs) have shown powerful ability in fitting t
 
 </details>
 
-[📃 arXiv:2407])(https://arxiv.org/pdf/2407.13342) | [⌨️ Code] | [🌐 Project Page](https://list17.github.io/ImplicitFilter)
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.13342) | [⌨️ Code] | [🌐 Project Page](https://list17.github.io/ImplicitFilter)
 
 #### <summary>GenRC: Generative 3D Room Completion from Sparse Image Collections
 Authors: Ming-Feng Li, Yueh-Feng Ku, Hong-Xuan Yen, Chi Liu, Yu-Lun Liu, Albert Y. C. Chen, Cheng-Hao Kuo, Min Sun
