@@ -965,6 +965,19 @@ This work introduces FlashGS, an open-source CUDA Python library, designed to fa
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.07967) | [⌨️ Code](https://github.com/InternLandMark/FlashGS) | [🌐 Project Page]
 
+#### <summary>FLoD: Integrating Flexible Level of Detail into 3D Gaussian Splatting for Customizable Rendering
+
+Authors: Yunji Seo, Young Sun Choi, Hyun Seung Son, Youngjung Uh
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) achieves fast and high-quality renderings by using numerous small Gaussians, which leads to significant memory consumption. This reliance on a large number of Gaussians restricts the application of 3DGS-based models on low-cost devices due to memory limitations. However, simply reducing the number of Gaussians to accommodate devices with less memory capacity leads to inferior quality compared to the quality that can be achieved on high-end hardware. To address this lack of scalability, we propose integrating a Flexible Level of Detail (FLoD) to 3DGS, to allow a scene to be rendered at varying levels of detail according to hardware capabilities. While existing 3DGSs with LoD focus on detailed reconstruction, our method provides reconstructions using a small number of Gaussians for reduced memory requirements, and a larger number of Gaussians for greater detail. Experiments demonstrate our various rendering options with tradeoffs between rendering quality and memory usage, thereby allowing real-time rendering across different memory constraints. Furthermore, we show that our method generalizes to different 3DGS frameworks, indicating its potential for integration into future state-of-the-art developments.
+
+![image](https://github.com/user-attachments/assets/f51c889e-ed15-49d0-b799-13583d7c3942)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.12894) | [⌨️ Code] | [🌐 Project Page](https://3dgs-flod.github.io/flod.github.io/)
+
 
 <br>
 <br>
@@ -3165,6 +3178,35 @@ Authors: Jan-Niklas Dihlmann, Arjun Majumdar, Andreas Engelhardt, Raphael Braun,
 </details>
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.12282) | [⌨️ Code](https://github.com/cgtuebingen/SSS-GS) | [🌐 Project Page](https://sss.jdihlmann.com/)
+
+#### <summary>Atlas Gaussians Diffusion for 3D Generation with Infinite Number of Points
+>  *surface parameterization*
+
+Authors: Haitao Yang, Yuan Dong, Hanwen Jiang, Dejia Xu, Georgios Pavlakos, Qixing Huang
+<details span>
+<summary><b>Abstract</b></summary>
+Using the latent diffusion model has proven effective in developing novel 3D generation techniques. To harness the latent diffusion model, a key challenge is designing a high-fidelity and efficient representation that links the latent space and the 3D space. In this paper, we introduce Atlas Gaussians, a novel representation for feed-forward native 3D generation. Atlas Gaussians represent a shape as the union of local patches, and each patch can decode 3D Gaussians. We parameterize a patch as a sequence of feature vectors and design a learnable function to decode 3D Gaussians from the feature vectors. In this process, we incorporate UV-based sampling, enabling the generation of a sufficiently large, and theoretically infinite, number of 3D Gaussian points. The large amount of 3D Gaussians enables high-quality details of generation results. Moreover, due to local awareness of the representation, the transformer-based decoding procedure operates on a patch level, ensuring efficiency. We train a variational autoencoder to learn the Atlas Gaussians representation, and then apply a latent diffusion model on its latent space for learning 3D Generation. Experiments show that our approach outperforms the prior arts of feed-forward native 3D generation.
+
+![image](https://github.com/user-attachments/assets/448237ae-415a-4655-a296-0e14e206f53d)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.13055) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>S4D: Streaming 4D Real-World Reconstruction with Gaussians and 3D Control Points
+
+Authors: Bing He, Yunuo Chen, Guo Lu, Li Song, Wenjun Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, the dynamic scene reconstruction using Gaussians has garnered increased interest. Mainstream approaches typically employ a global deformation field to warp a 3D scene in the canonical space. However, the inherently low-frequency nature of implicit neural fields often leads to ineffective representations of complex motions. Moreover, their structural rigidity can hinder adaptation to scenes with varying resolutions and durations. To overcome these challenges, we introduce a novel approach utilizing discrete 3D control points. This method models local rays physically and establishes a motion-decoupling coordinate system, which effectively merges traditional graphics with learnable pipelines for a robust and efficient local 6-degrees-of-freedom (6-DoF) motion representation. Additionally, we have developed a generalized framework that incorporates our control points with Gaussians. Starting from an initial 3D reconstruction, our workflow decomposes the streaming 4D real-world reconstruction into four independent submodules: 3D segmentation, 3D control points generation, object-wise motion manipulation, and residual compensation. Our experiments demonstrate that this method outperforms existing state-of-the-art 4D Gaussian Splatting techniques on both the Neu3DV and CMU-Panoptic datasets. Our approach also significantly accelerates training, with the optimization of our 3D control points achievable within just 2 seconds per frame on a single NVIDIA 4070 GPU.
+
+![image](https://github.com/user-attachments/assets/9c27fa95-a41d-4b6c-b5cb-9ab3570781b2)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.13036) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 
