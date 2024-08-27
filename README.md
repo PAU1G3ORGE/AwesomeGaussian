@@ -1319,6 +1319,30 @@ Radiance field methods have achieved photorealistic novel view synthesis and geo
 [📃 arXiv:2406](https://arxiv.org/pdf/2407.04699) | [⌨️ Code](https://github.com/autonomousvision/LaRa) | [🌐 Project Page](https://apchenstu.github.io/LaRa/)
 
 
+#### <summary>Splatt3R: Zero-shot Gaussian Splatting from Uncalibarated Image Pairs
+Authors: Brandon Smart, Chuanxia Zheng, Iro Laina, Victor Adrian Prisacariu
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper, we introduce Splatt3R, a pose-free, feed-forward method for in-the-wild 3D reconstruction and novel view synthesis from stereo pairs. Given uncalibrated natural images, Splatt3R can predict 3D Gaussian Splats without requiring any camera parameters or depth information. For generalizability, we start from a 'foundation' 3D geometry reconstruction method, MASt3R, and extend it to be a full 3D structure and appearance reconstructor. Specifically, unlike the original MASt3R which reconstructs only 3D point clouds, we predict the additional Gaussian attributes required to construct a Gaussian primitive for each point. Hence, unlike other novel view synthesis methods, Splatt3R is first trained by optimizing the 3D point cloud's geometry loss, and then a novel view synthesis objective. By doing this, we avoid the local minima present in training 3D Gaussian Splats from stereo views. We also propose a novel loss masking strategy that we empirically find is critical for strong performance on extrapolated viewpoints. We train Splatt3R on the ScanNet++ dataset and demonstrate excellent generalisation to uncalibrated, in-the-wild images. Splatt3R can reconstruct scenes at 4FPS at 512 x 512 resolution, and the resultant splats can be rendered in real-time.
+
+![image](https://github.com/user-attachments/assets/24c1c2fb-5c38-468a-8e8d-ba4d9514cd40)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.13912) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>TranSplat: Generalizable 3D Gaussian Splatting from Sparse Multi-View Images with Transformers
+Authors: Chuanrui Zhang, Yingshuang Zou, Zhuoling Li, Minmin Yi, Haoqian Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Compared with previous 3D reconstruction methods like Nerf, recent Generalizable 3D Gaussian Splatting (G-3DGS) methods demonstrate impressive efficiency even in the sparse-view setting. However, the promising reconstruction performance of existing G-3DGS methods relies heavily on accurate multi-view feature matching, which is quite challenging. Especially for the scenes that have many non-overlapping areas between various views and contain numerous similar regions, the matching performance of existing methods is poor and the reconstruction precision is limited. To address this problem, we develop a strategy that utilizes a predicted depth confidence map to guide accurate local feature matching. In addition, we propose to utilize the knowledge of existing monocular depth estimation models as prior to boost the depth estimation precision in non-overlapping areas between views. Combining the proposed strategies, we present a novel G-3DGS method named TranSplat, which obtains the best performance on both the RealEstate10K and ACID benchmarks while maintaining competitive speed and presenting strong cross-dataset generalization ability.
+
+![image](https://github.com/user-attachments/assets/70cd0f0b-65b2-4455-82eb-1de3d3a1a5e0)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.13770) | [⌨️ Code] | [🌐 Project Page](https://xingyoujun.github.io/transplat/)
+
 
 <br>
 <br>
@@ -3207,7 +3231,19 @@ Recently, the dynamic scene reconstruction using Gaussians has garnered increase
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.13036) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>DynaSurfGS: Dynamic Surface Reconstruction with Planar-based Gaussian Splatting
+>  *maybe for pose estimation*
 
+Authors: Weiwei Cai, Weicai Ye, Peng Ye, Tong He, Tao Chen
+<details span>
+<summary><b>Abstract</b></summary>
+Dynamic scene reconstruction has garnered significant attention in recent years due to its capabilities in high-quality and real-time rendering. Among various methodologies, constructing a 4D spatial-temporal representation, such as 4D-GS, has gained popularity for its high-quality rendered images. However, these methods often produce suboptimal surfaces, as the discrete 3D Gaussian point clouds fail to align with the object's surface precisely. To address this problem, we propose DynaSurfGS to achieve both photorealistic rendering and high-fidelity surface reconstruction of dynamic scenarios. Specifically, the DynaSurfGS framework first incorporates Gaussian features from 4D neural voxels with the planar-based Gaussian Splatting to facilitate precise surface reconstruction. It leverages normal regularization to enforce the smoothness of the surface of dynamic objects. It also incorporates the as-rigid-as-possible (ARAP) constraint to maintain the approximate rigidity of local neighborhoods of 3D Gaussians between timesteps and ensure that adjacent 3D Gaussians remain closely aligned throughout. Extensive experiments demonstrate that DynaSurfGS surpasses state-of-the-art methods in both high-fidelity surface reconstruction and photorealistic rendering.
+
+![image](https://github.com/user-attachments/assets/dd708b66-132c-4c32-b3ae-e7c8d03c0077)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.13972) | [⌨️ Code] | [🌐 Project Page]
 
 
 <br>
