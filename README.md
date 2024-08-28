@@ -978,6 +978,35 @@ Authors: Yunji Seo, Young Sun Choi, Hyun Seung Son, Youngjung Uh
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.12894) | [⌨️ Code] | [🌐 Project Page](https://3dgs-flod.github.io/flod.github.io/)
 
+#### <summary>Drone-assisted Road Gaussian Splatting with Cross-view Uncertainty
+>  *assist in the synthesis of areas where ground images have poor learning results*
+
+Authors: Saining Zhang, Baijun Ye, Xiaoxue Chen, Yuantao Chen, Zongzheng Zhang, Cheng Peng, Yongliang Shi, Hao Zhao
+<details span>
+<summary><b>Abstract</b></summary>
+Robust and realistic rendering for large-scale road scenes is essential in autonomous driving simulation. Recently, 3D Gaussian Splatting (3D-GS) has made groundbreaking progress in neural rendering, but the general fidelity of large-scale road scene renderings is often limited by the input imagery, which usually has a narrow field of view and focuses mainly on the street-level local area. Intuitively, the data from the drone's perspective can provide a complementary viewpoint for the data from the ground vehicle's perspective, enhancing the completeness of scene reconstruction and rendering. However, training naively with aerial and ground images, which exhibit large view disparity, poses a significant convergence challenge for 3D-GS, and does not demonstrate remarkable improvements in performance on road views. In order to enhance the novel view synthesis of road views and to effectively use the aerial information, we design an uncertainty-aware training method that allows aerial images to assist in the synthesis of areas where ground images have poor learning outcomes instead of weighting all pixels equally in 3D-GS training like prior work did. We are the first to introduce the cross-view uncertainty to 3D-GS by matching the car-view ensemble-based rendering uncertainty to aerial images, weighting the contribution of each pixel to the training process. Additionally, to systematically quantify evaluation metrics, we assemble a high-quality synthesized dataset comprising both aerial and ground images for road scenes.
+ 
+![image](https://github.com/user-attachments/assets/d5e9aa3f-4cc4-4fec-932e-0521106fe342)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.15242) | [⌨️ Code](https://github.com/SainingZhang/uc-gs/) | [🌐 Project Page](https://sainingzhang.github.io/project/uc-gs/)
+
+
+#### <summary>LapisGS: Layered Progressive 3D Gaussian Splatting for Adaptive Streaming
+>  *L1 loss is not sensitive to blurriness or low-resolution artifacts that do not alter the image’s structure*
+
+Authors: Yuang Shi, Simone Gasparini, Géraldine Morin, Wei Tsang Ooi
+<details span>
+<summary><b>Abstract</b></summary>
+The rise of Extended Reality (XR) requires efficient streaming of 3D online worlds, challenging current 3DGS representations to adapt to bandwidth-constrained environments. This paper proposes LapisGS, a layered 3DGS that supports adaptive streaming and progressive rendering. Our method constructs a layered structure for cumulative representation, incorporates dynamic opacity optimization to maintain visual fidelity, and utilizes occupancy maps to efficiently manage Gaussian splats. This proposed model offers a progressive representation supporting a continuous rendering quality adapted for bandwidth-aware streaming. Extensive experiments validate the effectiveness of our approach in balancing visual fidelity with the compactness of the model, with up to 50.71% improvement in SSIM, 286.53% improvement in LPIPS, and 318.41% reduction in model size, and shows its potential for bandwidth-adapted 3D streaming and rendering applications.
+ 
+![image](https://github.com/user-attachments/assets/1e1d247d-1514-493d-906e-cefd70b62a78)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.14823) | [⌨️ Code] | [🌐 Project Page]
+
 
 <br>
 <br>
@@ -5311,6 +5340,22 @@ We present Sapiens, a family of models for four fundamental human-centric vision
 </details>
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.12569)| [⌨️ Code](https://github.com/facebookresearch/sapiens) | [🌐 Project Page](https://about.meta.com/realitylabs/codecavatars/sapiens/)
+
+#### <summary>Learning-based Multi-View Stereo: A Survey
+>  *pic*
+> 
+Authors: Fangjinhua Wang, Qingtian Zhu, Di Chang, Quankai Gao, Junlin Han, Tong Zhang, Richard Hartley, Marc Pollefeys
+<details span>
+<summary><b>Abstract</b></summary>
+3D reconstruction aims to recover the dense 3D structure of a scene. It plays an essential role in various applications such as Augmented/Virtual Reality (AR/VR), autonomous driving and robotics. Leveraging multiple views of a scene captured from different viewpoints, Multi-View Stereo (MVS) algorithms synthesize a comprehensive 3D representation, enabling precise reconstruction in complex environments. Due to its efficiency and effectiveness, MVS has become a pivotal method for image-based 3D reconstruction. Recently, with the success of deep learning, many learning-based MVS methods have been proposed, achieving impressive performance against traditional methods. We categorize these learning-based methods as: depth map-based, voxel-based, NeRF-based, 3D Gaussian Splatting-based, and large feed-forward methods. Among these, we focus significantly on depth map-based methods, which are the main family of MVS due to their conciseness, flexibility and scalability. In this survey, we provide a comprehensive review of the literature at the time of this writing. We investigate these learning-based methods, summarize their performances on popular benchmarks, and discuss promising future research directions in this area.
+
+![image](https://github.com/user-attachments/assets/a463ed35-cb4e-4c8f-9d15-ec46bf07275b)
+
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.15235) | [⌨️ Code] | [🌐 Project Page]
+
 
 #### <summary>
 Authors: 
