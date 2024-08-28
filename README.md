@@ -3791,7 +3791,7 @@ Joint camera pose and dense geometry estimation from a set of images or a monocu
 We address this issue with a new image representation which we call a SuperPrimitive. SuperPrimitives are obtained by splitting images into semantically correlated local regions and enhancing them with estimated surface normal directions, both of which are predicted by state-of-the-art single image neural networks. This provides a local geometry estimate per SuperPrimitive, while their relative positions are adjusted based on multi-view observations.
 We demonstrate the versatility of our new representation by addressing three 3D reconstruction tasks: depth completion, few-view structure from motion, and monocular dense visual odometry.
  
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/d53c698d-3a4f-429f-a7de-d691472e233a)
+![image](https://github.com/user-attachments/assets/2c54429c-a4c9-425f-825f-5c8361067b79)
 
  
 </details>
@@ -3805,7 +3805,7 @@ Authors: Zhan Li, Zhang Chen, Zhong Li, Yi Xu
 <summary><b>Abstract</b></summary>
 Novel view synthesis of dynamic scenes has been an intriguing yet challenging problem. Despite recent advancements, simultaneously achieving high-resolution photorealistic results, real-time rendering, and compact storage remains a formidable task. To address these challenges, we propose Spacetime Gaussian Feature Splatting as a novel dynamic scene representation, composed of three pivotal components. First, we formulate expressive Spacetime Gaussians by enhancing 3D Gaussians with temporal opacity and parametric motion/rotation. This enables Spacetime Gaussians to capture static, dynamic, as well as transient content within a scene. Second, we introduce splatted feature rendering, which replaces spherical harmonics with neural features. These features facilitate the modeling of view- and time-dependent appearance while maintaining small size. Third, we leverage the guidance of training error and coarse depth to sample new Gaussians in areas that are challenging to converge with existing pipelines. Experiments on several established real-world datasets demonstrate that our method achieves state-of-the-art rendering quality and speed, while retaining compact storage. At 8K resolution, our lite-version model can render at 60 FPS on an Nvidia RTX 4090 GPU.
  
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/d53c698d-3a4f-429f-a7de-d691472e233a)
+![image](https://github.com/user-attachments/assets/cc88bd7a-2b87-4b8a-9b5d-da2b38990417)
 
  
 </details>
@@ -3820,6 +3820,8 @@ Authors: Christian Reiser, Stephan Garbin, Pratul P. Srinivasan, Dor Verbin, Ric
 <details span>
 <summary><b>Abstract</b></summary>
 While surface-based view synthesis algorithms are appealing due to their low computational requirements, they often struggle to reproduce thin structures. In contrast, more expensive methods that model the scene's geometry as a volumetric density field (e.g. NeRF) excel at reconstructing fine geometric detail. However, density fields often represent geometry in a "fuzzy" manner, which hinders exact localization of the surface. In this work, we modify density fields to encourage them to converge towards surfaces, without compromising their ability to reconstruct thin structures. First, we employ a discrete opacity grid representation instead of a continuous density field, which allows opacity values to discontinuously transition from zero to one at the surface. Second, we anti-alias by casting multiple rays per pixel, which allows occlusion boundaries and subpixel structures to be modelled without using semi-transparent voxels. Third, we minimize the binary entropy of the opacity values, which facilitates the extraction of surface geometry by encouraging opacity values to binarize towards the end of training. Lastly, we develop a fusion-based meshing strategy followed by mesh simplification and appearance model fitting. The compact meshes produced by our model can be rendered in real-time on mobile devices and achieve significantly higher view synthesis quality compared to existing mesh-based approaches.
+
+![image](https://github.com/user-attachments/assets/bd730c73-67d9-440d-83ad-810078b3048b)
 
 
 </details>
