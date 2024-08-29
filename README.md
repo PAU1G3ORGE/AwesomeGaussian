@@ -3348,6 +3348,8 @@ Neural Radiance Field (NeRF) has broken new ground in the novel view synthesis d
 [📃 arXiv:2302](https://arxiv.org/pdf/2302.08788) | [⌨️ Code](https://github.com/shawn615/MixNeRF/tree/main?tab=readme-ov-file) | [🌐 Project Page](https://shawn615.github.io/mixnerf/)
 
 
+
+
 #### <summary>DiffusioNeRF: Regularizing Neural Radiance Fields with Denoising Diffusion Models
 Authors: Jamie Wynn, Daniyar Turmukhambetov
 <details span>
@@ -5343,7 +5345,7 @@ We present Sapiens, a family of models for four fundamental human-centric vision
 
 #### <summary>Learning-based Multi-View Stereo: A Survey
 >  *pic*
-> 
+
 Authors: Fangjinhua Wang, Qingtian Zhu, Di Chang, Quankai Gao, Junlin Han, Tong Zhang, Richard Hartley, Marc Pollefeys
 <details span>
 <summary><b>Abstract</b></summary>
