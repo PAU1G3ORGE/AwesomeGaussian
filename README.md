@@ -405,6 +405,20 @@ We present a novel approach for 3D indoor scene reconstruction that combines 3D 
 
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.16173) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>Surface Reconstruction from 3D Gaussian Splatting via Local Structural Hints
+Authors: Qianyi Wu, Jianmin Zheng, Jianfei Cai   
+<details span>
+<summary><b>Abstract</b></summary>
+This paper presents a novel approach for surface mesh reconstruction from 3D Gaussian Splatting (3DGS), a technique renowned for its efficiency in novel view synthesis but challenged for surface reconstruction. The key obstacle is the lack of geometry hints to regulate the optimization of millions of unorganized Gaussian blobs to align to the true surface. This paper introduces local structural hints during training to address the challenge. We first leverage the prior knowledge from monocular normal and depth estimations to refine the covariance and mean of Gaussian primitives, enhancing their organization and providing crucial normal information for surface extraction. However, due to the highly discrete nature of Gaussian primitives, such geometry guidance remains insufficient for the alignment with the true surface. We then propose to construct a signed distance field by a moving least square (MLS) function over the Gaussians in each local region. More importantly, we further propose to jointly learn a neural implicit network to mimic and regularize the MLS function. The joint optimization helps the optimization of Gaussian Splatting towards accurate surface alignment. Extensive experimental results demonstrate the effectiveness of our method in achieving superior mesh quality compared with the SoTA surface reconstruction for 3DGS.
+
+![image](https://github.com/user-attachments/assets/7e8504c0-8b00-4adc-bc76-9556653d03d0)
+
+
+</details>
+
+[📃 arXiv:24xx] | [⌨️ Code](https://github.com/QianyiWu/GSRec/tree/main) | [🌐 Project Page](https://wuqianyi.top/gsrec)
+
+
 
 <br>
 <br>
