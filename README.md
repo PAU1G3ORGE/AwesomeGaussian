@@ -418,6 +418,20 @@ This paper presents a novel approach for surface mesh reconstruction from 3D Gau
 
 [📃 arXiv:24xx] | [⌨️ Code](https://github.com/QianyiWu/GSRec/tree/main) | [🌐 Project Page](https://wuqianyi.top/gsrec)
 
+#### <summary>Spurfies: Sparse Surface Reconstruction using Local Geometry Priors
+>*Local Prior*
+
+Authors: Kevin Raj, Christopher Wewer, Raza Yunus, Eddy Ilg, Jan Eric Lenssen
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce Spurfies, a novel method for sparse-view surface reconstruction that disentangles appearance and geometry information to utilize local geometry priors trained on synthetic data. Recent research heavily focuses on 3D reconstruction using dense multi-view setups, typically requiring hundreds of images. However, these methods often struggle with few-view scenarios. Existing sparse-view reconstruction techniques often rely on multi-view stereo networks that need to learn joint priors for geometry and appearance from a large amount of data. In contrast, we introduce a neural point representation that disentangles geometry and appearance to train a local geometry prior using a subset of the synthetic ShapeNet dataset only. During inference, we utilize this surface prior as additional constraint for surface and appearance reconstruction from sparse input views via differentiable volume rendering, restricting the space of possible solutions. We validate the effectiveness of our method on the DTU dataset and demonstrate that it outperforms previous state of the art by 35% in surface quality while achieving competitive novel view synthesis quality. Moreover, in contrast to previous works, our method can be applied to larger, unbounded scenes, such as Mip-NeRF 360.
+
+![image](https://github.com/user-attachments/assets/8d5e307d-ad97-477e-af27-1688a4794f55)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.16544) | [⌨️ Code] | [🌐 Project Page](https://geometric-rl.mpi-inf.mpg.de/spurfies/)
+
 
 
 <br>
@@ -1189,7 +1203,17 @@ Gaussian SLAM systems have made significant advancements in improving the effici
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.20031) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>OmniRe: Omni Urban Scene Reconstruction
+Authors: Ziyu Chen, Jiawei Yang, Jiahui Huang, Riccardo de Lutio, Janick Martinez Esturo, Boris Ivanovic, Or Litany, Zan Gojcic, Sanja Fidler, Marco Pavone, Li Song, Yue Wang
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce OmniRe, a holistic approach for efficiently reconstructing high-fidelity dynamic urban scenes from on-device logs. Recent methods for modeling driving sequences using neural radiance fields or Gaussian Splatting have demonstrated the potential of reconstructing challenging dynamic scenes, but often overlook pedestrians and other non-vehicle dynamic actors, hindering a complete pipeline for dynamic urban scene reconstruction. To that end, we propose a comprehensive 3DGS framework for driving scenes, named OmniRe, that allows for accurate, full-length reconstruction of diverse dynamic objects in a driving log. OmniRe builds dynamic neural scene graphs based on Gaussian representations and constructs multiple local canonical spaces that model various dynamic actors, including vehicles, pedestrians, and cyclists, among many others. This capability is unmatched by existing methods. OmniRe allows us to holistically reconstruct different objects present in the scene, subsequently enabling the simulation of reconstructed scenarios with all actors participating in real-time (~60Hz). Extensive evaluations on the Waymo dataset show that our approach outperforms prior state-of-the-art methods quantitatively and qualitatively by a large margin. We believe our work fills a critical gap in driving reconstruction.
+ 
+![image](https://github.com/user-attachments/assets/32fb5f74-5a15-44e1-b55d-1e0879ad6b1d)
 
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.16760) | [⌨️ Code](https://github.com/ziyc/drivestudio) | [🌐 Project Page](https://ziyc.github.io/omnire/)
 
 
 <br>
@@ -5383,6 +5407,19 @@ Authors: Fangjinhua Wang, Qingtian Zhu, Di Chang, Quankai Gao, Junlin Han, Tong 
 </details>
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.15235) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>3D Reconstruction with Spatial Memory
+Authors: Hengyi Wang, Lourdes Agapito
+<details span>
+<summary><b>Abstract</b></summary>
+We present Spann3R, a novel approach for dense 3D reconstruction from ordered or unordered image collections. Built on the DUSt3R paradigm, Spann3R uses a transformer-based architecture to directly regress pointmaps from images without any prior knowledge of the scene or camera parameters. Unlike DUSt3R, which predicts per image-pair pointmaps each expressed in its local coordinate frame, Spann3R can predict per-image pointmaps expressed in a global coordinate system, thus eliminating the need for optimization-based global alignment. The key idea of Spann3R is to manage an external spatial memory that learns to keep track of all previous relevant 3D information. Spann3R then queries this spatial memory to predict the 3D structure of the next frame in a global coordinate system. Taking advantage of DUSt3R's pre-trained weights, and further fine-tuning on a subset of datasets, Spann3R shows competitive performance and generalization ability on various unseen datasets and can process ordered image collections in real time.
+
+![image](https://github.com/user-attachments/assets/d322c9c7-1b6f-4520-b82a-a4b6c2fa6c2b)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.16061) | [⌨️ Code] | [🌐 Project Page](https://hengyiwang.github.io/projects/spanner)
 
 
 #### <summary>
