@@ -1216,6 +1216,23 @@ We introduce OmniRe, a holistic approach for efficiently reconstructing high-fid
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.16760) | [⌨️ Code](https://github.com/ziyc/drivestudio) | [🌐 Project Page](https://ziyc.github.io/omnire/)
 
 
+#### <summary>OG-Mapping: Octree-based Structured 3D Gaussians for Online Dense Mapping
+>*anchor growth method based on Scaffold-GS*
+
+Authors: Meng Wang, Junyi Wang, Changqun Xia, Chen Wang, Yue Qi
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian splatting (3DGS) has recently demonstrated promising advancements in RGB-D online dense mapping. Nevertheless, existing methods excessively rely on per-pixel depth cues to perform map densification, which leads to significant redundancy and increased sensitivity to depth noise. Additionally, explicitly storing 3D Gaussian parameters of room-scale scene poses a significant storage challenge. In this paper, we introduce OG-Mapping, which leverages the robust scene structural representation capability of sparse octrees, combined with structured 3D Gaussian representations, to achieve efficient and robust online dense mapping. Moreover, OG-Mapping employs an anchor-based progressive map refinement strategy to recover the scene structures at multiple levels of detail. Instead of maintaining a small number of active keyframes with a fixed keyframe window as previous approaches do, a dynamic keyframe window is employed to allow OG-Mapping to better tackle false local minima and forgetting issues. Experimental results demonstrate that OG-Mapping delivers more robust and superior realism mapping results than existing Gaussian-based RGB-D online mapping methods with a compact model, and no additional post-processing is required.
+ 
+![image](https://github.com/user-attachments/assets/d7225b17-aab2-4aae-b57b-43cb471e9342)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2408.17223) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+
 <br>
 <br>
 
