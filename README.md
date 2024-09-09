@@ -3373,6 +3373,35 @@ Dynamic scene reconstruction has garnered significant attention in recent years 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.13972) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>GST: Precise 3D Human Body from a Single Image with Gaussian Splatting Transformers
+>  *token in transformer for gaussian attribute*
+
+Authors: Lorenza Prospero, Abdullah Hamdi, Joao F. Henriques, Christian Rupprecht
+<details span>
+<summary><b>Abstract</b></summary>
+Reconstructing realistic 3D human models from monocular images has significant applications in creative industries, human-computer interfaces, and healthcare. We base our work on 3D Gaussian Splatting (3DGS), a scene representation composed of a mixture of Gaussians. Predicting such mixtures for a human from a single input image is challenging, as it is a non-uniform density (with a many-to-one relationship with input pixels) with strict physical constraints. At the same time, it needs to be flexible to accommodate a variety of clothes and poses. Our key observation is that the vertices of standardized human meshes (such as SMPL) can provide an adequate density and approximate initial position for Gaussians. We can then train a transformer model to jointly predict comparatively small adjustments to these positions, as well as the other Gaussians' attributes and the SMPL parameters. We show empirically that this combination (using only multi-view supervision) can achieve fast inference of 3D human models from a single image without test-time optimization, expensive diffusion models, or 3D points supervision. We also show that it can improve 3D pose estimation by better fitting human models that account for clothes and other variations.
+
+![image](https://github.com/user-attachments/assets/8917c584-50c3-49dc-9c35-ee65ef38a0b2)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.04196) | [⌨️ Code](https://github.com/prosperolo/GST) | [🌐 Project Page](https://abdullahamdi.com/gst/)
+
+#### <summary>3D-GP-LMVIC: Learning-based Multi-View Image Coding with 3D Gaussian Geometric Priors
+>  *compression(H264) -> redundancy between image pairs -> disparity estimation -> render depth(using 3D Gaussian as tool)*
+
+Authors: Yujun Huang, Bin Chen, Niu Lian, Baoyi An, Shu-Tao Xia
+<details span>
+<summary><b>Abstract</b></summary>
+Multi-view image compression is vital for 3D-related applications. To effectively model correlations between views, existing methods typically predict disparity between two views on a 2D plane, which works well for small disparities, such as in stereo images, but struggles with larger disparities caused by significant view changes. To address this, we propose a novel approach: learning-based multi-view image coding with 3D Gaussian geometric priors (3D-GP-LMVIC). Our method leverages 3D Gaussian Splatting to derive geometric priors of the 3D scene, enabling more accurate disparity estimation across views within the compression model. Additionally, we introduce a depth map compression model to reduce redundancy in geometric information between views. A multi-view sequence ordering method is also proposed to enhance correlations between adjacent views. Experimental results demonstrate that 3D-GP-LMVIC surpasses both traditional and learning-based methods in performance, while maintaining fast encoding and decoding speed.
+ 
+![image](https://github.com/user-attachments/assets/f395b299-d12d-4d30-be0c-64322cd43060)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.04013) | [⌨️ Code](https://github.com/YujunHuang063/3D-GP-LMVIC) | [🌐 Project Page]
+
+
 <br>
 <br>
 
