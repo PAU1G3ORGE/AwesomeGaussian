@@ -468,6 +468,8 @@ Novel view synthesis from limited observations remains an important and persiste
 [📃 arXiv:2312](https://arxiv.org/pdf/2312.00451) | [⌨️ Code](https://github.com/VITA-Group/FSGS) | [🌐 Project Page](https://zehaozhu.github.io/FSGS/)
 
 #### <summary>SparseGS: Real-Time 360° Sparse View Synthesis using Gaussian Splatting
+>*the method of rendering depth*
+
 Authors: Haolin Xiong, Sairisheek Muttukuru, Rishi Upadhyay, Pradyumna Chari, Achuta Kadambi
 <details span>
 <summary><b>Abstract</b></summary>
@@ -1035,6 +1037,20 @@ The rise of Extended Reality (XR) requires efficient streaming of 3D online worl
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.14823) | [⌨️ Code] | [🌐 Project Page]
 
+
+#### <summary>3D Gaussian Splatting for Large-scale 3D Surface Reconstruction from Aerial Images
+>  *Ray-Gaussian Intersection*
+
+Authors: YuanZheng Wu, Jin Liu, Shunping Ji
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, 3D Gaussian Splatting (3DGS) has garnered significant attention. However, the unstructured nature of 3DGS poses challenges for large-scale surface reconstruction from aerial images. To address this gap, we propose the first large-scale surface reconstruction method for multi-view stereo (MVS) aerial images based on 3DGS, named Aerial Gaussian Splatting (AGS). Initially, we introduce a data chunking method tailored for large-scale aerial imagery, making the modern 3DGS technology feasible for surface reconstruction over extensive scenes. Additionally, we integrate the Ray-Gaussian Intersection method to obtain normal and depth information, facilitating geometric constraints. Finally, we introduce a multi-view geometric consistency constraint to enhance global geometric consistency and improve reconstruction accuracy. Our experiments on multiple datasets demonstrate for the first time that the GS-based technique can match traditional aerial MVS methods on geometric accuracy, and beat state-of-the-art GS-based methods on geometry and rendering quality.
+ 
+![image](https://github.com/user-attachments/assets/1fb73098-8efd-4fd3-8c42-2d796d70a93a)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.00381) | [⌨️ Code] | [🌐 Project Page]
 
 <br>
 <br>
@@ -3373,6 +3389,35 @@ Dynamic scene reconstruction has garnered significant attention in recent years 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.13972) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>PRoGS: Progressive Rendering of Gaussian Splats
+>  *By rendering each training viewpoint and calculating the contribution across all views, we create an initial ordering of the Gaussians. We further refine this by inserting all Gaussians into an octree and selecting the top contributing Gaussians per leaf node*
+
+Authors: Brent Zoomers, Maarten Wijnants, Ivan Molenaers, Joni Vanherck, Jeroen Put, Lode Jorissen, Nick Michiels
+<details span>
+<summary><b>Abstract</b></summary>
+Over the past year, 3D Gaussian Splatting (3DGS) has received significant attention for its ability to represent 3D scenes in a perceptually accurate manner. However, it can require a substantial amount of storage since each splat's individual data must be stored. While compression techniques offer a potential solution by reducing the memory footprint, they still necessitate retrieving the entire scene before any part of it can be rendered. In this work, we introduce a novel approach for progressively rendering such scenes, aiming to display visible content that closely approximates the final scene as early as possible without loading the entire scene into memory. This approach benefits both on-device rendering applications limited by memory constraints and streaming applications where minimal bandwidth usage is preferred. To achieve this, we approximate the contribution of each Gaussian to the final scene and construct an order of prioritization on their inclusion in the rendering process. Additionally, we demonstrate that our approach can be combined with existing compression methods to progressively render (and stream) 3DGS scenes, optimizing bandwidth usage by focusing on the most important splats within a scene. Overall, our work establishes a foundation for making remotely hosted 3DGS content more quickly accessible to end-users in over-the-top consumption scenarios, with our results showing significant improvements in quality across all metrics compared to existing methods.
+
+![image](https://github.com/user-attachments/assets/a9004dfe-6dd5-46b7-9dae-d412c31d8207)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.01761) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>Free-DyGS: Camera-Pose-Free Scene Reconstruction based on Gaussian Splatting for Dynamic Surgical Videos
+>  *Generalizable Gaussian parameterization module*
+
+Authors: Qian Li, Shuojue Yang, Daiyun Shen, Yueming Jin
+<details span>
+<summary><b>Abstract</b></summary>
+Reconstructing endoscopic videos is crucial for high-fidelity visualization and the efficiency of surgical operations. Despite the importance, existing 3D reconstruction methods encounter several challenges, including stringent demands for accuracy, imprecise camera positioning, intricate dynamic scenes, and the necessity for rapid reconstruction. Addressing these issues, this paper presents the first camera-pose-free scene reconstruction framework, Free-DyGS, tailored for dynamic surgical videos, leveraging 3D Gaussian splatting technology. Our approach employs a frame-by-frame reconstruction strategy and is delineated into four distinct phases: Scene Initialization, Joint Learning, Scene Expansion, and Retrospective Learning. We introduce a Generalizable Gaussians Parameterization module within the Scene Initialization and Expansion phases to proficiently generate Gaussian attributes for each pixel from the RGBD frames. The Joint Learning phase is crafted to concurrently deduce scene deformation and camera pose, facilitated by an innovative flexible deformation module. In the scene expansion stage, the Gaussian points gradually grow as the camera moves. The Retrospective Learning phase is dedicated to enhancing the precision of scene deformation through the reassessment of prior frames. The efficacy of the proposed Free-DyGS is substantiated through experiments on two datasets: the StereoMIS and Hamlyn datasets. The experimental outcomes underscore that Free-DyGS surpasses conventional baseline models in both rendering fidelity and computational efficiency.
+
+![image](https://github.com/user-attachments/assets/d4e2528b-1698-437e-a81b-4386c807efcb)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.01003) | [⌨️ Code] | [🌐 Project Page]
+
+
 #### <summary>GST: Precise 3D Human Body from a Single Image with Gaussian Splatting Transformers
 >  *token in transformer for gaussian attribute*
 
@@ -3400,6 +3445,21 @@ Multi-view image compression is vital for 3D-related applications. To effectivel
 </details>
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.04013) | [⌨️ Code](https://github.com/YujunHuang063/3D-GP-LMVIC) | [🌐 Project Page]
+
+#### <summary>GraspSplats: Efficient Manipulation with 3D Feature Splatting
+
+Authors: Mazeyu Ji, Ri-Zhao Qiu, Xueyan Zou, Xiaolong Wang
+<details span>
+<summary><b>Abstract</b></summary>
+The ability for robots to perform efficient and zero-shot grasping of object parts is crucial for practical applications and is becoming prevalent with recent advances in Vision-Language Models (VLMs). To bridge the 2D-to-3D gap for representations to support such a capability, existing methods rely on neural fields (NeRFs) via differentiable rendering or point-based projection methods. However, we demonstrate that NeRFs are inappropriate for scene changes due to their implicitness and point-based methods are inaccurate for part localization without rendering-based optimization. To amend these issues, we propose GraspSplats. Using depth supervision and a novel reference feature computation method, GraspSplats generates high-quality scene representations in under 60 seconds. We further validate the advantages of Gaussian-based representation by showing that the explicit and optimized geometry in GraspSplats is sufficient to natively support (1) real-time grasp sampling and (2) dynamic and articulated object manipulation with point trackers. With extensive experiments on a Franka robot, we demonstrate that GraspSplats significantly outperforms existing methods under diverse task settings. In particular, GraspSplats outperforms NeRF-based methods like F3RM and LERF-TOGO, and 2D detection methods.
+ 
+![image](https://github.com/user-attachments/assets/6ae58232-5d62-4669-be9f-c5ac0b50038e)
+
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.02084) | [⌨️ Code](https://github.com/jimazeyu/GraspSplats) | [🌐 Project Page](https://graspsplats.github.io/)
+
 
 
 <br>
