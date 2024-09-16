@@ -3460,7 +3460,19 @@ The ability for robots to perform efficient and zero-shot grasping of object par
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.02084) | [⌨️ Code](https://github.com/jimazeyu/GraspSplats) | [🌐 Project Page](https://graspsplats.github.io/)
 
+#### <summary>GGS: Generalizable Gaussian Splatting for Lane Switching in Autonomous Driving
+>*In addition, to refine the depth, we introduce a confidence based method. The lower the transparency of the predicted 3D Gaussian, the lower the confidence level of the predicted depth. virtual lane approach for large viewpoint changes. diffusion prior with lane converters.*
 
+Authors: Huasong Han, Kaixuan Zhou, Xiaoxiao Long, Yusen Wang, Chunxia Xiao
+<details span>
+<summary><b>Abstract</b></summary>
+We propose GGS, a Generalizable Gaussian Splatting method for Autonomous Driving which can achieve realistic rendering under large viewpoint changes. Previous generalizable 3D gaussian splatting methods are limited to rendering novel views that are very close to the original pair of images, which cannot handle large differences in viewpoint. Especially in autonomous driving scenarios, images are typically collected from a single lane. The limited training perspective makes rendering images of a different lane very challenging. To further improve the rendering capability of GGS under large viewpoint changes, we introduces a novel virtual lane generation module into GSS method to enables high-quality lane switching even without a multi-lane dataset. Besides, we design a diffusion loss to supervise the generation of virtual lane image to further address the problem of lack of data in the virtual lanes. Finally, we also propose a depth refinement module to optimize depth estimation in the GSS model. Extensive validation of our method, compared to existing approaches, demonstrates state-of-the-art performance.
+ 
+![image](https://github.com/user-attachments/assets/2d1f1cf4-9403-40bd-ad5d-46bc12953c96)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.02382) | [⌨️ Code] | [🌐 Project Page]
 
 <br>
 <br>
