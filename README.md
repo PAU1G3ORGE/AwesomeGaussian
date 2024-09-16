@@ -5539,6 +5539,35 @@ We present Spann3R, a novel approach for dense 3D reconstruction from ordered or
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.16061) | [⌨️ Code] | [🌐 Project Page](https://hengyiwang.github.io/projects/spanner)
 
+#### <summary>Geometry-aware Feature Matching for Large-Scale Structure from Motion
+>*combine the detector-free and detector-based method*
+
+Authors: Gonglin Chen, Jinsen Wu, Haiwei Chen, Wenbin Teng, Zhiyuan Gao, Andrew Feng, Rongjun Qin, Yajie Zhao
+<details span>
+<summary><b>Abstract</b></summary>
+Establishing consistent and dense correspondences across multiple images is crucial for Structure from Motion (SfM) systems. Significant view changes, such as air-to-ground with very sparse view overlap, pose an even greater challenge to the correspondence solvers. We present a novel optimization-based approach that significantly enhances existing feature matching methods by introducing geometry cues in addition to color cues. This helps fill gaps when there is less overlap in large-scale scenarios. Our method formulates geometric verification as an optimization problem, guiding feature matching within detector-free methods and using sparse correspondences from detector-based methods as anchor points. By enforcing geometric constraints via the Sampson Distance, our approach ensures that the denser correspondences from detector-free methods are geometrically consistent and more accurate. This hybrid strategy significantly improves correspondence density and accuracy, mitigates multi-view inconsistencies, and leads to notable advancements in camera pose accuracy and point cloud density. It outperforms state-of-the-art feature matching methods on benchmark datasets and enables feature matching in challenging extreme large-scale settings.
+
+![image](https://github.com/user-attachments/assets/c306a8c5-5efe-4460-8253-658728d4bc43)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.02310) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Surface-Centric Modeling for High-Fidelity Generalizable Neural Surface Reconstruction
+>*Instead of predicting an SDF value for each voxel, we present a new region sparsification approach to sparse the volume by judging whether the voxel is inside the surface region.*
+
+Authors: Rui Peng, Shihe Shen, Kaiqiang Xiong, Huachen Gao, Jianbo Jiao, Xiaodong Gu, Ronggang Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Reconstructing the high-fidelity surface from multi-view images, especially sparse images, is a critical and practical task that has attracted widespread attention in recent years. However, existing methods are impeded by the memory constraint or the requirement of ground-truth depths and cannot recover satisfactory geometric details. To this end, we propose SuRF, a new Surface-centric framework that incorporates a new Region sparsification based on a matching Field, achieving good trade-offs between performance, efficiency and scalability. To our knowledge, this is the first unsupervised method achieving end-to-end sparsification powered by the introduced matching field, which leverages the weight distribution to efficiently locate the boundary regions containing surface. Instead of predicting an SDF value for each voxel, we present a new region sparsification approach to sparse the volume by judging whether the voxel is inside the surface region. In this way, our model can exploit higher frequency features around the surface with less memory and computational consumption. Extensive experiments on multiple benchmarks containing complex large-scale scenes show that our reconstructions exhibit high-quality details and achieve new state-of-the-art performance, i.e., 46% improvements with 80% less memory consumption.
+
+![image](https://github.com/user-attachments/assets/6f0b00dc-1551-413f-b26e-235f55a78f4a)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.03634) | [⌨️ Code](https://github.com/prstrive/SuRF) | [🌐 Project Page]
+
 
 #### <summary>
 Authors: 
@@ -5550,4 +5579,4 @@ Authors:
 
 </details>
 
-[📃 arXiv:2408] | [⌨️ Code] | [🌐 Project Page]
+[📃 arXiv:2409] | [⌨️ Code] | [🌐 Project Page]
