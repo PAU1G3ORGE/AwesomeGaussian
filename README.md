@@ -563,6 +563,30 @@ Sparse-view 3D reconstruction stands as a formidable challenge in computer visio
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.04831) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>LM-Gaussian: Boost Sparse-view 3D Gaussian Splatting with Large Model Priors
+Authors: Hanyang Yu, Xiaoxiao Long, Ping Tan
+<details span>
+<summary><b>Abstract</b></summary>
+We aim to address sparse-view reconstruction of a 3D scene by leveraging priors from large-scale vision models. While recent advancements such as 3D Gaussian Splatting (3DGS) have demonstrated remarkable successes in 3D reconstruction, these methods typically necessitate hundreds of input images that densely capture the underlying scene, making them time-consuming and impractical for real-world applications. However, sparse-view reconstruction is inherently ill-posed and under-constrained, often resulting in inferior and incomplete outcomes. This is due to issues such as failed initialization, overfitting on input images, and a lack of details. To mitigate these challenges, we introduce LM-Gaussian, a method capable of generating high-quality reconstructions from a limited number of images. Specifically, we propose a robust initialization module that leverages stereo priors to aid in the recovery of camera poses and the reliable point clouds. Additionally, a diffusion-based refinement is iteratively applied to incorporate image diffusion priors into the Gaussian optimization process to preserve intricate scene details. Finally, we utilize video diffusion priors to further enhance the rendered images for realistic visual effects. Overall, our approach significantly reduces the data acquisition requirements compared to previous 3DGS methods. We validate the effectiveness of our framework through experiments on various public datasets, demonstrating its potential for high-quality 360-degree scene reconstruction. Visual results are on our website.
+
+![image](https://github.com/user-attachments/assets/87ac6848-8360-4eab-9d74-2479c011ae54)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.03456) | [⌨️ Code](https://github.com/hanyangyu1021/LMGaussian) | [🌐 Project Page](https://hanyangyu1021.github.io/lm-gaussian.github.io/)
+
+#### <summary>Optimizing 3D Gaussian Splatting for Sparse Viewpoint Scene Reconstruction
+Authors: Shen Chen, Jiale Zhou, Lei Li
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has emerged as a promising approach for 3D scene representation, offering a reduction in computational overhead compared to Neural Radiance Fields (NeRF). However, 3DGS is susceptible to high-frequency artifacts and demonstrates suboptimal performance under sparse viewpoint conditions, thereby limiting its applicability in robotics and computer vision. To address these limitations, we introduce SVS-GS, a novel framework for Sparse Viewpoint Scene reconstruction that integrates a 3D Gaussian smoothing filter to suppress artifacts. Furthermore, our approach incorporates a Depth Gradient Profile Prior (DGPP) loss with a dynamic depth mask to sharpen edges and 2D diffusion with Score Distillation Sampling (SDS) loss to enhance geometric consistency in novel view synthesis. Experimental evaluations on the MipNeRF-360 and SeaThru-NeRF datasets demonstrate that SVS-GS markedly improves 3D reconstruction from sparse viewpoints, offering a robust and efficient solution for scene understanding in robotics and computer vision applications.
+
+![image](https://github.com/user-attachments/assets/2ac18201-7908-4794-899d-e1c3f29bf7f7)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.03213) | [⌨️ Code] | [🌐 Project Page]
+
 
 <br>
 <br>
@@ -1051,6 +1075,20 @@ Recently, 3D Gaussian Splatting (3DGS) has garnered significant attention. Howev
 </details>
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.00381) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>GigaGS: Scaling up Planar-Based 3D Gaussians for Large Scene Surface Reconstruction
+>  *large-scale surface reconstruction*
+
+Authors: Junyi Chen, Weicai Ye, Yifan Wang, Danpeng Chen, Di Huang, Wanli Ouyang, Guofeng Zhang, Yu Qiao, Tong He
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has shown promising performance in novel view synthesis. Previous methods adapt it to obtaining surfaces of either individual 3D objects or within limited scenes. In this paper, we make the first attempt to tackle the challenging task of large-scale scene surface reconstruction. This task is particularly difficult due to the high GPU memory consumption, different levels of details for geometric representation, and noticeable inconsistencies in appearance. To this end, we propose GigaGS, the first work for high-quality surface reconstruction for large-scale scenes using 3DGS. GigaGS first applies a partitioning strategy based on the mutual visibility of spatial regions, which effectively grouping cameras for parallel processing. To enhance the quality of the surface, we also propose novel multi-view photometric and geometric consistency constraints based on Level-of-Detail representation. In doing so, our method can reconstruct detailed surface structures. Comprehensive experiments are conducted on various datasets. The consistent improvement demonstrates the superiority of GigaGS.
+ 
+![image](https://github.com/user-attachments/assets/cc844c41-e969-4116-86df-69e4937e4264)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.06685) | [⌨️ Code](https://github.com/Open3DVLab/GigaGS) | [🌐 Project Page](https://open3dvlab.github.io/GigaGS/)
 
 <br>
 <br>
@@ -3473,6 +3511,37 @@ We propose GGS, a Generalizable Gaussian Splatting method for Autonomous Driving
 </details>
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.02382) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>GS-PT: Exploiting 3D Gaussian Splatting for Comprehensive Point Cloud Understanding via Self-supervised Learning
+>*point cloud processing with gaussian splatting*
+
+Authors: Keyi Liu, Yeqi Luo, Weidong Yang, Jingyi Xu, Zhijun Li, Wen-Ming Chen, Ben Fei
+<details span>
+<summary><b>Abstract</b></summary>
+Self-supervised learning of point cloud aims to leverage unlabeled 3D data to learn meaningful representations without reliance on manual annotations. However, current approaches face challenges such as limited data diversity and inadequate augmentation for effective feature learning. To address these challenges, we propose GS-PT, which integrates 3D Gaussian Splatting (3DGS) into point cloud self-supervised learning for the first time. Our pipeline utilizes transformers as the backbone for self-supervised pre-training and introduces novel contrastive learning tasks through 3DGS. Specifically, the transformers aim to reconstruct the masked point cloud. 3DGS utilizes multi-view rendered images as input to generate enhanced point cloud distributions and novel view images, facilitating data augmentation and cross-modal contrastive learning. Additionally, we incorporate features from depth maps. By optimizing these tasks collectively, our method enriches the tri-modal self-supervised learning process, enabling the model to leverage the correlation across 3D point clouds and 2D images from various modalities. We freeze the encoder after pre-training and test the model's performance on multiple downstream tasks. Experimental results indicate that GS-PT outperforms the off-the-shelf self-supervised learning methods on various downstream tasks including 3D object classification, real-world classifications, and few-shot learning and segmentation.
+ 
+![image](https://github.com/user-attachments/assets/11028cc2-90dc-4a8b-82e8-2f61fbe3be50)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.04963) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Fisheye-GS: Lightweight and Extensible Gaussian Splatting Module for Fisheye Cameras
+>*recalculates the projection transformation and its gradients for fisheye cameras*
+
+Authors: Zimu Liao, Siyan Chen, Rong Fu, Yi Wang, Zhongling Su, Hao Luo, Li Ma, Linning Xu, Bo Dai, Hengjie Li, Zhilin Pei, Xingcheng Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, 3D Gaussian Splatting (3DGS) has garnered attention for its high fidelity and real-time rendering. However, adapting 3DGS to different camera models, particularly fisheye lenses, poses challenges due to the unique 3D to 2D projection calculation. Additionally, there are inefficiencies in the tile-based splatting, especially for the extreme curvature and wide field of view of fisheye lenses, which are crucial for its broader real-life applications. To tackle these challenges, we introduce Fisheye-GS.This innovative method recalculates the projection transformation and its gradients for fisheye cameras. Our approach can be seamlessly integrated as a module into other efficient 3D rendering methods, emphasizing its extensibility, lightweight nature, and modular design. Since we only modified the projection component, it can also be easily adapted for use with different camera models. Compared to methods that train after undistortion, our approach demonstrates a clear improvement in visual quality.
+ 
+![image](https://github.com/user-attachments/assets/6f186bcd-a0f2-4d89-b1d5-0e4fab6a17a8)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.04751) | [⌨️ Code](https://github.com/zmliao/Fisheye-GS) | [🌐 Project Page]
+
+
 
 <br>
 <br>
