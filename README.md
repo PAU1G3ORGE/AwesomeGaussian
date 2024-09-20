@@ -1196,6 +1196,36 @@ We introduce G-Style, a novel algorithm designed to transfer the style of an ima
 [📃 arXiv:2408](https://www.arxiv.org/pdf/2408.15695) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>SpecGaussian with Latent Features: A High-quality Modeling of the View-dependent Appearance for 3D Gaussian Splatting
+> *latent feature for editing?*
+
+Authors: Zhiru Wang, Shiyun Xie, Chengwei Pan, Guoping Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, the 3D Gaussian Splatting (3D-GS) method has achieved great success in novel view synthesis, providing real-time rendering while ensuring high-quality rendering results. However, this method faces challenges in modeling specular reflections and handling anisotropic appearance components, especially in dealing with view-dependent color under complex lighting conditions. Additionally, 3D-GS uses spherical harmonic to learn the color representation, which has limited ability to represent complex scenes. To overcome these challenges, we introduce Lantent-SpecGS, an approach that utilizes a universal latent neural descriptor within each 3D Gaussian. This enables a more effective representation of 3D feature fields, including appearance and geometry. Moreover, two parallel CNNs are designed to decoder the splatting feature maps into diffuse color and specular color separately. A mask that depends on the viewpoint is learned to merge these two colors, resulting in the final rendered image. Experimental results demonstrate that our method obtains competitive performance in novel view synthesis and extends the ability of 3D-GS to handle intricate scenarios with specular reflections.
+ 
+![image](https://github.com/user-attachments/assets/cc2690d5-9e9e-4514-a469-1b980ca2694d)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.05868) | [⌨️ Code](https://github.com/MarcWangzhiru/SpeclatentGS) | [🌐 Project Page]
+
+#### <summary>FlashSplat: 2D to 3D Gaussian Splatting Segmentation Solved Optimally
+> *latent feature for editing?*
+
+Authors: Qiuhong Shen, Xingyi Yang, Xinchao Wang
+<details span>
+<summary><b>Abstract</b></summary>
+This study addresses the challenge of accurately segmenting 3D Gaussian Splatting from 2D masks. Conventional methods often rely on iterative gradient descent to assign each Gaussian a unique label, leading to lengthy optimization and sub-optimal solutions. Instead, we propose a straightforward yet globally optimal solver for 3D-GS segmentation. The core insight of our method is that, with a reconstructed 3D-GS scene, the rendering of the 2D masks is essentially a linear function with respect to the labels of each Gaussian. As such, the optimal label assignment can be solved via linear programming in closed form. This solution capitalizes on the alpha blending characteristic of the splatting process for single step optimization. By incorporating the background bias in our objective function, our method shows superior robustness in 3D segmentation against noises. Remarkably, our optimization completes within 30 seconds, about 50× faster than the best existing methods. Extensive experiments demonstrate the efficiency and robustness of our method in segmenting various scenes, and its superior performance in downstream tasks such as object removal and inpainting.
+ 
+![image](https://github.com/user-attachments/assets/362265c3-3f79-4083-a586-0a70d5e4f9d8)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.08270) | [⌨️ Code](https://github.com/florinshen/FlashSplat) | [🌐 Project Page]
+
+
+
 <br>
 <br>
 
@@ -3542,6 +3572,60 @@ Recently, 3D Gaussian Splatting (3DGS) has garnered attention for its high fidel
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.04751) | [⌨️ Code](https://github.com/zmliao/Fisheye-GS) | [🌐 Project Page]
 
 
+#### <summary>Single-View 3D Reconstruction via SO(2)-Equivariant Gaussian Sculpting Networks
+>*Gaussian Sculpting Network*
+
+Authors: Ruihan Xu, Anthony Opipari, Joshua Mah, Stanley Lewis, Haoran Zhang, Hanzhe Guo, Odest Chadwicke Jenkins
+<details span>
+<summary><b>Abstract</b></summary>
+This paper introduces SO(2)-Equivariant Gaussian Sculpting Networks (GSNs) as an approach for SO(2)-Equivariant 3D object reconstruction from single-view image observations.
+GSNs take a single observation as input to generate a Gaussian splat representation describing the observed object's geometry and texture. By using a shared feature extractor before decoding Gaussian colors, covariances, positions, and opacities, GSNs achieve extremely high throughput (>150FPS). Experiments demonstrate that GSNs can be trained efficiently using a multi-view rendering loss and are competitive, in quality, with expensive diffusion-based reconstruction algorithms. The GSN model is validated on multiple benchmark experiments. Moreover, we demonstrate the potential for GSNs to be used within a robotic manipulation pipeline for object-centric grasping.
+
+![image](https://github.com/user-attachments/assets/186d9f92-1adb-45e1-9622-ce68b02b601e)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.07245) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>ThermalGaussian: Thermal 3D Gaussian Splatting
+>*multimodal regularization for Thremal Gaussian and RGB Gaussian*
+
+Authors: Rongfeng Lu, Hangyu Chen, Zunjie Zhu, Yuhang Qin, Ming Lu, Le Zhang, Chenggang Yan, Anke Xue
+<details span>
+<summary><b>Abstract</b></summary>
+Thermography is especially valuable for the military and other users of surveillance cameras. Some recent methods based on Neural Radiance Fields (NeRF) are proposed to reconstruct the thermal scenes in 3D from a set of thermal and RGB images. However, unlike NeRF, 3D Gaussian splatting (3DGS) prevails due to its rapid training and real-time rendering. In this work, we propose ThermalGaussian, the first thermal 3DGS approach capable of rendering high-quality images in RGB and thermal modalities. We first calibrate the RGB camera and the thermal camera to ensure that both modalities are accurately aligned. Subsequently, we use the registered images to learn the multimodal 3D Gaussians. To prevent the overfitting of any single modality, we introduce several multimodal regularization constraints. We also develop smoothing constraints tailored to the physical characteristics of the thermal modality. Besides, we contribute a real-world dataset named RGBT-Scenes, captured by a hand-hold thermal-infrared camera, facilitating future research on thermal scene reconstruction. We conduct comprehensive experiments to show that ThermalGaussian achieves photorealistic rendering of thermal images and improves the rendering quality of RGB images. With the proposed multimodal regularization constraints, we also reduced the model's storage cost by 90\%.
+
+![image](https://github.com/user-attachments/assets/f0c39406-a1e3-4991-a81d-5b6e1b229fd6)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.07200) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>gsplat: An Open-Source Library for Gaussian Splatting
+Authors: Vickie Ye, Ruilong Li, Justin Kerr, Matias Turkulainen, Brent Yi, Zhuoyang Pan, Otto Seiskari, Jianbo Ye, Jeffrey Hu, Matthew Tancik, Angjoo Kanazawa
+<details span>
+<summary><b>Abstract</b></summary>
+gsplat is an open-source library designed for training and developing Gaussian Splatting methods. It features a front-end with Python bindings compatible with the PyTorch library and a back-end with highly optimized CUDA kernels. gsplat offers numerous features that enhance the optimization of Gaussian Splatting models, which include optimization improvements for speed, memory, and convergence times. Experimental results demonstrate that gsplat achieves up to 10% less training time and 4x less memory than the original implementation. Utilized in several research projects, gsplat is actively maintained on GitHub.
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.06765) | [⌨️ Code](https://github.com/nerfstudio-project/gsplat) | [🌐 Project Page](https://docs.gsplat.studio/main/)
+
+
+#### <summary>Thermal3D-GS: Physics-induced 3D Gaussians for Thermal Infrared Novel-view Synthesis
+>*modeling atmospheric transmission and thermal conduction physical processes through neural networks for Gaussian Splatting*
+
+Authors: Qian Chen, Shihao Shu, Xiangzhi Bai
+<details span>
+<summary><b>Abstract</b></summary>
+Novel-view synthesis based on visible light has been extensively studied. In comparison to visible light imaging, thermal infrared imaging offers the advantage of all-weather imaging and strong penetration, providing increased possibilities for reconstruction in nighttime and adverse weather scenarios. However, thermal infrared imaging is influenced by physical characteristics such as atmospheric transmission effects and thermal conduction, hindering the precise reconstruction of intricate details in thermal infrared scenes, manifesting as issues of floaters and indistinct edge features in synthesized images. To address these limitations, this paper introduces a physics-induced 3D Gaussian splatting method named Thermal3D-GS. Thermal3D-GS begins by modeling atmospheric transmission effects and thermal conduction in three-dimensional media using neural networks. Additionally, a temperature consistency constraint is incorporated into the optimization objective to enhance the reconstruction accuracy of thermal infrared images. Furthermore, to validate the effectiveness of our method, the first large-scale benchmark dataset for this field named Thermal Infrared Novel-view Synthesis Dataset (TI-NSD) is created. This dataset comprises 20 authentic thermal infrared video scenes, covering indoor, outdoor, and UAV(Unmanned Aerial Vehicle) scenarios, totaling 6,664 frames of thermal infrared image data. Based on this dataset, this paper experimentally verifies the effectiveness of Thermal3D-GS. The results indicate that our method outperforms the baseline method with a 3.03 dB improvement in PSNR and significantly addresses the issues of floaters and indistinct edge features present in the baseline method.
+
+![image](https://github.com/user-attachments/assets/79145e3f-d43d-489a-9cc3-c2cf55f7d544)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.08042) | [⌨️ Code](https://github.com/mzzcdf/Thermal3DGS) | [🌐 Project Page]
 
 <br>
 <br>
@@ -3975,6 +4059,34 @@ Neural implicit reconstruction via volume rendering has demonstrated its effecti
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.12598) | [⌨️ Code](https://github.com/zju3dv/ND-SDF) | [🌐 Project Page](https://zju3dv.github.io/nd-sdf/)
 
+
+#### <summary>Rethinking Directional Parameterization in Neural Implicit Surface Reconstruction
+>  *first to provide an in-depth analysis of why the use of reflection directional parameterization tends to reconstruct incorrect geometry of objects with concave or complex structures*
+
+Authors: Zijie Jiang, Tianhan Xu, Hiroharu Kato
+<details span>
+<summary><b>Abstract</b></summary>
+Multi-view 3D surface reconstruction using neural implicit representations has made notable progress by modeling the geometry and view-dependent radiance fields within a unified framework. However, their effectiveness in reconstructing objects with specular or complex surfaces is typically biased by the directional parameterization used in their view-dependent radiance network. {\it Viewing direction} and {\it reflection direction} are the two most commonly used directional parameterizations but have their own limitations. Typically, utilizing the viewing direction usually struggles to correctly decouple the geometry and appearance of objects with highly specular surfaces, while using the reflection direction tends to yield overly smooth reconstructions for concave or complex structures. In this paper, we analyze their failed cases in detail and propose a novel hybrid directional parameterization to address their limitations in a unified form. Extensive experiments demonstrate the proposed hybrid directional parameterization consistently delivered satisfactory results in reconstructing objects with a wide variety of materials, geometry and appearance, whereas using other directional parameterizations faces challenges in reconstructing certain objects. Moreover, the proposed hybrid directional parameterization is nearly parameter-free and can be effortlessly applied in any existing neural surface reconstruction method.
+
+![image](https://github.com/user-attachments/assets/1d994cda-5b79-4138-a27b-0210a25daf46)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.06923) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>Expansive Supervision for Neural Radiance Field
+>  *first to observe a strong correlation between error distribution and image content. a mechanism operates by selectively rendering a small but crucial subset of pixels and expanding their values to estimate the error across the entire area for each iteration.*
+
+Authors: Weixiang Zhang, Shuzhao Xie, Shijia Ge, Wei Yao, Chen Tang, Zhi Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Neural Radiance Fields have achieved success in creating powerful 3D media representations with their exceptional reconstruction capabilities. However, the computational demands of volume rendering pose significant challenges during model training. Existing acceleration techniques often involve redesigning the model architecture, leading to limitations in compatibility across different frameworks. Furthermore, these methods tend to overlook the substantial memory costs incurred. In response to these challenges, we introduce an expansive supervision mechanism that efficiently balances computational load, rendering quality and flexibility for neural radiance field training. This mechanism operates by selectively rendering a small but crucial subset of pixels and expanding their values to estimate the error across the entire area for each iteration. Compare to conventional supervision, our method effectively bypasses redundant rendering processes, resulting in notable reductions in both time and memory consumption. Experimental results demonstrate that integrating expansive supervision within existing state-of-the-art acceleration frameworks can achieve 69% memory savings and 42% time savings, with negligible compromise in visual quality.
+
+![image](https://github.com/user-attachments/assets/705cf1af-f7b2-499d-a847-91c05bfe1619)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.08056) | [⌨️ Code] | [🌐 Project Page]
 
 <br>
 <br>
@@ -5636,6 +5748,54 @@ Reconstructing the high-fidelity surface from multi-view images, especially spar
 </details>
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.03634) | [⌨️ Code](https://github.com/prstrive/SuRF) | [🌐 Project Page]
+
+
+#### <summary>Towards Localizing Structural Elements: Merging Geometrical Detection with Semantic Verification in RGB-D Data
+>*semantic SLAM*
+
+Authors: Ali Tourani, Saad Ejaz, Hriday Bavle, Jose Luis Sanchez-Lopez, Holger Voos
+<details span>
+<summary><b>Abstract</b></summary>
+RGB-D cameras supply rich and dense visual and spatial information for various robotics tasks such as scene understanding, map reconstruction, and localization. Integrating depth and visual information can aid robots in localization and element mapping, advancing applications like 3D scene graph generation and Visual Simultaneous Localization and Mapping (VSLAM). While point cloud data containing such information is primarily used for enhanced scene understanding, exploiting their potential to capture and represent rich semantic information has yet to be adequately targeted. This paper presents a real-time pipeline for localizing building components, including wall and ground surfaces, by integrating geometric calculations for pure 3D plane detection followed by validating their semantic category using point cloud data from RGB-D cameras. It has a parallel multi-thread architecture to precisely estimate poses and equations of all the planes detected in the environment, filters the ones forming the map structure using a panoptic segmentation validation, and keeps only the validated building components. Incorporating the proposed method into a VSLAM framework confirmed that constraining the map with the detected environment-driven semantic elements can improve scene understanding and map reconstruction accuracy. It can also ensure (re-)association of these detected components into a unified 3D scene graph, bridging the gap between geometric accuracy and semantic understanding. Additionally, the pipeline allows for the detection of potential higher-level structural entities, such as rooms, by identifying the relationships between building components based on their layout.
+
+![image](https://github.com/user-attachments/assets/56e84a1f-0f62-4ed0-951a-0a768643c0b2)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.06625) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+#### <summary>Event-based Mosaicing Bundle Adjustment
+>*event camera BA*
+
+Authors: Shuang Guo, Guillermo Gallego
+<details span>
+<summary><b>Abstract</b></summary>
+We tackle the problem of mosaicing bundle adjustment (i.e., simultaneous refinement of camera orientations and scene map) for a purely rotating event camera. We formulate the problem as a regularized non-linear least squares optimization. The objective function is defined using the linearized event generation model in the camera orientations and the panoramic gradient map of the scene. We show that this BA optimization has an exploitable block-diagonal sparsity structure, so that the problem can be solved efficiently. To the best of our knowledge, this is the first work to leverage such sparsity to speed up the optimization in the context of event-based cameras, without the need to convert events into image-like representations. We evaluate our method, called EMBA, on both synthetic and real-world datasets to show its effectiveness (50% photometric error decrease), yielding results of unprecedented quality. In addition, we demonstrate EMBA using high spatial resolution event cameras, yielding delicate panoramas in the wild, even without an initial map.
+
+![image](https://github.com/user-attachments/assets/e8cc0a4b-df75-4c95-89ac-83d6b605973d)
+
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.07365) | [⌨️ Code](https://github.com/tub-rip/emba) | [🌐 Project Page]
+
+
+#### <summary>Redundancy-Aware Camera Selection for Indoor Scene Neural Rendering
+>*camera frame selection*
+
+Authors: Zehao Wang, Han Zhou, Matthew B. Blaschko, Tinne Tuytelaars, Minye Wu
+<details span>
+<summary><b>Abstract</b></summary>
+Novel view synthesis of indoor scenes can be achieved by capturing a monocular video sequence of the environment. However, redundant information caused by artificial movements in the input video data reduces the efficiency of scene modeling. In this work, we tackle this challenge from the perspective of camera selection. We begin by constructing a similarity matrix that incorporates both the spatial diversity of the cameras and the semantic variation of the images. Based on this matrix, we use the Intra-List Diversity (ILD) metric to assess camera redundancy, formulating the camera selection task as an optimization problem. Then we apply a diversity-based sampling algorithm to optimize the camera selection. We also develop a new dataset, IndoorTraj, which includes long and complex camera movements captured by humans in virtual indoor environments, closely mimicking real-world scenarios. Experimental results demonstrate that our strategy outperforms other approaches under time and memory constraints. Remarkably, our method achieves performance comparable to models trained on the full dataset, while using only an average of 15% of the frames and 75% of the allotted time.
+
+![image](https://github.com/user-attachments/assets/cc9658d6-7551-4a6a-bb2d-f8f2cfa4b758)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.07098) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 #### <summary>
