@@ -1211,7 +1211,7 @@ Recently, the 3D Gaussian Splatting (3D-GS) method has achieved great success in
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.05868) | [⌨️ Code](https://github.com/MarcWangzhiru/SpeclatentGS) | [🌐 Project Page]
 
 #### <summary>FlashSplat: 2D to 3D Gaussian Splatting Segmentation Solved Optimally
-> *framing the 2D mask lifting in 3D Gaussian Splatting as a Linear Programming (LP) optimization problem, solved in a single step*
+> *framing the 2D mask lifting in 3D Gaussian Splatting as a Linear Programming (LP) optimization problem, solved in a single step*
 
 Authors: Qiuhong Shen, Xingyi Yang, Xinchao Wang
 <details span>
