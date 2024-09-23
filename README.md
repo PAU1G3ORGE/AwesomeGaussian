@@ -588,6 +588,21 @@ Authors: Shen Chen, Jiale Zhou, Lei Li
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.03213) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Dense Point Clouds Matter: Dust-GS for Scene Reconstruction from Sparse Viewpoints
+>*Dynamic depth mask for distant background*
+
+Authors: Shan Chen, Jiale Zhou, Lei Li
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has demonstrated remarkable performance in scene synthesis and novel view synthesis tasks. Typically, the initialization of 3D Gaussian primitives relies on point clouds derived from Structure-from-Motion (SfM) methods. However, in scenarios requiring scene reconstruction from sparse viewpoints, the effectiveness of 3DGS is significantly constrained by the quality of these initial point clouds and the limited number of input images. In this study, we present Dust-GS, a novel framework specifically designed to overcome the limitations of 3DGS in sparse viewpoint conditions. Instead of relying solely on SfM, Dust-GS introduces an innovative point cloud initialization technique that remains effective even with sparse input data. Our approach leverages a hybrid strategy that integrates an adaptive depth-based masking technique, thereby enhancing the accuracy and detail of reconstructed scenes. Extensive experiments conducted on several benchmark datasets demonstrate that Dust-GS surpasses traditional 3DGS methods in scenarios with sparse viewpoints, achieving superior scene reconstruction quality with a reduced number of input images.
+
+![image](https://github.com/user-attachments/assets/107375e5-920d-4536-b56f-4a0b0034efa1)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.08613) | [⌨️ Code] | [🌐 Project Page]
+
+
 <br>
 <br>
 
@@ -1089,6 +1104,37 @@ Authors: Junyi Chen, Weicai Ye, Yifan Wang, Danpeng Chen, Di Huang, Wanli Ouyang
 </details>
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.06685) | [⌨️ Code](https://github.com/Open3DVLab/GigaGS) | [🌐 Project Page](https://open3dvlab.github.io/GigaGS/)
+
+#### <summary>DENSER: 3D Gaussians Splatting for Scene Reconstruction of Dynamic Urban Environments
+>  *introduce and integrate a new method aiming at dynamically estimating SH bases using wavelets, resulting in a better representation of dynamic objects appearance in both space and time*
+
+Authors: Junyi Chen, Weicai Ye, Yifan Wang, Danpeng Chen, Di Huang, Wanli Ouyang, Guofeng Zhang, Yu Qiao, Tong He
+<details span>
+<summary><b>Abstract</b></summary>
+This paper presents DENSER, an efficient and effective approach leveraging 3D Gaussian splatting (3DGS) for the reconstruction of dynamic urban environments. While several methods for photorealistic scene representations, both implicitly using neural radiance fields (NeRF) and explicitly using 3DGS have shown promising results in scene reconstruction of relatively complex dynamic scenes, modeling the dynamic appearance of foreground objects tend to be challenging, limiting the applicability of these methods to capture subtleties and details of the scenes, especially far dynamic objects. To this end, we propose DENSER, a framework that significantly enhances the representation of dynamic objects and accurately models the appearance of dynamic objects in the driving scene. Instead of directly using Spherical Harmonics (SH) to model the appearance of dynamic objects, we introduce and integrate a new method aiming at dynamically estimating SH bases using wavelets, resulting in better representation of dynamic objects appearance in both space and time. Besides object appearance, DENSER enhances object shape representation through densification of its point cloud across multiple scene frames, resulting in faster convergence of model training. Extensive evaluations on KITTI dataset show that the proposed approach significantly outperforms state-of-the-art methods by a wide margin.
+ 
+![image](https://github.com/user-attachments/assets/a48c93e4-7eea-452e-9dc9-70850bfe683e)
+
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.10041) | [⌨️ Code](https://github.com/sntubix/denser) | [🌐 Project Page]
+
+
+#### <summary>MesonGS: Post-training Compression of 3D Gaussians via Efficient Attribute Transformation
+>  *view-dependent and view-independent factors for gaussian primitive importance. notice that 40% of the Gaussians contain over 80% of the importance. RAHT involves taking voxelized coordinates from octree and converting the corresponding attributes into transformed coefficients.*
+
+Authors: Shuzhao Xie, Weixiang Zhang, Chen Tang, Yunpeng Bai, Rongwei Lu, Shijia Ge, Zhi Wang
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting demonstrates excellent quality and speed in novel view synthesis. Nevertheless, the huge file size of the 3D Gaussians presents challenges for transmission and storage. Current works design compact models to replace the substantial volume and attributes of 3D Gaussians, along with intensive training to distill information. These endeavors demand considerable training time, presenting formidable hurdles for practical deployment. To this end, we propose MesonGS, a codec for post-training compression of 3D Gaussians. Initially, we introduce a measurement criterion that considers both view-dependent and view-independent factors to assess the impact of each Gaussian point on the rendering output, enabling the removal of insignificant points. Subsequently, we decrease the entropy of attributes through two transformations that complement subsequent entropy coding techniques to enhance the file compression rate. More specifically, we first replace rotation quaternions with Euler angles; then, we apply region adaptive hierarchical transform to key attributes to reduce entropy. Lastly, we adopt finer-grained quantization to avoid excessive information loss. Moreover, a well-crafted finetune scheme is devised to restore quality. Extensive experiments demonstrate that MesonGS significantly reduces the size of 3D Gaussians while preserving competitive quality.
+ 
+![image](https://github.com/user-attachments/assets/e77c73b8-752a-4914-bd7f-4fc30fcb8de2)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.09756) | [⌨️ Code](https://github.com/ShuzhaoXie/MesonGS) | [🌐 Project Page](https://shuzhaoxie.github.io/mesongs/)
+
 
 <br>
 <br>
@@ -3627,6 +3673,71 @@ Novel-view synthesis based on visible light has been extensively studied. In com
 </details>
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.08042) | [⌨️ Code](https://github.com/mzzcdf/Thermal3DGS) | [🌐 Project Page]
+
+
+#### <summary>SwinGS: Sliding Window Gaussian Splatting for Volumetric Video Streaming with Arbitrary Length
+>*This approach necessitates the snapshot of only a small portion of the Gaussians at any given frame. This policy offers significant advantages during volumetric video streaming*
+
+Authors: Bangya Liu, Suman Banerjee
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advances in 3D Gaussian Splatting (3DGS) have garnered significant attention in computer vision and computer graphics due to its high rendering speed and remarkable quality. While extant research has endeavored to extend the application of 3DGS from static to dynamic scenes, such efforts have been consistently impeded by excessive model sizes, constraints on video duration, and content deviation. These limitations significantly compromise the streamability of dynamic 3D Gaussian models, thereby restricting their utility in downstream applications, including volumetric video, autonomous vehicle, and immers ive technologies such as virtual, augmented, and mixed reality.
+This paper introduces SwinGS, a novel framework for training, delivering, and rendering volumetric video in a real-time streaming fashion. To address the aforementioned challenges and enhance streamability, SwinGS integrates spacetime Gaussian with Markov Chain Monte Carlo (MCMC) to adapt the model to fit various 3D scenes across frames, in the meantime employing a sliding window captures Gaussian snapshots for each frame in an accumulative way. We implement a prototype of SwinGS and demonstrate its streamability across various datasets and scenes. Additionally, we develop an interactive WebGL viewer enabling real-time volumetric video playback on most devices with modern browsers, including smartphones and tablets. Experimental results show that SwinGS reduces transmission costs by 83.6% compared to previous work with ignorable compromise in PSNR. Moreover, SwinGS easily scales to long video sequences without compromising quality.
+
+![image](https://github.com/user-attachments/assets/704114e9-3a71-4de2-a3f6-66321b0dd237)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.07759) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>AdR-Gaussian: Accelerating Gaussian Splatting with Adaptive Radius
+> *culls pairs of Gaussian-Tile with low splatting opacity earlier in Preprocess stage, and balances the computational costs of pixel thread*
+
+Authors: Xinzhe Wang, Ran Yi, Lizhuang Ma
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) is a recent explicit 3D representation that has achieved high-quality reconstruction and real-time rendering of complex scenes. However, the rasterization pipeline still suffers from unnecessary overhead resulting from avoidable serial Gaussian culling, and uneven load due to the distinct number of Gaussian to be rendered across pixels, which hinders wider promotion and application of 3DGS. In order to accelerate Gaussian splatting, we propose AdR-Gaussian, which moves part of serial culling in Render stage into the earlier Preprocess stage to enable parallel culling, employing adaptive radius to narrow the rendering pixel range for each Gaussian, and introduces a load balancing method to minimize thread waiting time during the pixel-parallel rendering. Our contributions are threefold, achieving a rendering speed of 310% while maintaining equivalent or even better quality than the state-of-the-art. Firstly, we propose to early cull Gaussian-Tile pairs of low splatting opacity based on an adaptive radius in the Gaussian-parallel Preprocess stage, which reduces the number of affected tile through the Gaussian bounding circle, thus reducing unnecessary overhead and achieving faster rendering speed. Secondly, we further propose early culling based on axis-aligned bounding box for Gaussian splatting, which achieves a more significant reduction in ineffective expenses by accurately calculating the Gaussian size in the 2D directions. Thirdly, we propose a balancing algorithm for pixel thread load, which compresses the information of heavy-load pixels to reduce thread waiting time, and enhance information of light-load pixels to hedge against rendering quality loss. Experiments on three datasets demonstrate that our algorithm can significantly improve the Gaussian Splatting rendering speed.
+
+![image](https://github.com/user-attachments/assets/e9a3bd0c-4b74-4d18-a67f-8cf60f0815a0)
+
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.08669) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>CSS: Overcoming Pose and Scene Challenges in Crowd-Sourced 3D Gaussian Splatting
+> *MASt3R for intrinsics and extrinsics. These matches are critical for robust camera pose estimation*
+
+Authors: Runze Chen, Mingyu Xiao, Haiyong Luo, Fang Zhao, Fan Wu, Hao Xiong, Qi Liu, Meng Song
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce Crowd-Sourced Splatting (CSS), a novel 3D Gaussian Splatting (3DGS) pipeline designed to overcome the challenges of pose-free scene reconstruction using crowd-sourced imagery. The dream of reconstructing historically significant but inaccessible scenes from collections of photographs has long captivated researchers. However, traditional 3D techniques struggle with missing camera poses, limited viewpoints, and inconsistent lighting. CSS addresses these challenges through robust geometric priors and advanced illumination modeling, enabling high-quality novel view synthesis under complex, real-world conditions. Our method demonstrates clear improvements over existing approaches, paving the way for more accurate and flexible applications in AR, VR, and large-scale 3D reconstruction.
+
+![image](https://github.com/user-attachments/assets/63a50578-0e24-48f1-919e-a724b986d479)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.08562) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Robust Dual Gaussian Splatting for Immersive Human-centric Volumetric Videos
+> *avatar*
+
+Authors: Yuheng Jiang, Zhehao Shen, Yu Hong, Chengcheng Guo, Yize Wu, Yingliang Zhang, Jingyi Yu, Lan Xu
+<details span>
+<summary><b>Abstract</b></summary>
+Volumetric video represents a transformative advancement in visual media, enabling users to freely navigate immersive virtual experiences and narrowing the gap between digital and real worlds. However, the need for extensive manual intervention to stabilize mesh sequences and the generation of excessively large assets in existing workflows impedes broader adoption. In this paper, we present a novel Gaussian-based approach, dubbed \textit{DualGS}, for real-time and high-fidelity playback of complex human performance with excellent compression ratios. Our key idea in DualGS is to separately represent motion and appearance using the corresponding skin and joint Gaussians. Such an explicit disentanglement can significantly reduce motion redundancy and enhance temporal coherence. We begin by initializing the DualGS and anchoring skin Gaussians to joint Gaussians at the first frame. Subsequently, we employ a coarse-to-fine training strategy for frame-by-frame human performance modeling. It includes a coarse alignment phase for overall motion prediction as well as a fine-grained optimization for robust tracking and high-fidelity rendering. To integrate volumetric video seamlessly into VR environments, we efficiently compress motion using entropy encoding and appearance using codec compression coupled with a persistent codebook. Our approach achieves a compression ratio of up to 120 times, only requiring approximately 350KB of storage per frame. We demonstrate the efficacy of our representation through photo-realistic, free-view experiences on VR headsets, enabling users to immersively watch musicians in performance and feel the rhythm of the notes at the performers' fingertips.
+
+![image](https://github.com/user-attachments/assets/f6e3e61f-68c4-4ddb-8f44-5f6092ab2c89)
+![image](https://github.com/user-attachments/assets/b9bbe0d0-b9a2-433f-9e07-ad010b4988c3)
+
+
+</details>
+
+[📃 arXiv:2409](https://www.arxiv.org/pdf/2409.08353) | [⌨️ Code] | [🌐 Project Page](https://nowheretrix.github.io/DualGS/)
+
 
 <br>
 <br>
