@@ -768,6 +768,20 @@ Point management is a critical component in optimizing 3D Gaussian Splatting (3D
 
 
 
+#### <summary>SplatFields: Neural Gaussian Splats for Sparse 3D and 4D Reconstruction
+> *To quantify the local spatial autocorrelation of each splat, we select the five nearest neighbors and measure Moran’s I of the
+splat’s attributes (color, opacity, covariance). The core idea of our method is to introduce a spatial bias during the optimization phase, which encourages nearby primitives to share similar features. combine explicit and implicit representation. we identify the lack of spatial autocorrelation of splat features as one of the factors contributing to the suboptimal performance of the 3DGS technique in sparse reconstruction settings*
+
+Authors: Marko Mihajlovic, Sergey Prokudin, Siyu Tang, Robert Maier, Federica Bogo, Tony Tung, Edmond Boyer
+<details span>
+<summary><b>Abstract</b></summary>
+Digitizing 3D static scenes and 4D dynamic events from multi-view images has long been a challenge in computer vision and graphics. Recently, 3D Gaussian Splatting (3DGS) has emerged as a practical and scalable reconstruction method, gaining popularity due to its impressive reconstruction quality, real-time rendering capabilities, and compatibility with widely used visualization tools. However, the method requires a substantial number of input views to achieve high-quality scene reconstruction, introducing a significant practical bottleneck. This challenge is especially severe in capturing dynamic scenes, where deploying an extensive camera array can be prohibitively costly. In this work, we identify the lack of spatial autocorrelation of splat features as one of the factors contributing to the suboptimal performance of the 3DGS technique in sparse reconstruction settings. To address the issue, we propose an optimization strategy that effectively regularizes splat features by modeling them as the outputs of a corresponding implicit neural field. This results in a consistent enhancement of reconstruction quality across various scenarios. Our approach effectively handles static and dynamic cases, as demonstrated by extensive testing across different setups and scene complexities.
+
+![image](https://github.com/user-attachments/assets/5a238f8f-9b06-4d60-855e-a0d079ba6348)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.11211) | [⌨️ Code](https://github.com/markomih/SplatFields) | [🌐 Project Page](https://markomih.github.io/SplatFields/)
 
 
 
@@ -1270,6 +1284,20 @@ This study addresses the challenge of accurately segmenting 3D Gaussian Splattin
 </details>
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.08270) | [⌨️ Code](https://github.com/florinshen/FlashSplat) | [🌐 Project Page]
+
+#### <summary>Gradient-Driven 3D Segmentation and Affordance Transfer in Gaussian Splatting Using 2D Masks
+> *2D-to-3D affordance transfer*
+
+Authors: Joji Joseph, Bharadwaj Amrutur, Shalabh Bhatnagar
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting has emerged as a powerful 3D scene representation technique, capturing fine details with high efficiency. In this paper, we introduce a novel voting-based method that extends 2D segmentation models to 3D Gaussian splats. Our approach leverages masked gradients, where gradients are filtered by input 2D masks, and these gradients are used as votes to achieve accurate segmentation. As a byproduct, we discovered that inference-time gradients can also be used to prune Gaussians, resulting in up to 21% compression. Additionally, we explore few-shot affordance transfer, allowing annotations from 2D images to be effectively transferred onto 3D Gaussian splats. The robust yet straightforward mathematical formulation underlying this approach makes it a highly effective tool for numerous downstream applications, such as augmented reality (AR), object editing, and robotics. 
+ 
+![image](https://github.com/user-attachments/assets/082890b4-a963-476c-b6ef-74af53a99e39)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.11681) | [⌨️ Code](https://github.com/JojiJoseph/3dgs-gradient-segmentation) | [🌐 Project Page](https://jojijoseph.github.io/3dgs-segmentation/)
 
 
 
@@ -2526,6 +2554,20 @@ Gaussian scale spaces are a cornerstone of signal representation and processing,
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.20693) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Don't Splat your Gaussians: Volumetric Ray-Traced Primitives for Modeling and Rendering Scattering and Emissive Media
+Authors: Jorge Condor, Sebastien Speierer, Lukas Bode, Aljaz Bozic, Simon Green, Piotr Didyk, Adrian Jarabo
+<details span>
+<summary><b>Abstract</b></summary>
+Efficient scene representations are essential for many computer graphics applications. A general unified representation that can handle both surfaces and volumes simultaneously, remains a research challenge. Inspired by recent methods for scene reconstruction that leverage mixtures of 3D Gaussians to model radiance fields, we formalize and generalize the modeling of scattering and emissive media using mixtures of simple kernel-based volumetric primitives. We introduce closed-form solutions for transmittance and free-flight distance sampling for different kernels, and propose several optimizations to use our method efficiently within any off-the-shelf volumetric path tracer. We demonstrate our method as a compact and efficient alternative to other forms of volume modeling for forward and inverse rendering of scattering media. Furthermore, we adapt and showcase our method in radiance field optimization and rendering, providing additional flexibility compared to current state of the art given its ray-tracing formulation. We also introduce the Epanechnikov kernel and demonstrate its potential as an efficient alternative to the traditionally-used Gaussian kernel in scene reconstruction tasks. The versatility and physically-based nature of our approach allows us to go beyond radiance fields and bring to kernel-based modeling and rendering any path-tracing enabled functionality such as scattering, relighting and complex camera models.
+ 
+![image](https://github.com/user-attachments/assets/028a708f-805c-4cbb-861c-b14a44523aa8)
+
+
+</details>
+
+[📃 arXiv:2405](https://arxiv.org/pdf/2405.15425) | [⌨️ Code] | [🌐 Project Page]
+
+
 #### <summary>Tetrahedron Splatting for 3D Generation
 Authors: Chun Gu, Zeyu Yang, Zijie Pan, Xiatian Zhu, Li Zhang
 <details span>
@@ -3737,6 +3779,66 @@ Volumetric video represents a transformative advancement in visual media, enabli
 </details>
 
 [📃 arXiv:2409](https://www.arxiv.org/pdf/2409.08353) | [⌨️ Code] | [🌐 Project Page](https://nowheretrix.github.io/DualGS/)
+
+
+#### <summary>GS-Net: Generalizable Plug-and-Play 3D Gaussian Splatting Module
+> *designed to generate dense initial Gaussian ellipsoids and parameters from sparse SfM point clouds*
+
+Authors: Yichen Zhang, Zihan Wang, Jiali Han, Peilin Li, Jiaxun Zhang, Jianqiang Wang, Lei He, Keqiang Li
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) integrates the strengths of primitive-based representations and volumetric rendering techniques, enabling real-time, high-quality rendering. However, 3DGS models typically overfit to single-scene training and are highly sensitive to the initialization of Gaussian ellipsoids, heuristically derived from Structure from Motion (SfM) point clouds, which limits both generalization and practicality. To address these limitations, we propose GS-Net, a generalizable, plug-and-play 3DGS module that densifies Gaussian ellipsoids from sparse SfM point clouds, enhancing geometric structure representation. To the best of our knowledge, GS-Net is the first plug-and-play 3DGS module with cross-scene generalization capabilities. Additionally, we introduce the CARLA-NVS dataset, which incorporates additional camera viewpoints to thoroughly evaluate reconstruction and rendering quality. Extensive experiments demonstrate that applying GS-Net to 3DGS yields a PSNR improvement of 2.08 dB for conventional viewpoints and 1.86 dB for novel viewpoints, confirming the method's effectiveness and robustness.
+
+![image](https://github.com/user-attachments/assets/66f8275a-8559-4b0b-9165-009ae5fe98e6)
+
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.11307) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+#### <summary>GStex: Per-Primitive Texturing of 2D Gaussian Splatting for Decoupled Appearance and Geometry Modeling
+> *Conventional graphics representations have a clear separation between appearance and geometry. For example, vertices and faces of a triangle mesh are used to parameterize geometry, and a 2D texture map is used to parameterize appearance. decouples appearance and geometry through use of per-Gaussian texture maps. each Gaussian represents a single viewdependent color, many Gaussians are needed to model regions of a scene with high-frequency texture or spatially varying reflectance—even if the underlying geometry is simple.*
+
+Authors: Victor Rong, Jingxiang Chen, Sherwin Bahmani, Kiriakos N. Kutulakos, David B. Lindell
+<details span>
+<summary><b>Abstract</b></summary>
+Gaussian splatting has demonstrated excellent performance for view synthesis and scene reconstruction. The representation achieves photorealistic quality by optimizing the position, scale, color, and opacity of thousands to millions of 2D or 3D Gaussian primitives within a scene. However, since each Gaussian primitive encodes both appearance and geometry, these attributes are strongly coupled--thus, high-fidelity appearance modeling requires a large number of Gaussian primitives, even when the scene geometry is simple (e.g., for a textured planar surface). We propose to texture each 2D Gaussian primitive so that even a single Gaussian can be used to capture appearance details. By employing per-primitive texturing, our appearance representation is agnostic to the topology and complexity of the scene's geometry. We show that our approach, GStex, yields improved visual quality over prior work in texturing Gaussian splats. Furthermore, we demonstrate that our decoupling enables improved novel view synthesis performance compared to 2D Gaussian splatting when reducing the number of Gaussian primitives, and that GStex can be used for scene appearance editing and re-texturing.
+
+![image](https://github.com/user-attachments/assets/1e10ae9f-62f7-4989-ac4d-41c741982c47)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.12954) | [⌨️ Code](https://github.com/victor-rong/GStex) | [🌐 Project Page](https://lessvrong.com/cs/gstex/)
+
+
+#### <summary>3DGS-LM: Faster Gaussian-Splatting Optimization with Levenberg-Marquardt
+> *change the optimizer to Levenberg-Marquardt that runs in conjunction with the 3DGS differentiable rasterizer*
+
+Authors: Lukas Höllein, Aljaž Božič, Michael Zollhöfer, Matthias Nießner
+<details span>
+<summary><b>Abstract</b></summary>
+We present 3DGS-LM, a new method that accelerates the reconstruction of 3D Gaussian Splatting (3DGS) by replacing its ADAM optimizer with a tailored Levenberg-Marquardt (LM). Existing methods reduce the optimization time by decreasing the number of Gaussians or by improving the implementation of the differentiable rasterizer. However, they still rely on the ADAM optimizer to fit Gaussian parameters of a scene in thousands of iterations, which can take up to an hour. To this end, we change the optimizer to LM that runs in conjunction with the 3DGS differentiable rasterizer. For efficient GPU parallization, we propose a caching data structure for intermediate gradients that allows us to efficiently calculate Jacobian-vector products in custom CUDA kernels. In every LM iteration, we calculate update directions from multiple image subsets using these kernels and combine them in a weighted mean. Overall, our method is 30% faster than the original 3DGS while obtaining the same reconstruction quality. Our optimization is also agnostic to other methods that acclerate 3DGS, thus enabling even faster speedups compared to vanilla 3DGS.
+
+![image](https://github.com/user-attachments/assets/d301d8a2-f90b-41b3-8b1f-43fca0a03e55)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.12892) | [⌨️ Code](https://github.com/lukasHoel/3DGS-LM) | [🌐 Project Page](https://lukashoel.github.io/3DGS-LM/)
+
+#### <summary>EdgeGaussians -- 3D Edge Mapping via Gaussian Splatting
+
+Authors: Kunal Chelani, Assia Benbihi, Torsten Sattler, Fredrik Kahl
+<details span>
+<summary><b>Abstract</b></summary>
+With their meaningful geometry and their omnipresence in the 3D world, edges are extremely useful primitives in computer vision. 3D edges comprise of lines and curves, and methods to reconstruct them use either multi-view images or point clouds as input. State-of-the-art image-based methods first learn a 3D edge point cloud then fit 3D edges to it. The edge point cloud is obtained by learning a 3D neural implicit edge field from which the 3D edge points are sampled on a specific level set (0 or 1). However, such methods present two important drawbacks: i) it is not realistic to sample points on exact level sets due to float imprecision and training inaccuracies. Instead, they are sampled within a range of levels so the points do not lie accurately on the 3D edges and require further processing. ii) Such implicit representations are computationally expensive and require long training times. In this paper, we address these two limitations and propose a 3D edge mapping that is simpler, more efficient, and preserves accuracy. Our method learns explicitly the 3D edge points and their edge direction hence bypassing the need for point sampling. It casts a 3D edge point as the center of a 3D Gaussian and the edge direction as the principal axis of the Gaussian. Such a representation has the advantage of being not only geometrically meaningful but also compatible with the efficient training optimization defined in Gaussian Splatting. Results show that the proposed method produces edges as accurate and complete as the state-of-the-art while being an order of magnitude faster.
+
+![image](https://github.com/user-attachments/assets/09961333-147a-4243-ab97-ef8328dce068)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.12886) | [⌨️ Code](https://github.com/kunalchelani/EdgeGaussians) | [🌐 Project Page]
 
 
 <br>
