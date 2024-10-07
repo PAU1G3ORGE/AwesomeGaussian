@@ -6010,6 +6010,22 @@ Novel view synthesis of indoor scenes can be achieved by capturing a monocular v
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.07098) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>Depth Estimation Based on 3D Gaussian Splatting Siamese Defocus
+>*monocular depth metric estimation. Circle of Confusion (CoC)*
+
+Authors: Jinchang Zhang, Ningning Xu, Hao Zhang, Guoyu Lu
+<details span>
+<summary><b>Abstract</b></summary>
+Depth estimation is a fundamental task in 3D geometry. While stereo depth estimation can be achieved through triangulation methods, it is not as straightforward for monocular methods, which require the integration of global and local information. The Depth from Defocus (DFD) method utilizes camera lens models and parameters to recover depth information from blurred images and has been proven to perform well. However, these methods rely on All-In-Focus (AIF) images for depth estimation, which is nearly impossible to obtain in real-world applications. To address this issue, we propose a self-supervised framework based on 3D Gaussian splatting and Siamese networks. By learning the blur levels at different focal distances of the same scene in the focal stack, the framework predicts the defocus map and Circle of Confusion (CoC) from a single defocused image, using the defocus map as input to DepthNet for monocular depth estimation. The 3D Gaussian splatting model renders defocused images using the predicted CoC, and the differences between these and the real defocused images provide additional supervision signals for the Siamese Defocus self-supervised network. This framework has been validated on both artificially synthesized and real blurred datasets. Subsequent quantitative and visualization experiments demonstrate that our proposed framework is highly effective as a DFD method.
+
+![image](https://github.com/user-attachments/assets/7afdc16b-22c4-4df5-9c99-085e2344201f)
+
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.12323) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 
 #### <summary>
