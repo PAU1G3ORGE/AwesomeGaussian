@@ -3,7 +3,7 @@
 
 <br>
 
-[Surface](#Surface) | [Sparse View](#Sparse-View) | [Structured](#Structured) | [Large Scale](#Large-Scale) | [Edit](#Edit) | [SLAM](#SLAM) | [Noisy Poses](#Noisy-Poses) | [Generalizable](#Generalizable) | [High Frequency Details](#High-Frequency-Details) | [Anti-Aliasing](#Anti-Aliasing) | [Hyperspectral](#Hyperspectral) | [Others](#Others)  | [Not Gaussian](#Not-Gaussian)
+[Surface](#Surface) | [Sparse View](#Sparse-View) | [Structured](#Structured) | [Large Scale](#Large-Scale) | [Edit](#Edit) | [SLAM](#SLAM) | [Noisy Poses](#Noisy-Poses) | [Generalizable](#Generalizable) | [High Frequency Details](#High-Frequency-Details) | [Anti-Aliasing](#Anti-Aliasing) | [Hyperspectral](#Hyperspectral) | [Event Camera](#Event-Camera) | [Others](#Others)  | [Not Gaussian](#Not-Gaussian)
 
 <br>
 
@@ -432,7 +432,19 @@ We introduce Spurfies, a novel method for sparse-view surface reconstruction tha
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.16544) | [⌨️ Code] | [🌐 Project Page](https://geometric-rl.mpi-inf.mpg.de/spurfies/)
 
+#### <summary>Space-time 2D Gaussian Splatting for Accurate Surface Reconstruction under Complex Dynamic Scenes
 
+
+Authors: Shuo Wang, Binbin Huang, Ruoyu Wang, Shenghua Gao
+<details span>
+<summary><b>Abstract</b></summary>
+Previous surface reconstruction methods either suffer from low geometric accuracy or lengthy training times when dealing with real-world complex dynamic scenes involving multi-person activities, and human-object interactions. To tackle the dynamic contents and the occlusions in complex scenes, we present a space-time 2D Gaussian Splatting approach. Specifically, to improve geometric quality in dynamic scenes, we learn canonical 2D Gaussian splats and deform these 2D Gaussian splats while enforcing the disks of the Gaussian located on the surface of the objects by introducing depth and normal regularizers. Further, to tackle the occlusion issues in complex scenes, we introduce a compositional opacity deformation strategy, which further reduces the surface recovery of those occluded areas. Experiments on real-world sparse-view video datasets and monocular dynamic datasets demonstrate that our reconstructions outperform state-of-the-art methods, especially for the surface of the details. 
+
+![image](https://github.com/user-attachments/assets/8d5e307d-ad97-477e-af27-1688a4794f55)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2409.18852) | [⌨️ Code](https://github.com/tb2-sy/st-2dgs) | [🌐 Project Page](https://tb2-sy.github.io/st-2dgs/)
 
 <br>
 <br>
@@ -602,6 +614,20 @@ Authors: Shan Chen, Jiale Zhou, Lei Li
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.08613) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>MVPGS: Excavating Multi-view Priors for Gaussian Splatting from Sparse Input Views
+>*mvs depth as Geometric Filter for 3dgs, similar to GaussianPro*
+
+Authors: Wangze Xu, Huachen Gao, Shihe Shen, Rui Peng, Jianbo Jiao, Ronggang Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, the Neural Radiance Field (NeRF) advancement has facilitated few-shot Novel View Synthesis (NVS), which is a significant challenge in 3D vision applications. Despite numerous attempts to reduce the dense input requirement in NeRF, it still suffers from time-consumed training and rendering processes. More recently, 3D Gaussian Splatting (3DGS) achieves real-time high-quality rendering with an explicit point-based representation. However, similar to NeRF, it tends to overfit the train views for lack of constraints. In this paper, we propose \textbf{MVPGS}, a few-shot NVS method that excavates the multi-view priors based on 3D Gaussian Splatting. We leverage the recent learning-based Multi-view Stereo (MVS) to enhance the quality of geometric initialization for 3DGS. To mitigate overfitting, we propose a forward-warping method for additional appearance constraints conforming to scenes based on the computed geometry. Furthermore, we introduce a view-consistent geometry constraint for Gaussian parameters to facilitate proper optimization convergence and utilize a monocular depth regularization as compensation. Experiments show that the proposed method achieves state-of-the-art performance with real-time rendering speed.
+
+![image](https://github.com/user-attachments/assets/b2e8aeb9-71d3-442a-829a-1ff493b05707)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.14316) | [⌨️ Code](https://github.com/zezeaaa/MVPGS) | [🌐 Project Page](https://zezeaaa.github.io/projects/MVPGS/)
+
 
 <br>
 <br>
@@ -769,8 +795,7 @@ Point management is a critical component in optimizing 3D Gaussian Splatting (3D
 
 
 #### <summary>SplatFields: Neural Gaussian Splats for Sparse 3D and 4D Reconstruction
-> *To quantify the local spatial autocorrelation of each splat, we select the five nearest neighbors and measure Moran’s I of the
-splat’s attributes (color, opacity, covariance). The core idea of our method is to introduce a spatial bias during the optimization phase, which encourages nearby primitives to share similar features. combine explicit and implicit representation. we identify the lack of spatial autocorrelation of splat features as one of the factors contributing to the suboptimal performance of the 3DGS technique in sparse reconstruction settings*
+> *To quantify the local spatial autocorrelation of each splat, we select the five nearest neighbors and measure Moran’s I of the splat’s attributes (color, opacity, covariance). The core idea of our method is to introduce a spatial bias during the optimization phase, which encourages nearby primitives to share similar features. combine explicit and implicit representation. we identify the lack of spatial autocorrelation of splat features as one of the factors contributing to the suboptimal performance of the 3DGS technique in sparse reconstruction settings*
 
 Authors: Marko Mihajlovic, Sergey Prokudin, Siyu Tang, Robert Maier, Federica Bogo, Tony Tung, Edmond Boyer
 <details span>
@@ -1314,7 +1339,18 @@ Authors: Joji Joseph, Bharadwaj Amrutur, Shalabh Bhatnagar
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.11681) | [⌨️ Code](https://github.com/JojiJoseph/3dgs-gradient-segmentation) | [🌐 Project Page](https://jojijoseph.github.io/3dgs-segmentation/)
 
+#### <summary>WaSt-3D: Wasserstein-2 Distance for Scene-to-Scene Stylization on 3D Gaussians
 
+Authors: Dmytro Kotovenko, Olga Grebenkova, Nikolaos Sarafianos, Avinash Paliwal, Pingchuan Ma, Omid Poursaeed, Sreyas Mohan, Yuchen Fan, Yilei Li, Rakesh Ranjan, Björn Ommer
+<details span>
+<summary><b>Abstract</b></summary>
+While style transfer techniques have been well-developed for 2D image stylization, the extension of these methods to 3D scenes remains relatively unexplored. Existing approaches demonstrate proficiency in transferring colors and textures but often struggle with replicating the geometry of the scenes. In our work, we leverage an explicit Gaussian Splatting (GS) representation and directly match the distributions of Gaussians between style and content scenes using the Earth Mover's Distance (EMD). By employing the entropy-regularized Wasserstein-2 distance, we ensure that the transformation maintains spatial smoothness. Additionally, we decompose the scene stylization problem into smaller chunks to enhance efficiency. This paradigm shift reframes stylization from a pure generative process driven by latent space losses to an explicit matching of distributions between two Gaussian representations. Our method achieves high-resolution 3D stylization by faithfully transferring details from 3D style scenes onto the content scene. Furthermore, WaSt-3D consistently delivers results across diverse content and style scenes without necessitating any training, as it relies solely on optimization-based techniques.
+ 
+![image](https://github.com/user-attachments/assets/52d15d61-1faf-4508-a4e9-5f9ac8cd548a)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.17917) | [⌨️ Code](https://github.com/facebookresearch/WaSt3D) | [🌐 Project Page](https://compvis.github.io/wast3d/)
 
 <br>
 <br>
@@ -1405,6 +1441,19 @@ Authors: Meng Wang, Junyi Wang, Changqun Xia, Chen Wang, Yue Qi
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.17223) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>MGSO: Monocular Real-time Photometric SLAM with Efficient 3D Gaussian Splatting
+
+
+Authors: Yan Song Hu, Nicolas Abboud, Muhammad Qasim Ali, Adam Srebrnjak Yang, Imad Elhajj, Daniel Asmar, Yuhao Chen, John S. Zelek
+<details span>
+<summary><b>Abstract</b></summary>
+Real-time SLAM with dense 3D mapping is computationally challenging, especially on resource-limited devices. The recent development of 3D Gaussian Splatting (3DGS) offers a promising approach for real-time dense 3D reconstruction. However, existing 3DGS-based SLAM systems struggle to balance hardware simplicity, speed, and map quality. Most systems excel in one or two of the aforementioned aspects but rarely achieve all. A key issue is the difficulty of initializing 3D Gaussians while concurrently conducting SLAM. To address these challenges, we present Monocular GSO (MGSO), a novel real-time SLAM system that integrates photometric SLAM with 3DGS. Photometric SLAM provides dense structured point clouds for 3DGS initialization, accelerating optimization and producing more efficient maps with fewer Gaussians. As a result, experiments show that our system generates reconstructions with a balance of quality, memory efficiency, and speed that outperforms the state-of-the-art. Furthermore, our system achieves all results using RGB inputs. We evaluate the Replica, TUM-RGBD, and EuRoC datasets against current live dense reconstruction systems. Not only do we surpass contemporary systems, but experiments also show that we maintain our performance on laptop hardware, making it a practical solution for robotics, A/R, and other real-time applications.
+ 
+![image](https://github.com/user-attachments/assets/796e8a55-8adc-429a-98ee-ec096558705c)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.13055) | [⌨️ Code] | [🌐 Project Page]
 
 
 <br>
@@ -1771,6 +1820,67 @@ We propose a novel cross-spectral rendering framework based on 3D Gaussian Splat
 
 <br>
 <br>
+
+## Event Camera
+
+#### <summary>Event3DGS: Event-based 3D Gaussian Splatting for Fast Egomotion
+Authors: Tianyi Xiong, Jiayi Wu, Botao He, Cornelia Fermuller, Yiannis Aloimonos, Heng Huang, Christopher A. Metzler
+<details span>
+<summary><b>Abstract</b></summary>
+The recent emergence of 3D Gaussian splatting (3DGS) leverages the advantage of explicit point-based representations, which significantly improves the rendering speed and quality of novel-view synthesis. However, 3D radiance field rendering in environments with high-dynamic motion or challenging illumination condition remains problematic in real-world robotic tasks. The reason is that fast egomotion is prevalent real-world robotic tasks, which induces motion blur, leading to inaccuracies and artifacts in the reconstructed structure. To alleviate this problem, we propose Event3DGS, the first method that learns Gaussian Splatting solely from raw event streams. By exploiting the high temporal resolution of event cameras and explicit point-based representation, Event3DGS can reconstruct high-fidelity 3D structures solely from the event streams under fast egomotion. Our sparsity-aware sampling and progressive training approaches allow for better reconstruction quality and consistency. To further enhance the fidelity of appearance, we explicitly incorporate the motion blur formation process into a differentiable rasterizer, which is used with a limited set of blurred RGB images to refine the appearance. Extensive experiments on multiple datasets validate the superior rendering quality of Event3DGS compared with existing approaches, with over 95% lower training time and faster rendering speed in orders of magnitude.
+
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/7a9eae92-d15b-4f6e-9682-4bdfbcb3c270)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.02972) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>E2GS: Event Enhanced Gaussian Splatting
+Authors: Hiroyuki Deguchi, Mana Masuda, Takuya Nakabayashi, Hideo Saito
+<details span>
+<summary><b>Abstract</b></summary>
+Event cameras, known for their high dynamic range, absence of motion blur, and low energy usage, have recently found a wide range of applications thanks to these attributes. In the past few years, the field of event-based 3D reconstruction saw remarkable progress, with the Neural Radiance Field (NeRF) based approach demonstrating photorealistic view synthesis results. However, the volume rendering paradigm of NeRF necessitates extensive training and rendering times. In this paper, we introduce Event Enhanced Gaussian Splatting (E2GS), a novel method that incorporates event data into Gaussian Splatting, which has recently made significant advances in the field of novel view synthesis. Our E2GS effectively utilizes both blurry images and event data, significantly improving image deblurring and producing high-quality novel view synthesis. Our comprehensive experiments on both synthetic and real-world datasets demonstrate our E2GS can generate visually appealing renderings while offering faster training and rendering speed (140 FPS).
+ 
+![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/f7dacef0-5803-4207-b613-c701a4f42bb9)
+
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.14978) | [⌨️ Code](https://github.com/deguchihiroyuki/E2GS) | [🌐 Project Page]
+
+
+#### <summary>Ev-GS: Event-based Gaussian splatting for Efficient and Accurate Radiance Field Rendering
+Authors: Jingqian Wu, Shuo Zhu, Chutian Wang, Edmund Y. Lam
+<details span>
+<summary><b>Abstract</b></summary>
+Computational neuromorphic imaging (CNI) with event cameras offers advantages such as minimal motion blur and enhanced dynamic range, compared to conventional frame-based methods. Existing event-based radiance field rendering methods are built on neural radiance field, which is computationally heavy and slow in reconstruction speed. Motivated by the two aspects, we introduce Ev-GS, the first CNI-informed scheme to infer 3D Gaussian splatting from a monocular event camera, enabling efficient novel view synthesis. Leveraging 3D Gaussians with pure event-based supervision, Ev-GS overcomes challenges such as the detection of fast-moving objects and insufficient lighting. Experimental results show that Ev-GS outperforms the method that takes frame-based signals as input by rendering realistic views with reduced blurring and improved visual quality. Moreover, it demonstrates competitive reconstruction quality and reduced computing occupancy compared to existing methods, which paves the way to a highly efficient CNI approach for signal processing.
+
+![image](https://github.com/user-attachments/assets/3241bc0a-534e-4a1b-8845-7aa04f35b032)
+
+
+</details>
+
+[📃 arXiv:2407](https://arxiv.org/pdf/2407.11343) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Elite-EvGS: Learning Event-based 3D Gaussian Splatting by Distilling Event-to-Video Priors
+Authors: Zixin Zhang, Kanghao Chen, Lin Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Event cameras are bio-inspired sensors that output asynchronous and sparse event streams, instead of fixed frames. Benefiting from their distinct advantages, such as high dynamic range and high temporal resolution, event cameras have been applied to address 3D reconstruction, important for robotic mapping. Recently, neural rendering techniques, such as 3D Gaussian splatting (3DGS), have been shown successful in 3D reconstruction. However, it still remains under-explored how to develop an effective event-based 3DGS pipeline. In particular, as 3DGS typically depends on high-quality initialization and dense multiview constraints, a potential problem appears for the 3DGS optimization with events given its inherent sparse property. To this end, we propose a novel event-based 3DGS framework, named Elite-EvGS. Our key idea is to distill the prior knowledge from the off-the-shelf event-to-video (E2V) models to effectively reconstruct 3D scenes from events in a coarse-to-fine optimization manner. Specifically, to address the complexity of 3DGS initialization from events, we introduce a novel warm-up initialization strategy that optimizes a coarse 3DGS from the frames generated by E2V models and then incorporates events to refine the details. Then, we propose a progressive event supervision strategy that employs the window-slicing operation to progressively reduce the number of events used for supervision. This subtly relives the temporal randomness of the event frames, benefiting the optimization of local textural and global structural details. Experiments on the benchmark datasets demonstrate that Elite-EvGS can reconstruct 3D scenes with better textural and structural details. Meanwhile, our method yields plausible performance on the captured real-world data, including diverse challenging conditions, such as fast motion and low light scenes.
+
+![image](https://github.com/user-attachments/assets/f571cb01-dfa4-4eb0-9761-b8ae4aa3b74e)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.13392) | [⌨️ Code] | [🌐 Project Page]
+
+
+<br>
+<br>
+
 
 ## Others
 
@@ -2698,18 +2808,7 @@ Authors: Henan Wang, Hanxin Zhu, Tianyu He, Runsen Feng, Jiajun Deng, Jiang Bian
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.01597) | [⌨️ Code](https://github.com/USTC-IMCL/RDO-Gaussian) | [🌐 Project Page]
 
-#### <summary>Event3DGS: Event-based 3D Gaussian Splatting for Fast Egomotion
-Authors: Tianyi Xiong, Jiayi Wu, Botao He, Cornelia Fermuller, Yiannis Aloimonos, Heng Huang, Christopher A. Metzler
-<details span>
-<summary><b>Abstract</b></summary>
-The recent emergence of 3D Gaussian splatting (3DGS) leverages the advantage of explicit point-based representations, which significantly improves the rendering speed and quality of novel-view synthesis. However, 3D radiance field rendering in environments with high-dynamic motion or challenging illumination condition remains problematic in real-world robotic tasks. The reason is that fast egomotion is prevalent real-world robotic tasks, which induces motion blur, leading to inaccuracies and artifacts in the reconstructed structure. To alleviate this problem, we propose Event3DGS, the first method that learns Gaussian Splatting solely from raw event streams. By exploiting the high temporal resolution of event cameras and explicit point-based representation, Event3DGS can reconstruct high-fidelity 3D structures solely from the event streams under fast egomotion. Our sparsity-aware sampling and progressive training approaches allow for better reconstruction quality and consistency. To further enhance the fidelity of appearance, we explicitly incorporate the motion blur formation process into a differentiable rasterizer, which is used with a limited set of blurred RGB images to refine the appearance. Extensive experiments on multiple datasets validate the superior rendering quality of Event3DGS compared with existing approaches, with over 95% lower training time and faster rendering speed in orders of magnitude.
 
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/7a9eae92-d15b-4f6e-9682-4bdfbcb3c270)
-
-
-</details>
-
-[📃 arXiv:2406](https://arxiv.org/pdf/2406.02972) | [⌨️ Code] | [🌐 Project Page]
 
 
 
@@ -2930,18 +3029,6 @@ In this work, we introduce the Geometry-Aware Large Reconstruction Model (GeoLRM
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.15333) | [⌨️ Code] | [🌐 Project Page]
 
 
-#### <summary>E2GS: Event Enhanced Gaussian Splatting
-Authors: Hiroyuki Deguchi, Mana Masuda, Takuya Nakabayashi, Hideo Saito
-<details span>
-<summary><b>Abstract</b></summary>
-Event cameras, known for their high dynamic range, absence of motion blur, and low energy usage, have recently found a wide range of applications thanks to these attributes. In the past few years, the field of event-based 3D reconstruction saw remarkable progress, with the Neural Radiance Field (NeRF) based approach demonstrating photorealistic view synthesis results. However, the volume rendering paradigm of NeRF necessitates extensive training and rendering times. In this paper, we introduce Event Enhanced Gaussian Splatting (E2GS), a novel method that incorporates event data into Gaussian Splatting, which has recently made significant advances in the field of novel view synthesis. Our E2GS effectively utilizes both blurry images and event data, significantly improving image deblurring and producing high-quality novel view synthesis. Our comprehensive experiments on both synthetic and real-world datasets demonstrate our E2GS can generate visually appealing renderings while offering faster training and rendering speed (140 FPS).
- 
-![image](https://github.com/PAU1G3ORGE/AwesomeGaussian/assets/167790336/f7dacef0-5803-4207-b613-c701a4f42bb9)
-
-
-</details>
-
-[📃 arXiv:2406](https://arxiv.org/pdf/2406.14978) | [⌨️ Code](https://github.com/deguchihiroyuki/E2GS) | [🌐 Project Page]
 
 #### <summary>Taming 3DGS: High-Quality Radiance Fields with Limited Resources
 Authors: Saswat Subhajyoti Mallick, Rahul Goel, Bernhard Kerbl, Francisco Vicente Carrasco, Markus Steinberger, Fernando De La Torre
@@ -3204,18 +3291,6 @@ Interactive segmentation of 3D Gaussians opens a great opportunity for real-time
 [📃 arXiv:2407](https://arxiv.org/pdf/2407.11793) | [⌨️ Code] | [🌐 Project Page](https://seokhunchoi.github.io/Click-Gaussian/)
 
 
-#### <summary>Ev-GS: Event-based Gaussian splatting for Efficient and Accurate Radiance Field Rendering
-Authors: Jingqian Wu, Shuo Zhu, Chutian Wang, Edmund Y. Lam
-<details span>
-<summary><b>Abstract</b></summary>
-Computational neuromorphic imaging (CNI) with event cameras offers advantages such as minimal motion blur and enhanced dynamic range, compared to conventional frame-based methods. Existing event-based radiance field rendering methods are built on neural radiance field, which is computationally heavy and slow in reconstruction speed. Motivated by the two aspects, we introduce Ev-GS, the first CNI-informed scheme to infer 3D Gaussian splatting from a monocular event camera, enabling efficient novel view synthesis. Leveraging 3D Gaussians with pure event-based supervision, Ev-GS overcomes challenges such as the detection of fast-moving objects and insufficient lighting. Experimental results show that Ev-GS outperforms the method that takes frame-based signals as input by rendering realistic views with reduced blurring and improved visual quality. Moreover, it demonstrates competitive reconstruction quality and reduced computing occupancy compared to existing methods, which paves the way to a highly efficient CNI approach for signal processing.
-
-![image](https://github.com/user-attachments/assets/3241bc0a-534e-4a1b-8845-7aa04f35b032)
-
-
-</details>
-
-[📃 arXiv:2407](https://arxiv.org/pdf/2407.11343) | [⌨️ Code] | [🌐 Project Page]
 
 
 #### <summary>Gaussian Splatting LK
@@ -3854,6 +3929,125 @@ With their meaningful geometry and their omnipresence in the 3D world, edges are
 </details>
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.12886) | [⌨️ Code](https://github.com/kunalchelani/EdgeGaussians) | [🌐 Project Page]
+
+
+#### <summary>Spectral-GS: Taming 3D Gaussian Splatting with Spectral Entropy
+>*whether to split based on the positional gradients and the spectral radius of the covariance matrix without considering the shape of primitives*
+
+Authors: Letian Huang, Jie Guo, Jialin Dan, Ruoyu Fu, Shujie Wang, Yuanqi Li, Yanwen Guo
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, 3D Gaussian Splatting (3D-GS) has achieved impressive results in novel view synthesis, demonstrating high fidelity and efficiency. However, it easily exhibits needle-like artifacts, especially when increasing the sampling rate. Mip-Splatting tries to remove these artifacts with a 3D smoothing filter for frequency constraints and a 2D Mip filter for approximated supersampling. Unfortunately, it tends to produce over-blurred results, and sometimes needle-like Gaussians still persist. Our spectral analysis of the covariance matrix during optimization and densification reveals that current 3D-GS lacks shape awareness, relying instead on spectral radius and view positional gradients to determine splitting. As a result, needle-like Gaussians with small positional gradients and low spectral entropy fail to split and overfit high-frequency details. Furthermore, both the filters used in 3D-GS and Mip-Splatting reduce the spectral entropy and increase the condition number during zooming in to synthesize novel view, causing view inconsistencies and more pronounced artifacts. Our Spectral-GS, based on spectral analysis, introduces 3D shape-aware splitting and 2D view-consistent filtering strategies, effectively addressing these issues, enhancing 3D-GS's capability to represent high-frequency details without noticeable artifacts, and achieving high-quality photorealistic rendering.
+
+![image](https://github.com/user-attachments/assets/b5f34a6e-6976-4503-8059-84c86453fd85)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.12771) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>V^3: Viewing Volumetric Videos on Mobiles via Streamable 2D Dynamic Gaussians
+>*looks cool*
+
+Authors: Penghao Wang, Zhirui Zhang, Liao Wang, Kaixin Yao, Siyuan Xie, Jingyi Yu, Minye Wu, Lan Xu
+<details span>
+<summary><b>Abstract</b></summary>
+Experiencing high-fidelity volumetric video as seamlessly as 2D videos is a long-held dream. However, current dynamic 3DGS methods, despite their high rendering quality, face challenges in streaming on mobile devices due to computational and bandwidth constraints. In this paper, we introduce V^3 (Viewing Volumetric Videos), a novel approach that enables high-quality mobile rendering through the streaming of dynamic Gaussians. Our key innovation is to view dynamic 3DGS as 2D videos, facilitating the use of hardware video codecs. Additionally, we propose a two-stage training strategy to reduce storage requirements with rapid training speed. The first stage employs hash encoding and shallow MLP to learn motion, then reduces the number of Gaussians through pruning to meet the streaming requirements, while the second stage fine tunes other Gaussian attributes using residual entropy loss and temporal loss to improve temporal continuity. This strategy, which disentangles motion and appearance, maintains high rendering quality with compact storage requirements. Meanwhile, we designed a multi-platform player to decode and render 2D Gaussian videos. Extensive experiments demonstrate the effectiveness of V^3, outperforming other methods by enabling high-quality rendering and streaming on common devices, which is unseen before. As the first to stream dynamic Gaussians on mobile devices, our companion player offers users an unprecedented volumetric video experience, including smooth scrolling and instant sharing.
+
+![image](https://github.com/user-attachments/assets/bf9ff3df-7202-45e2-8643-1be8596fbac4)
+
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.13648) | [⌨️ Code] | [🌐 Project Page](https://authoritywang.github.io/v3/)
+
+#### <summary>3D-GSW: 3D Gaussian Splatting Watermark for Protecting Copyrights in Radiance Fields
+
+Authors: Youngdong Jang, Hyunje Park, Feng Yang, Heeju Ko, Euijin Choo, Sangpil Kim
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, 3D Gaussian splatting has been getting a lot of attention as an innovative method for representing 3D space due to rapid rendering and image quality. However, copyright protection for the 3D Gaussian splatting has not yet been introduced. In this paper, we present a novel watermarking method for 3D Gaussian splatting. The proposed method embeds a binary message into 3D Gaussians by fine-tuning the pre-trained 3D Gaussian splatting model. To achieve this, we present Frequency-Guided Densification (FGD) that utilizes Discrete Fourier Transform to find patches with high-frequencies and split 3D Gaussians based on 3D Gaussian Contribution Vector. It is each 3D Gaussian contribution to rendered pixel colors, improving both rendering quality and bit accuracy. Furthermore, we modify an adaptive gradient mask to enhance rendering quality. Our experiments show that our method can embed a watermark in 3D Gaussians imperceptibly with increased capacity and robustness against attacks. Our method reduces optimization cost and achieves state-of-the-art performance compared to other methods.
+
+![image](https://github.com/user-attachments/assets/a81fd32d-b743-4b8d-a6af-0ab589354a3c)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.13222) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+
+#### <summary>AIM 2024 Sparse Neural Rendering Challenge: Dataset and Benchmark
+
+Authors: Michal Nazarczuk, Thomas Tanay, Sibi Catley-Chandar, Richard Shaw, Radu Timofte, Eduardo Pérez-Pellitero
+<details span>
+<summary><b>Abstract</b></summary>
+Recent developments in differentiable and neural rendering have made impressive breakthroughs in a variety of 2D and 3D tasks, e.g. novel view synthesis, 3D reconstruction. Typically, differentiable rendering relies on a dense viewpoint coverage of the scene, such that the geometry can be disambiguated from appearance observations alone. Several challenges arise when only a few input views are available, often referred to as sparse or few-shot neural rendering. As this is an underconstrained problem, most existing approaches introduce the use of regularisation, together with a diversity of learnt and hand-crafted priors. A recurring problem in sparse rendering literature is the lack of an homogeneous, up-to-date, dataset and evaluation protocol. While high-resolution datasets are standard in dense reconstruction literature, sparse rendering methods often evaluate with low-resolution images. Additionally, data splits are inconsistent across different manuscripts, and testing ground-truth images are often publicly available, which may lead to over-fitting. In this work, we propose the Sparse Rendering (SpaRe) dataset and benchmark. We introduce a new dataset that follows the setup of the DTU MVS dataset. The dataset is composed of 97 new scenes based on synthetic, high-quality assets. Each scene has up to 64 camera views and 7 lighting configurations, rendered at 1600x1200 resolution. We release a training split of 82 scenes to foster generalizable approaches, and provide an online evaluation platform for the validation and test sets, whose ground-truth images remain hidden. We propose two different sparse configurations (3 and 9 input images respectively). This provides a powerful and convenient tool for reproducible evaluation, and enable researchers easy access to a public leaderboard with the state-of-the-art performance scores.
+
+![image](https://github.com/user-attachments/assets/2c3b4d62-a380-4b01-ba47-fc8ca9cce42b)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.15041) | [⌨️ Code] | [🌐 Project Page](https://sparebenchmark.github.io/)
+
+
+#### <summary>Dynamic 2D Gaussians: Geometrically accurate radiance fields for dynamic objects
+
+Authors: Shuai Zhang, Guanjun Wu, Xinggang Wang, Bin Feng, Wenyu Liu
+<details span>
+<summary><b>Abstract</b></summary>
+Reconstructing objects and extracting high-quality surfaces play a vital role in the real world. Current 4D representations show the ability to render high-quality novel views for dynamic objects but cannot reconstruct high-quality meshes due to their implicit or geometrically inaccurate representations. In this paper, we propose a novel representation that can reconstruct accurate meshes from sparse image input, named Dynamic 2D Gaussians (D-2DGS). We adopt 2D Gaussians for basic geometry representation and use sparse-controlled points to capture 2D Gaussian's deformation. By extracting the object mask from the rendered high-quality image and masking the rendered depth map, a high-quality dynamic mesh sequence of the object can be extracted. Experiments demonstrate that our D-2DGS is outstanding in reconstructing high-quality meshes from sparse input.
+
+![image](https://github.com/user-attachments/assets/f8787304-4918-4e56-8928-f6829d6c1a47)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.14072) | [⌨️ Code](https://github.com/hustvl/Dynamic-2DGS) | [🌐 Project 
+Page]
+
+
+#### <summary>Disentangled Generation and Aggregation for Robust Radiance Fields
+
+Authors: Shihe Shen, Huachen Gao, Wangze Xu, Rui Peng, Luyang Tang, Kaiqiang Xiong, Jianbo Jiao, Ronggang Wang
+<details span>
+<summary><b>Abstract</b></summary>
+The utilization of the triplane-based radiance fields has gained attention in recent years due to its ability to effectively disentangle 3D scenes with a high-quality representation and low computation cost. A key requirement of this method is the precise input of camera poses. However, due to the local update property of the triplane, a similar joint estimation as previous joint pose-NeRF optimization works easily results in local minima. To this end, we propose the Disentangled Triplane Generation module to introduce global feature context and smoothness into triplane learning, which mitigates errors caused by local updating. Then, we propose the Disentangled Plane Aggregation to mitigate the entanglement caused by the common triplane feature aggregation during camera pose updating. In addition, we introduce a two-stage warm-start training strategy to reduce the implicit constraints caused by the triplane generator. Quantitative and qualitative results demonstrate that our proposed method achieves state-of-the-art performance in novel view synthesis with noisy or unknown camera poses, as well as efficient convergence of optimization.
+
+![image](https://github.com/user-attachments/assets/b986ceb9-f672-44f0-9ccb-6145a8d46fe7)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.15715) | [⌨️ Code] | [🌐 Project Page](https://gaohchen.github.io/DiGARR/)
+
+
+
+#### <summary>DreamWaltz-G: Expressive 3D Gaussian Avatars from Skeleton-Guided 2D Diffusion
+
+Authors: Yukun Huang, Jianan Wang, Ailing Zeng, Zheng-Jun Zha, Lei Zhang, Xihui Liu
+<details span>
+<summary><b>Abstract</b></summary>
+Leveraging pretrained 2D diffusion models and score distillation sampling (SDS), recent methods have shown promising results for text-to-3D avatar generation. However, generating high-quality 3D avatars capable of expressive animation remains challenging. In this work, we present DreamWaltz-G, a novel learning framework for animatable 3D avatar generation from text. The core of this framework lies in Skeleton-guided Score Distillation and Hybrid 3D Gaussian Avatar representation. Specifically, the proposed skeleton-guided score distillation integrates skeleton controls from 3D human templates into 2D diffusion models, enhancing the consistency of SDS supervision in terms of view and human pose. This facilitates the generation of high-quality avatars, mitigating issues such as multiple faces, extra limbs, and blurring. The proposed hybrid 3D Gaussian avatar representation builds on the efficient 3D Gaussians, combining neural implicit fields and parameterized 3D meshes to enable real-time rendering, stable SDS optimization, and expressive animation. Extensive experiments demonstrate that DreamWaltz-G is highly effective in generating and animating 3D avatars, outperforming existing methods in both visual quality and animation expressiveness. Our framework further supports diverse applications, including human video reenactment and multi-subject scene composition.
+
+![image](https://github.com/user-attachments/assets/3ae78726-8365-4309-8a97-75a73ec01545)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.17145) | [⌨️ Code](https://github.com/yukun-huang/DreamWaltz-G) | [🌐 Project Page](https://yukun-huang.github.io/DreamWaltz-G/)
+
+
+#### <summary>Frequency-based View Selection in Gaussian Splatting Reconstruction
+>*Next-best-view Selection for gaussian splatting*
+
+Authors: Monica M.Q. Li, Pierre-Yves Lajoie, Giovanni Beltrame
+<details span>
+<summary><b>Abstract</b></summary>
+Three-dimensional reconstruction is a fundamental problem in robotics perception. We examine the problem of active view selection to perform 3D Gaussian Splatting reconstructions with as few input images as possible. Although 3D Gaussian Splatting has made significant progress in image rendering and 3D reconstruction, the quality of the reconstruction is strongly impacted by the selection of 2D images and the estimation of camera poses through Structure-from-Motion (SfM) algorithms. Current methods to select views that rely on uncertainties from occlusions, depth ambiguities, or neural network predictions directly are insufficient to handle the issue and struggle to generalize to new scenes. By ranking the potential views in the frequency domain, we are able to effectively estimate the potential information gain of new viewpoints without ground truth data. By overcoming current constraints on model architecture and efficacy, our method achieves state-of-the-art results in view selection, demonstrating its potential for efficient image-based 3D reconstruction.
+
+![image](https://github.com/user-attachments/assets/f673c168-b208-42cf-ac3c-95d467a9933a)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.16470) | [⌨️ Code] | [🌐 Project Page]
 
 
 <br>
