@@ -1150,6 +1150,21 @@ Authors: Shuzhao Xie, Weixiang Zhang, Chen Tang, Yunpeng Bai, Rongwei Lu, Shijia
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.09756) | [⌨️ Code](https://github.com/ShuzhaoXie/MesonGS) | [🌐 Project Page](https://shuzhaoxie.github.io/mesongs/)
 
 
+#### <summary>GaRField++: Reinforced Gaussian Radiance Fields for Large-Scale 3D Scene Reconstruction
+>  *Partitioning + GOF Ray-Gaussian render + abs density control + ConvKAN-based Decoupled Appearance Modeling*
+
+Authors: Hanyue Zhang, Zhiliu Yang, Xinhe Zuo, Yuxin Tong, Ying Long, Chen Liu
+<details span>
+<summary><b>Abstract</b></summary>
+This paper proposes a novel framework for large-scale scene reconstruction based on 3D Gaussian splatting (3DGS) and aims to address the scalability and accuracy challenges faced by existing methods. For tackling the scalability issue, we split the large scene into multiple cells, and the candidate point-cloud and camera views of each cell are correlated through a visibility-based camera selection and a progressive point-cloud extension. To reinforce the rendering quality, three highlighted improvements are made in comparison with vanilla 3DGS, which are a strategy of the ray-Gaussian intersection and the novel Gaussians density control for learning efficiency, an appearance decoupling module based on ConvKAN network to solve uneven lighting conditions in large-scale scenes, and a refined final loss with the color loss, the depth distortion loss, and the normal consistency loss. Finally, the seamless stitching procedure is executed to merge the individual Gaussian radiance field for novel view synthesis across different cells. Evaluation of Mill19, Urban3D, and MatrixCity datasets shows that our method consistently generates more high-fidelity rendering results than state-of-the-art methods of large-scale scene reconstruction. We further validate the generalizability of the proposed approach by rendering on self-collected video clips recorded by a commercial drone.
+ 
+![image](https://github.com/user-attachments/assets/181699a6-7529-4089-9979-5abaf88090ea)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.12774) | [⌨️ Code](https://github.com/ShuzhaoXie/MesonGS) | [🌐 Project Page](https://shuzhaoxie.github.io/mesongs/)
+
+
 <br>
 <br>
 
