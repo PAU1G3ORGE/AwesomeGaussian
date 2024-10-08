@@ -440,7 +440,7 @@ Authors: Shuo Wang, Binbin Huang, Ruoyu Wang, Shenghua Gao
 <summary><b>Abstract</b></summary>
 Previous surface reconstruction methods either suffer from low geometric accuracy or lengthy training times when dealing with real-world complex dynamic scenes involving multi-person activities, and human-object interactions. To tackle the dynamic contents and the occlusions in complex scenes, we present a space-time 2D Gaussian Splatting approach. Specifically, to improve geometric quality in dynamic scenes, we learn canonical 2D Gaussian splats and deform these 2D Gaussian splats while enforcing the disks of the Gaussian located on the surface of the objects by introducing depth and normal regularizers. Further, to tackle the occlusion issues in complex scenes, we introduce a compositional opacity deformation strategy, which further reduces the surface recovery of those occluded areas. Experiments on real-world sparse-view video datasets and monocular dynamic datasets demonstrate that our reconstructions outperform state-of-the-art methods, especially for the surface of the details. 
 
-![image](https://github.com/user-attachments/assets/8d5e307d-ad97-477e-af27-1688a4794f55)
+![image](https://github.com/user-attachments/assets/44d30691-1263-4b4e-b898-40db0ad8072b)
 
 </details>
 
