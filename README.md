@@ -6248,6 +6248,39 @@ We present a foundation model for zero-shot metric monocular depth estimation. O
 
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.02073) | [⌨️ Code](https://github.com/apple/ml-depth-pro) | [🌐 Project Page]
 
+#### <summary>LoGDesc: Local geometric features aggregation for robust point cloud registration
+>*local geometric feature*
+
+Authors: Karim Slimani, Brahim Tamadazte, Catherine Achard
+<details span>
+<summary><b>Abstract</b></summary>
+This paper introduces a new hybrid descriptor for 3D point matching and point cloud registration, combining local geometrical properties and learning-based feature propagation for each point's neighborhood structure description. The proposed architecture first extracts prior geometrical information by computing each point's planarity, anisotropy, and omnivariance using a Principal Components Analysis (PCA). This prior information is completed by a descriptor based on the normal vectors estimated thanks to constructing a neighborhood based on triangles. The final geometrical descriptor is propagated between the points using local graph convolutions and attention mechanisms. The new feature extractor is evaluated on ModelNet40, Bunny Stanford dataset, KITTI and MVP (Multi-View Partial)-RG for point cloud registration and shows interesting results, particularly on noisy and low overlapping point clouds.
+
+![image](https://github.com/user-attachments/assets/1844d483-e37d-4616-a145-b6af79e1bbf2)
+
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.02420) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>Generative Edge Detection with Stable Diffusion
+> *Different ways of using the diffusion model*
+
+Authors: Caixia Zhou, Yaping Huang, Mochu Xiang, Jiahui Ren, Haibin Ling, Jing Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+Edge detection is typically viewed as a pixel-level classification problem mainly addressed by discriminative methods. Recently, generative edge detection methods, especially diffusion model based solutions, are initialized in the edge detection task. Despite great potential, the retraining of task-specific designed modules and multi-step denoising inference limits their broader applications. Upon closer investigation, we speculate that part of the reason is the under-exploration of the rich discriminative information encoded in extensively pre-trained large models (\eg, stable diffusion models). Thus motivated, we propose a novel approach, named Generative Edge Detector (GED), by fully utilizing the potential of the pre-trained stable diffusion model. Our model can be trained and inferred efficiently without specific network design due to the rich high-level and low-level prior knowledge empowered by the pre-trained stable diffusion. Specifically, we propose to finetune the denoising U-Net and predict latent edge maps directly, by taking the latent image feature maps as input. Additionally, due to the subjectivity and ambiguity of the edges, we also incorporate the granularity of the edges into the denoising U-Net model as one of the conditions to achieve controllable and diverse predictions. Furthermore, we devise a granularity regularization to ensure the relative granularity relationship of the multiple predictions. We conduct extensive experiments on multiple datasets and achieve competitive performance (\eg, 0.870 and 0.880 in terms of ODS and OIS on the BSDS test dataset).
+
+![image](https://github.com/user-attachments/assets/9e868c37-9447-4382-968a-347979f07203)
+![image](https://github.com/user-attachments/assets/b6dd0156-c037-43a7-809a-61a57c788d27)
+
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.03080) | [⌨️ Code] | [🌐 Project Page]
+
+
+
 #### <summary>
 Authors: 
 <details span>
@@ -6258,4 +6291,4 @@ Authors:
 
 </details>
 
-[📃 arXiv:2409] | [⌨️ Code] | [🌐 Project Page]
+[📃 arXiv:2410] | [⌨️ Code] | [🌐 Project Page]
