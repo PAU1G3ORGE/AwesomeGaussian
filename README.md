@@ -1,6 +1,5 @@
 # AwesomeGaussian
 
-![image](https://github.com/user-attachments/assets/1726aca5-b449-43a7-9fe3-48a8510c9455)
 <br>
 
 [Surface](#Surface) | [Sparse View](#Sparse-View) | [Structured](#Structured) | [Large Scale](#Large-Scale) | [Edit](#Edit) | [SLAM](#SLAM) | [Noisy Poses](#Noisy-Poses) | [Generalizable](#Generalizable) | [High Frequency Details](#High-Frequency-Details) | [Anti-Aliasing](#Anti-Aliasing) | [Hyperspectral](#Hyperspectral) | [Event Camera](#Event-Camera) | [Others](#Others)  | [Not Gaussian](#Not-Gaussian)
