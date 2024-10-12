@@ -4140,7 +4140,6 @@ Recent works in volume rendering, \textit{e.g.} NeRF and 3D Gaussian Splatting (
 
 #### <summary>SuperGS: Super-Resolution 3D Gaussian Splatting via Latent Feature Field and Gradient-guided Splitting
 
-
 Authors: Shiyun Xie, Zhiru Wang, Yinghao Zhu, Chengwei Pan
 <details span>
 <summary><b>Abstract</b></summary>
@@ -4151,6 +4150,20 @@ Recently, 3D Gaussian Splatting (3DGS) has exceled in novel view synthesis with 
 </details>
 
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.02571) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Flash-Splat: 3D Reflection Removal with Flash Cues and Gaussian Splats
+
+Authors: Mingyang Xie, Haoming Cai, Sachin Shah, Yiran Xu, Brandon Y. Feng, Jia-Bin Huang, Christopher A. Metzler
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce a simple yet effective approach for separating transmitted and reflected light. Our key insight is that the powerful novel view synthesis capabilities provided by modern inverse rendering methods (e.g.,~3D Gaussian splatting) allow one to perform flash/no-flash reflection separation using unpaired measurements -- this relaxation dramatically simplifies image acquisition over conventional paired flash/no-flash reflection separation methods. Through extensive real-world experiments, we demonstrate our method, Flash-Splat, accurately reconstructs both transmitted and reflected scenes in 3D. Our method outperforms existing 3D reflection separation methods, which do not leverage illumination control, by a large margin.
+
+![image](https://github.com/user-attachments/assets/014e78ad-788f-4774-b495-2ec10c8ab1c0)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.02764) | [⌨️ Code] | [🌐 Project Page](https://flash-splat.github.io/)
 
 
 <br>
