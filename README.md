@@ -1351,6 +1351,36 @@ While style transfer techniques have been well-developed for 2D image stylizatio
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.17917) | [⌨️ Code](https://github.com/facebookresearch/WaSt3D) | [🌐 Project Page](https://compvis.github.io/wast3d/)
 
+#### <summary>MiraGe: Editable 2D Images using Gaussian Splatting
+>*come back later*
+
+Authors: Joanna Waczyńska, Tomasz Szczepanik, Piotr Borycki, Sławomir Tadeja, Thomas Bohné, Przemysław Spurek
+<details span>
+<summary><b>Abstract</b></summary>
+Implicit Neural Representations (INRs) approximate discrete data through continuous functions and are commonly used for encoding 2D images. Traditional image-based INRs employ neural networks to map pixel coordinates to RGB values, capturing shapes, colors, and textures within the network's weights. Recently, GaussianImage has been proposed as an alternative, using Gaussian functions instead of neural networks to achieve comparable quality and compression. Such a solution obtains a quality and compression ratio similar to classical INR models but does not allow image modification. In contrast, our work introduces a novel method, MiraGe, which uses mirror reflections to perceive 2D images in 3D space and employs flat-controlled Gaussians for precise 2D image editing. Our approach improves the rendering quality and allows realistic image modifications, including human-inspired perception of photos in the 3D world. Thanks to modeling images in 3D space, we obtain the illusion of 3D-based modification in 2D images. We also show that our Gaussian representation can be easily combined with a physics engine to produce physics-based modification of 2D images. Consequently, MiraGe allows for better quality than the standard approach and natural modification of 2D images.
+ 
+![image](https://github.com/user-attachments/assets/11fe3dfd-6636-4746-a53f-0ff8e46cdb15)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.01521) | [⌨️ Code](https://github.com/waczjoan/MiraGe/tree/main) | [🌐 Project Page](https://waczjoan.github.io/MiraGe/)
+
+#### <summary>GaussianBlock: Building Part-Aware Compositional and Editable 3D Scene by Primitives and Gaussians
+>*semantic coherent part-aware superquadrics, a hybrid representation that integrates superquadric primitives and Gaussians, where superquadric serve as coarse but disentangled building blocks, while Gaussians act as “skin” to refine the structure and ensure high fidelity, 3D Gaussians at the triangles of each reconstructed superquadric*
+
+Authors: Shuyi Jiang, Qihao Zhao, Hossein Rahmani, De Wen Soh, Jun Liu, Na Zhao
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, with the development of Neural Radiance Fields and Gaussian Splatting, 3D reconstruction techniques have achieved remarkably high fidelity. However, the latent representations learnt by these methods are highly entangled and lack interpretability. In this paper, we propose a novel part-aware compositional reconstruction method, called GaussianBlock, that enables semantically coherent and disentangled representations, allowing for precise and physical editing akin to building blocks, while simultaneously maintaining high fidelity. Our GaussianBlock introduces a hybrid representation that leverages the advantages of both primitives, known for their flexible actionability and editability, and 3D Gaussians, which excel in reconstruction quality. Specifically, we achieve semantically coherent primitives through a novel attention-guided centering loss derived from 2D semantic priors, complemented by a dynamic splitting and fusion strategy. Furthermore, we utilize 3D Gaussians that hybridize with primitives to refine structural details and enhance fidelity. Additionally, a binding inheritance strategy is employed to strengthen and maintain the connection between the two. Our reconstructed scenes are evidenced to be disentangled, compositional, and compact across diverse benchmarks, enabling seamless, direct and precise editing while maintaining high quality.
+ 
+![image](https://github.com/user-attachments/assets/230b968c-76a8-40a7-ac45-16664bdd06f7)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.01535) | [⌨️ Code] | [🌐 Project Page]
+
+
+
 <br>
 <br>
 
@@ -1453,6 +1483,21 @@ Real-time SLAM with dense 3D mapping is computationally challenging, especially 
 </details>
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.13055) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>CaRtGS: Computational Alignment for Real-Time Gaussian Splatting SLAM
+>*Fast Splat-wise Backpropagation*
+
+Authors: Dapeng Feng, Zhiqiang Chen, Yizhen Yin, Shipeng Zhong, Yuhua Qi, Hongbo Chen
+<details span>
+<summary><b>Abstract</b></summary>
+Simultaneous Localization and Mapping (SLAM) is pivotal in robotics, with photorealistic scene reconstruction emerging as a key challenge. To address this, we introduce Computational Alignment for Real-Time Gaussian Splatting SLAM (CaRtGS), a novel method enhancing the efficiency and quality of photorealistic scene reconstruction in real-time environments. Leveraging 3D Gaussian Splatting (3DGS), CaRtGS achieves superior rendering quality and processing speed, which is crucial for scene photorealistic reconstruction. Our approach tackles computational misalignment in Gaussian Splatting SLAM (GS-SLAM) through an adaptive strategy that optimizes training, addresses long-tail optimization, and refines densification. Experiments on Replica and TUM-RGBD datasets demonstrate CaRtGS's effectiveness in achieving high-fidelity rendering with fewer Gaussian primitives. This work propels SLAM towards real-time, photorealistic dense rendering, significantly advancing photorealistic scene representation. 
+ 
+![image](https://github.com/user-attachments/assets/d3a14956-85a0-4e15-8677-32321009b7fe)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.00486) | [⌨️ Code](https://github.com/dapengfeng/cartgs) | [🌐 Project Page](https://dapengfeng.github.io/cartgs)
 
 
 <br>
@@ -4047,6 +4092,51 @@ Three-dimensional reconstruction is a fundamental problem in robotics perception
 </details>
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.16470) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Gaussian-Det: Learning Closed-Surface Gaussians for 3D Object Detection
+>*Closure Inference Module (CIM), come back later*
+
+Authors: Hongru Yan, Yu Zheng, Yueqi Duan
+<details span>
+<summary><b>Abstract</b></summary>
+Skins wrapping around our bodies, leathers covering over the sofa, sheet metal coating the car - it suggests that objects are enclosed by a series of continuous surfaces, which provides us with informative geometry prior for objectness deduction. In this paper, we propose Gaussian-Det which leverages Gaussian Splatting as surface representation for multi-view based 3D object detection. Unlike existing monocular or NeRF-based methods which depict the objects via discrete positional data, Gaussian-Det models the objects in a continuous manner by formulating the input Gaussians as feature descriptors on a mass of partial surfaces. Furthermore, to address the numerous outliers inherently introduced by Gaussian splatting, we accordingly devise a Closure Inferring Module (CIM) for the comprehensive surface-based objectness deduction. CIM firstly estimates the probabilistic feature residuals for partial surfaces given the underdetermined nature of Gaussian Splatting, which are then coalesced into a holistic representation on the overall surface closure of the object proposal. In this way, the surface information Gaussian-Det exploits serves as the prior on the quality and reliability of objectness and the information basis of proposal refinement. Experiments on both synthetic and real-world datasets demonstrate that Gaussian-Det outperforms various existing approaches, in terms of both average precision and recall.
+
+![image](https://github.com/user-attachments/assets/76cfc0b5-7982-4546-a13b-665f05384bc0)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.01404) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>3DGS-DET: Empower 3D Gaussian Splatting with Boundary Guidance and Box-Focused Sampling for 3D Object Detection
+>*incorporating 2D Boundary Guidance to achieve a more suitable 3D spatial distribution of Gaussian blobs for detection*
+
+Authors: Yang Cao, Yuanliang Jv, Dan Xu
+<details span>
+<summary><b>Abstract</b></summary>
+Neural Radiance Fields (NeRF) are widely used for novel-view synthesis and have been adapted for 3D Object Detection (3DOD), offering a promising approach to 3DOD through view-synthesis representation. However, NeRF faces inherent limitations: (i) limited representational capacity for 3DOD due to its implicit nature, and (ii) slow rendering speeds. Recently, 3D Gaussian Splatting (3DGS) has emerged as an explicit 3D representation that addresses these limitations. Inspired by these advantages, this paper introduces 3DGS into 3DOD for the first time, identifying two main challenges: (i) Ambiguous spatial distribution of Gaussian blobs: 3DGS primarily relies on 2D pixel-level supervision, resulting in unclear 3D spatial distribution of Gaussian blobs and poor differentiation between objects and background, which hinders 3DOD; (ii) Excessive background blobs: 2D images often include numerous background pixels, leading to densely reconstructed 3DGS with many noisy Gaussian blobs representing the background, negatively affecting detection. To tackle the challenge (i), we leverage the fact that 3DGS reconstruction is derived from 2D images, and propose an elegant and efficient solution by incorporating 2D Boundary Guidance to significantly enhance the spatial distribution of Gaussian blobs, resulting in clearer differentiation between objects and their background. To address the challenge (ii), we propose a Box-Focused Sampling strategy using 2D boxes to generate object probability distribution in 3D spaces, allowing effective probabilistic sampling in 3D to retain more object blobs and reduce noisy background blobs. Benefiting from our designs, our 3DGS-DET significantly outperforms the SOTA NeRF-based method, NeRF-Det, achieving improvements of +6.6 on mAP@0.25 and +8.1 on mAP@0.5 for the ScanNet dataset, and impressive +31.5 on mAP@0.25 for the ARKITScenes dataset.
+
+![image](https://github.com/user-attachments/assets/d05a5ab4-8ecd-4f1d-8605-c20984d83099)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.01647) | [⌨️ Code](https://arxiv.org/pdf/2410.01647) | [🌐 Project Page]
+
+#### <summary>MVGS: Multi-view-regulated Gaussian Splatting for Novel View Synthesis
+>*interesting!!!*
+
+Authors: Xiaobiao Du, Yida Wang, Xin Yu
+<details span>
+<summary><b>Abstract</b></summary>
+Recent works in volume rendering, \textit{e.g.} NeRF and 3D Gaussian Splatting (3DGS), significantly advance the rendering quality and efficiency with the help of the learned implicit neural radiance field or 3D Gaussians. Rendering on top of an explicit representation, the vanilla 3DGS and its variants deliver real-time efficiency by optimizing the parametric model with single-view supervision per iteration during training which is adopted from NeRF. Consequently, certain views are overfitted, leading to unsatisfying appearance in novel-view synthesis and imprecise 3D geometries. To solve aforementioned problems, we propose a new 3DGS optimization method embodying four key novel contributions: 1) We transform the conventional single-view training paradigm into a multi-view training strategy. With our proposed multi-view regulation, 3D Gaussian attributes are further optimized without overfitting certain training views. As a general solution, we improve the overall accuracy in a variety of scenarios and different Gaussian variants. 2) Inspired by the benefit introduced by additional views, we further propose a cross-intrinsic guidance scheme, leading to a coarse-to-fine training procedure concerning different resolutions. 3) Built on top of our multi-view regulated training, we further propose a cross-ray densification strategy, densifying more Gaussian kernels in the ray-intersect regions from a selection of views. 4) By further investigating the densification strategy, we found that the effect of densification should be enhanced when certain views are distinct dramatically. As a solution, we propose a novel multi-view augmented densification strategy, where 3D Gaussians are encouraged to get densified to a sufficient number accordingly, resulting in improved reconstruction accuracy.
+
+![image](https://github.com/user-attachments/assets/96d5a43e-ee55-4893-ac2f-28e9b83ae42e)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.02103) | [⌨️ Code](https://github.com/xiaobiaodu/MVGS) | [🌐 Project Page](https://xiaobiaodu.github.io/mvgs-project/)
+
 
 
 <br>
