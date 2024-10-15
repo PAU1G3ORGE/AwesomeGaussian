@@ -4213,6 +4213,21 @@ Depth estimation is a fundamental task in 3D geometry. While stereo depth estima
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.12323) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>6DGS: Enhanced Direction-Aware Gaussian Splatting for Volumetric Rendering
+>*based on N-dimensional gaussian splatting*
+
+Authors: Zhongpai Gao, Benjamin Planche, Meng Zheng, Anwesa Choudhuri, Terrence Chen, Ziyan Wu
+<details span>
+<summary><b>Abstract</b></summary>
+Novel view synthesis has advanced significantly with the development of neural radiance fields (NeRF) and 3D Gaussian splatting (3DGS). However, achieving high quality without compromising real-time rendering remains challenging, particularly for physically-based ray tracing with view-dependent effects. Recently, N-dimensional Gaussians (N-DG) introduced a 6D spatial-angular representation to better incorporate view-dependent effects, but the Gaussian representation and control scheme are sub-optimal. In this paper, we revisit 6D Gaussians and introduce 6D Gaussian Splatting (6DGS), which enhances color and opacity representations and leverages the additional directional information in the 6D space for optimized Gaussian control. Our approach is fully compatible with the 3DGS framework and significantly improves real-time radiance field rendering by better modeling view-dependent effects and fine details. Experiments demonstrate that 6DGS significantly outperforms 3DGS and N-DG, achieving up to a 15.73 dB improvement in PSNR with a reduction of 66.5% Gaussian points compared to 3DGS.
+
+![image](https://github.com/user-attachments/assets/c175e2c6-8bc2-4ff4-9030-7b6bf98ad643)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.04974) | [⌨️ Code] | [🌐 Project Page](https://gaozhongpai.github.io/6dgs/)
+
+
 
 
 <br>
