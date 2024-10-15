@@ -1201,7 +1201,21 @@ Reconstructing urban street scenes is crucial due to its vital role in applicati
 
 </details>
 
-[📃 arXiv:2409](https://arxiv.org/pdf/2410.04354) | [⌨️ Code] | [🌐 Project Page]
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.04354) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>Mode-GS: Monocular Depth Guided Anchored 3D Gaussian Splatting for Robust Ground-View Scene Rendering
+>  *Scale-Consistent Depth Loss for the inherent scale ambiguity of monocular depth*
+
+Authors: Yonghan Lee, Jaehoon Choi, Dongki Jung, Jaeseong Yun, Soohyun Ryu, Dinesh Manocha, Suyong Yeon
+<details span>
+<summary><b>Abstract</b></summary>
+We present a novel-view rendering algorithm, Mode-GS, for ground-robot trajectory datasets. Our approach is based on using anchored Gaussian splats, which are designed to overcome the limitations of existing 3D Gaussian splatting algorithms. Prior neural rendering methods suffer from severe splat drift due to scene complexity and insufficient multi-view observation, and can fail to fix splats on the true geometry in ground-robot datasets. Our method integrates pixel-aligned anchors from monocular depths and generates Gaussian splats around these anchors using residual-form Gaussian decoders. To address the inherent scale ambiguity of monocular depth, we parameterize anchors with per-view depth-scales and employ scale-consistent depth loss for online scale calibration. Our method results in improved rendering performance, based on PSNR, SSIM, and LPIPS metrics, in ground scenes with free trajectory patterns, and achieves state-of-the-art rendering performance on the R3LIVE odometry dataset and the Tanks and Temples dataset.
+ 
+![image](https://github.com/user-attachments/assets/37dd4ea4-03a2-428c-95a1-668c802826e0)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.04646) | [⌨️ Code] | [🌐 Project Page]
 
 
 
@@ -4713,6 +4727,18 @@ Our evaluation shows that our method is able to generate dense, detailed, high-q
 
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.03861) | [⌨️ Code] | [🌐 Project Page](https://lorafib.github.io/ref_depth/)
 
+
+#### <summary>Deformable NeRF using Recursively Subdivided Tetrahedra
+Authors: Zherui Qiu, Chenqu Ren, Kaiwen Song, Xiaoyi Zeng, Leyuan Yang, Juyong Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+While neural radiance fields (NeRF) have shown promise in novel view synthesis, their implicit representation limits explicit control over object manipulation. Existing research has proposed the integration of explicit geometric proxies to enable deformation. However, these methods face two primary challenges: firstly, the time-consuming and computationally demanding tetrahedralization process; and secondly, handling complex or thin structures often leads to either excessive, storage-intensive tetrahedral meshes or poor-quality ones that impair deformation capabilities. To address these challenges, we propose DeformRF, a method that seamlessly integrates the manipulability of tetrahedral meshes with the high-quality rendering capabilities of feature grid representations. To avoid ill-shaped tetrahedra and tetrahedralization for each object, we propose a two-stage training strategy. Starting with an almost-regular tetrahedral grid, our model initially retains key tetrahedra surrounding the object and subsequently refines object details using finer-granularity mesh in the second stage. We also present the concept of recursively subdivided tetrahedra to create higher-resolution meshes implicitly. This enables multi-resolution encoding while only necessitating the storage of the coarse tetrahedral mesh generated in the first training stage. We conduct a comprehensive evaluation of our DeformRF on both synthetic and real-captured datasets. Both quantitative and qualitative results demonstrate the effectiveness of our method for novel view synthesis and deformation tasks.
+
+![image](https://github.com/user-attachments/assets/17cdb506-10b6-4b11-a571-f6759ed63dfc)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.04402) | [⌨️ Code] | [🌐 Project Page](https://ustc3dv.github.io/DeformRF/)
 
 
 
