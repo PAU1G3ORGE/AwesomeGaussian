@@ -1189,6 +1189,22 @@ This paper proposes a novel framework for large-scale scene reconstruction based
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.12774) | [⌨️ Code](https://github.com/ShuzhaoXie/MesonGS) | [🌐 Project Page](https://shuzhaoxie.github.io/mesongs/)
 
 
+#### <summary>StreetSurfGS: Scalable Urban Street Surface Reconstruction with Planar-based Gaussian Splatting
+>  *SAM for Edge Filtering*
+
+Authors: Xiao Cui, Weicai Ye, Yifan Wang, Guofeng Zhang, Wengang Zhou, Tong He, Houqiang Li
+<details span>
+<summary><b>Abstract</b></summary>
+Reconstructing urban street scenes is crucial due to its vital role in applications such as autonomous driving and urban planning. These scenes are characterized by long and narrow camera trajectories, occlusion, complex object relationships, and data sparsity across multiple scales. Despite recent advancements, existing surface reconstruction methods, which are primarily designed for object-centric scenarios, struggle to adapt effectively to the unique characteristics of street scenes. To address this challenge, we introduce StreetSurfGS, the first method to employ Gaussian Splatting specifically tailored for scalable urban street scene surface reconstruction. StreetSurfGS utilizes a planar-based octree representation and segmented training to reduce memory costs, accommodate unique camera characteristics, and ensure scalability. Additionally, to mitigate depth inaccuracies caused by object overlap, we propose a guided smoothing strategy within regularization to eliminate inaccurate boundary points and outliers. Furthermore, to address sparse views and multi-scale challenges, we use a dual-step matching strategy that leverages adjacent and long-term information. Extensive experiments validate the efficacy of StreetSurfGS in both novel view synthesis and surface reconstruction.
+ 
+![image](https://github.com/user-attachments/assets/bd8aeec0-ad0d-42a2-9fe6-15d58710c1fe)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2410.04354) | [⌨️ Code] | [🌐 Project Page]
+
+
+
 <br>
 <br>
 
@@ -4166,6 +4182,25 @@ We introduce a simple yet effective approach for separating transmitted and refl
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.02764) | [⌨️ Code] | [🌐 Project Page](https://flash-splat.github.io/)
 
 
+
+#### <summary>Depth Estimation Based on 3D Gaussian Splatting Siamese Defocus
+>*monocular depth metric estimation. Circle of Confusion (CoC)*
+
+Authors: Jinchang Zhang, Ningning Xu, Hao Zhang, Guoyu Lu
+<details span>
+<summary><b>Abstract</b></summary>
+Depth estimation is a fundamental task in 3D geometry. While stereo depth estimation can be achieved through triangulation methods, it is not as straightforward for monocular methods, which require the integration of global and local information. The Depth from Defocus (DFD) method utilizes camera lens models and parameters to recover depth information from blurred images and has been proven to perform well. However, these methods rely on All-In-Focus (AIF) images for depth estimation, which is nearly impossible to obtain in real-world applications. To address this issue, we propose a self-supervised framework based on 3D Gaussian splatting and Siamese networks. By learning the blur levels at different focal distances of the same scene in the focal stack, the framework predicts the defocus map and Circle of Confusion (CoC) from a single defocused image, using the defocus map as input to DepthNet for monocular depth estimation. The 3D Gaussian splatting model renders defocused images using the predicted CoC, and the differences between these and the real defocused images provide additional supervision signals for the Siamese Defocus self-supervised network. This framework has been validated on both artificially synthesized and real blurred datasets. Subsequent quantitative and visualization experiments demonstrate that our proposed framework is highly effective as a DFD method.
+
+![image](https://github.com/user-attachments/assets/7afdc16b-22c4-4df5-9c99-085e2344201f)
+
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.12323) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+
 <br>
 <br>
 
@@ -4627,6 +4662,65 @@ Neural Radiance Fields have achieved success in creating powerful 3D media repre
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.08056) | [⌨️ Code] | [🌐 Project Page]
 
+
+
+#### <summary>Surface-Centric Modeling for High-Fidelity Generalizable Neural Surface Reconstruction
+>*Instead of predicting an SDF value for each voxel, we present a new region sparsification approach to sparse the volume by judging whether the voxel is inside the surface region.*
+
+Authors: Rui Peng, Shihe Shen, Kaiqiang Xiong, Huachen Gao, Jianbo Jiao, Xiaodong Gu, Ronggang Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Reconstructing the high-fidelity surface from multi-view images, especially sparse images, is a critical and practical task that has attracted widespread attention in recent years. However, existing methods are impeded by the memory constraint or the requirement of ground-truth depths and cannot recover satisfactory geometric details. To this end, we propose SuRF, a new Surface-centric framework that incorporates a new Region sparsification based on a matching Field, achieving good trade-offs between performance, efficiency and scalability. To our knowledge, this is the first unsupervised method achieving end-to-end sparsification powered by the introduced matching field, which leverages the weight distribution to efficiently locate the boundary regions containing surface. Instead of predicting an SDF value for each voxel, we present a new region sparsification approach to sparse the volume by judging whether the voxel is inside the surface region. In this way, our model can exploit higher frequency features around the surface with less memory and computational consumption. Extensive experiments on multiple benchmarks containing complex large-scale scenes show that our reconstructions exhibit high-quality details and achieve new state-of-the-art performance, i.e., 46% improvements with 80% less memory consumption.
+
+![image](https://github.com/user-attachments/assets/6f0b00dc-1551-413f-b26e-235f55a78f4a)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.03634) | [⌨️ Code](https://github.com/prstrive/SuRF) | [🌐 Project Page]
+
+
+
+
+
+#### <summary>Redundancy-Aware Camera Selection for Indoor Scene Neural Rendering
+>*camera frame selection*
+
+Authors: Zehao Wang, Han Zhou, Matthew B. Blaschko, Tinne Tuytelaars, Minye Wu
+<details span>
+<summary><b>Abstract</b></summary>
+Novel view synthesis of indoor scenes can be achieved by capturing a monocular video sequence of the environment. However, redundant information caused by artificial movements in the input video data reduces the efficiency of scene modeling. In this work, we tackle this challenge from the perspective of camera selection. We begin by constructing a similarity matrix that incorporates both the spatial diversity of the cameras and the semantic variation of the images. Based on this matrix, we use the Intra-List Diversity (ILD) metric to assess camera redundancy, formulating the camera selection task as an optimization problem. Then we apply a diversity-based sampling algorithm to optimize the camera selection. We also develop a new dataset, IndoorTraj, which includes long and complex camera movements captured by humans in virtual indoor environments, closely mimicking real-world scenarios. Experimental results demonstrate that our strategy outperforms other approaches under time and memory constraints. Remarkably, our method achieves performance comparable to models trained on the full dataset, while using only an average of 15% of the frames and 75% of the allotted time.
+
+![image](https://github.com/user-attachments/assets/cc9658d6-7551-4a6a-bb2d-f8f2cfa4b758)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.07098) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+
+
+#### <summary>Refinement of Monocular Depth Maps via Multi-View Differentiable Rendering
+Authors: Laura Fink, Linus Franke, Joachim Keinert, Marc Stamminger
+<details span>
+<summary><b>Abstract</b></summary>
+The accurate reconstruction of per-pixel depth for an image is vital for many tasks in computer graphics, computer vision, and robotics. In this paper, we present a novel approach to generate view consistent and detailed depth maps from a number of posed images. We leverage advances in monocular depth estimation, which generate topologically complete, but metrically inaccurate depth maps and refine them in a two-stage optimization process based on a differentiable renderer. Taking the monocular depth map as input, we first scale this map to absolute distances based on structure-from-motion and transform the depths to a triangle surface mesh. We then refine this depth mesh in a local optimization, enforcing photometric and geometric consistency.
+Our evaluation shows that our method is able to generate dense, detailed, high-quality depth maps, also in challenging indoor scenarios, and outperforms state-of-the-art depth reconstruction approaches.
+
+![image](https://github.com/user-attachments/assets/6e221b72-d642-4703-a93f-b4c0e5c85565)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.03861) | [⌨️ Code] | [🌐 Project Page](https://lorafib.github.io/ref_depth/)
+
+
+
+
+
+
+
+
+
 <br>
 <br>
 
@@ -4733,6 +4827,17 @@ We demonstrate the versatility of our new representation by addressing three 3D 
 [📃 arXiv:2312](https://arxiv.org/pdf/2312.05889) | [⌨️ Code](https://github.com/makezur/super_primitive) | [🌐 Project Page](https://makezur.github.io/SuperPrimitive/)
 
 
+#### <summary>DUSt3R: Geometric 3D Vision Made Easy
+Authors: Shuzhe Wang, Vincent Leroy, Yohann Cabon, Boris Chidlovskii, Jerome Revaud
+<details span>
+<summary><b>Abstract</b></summary>
+Multi-view stereo reconstruction (MVS) in the wild requires to first estimate the camera parameters e.g. intrinsic and extrinsic parameters. These are usually tedious and cumbersome to obtain, yet they are mandatory to triangulate corresponding pixels in 3D space, which is the core of all best performing MVS algorithms. In this work, we take an opposite stance and introduce DUSt3R, a radically novel paradigm for Dense and Unconstrained Stereo 3D Reconstruction of arbitrary image collections, i.e. operating without prior information about camera calibration nor viewpoint poses. We cast the pairwise reconstruction problem as a regression of pointmaps, relaxing the hard constraints of usual projective camera models. We show that this formulation smoothly unifies the monocular and binocular reconstruction cases. In the case where more than two images are provided, we further propose a simple yet effective global alignment strategy that expresses all pairwise pointmaps in a common reference frame. We base our network architecture on standard Transformer encoders and decoders, allowing us to leverage powerful pretrained models. Our formulation directly provides a 3D model of the scene as well as depth information, but interestingly, we can seamlessly recover from it, pixel matches, relative and absolute camera. Exhaustive experiments on all these tasks showcase that the proposed DUSt3R can unify various 3D vision tasks and set new SoTAs on monocular/multi-view depth estimation as well as relative pose estimation. In summary, DUSt3R makes many geometric 3D vision tasks easy.
+ 
+![image](https://github.com/user-attachments/assets/4e94fe08-c8c3-49c7-ab34-9fc2e9f65e98)
+
+</details>
+
+[📃 arXiv:2312](https://arxiv.org/pdf/2312.14132) | [⌨️ Code](https://github.com/naver/dust3r?tab=readme-ov-file) | [🌐 Project Page](https://europe.naverlabs.com/research/publications/dust3r-geometric-3d-vision-made-easy/)
 
 
 
@@ -5848,6 +5953,21 @@ Facilitated by the powerful feature extraction ability of neural networks, deep 
 
 [📃 arXiv:2406](https://arxiv.org/pdf/2406.19602) | [⌨️ Code] | [🌐 Project Page]
 
+
+#### <summary>Grounding Image Matching in 3D with MASt3R
+Authors: Vincent Leroy, Yohann Cabon, Jérôme Revaud
+<details span>
+<summary><b>Abstract</b></summary>
+Image Matching is a core component of all best-performing algorithms and pipelines in 3D vision. Yet despite matching being fundamentally a 3D problem, intrinsically linked to camera pose and scene geometry, it is typically treated as a 2D problem. This makes sense as the goal of matching is to establish correspondences between 2D pixel fields, but also seems like a potentially hazardous choice. In this work, we take a different stance and propose to cast matching as a 3D task with DUSt3R, a recent and powerful 3D reconstruction framework based on Transformers. Based on pointmaps regression, this method displayed impressive robustness in matching views with extreme viewpoint changes, yet with limited accuracy. We aim here to improve the matching capabilities of such an approach while preserving its robustness. We thus propose to augment the DUSt3R network with a new head that outputs dense local features, trained with an additional matching loss. We further address the issue of quadratic complexity of dense matching, which becomes prohibitively slow for downstream applications if not carefully treated. We introduce a fast reciprocal matching scheme that not only accelerates matching by orders of magnitude, but also comes with theoretical guarantees and, lastly, yields improved results. Extensive experiments show that our approach, coined MASt3R, significantly outperforms the state of the art on multiple matching tasks. In particular, it beats the best published methods by 30% (absolute improvement) in VCRE AUC on the extremely challenging Map-free localization dataset.
+
+![image](https://github.com/user-attachments/assets/586a7a51-221e-44dc-bb1b-bce19f6003fa)
+
+</details>
+
+[📃 arXiv:2406](https://arxiv.org/pdf/2406.09756) | [⌨️ Code](https://github.com/naver/mast3r?tab=readme-ov-file) | [🌐 Project Page](https://europe.naverlabs.com/blog/mast3r-matching-and-stereo-3d-reconstruction/)
+
+
+
 #### <summary>SfM on-the-fly: Get better 3D from What You Capture
 Authors: Zhan Zongqian, Yu Yifei, Xia Rui, Gan Wentian, Xie Hong, Perda Giulio, Morelli Luca, Remondino Fabio, Wang Xin
 <details span>
@@ -6274,19 +6394,6 @@ Establishing consistent and dense correspondences across multiple images is cruc
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.02310) | [⌨️ Code] | [🌐 Project Page]
 
 
-#### <summary>Surface-Centric Modeling for High-Fidelity Generalizable Neural Surface Reconstruction
->*Instead of predicting an SDF value for each voxel, we present a new region sparsification approach to sparse the volume by judging whether the voxel is inside the surface region.*
-
-Authors: Rui Peng, Shihe Shen, Kaiqiang Xiong, Huachen Gao, Jianbo Jiao, Xiaodong Gu, Ronggang Wang
-<details span>
-<summary><b>Abstract</b></summary>
-Reconstructing the high-fidelity surface from multi-view images, especially sparse images, is a critical and practical task that has attracted widespread attention in recent years. However, existing methods are impeded by the memory constraint or the requirement of ground-truth depths and cannot recover satisfactory geometric details. To this end, we propose SuRF, a new Surface-centric framework that incorporates a new Region sparsification based on a matching Field, achieving good trade-offs between performance, efficiency and scalability. To our knowledge, this is the first unsupervised method achieving end-to-end sparsification powered by the introduced matching field, which leverages the weight distribution to efficiently locate the boundary regions containing surface. Instead of predicting an SDF value for each voxel, we present a new region sparsification approach to sparse the volume by judging whether the voxel is inside the surface region. In this way, our model can exploit higher frequency features around the surface with less memory and computational consumption. Extensive experiments on multiple benchmarks containing complex large-scale scenes show that our reconstructions exhibit high-quality details and achieve new state-of-the-art performance, i.e., 46% improvements with 80% less memory consumption.
-
-![image](https://github.com/user-attachments/assets/6f0b00dc-1551-413f-b26e-235f55a78f4a)
-
-</details>
-
-[📃 arXiv:2409](https://arxiv.org/pdf/2409.03634) | [⌨️ Code](https://github.com/prstrive/SuRF) | [🌐 Project Page]
 
 
 #### <summary>Towards Localizing Structural Elements: Merging Geometrical Detection with Semantic Verification in RGB-D Data
@@ -6320,35 +6427,6 @@ We tackle the problem of mosaicing bundle adjustment (i.e., simultaneous refinem
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.07365) | [⌨️ Code](https://github.com/tub-rip/emba) | [🌐 Project Page]
 
-
-#### <summary>Redundancy-Aware Camera Selection for Indoor Scene Neural Rendering
->*camera frame selection*
-
-Authors: Zehao Wang, Han Zhou, Matthew B. Blaschko, Tinne Tuytelaars, Minye Wu
-<details span>
-<summary><b>Abstract</b></summary>
-Novel view synthesis of indoor scenes can be achieved by capturing a monocular video sequence of the environment. However, redundant information caused by artificial movements in the input video data reduces the efficiency of scene modeling. In this work, we tackle this challenge from the perspective of camera selection. We begin by constructing a similarity matrix that incorporates both the spatial diversity of the cameras and the semantic variation of the images. Based on this matrix, we use the Intra-List Diversity (ILD) metric to assess camera redundancy, formulating the camera selection task as an optimization problem. Then we apply a diversity-based sampling algorithm to optimize the camera selection. We also develop a new dataset, IndoorTraj, which includes long and complex camera movements captured by humans in virtual indoor environments, closely mimicking real-world scenarios. Experimental results demonstrate that our strategy outperforms other approaches under time and memory constraints. Remarkably, our method achieves performance comparable to models trained on the full dataset, while using only an average of 15% of the frames and 75% of the allotted time.
-
-![image](https://github.com/user-attachments/assets/cc9658d6-7551-4a6a-bb2d-f8f2cfa4b758)
-
-</details>
-
-[📃 arXiv:2409](https://arxiv.org/pdf/2409.07098) | [⌨️ Code] | [🌐 Project Page]
-
-#### <summary>Depth Estimation Based on 3D Gaussian Splatting Siamese Defocus
->*monocular depth metric estimation. Circle of Confusion (CoC)*
-
-Authors: Jinchang Zhang, Ningning Xu, Hao Zhang, Guoyu Lu
-<details span>
-<summary><b>Abstract</b></summary>
-Depth estimation is a fundamental task in 3D geometry. While stereo depth estimation can be achieved through triangulation methods, it is not as straightforward for monocular methods, which require the integration of global and local information. The Depth from Defocus (DFD) method utilizes camera lens models and parameters to recover depth information from blurred images and has been proven to perform well. However, these methods rely on All-In-Focus (AIF) images for depth estimation, which is nearly impossible to obtain in real-world applications. To address this issue, we propose a self-supervised framework based on 3D Gaussian splatting and Siamese networks. By learning the blur levels at different focal distances of the same scene in the focal stack, the framework predicts the defocus map and Circle of Confusion (CoC) from a single defocused image, using the defocus map as input to DepthNet for monocular depth estimation. The 3D Gaussian splatting model renders defocused images using the predicted CoC, and the differences between these and the real defocused images provide additional supervision signals for the Siamese Defocus self-supervised network. This framework has been validated on both artificially synthesized and real blurred datasets. Subsequent quantitative and visualization experiments demonstrate that our proposed framework is highly effective as a DFD method.
-
-![image](https://github.com/user-attachments/assets/7afdc16b-22c4-4df5-9c99-085e2344201f)
-
-
-</details>
-
-[📃 arXiv:2409](https://arxiv.org/pdf/2409.12323) | [⌨️ Code] | [🌐 Project Page]
 
 
 #### <summary>Depth Pro: Sharp Monocular Metric Depth in Less Than a Second
@@ -6395,6 +6473,37 @@ Edge detection is typically viewed as a pixel-level classification problem mainl
 </details>
 
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.03080) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>MonST3R: A Simple Approach for Estimating Geometry in the Presence of Motion
+Authors: Junyi Zhang, Charles Herrmann, Junhwa Hur, Varun Jampani, Trevor Darrell, Forrester Cole, Deqing Sun, Ming-Hsuan Yang
+<details span>
+<summary><b>Abstract</b></summary>
+Estimating geometry from dynamic scenes, where objects move and deform over time, remains a core challenge in computer vision. Current approaches often rely on multi-stage pipelines or global optimizations that decompose the problem into subtasks, like depth and flow, leading to complex systems prone to errors. In this paper, we present Motion DUSt3R (MonST3R), a novel geometry-first approach that directly estimates per-timestep geometry from dynamic scenes. Our key insight is that by simply estimating a pointmap for each timestep, we can effectively adapt DUST3R's representation, previously only used for static scenes, to dynamic scenes. However, this approach presents a significant challenge: the scarcity of suitable training data, namely dynamic, posed videos with depth labels. Despite this, we show that by posing the problem as a fine-tuning task, identifying several suitable datasets, and strategically training the model on this limited data, we can surprisingly enable the model to handle dynamics, even without an explicit motion representation. Based on this, we introduce new optimizations for several downstream video-specific tasks and demonstrate strong performance on video depth and camera pose estimation, outperforming prior work in terms of robustness and efficiency. Moreover, MonST3R shows promising results for primarily feed-forward 4D reconstruction.
+
+![image](https://github.com/user-attachments/assets/ec97cc02-663f-4bf1-beed-8fc72414bfb3)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.03825) | [⌨️ Code](https://github.com/Junyi42/monst3r) | [🌐 Project Page](https://monst3r-project.github.io/)
+
+
+
+#### <summary>ε-VAE: Denoising as Visual Decoding
+>*offer a new perspective by proposing denoising as decoding*
+
+Authors: Long Zhao, Sanghyun Woo, Ziyu Wan, Yandong Li, Han Zhang, Boqing Gong, Hartwig Adam, Xuhui Jia, Ting Liu
+<details span>
+<summary><b>Abstract</b></summary>
+In generative modeling, tokenization simplifies complex data into compact, structured representations, creating a more efficient, learnable space. For high-dimensional visual data, it reduces redundancy and emphasizes key features for high-quality generation. Current visual tokenization methods rely on a traditional autoencoder framework, where the encoder compresses data into latent representations, and the decoder reconstructs the original input. In this work, we offer a new perspective by proposing denoising as decoding, shifting from single-step reconstruction to iterative refinement. Specifically, we replace the decoder with a diffusion process that iteratively refines noise to recover the original image, guided by the latents provided by the encoder. We evaluate our approach by assessing both reconstruction (rFID) and generation quality (FID), comparing it to state-of-the-art autoencoding approach. We hope this work offers new insights into integrating iterative generation and autoencoding for improved compression and generation.
+
+![image](https://github.com/user-attachments/assets/1332afd3-c99d-4b22-82de-38ab43125298)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.04081) | [⌨️ Code] | [🌐 Project Page]
+
+
+
 
 
 
