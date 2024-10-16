@@ -808,6 +808,21 @@ Digitizing 3D static scenes and 4D dynamic events from multi-view images has lon
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.11211) | [⌨️ Code](https://github.com/markomih/SplatFields) | [🌐 Project Page](https://markomih.github.io/SplatFields/)
 
 
+#### <summary>ES-Gaussian: Gaussian Splatting Mapping via Error Space-Based Gaussian Completion
+> *similar to LPM*
+
+Authors: Lu Chen, Yingfu Zeng, Haoang Li, Zhitao Deng, Jiafu Yan, Zhenjun Zhao
+<details span>
+<summary><b>Abstract</b></summary>
+Accurate and affordable indoor 3D reconstruction is critical for effective robot navigation and interaction. Traditional LiDAR-based mapping provides high precision but is costly, heavy, and power-intensive, with limited ability for novel view rendering. Vision-based mapping, while cost-effective and capable of capturing visual data, often struggles with high-quality 3D reconstruction due to sparse point clouds. We propose ES-Gaussian, an end-to-end system using a low-altitude camera and single-line LiDAR for high-quality 3D indoor reconstruction. Our system features Visual Error Construction (VEC) to enhance sparse point clouds by identifying and correcting areas with insufficient geometric detail from 2D error maps. Additionally, we introduce a novel 3DGS initialization method guided by single-line LiDAR, overcoming the limitations of traditional multi-view setups and enabling effective reconstruction in resource-constrained environments. Extensive experimental results on our new Dreame-SR dataset and a publicly available dataset demonstrate that ES-Gaussian outperforms existing methods, particularly in challenging scenarios.
+
+![image](https://github.com/user-attachments/assets/5fb0b6b1-20e2-4051-9663-5ed495f3e31b)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.06613) | [⌨️ Code] | [🌐 Project Page](https://arxiv.org/pdf/2410.06613)
+
+
 
 <br>
 <br>
@@ -4095,19 +4110,6 @@ Reconstructing objects and extracting high-quality surfaces play a vital role in
 Page]
 
 
-#### <summary>Disentangled Generation and Aggregation for Robust Radiance Fields
-
-Authors: Shihe Shen, Huachen Gao, Wangze Xu, Rui Peng, Luyang Tang, Kaiqiang Xiong, Jianbo Jiao, Ronggang Wang
-<details span>
-<summary><b>Abstract</b></summary>
-The utilization of the triplane-based radiance fields has gained attention in recent years due to its ability to effectively disentangle 3D scenes with a high-quality representation and low computation cost. A key requirement of this method is the precise input of camera poses. However, due to the local update property of the triplane, a similar joint estimation as previous joint pose-NeRF optimization works easily results in local minima. To this end, we propose the Disentangled Triplane Generation module to introduce global feature context and smoothness into triplane learning, which mitigates errors caused by local updating. Then, we propose the Disentangled Plane Aggregation to mitigate the entanglement caused by the common triplane feature aggregation during camera pose updating. In addition, we introduce a two-stage warm-start training strategy to reduce the implicit constraints caused by the triplane generator. Quantitative and qualitative results demonstrate that our proposed method achieves state-of-the-art performance in novel view synthesis with noisy or unknown camera poses, as well as efficient convergence of optimization.
-
-![image](https://github.com/user-attachments/assets/b986ceb9-f672-44f0-9ccb-6145a8d46fe7)
-
-</details>
-
-[📃 arXiv:2409](https://arxiv.org/pdf/2409.15715) | [⌨️ Code] | [🌐 Project Page](https://gaohchen.github.io/DiGARR/)
-
 
 
 #### <summary>DreamWaltz-G: Expressive 3D Gaussian Avatars from Skeleton-Guided 2D Diffusion
@@ -4753,6 +4755,19 @@ Novel view synthesis of indoor scenes can be achieved by capturing a monocular v
 </details>
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.07098) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>Disentangled Generation and Aggregation for Robust Radiance Fields
+
+Authors: Shihe Shen, Huachen Gao, Wangze Xu, Rui Peng, Luyang Tang, Kaiqiang Xiong, Jianbo Jiao, Ronggang Wang
+<details span>
+<summary><b>Abstract</b></summary>
+The utilization of the triplane-based radiance fields has gained attention in recent years due to its ability to effectively disentangle 3D scenes with a high-quality representation and low computation cost. A key requirement of this method is the precise input of camera poses. However, due to the local update property of the triplane, a similar joint estimation as previous joint pose-NeRF optimization works easily results in local minima. To this end, we propose the Disentangled Triplane Generation module to introduce global feature context and smoothness into triplane learning, which mitigates errors caused by local updating. Then, we propose the Disentangled Plane Aggregation to mitigate the entanglement caused by the common triplane feature aggregation during camera pose updating. In addition, we introduce a two-stage warm-start training strategy to reduce the implicit constraints caused by the triplane generator. Quantitative and qualitative results demonstrate that our proposed method achieves state-of-the-art performance in novel view synthesis with noisy or unknown camera poses, as well as efficient convergence of optimization.
+
+![image](https://github.com/user-attachments/assets/b986ceb9-f672-44f0-9ccb-6145a8d46fe7)
+
+</details>
+
+[📃 arXiv:2409](https://arxiv.org/pdf/2409.15715) | [⌨️ Code] | [🌐 Project Page](https://gaohchen.github.io/DiGARR/)
 
 
 
