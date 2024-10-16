@@ -1737,6 +1737,21 @@ Compared with previous 3D reconstruction methods like Nerf, recent Generalizable
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.13770) | [⌨️ Code] | [🌐 Project Page](https://xingyoujun.github.io/transplat/)
 
 
+#### <summary>HiSplat: Hierarchical 3D Gaussian Splatting for Generalizable Sparse-View Reconstruction
+>*large gaussian for skeleton, small gaussian for texture details, error map for depth offset ensuring the small gaussian always near the large gaussian. how to get skeleton?*
+
+Authors: Shengji Tang, Weicai Ye, Peng Ye, Weihao Lin, Yang Zhou, Tao Chen, Wanli Ouyang
+<details span>
+<summary><b>Abstract</b></summary>
+Reconstructing 3D scenes from multiple viewpoints is a fundamental task in stereo vision. Recently, advances in generalizable 3D Gaussian Splatting have enabled high-quality novel view synthesis for unseen scenes from sparse input views by feed-forward predicting per-pixel Gaussian parameters without extra optimization. However, existing methods typically generate single-scale 3D Gaussians, which lack representation of both large-scale structure and texture details, resulting in mislocation and artefacts. In this paper, we propose a novel framework, HiSplat, which introduces a hierarchical manner in generalizable 3D Gaussian Splatting to construct hierarchical 3D Gaussians via a coarse-to-fine strategy. Specifically, HiSplat generates large coarse-grained Gaussians to capture large-scale structures, followed by fine-grained Gaussians to enhance delicate texture details. To promote inter-scale interactions, we propose an Error Aware Module for Gaussian compensation and a Modulating Fusion Module for Gaussian repair. Our method achieves joint optimization of hierarchical representations, allowing for novel view synthesis using only two-view reference images. Comprehensive experiments on various datasets demonstrate that HiSplat significantly enhances reconstruction quality and cross-dataset generalization compared to prior single-scale methods. The corresponding ablation study and analysis of different-scale 3D Gaussians reveal the mechanism behind the effectiveness.
+
+![image](https://github.com/user-attachments/assets/febb325c-b7c2-40c1-8941-94b6132ffb2a)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.06245) | [⌨️ Code](https://github.com/Open3DVLab/HiSplat) | [🌐 Project Page](https://open3dvlab.github.io/HiSplat/)
+
+
 <br>
 <br>
 
