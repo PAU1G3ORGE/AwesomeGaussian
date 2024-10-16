@@ -4228,6 +4228,20 @@ Novel view synthesis has advanced significantly with the development of neural r
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.04974) | [⌨️ Code] | [🌐 Project Page](https://gaozhongpai.github.io/6dgs/)
 
 
+#### <summary>RelitLRM: Generative Relightable Radiance for Large Reconstruction Models
+>*diffusion for gaussian attribute*
+
+Authors: Tianyuan Zhang, Zhengfei Kuang, Haian Jin, Zexiang Xu, Sai Bi, Hao Tan, He Zhang, Yiwei Hu, Milos Hasan, William T. Freeman, Kai Zhang, Fujun Luan
+<details span>
+<summary><b>Abstract</b></summary>
+We propose RelitLRM, a Large Reconstruction Model (LRM) for generating high-quality Gaussian splatting representations of 3D objects under novel illuminations from sparse (4-8) posed images captured under unknown static lighting. Unlike prior inverse rendering methods requiring dense captures and slow optimization, often causing artifacts like incorrect highlights or shadow baking, RelitLRM adopts a feed-forward transformer-based model with a novel combination of a geometry reconstructor and a relightable appearance generator based on diffusion. The model is trained end-to-end on synthetic multi-view renderings of objects under varying known illuminations. This architecture design enables to effectively decompose geometry and appearance, resolve the ambiguity between material and lighting, and capture the multi-modal distribution of shadows and specularity in the relit appearance. We show our sparse-view feed-forward RelitLRM offers competitive relighting results to state-of-the-art dense-view optimization-based baselines while being significantly faster.
+
+![image](https://github.com/user-attachments/assets/bd1e62e2-91aa-4b8b-a9da-a923c4b391bc)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.06231) | [⌨️ Code] | [🌐 Project Page](https://relit-lrm.github.io/)
+
 
 
 <br>
