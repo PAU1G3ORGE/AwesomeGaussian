@@ -433,7 +433,6 @@ We introduce Spurfies, a novel method for sparse-view surface reconstruction tha
 
 #### <summary>Space-time 2D Gaussian Splatting for Accurate Surface Reconstruction under Complex Dynamic Scenes
 
-
 Authors: Shuo Wang, Binbin Huang, Ruoyu Wang, Shenghua Gao
 <details span>
 <summary><b>Abstract</b></summary>
@@ -444,6 +443,38 @@ Previous surface reconstruction methods either suffer from low geometric accurac
 </details>
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2409.18852) | [⌨️ Code](https://github.com/tb2-sy/st-2dgs) | [🌐 Project Page](https://tb2-sy.github.io/st-2dgs/)
+
+
+
+#### <summary>Spiking GS: Towards High-Accuracy and Low-Cost Surface Reconstruction via Spiking Neuron-based Gaussian Splatting
+>*we further identify two primary sources of LOPs: low-opacity Gaussians (LOGs) and the low-opacity tails (LOTs) of Gaussians*
+
+Authors: Weixing Zhang, Zongrui Li, De Ma, Huajin Tang, Xudong Jiang, Qian Zheng, Gang Pan
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting is capable of reconstructing 3D scenes in minutes. Despite recent advances in improving surface reconstruction accuracy, the reconstructed results still exhibit bias and suffer from inefficiency in storage and training. This paper provides a different observation on the cause of the inefficiency and the reconstruction bias, which is attributed to the integration of the low-opacity parts (LOPs) of the generated Gaussians. We show that LOPs consist of Gaussians with overall low-opacity (LOGs) and the low-opacity tails (LOTs) of Gaussians. We propose Spiking GS to reduce such two types of LOPs by integrating spiking neurons into the Gaussian Splatting pipeline. Specifically, we introduce global and local full-precision integrate-and-fire spiking neurons to the opacity and representation function of flattened 3D Gaussians, respectively. Furthermore, we enhance the density control strategy with spiking neurons' thresholds and an new criterion on the scale of Gaussians. Our method can represent more accurate reconstructed surfaces at a lower cost.
+
+![image](https://github.com/user-attachments/assets/4d539752-f34d-40fb-acba-f7f3a52ab34d)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.07266) | [⌨️ Code](https://github.com/zju-bmi-lab/SpikingGS) | [🌐 Project Page]
+
+
+#### <summary>MeshGS: Adaptive Mesh-Aligned Gaussian Splatting for High-Quality Rendering
+>*involves the removal of Gaussian splats (green Gaussian splats) occluded by mesh surface*
+
+Authors: Jaehoon Choi, Yonghan Lee, Hyungtae Lee, Heesung Kwon, Dinesh Manocha
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, 3D Gaussian splatting has gained attention for its capability to generate high-fidelity rendering results. At the same time, most applications such as games, animation, and AR/VR use mesh-based representations to represent and render 3D scenes. We propose a novel approach that integrates mesh representation with 3D Gaussian splats to perform high-quality rendering of reconstructed real-world scenes. In particular, we introduce a distance-based Gaussian splatting technique to align the Gaussian splats with the mesh surface and remove redundant Gaussian splats that do not contribute to the rendering. We consider the distance between each Gaussian splat and the mesh surface to distinguish between tightly-bound and loosely-bound Gaussian splats. The tightly-bound splats are flattened and aligned well with the mesh geometry. The loosely-bound Gaussian splats are used to account for the artifacts in reconstructed 3D meshes in terms of rendering. We present a training strategy of binding Gaussian splats to the mesh geometry, and take into account both types of splats. In this context, we introduce several regularization techniques aimed at precisely aligning tightly-bound Gaussian splats with the mesh surface during the training process. We validate the effectiveness of our method on large and unbounded scene from mip-NeRF 360 and Deep Blending datasets. Our method surpasses recent mesh-based neural rendering techniques by achieving a 2dB higher PSNR, and outperforms mesh-based Gaussian splatting methods by 1.3 dB PSNR, particularly on the outdoor mip-NeRF 360 dataset, demonstrating better rendering quality. We provide analyses for each type of Gaussian splat and achieve a reduction in the number of Gaussian splats by 30% compared to the original 3D Gaussian splatting.
+
+![image](https://github.com/user-attachments/assets/f6fca139-8253-448d-b7cf-15b0a49e23fb)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.08941) | [⌨️ Code] | [🌐 Project Page]
+
 
 <br>
 <br>
@@ -1565,6 +1596,16 @@ In this paper, we address common error sources for 3D Gaussian Splatting (3DGS) 
 [📃 arXiv:2404](https://arxiv.org/pdf/2404.04211) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Look Gauss, No Pose: Novel View Synthesis using Gaussian Splatting without Accurate Pose Initialization
+Authors: Christian Schmidt, Jens Piekenbrinck, Bastian Leibe
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting has recently emerged as a powerful tool for fast and accurate novel-view synthesis from a set of posed input images. However, like most novel-view synthesis approaches, it relies on accurate camera pose information, limiting its applicability in real-world scenarios where acquiring accurate camera poses can be challenging or even impossible. We propose an extension to the 3D Gaussian Splatting framework by optimizing the extrinsic camera parameters with respect to photometric residuals. We derive the analytical gradients and integrate their computation with the existing high-performance CUDA implementation. This enables downstream tasks such as 6-DoF camera pose estimation as well as joint reconstruction and camera refinement. In particular, we achieve rapid convergence and high accuracy for pose estimation on real-world scenes. Our method enables fast reconstruction of 3D scenes without requiring accurate pose information by jointly optimizing geometry and camera poses, while achieving state-of-the-art results in novel-view synthesis. Our approach is considerably faster to optimize than most competing methods, and several times faster in rendering. We show results on real-world scenes and complex trajectories through simulated environments, achieving state-of-the-art results on LLFF while reducing runtime by two to four times compared to the most efficient competing method.
+
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.08743) | [⌨️ Code](https://github.com/Schmiddo/noposegs) | [🌐 Project Page]
 
 
 
@@ -1980,6 +2021,23 @@ Event cameras are bio-inspired sensors that output asynchronous and sparse event
 </details>
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.13392) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+#### <summary>IncEventGS: Pose-Free Gaussian Splatting from a Single Event Camera
+
+Authors: Jian Huang, Chengrui Dong, Peidong Liu
+<details span>
+<summary><b>Abstract</b></summary>
+Implicit neural representation and explicit 3D Gaussian Splatting (3D-GS) for novel view synthesis have achieved remarkable progress with frame-based camera (e.g. RGB and RGB-D cameras) recently. Compared to frame-based camera, a novel type of bio-inspired visual sensor, i.e. event camera, has demonstrated advantages in high temporal resolution, high dynamic range, low power consumption and low latency. Due to its unique asynchronous and irregular data capturing process, limited work has been proposed to apply neural representation or 3D Gaussian splatting for an event camera. In this work, we present IncEventGS, an incremental 3D Gaussian Splatting reconstruction algorithm with a single event camera. To recover the 3D scene representation incrementally, we exploit the tracking and mapping paradigm of conventional SLAM pipelines for IncEventGS. Given the incoming event stream, the tracker firstly estimates an initial camera motion based on prior reconstructed 3D-GS scene representation. The mapper then jointly refines both the 3D scene representation and camera motion based on the previously estimated motion trajectory from the tracker. The experimental results demonstrate that IncEventGS delivers superior performance compared to prior NeRF-based methods and other related baselines, even we do not have the ground-truth camera poses. Furthermore, our method can also deliver better performance compared to state-of-the-art event visual odometry methods in terms of camera motion estimation.
+
+![image](https://github.com/user-attachments/assets/5ffb77a9-2b38-4961-bbb1-7baf8905c303)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.08107) | [⌨ Code](https://github.com/wu-cvgl/IncEventGS) | [🌐 Project Page]
+
+
 
 
 <br>
@@ -4259,6 +4317,64 @@ We propose RelitLRM, a Large Reconstruction Model (LRM) for generating high-qual
 
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.06231) | [⌨️ Code] | [🌐 Project Page](https://relit-lrm.github.io/)
 
+
+#### <summary>3D Vision-Language Gaussian Splatting
+>*This is especially notable for semi-transparent or reflective objects (e.g., glass and pot in depicted scene), exhibiting low opacity but high semantic-indicator values (c.f . li − oi close to 1).*
+
+Authors: Qucheng Peng, Benjamin Planche, Zhongpai Gao, Meng Zheng, Anwesa Choudhuri, Terrence Chen, Chen Chen, Ziyan Wu
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advancements in 3D reconstruction methods and vision-language models have propelled the development of multi-modal 3D scene understanding, which has vital applications in robotics, autonomous driving, and virtual/augmented reality. However, current multi-modal scene understanding approaches have naively embedded semantic representations into 3D reconstruction methods without striking a balance between visual and language modalities, which leads to unsatisfying semantic rasterization of translucent or reflective objects, as well as over-fitting on color modality. To alleviate these limitations, we propose a solution that adequately handles the distinct visual and semantic modalities, i.e., a 3D vision-language Gaussian splatting model for scene understanding, to put emphasis on the representation learning of language modality. We propose a novel cross-modal rasterizer, using modality fusion along with a smoothed semantic indicator for enhancing semantic rasterization. We also employ a camera-view blending technique to improve semantic consistency between existing and synthesized views, thereby effectively mitigating over-fitting. Extensive experiments demonstrate that our method achieves state-of-the-art performance in open-vocabulary semantic segmentation, surpassing existing methods by a significant margin.
+
+![image](https://github.com/user-attachments/assets/98d249e0-6cae-4257-a737-caabbf4592b5)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.07577) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>MotionGS: Exploring Explicit Motion Guidance for Deformable 3D Gaussian Splatting
+>*motion and optical flow guidance*
+
+Authors: Ruijie Zhu, Yanzhe Liang, Hanzhi Chang, Jiacheng Deng, Jiahao Lu, Wenfei Yang, Tianzhu Zhang, Yongdong Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+Dynamic scene reconstruction is a long-term challenge in the field of 3D vision. Recently, the emergence of 3D Gaussian Splatting has provided new insights into this problem. Although subsequent efforts rapidly extend static 3D Gaussian to dynamic scenes, they often lack explicit constraints on object motion, leading to optimization difficulties and performance degradation. To address the above issues, we propose a novel deformable 3D Gaussian splatting framework called MotionGS, which explores explicit motion priors to guide the deformation of 3D Gaussians. Specifically, we first introduce an optical flow decoupling module that decouples optical flow into camera flow and motion flow, corresponding to camera movement and object motion respectively. Then the motion flow can effectively constrain the deformation of 3D Gaussians, thus simulating the motion of dynamic objects. Additionally, a camera pose refinement module is proposed to alternately optimize 3D Gaussians and camera poses, mitigating the impact of inaccurate camera poses. Extensive experiments in the monocular dynamic scenes validate that MotionGS surpasses state-of-the-art methods and exhibits significant superiority in both qualitative and quantitative results.
+
+![image](https://github.com/user-attachments/assets/312b6750-b5af-4d65-aff6-3db905d2de03)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.07707) | [⌨️ Code] | [🌐 Project Page](https://ruijiezhu94.github.io/MotionGS_page/)
+
+
+#### <summary>Fast Feedforward 3D Gaussian Splatting Compression
+
+Authors: Yihang Chen, Qianyi Wu, Mengyao Li, Weiyao Lin, Mehrtash Harandi, Jianfei Cai
+<details span>
+<summary><b>Abstract</b></summary>
+With 3D Gaussian Splatting (3DGS) advancing real-time and high-fidelity rendering for novel view synthesis, storage requirements pose challenges for their widespread adoption. Although various compression techniques have been proposed, previous art suffers from a common limitation: for any existing 3DGS, per-scene optimization is needed to achieve compression, making the compression sluggish and slow. To address this issue, we introduce Fast Compression of 3D Gaussian Splatting (FCGS), an optimization-free model that can compress 3DGS representations rapidly in a single feed-forward pass, which significantly reduces compression time from minutes to seconds. To enhance compression efficiency, we propose a multi-path entropy module that assigns Gaussian attributes to different entropy constraint paths for balance between size and fidelity. We also carefully design both inter- and intra-Gaussian context models to remove redundancies among the unstructured Gaussian blobs. Overall, FCGS achieves a compression ratio of over 20X while maintaining fidelity, surpassing most per-scene SOTA optimization-based methods.
+
+![image](https://github.com/user-attachments/assets/a743b0c1-ed5b-4c36-a433-cccc81c7186c)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.08017) | [⌨️ Code](https://github.com/YihangChen-ee/FCGS) | [🌐 Project Page](https://yihangchen-ee.github.io/project_fcgs/)
+
+
+#### <summary>IncEventGS: Pose-Free Gaussian Splatting from a Single Event Camera
+>*Event Camera*
+
+Authors: Jian Huang, Chengrui Dong, Peidong Liu
+<details span>
+<summary><b>Abstract</b></summary>
+Implicit neural representation and explicit 3D Gaussian Splatting (3D-GS) for novel view synthesis have achieved remarkable progress with frame-based camera (e.g. RGB and RGB-D cameras) recently. Compared to frame-based camera, a novel type of bio-inspired visual sensor, i.e. event camera, has demonstrated advantages in high temporal resolution, high dynamic range, low power consumption and low latency. Due to its unique asynchronous and irregular data capturing process, limited work has been proposed to apply neural representation or 3D Gaussian splatting for an event camera. In this work, we present IncEventGS, an incremental 3D Gaussian Splatting reconstruction algorithm with a single event camera. To recover the 3D scene representation incrementally, we exploit the tracking and mapping paradigm of conventional SLAM pipelines for IncEventGS. Given the incoming event stream, the tracker firstly estimates an initial camera motion based on prior reconstructed 3D-GS scene representation. The mapper then jointly refines both the 3D scene representation and camera motion based on the previously estimated motion trajectory from the tracker. The experimental results demonstrate that IncEventGS delivers superior performance compared to prior NeRF-based methods and other related baselines, even we do not have the ground-truth camera poses. Furthermore, our method can also deliver better performance compared to state-of-the-art event visual odometry methods in terms of camera motion estimation.
+
+![image](https://github.com/user-attachments/assets/5ffb77a9-2b38-4961-bbb1-7baf8905c303)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.08107) | [⌨️ Code](https://github.com/wu-cvgl/IncEventGS) | [🌐 Project Page]
 
 
 <br>
