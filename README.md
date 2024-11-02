@@ -4362,19 +4362,96 @@ With 3D Gaussian Splatting (3DGS) advancing real-time and high-fidelity renderin
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.08017) | [⌨️ Code](https://github.com/YihangChen-ee/FCGS) | [🌐 Project Page](https://yihangchen-ee.github.io/project_fcgs/)
 
 
-#### <summary>IncEventGS: Pose-Free Gaussian Splatting from a Single Event Camera
->*Event Camera*
+#### <summary>4-LEGS: 4D Language Embedded Gaussian Splatting
+>*latent vertor for Differentiable Rasterization*
 
-Authors: Jian Huang, Chengrui Dong, Peidong Liu
+Authors: Gal Fiebelman, Tamir Cohen, Ayellet Morgenstern, Peter Hedman, Hadar Averbuch-Elor
 <details span>
 <summary><b>Abstract</b></summary>
-Implicit neural representation and explicit 3D Gaussian Splatting (3D-GS) for novel view synthesis have achieved remarkable progress with frame-based camera (e.g. RGB and RGB-D cameras) recently. Compared to frame-based camera, a novel type of bio-inspired visual sensor, i.e. event camera, has demonstrated advantages in high temporal resolution, high dynamic range, low power consumption and low latency. Due to its unique asynchronous and irregular data capturing process, limited work has been proposed to apply neural representation or 3D Gaussian splatting for an event camera. In this work, we present IncEventGS, an incremental 3D Gaussian Splatting reconstruction algorithm with a single event camera. To recover the 3D scene representation incrementally, we exploit the tracking and mapping paradigm of conventional SLAM pipelines for IncEventGS. Given the incoming event stream, the tracker firstly estimates an initial camera motion based on prior reconstructed 3D-GS scene representation. The mapper then jointly refines both the 3D scene representation and camera motion based on the previously estimated motion trajectory from the tracker. The experimental results demonstrate that IncEventGS delivers superior performance compared to prior NeRF-based methods and other related baselines, even we do not have the ground-truth camera poses. Furthermore, our method can also deliver better performance compared to state-of-the-art event visual odometry methods in terms of camera motion estimation.
+The emergence of neural representations has revolutionized our means for digitally viewing a wide range of 3D scenes, enabling the synthesis of photorealistic images rendered from novel views. Recently, several techniques have been proposed for connecting these low-level representations with the high-level semantics understanding embodied within the scene. These methods elevate the rich semantic understanding from 2D imagery to 3D representations, distilling high-dimensional spatial features onto 3D space. In our work, we are interested in connecting language with a dynamic modeling of the world. We show how to lift spatio-temporal features to a 4D representation based on 3D Gaussian Splatting. This enables an interactive interface where the user can spatiotemporally localize events in the video from text prompts. We demonstrate our system on public 3D video datasets of people and animals performing various actions.
 
-![image](https://github.com/user-attachments/assets/5ffb77a9-2b38-4961-bbb1-7baf8905c303)
+![image](https://github.com/user-attachments/assets/b15582ef-3e4d-415d-9617-e1536fc42ddc)
 
 </details>
 
-[📃 arXiv:2410](https://arxiv.org/pdf/2410.08107) | [⌨️ Code](https://github.com/wu-cvgl/IncEventGS) | [🌐 Project Page]
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.10719) | [⌨️ Code] | [🌐 Project Page](https://tau-vailab.github.io/4-LEGS/)
+
+
+#### <summary>L3DG: Latent 3D Gaussian Diffusion
+>*DLM + 3DGS*
+
+Authors: Barbara Roessle, Norman Müller, Lorenzo Porzi, Samuel Rota Bulò, Peter Kontschieder, Angela Dai, Matthias Nießner
+<details span>
+<summary><b>Abstract</b></summary>
+We propose L3DG, the first approach for generative 3D modeling of 3D Gaussians through a latent 3D Gaussian diffusion formulation. This enables effective generative 3D modeling, scaling to generation of entire room-scale scenes which can be very efficiently rendered. To enable effective synthesis of 3D Gaussians, we propose a latent diffusion formulation, operating in a compressed latent space of 3D Gaussians. This compressed latent space is learned by a vector-quantized variational autoencoder (VQ-VAE), for which we employ a sparse convolutional architecture to efficiently operate on room-scale scenes. This way, the complexity of the costly generation process via diffusion is substantially reduced, allowing higher detail on object-level generation, as well as scalability to large scenes. By leveraging the 3D Gaussian representation, the generated scenes can be rendered from arbitrary viewpoints in real-time. We demonstrate that our approach significantly improves visual quality over prior work on unconditional object-level radiance field synthesis and showcase its applicability to room-scale scene generation.
+
+![image](https://github.com/user-attachments/assets/d294c868-bec9-4eb5-a253-6ecbd7912c12)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.13530) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>DN-4DGS: Denoised Deformable Network with Temporal-Spatial Aggregation for Dynamic Scene Rendering
+
+Authors: Jiahao Lu, Jiacheng Deng, Ruijie Zhu, Yanzhe Liang, Wenfei Yang, Tianzhu Zhang, Xu Zhou
+<details span>
+<summary><b>Abstract</b></summary>
+Dynamic scenes rendering is an intriguing yet challenging problem. Although current methods based on NeRF have achieved satisfactory performance, they still can not reach real-time levels. Recently, 3D Gaussian Splatting (3DGS) has gar?nered researchers attention due to their outstanding rendering quality and real?time speed. Therefore, a new paradigm has been proposed: defining a canonical 3D gaussians and deforming it to individual frames in deformable fields. How?ever, since the coordinates of canonical 3D gaussians are filled with noise, which can transfer noise into the deformable fields, and there is currently no method that adequately considers the aggregation of 4D information. Therefore, we pro?pose Denoised Deformable Network with Temporal-Spatial Aggregation for Dy?namic Scene Rendering (DN-4DGS). Specifically, a Noise Suppression Strategy is introduced to change the distribution of the coordinates of the canonical 3D gaussians and suppress noise. Additionally, a Decoupled Temporal-Spatial Ag?gregation Module is designed to aggregate information from adjacent points and frames. Extensive experiments on various real-world datasets demonstrate that our method achieves state-of-the-art rendering quality under a real-time level.
+
+![image](https://github.com/user-attachments/assets/40777e50-4ac8-4367-ad97-a88d17db2724)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.13607) | [⌨️ Code](https://github.com/peoplelu/DN-4DGS) | [🌐 Project Page]
+
+
+
+
+#### <summary>MEGA: Memory-Efficient 4D Gaussian Splatting for Dynamic Scenes
+Authors: Xinjie Zhang, Zhening Liu, Yifan Zhang, Xingtong Ge, Dailan He, Tongda Xu, Yan Wang, Zehong Lin, Shuicheng Yan, Jun Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+4D Gaussian Splatting (4DGS) has recently emerged as a promising technique for capturing complex dynamic 3D scenes with high fidelity. It utilizes a 4D Gaussian representation and a GPU-friendly rasterizer, enabling rapid rendering speeds. Despite its advantages, 4DGS faces significant challenges, notably the requirement of millions of 4D Gaussians, each with extensive associated attributes, leading to substantial memory and storage cost. This paper introduces a memory-efficient framework for 4DGS. We streamline the color attribute by decomposing it into a per-Gaussian direct color component with only 3 parameters and a shared lightweight alternating current color predictor. This approach eliminates the need for spherical harmonics coefficients, which typically involve up to 144 parameters in classic 4DGS, thereby creating a memory-efficient 4D Gaussian representation. Furthermore, we introduce an entropy-constrained Gaussian deformation technique that uses a deformation field to expand the action range of each Gaussian and integrates an opacity-based entropy loss to limit the number of Gaussians, thus forcing our model to use as few Gaussians as possible to fit a dynamic scene well. With simple half-precision storage and zip compression, our framework achieves a storage reduction by approximately 190× and 125× on the Technicolor and Neural 3D Video datasets, respectively, compared to the original 4DGS. Meanwhile, it maintains comparable rendering speeds and scene representation quality, setting a new standard in the field.
+
+![image](https://github.com/user-attachments/assets/dcb2bf24-5881-429c-b943-98cbe76ed6d5)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.13613) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>DepthSplat: Connecting Gaussian Splatting and Depth
+>*nice work!!!*
+
+Authors: Haofei Xu, Songyou Peng, Fangjinhua Wang, Hermann Blum, Daniel Barath, Andreas Geiger, Marc Pollefeys
+<details span>
+<summary><b>Abstract</b></summary>
+Gaussian splatting and single/multi-view depth estimation are typically studied in isolation. In this paper, we present DepthSplat to connect Gaussian splatting and depth estimation and study their interactions. More specifically, we first contribute a robust multi-view depth model by leveraging pre-trained monocular depth features, leading to high-quality feed-forward 3D Gaussian splatting reconstructions. We also show that Gaussian splatting can serve as an unsupervised pre-training objective for learning powerful depth models from large-scale unlabelled datasets. We validate the synergy between Gaussian splatting and depth estimation through extensive ablation and cross-task transfer experiments. Our DepthSplat achieves state-of-the-art performance on ScanNet, RealEstate10K and DL3DV datasets in terms of both depth estimation and novel view synthesis, demonstrating the mutual benefits of connecting both tasks. 
+
+![image](https://github.com/user-attachments/assets/d41774bf-b30b-474e-967f-25b182a6d712)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.13862) | [⌨️ Code](https://github.com/cvg/depthsplat) | [🌐 Project Page](https://haofeixu.github.io/depthsplat/)
+
+
+#### <summary>Efficient Perspective-Correct 3D Gaussian Splatting Using Hybrid Transparency
+>*come back later*
+
+Authors: Florian Hahlbohm, Fabian Friederichs, Tim Weyrich, Linus Franke, Moritz Kappel, Susana Castillo, Marc Stamminger, Martin Eisemann, Marcus Magnor
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splats (3DGS) have proven a versatile rendering primitive, both for inverse rendering as well as real-time exploration of scenes. In these applications, coherence across camera frames and multiple views is crucial, be it for robust convergence of a scene reconstruction or for artifact-free fly-throughs. Recent work started mitigating artifacts that break multi-view coherence, including popping artifacts due to inconsistent transparency sorting and perspective-correct outlines of (2D) splats. At the same time, real-time requirements forced such implementations to accept compromises in how transparency of large assemblies of 3D Gaussians is resolved, in turn breaking coherence in other ways. In our work, we aim at achieving maximum coherence, by rendering fully perspective-correct 3D Gaussians while using a high-quality approximation of accurate blending, hybrid transparency, on a per-pixel level, in order to retain real-time frame rates. Our fast and perspectively accurate approach for evaluation of 3D Gaussians does not require matrix inversions, thereby ensuring numerical stability and eliminating the need for special handling of degenerate splats, and the hybrid transparency formulation for blending maintains similar quality as fully resolved per-pixel transparencies at a fraction of the rendering costs. We further show that each of these two components can be independently integrated into Gaussian splatting systems. In combination, they achieve up to 2× higher frame rates, 2× faster optimization, and equal or better image quality with fewer rendering artifacts compared to traditional 3DGS on common benchmarks.
+
+![image](https://github.com/user-attachments/assets/92289238-76f2-4966-b1c4-c8ef18e7423c)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.08129) | [⌨️ Code] | [🌐 Project Page](https://fhahlbohm.github.io/htgs/)
+
+
+
+
 
 
 <br>
