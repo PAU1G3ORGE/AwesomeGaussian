@@ -476,6 +476,22 @@ Recently, 3D Gaussian splatting has gained attention for its capability to gener
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.08941) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Normal-GS: 3D Gaussian Splatting with Normal-Involved Rendering
+>*models the diffuse component as the dot product between the normal vector and the Integrated Directional Illumination Vector and utilizes the Integrated Directional Encoding (IDE) [22] to capture view-dependent specular effects*
+
+Authors: Meng Wei, Qianyi Wu, Jianmin Zheng, Hamid Rezatofighi, Jianfei Cai
+<details span>
+<summary><b>Abstract</b></summary>
+Rendering and reconstruction are long-standing topics in computer vision and graphics. Achieving both high rendering quality and accurate geometry is a challenge. Recent advancements in 3D Gaussian Splatting (3DGS) have enabled high-fidelity novel view synthesis at real-time speeds. However, the noisy and discrete nature of 3D Gaussian primitives hinders accurate surface estimation. Previous attempts to regularize 3D Gaussian normals often degrade rendering quality due to the fundamental disconnect between normal vectors and the rendering pipeline in 3DGS-based methods. Therefore, we introduce Normal-GS, a novel approach that integrates normal vectors into the 3DGS rendering pipeline. The core idea is to model the interaction between normals and incident lighting using the physically-based rendering equation. Our approach re-parameterizes surface colors as the product of normals and a designed Integrated Directional Illumination Vector (IDIV). To optimize memory usage and simplify optimization, we employ an anchor-based 3DGS to implicitly encode locally-shared IDIVs. Additionally, Normal-GS leverages optimized normals and Integrated Directional Encoding (IDE) to accurately model specular effects, enhancing both rendering quality and surface normal precision. Extensive experiments demonstrate that Normal-GS achieves near state-of-the-art visual quality while obtaining accurate surface normals and preserving real-time rendering performance.
+
+![image](https://github.com/user-attachments/assets/fad22dc0-d525-4cdd-a389-0e717fd7630d)
+
+</details>
+
+[📃 arXiv:2410]（https://arxiv.org/pdf/2410.20593） | [⌨️ Code] | [🌐 Project Page]
+
+
+
 <br>
 <br>
 
@@ -1806,6 +1822,41 @@ Reconstructing 3D scenes from multiple viewpoints is a fundamental task in stere
 </details>
 
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.06245) | [⌨️ Code](https://github.com/Open3DVLab/HiSplat) | [🌐 Project Page](https://open3dvlab.github.io/HiSplat/)
+
+
+#### <summary>PF3plat: Pose-Free Feed-Forward 3D Gaussian Splatting
+>*Pose-Free: 2D-3D correspondence for pose solver*
+
+Authors: Sunghwan Hong, Jaewoo Jung, Heeseong Shin, Jisang Han, Jiaolong Yang, Chong Luo, Seungryong Kim
+<details span>
+<summary><b>Abstract</b></summary>
+We consider the problem of novel view synthesis from unposed images in a single feed-forward. Our framework capitalizes on fast speed, scalability, and high-quality 3D reconstruction and view synthesis capabilities of 3DGS, where we further extend it to offer a practical solution that relaxes common assumptions such as dense image views, accurate camera poses, and substantial image overlaps. We achieve this through identifying and addressing unique challenges arising from the use of pixel-aligned 3DGS: misaligned 3D Gaussians across different views induce noisy or sparse gradients that destabilize training and hinder convergence, especially when above assumptions are not met. To mitigate this, we employ pre-trained monocular depth estimation and visual correspondence models to achieve coarse alignments of 3D Gaussians. We then introduce lightweight, learnable modules to refine depth and pose estimates from the coarse alignments, improving the quality of 3D reconstruction and novel view synthesis. Furthermore, the refined estimates are leveraged to estimate geometry confidence scores, which assess the reliability of 3D Gaussian centers and condition the prediction of Gaussian parameters accordingly. Extensive evaluations on large-scale real-world datasets demonstrate that PF3plat sets a new state-of-the-art across all benchmarks, supported by comprehensive ablation studies validating our design choices.
+
+![image](https://github.com/user-attachments/assets/33ee1ebd-03e4-4f93-838e-db342c4705fa)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.22128) | [⌨️ Code](https://github.com/cvlab-kaist/PF3plat) | [🌐 Project Page](https://cvlab-kaist.github.io/PF3plat/)
+
+
+#### <summary>Epipolar-Free 3D Gaussian Splatting for Generalizable Novel View Synthesis
+>*without relying on epipolar priors*
+
+Authors: Zhiyuan Min, Yawei Luo, Jianwen Sun, Yi Yang
+<details span>
+<summary><b>Abstract</b></summary>
+Generalizable 3D Gaussian splitting (3DGS) can reconstruct new scenes from sparse-view observations in a feed-forward inference manner, eliminating the need for scene-specific retraining required in conventional 3DGS. However, existing methods rely heavily on epipolar priors, which can be unreliable in complex realworld scenes, particularly in non-overlapping and occluded regions. In this paper, we propose eFreeSplat, an efficient feed-forward 3DGS-based model for generalizable novel view synthesis that operates independently of epipolar line constraints. To enhance multiview feature extraction with 3D perception, we employ a selfsupervised Vision Transformer (ViT) with cross-view completion pre-training on large-scale datasets. Additionally, we introduce an Iterative Cross-view Gaussians Alignment method to ensure consistent depth scales across different views. Our eFreeSplat represents an innovative approach for generalizable novel view synthesis. Different from the existing pure geometry-free methods, eFreeSplat focuses more on achieving epipolar-free feature matching and encoding by providing 3D priors through cross-view pretraining. We evaluate eFreeSplat on wide-baseline novel view synthesis tasks using the RealEstate10K and ACID datasets. Extensive experiments demonstrate that eFreeSplat surpasses state-of-the-art baselines that rely on epipolar priors, achieving superior geometry reconstruction and novel view synthesis quality.
+
+![image](https://github.com/user-attachments/assets/3a2bf532-af06-473e-8dc1-fe96db872b5f)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.22817) | [⌨️ Code] | [🌐 Project Page](https://tatakai1.github.io/efreesplat/)
+
+
+
+
+
 
 
 <br>
@@ -4450,9 +4501,76 @@ Authors: Florian Hahlbohm, Fabian Friederichs, Tim Weyrich, Linus Franke, Moritz
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.08129) | [⌨️ Code] | [🌐 Project Page](https://fhahlbohm.github.io/htgs/)
 
 
+#### <summary>ODGS: 3D Scene Reconstruction from Omnidirectional Images with 3D Gaussian Splattings
+>*present a detailed geometric interpretation of the rasterization for omnidirectional images*
+
+Authors: Suyoung Lee, Jaeyoung Chung, Jaeyoo Huh, Kyoung Mu Lee
+<details span>
+<summary><b>Abstract</b></summary>
+Omnidirectional (or 360-degree) images are increasingly being used for 3D applications since they allow the rendering of an entire scene with a single image. Existing works based on neural radiance fields demonstrate successful 3D reconstruction quality on egocentric videos, yet they suffer from long training and rendering times. Recently, 3D Gaussian splatting has gained attention for its fast optimization and real-time rendering. However, directly using a perspective rasterizer to omnidirectional images results in severe distortion due to the different optical properties between two image domains. In this work, we present ODGS, a novel rasterization pipeline for omnidirectional images, with geometric interpretation. For each Gaussian, we define a tangent plane that touches the unit sphere and is perpendicular to the ray headed toward the Gaussian center. We then leverage a perspective camera rasterizer to project the Gaussian onto the corresponding tangent plane. The projected Gaussians are transformed and combined into the omnidirectional image, finalizing the omnidirectional rasterization process. This interpretation reveals the implicit assumptions within the proposed pipeline, which we verify through mathematical proofs. The entire rasterization process is parallelized using CUDA, achieving optimization and rendering speeds 100 times faster than NeRF-based methods. Our comprehensive experiments highlight the superiority of ODGS by delivering the best reconstruction and perceptual quality across various datasets. Additionally, results on roaming datasets demonstrate that ODGS restores fine details effectively, even when reconstructing large 3D scenes.
+
+![image](https://github.com/user-attachments/assets/658c9ea7-5758-4882-aaeb-72fc95425a2d)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.20686) | [⌨️ Code](https://github.com/esw0116/ODGS) | [🌐 Project Page](https://fhahlbohm.github.io/htgs/)
+
+#### <summary>Grid4D: 4D Decomposed Hash Encoding for High-fidelity Dynamic Gaussian Splatting
+>*avatar*
+
+Authors: Jiawei Xu, Zexin Fan, Jian Yang, Jin Xie
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, Gaussian splatting has received more and more attention in the field of static scene rendering. Due to the low computational overhead and inherent flexibility of explicit representations, plane-based explicit methods are popular ways to predict deformations for Gaussian-based dynamic scene rendering models. However, plane-based methods rely on the inappropriate low-rank assumption and excessively decompose the space-time 4D encoding, resulting in overmuch feature overlap and unsatisfactory rendering quality. To tackle these problems, we propose Grid4D, a dynamic scene rendering model based on Gaussian splatting and employing a novel explicit encoding method for the 4D input through the hash encoding. Different from plane-based explicit representations, we decompose the 4D encoding into one spatial and three temporal 3D hash encodings without the low-rank assumption. Additionally, we design a novel attention module that generates the attention scores in a directional range to aggregate the spatial and temporal features. The directional attention enables Grid4D to more accurately fit the diverse deformations across distinct scene components based on the spatial encoded features. Moreover, to mitigate the inherent lack of smoothness in explicit representation methods, we introduce a smooth regularization term that keeps our model from the chaos of deformation prediction. Our experiments demonstrate that Grid4D significantly outperforms the state-of-the-art models in visual quality and rendering speed.
+
+![image](https://github.com/user-attachments/assets/4854827b-7d3c-4ca8-a6bb-8a1563884491)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.20815) | [⌨️ Code](https://github.com/JiaweiXu8/Grid4D) | [🌐 Project Page](https://jiaweixu8.github.io/Grid4D-web/)
+
+#### <summary>FreeGaussian: Guidance-free Controllable 3D Gaussian Splats with Flow Derivatives
+>*Dynamic Gaussian Flow Decouple, use unsupervised clustering algorithm DBSCAN to group dynamic Gaussians into clusters*
+
+Authors: Qizhi Chen, Delin Qu, Yiwen Tang, Haoming Song, Yiting Zhang, Dong Wang, Bin Zhao, Xuelong Li
+<details span>
+<summary><b>Abstract</b></summary>
+Reconstructing controllable Gaussian splats from monocular video is a challenging task due to its inherently insufficient constraints. Widely adopted approaches supervise complex interactions with additional masks and control signal annotations, limiting their real-world applications. In this paper, we propose an annotation guidance-free method, dubbed FreeGaussian, that mathematically derives dynamic Gaussian motion from optical flow and camera motion using novel dynamic Gaussian constraints. By establishing a connection between 2D flows and 3D Gaussian dynamic control, our method enables self-supervised optimization and continuity of dynamic Gaussian motions from flow priors. Furthermore, we introduce a 3D spherical vector controlling scheme, which represents the state with a 3D Gaussian trajectory, thereby eliminating the need for complex 1D control signal calculations and simplifying controllable Gaussian modeling. Quantitative and qualitative evaluations on extensive experiments demonstrate the state-of-the-art visual performance and control capability of our method.
+
+![image](https://github.com/user-attachments/assets/2e372927-499c-4c33-b260-b52402aee524)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.22070) | [⌨️ Code](https://github.com/freegaussian/freegaussian.github.io) | [🌐 Project Page](https://freegaussian.github.io/)
 
 
+#### <summary>No Pose, No Problem: Surprisingly Simple 3D Gaussian Splats from Sparse Unposed Images
+>*solve the scale ambiguity issue of the reconstructed Gaussians by introducing a camera intrinsic token embedding*
 
+Authors: Botao Ye, Sifei Liu, Haofei Xu, Xueting Li, Marc Pollefeys, Ming-Hsuan Yang, Songyou Peng
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce NoPoSplat, a feed-forward model capable of reconstructing 3D scenes parameterized by 3D Gaussians from \textit{unposed} sparse multi-view images. Our model, trained exclusively with photometric loss, achieves real-time 3D Gaussian reconstruction during inference. To eliminate the need for accurate pose input during reconstruction, we anchor one input view's local camera coordinates as the canonical space and train the network to predict Gaussian primitives for all views within this space. This approach obviates the need to transform Gaussian primitives from local coordinates into a global coordinate system, thus avoiding errors associated with per-frame Gaussians and pose estimation. To resolve scale ambiguity, we design and compare various intrinsic embedding methods, ultimately opting to convert camera intrinsics into a token embedding and concatenate it with image tokens as input to the model, enabling accurate scene scale prediction. We utilize the reconstructed 3D Gaussians for novel view synthesis and pose estimation tasks and propose a two-stage coarse-to-fine pipeline for accurate pose estimation. Experimental results demonstrate that our pose-free approach can achieve superior novel view synthesis quality compared to pose-required methods, particularly in scenarios with limited input image overlap. For pose estimation, our method, trained without ground truth depth or explicit matching loss, significantly outperforms the state-of-the-art methods with substantial improvements. This work makes significant advances in pose-free generalizable 3D reconstruction and demonstrates its applicability to real-world scenarios.
+
+![image](https://github.com/user-attachments/assets/03dfaa5b-a814-4122-883e-f1aea429f7bd)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.24207) | [⌨️ Code](https://github.com/cvg/NoPoSplat) | [🌐 Project Page](https://noposplat.github.io/)
+
+#### <summary>Efficient Perspective-Correct 3D Gaussian Splatting Using Hybrid Transparency
+>*introduce hybrid transparency to 3D Gaussian splat rendering, ray-splat intersection method*
+
+Authors: Florian Hahlbohm, Fabian Friederichs, Tim Weyrich, Linus Franke, Moritz Kappel, Susana Castillo, Marc Stamminger, Martin Eisemann, Marcus Magnor
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splats (3DGS) have proven a versatile rendering primitive, both for inverse rendering as well as real-time exploration of scenes. In these applications, coherence across camera frames and multiple views is crucial, be it for robust convergence of a scene reconstruction or for artifact-free fly-throughs. Recent work started mitigating artifacts that break multi-view coherence, including popping artifacts due to inconsistent transparency sorting and perspective-correct outlines of (2D) splats. At the same time, real-time requirements forced such implementations to accept compromises in how transparency of large assemblies of 3D Gaussians is resolved, in turn breaking coherence in other ways. In our work, we aim at achieving maximum coherence, by rendering fully perspective-correct 3D Gaussians while using a high-quality approximation of accurate blending, hybrid transparency, on a per-pixel level, in order to retain real-time frame rates. Our fast and perspectively accurate approach for evaluation of 3D Gaussians does not require matrix inversions, thereby ensuring numerical stability and eliminating the need for special handling of degenerate splats, and the hybrid transparency formulation for blending maintains similar quality as fully resolved per-pixel transparencies at a fraction of the rendering costs. We further show that each of these two components can be independently integrated into Gaussian splatting systems. In combination, they achieve up to 2× higher frame rates, 2× faster optimization, and equal or better image quality with fewer rendering artifacts compared to traditional 3DGS on common benchmarks.
+
+![image](https://github.com/user-attachments/assets/ce4ce379-18f3-4f31-b116-0c7112c08abb)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.08129) | [⌨️ Code] | [🌐 Project Page](https://fhahlbohm.github.io/htgs/)
 
 <br>
 <br>
@@ -6780,7 +6898,18 @@ In generative modeling, tokenization simplifies complex data into compact, struc
 
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.04081) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>BEVLoc: Cross-View Localization and Matching via Birds-Eye-View Synthesis
 
+Authors: Christopher Klammer, Michael Kaess
+<details span>
+<summary><b>Abstract</b></summary>
+Ground to aerial matching is a crucial and challenging task in outdoor robotics, particularly when GPS is absent or unreliable. Structures like buildings or large dense forests create interference, requiring GNSS replacements for global positioning estimates. The true difficulty lies in reconciling the perspective difference between the ground and air images for acceptable localization. Taking inspiration from the autonomous driving community, we propose a novel framework for synthesizing a birds-eye-view (BEV) scene representation to match and localize against an aerial map in off-road environments. We leverage contrastive learning with domain specific hard negative mining to train a network to learn similar representations between the synthesized BEV and the aerial map. During inference, BEVLoc guides the identification of the most probable locations within the aerial map through a coarse-to-fine matching strategy. Our results demonstrate promising initial outcomes in extremely difficult forest environments with limited semantic diversity. We analyze our model's performance for coarse and fine matching, assessing both the raw matching capability of our model and its performance as a GNSS replacement. Our work delves into off-road map localization while establishing a foundational baseline for future developments in localization.
+
+![image](https://github.com/user-attachments/assets/7c07b58f-a8db-44de-bb80-1640db7063f0)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.06410) | [⌨️ Code](https://github.com/rpl-cmu/bevloc) | [🌐 Project Page]
 
 
 
