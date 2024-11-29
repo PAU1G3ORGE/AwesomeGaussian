@@ -488,7 +488,7 @@ Rendering and reconstruction are long-standing topics in computer vision and gra
 
 </details>
 
-[📃 arXiv:2410]（https://arxiv.org/pdf/2410.20593） | [⌨️ Code] | [🌐 Project Page]
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.20593) | [⌨️ Code] | [🌐 Project Page]
 
 
 
