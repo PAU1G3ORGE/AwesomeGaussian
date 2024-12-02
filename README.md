@@ -930,6 +930,20 @@ Accurate and affordable indoor 3D reconstruction is critical for effective robot
 
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.06613) | [⌨️ Code] | [🌐 Project Page](https://arxiv.org/pdf/2410.06613)
 
+#### <summary>PEP-GS: Perceptually-Enhanced Precise Structured 3D Gaussians for View-Adaptive Rendering
+> *KAN + Scaffold GS*
+
+Authors: Junxi Jin, Xiulai Li, Haiping Huang, Lianjun Liu, Yujie Sun
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advances in structured 3D Gaussians for view-adaptive rendering, particularly through methods like Scaffold-GS, have demonstrated promising results in neural scene representation. However, existing approaches still face challenges in perceptual consistency and precise view-dependent effects. We present PEP-GS, a novel framework that enhances structured 3D Gaussians through three key innovations: (1) a Local-Enhanced Multi-head Self-Attention (LEMSA) mechanism that replaces spherical harmonics for more accurate view-dependent color decoding, and (2) Kolmogorov-Arnold Networks (KAN) that optimize Gaussian opacity and covariance functions for enhanced interpretability and splatting precision. (3) a Neural Laplacian Pyramid Decomposition (NLPD) that improves perceptual similarity across views. Our comprehensive evaluation across multiple datasets indicates that, compared to the current state-of-the-art methods, these improvements are particularly evident in challenging scenarios such as view-dependent effects, specular reflections, fine-scale details and false geometry generation.
+
+![image](https://github.com/user-attachments/assets/f5e139a7-dae9-4480-9b48-376489b4ab2d)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.05731) | [⌨️ Code] | [🌐 Project Page](https://arxiv.org/pdf/2410.06613)
+
 
 
 <br>
@@ -4677,7 +4691,65 @@ We present 3DGS-CD, the first 3D Gaussian Splatting (3DGS)-based method for dete
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.03706) | [⌨️ Code](https://github.com/520xyxyzq/3DGS-CD) | [🌐 Project Page]
 
+#### <summary>GaussianCut: Interactive segmentation via graph cut for 3D Gaussian Splatting
+>*graph construction*
 
+Authors: Umangi Jain, Ashkan Mirzaei, Igor Gilitschenski
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce GaussianCut, a new method for interactive multiview segmentation of scenes represented as 3D Gaussians. Our approach allows for selecting the objects to be segmented by interacting with a single view. It accepts intuitive user input, such as point clicks, coarse scribbles, or text. Using 3D Gaussian Splatting (3DGS) as the underlying scene representation simplifies the extraction of objects of interest which are considered to be a subset of the scene's Gaussians. Our key idea is to represent the scene as a graph and use the graph-cut algorithm to minimize an energy function to effectively partition the Gaussians into foreground and background. To achieve this, we construct a graph based on scene Gaussians and devise a segmentation-aligned energy function on the graph to combine user inputs with scene properties. To obtain an initial coarse segmentation, we leverage 2D image/video segmentation models and further refine these coarse estimates using our graph construction. Our empirical evaluations show the adaptability of GaussianCut across a diverse set of scenes. GaussianCut achieves competitive performance with state-of-the-art approaches for 3D segmentation without requiring any additional segmentation-aware training.
+
+![image](https://github.com/user-attachments/assets/4c36f913-c582-4597-9410-5348b93157c2)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.07555) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Projecting Gaussian Ellipsoids While Avoiding Affine Projection Approximation
+>*eliminate the negative impact caused by the Jacobian of its affine approximation in 3DGS*
+
+Authors: Han Qi, Tao Cai, Xiyue Han
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, 3D Gaussian Splatting has dominated novel-view synthesis with its real-time rendering speed and state-of-the-art rendering quality. However, during the rendering process, the use of the Jacobian of the affine approximation of the projection transformation leads to inevitable errors, resulting in blurriness, artifacts and a lack of scene consistency in the final rendered images. To address this issue, we introduce an ellipsoid-based projection method to calculate the projection of Gaussian ellipsoid onto the image plane, which is the primitive of 3D Gaussian Splatting. As our proposed ellipsoid-based projection method cannot handle Gaussian ellipsoids with camera origins inside them or parts lying below z=0 plane in the camera space, we designed a pre-filtering strategy. Experiments over multiple widely adopted benchmark datasets show that our ellipsoid-based projection method can enhance the rendering quality of 3D Gaussian Splatting and its extensions.
+
+![image](https://github.com/user-attachments/assets/4fea9158-8a74-4334-a3ab-4ae6435047b2)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.07579) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Novel View Synthesis with Pixel-Space Diffusion Models
+>*diffusion*
+
+Authors: Noam Elata, Bahjat Kawar, Yaron Ostrovsky-Berman, Miriam Farber, Ron Sokolovsky
+<details span>
+<summary><b>Abstract</b></summary>
+Synthesizing a novel view from a single input image is a challenging task. Traditionally, this task was approached by estimating scene depth, warping, and inpainting, with machine learning models enabling parts of the pipeline. More recently, generative models are being increasingly employed in novel view synthesis (NVS), often encompassing the entire end-to-end system. In this work, we adapt a modern diffusion model architecture for end-to-end NVS in the pixel space, substantially outperforming previous state-of-the-art (SOTA) techniques. We explore different ways to encode geometric information into the network. Our experiments show that while these methods may enhance performance, their impact is minor compared to utilizing improved generative models. Moreover, we introduce a novel NVS training scheme that utilizes single-view datasets, capitalizing on their relative abundance compared to their multi-view counterparts. This leads to improved generalization capabilities to scenes with out-of-domain content.
+
+![image](https://github.com/user-attachments/assets/10032fcd-9ee6-49dc-825d-6d4f9e59ff3a)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.07765) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+#### <summary>BillBoard Splatting (BBSplat): Learnable Textured Primitives for Novel View Synthesis
+>*propose BBSplat with optimizable textured primitives*
+
+Authors: David Svitov, Pietro Morerio, Lourdes Agapito, Alessio Del Bue
+<details span>
+<summary><b>Abstract</b></summary>
+We present billboard Splatting (BBSplat) - a novel approach for 3D scene representation based on textured geometric primitives. BBSplat represents the scene as a set of optimizable textured planar primitives with learnable RGB textures and alpha-maps to control their shape. BBSplat primitives can be used in any Gaussian Splatting pipeline as drop-in replacements for Gaussians. Our method's qualitative and quantitative improvements over 3D and 2D Gaussians are most noticeable when fewer primitives are used, when BBSplat achieves over 1200 FPS. Our novel regularization term encourages textures to have a sparser structure, unlocking an efficient compression that leads to a reduction in storage space of the model. Our experiments show the efficiency of BBSplat on standard datasets of real indoor and outdoor scenes such as Tanks&Temples, DTU, and Mip-NeRF-360. We demonstrate improvements on PSNR, SSIM, and LPIPS metrics compared to the state-of-the-art, especially for the case when fewer primitives are used, which, on the other hand, leads to up to 2 times inference speed improvement for the same rendering quality.
+
+![image](https://github.com/user-attachments/assets/1aafba2a-806a-41ca-9af0-e4168cf74b16)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.08508) | [⌨️ Code] | [🌐 Project Page](https://david-svitov.github.io/BBSplat_project_page)
 
 
 <br>
