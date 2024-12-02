@@ -4572,6 +4572,23 @@ Authors: Florian Hahlbohm, Fabian Friederichs, Tim Weyrich, Linus Franke, Moritz
 
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.08129) | [⌨️ Code] | [🌐 Project Page](https://fhahlbohm.github.io/htgs/)
 
+
+#### <summary>AG-SLAM: Active Gaussian Splatting SLAM
+>*The best path and action along the path is selected with respect to both the information gain and localization accuracy. Frontier-basedexploration, view selection*
+
+Authors: Wen Jiang, Boshu Lei, Katrina Ashton, Kostas Daniilidis
+<details span>
+<summary><b>Abstract</b></summary>
+We present AG-SLAM, the first active SLAM system utilizing 3D Gaussian Splatting (3DGS) for online scene reconstruction. In recent years, radiance field scene representations, including 3DGS have been widely used in SLAM and exploration, but actively planning trajectories for robotic exploration is still unvisited. In particular, many exploration methods assume precise localization and thus do not mitigate the significant risk of constructing a trajectory, which is difficult for a SLAM system to operate on. This can cause camera tracking failure and lead to failures in real-world robotic applications. Our method leverages Fisher Information to balance the dual objectives of maximizing the information gain for the environment while minimizing the cost of localization errors. Experiments conducted on the Gibson and Habitat-Matterport 3D datasets demonstrate state-of-the-art results of the proposed method.
+
+![image](https://github.com/user-attachments/assets/8b84e35d-529e-4cb2-81a6-6db35124e069)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.17422) | [⌨️ Code] | [🌐 Project Page](https://fhahlbohm.github.io/htgs/)
+
+
+
 <br>
 <br>
 
