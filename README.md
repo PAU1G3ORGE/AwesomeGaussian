@@ -492,6 +492,22 @@ Rendering and reconstruction are long-standing topics in computer vision and gra
 
 
 
+#### <summary>GVKF: Gaussian Voxel Kernel Functions for Highly Efficient Surface Reconstruction in Open Scenes
+>*ray-tracing gaussian*
+
+Authors: Gaochao Song, Chong Cheng, Hao Wang
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper we present a novel method for efficient and effective 3D surface reconstruction in open scenes. Existing Neural Radiance Fields (NeRF) based works typically require extensive training and rendering time due to the adopted implicit representations. In contrast, 3D Gaussian splatting (3DGS) uses an explicit and discrete representation, hence the reconstructed surface is built by the huge number of Gaussian primitives, which leads to excessive memory consumption and rough surface details in sparse Gaussian areas. To address these issues, we propose Gaussian Voxel Kernel Functions (GVKF), which establish a continuous scene representation based on discrete 3DGS through kernel regression. The GVKF integrates fast 3DGS rasterization and highly effective scene implicit representations, achieving high-fidelity open scene surface reconstruction. Experiments on challenging scene datasets demonstrate the efficiency and effectiveness of our proposed GVKF, featuring with high reconstruction quality, real-time rendering speed, significant savings in storage and training memory consumption.
+
+![image](https://github.com/user-attachments/assets/89784b46-f5bd-4310-a568-a3883431a0a7)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2411.01853) | [⌨️ Code](https://github.com/3DAgentWorld/GVKF) | [🌐 Project Page](https://3dagentworld.github.io/gvkf/)
+
+
+
 <br>
 <br>
 
@@ -673,6 +689,51 @@ Recently, the Neural Radiance Field (NeRF) advancement has facilitated few-shot 
 </details>
 
 [📃 arXiv:2409](https://arxiv.org/pdf/2409.14316) | [⌨️ Code](https://github.com/zezeaaa/MVPGS) | [🌐 Project Page](https://zezeaaa.github.io/projects/MVPGS/)
+
+
+#### <summary>Self-Ensembling Gaussian Splatting for Few-Shot Novel View Synthesis
+>*self-ensembling, data augmentation*
+
+Authors: Chen Zhao, Xuan Wang, Tong Zhang, Saqib Javed, Mathieu Salzmann
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has demonstrated remarkable effectiveness for novel view synthesis (NVS). However, the 3DGS model tends to overfit when trained with sparse posed views, limiting its generalization ability to novel views. In this paper, we alleviate the overfitting problem, presenting a Self-Ensembling Gaussian Splatting (SE-GS) approach. Our method encompasses a $\mathbf{\Sigma}$-model and a $\mathbf{\Delta}$-model. The $\mathbf{\Sigma}$-model serves as an ensemble of 3DGS models that generates novel-view images during inference. We achieve the self-ensembling by introducing an uncertainty-aware perturbation strategy at the training state. We complement the $\mathbf{\Sigma}$-model with the $\mathbf{\Delta}$-model, which is dynamically perturbed based on the uncertainties of novel-view renderings across different training steps. The perturbation yields diverse temporal samples in the Gaussian parameter space without additional training costs. The geometry of the $\mathbf{\Sigma}$-model is regularized by penalizing discrepancies between the $\mathbf{\Sigma}$-model and these temporal samples. Therefore, our SE-GS conducts an effective and efficient regularization across a large number of 3DGS models, resulting in a robust ensemble, the $\mathbf{\Sigma}$-model. Our experimental results on the LLFF, Mip-NeRF360, DTU, and MVImgNet datasets show that our approach improves NVS quality with few-shot training views, outperforming existing state-of-the-art methods.
+
+![image](https://github.com/user-attachments/assets/8c1727ee-e575-46c8-9d95-5b4c9b5c860f)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.00144) | [⌨️ Code](https://github.com/sailor-z/SE-GS) | [🌐 Project Page](https://sailor-z.github.io/projects/SEGS.html)
+
+
+#### <summary>FewViewGS: Gaussian Splatting with Few View Matching and Multi-stage Training
+>*multi-view Consistency*
+
+Authors: Ruihong Yin, Vladimir Yugay, Yue Li, Sezer Karaoglu, Theo Gevers
+<details span>
+<summary><b>Abstract</b></summary>
+The field of novel view synthesis from images has seen rapid advancements with the introduction of Neural Radiance Fields (NeRF) and more recently with 3D Gaussian Splatting. Gaussian Splatting became widely adopted due to its efficiency and ability to render novel views accurately. While Gaussian Splatting performs well when a sufficient amount of training images are available, its unstructured explicit representation tends to overfit in scenarios with sparse input images, resulting in poor rendering performance. To address this, we present a 3D Gaussian-based novel view synthesis method using sparse input images that can accurately render the scene from the viewpoints not covered by the training images. We propose a multi-stage training scheme with matching-based consistency constraints imposed on the novel views without relying on pre-trained depth estimation or diffusion models. This is achieved by using the matches of the available training images to supervise the generation of the novel views sampled between the training frames with color, geometry, and semantic losses. In addition, we introduce a locality preserving regularization for 3D Gaussians which removes rendering artifacts by preserving the local color structure of the scene. Evaluation on synthetic and real-world datasets demonstrates competitive or superior performance of our method in few-shot novel view synthesis compared to existing state-of-the-art methods.
+
+![image](https://github.com/user-attachments/assets/d70eeb59-54ce-4293-836d-e7836e6968b9)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.02229) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>Structure Consistent Gaussian Splatting with Matching Prior for Few-shot Novel View Synthesis
+>*the model tends to increase the size to cover the pixels rather than correct the position, challenges*
+
+Authors: Rui Peng, Wangze Xu, Luyang Tang, Liwei Liao, Jianbo Jiao, Ronggang Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Despite the substantial progress of novel view synthesis, existing methods, either based on the Neural Radiance Fields (NeRF) or more recently 3D Gaussian Splatting (3DGS), suffer significant degradation when the input becomes sparse. Numerous efforts have been introduced to alleviate this problem, but they still struggle to synthesize satisfactory results efficiently, especially in the large scene. In this paper, we propose SCGaussian, a Structure Consistent Gaussian Splatting method using matching priors to learn 3D consistent scene structure. Considering the high interdependence of Gaussian attributes, we optimize the scene structure in two folds: rendering geometry and, more importantly, the position of Gaussian primitives, which is hard to be directly constrained in the vanilla 3DGS due to the non-structure property. To achieve this, we present a hybrid Gaussian representation. Besides the ordinary non-structure Gaussian primitives, our model also consists of ray-based Gaussian primitives that are bound to matching rays and whose optimization of their positions is restricted along the ray. Thus, we can utilize the matching correspondence to directly enforce the position of these Gaussian primitives to converge to the surface points where rays intersect. Extensive experiments on forward-facing, surrounding, and complex large scenes show the effectiveness of our approach with state-of-the-art performance and high efficiency.
+
+![image](https://github.com/user-attachments/assets/2d13d045-af95-41f5-b20d-48b27f840ae5)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.03637) | [⌨️ Code](https://github.com/prstrive/SCGaussian/security) | [🌐 Project Page]
 
 
 <br>
@@ -1279,6 +1340,21 @@ We present a novel-view rendering algorithm, Mode-GS, for ground-robot trajector
 
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.04646) | [⌨️ Code] | [🌐 Project Page]
 
+
+
+#### <summary>CityGaussianV2: Efficient and Geometrically Accurate Reconstruction for Large-Scale Scenes
+> *These distant views are therefore frequently observed, causing the gradients of degenerated points to accumulate rapidly, leading to out-of-memory errors*
+
+Authors: Yang Liu, Chuanchen Luo, Zhongkai Mao, Junran Peng, Zhaoxiang Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, 3D Gaussian Splatting (3DGS) has revolutionized radiance field reconstruction, manifesting efficient and high-fidelity novel view synthesis. However, accurately representing surfaces, especially in large and complex scenarios, remains a significant challenge due to the unstructured nature of 3DGS. In this paper, we present CityGaussianV2, a novel approach for large-scale scene reconstruction that addresses critical challenges related to geometric accuracy and efficiency. Building on the favorable generalization capabilities of 2D Gaussian Splatting (2DGS), we address its convergence and scalability issues. Specifically, we implement a decomposed-gradient-based densification and depth regression technique to eliminate blurry artifacts and accelerate convergence. To scale up, we introduce an elongation filter that mitigates Gaussian count explosion caused by 2DGS degeneration. Furthermore, we optimize the CityGaussian pipeline for parallel training, achieving up to 10$\times$ compression, at least 25% savings in training time, and a 50% decrease in memory usage. We also established standard geometry benchmarks under large-scale scenes. Experimental results demonstrate that our method strikes a promising balance between visual quality, geometric accuracy, as well as storage and training costs.
+ 
+![image](https://github.com/user-attachments/assets/8056b4cd-c241-4e5f-9228-568bc4703e97)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.00771) | [⌨️ Code](https://github.com/DekuLiuTesla/CityGaussian) | [🌐 Project Page](https://dekuliutesla.github.io/CityGaussianV2/)
 
 
 <br>
@@ -4574,7 +4650,7 @@ Authors: Florian Hahlbohm, Fabian Friederichs, Tim Weyrich, Linus Franke, Moritz
 
 
 #### <summary>AG-SLAM: Active Gaussian Splatting SLAM
->*The best path and action along the path is selected with respect to both the information gain and localization accuracy. Frontier-basedexploration, view selection*
+>*The best path and action along the path is selected with respect to both the information gain and localization accuracy. Frontier-based exploration, view selection*
 
 Authors: Wen Jiang, Boshu Lei, Katrina Ashton, Kostas Daniilidis
 <details span>
@@ -4586,6 +4662,21 @@ We present AG-SLAM, the first active SLAM system utilizing 3D Gaussian Splatting
 </details>
 
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.17422) | [⌨️ Code] | [🌐 Project Page](https://fhahlbohm.github.io/htgs/)
+
+
+#### <summary>3DGS-CD: 3D Gaussian Splatting-based Change Detection for Physical Object Rearrangement
+
+Authors: Ziqi Lu, Jianbo Ye, John Leonard
+<details span>
+<summary><b>Abstract</b></summary>
+We present 3DGS-CD, the first 3D Gaussian Splatting (3DGS)-based method for detecting physical object rearrangements in 3D scenes. Our approach estimates 3D object-level changes by comparing two sets of unaligned images taken at different times. Leveraging 3DGS's novel view rendering and EfficientSAM's zero-shot segmentation capabilities, we detect 2D object-level changes, which are then associated and fused across views to estimate 3D changes. Our method can detect changes in cluttered environments using sparse post-change images within as little as 18s, using as few as a single new image. It does not rely on depth input, user instructions, object classes, or object models -- An object is recognized simply if it has been re-arranged. Our approach is evaluated on both public and self-collected real-world datasets, achieving up to 14% higher accuracy and three orders of magnitude faster performance compared to the state-of-the-art radiance-field-based change detection method. This significant performance boost enables a broad range of downstream applications, where we highlight three key use cases: object reconstruction, robot workspace reset, and 3DGS model update.
+
+![image](https://github.com/user-attachments/assets/a39fe000-7fbb-4b58-a87d-8aa28780776f)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.03706) | [⌨️ Code](https://github.com/520xyxyzq/3DGS-CD) | [🌐 Project Page]
+
 
 
 
@@ -5128,7 +5219,16 @@ While neural radiance fields (NeRF) have shown promise in novel view synthesis, 
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.04402) | [⌨️ Code] | [🌐 Project Page](https://ustc3dv.github.io/DeformRF/)
 
 
+#### <summary>From Transparent to Opaque: Rethinking Neural Implicit Surfaces with α-NeuS
+Authors: Haoran Zhang, Junkai Deng, Xuhui Chen, Fei Hou, Wencheng Wang, Hong Qin, Chen Qian, Ying He
+<details span>
+<summary><b>Abstract</b></summary>
+Traditional 3D shape reconstruction techniques from multi-view images, such as structure from motion and multi-view stereo, primarily focus on opaque surfaces. Similarly, recent advances in neural radiance fields and its variants also primarily address opaque objects, encountering difficulties with the complex lighting effects caused by transparent materials. This paper introduces α-NeuS, a new method for simultaneously reconstructing thin transparent objects and opaque objects based on neural implicit surfaces (NeuS). Our method leverages the observation that transparent surfaces induce local extreme values in the learned distance fields during neural volumetric rendering, contrasting with opaque surfaces that align with zero level sets. Traditional iso-surfacing algorithms such as marching cubes, which rely on fixed iso-values, are ill-suited for this data. We address this by taking the absolute value of the distance field and developing an optimization method that extracts level sets corresponding to both non-negative local minima and zero iso-values. We prove that the reconstructed surfaces are unbiased for both transparent and opaque objects. To validate our approach, we construct a benchmark that includes both real-world and synthetic scenes, demonstrating its practical utility and effectiveness.
 
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2411.05362) | [⌨️ Code](https://github.com/728388808/alpha-NeuS?tab=readme-ov-file) | [🌐 Project Page](https://lcs.ios.ac.cn/~houf/pages/alphaneus/index.html)
 
 
 
@@ -6929,6 +7029,31 @@ Ground to aerial matching is a crucial and challenging task in outdoor robotics,
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.06410) | [⌨️ Code](https://github.com/rpl-cmu/bevloc) | [🌐 Project Page]
 
 
+#### <summary>MonoPlane: Exploiting Monocular Geometric Cues for Generalizable 3D Plane Reconstruction
+
+Authors: Wang Zhao, Jiachen Liu, Sheng Zhang, Yishu Li, Sili Chen, Sharon X Huang, Yong-Jin Liu, Hengkai Guo
+<details span>
+<summary><b>Abstract</b></summary>
+This paper presents a generalizable 3D plane detection and reconstruction framework named MonoPlane. Unlike previous robust estimator-based works (which require multiple images or RGB-D input) and learning-based works (which suffer from domain shift), MonoPlane combines the best of two worlds and establishes a plane reconstruction pipeline based on monocular geometric cues, resulting in accurate, robust and scalable 3D plane detection and reconstruction in the wild. Specifically, we first leverage large-scale pre-trained neural networks to obtain the depth and surface normals from a single image. These monocular geometric cues are then incorporated into a proximity-guided RANSAC framework to sequentially fit each plane instance. We exploit effective 3D point proximity and model such proximity via a graph within RANSAC to guide the plane fitting from noisy monocular depths, followed by image-level multi-plane joint optimization to improve the consistency among all plane instances. We further design a simple but effective pipeline to extend this single-view solution to sparse-view 3D plane reconstruction. Extensive experiments on a list of datasets demonstrate our superior zero-shot generalizability over baselines, achieving state-of-the-art plane reconstruction performance in a transferring setting.
+
+![image](https://github.com/user-attachments/assets/03b7d241-e218-4773-9e78-b942b9c5a430)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.01226) | [⌨️ Code](https://github.com/thuzhaowang/MonoPlane) | [🌐 Project Page]
+
+#### <summary>Adaptive Stereo Depth Estimation with Multi-Spectral Images Across All Lighting Conditions
+
+Authors: Zihan Qin, Jialei Xu, Wenbo Zhao, Junjun Jiang, Xianming Liu
+<details span>
+<summary><b>Abstract</b></summary>
+Depth estimation under adverse conditions remains a significant challenge. Recently, multi-spectral depth estimation, which integrates both visible light and thermal images, has shown promise in addressing this issue. However, existing algorithms struggle with precise pixel-level feature matching, limiting their ability to fully exploit geometric constraints across different spectra. To address this, we propose a novel framework incorporating stereo depth estimation to enforce accurate geometric constraints. In particular, we treat the visible light and thermal images as a stereo pair and utilize a Cross-modal Feature Matching (CFM) Module to construct a cost volume for pixel-level matching. To mitigate the effects of poor lighting on stereo matching, we introduce Degradation Masking, which leverages robust monocular thermal depth estimation in degraded regions. Our method achieves state-of-the-art (SOTA) performance on the Multi-Spectral Stereo (MS2) dataset, with qualitative evaluations demonstrating high-quality depth maps under varying lighting conditions.
+
+![image](https://github.com/user-attachments/assets/d1e9ddc2-684d-4777-8e07-17c2530992b9)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.03638) | [⌨️ Code] | [🌐 Project Page]
 
 
 #### <summary>
