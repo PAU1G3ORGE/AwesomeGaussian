@@ -928,7 +928,7 @@ Accurate and affordable indoor 3D reconstruction is critical for effective robot
 
 </details>
 
-[📃 arXiv:2410](https://arxiv.org/pdf/2410.06613) | [⌨️ Code] | [🌐 Project Page](https://arxiv.org/pdf/2410.06613)
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.06613) | [⌨️ Code] | [🌐 Project Page]
 
 #### <summary>PEP-GS: Perceptually-Enhanced Precise Structured 3D Gaussians for View-Adaptive Rendering
 > *KAN + Scaffold GS*
@@ -942,7 +942,24 @@ Recent advances in structured 3D Gaussians for view-adaptive rendering, particul
 
 </details>
 
-[📃 arXiv:2411](https://arxiv.org/pdf/2411.05731) | [⌨️ Code] | [🌐 Project Page](https://arxiv.org/pdf/2410.06613)
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.05731) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>GaussianPretrain: A Simple Unified 3D Gaussian Representation for Visual Pre-training in Autonomous Driving
+> * leveraging 3D Gaussian anchors as volumetric LiDAR points, combined with Ray-based guidance and MAE method*
+
+Authors: Shaoqing Xu, Fang Li, Shengyin Jiang, Ziying Song, Li Liu, Zhi-xin Yang
+<details span>
+<summary><b>Abstract</b></summary>
+Self-supervised learning has made substantial strides in image processing, while visual pre-training for autonomous driving is still in its infancy. Existing methods often focus on learning geometric scene information while neglecting texture or treating both aspects separately, hindering comprehensive scene understanding. In this context, we are excited to introduce GaussianPretrain, a novel pre-training paradigm that achieves a holistic understanding of the scene by uniformly integrating geometric and texture representations. Conceptualizing 3D Gaussian anchors as volumetric LiDAR points, our method learns a deepened understanding of scenes to enhance pre-training performance with detailed spatial structure and texture, achieving that 40.6% faster than NeRF-based method UniPAD with 70% GPU memory only. We demonstrate the effectiveness of GaussianPretrain across multiple 3D perception tasks, showing significant performance improvements, such as a 7.05% increase in NDS for 3D object detection, boosts mAP by 1.9% in HD map construction and 0.8% improvement on Occupancy prediction. These significant gains highlight GaussianPretrain's theoretical innovation and strong practical potential, promoting visual pre-training development for autonomous driving.
+
+![image](https://github.com/user-attachments/assets/00e6bd28-a1e4-4592-a460-42947dfda1c1)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.12452) | [⌨️ Code](https://github.com/Public-BOTs/GaussianPretrain) | [🌐 Project Page]
+
+
 
 
 
@@ -1369,6 +1386,25 @@ Recently, 3D Gaussian Splatting (3DGS) has revolutionized radiance field reconst
 </details>
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.00771) | [⌨️ Code](https://github.com/DekuLiuTesla/CityGaussian) | [🌐 Project Page](https://dekuliutesla.github.io/CityGaussianV2/)
+
+
+#### <summary>DeSiRe-GS: 4D Street Gaussians for Static-Dynamic Decomposition and Surface Reconstruction for Urban Driving Scenes
+> *distill the extracted 2D motion priors in local frames into global gaussian space to model the dynamic regions* 
+
+Authors: Chensheng Peng, Chengwei Zhang, Yixiao Wang, Chenfeng Xu, Yichen Xie, Wenzhao Zheng, Kurt Keutzer, Masayoshi Tomizuka, Wei Zhan
+<details span>
+<summary><b>Abstract</b></summary>
+We present DeSiRe-GS, a self-supervised gaussian splatting representation, enabling effective static-dynamic decomposition and high-fidelity surface reconstruction in complex driving scenarios. Our approach employs a two-stage optimization pipeline of dynamic street Gaussians. In the first stage, we extract 2D motion masks based on the observation that 3D Gaussian Splatting inherently can reconstruct only the static regions in dynamic environments. These extracted 2D motion priors are then mapped into the Gaussian space in a differentiable manner, leveraging an efficient formulation of dynamic Gaussians in the second stage. Combined with the introduced geometric regularizations, our method are able to address the over-fitting issues caused by data sparsity in autonomous driving, reconstructing physically plausible Gaussians that align with object surfaces rather than floating in air. Furthermore, we introduce temporal cross-view consistency to ensure coherence across time and viewpoints, resulting in high-quality surface reconstruction. Comprehensive experiments demonstrate the efficiency and effectiveness of DeSiRe-GS, surpassing prior self-supervised arts and achieving accuracy comparable to methods relying on external 3D bounding box annotations.
+ 
+![image](https://github.com/user-attachments/assets/5a7242ae-cea1-44a1-b8c6-cac74757f98d)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.11921) | [⌨️ Code](https://github.com/chengweialan/DeSiRe-GS) | [🌐 Project Page]
+
+
+
+
 
 
 <br>
@@ -1944,6 +1980,19 @@ Generalizable 3D Gaussian splitting (3DGS) can reconstruct new scenes from spars
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.22817) | [⌨️ Code] | [🌐 Project Page](https://tatakai1.github.io/efreesplat/)
 
 
+#### <summary>GPS-Gaussian+: Generalizable Pixel-wise 3D Gaussian Splatting for Real-Time Human-Scene Rendering from Sparse Views
+>*CDS-MVSNet + MVSGaussian?*
+
+Authors: Boyao Zhou, Shunyuan Zheng, Hanzhang Tu, Ruizhi Shao, Boning Liu, Shengping Zhang, Liqiang Nie, Yebin Liu
+<details span>
+<summary><b>Abstract</b></summary>
+Differentiable rendering techniques have recently shown promising results for free-viewpoint video synthesis of characters. However, such methods, either Gaussian Splatting or neural implicit rendering, typically necessitate per-subject optimization which does not meet the requirement of real-time rendering in an interactive application. We propose a generalizable Gaussian Splatting approach for high-resolution image rendering under a sparse-view camera setting. To this end, we introduce Gaussian parameter maps defined on the source views and directly regress Gaussian properties for instant novel view synthesis without any fine-tuning or optimization. We train our Gaussian parameter regression module on human-only data or human-scene data, jointly with a depth estimation module to lift 2D parameter maps to 3D space. The proposed framework is fully differentiable with both depth and rendering supervision or with only rendering supervision. We further introduce a regularization term and an epipolar attention mechanism to preserve geometry consistency between two source views, especially when neglecting depth supervision. Experiments on several datasets demonstrate that our method outperforms state-of-the-art methods while achieving an exceeding rendering speed.
+
+![image](https://github.com/user-attachments/assets/fe07f653-c449-4007-960d-9ad2188b54b0)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.11363) | [⌨️ Code] | [🌐 Project Page](https://yaourtb.github.io/GPS-Gaussian+)
 
 
 
@@ -2023,7 +2072,19 @@ Recently, 3D Gaussian Splatting, as a novel 3D representation, has garnered atte
 
 [📃 arXiv:2405](https://arxiv.org/pdf/2405.00676) | [⌨️ Code](https://github.com/RunyiYang/SUNDAE) | [🌐 Project Page](https://runyiyang.github.io/projects/SUNDAE/)
 
+#### <summary>Beyond Gaussians: Fast and High-Fidelity 3D Splatting with Linear Kernels
+>*evaluated various kernels, including Gaussian, Laplacian, Cosine, Quadratic, and Linear, by fitting them to complex patterns such as stripes, checkerboards, and circles with varying frequencies (Figure 5)*
 
+Authors: Haodong Chen, Runnan Chen, Qiang Qu, Zhaoqing Wang, Tongliang Liu, Xiaoming Chen, Yuk Ying Chung
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advancements in 3D Gaussian Splatting (3DGS) have substantially improved novel view synthesis, enabling high-quality reconstruction and real-time rendering. However, blurring artifacts, such as floating primitives and over-reconstruction, remain challenging. Current methods address these issues by refining scene structure, enhancing geometric representations, addressing blur in training images, improving rendering consistency, and optimizing density control, yet the role of kernel design remains underexplored. We identify the soft boundaries of Gaussian ellipsoids as one of the causes of these artifacts, limiting detail capture in high-frequency regions. To bridge this gap, we introduce 3D Linear Splatting (3DLS), which replaces Gaussian kernels with linear kernels to achieve sharper and more precise results, particularly in high-frequency regions. Through evaluations on three datasets, 3DLS demonstrates state-of-the-art fidelity and accuracy, along with a 30% FPS improvement over baseline 3DGS. The implementation will be made publicly available upon acceptance.
+
+![image](https://github.com/user-attachments/assets/9d84128a-2766-43aa-9d9a-c7dc5a319899)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.12440) | [⌨️ Code] | [🌐 Project Page]
 
 
 
@@ -4750,6 +4811,84 @@ We present billboard Splatting (BBSplat) - a novel approach for 3D scene represe
 </details>
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.08508) | [⌨️ Code] | [🌐 Project Page](https://david-svitov.github.io/BBSplat_project_page)
+
+
+#### <summary>Which Viewpoint Shows it Best? Language for Weakly Supervising View Selection in Multi-view Videos
+>*the more accurately an individual view can predict a view agnostic text summary, the more informative it is*
+
+Authors: Sagnik Majumder, Tushar Nagarajan, Ziad Al-Halah, Reina Pradhan, Kristen Grauman
+<details span>
+<summary><b>Abstract</b></summary>
+Given a multi-view video, which viewpoint is most informative for a human observer? Existing methods rely on heuristics or expensive ``best-view" supervision to answer this question, limiting their applicability. We propose a weakly supervised approach that leverages language accompanying an instructional multi-view video as a means to recover its most informative viewpoint(s). Our key hypothesis is that the more accurately an individual view can predict a view-agnostic text summary, the more informative it is. To put this into action, we propose a framework that uses the relative accuracy of view-dependent caption predictions as a proxy for best view pseudo-labels. Then, those pseudo-labels are used to train a view selector, together with an auxiliary camera pose predictor that enhances view-sensitivity. During inference, our model takes as input only a multi-view video -- no language or camera poses -- and returns the best viewpoint to watch at each timestep. On two challenging datasets comprised of diverse multi-camera setups and how-to activities, our model consistently outperforms state-of-the-art baselines, both with quantitative metrics and human evaluation.
+
+![image](https://github.com/user-attachments/assets/80669f8c-a3bf-429a-99dd-0cfdcb22b3e6)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.08753) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>4D Gaussian Splatting in the Wild with Uncertainty-Aware Regularization
+>*propose an uncertainty quantification technique based on contribution to training image rendering and introduce adaptive regularization techniques based on the uncertainty map*
+
+Authors: Mijeong Kim, Jongwoo Lim, Bohyung Han
+<details span>
+<summary><b>Abstract</b></summary>
+Novel view synthesis of dynamic scenes is becoming important in various applications, including augmented and virtual reality. We propose a novel 4D Gaussian Splatting (4DGS) algorithm for dynamic scenes from casually recorded monocular videos. To overcome the overfitting problem of existing work for these real-world videos, we introduce an uncertainty-aware regularization that identifies uncertain regions with few observations and selectively imposes additional priors based on diffusion models and depth smoothness on such regions. This approach improves both the performance of novel view synthesis and the quality of training image reconstruction. We also identify the initialization problem of 4DGS in fast-moving dynamic regions, where the Structure from Motion (SfM) algorithm fails to provide reliable 3D landmarks. To initialize Gaussian primitives in such regions, we present a dynamic region densification method using the estimated depth maps and scene flow. Our experiments show that the proposed method improves the performance of 4DGS reconstruction from a video captured by a handheld monocular camera and also exhibits promising results in few-shot static scene reconstruction.
+
+![image](https://github.com/user-attachments/assets/c23981d6-69ef-4b6d-8f6b-f846d3373f6c)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.08879) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>VeGaS: Video Gaussian Splatting
+>*introduce Folded-Gaussians, a novel family of functions that model nonlinear structures*
+
+Authors: Weronika Smolak-Dyżewska, Dawid Malarz, Kornel Howil, Jan Kaczmarczyk, Marcin Mazur, Przemysław Spurek
+<details span>
+<summary><b>Abstract</b></summary>
+Implicit Neural Representations (INRs) employ neural networks to approximate discrete data as continuous functions. In the context of video data, such models can be utilized to transform the coordinates of pixel locations along with frame occurrence times (or indices) into RGB color values. Although INRs facilitate effective compression, they are unsuitable for editing purposes. One potential solution is to use a 3D Gaussian Splatting (3DGS) based model, such as the Video Gaussian Representation (VGR), which is capable of encoding video as a multitude of 3D Gaussians and is applicable for numerous video processing operations, including editing. Nevertheless, in this case, the capacity for modification is constrained to a limited set of basic transformations. To address this issue, we introduce the Video Gaussian Splatting (VeGaS) model, which enables realistic modifications of video data. To construct VeGaS, we propose a novel family of Folded-Gaussian distributions designed to capture nonlinear dynamics in a video stream and model consecutive frames by 2D Gaussians obtained as respective conditional distributions. Our experiments demonstrate that VeGaS outperforms state-of-the-art solutions in frame reconstruction tasks and allows realistic modifications of video data.
+
+![image](https://github.com/user-attachments/assets/b30915ea-06fc-4671-9fe9-ef9eb8cd07cf)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.11024) | [⌨️ Code](https://github.com/gmum/VeGaS) | [🌐 Project Page]
+
+
+#### <summary>SPARS3R: Semantic Prior Alignment and Regularization for Sparse 3D Reconstruction
+> *extracts the semantically relevant 2D regions around the outliers to move local regions of prior dense point cloud from MASt3R*
+
+Authors: Yutao Tang, Yuxiang Guo, Deming Li, Cheng Peng
+<details span>
+<summary><b>Abstract</b></summary>
+Recent efforts in Gaussian-Splat-based Novel View Synthesis can achieve photorealistic rendering; however, such capability is limited in sparse-view scenarios due to sparse initialization and over-fitting floaters. Recent progress in depth estimation and alignment can provide dense point cloud with few views; however, the resulting pose accuracy is suboptimal. In this work, we present SPARS3R, which combines the advantages of accurate pose estimation from Structure-from-Motion and dense point cloud from depth estimation. To this end, SPARS3R first performs a Global Fusion Alignment process that maps a prior dense point cloud to a sparse point cloud from Structure-from-Motion based on triangulated correspondences. RANSAC is applied during this process to distinguish inliers and outliers. SPARS3R then performs a second, Semantic Outlier Alignment step, which extracts semantically coherent regions around the outliers and performs local alignment in these regions. Along with several improvements in the evaluation process, we demonstrate that SPARS3R can achieve photorealistic rendering with sparse images and significantly outperforms existing approaches.
+
+![image](https://github.com/user-attachments/assets/2daf084f-46ec-44ba-bf88-fad92f6693fb)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.12592) | [⌨️ Code](https://github.com/snldmt/SPARS3R) | [🌐 Project Page]
+
+
+#### <summary>Mini-Splatting2: Building 360 Scenes within Minutes via Aggressive Gaussian Densification
+> *increases the number of critical Gaussians to speed up optimization convergence*
+
+Authors: Guangchi Fang, Bing Wang
+<details span>
+<summary><b>Abstract</b></summary>
+In this study, we explore the essential challenge of fast scene optimization for Gaussian Splatting. Through a thorough analysis of the geometry modeling process, we reveal that dense point clouds can be effectively reconstructed early in optimization through Gaussian representations. This insight leads to our approach of aggressive Gaussian densification, which provides a more efficient alternative to conventional progressive densification methods. By significantly increasing the number of critical Gaussians, we enhance the model capacity to capture dense scene geometry at the early stage of optimization. This strategy is seamlessly integrated into the Mini-Splatting densification and simplification framework, enabling rapid convergence without compromising quality. Additionally, we introduce visibility culling within Gaussian Splatting, leveraging per-view Gaussian importance as precomputed visibility to accelerate the optimization process. Our Mini-Splatting2 achieves a balanced trade-off among optimization time, the number of Gaussians, and rendering quality, establishing a strong baseline for future Gaussian-Splatting-based works. Our work sets the stage for more efficient, high-quality 3D scene modeling in real-world applications, and the code will be made available no matter acceptance.
+
+![image](https://github.com/user-attachments/assets/35ce9163-6835-49fc-bfc9-b6a46ebf6ca3)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.12788) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+
 
 
 <br>
