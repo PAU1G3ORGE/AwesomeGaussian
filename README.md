@@ -5442,7 +5442,20 @@ Traditional 3D shape reconstruction techniques from multi-view images, such as s
 [📃 arXiv:2410](https://arxiv.org/pdf/2411.05362) | [⌨️ Code](https://github.com/728388808/alpha-NeuS?tab=readme-ov-file) | [🌐 Project Page](https://lcs.ios.ac.cn/~houf/pages/alphaneus/index.html)
 
 
+#### <summary>Robust SG-NeRF: Robust Scene Graph Aided Neural Surface Reconstruction
+> *a plug-and-play camera pose confidence estimation method that effectively identifies inliers and outliers*
 
+Authors: Yi Gu, Dongjun Ye, Zhaorui Wang, Jiaxu Wang, Jiahang Cao, Renjing Xu
+<details span>
+<summary><b>Abstract</b></summary>
+Neural surface reconstruction relies heavily on accurate camera poses as input. Despite utilizing advanced pose estimators like COLMAP or ARKit, camera poses can still be noisy. Existing pose-NeRF joint optimization methods handle poses with small noise (inliers) effectively but struggle with large noise (outliers), such as mirrored poses. In this work, we focus on mitigating the impact of outlier poses. Our method integrates an inlier-outlier confidence estimation scheme, leveraging scene graph information gathered during the data preparation phase. Unlike previous works directly using rendering metrics as the reference, we employ a detached color network that omits the viewing direction as input to minimize the impact caused by shape-radiance ambiguities. This enhanced confidence updating strategy effectively differentiates between inlier and outlier poses, allowing us to sample more rays from inlier poses to construct more reliable radiance fields. Additionally, we introduce a re-projection loss based on the current Signed Distance Function (SDF) and pose estimations, strengthening the constraints between matching image pairs. For outlier poses, we adopt a Monte Carlo re-localization method to find better solutions. We also devise a scene graph updating strategy to provide more accurate information throughout the training process. We validate our approach on the SG-NeRF and DTU datasets. Experimental results on various datasets demonstrate that our methods can consistently improve the reconstruction qualities and pose accuracies.
+
+![image](https://github.com/user-attachments/assets/56b3de3e-a11b-4ccd-ab70-2844e0d38e30)
+
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.13620) | [⌨️ Code] | [🌐 Project Page](https://rsg-nerf.github.io/RSG-NeRF/)
 
 
 <br>
