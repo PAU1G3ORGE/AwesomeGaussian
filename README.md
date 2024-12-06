@@ -507,6 +507,21 @@ In this paper we present a novel method for efficient and effective 3D surface r
 [📃 arXiv:2410](https://arxiv.org/pdf/2411.01853) | [⌨️ Code](https://github.com/3DAgentWorld/GVKF) | [🌐 Project Page](https://3dagentworld.github.io/gvkf/)
 
 
+#### <summary>SplatSDF: Boosting Neural Implicit SDF via Gaussian Splatting Fusion
+
+Authors: Runfa Blark Li, Keito Suzuki, Bang Du, Ki Myung Brian Le, Nikolay Atanasov, Truong Nguyen
+<details span>
+<summary><b>Abstract</b></summary>
+A signed distance function (SDF) is a useful representation for continuous-space geometry and many related operations, including rendering, collision checking, and mesh generation. Hence, reconstructing SDF from image observations accurately and efficiently is a fundamental problem. Recently, neural implicit SDF (SDF-NeRF) techniques, trained using volumetric rendering, have gained a lot of attention. Compared to earlier truncated SDF (TSDF) fusion algorithms that rely on depth maps and voxelize continuous space, SDF-NeRF enables continuous-space SDF reconstruction with better geometric and photometric accuracy. However, the accuracy and convergence speed of scene-level SDF reconstruction require further improvements for many applications. With the advent of 3D Gaussian Splatting (3DGS) as an explicit representation with excellent rendering quality and speed, several works have focused on improving SDF-NeRF by introducing consistency losses on depth and surface normals between 3DGS and SDF-NeRF. However, loss-level connections alone lead to incremental improvements. We propose a novel neural implicit SDF called "SplatSDF" to fuse 3DGSandSDF-NeRF at an architecture level with significant boosts to geometric and photometric accuracy and convergence speed. Our SplatSDF relies on 3DGS as input only during training, and keeps the same complexity and efficiency as the original SDF-NeRF during inference. Our method outperforms state-of-the-art SDF-NeRF models on geometric and photometric evaluation by the time of submission.
+
+![image](https://github.com/user-attachments/assets/1dcdb5d2-c031-4f1b-8ecb-461381627ff6)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.15468) | [⌨️ Code] | [🌐 Project Page]
+
+
+
 
 <br>
 <br>
@@ -1403,6 +1418,34 @@ We present DeSiRe-GS, a self-supervised gaussian splatting representation, enabl
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.11921) | [⌨️ Code](https://github.com/chengweialan/DeSiRe-GS) | [🌐 Project Page]
 
 
+#### <summary>UniGaussian: Driving Scene Reconstruction from Multiple Camera Models via Unified Gaussian Representations
+> *fisheye cameras* 
+
+Authors: Yuan Ren, Guile Wu, Runhao Li, Zheyuan Yang, Yibo Liu, Xingxin Chen, Tongtong Cao, Bingbing Liu
+<details span>
+<summary><b>Abstract</b></summary>
+Urban scene reconstruction is crucial for real-world autonomous driving simulators. Although existing methods have achieved photorealistic reconstruction, they mostly focus on pinhole cameras and neglect fisheye cameras. In fact, how to effectively simulate fisheye cameras in driving scene remains an unsolved problem. In this work, we propose UniGaussian, a novel approach that learns a unified 3D Gaussian representation from multiple camera models for urban scene reconstruction in autonomous driving. Our contributions are two-fold. First, we propose a new differentiable rendering method that distorts 3D Gaussians using a series of affine transformations tailored to fisheye camera models. This addresses the compatibility issue of 3D Gaussian splatting with fisheye cameras, which is hindered by light ray distortion caused by lenses or mirrors. Besides, our method maintains real-time rendering while ensuring differentiability. Second, built on the differentiable rendering method, we design a new framework that learns a unified Gaussian representation from multiple camera models. By applying affine transformations to adapt different camera models and regularizing the shared Gaussians with supervision from different modalities, our framework learns a unified 3D Gaussian representation with input data from multiple sources and achieves holistic driving scene understanding. As a result, our approach models multiple sensors (pinhole and fisheye cameras) and modalities (depth, semantic, normal and LiDAR point clouds). Our experiments show that our method achieves superior rendering quality and fast rendering speed for driving scene simulation.
+ 
+![image](https://github.com/user-attachments/assets/cafdfcd9-740e-4b1d-92d3-56ccfe8033dc)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.15355) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>SplatAD: Real-Time Lidar and Camera Rendering with 3D Gaussian Splatting for Autonomous Driving
+> *the first 3DGS method capable of rendering both camera and lidar from a unified representation* 
+
+Authors: Georg Hess, Carl Lindström, Maryam Fatemi, Christoffer Petersson, Lennart Svensson
+<details span>
+<summary><b>Abstract</b></summary>
+Ensuring the safety of autonomous robots, such as self-driving vehicles, requires extensive testing across diverse driving scenarios. Simulation is a key ingredient for conducting such testing in a cost-effective and scalable way. Neural rendering methods have gained popularity, as they can build simulation environments from collected logs in a data-driven manner. However, existing neural radiance field (NeRF) methods for sensor-realistic rendering of camera and lidar data suffer from low rendering speeds, limiting their applicability for large-scale testing. While 3D Gaussian Splatting (3DGS) enables real-time rendering, current methods are limited to camera data and are unable to render lidar data essential for autonomous driving. To address these limitations, we propose SplatAD, the first 3DGS-based method for realistic, real-time rendering of dynamic scenes for both camera and lidar data. SplatAD accurately models key sensor-specific phenomena such as rolling shutter effects, lidar intensity, and lidar ray dropouts, using purpose-built algorithms to optimize rendering efficiency. Evaluation across three autonomous driving datasets demonstrates that SplatAD achieves state-of-the-art rendering quality with up to +2 PSNR for NVS and +3 PSNR for reconstruction while increasing rendering speed over NeRF-based methods by an order of magnitude.
+ 
+![image](https://github.com/user-attachments/assets/95cb4c0d-15a6-49dc-9d42-abffba544fc6)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.16816) | [⌨️ Code] | [🌐 Project Page](https://research.zenseact.com/publications/splatad/)
 
 
 
@@ -1995,6 +2038,50 @@ Differentiable rendering techniques have recently shown promising results for fr
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.11363) | [⌨️ Code] | [🌐 Project Page](https://yaourtb.github.io/GPS-Gaussian+)
 
 
+#### <summary>SplatFlow: Multi-View Rectified Flow Model for 3D Gaussian Splatting Synthesis
+>*Text condition*
+
+Authors: Hyojun Go, Byeongjun Park, Jiho Jang, Jin-Young Kim, Soonwoo Kwon, Changick Kim
+<details span>
+<summary><b>Abstract</b></summary>
+Text-based generation and editing of 3D scenes hold significant potential for streamlining content creation through intuitive user interactions. While recent advances leverage 3D Gaussian Splatting (3DGS) for high-fidelity and real-time rendering, existing methods are often specialized and task-focused, lacking a unified framework for both generation and editing. In this paper, we introduce SplatFlow, a comprehensive framework that addresses this gap by enabling direct 3DGS generation and editing. SplatFlow comprises two main components: a multi-view rectified flow (RF) model and a Gaussian Splatting Decoder (GSDecoder). The multi-view RF model operates in latent space, generating multi-view images, depths, and camera poses simultaneously, conditioned on text prompts, thus addressing challenges like diverse scene scales and complex camera trajectories in real-world settings. Then, the GSDecoder efficiently translates these latent outputs into 3DGS representations through a feed-forward 3DGS method. Leveraging training-free inversion and inpainting techniques, SplatFlow enables seamless 3DGS editing and supports a broad range of 3D tasks-including object editing, novel view synthesis, and camera pose estimation-within a unified framework without requiring additional complex pipelines. We validate SplatFlow's capabilities on the MVImgNet and DL3DV-7K datasets, demonstrating its versatility and effectiveness in various 3D generation, editing, and inpainting-based tasks.
+
+![image](https://github.com/user-attachments/assets/572f9ec6-66e7-4b5d-a3d3-3fd55fba688c)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.16443) | [⌨️ Code](https://github.com/gohyojun15/SplatFlow/) | [🌐 Project Page](https://gohyojun15.github.io/SplatFlow/)
+
+
+#### <summary>NovelGS: Consistent Novel-view Denoising via Large Gaussian Reconstruction Model
+>*denoise novel view images via the large Gaussian reconstruction model where the unseen parts of the objects could be reconstructed consistently*
+
+Authors: Jinpeng Liu, Jiale Xu, Weihao Cheng, Yiming Gao, Xintao Wang, Ying Shan, Yansong Tang
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce NovelGS, a diffusion model for Gaussian Splatting (GS) given sparse-view images. Recent works leverage feed-forward networks to generate pixel-aligned Gaussians, which could be fast rendered. Unfortunately, the method was unable to produce satisfactory results for areas not covered by the input images due to the formulation of these methods. In contrast, we leverage the novel view denoising through a transformer-based network to generate 3D Gaussians. Specifically, by incorporating both conditional views and noisy target views, the network predicts pixel-aligned Gaussians for each view. During training, the rendered target and some additional views of the Gaussians are supervised. During inference, the target views are iteratively rendered and denoised from pure noise. Our approach demonstrates state-of-the-art performance in addressing the multi-view image reconstruction challenge. Due to generative modeling of unseen regions, NovelGS effectively reconstructs 3D objects with consistent and sharp textures. Experimental results on publicly available datasets indicate that NovelGS substantially surpasses existing image-to-3D frameworks, both qualitatively and quantitatively. We also demonstrate the potential of NovelGS in generative tasks, such as text-to-3D and image-to-3D, by integrating it with existing multiview diffusion models.
+
+![image](https://github.com/user-attachments/assets/5f32a15a-bd6f-48d5-952b-827cd5bbf4b7)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.16779) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>PreF3R: Pose-Free Feed-Forward 3D Gaussian Splatting from Variable-length Image Sequence
+>*pose free: DUSt3R*
+
+Authors: Zequn Chen, Jiezhi Yang, Heng Yang
+<details span>
+<summary><b>Abstract</b></summary>
+We present PreF3R, Pose-Free Feed-forward 3D Reconstruction from an image sequence of variable length. Unlike previous approaches, PreF3R removes the need for camera calibration and reconstructs the 3D Gaussian field within a canonical coordinate frame directly from a sequence of unposed images, enabling efficient novel-view rendering. We leverage DUSt3R's ability for pair-wise 3D structure reconstruction, and extend it to sequential multi-view input via a spatial memory network, eliminating the need for optimization-based global alignment. Additionally, PreF3R incorporates a dense Gaussian parameter prediction head, which enables subsequent novel-view synthesis with differentiable rasterization. This allows supervising our model with the combination of photometric loss and pointmap regression loss, enhancing both photorealism and structural accuracy. Given a sequence of ordered images, PreF3R incrementally reconstructs the 3D Gaussian field at 20 FPS, therefore enabling real-time novel-view rendering. Empirical experiments demonstrate that PreF3R is an effective solution for the challenging task of pose-free feed-forward novel-view synthesis, while also exhibiting robust generalization to unseen scenes.
+
+![image](https://github.com/user-attachments/assets/1470605d-1d0f-43b2-8133-adadd58c1f5e)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.16877) | [⌨️ Code](https://github.com/ComputationalRobotics/PreF3R) | [🌐 Project Page](https://computationalrobotics.seas.harvard.edu/PreF3R/)
+
 
 
 
@@ -2239,6 +2326,21 @@ Implicit neural representation and explicit 3D Gaussian Splatting (3D-GS) for no
 
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.08107) | [⌨ Code](https://github.com/wu-cvgl/IncEventGS) | [🌐 Project Page]
 
+
+#### <summary>Event-boosted Deformable 3D Gaussians for Fast Dynamic Scene Reconstruction
+>*event cameras + dynamic scene reconstruction*
+
+Authors: Wenhao Xu, Wenming Weng, Yueyi Zhang, Ruikang Xu, Zhiwei Xiong
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3D-GS) enables real-time rendering but struggles with fast motion due to low temporal resolution of RGB cameras. To address this, we introduce the first approach combining event cameras, which capture high-temporal-resolution, continuous motion data, with deformable 3D-GS for fast dynamic scene reconstruction. We observe that threshold modeling for events plays a crucial role in achieving high-quality reconstruction. Therefore, we propose a GS-Threshold Joint Modeling (GTJM) strategy, creating a mutually reinforcing process that greatly improves both 3D reconstruction and threshold modeling. Moreover, we introduce a Dynamic-Static Decomposition (DSD) strategy that first identifies dynamic areas by exploiting the inability of static Gaussians to represent motions, then applies a buffer-based soft decomposition to separate dynamic and static areas. This strategy accelerates rendering by avoiding unnecessary deformation in static areas, and focuses on dynamic areas to enhance fidelity. Our approach achieves high-fidelity dynamic reconstruction at 156 FPS with a 400×400 resolution on an RTX 3090 GPU.
+
+
+![image](https://github.com/user-attachments/assets/5ffb77a9-2b38-4961-bbb1-7baf8905c303)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.16180) | [⌨ Code] | [🌐 Project Page]
 
 
 
@@ -4885,6 +4987,34 @@ In this study, we explore the essential challenge of fast scene optimization for
 </details>
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.12788) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>NexusSplats: Efficient 3D Gaussian Splatting in the Wild
+> *Uncertainty Splatting*
+
+Authors: Yuzhou Tang, Dejun Xu, Yongjie Hou, Zhenzhong Wang, Min Jiang
+<details span>
+<summary><b>Abstract</b></summary>
+While 3D Gaussian Splatting (3DGS) has recently demonstrated remarkable rendering quality and efficiency in 3D scene reconstruction, it struggles with varying lighting conditions and incidental occlusions in real-world scenarios. To accommodate varying lighting conditions, existing 3DGS extensions apply color mapping to the massive Gaussian primitives with individually optimized appearance embeddings. To handle occlusions, they predict pixel-wise uncertainties via 2D image features for occlusion capture. Nevertheless, such massive color mapping and pixel-wise uncertainty prediction strategies suffer from not only additional computational costs but also coarse-grained lighting and occlusion handling. In this work, we propose a nexus kernel-driven approach, termed NexusSplats, for efficient and finer 3D scene reconstruction under complex lighting and occlusion conditions. In particular, NexusSplats leverages a novel light decoupling strategy where appearance embeddings are optimized based on nexus kernels instead of massive Gaussian primitives, thus accelerating reconstruction speeds while ensuring local color consistency for finer textures. Additionally, a Gaussian-wise uncertainty mechanism is developed, aligning 3D structures with 2D image features for fine-grained occlusion handling. Experimental results demonstrate that NexusSplats achieves state-of-the-art rendering quality while reducing reconstruction time by up to 70.4% compared to the current best in quality.
+
+![image](https://github.com/user-attachments/assets/704e7e6d-433f-4184-b8f5-423927ac0633)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.14514) | [⌨️ Code](https://github.com/juliantang324/NexusSplats) | [🌐 Project Page](https://nexus-splats.github.io/)
+
+#### <summary>ZeroGS: Training 3D Gaussian Splatting from Unposed Images
+> *SCR for pose estimation*
+
+Authors: Yu Chen, Rolandos Alexandros Potamias, Evangelos Ververas, Jifei Song, Jiankang Deng, Gim Hee Lee
+<details span>
+<summary><b>Abstract</b></summary>
+Neural radiance fields (NeRF) and 3D Gaussian Splatting (3DGS) are popular techniques to reconstruct and render photo-realistic images. However, the pre-requisite of running Structure-from-Motion (SfM) to get camera poses limits their completeness. While previous methods can reconstruct from a few unposed images, they are not applicable when images are unordered or densely captured. In this work, we propose ZeroGS to train 3DGS from hundreds of unposed and unordered images. Our method leverages a pretrained foundation model as the neural scene representation. Since the accuracy of the predicted pointmaps does not suffice for accurate image registration and high-fidelity image rendering, we propose to mitigate the issue by initializing and finetuning the pretrained model from a seed image. Images are then progressively registered and added to the training buffer, which is further used to train the model. We also propose to refine the camera poses and pointmaps by minimizing a point-to-camera ray consistency loss across multiple views. Experiments on the LLFF dataset, the MipNeRF360 dataset, and the Tanks-and-Temples dataset show that our method recovers more accurate camera poses than state-of-the-art pose-free NeRF/3DGS methods, and even renders higher quality images than 3DGS with COLMAP poses.
+
+![image](https://github.com/user-attachments/assets/49951fbc-2520-4dbe-9d47-3dd8eb8b48c1)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.15779) | [⌨️ Code](https://github.com/aibluefisher/ZeroGS) | [🌐 Project Page](https://aibluefisher.github.io/ZeroGS/)
 
 
 
