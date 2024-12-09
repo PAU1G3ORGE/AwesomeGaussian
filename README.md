@@ -522,6 +522,48 @@ A signed distance function (SDF) is a useful representation for continuous-space
 
 
 
+#### <summary>G2SDF: Surface Reconstruction from Explicit Gaussians with Implicit SDFs
+>*similar with 3DGSR*
+
+Authors: Kunyi Li, Michael Niemeyer, Zeyu Chen, Nassir Navab, Federico Tombari
+<details span>
+<summary><b>Abstract</b></summary>
+State-of-the-art novel view synthesis methods such as 3D Gaussian Splatting (3DGS) achieve remarkable visual quality. While 3DGS and its variants can be rendered efficiently using rasterization, many tasks require access to the underlying 3D surface, which remains challenging to extract due to the sparse and explicit nature of this representation. In this paper, we introduce G2SDF, a novel approach that addresses this limitation by integrating a neural implicit Signed Distance Field (SDF) into the Gaussian Splatting framework. Our method links the opacity values of Gaussians with their distances to the surface, ensuring a closer alignment of Gaussians with the scene surface. To extend this approach to unbounded scenes at varying scales, we propose a normalization function that maps any range to a fixed interval. To further enhance reconstruction quality, we leverage an off-the-shelf depth estimator as pseudo ground truth during Gaussian Splatting optimization. By establishing a differentiable connection between the explicit Gaussians and the implicit SDF, our approach enables high-quality surface reconstruction and rendering. Experimental results on several real-world datasets demonstrate that G2SDF achieves superior reconstruction quality than prior works while maintaining the efficiency of 3DGS.
+
+![image](https://github.com/user-attachments/assets/af98d3c4-c654-486c-b0ac-9bf8fe9bc2f5)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.16898) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>Geometry Field Splatting with Gaussian Surfels
+>*Gaussian are sorted based on their intersection intervals*
+
+Authors: Kaiwen Jiang, Venkataram Sivaram, Cheng Peng, Ravi Ramamoorthi
+<details span>
+<summary><b>Abstract</b></summary>
+Geometric reconstruction of opaque surfaces from images is a longstanding challenge in computer vision, with renewed interest from volumetric view synthesis algorithms using radiance fields. We leverage the geometry field proposed in recent work for stochastic opaque surfaces, which can then be converted to volume densities. We adapt Gaussian kernels or surfels to splat the geometry field rather than the volume, enabling precise reconstruction of opaque solids. Our first contribution is to derive an efficient and almost exact differentiable rendering algorithm for geometry fields parameterized by Gaussian surfels, while removing current approximations involving Taylor series and no self-attenuation. Next, we address the discontinuous loss landscape when surfels cluster near geometry, showing how to guarantee that the rendered color is a continuous function of the colors of the kernels, irrespective of ordering. Finally, we use latent representations with spherical harmonics encoded reflection vectors rather than spherical harmonics encoded colors to better address specular surfaces. We demonstrate significant improvement in the quality of reconstructed 3D surfaces on widely-used datasets.
+
+![image](https://github.com/user-attachments/assets/7e1b99a7-df9a-4db2-8435-41915737831b)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.17067) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>GLS: Geometry-aware 3D Language Gaussian Splatting
+>*Gaussian are sorted based on their intersection intervals*
+
+Authors: Jiaxiong Qiu, Liu Liu, Zhizhong Su, Tianwei Lin
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, 3D Gaussian Splatting (3DGS) has achieved significant performance on indoor surface reconstruction and open-vocabulary segmentation. This paper presents GLS, a unified framework of surface reconstruction and open-vocabulary segmentation based on 3DGS. GLS extends two fields by exploring the correlation between them. For indoor surface reconstruction, we introduce surface normal prior as a geometric cue to guide the rendered normal, and use the normal error to optimize the rendered depth. For open-vocabulary segmentation, we employ 2D CLIP features to guide instance features and utilize DEVA masks to enhance their view consistency. Extensive experiments demonstrate the effectiveness of jointly optimizing surface reconstruction and open-vocabulary segmentation, where GLS surpasses state-of-the-art approaches of each task on MuSHRoom, ScanNet++, and LERF-OVS datasets.
+
+![image](https://github.com/user-attachments/assets/6c941995-0669-45dc-bba4-50546ed6bbc6)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.18066) | [⌨️ Code](https://github.com/JiaxiongQ/GLS) | [🌐 Project Page]
+
 
 <br>
 <br>
@@ -973,6 +1015,20 @@ Self-supervised learning has made substantial strides in image processing, while
 </details>
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.12452) | [⌨️ Code](https://github.com/Public-BOTs/GaussianPretrain) | [🌐 Project Page]
+
+#### <summary>4D Scaffold Gaussian Splatting for Memory Efficient Dynamic Scene Reconstruction
+> *dynamic*
+
+Authors: Woong Oh Cho, In Cho, Seoha Kim, Jeongmin Bae, Youngjung Uh, Seon Joo Kim
+<details span>
+<summary><b>Abstract</b></summary>
+Existing 4D Gaussian methods for dynamic scene reconstruction offer high visual fidelity and fast rendering. However, these methods suffer from excessive memory and storage demands, which limits their practical deployment. This paper proposes a 4D anchor-based framework that retains visual quality and rendering speed of 4D Gaussians while significantly reducing storage costs. Our method extends 3D scaffolding to 4D space, and leverages sparse 4D grid-aligned anchors with compressed feature vectors. Each anchor models a set of neural 4D Gaussians, each of which represent a local spatiotemporal region. In addition, we introduce a temporal coverage-aware anchor growing strategy to effectively assign additional anchors to under-reconstructed dynamic regions. Our method adjusts the accumulated gradients based on Gaussians' temporal coverage, improving reconstruction quality in dynamic regions. To reduce the number of anchors, we further present enhanced formulations of neural 4D Gaussians. These include the neural velocity, and the temporal opacity derived from a generalized Gaussian distribution. Experimental results demonstrate that our method achieves state-of-the-art visual quality and 97.8% storage reduction over 4DGS.
+
+![image](https://github.com/user-attachments/assets/80934590-3fc3-4fcd-b0ab-2c279c8069a5)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.17044) | [⌨️ Code] | [🌐 Project Page]
 
 
 
@@ -1761,6 +1817,22 @@ Simultaneous Localization and Mapping (SLAM) is pivotal in robotics, with photor
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.00486) | [⌨️ Code](https://github.com/dapengfeng/cartgs) | [🌐 Project Page](https://dapengfeng.github.io/cartgs)
 
 
+
+#### <summary>DROID-Splat: Combining end-to-end SLAM with 3D Gaussian Splatting
+
+Authors: Christian Homeyer, Leon Begiristain, Christoph Schnörr
+<details span>
+<summary><b>Abstract</b></summary>
+Recent progress in scene synthesis makes standalone SLAM systems purely based on optimizing hyperprimitives with a Rendering objective possible. However, the tracking performance still lacks behind traditional and end-to-end SLAM systems. An optimal trade-off between robustness, speed and accuracy has not yet been reached, especially for monocular video. In this paper, we introduce a SLAM system based on an end-to-end Tracker and extend it with a Renderer based on recent 3D Gaussian Splatting techniques. Our framework \textbf{DroidSplat} achieves both SotA tracking and rendering results on common SLAM benchmarks. We implemented multiple building blocks of modern SLAM systems to run in parallel, allowing for fast inference on common consumer GPU's. Recent progress in monocular depth prediction and camera calibration allows our system to achieve strong results even on in-the-wild data without known camera intrinsics.
+ 
+![image](https://github.com/user-attachments/assets/fccbb285-fc00-4850-b050-ce5b3484c14c)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.17660) | [⌨️ Code](https://github.com/ChenHoy/DROID-Splat) | [🌐 Project Page]
+
+
+
 <br>
 <br>
 
@@ -2082,6 +2154,34 @@ We present PreF3R, Pose-Free Feed-forward 3D Reconstruction from an image sequen
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.16877) | [⌨️ Code](https://github.com/ComputationalRobotics/PreF3R) | [🌐 Project Page](https://computationalrobotics.seas.harvard.edu/PreF3R/)
 
+#### <summary>SelfSplat: Pose-Free and 3D Prior-Free Generalizable 3D Gaussian Splatting
+>*Matching-aware Pose Module*
+
+Authors: Gyeongjin Kang, Jisang Yoo, Jihyeon Park, Seungtae Nam, Hyeonsoo Im, Sangheon Shin, Sangpil Kim, Eunbyung Park
+<details span>
+<summary><b>Abstract</b></summary>
+We propose SelfSplat, a novel 3D Gaussian Splatting model designed to perform pose-free and 3D prior-free generalizable 3D reconstruction from unposed multi-view images. These settings are inherently ill-posed due to the lack of ground-truth data, learned geometric information, and the need to achieve accurate 3D reconstruction without finetuning, making it difficult for conventional methods to achieve high-quality results. Our model addresses these challenges by effectively integrating explicit 3D representations with self-supervised depth and pose estimation techniques, resulting in reciprocal improvements in both pose accuracy and 3D reconstruction quality. Furthermore, we incorporate a matching-aware pose estimation network and a depth refinement module to enhance geometry consistency across views, ensuring more accurate and stable 3D reconstructions. To present the performance of our method, we evaluated it on large-scale real-world datasets, including RealEstate10K, ACID, and DL3DV. SelfSplat achieves superior results over previous state-of-the-art methods in both appearance and geometry quality, also demonstrates strong cross-dataset generalization capabilities. Extensive ablation studies and analysis also validate the effectiveness of our proposed methods.
+
+![image](https://github.com/user-attachments/assets/52e34fc0-e29a-411d-8b78-3e769edcc2e7)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.17190) | [⌨️ Code](https://github.com/Gynjn/selfsplat) | [🌐 Project Page](https://gynjn.github.io/selfsplat/)
+
+
+#### <summary>Distractor-free Generalizable 3D Gaussian Splatting
+>*Distractor-free*
+
+Authors: Yanqi Bao, Jing Liao, Jing Huo, Yang Gao
+<details span>
+<summary><b>Abstract</b></summary>
+We present DGGS, a novel framework addressing the previously unexplored challenge of Distractor-free Generalizable 3D Gaussian Splatting (3DGS). It accomplishes two key objectives: fortifying generalizable 3DGS against distractor-laden data during both training and inference phases, while successfully extending cross-scene adaptation capabilities to conventional distractor-free approaches. To achieve these objectives, DGGS introduces a scene-agnostic reference-based mask prediction and refinement methodology during training phase, coupled with a training view selection strategy, effectively improving distractor prediction accuracy and training stability. Moreover, to address distractor-induced voids and artifacts during inference stage, we propose a two-stage inference framework for better reference selection based on the predicted distractor masks, complemented by a distractor pruning module to eliminate residual distractor effects. Extensive generalization experiments demonstrate DGGS's advantages under distractor-laden conditions. Additionally, experimental results show that our scene-agnostic mask inference achieves accuracy comparable to scene-specific trained methods.
+
+![image](https://github.com/user-attachments/assets/26275bfb-461f-42a8-ae92-16a97c577647)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.17605) | [⌨️ Code](https://github.com/bbbbby-99/DGGS) | [🌐 Project Page]
 
 
 
@@ -5020,7 +5120,6 @@ Neural radiance fields (NeRF) and 3D Gaussian Splatting (3DGS) are popular techn
 
 
 
-
 <br>
 <br>
 
@@ -7408,6 +7507,36 @@ Depth estimation under adverse conditions remains a significant challenge. Recen
 </details>
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.03638) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>g3D-LF: Generalizable 3D-Language Feature Fields for Embodied Tasks
+
+Authors: Zihan Wang, Gim Hee Lee
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce Generalizable 3D-Language Feature Fields (g3D-LF), a 3D representation model pre-trained on large-scale 3D-language dataset for embodied tasks. Our g3D-LF processes posed RGB-D images from agents to encode feature fields for: 1) Novel view representation predictions from any position in the 3D scene; 2) Generations of BEV maps centered on the agent; 3) Querying targets using multi-granularity language within the above-mentioned representations. Our representation can be generalized to unseen environments, enabling real-time construction and dynamic updates. By volume rendering latent features along sampled rays and integrating semantic and spatial relationships through multiscale encoders, our g3D-LF produces representations at different scales and perspectives, aligned with multi-granularity language, via multi-level contrastive learning. Furthermore, we prepare a large-scale 3D-language dataset to align the representations of the feature fields with language. Extensive experiments on Vision-and-Language Navigation under both Panorama and Monocular settings, Zero-shot Object Navigation, and Situated Question Answering tasks highlight the significant advantages and effectiveness of our g3D-LF for embodied tasks.
+
+![image](https://github.com/user-attachments/assets/7b22fb79-fab4-488d-b4e6-1232ad2c2857)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.17030) | [⌨️ Code](https://github.com/MrZihan/g3D-LF) | [🌐 Project Page]
+
+
+#### <summary>DepthCues: Evaluating Monocular Depth Perception in Large Vision Models
+>*humans' perceive depth: elevation, light and shadow, occlusion, perspective, size, and texture gradient*
+
+Authors: Duolikun Danier, Mehmet Aygün, Changjian Li, Hakan Bilen, Oisin Mac Aodha
+<details span>
+<summary><b>Abstract</b></summary>
+Large-scale pre-trained vision models are becoming increasingly prevalent, offering expressive and generalizable visual representations that benefit various downstream tasks. Recent studies on the emergent properties of these models have revealed their high-level geometric understanding, in particular in the context of depth perception. However, it remains unclear how depth perception arises in these models without explicit depth supervision provided during pre-training. To investigate this, we examine whether the monocular depth cues, similar to those used by the human visual system, emerge in these models. We introduce a new benchmark, DepthCues, designed to evaluate depth cue understanding, and present findings across 20 diverse and representative pre-trained vision models. Our analysis shows that human-like depth cues emerge in more recent larger models. We also explore enhancing depth perception in large vision models by fine-tuning on DepthCues, and find that even without dense depth supervision, this improves depth estimation. To support further research, our benchmark and evaluation code will be made publicly available for studying depth perception in vision models.
+
+![image](https://github.com/user-attachments/assets/92fd966b-c655-4b42-a2ec-996857ebf6b8)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.17385) | [⌨️ Code](https://github.com/danier97/depthcues) | [🌐 Project Page](https://danier97.github.io/depthcues/)
+
 
 
 #### <summary>
