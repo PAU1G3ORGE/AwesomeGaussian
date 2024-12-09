@@ -565,6 +565,35 @@ Recently, 3D Gaussian Splatting (3DGS) has achieved significant performance on i
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.18066) | [⌨️ Code](https://github.com/JiaxiongQ/GLS) | [🌐 Project Page]
 
 
+#### <summary>SuperGaussians: Enhancing Gaussian Splatting Using Primitives with Spatially Varying Colors
+>*utilizes spatially varying colors and opacity in a single Gaussian primitive to improve its representation ability*
+
+Authors: Rui Xu, Wenyue Chen, Jiepeng Wang, Yuan Liu, Peng Wang, Lin Gao, Shiqing Xin, Taku Komura, Xin Li, Wenping Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Gaussian Splattings demonstrate impressive results in multi-view reconstruction based on Gaussian explicit representations. However, the current Gaussian primitives only have a single view-dependent color and an opacity to represent the appearance and geometry of the scene, resulting in a non-compact representation. In this paper, we introduce a new method called SuperGaussians that utilizes spatially varying colors and opacity in a single Gaussian primitive to improve its representation ability. We have implemented bilinear interpolation, movable kernels, and even tiny neural networks as spatially varying functions. Quantitative and qualitative experimental results demonstrate that all three functions outperform the baseline, with the best movable kernels achieving superior novel view synthesis performance on multiple datasets, highlighting the strong potential of spatially varying functions.
+
+![image](https://github.com/user-attachments/assets/804bcb33-1226-4bc0-85d3-3c83ad07b594)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.18966) | [⌨️ Code](https://github.com/Xrvitd/SuperGaussians) | [🌐 Project Page](https://ruixu.me/html/SuperGaussians/index.html)
+
+#### <summary>GausSurf: Geometry-Guided 3D Gaussian Splatting for Surface Reconstruction
+>*GaussianPro?*
+
+Authors: Jiepeng Wang, Yuan Liu, Peng Wang, Cheng Lin, Junhui Hou, Xin Li, Taku Komura, Wenping Wang
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting has achieved impressive performance in novel view synthesis with real-time rendering capabilities. However, reconstructing high-quality surfaces with fine details using 3D Gaussians remains a challenging task. In this work, we introduce GausSurf, a novel approach to high-quality surface reconstruction by employing geometry guidance from multi-view consistency in texture-rich areas and normal priors in texture-less areas of a scene. We observe that a scene can be mainly divided into two primary regions: 1) texture-rich and 2) texture-less areas. To enforce multi-view consistency at texture-rich areas, we enhance the reconstruction quality by incorporating a traditional patch-match based Multi-View Stereo (MVS) approach to guide the geometry optimization in an iterative scheme. This scheme allows for mutual reinforcement between the optimization of Gaussians and patch-match refinement, which significantly improves the reconstruction results and accelerates the training process. Meanwhile, for the texture-less areas, we leverage normal priors from a pre-trained normal estimation model to guide optimization. Extensive experiments on the DTU and Tanks and Temples datasets demonstrate that our method surpasses state-of-the-art methods in terms of reconstruction quality and computation time.
+
+![image](https://github.com/user-attachments/assets/d74ac129-af57-461b-a28b-df785af5ce2c)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.19454) | [⌨️ Code](https://github.com/jiepengwang/GausSurf) | [🌐 Project Page](https://jiepengwang.github.io/GausSurf/)
+
+
 <br>
 <br>
 
@@ -1504,6 +1533,18 @@ Ensuring the safety of autonomous robots, such as self-driving vehicles, require
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.16816) | [⌨️ Code] | [🌐 Project Page](https://research.zenseact.com/publications/splatad/)
 
 
+#### <summary>Tortho-Gaussian: Splatting True Digital Orthophoto Maps
+Authors: Xin Wang, Wendi Zhang, Hong Xie, Haibin Ai, Qiangqiang Yuan, Zongqian Zhan
+<details span>
+<summary><b>Abstract</b></summary>
+True Digital Orthophoto Maps (TDOMs) are essential products for digital twins and Geographic Information Systems (GIS). Traditionally, TDOM generation involves a complex set of traditional photogrammetric process, which may deteriorate due to various challenges, including inaccurate Digital Surface Model (DSM), degenerated occlusion detections, and visual artifacts in weak texture regions and reflective surfaces, etc. To address these challenges, we introduce TOrtho-Gaussian, a novel method inspired by 3D Gaussian Splatting (3DGS) that generates TDOMs through orthogonal splatting of optimized anisotropic Gaussian kernel. More specifically, we first simplify the orthophoto generation by orthographically splatting the Gaussian kernels onto 2D image planes, formulating a geometrically elegant solution that avoids the need for explicit DSM and occlusion detection. Second, to produce TDOM of large-scale area, a divide-and-conquer strategy is adopted to optimize memory usage and time efficiency of training and rendering for 3DGS. Lastly, we design a fully anisotropic Gaussian kernel that adapts to the varying characteristics of different regions, particularly improving the rendering quality of reflective surfaces and slender structures. Extensive experimental evaluations demonstrate that our method outperforms existing commercial software in several aspects, including the accuracy of building boundaries, the visual quality of low-texture regions and building facades. These results underscore the potential of our approach for large-scale urban scene reconstruction, offering a robust alternative for enhancing TDOM quality and scalability.
+
+![image](https://github.com/user-attachments/assets/9702502a-beb2-41c3-9619-d1d57b2806ae)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.19594) | [⌨️ Code] | [🌐 Project Page](https://gwen233666.github.io/Ortho-Gaussian/)
+
 
 
 <br>
@@ -2182,6 +2223,25 @@ We present DGGS, a novel framework addressing the previously unexplored challeng
 </details>
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.17605) | [⌨️ Code](https://github.com/bbbbby-99/DGGS) | [🌐 Project Page]
+
+
+
+#### <summary>SmileSplat: Generalizable Gaussian Splats for Unconstrained Sparse Images
+>*Bundle-Adjusting Gaussian Splatting, un-calibrated and un-posed sparse-view images*
+
+Authors: Yanyan Li, Yixin Fang, Federico Tombari, Gim Hee Lee
+<details span>
+<summary><b>Abstract</b></summary>
+Sparse Multi-view Images can be Learned to predict explicit radiance fields via Generalizable Gaussian Splatting approaches, which can achieve wider application prospects in real-life when ground-truth camera parameters are not required as inputs. In this paper, a novel generalizable Gaussian Splatting method, SmileSplat, is proposed to reconstruct pixel-aligned Gaussian surfels for diverse scenarios only requiring unconstrained sparse multi-view images. First, Gaussian surfels are predicted based on the multi-head Gaussian regression decoder, which can are represented with less degree-of-freedom but have better multi-view consistency. Furthermore, the normal vectors of Gaussian surfel are enhanced based on high-quality of normal priors. Second, the Gaussians and camera parameters (both extrinsic and intrinsic) are optimized to obtain high-quality Gaussian radiance fields for novel view synthesis tasks based on the proposed Bundle-Adjusting Gaussian Splatting module. Extensive experiments on novel view rendering and depth map prediction tasks are conducted on public datasets, demonstrating that the proposed method achieves state-of-the-art performance in various 3D vision tasks.
+
+![image](https://github.com/user-attachments/assets/a27c71dd-b4f2-4097-bd43-54e620e380fe)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.18072) | [⌨️ Code](https://github.com/yanyan-li/SmileSplat) | [🌐 Project Page](https://yanyan-li.github.io/project/gs/smilesplat)
+
+
+
 
 
 
@@ -3642,6 +3702,8 @@ In recent times, the utilization of 3D models has gained traction, owing to the 
 
 
 #### <summary>SpotlessSplats: Ignoring Distractors in 3D Gaussian Splatting
+>*Distractor-Free*
+
 Authors: Muhammad Salman Ali, Maryam Qamar, Sung-Ho Bae, Enzo Tartaglione
 <details span>
 <summary><b>Abstract</b></summary>
@@ -5116,6 +5178,81 @@ Neural radiance fields (NeRF) and 3D Gaussian Splatting (3DGS) are popular techn
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.15779) | [⌨️ Code](https://github.com/aibluefisher/ZeroGS) | [🌐 Project Page](https://aibluefisher.github.io/ZeroGS/)
 
+
+
+#### <summary>GLS: Geometry-aware 3D Language Gaussian Splatting
+> *Normal-error Guided Depth Refinement*
+
+Authors: Jiaxiong Qiu, Liu Liu, Zhizhong Su, Tianwei Lin
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, 3D Gaussian Splatting (3DGS) has achieved significant performance on indoor surface reconstruction and open-vocabulary segmentation. This paper presents GLS, a unified framework of surface reconstruction and open-vocabulary segmentation based on 3DGS. GLS extends two fields by exploring the correlation between them. For indoor surface reconstruction, we introduce surface normal prior as a geometric cue to guide the rendered normal, and use the normal error to optimize the rendered depth. For open-vocabulary segmentation, we employ 2D CLIP features to guide instance features and utilize DEVA masks to enhance their view consistency. Extensive experiments demonstrate the effectiveness of jointly optimizing surface reconstruction and open-vocabulary segmentation, where GLS surpasses state-of-the-art approaches of each task on MuSHRoom, ScanNet++, and LERF-OVS datasets. 
+
+![image](https://github.com/user-attachments/assets/c6bf795c-0d9d-45d2-ae4b-e4cb687fc1b4)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.18066) | [⌨️ Code](https://github.com/JiaxiongQ/GLS) | [🌐 Project Page]
+
+
+#### <summary>Textured Gaussians for Enhanced 3D Scene Appearance Modeling
+> *handles spatially varying color and opacity by augmenting 3D Gaussians with alpha, RGB, or RGBA texture maps*
+
+Authors: Brian Chao, Hung-Yu Tseng, Lorenzo Porzi, Chen Gao, Tuotuo Li, Qinbo Li, Ayush Saraf, Jia-Bin Huang, Johannes Kopf, Gordon Wetzstein, Changil Kim
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has recently emerged as a state-of-the-art 3D reconstruction and rendering technique due to its high-quality results and fast training and rendering time. However, pixels covered by the same Gaussian are always shaded in the same color up to a Gaussian falloff scaling factor. Furthermore, the finest geometric detail any individual Gaussian can represent is a simple ellipsoid. These properties of 3DGS greatly limit the expressivity of individual Gaussian primitives. To address these issues, we draw inspiration from texture and alpha mapping in traditional graphics and integrate it with 3DGS. Specifically, we propose a new generalized Gaussian appearance representation that augments each Gaussian with alpha~(A), RGB, or RGBA texture maps to model spatially varying color and opacity across the extent of each Gaussian. As such, each Gaussian can represent a richer set of texture patterns and geometric structures, instead of just a single color and ellipsoid as in naive Gaussian Splatting. Surprisingly, we found that the expressivity of Gaussians can be greatly improved by using alpha-only texture maps, and further augmenting Gaussians with RGB texture maps achieves the highest expressivity. We validate our method on a wide variety of standard benchmark datasets and our own custom captures at both the object and scene levels. We demonstrate image quality improvements over existing methods while using a similar or lower number of Gaussians.
+
+![image](https://github.com/user-attachments/assets/ddebdfb1-3c79-497e-adfd-32168468e452)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.18625) | [⌨️ Code] | [🌐 Project Page](https://textured-gaussians.github.io/)
+
+
+
+#### <summary>DeSplat: Decomposed Gaussian Splatting for Distractor-Free Rendering
+> *Distractor-Free*
+
+Authors: Yihao Wang, Marcus Klasson, Matias Turkulainen, Shuzhe Wang, Juho Kannala, Arno Solin
+<details span>
+<summary><b>Abstract</b></summary>
+Gaussian splatting enables fast novel view synthesis in static 3D environments. However, reconstructing real-world environments remains challenging as distractors or occluders break the multi-view consistency assumption required for accurate 3D reconstruction. Most existing methods rely on external semantic information from pre-trained models, introducing additional computational overhead as pre-processing steps or during optimization. In this work, we propose a novel method, DeSplat, that directly separates distractors and static scene elements purely based on volume rendering of Gaussian primitives. We initialize Gaussians within each camera view for reconstructing the view-specific distractors to separately model the static 3D scene and distractors in the alpha compositing stages. DeSplat yields an explicit scene separation of static elements and distractors, achieving comparable results to prior distractor-free approaches without sacrificing rendering speed. We demonstrate DeSplat's effectiveness on three benchmark data sets for distractor-free novel view synthesis. 
+ 
+![image](https://github.com/user-attachments/assets/244f925c-fadd-4078-94c9-a718e17357c0)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.19756) | [⌨️ Code] | [🌐 Project Page](https://aaltoml.github.io/desplat/)
+
+
+#### <summary>Modeling Uncertainty in 3D Gaussian Splatting through Continuous Semantic Splatting
+> *Uncertainty Splatting*
+
+Authors: Joey Wilson, Marcelino Almeida, Min Sun, Sachit Mahajan, Maani Ghaffari, Parker Ewen, Omid Ghasemalizadeh, Cheng-Hao Kuo, Arnie Sen
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper, we present a novel algorithm for probabilistically updating and rasterizing semantic maps within 3D Gaussian Splatting (3D-GS). Although previous methods have introduced algorithms which learn to rasterize features in 3D-GS for enhanced scene understanding, 3D-GS can fail without warning which presents a challenge for safety-critical robotic applications. To address this gap, we propose a method which advances the literature of continuous semantic mapping from voxels to ellipsoids, combining the precise structure of 3D-GS with the ability to quantify uncertainty of probabilistic robotic maps. Given a set of images, our algorithm performs a probabilistic semantic update directly on the 3D ellipsoids to obtain an expectation and variance through the use of conjugate priors. We also propose a probabilistic rasterization which returns per-pixel segmentation predictions with quantifiable uncertainty. We compare our method with similar probabilistic voxel-based methods to verify our extension to 3D ellipsoids, and perform ablation studies on uncertainty quantification and temporal smoothing.
+ 
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.02547) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>RoboGSim: A Real2Sim2Real Robotic Gaussian Splatting Simulator
+> *Simulator*
+
+Authors: Xinhai Li, Jialin Li, Ziheng Zhang, Rui Zhang, Fan Jia, Tiancai Wang, Haoqiang Fan, Kuo-Kun Tseng, Ruiping Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Efficient acquisition of real-world embodied data has been increasingly critical. However, large-scale demonstrations captured by remote operation tend to take extremely high costs and fail to scale up the data size in an efficient manner. Sampling the episodes under a simulated environment is a promising way for large-scale collection while existing simulators fail to high-fidelity modeling on texture and physics. To address these limitations, we introduce the RoboGSim, a real2sim2real robotic simulator, powered by 3D Gaussian Splatting and the physics engine. RoboGSim mainly includes four parts: Gaussian Reconstructor, Digital Twins Builder, Scene Composer, and Interactive Engine. It can synthesize the simulated data with novel views, objects, trajectories, and scenes. RoboGSim also provides an online, reproducible, and safe evaluation for different manipulation policies. The real2sim and sim2real transfer experiments show a high consistency in the texture and physics. Moreover, the effectiveness of synthetic data is validated under the real-world manipulated tasks. We hope RoboGSim serves as a closed-loop simulator for fair comparison on policy learning.
+ 
+![image](https://github.com/user-attachments/assets/0b204f31-8577-4ec3-9d2d-0cf5ccb7b63d)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.11839) | [⌨️ Code] | [🌐 Project Page](https://robogsim.github.io/)
 
 
 
@@ -7536,6 +7673,22 @@ Large-scale pre-trained vision models are becoming increasingly prevalent, offer
 </details>
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.17385) | [⌨️ Code](https://github.com/danier97/depthcues) | [🌐 Project Page](https://danier97.github.io/depthcues/)
+
+
+#### <summary>RoMo: Robust Motion Segmentation Improves Structure from Motion
+>*given camera pose estimates, epipolar constraints can be used to predict which flow correspondences are inconsistent with the estimated camera poses*
+
+Authors: Lily Goli, Sara Sabour, Mark Matthews, Marcus Brubaker, Dmitry Lagun, Alec Jacobson, David J. Fleet, Saurabh Saxena, Andrea Tagliasacchi
+<details span>
+<summary><b>Abstract</b></summary>
+There has been extensive progress in the reconstruction and generation of 4D scenes from monocular casually-captured video. While these tasks rely heavily on known camera poses, the problem of finding such poses using structure-from-motion (SfM) often depends on robustly separating static from dynamic parts of a video. The lack of a robust solution to this problem limits the performance of SfM camera-calibration pipelines. We propose a novel approach to video-based motion segmentation to identify the components of a scene that are moving w.r.t. a fixed world frame. Our simple but effective iterative method, RoMo, combines optical flow and epipolar cues with a pre-trained video segmentation model. It outperforms unsupervised baselines for motion segmentation as well as supervised baselines trained from synthetic data. More importantly, the combination of an off-the-shelf SfM pipeline with our segmentation masks establishes a new state-of-the-art on camera calibration for scenes with dynamic content, outperforming existing methods by a substantial margin.
+
+![image](https://github.com/user-attachments/assets/8b653484-b9ae-4fc7-8c73-ad02841e0415)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.18650) | [⌨️ Code] | [🌐 Project Page](https://romosfm.github.io/)
+
 
 
 
