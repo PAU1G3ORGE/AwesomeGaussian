@@ -2151,6 +2151,21 @@ Generalizable 3D Gaussian splitting (3DGS) can reconstruct new scenes from spars
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.22817) | [⌨️ Code] | [🌐 Project Page](https://tatakai1.github.io/efreesplat/)
 
 
+#### <summary>Novel View Synthesis with Pixel-Space Diffusion Models
+>*diffusion*
+
+Authors: Noam Elata, Bahjat Kawar, Yaron Ostrovsky-Berman, Miriam Farber, Ron Sokolovsky
+<details span>
+<summary><b>Abstract</b></summary>
+Synthesizing a novel view from a single input image is a challenging task. Traditionally, this task was approached by estimating scene depth, warping, and inpainting, with machine learning models enabling parts of the pipeline. More recently, generative models are being increasingly employed in novel view synthesis (NVS), often encompassing the entire end-to-end system. In this work, we adapt a modern diffusion model architecture for end-to-end NVS in the pixel space, substantially outperforming previous state-of-the-art (SOTA) techniques. We explore different ways to encode geometric information into the network. Our experiments show that while these methods may enhance performance, their impact is minor compared to utilizing improved generative models. Moreover, we introduce a novel NVS training scheme that utilizes single-view datasets, capitalizing on their relative abundance compared to their multi-view counterparts. This leads to improved generalization capabilities to scenes with out-of-domain content.
+
+![image](https://github.com/user-attachments/assets/10032fcd-9ee6-49dc-825d-6d4f9e59ff3a)
+
+</details>
+
+[📃 arXiv:2411](https://arxiv.org/pdf/2411.07765) | [⌨️ Code] | [🌐 Project Page]
+
+
 #### <summary>GPS-Gaussian+: Generalizable Pixel-wise 3D Gaussian Splatting for Real-Time Human-Scene Rendering from Sparse Views
 >*CDS-MVSNet + MVSGaussian?*
 
@@ -5073,19 +5088,7 @@ Recently, 3D Gaussian Splatting has dominated novel-view synthesis with its real
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.07579) | [⌨️ Code] | [🌐 Project Page]
 
 
-#### <summary>Novel View Synthesis with Pixel-Space Diffusion Models
->*diffusion*
 
-Authors: Noam Elata, Bahjat Kawar, Yaron Ostrovsky-Berman, Miriam Farber, Ron Sokolovsky
-<details span>
-<summary><b>Abstract</b></summary>
-Synthesizing a novel view from a single input image is a challenging task. Traditionally, this task was approached by estimating scene depth, warping, and inpainting, with machine learning models enabling parts of the pipeline. More recently, generative models are being increasingly employed in novel view synthesis (NVS), often encompassing the entire end-to-end system. In this work, we adapt a modern diffusion model architecture for end-to-end NVS in the pixel space, substantially outperforming previous state-of-the-art (SOTA) techniques. We explore different ways to encode geometric information into the network. Our experiments show that while these methods may enhance performance, their impact is minor compared to utilizing improved generative models. Moreover, we introduce a novel NVS training scheme that utilizes single-view datasets, capitalizing on their relative abundance compared to their multi-view counterparts. This leads to improved generalization capabilities to scenes with out-of-domain content.
-
-![image](https://github.com/user-attachments/assets/10032fcd-9ee6-49dc-825d-6d4f9e59ff3a)
-
-</details>
-
-[📃 arXiv:2411](https://arxiv.org/pdf/2411.07765) | [⌨️ Code] | [🌐 Project Page]
 
 
 
