@@ -2152,7 +2152,7 @@ Generalizable 3D Gaussian splitting (3DGS) can reconstruct new scenes from spars
 
 
 #### <summary>Novel View Synthesis with Pixel-Space Diffusion Models
->*diffusion*
+>*diffusion, single input image*
 
 Authors: Noam Elata, Bahjat Kawar, Yaron Ostrovsky-Berman, Miriam Farber, Ron Sokolovsky
 <details span>
