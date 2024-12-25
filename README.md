@@ -1032,7 +1032,7 @@ Recent advances in structured 3D Gaussians for view-adaptive rendering, particul
 
 
 #### <summary>GaussianPretrain: A Simple Unified 3D Gaussian Representation for Visual Pre-training in Autonomous Driving
-> * leveraging 3D Gaussian anchors as volumetric LiDAR points, combined with Ray-based guidance and MAE method*
+> *leveraging 3D Gaussian anchors as volumetric LiDAR points, combined with Ray-based guidance and MAE method*
 
 Authors: Shaoqing Xu, Fang Li, Shengyin Jiang, Ziying Song, Li Liu, Zhi-xin Yang
 <details span>
