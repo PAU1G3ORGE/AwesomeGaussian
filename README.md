@@ -1,4 +1,4 @@
-# AwesomeGaussian
+![image](https://github.com/user-attachments/assets/7fef01b2-6f17-4dec-8368-098ed0016f8d)# AwesomeGaussian
 
 <br>
 
@@ -2382,6 +2382,22 @@ Prior works employing pixel-based Gaussian representation have demonstrated effi
 </details>
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.06273) | [⌨️ Code](https://github.com/WU-CVGL/OmniScene) | [🌐 Project Page](https://wswdx.github.io/omniscene/)
+
+
+
+#### <summary>FreeSplatter: Pose-free Gaussian Splatting for Sparse-view 3D Reconstruction
+>*text/image-to-3D content creation*
+
+Authors: Jiale Xu, Shenghua Gao, Ying Shan
+<details span>
+<summary><b>Abstract</b></summary>
+Existing sparse-view reconstruction models heavily rely on accurate known camera poses. However, deriving camera extrinsics and intrinsics from sparse-view images presents significant challenges. In this work, we present FreeSplatter, a highly scalable, feed-forward reconstruction framework capable of generating high-quality 3D Gaussians from uncalibrated sparse-view images and recovering their camera parameters in mere seconds. FreeSplatter is built upon a streamlined transformer architecture, comprising sequential self-attention blocks that facilitate information exchange among multi-view image tokens and decode them into pixel-wise 3D Gaussian primitives. The predicted Gaussian primitives are situated in a unified reference frame, allowing for high-fidelity 3D modeling and instant camera parameter estimation using off-the-shelf solvers. To cater to both object-centric and scene-level reconstruction, we train two model variants of FreeSplatter on extensive datasets. In both scenarios, FreeSplatter outperforms state-of-the-art baselines in terms of reconstruction quality and pose estimation accuracy. Furthermore, we showcase FreeSplatter's potential in enhancing the productivity of downstream applications, such as text/image-to-3D content creation.
+
+![image](https://github.com/user-attachments/assets/47675c7c-d9b8-4311-995b-2a1aba46d4d0)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.09573) | [⌨️ Code](https://github.com/TencentARC/FreeSplatter) | [🌐 Project Page](https://bluestyle97.github.io/projects/freesplatter/)
 
 
 
@@ -5500,6 +5516,43 @@ Authors: Qingshan Xu, Jiequan Cui, Xuanyu Yi, Yuxuan Wang, Yuan Zhou, Yew-Soon O
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.04826) | [⌨️ Code] | [🌐 Project Page]
 
 
+
+#### <summary>Probing the 3D Awareness of Visual Foundation Models
+> *DINOv2*
+
+Authors: Mohamed El Banani, Amit Raj, Kevis-Kokitsi Maninis, Abhishek Kar, Yuanzhen Li, Michael Rubinstein, Deqing Sun, Leonidas Guibas, Justin Johnson, Varun Jampani
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advances in large-scale pretraining have yielded visual foundation models with strong capabilities. Not only can recent models generalize to arbitrary images for their training task, their intermediate representations are useful for other visual tasks such as detection and segmentation. Given that such models can classify, delineate, and localize objects in 2D, we ask whether they also represent their 3D structure? In this work, we analyze the 3D awareness of visual foundation models. We posit that 3D awareness implies that representations (1) encode the 3D structure of the scene and (2) consistently represent the surface across views. We conduct a series of experiments using task-specific probes and zero-shot inference procedures on frozen features. Our experiments reveal several limitations of the current models.
+ 
+![image](https://github.com/user-attachments/assets/06f5c326-9f3a-44db-8d4f-032acadf418e)
+
+
+</details>
+
+[📃 arXiv:2404](https://arxiv.org/pdf/2404.08636) | [⌨️ Code](https://github.com/mbanani/probe3d) | [🌐 Project Page]
+
+
+
+#### <summary>Feat2GS: Probing Visual Foundation Models with Gaussian Splatting
+> *MASt3R*
+
+Authors: Yue Chen, Xingyu Chen, Anpei Chen, Gerard Pons-Moll, Yuliang Xiu
+<details span>
+<summary><b>Abstract</b></summary>
+Given that visual foundation models (VFMs) are trained on extensive datasets but often limited to 2D images, a natural question arises: how well do they understand the 3D world? With the differences in architecture and training protocols (i.e., objectives, proxy tasks), a unified framework to fairly and comprehensively probe their 3D awareness is urgently needed. Existing works on 3D probing suggest single-view 2.5D estimation (e.g., depth and normal) or two-view sparse 2D correspondence (e.g., matching and tracking). Unfortunately, these tasks ignore texture awareness, and require 3D data as ground-truth, which limits the scale and diversity of their evaluation set. To address these issues, we introduce Feat2GS, which readout 3D Gaussians attributes from VFM features extracted from unposed images. This allows us to probe 3D awareness for geometry and texture via novel view synthesis, without requiring 3D data. Additionally, the disentanglement of 3DGS parameters - geometry (x,α,Σ) and texture (c) - enables separate analysis of texture and geometry awareness. Under Feat2GS, we conduct extensive experiments to probe the 3D awareness of several VFMs, and investigate the ingredients that lead to a 3D aware VFM. Building on these findings, we develop several variants that achieve state-of-the-art across diverse datasets. This makes Feat2GS useful for probing VFMs, and as a simple-yet-effective baseline for novel-view synthesis.
+ 
+![image](https://github.com/user-attachments/assets/e907af9d-8806-4dfa-991b-48a556973815)
+![image](https://github.com/user-attachments/assets/8c400573-1490-48f6-ba84-8b8b1998e39e)
+
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.09606) | [⌨️ Code] | [🌐 Project Page](https://fanegg.github.io/Feat2GS/)
+
+
+
+
 <br>
 <br>
 
@@ -7962,6 +8015,22 @@ Recent sparse multi-view scene reconstruction advances like DUSt3R and MASt3R no
 </details>
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.06974) | [⌨️ Code] | [🌐 Project Page](https://mv-dust3rp.github.io/)
+
+
+#### <summary>SLAM3R: Real-Time Dense Scene Reconstruction from Monocular RGB Videos
+>*SLAM3R directly regresses 3D pointmaps from RGB images in each window and progressively aligns and deforms these local pointmaps to create a globally consistent scene reconstruction*
+
+Authors: Yuzheng Liu, Siyan Dong, Shuzhe Wang, Yanchao Yang, Qingnan Fan, Baoquan Chen
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper, we introduce SLAM3R, a novel and effective monocular RGB SLAM system for real-time and high-quality dense 3D reconstruction. SLAM3R provides an end-to-end solution by seamlessly integrating local 3D reconstruction and global coordinate registration through feed-forward neural networks. Given an input video, the system first converts it into overlapping clips using a sliding window mechanism. Unlike traditional pose optimization-based methods, SLAM3R directly regresses 3D pointmaps from RGB images in each window and progressively aligns and deforms these local pointmaps to create a globally consistent scene reconstruction - all without explicitly solving any camera parameters. Experiments across datasets consistently show that SLAM3R achieves state-of-the-art reconstruction accuracy and completeness while maintaining real-time performance at 20+ FPS.
+
+![image](https://github.com/user-attachments/assets/2fb89c8f-9c1d-489b-bd88-ec8d20c31449)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.09401) | [⌨️ Code](https://github.com/PKU-VCL-3DV/SLAM3R) | [🌐 Project Page]
+
 
 
 
