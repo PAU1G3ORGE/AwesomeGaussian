@@ -594,6 +594,24 @@ Authors: Jiepeng Wang, Yuan Liu, Peng Wang, Cheng Lin, Junhui Hou, Xin Li, Taku 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.19454) | [⌨️ Code](https://github.com/jiepengwang/GausSurf) | [🌐 Project Page](https://jiepengwang.github.io/GausSurf/)
 
 
+
+#### <summary>GBR: Generative Bundle Refinement for High-fidelity Gaussian Splatting and Meshing
+
+Authors: Jianing Zhang, Yuchao Zheng, Ziwei Li, Qionghai Dai, Xiaoyun Yuan
+<details span>
+<summary><b>Abstract</b></summary>
+Gaussian splatting has gained attention for its efficient representation and rendering of 3D scenes using continuous Gaussian primitives. However, it struggles with sparse-view inputs due to limited geometric and photometric information, causing ambiguities in depth, shape, and texture.
+we propose GBR: Generative Bundle Refinement, a method for high-fidelity Gaussian splatting and meshing using only 4-6 input views. GBR integrates a neural bundle adjustment module to enhance geometry accuracy and a generative depth refinement module to improve geometry fidelity. More specifically, the neural bundle adjustment module integrates a foundation network to produce initial 3D point maps and point matches from unposed images, followed by bundle adjustment optimization to improve multiview consistency and point cloud accuracy. The generative depth refinement module employs a diffusion-based strategy to enhance geometric details and fidelity while preserving the scale. Finally, for Gaussian splatting optimization, we propose a multimodal loss function incorporating depth and normal consistency, geometric regularization, and pseudo-view supervision, providing robust guidance under sparse-view conditions. Experiments on widely used datasets show that GBR significantly outperforms existing methods under sparse-view inputs. Additionally, GBR demonstrates the ability to reconstruct and render large-scale real-world scenes, such as the Pavilion of Prince Teng and the Great Wall, with remarkable details using only 6 views.
+
+![image](https://github.com/user-attachments/assets/e190a79f-944f-4ee8-87e1-5e13e7db940a)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.05908) | [⌨️ Code] | [🌐 Project Page](https://gbrnvs.github.io/)
+
+
+
+
 <br>
 <br>
 
@@ -1546,6 +1564,55 @@ True Digital Orthophoto Maps (TDOMs) are essential products for digital twins an
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.19594) | [⌨️ Code] | [🌐 Project Page](https://gwen233666.github.io/Ortho-Gaussian/)
 
 
+#### <summary>ULSR-GS: Ultra Large-scale Surface Reconstruction Gaussian Splatting with Multi-View Geometric Consistency
+>*Large-scale Surface Reconstruction*
+
+Authors: Zhuoxiao Li, Shanliang Yao, Qizhong Gao, Angel F. Garcia-Fernandez, Yong Yue, Xiaohui Zhu
+<details span>
+<summary><b>Abstract</b></summary>
+While Gaussian Splatting (GS) demonstrates efficient and high-quality scene rendering and small area surface extraction ability, it falls short in handling large-scale aerial image surface extraction tasks. To overcome this, we present ULSR-GS, a framework dedicated to high-fidelity surface extraction in ultra-large-scale scenes, addressing the limitations of existing GS-based mesh extraction methods. Specifically, we propose a point-to-photo partitioning approach combined with a multi-view optimal view matching principle to select the best training images for each sub-region. Additionally, during training, ULSR-GS employs a densification strategy based on multi-view geometric consistency to enhance surface extraction details. Experimental results demonstrate that ULSR-GS outperforms other state-of-the-art GS-based works on large-scale aerial photogrammetry benchmark datasets, significantly improving surface extraction accuracy in complex urban environments.
+ 
+![image](https://github.com/user-attachments/assets/a3cfdeaa-6ccc-4f95-9aa2-07c322c0d668)
+
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.01402) | [⌨️ Code] | [🌐 Project Page](https://ulsrgs.github.io/)
+
+#### <summary>Horizon-GS: Unified 3D Gaussian Splatting for Large-Scale Aerial-to-Ground Scenes
+>*training data from both street and aerial viewpoint*
+
+Authors: Lihan Jiang, Kerui Ren, Mulin Yu, Linning Xu, Junting Dong, Tao Lu, Feng Zhao, Dahua Lin, Bo Dai
+<details span>
+<summary><b>Abstract</b></summary>
+Seamless integration of both aerial and street view images remains a significant challenge in neural scene reconstruction and rendering. Existing methods predominantly focus on single domain, limiting their applications in immersive environments, which demand extensive free view exploration with large view changes both horizontally and vertically. We introduce Horizon-GS, a novel approach built upon Gaussian Splatting techniques, tackles the unified reconstruction and rendering for aerial and street views. Our method addresses the key challenges of combining these perspectives with a new training strategy, overcoming viewpoint discrepancies to generate high-fidelity scenes. We also curate a high-quality aerial-to-ground views dataset encompassing both synthetic and real-world scene to advance further research. Experiments across diverse urban scene datasets confirm the effectiveness of our method.
+ 
+![image](https://github.com/user-attachments/assets/a7ef18af-4e67-432f-9a78-d3fbb5d174ab)
+![image](https://github.com/user-attachments/assets/ee2a9ea0-210d-4e9c-9db8-7e0a7a456d34)
+
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.01745) | [⌨️ Code] | [🌐 Project Page](https://city-super.github.io/horizon-gs/)
+
+
+#### <summary>Momentum-GS: Momentum Gaussian Self-Distillation for High-Quality Large Scene Reconstruction
+>*decouples the number of divided blocks from the number of GPUs, The momentum Gaussian decoder provides stable global guidance to each block, ensuring consistency across blocks.*
+
+Authors: Jixuan Fan, Wanhua Li, Yifei Han, Yansong Tang
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting has demonstrated notable success in large-scale scene reconstruction, but challenges persist due to high training memory consumption and storage overhead. Hybrid representations that integrate implicit and explicit features offer a way to mitigate these limitations. However, when applied in parallelized block-wise training, two critical issues arise since reconstruction accuracy deteriorates due to reduced data diversity when training each block independently, and parallel training restricts the number of divided blocks to the available number of GPUs. To address these issues, we propose Momentum-GS, a novel approach that leverages momentum-based self-distillation to promote consistency and accuracy across the blocks while decoupling the number of blocks from the physical GPU count. Our method maintains a teacher Gaussian decoder updated with momentum, ensuring a stable reference during training. This teacher provides each block with global guidance in a self-distillation manner, promoting spatial consistency in reconstruction. To further ensure consistency across the blocks, we incorporate block weighting, dynamically adjusting each block's weight according to its reconstruction accuracy. Extensive experiments on large-scale scenes show that our method consistently outperforms existing techniques, achieving a 12.8% improvement in LPIPS over CityGaussian with much fewer divided blocks and establishing a new state of the art.
+ 
+![image](https://github.com/user-attachments/assets/dee4fba4-940b-47e1-b617-bc7576a8a81d)
+![image](https://github.com/user-attachments/assets/7a2c5f22-d8e2-4c1f-9142-c943ec5d5cc6)
+
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.04887) | [⌨️ Code](https://github.com/Jixuan-Fan/Momentum-GS) | [🌐 Project Page](https://jixuan-fan.github.io/Momentum-GS_Page/)
+
+
 
 <br>
 <br>
@@ -1738,6 +1805,20 @@ Recently, with the development of Neural Radiance Fields and Gaussian Splatting,
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.01535) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>SGSST: Scaling Gaussian Splatting StyleTransfer
+>*SOS (Simultaneously Optimized Scales) loss*
+
+Authors: Bruno Galerne, Jianling Wang, Lara Raad, Jean-Michel Morel
+<details span>
+<summary><b>Abstract</b></summary>
+Applying style transfer to a full 3D environment is a challenging task that has seen many developments since the advent of neural rendering. 3D Gaussian splatting (3DGS) has recently pushed further many limits of neural rendering in terms of training speed and reconstruction quality. This work introduces SGSST: Scaling Gaussian Splatting Style Transfer, an optimization-based method to apply style transfer to pretrained 3DGS scenes. We demonstrate that a new multiscale loss based on global neural statistics, that we name SOS for Simultaneously Optimized Scales, enables style transfer to ultra-high resolution 3D scenes. Not only SGSST pioneers 3D scene style transfer at such high image resolutions, it also produces superior visual quality as assessed by thorough qualitative, quantitative and perceptual comparisons.
+ 
+![image](https://github.com/user-attachments/assets/5a45103c-ee96-4c72-a70f-9c77c884711a)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.03371) | [⌨️ Code] | [🌐 Project Page]
+
 
 <br>
 <br>
@@ -1871,6 +1952,7 @@ Recent progress in scene synthesis makes standalone SLAM systems purely based on
 </details>
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.17660) | [⌨️ Code](https://github.com/ChenHoy/DROID-Splat) | [🌐 Project Page]
+
 
 
 
@@ -2287,6 +2369,22 @@ Recently, generalizable feed-forward methods based on 3D Gaussian Splatting have
 
 
 
+#### <summary>Omni-Scene: Omni-Gaussian Representation for Ego-Centric Sparse-View Scene Reconstruction
+>*ego-centric reconstruction. The core lies in how to optimize volume and pixel-based Gaussians to their full potential, and leverage their unique attributes to enable their collaboration.  integrating it with a 2D diffusion model. utilize a volume-based Gaussian representation in the reconstruction task (i.e., represent Gaussians with voxels in the volume) to minimize dependence on cross-view overlap and mitigate bad effects brought by occlusions and truncations*
+
+Authors: Dongxu Wei, Zhiqi Li, Peidong Liu
+<details span>
+<summary><b>Abstract</b></summary>
+Prior works employing pixel-based Gaussian representation have demonstrated efficacy in feed-forward sparse-view reconstruction. However, such representation necessitates cross-view overlap for accurate depth estimation, and is challenged by object occlusions and frustum truncations. As a result, these methods require scene-centric data acquisition to maintain cross-view overlap and complete scene visibility to circumvent occlusions and truncations, which limits their applicability to scene-centric reconstruction. In contrast, in autonomous driving scenarios, a more practical paradigm is ego-centric reconstruction, which is characterized by minimal cross-view overlap and frequent occlusions and truncations. The limitations of pixel-based representation thus hinder the utility of prior works in this task. In light of this, this paper conducts an in-depth analysis of different representations, and introduces Omni-Gaussian representation with tailored network design to complement their strengths and mitigate their drawbacks. Experiments show that our method significantly surpasses state-of-the-art methods, pixelSplat and MVSplat, in ego-centric reconstruction, and achieves comparable performance to prior works in scene-centric reconstruction. Furthermore, we extend our method with diffusion models, pioneering feed-forward multi-modal generation of 3D driving scenes.
+
+![image](https://github.com/user-attachments/assets/aff0668c-607f-4abf-a616-e4395dd0ca14)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.06273) | [⌨️ Code](https://github.com/WU-CVGL/OmniScene) | [🌐 Project Page](https://wswdx.github.io/omniscene/)
+
+
+
 <br>
 <br>
 
@@ -2375,6 +2473,20 @@ Recent advancements in 3D Gaussian Splatting (3DGS) have substantially improved 
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.12440) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>ResGS: Residual Densification of 3D Gaussian for Efficient Detail Recovery
+>*employs a single densification method, residual split, that adaptively addresses under-reconstruction and over-reconstruction*
+
+Authors: Yanzhe Lyu, Kai Cheng, Xin Kang, Xuejin Chen
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, 3D Gaussian Splatting (3D-GS) has prevailed in novel view synthesis, achieving high fidelity and efficiency. However, it often struggles to capture rich details and complete geometry. Our analysis highlights a key limitation of 3D-GS caused by the fixed threshold in densification, which balances geometry coverage against detail recovery as the threshold varies. To address this, we introduce a novel densification method, residual split, which adds a downscaled Gaussian as a residual. Our approach is capable of adaptively retrieving details and complementing missing geometry while enabling progressive refinement. To further support this method, we propose a pipeline named ResGS. Specifically, we integrate a Gaussian image pyramid for progressive supervision and implement a selection scheme that prioritizes the densification of coarse Gaussians over time. Extensive experiments demonstrate that our method achieves SOTA rendering quality. Consistent performance improvements can be achieved by applying our residual split on various 3D-GS variants, underscoring its versatility and potential for broader application in 3D-GS-based applications.
+
+![image](https://github.com/user-attachments/assets/e7d8b750-ea16-4386-9bd5-390cabc605cd)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.07494) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 <br>
@@ -2432,6 +2544,20 @@ Authors: Jiameng Li, Yue Shi, Jiezhang Cao, Bingbing Ni, Wenjun Zhang, Kai Zhang
 </details>
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.06286) | [⌨️ Code](https://github.com/renaissanceee/Mipmap-GS) | [🌐 Project Page]
+
+#### <summary>HDGS: Textured 2D Gaussian Splatting for Enhanced Scene Rendering
+> *a frustum-based Gaussian sampling method to mitigate high-frequency rendering aliases, the sampling frequency is determined by the image’s pixel resolution*
+
+Authors: Yunzhou Song, Heguang Lin, Jiahui Lei, Lingjie Liu, Kostas Daniilidis
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advancements in neural rendering, particularly 2D Gaussian Splatting (2DGS), have shown promising results for jointly reconstructing fine appearance and geometry by leveraging 2D Gaussian surfels. However, current methods face significant challenges when rendering at arbitrary viewpoints, such as anti-aliasing for down-sampled rendering, and texture detail preservation for high-resolution rendering. We proposed a novel method to align the 2D surfels with texture maps and augment it with per-ray depth sorting and fisher-based pruning for rendering consistency and efficiency. With correct order, per-surfel texture maps significantly improve the capabilities to capture fine details. Additionally, to render high-fidelity details in varying viewpoints, we designed a frustum-based sampling method to mitigate the aliasing artifacts. Experimental results on benchmarks and our custom texture-rich dataset demonstrate that our method surpasses existing techniques, particularly in detail preservation and anti-aliasing.
+
+![image](https://github.com/user-attachments/assets/d50cfb26-db51-4167-99ee-3cbb0b31e3b9)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.01823) | [⌨️ Code](https://github.com/TimSong412/HDGS) | [🌐 Project Page](https://timsong412.github.io/HDGS-ProjPage/)
 
 
 <br>
@@ -2543,6 +2669,8 @@ Authors: Wenhao Xu, Wenming Weng, Yueyi Zhang, Ruikang Xu, Zhiwei Xiong
 </details>
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.16180) | [⌨ Code] | [🌐 Project Page]
+
+
 
 
 
@@ -5284,7 +5412,92 @@ Efficient acquisition of real-world embodied data has been increasingly critical
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.11839) | [⌨️ Code] | [🌐 Project Page](https://robogsim.github.io/)
 
+#### <summary>T-3DGS: Removing Transient Objects for 3D Scene Reconstruction
+> *dynamic distractors*
 
+Authors: Vadim Pryadilshchikov, Alexander Markin, Artem Komarichev, Ruslan Rakhimov, Peter Wonka, Evgeny Burnaev
+<details span>
+<summary><b>Abstract</b></summary>
+We propose a novel framework to remove transient objects from input videos for 3D scene reconstruction using Gaussian Splatting. Our framework consists of the following steps. In the first step, we propose an unsupervised training strategy for a classification network to distinguish between transient objects and static scene parts based on their different training behavior inside the 3D Gaussian Splatting reconstruction. In the second step, we improve the boundary quality and stability of the detected transients by combining our results from the first step with an off-the-shelf segmentation method. We also propose a simple and effective strategy to track objects in the input video forward and backward in time. Our results show an improvement over the current state of the art in existing sparsely captured datasets and significant improvements in a newly proposed densely captured (video) dataset.
+ 
+![image](https://github.com/user-attachments/assets/a85a1b54-760c-48b1-8d71-16352c4ca21c)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.00155) | [⌨️ Code](https://github.com/Vadim200116/T-3DGS) | [🌐 Project Page](https://transient-3dgs.github.io/)
+
+#### <summary>Speedy-Splat: Fast 3D Gaussian Splatting with Sparse Pixels and Sparse Primitives
+> *Gaussian Splatting grossly overestimates the extent of Gaussians in the image. SnugBox and AccuTile*
+
+Authors: Alex Hanson, Allen Tu, Geng Lin, Vasu Singla, Matthias Zwicker, Tom Goldstein
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3D-GS) is a recent 3D scene reconstruction technique that enables real-time rendering of novel views by modeling scenes as parametric point clouds of differentiable 3D Gaussians. However, its rendering speed and model size still present bottlenecks, especially in resource-constrained settings. In this paper, we identify and address two key inefficiencies in 3D-GS, achieving substantial improvements in rendering speed, model size, and training time. First, we optimize the rendering pipeline to precisely localize Gaussians in the scene, boosting rendering speed without altering visual fidelity. Second, we introduce a novel pruning technique and integrate it into the training pipeline, significantly reducing model size and training time while further raising rendering speed. Our Speedy-Splat approach combines these techniques to accelerate average rendering speed by a drastic 6.71× across scenes from the Mip-NeRF 360, Tanks & Temples, and Deep Blending datasets with 10.6× fewer primitives than 3D-GS.
+ 
+![image](https://github.com/user-attachments/assets/6cbfe5e1-17de-4aa3-8fc0-7649b649e985)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.00578) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>SfM-Free 3D Gaussian Splatting via Hierarchical Training
+> *merging essential Gaussians from different base 3DGS models*
+
+Authors: Bo Ji, Angela Yao
+<details span>
+<summary><b>Abstract</b></summary>
+Standard 3D Gaussian Splatting (3DGS) relies on known or pre-computed camera poses and a sparse point cloud, obtained from structure-from-motion (SfM) preprocessing, to initialize and grow 3D Gaussians. We propose a novel SfM-Free 3DGS (SFGS) method for video input, eliminating the need for known camera poses and SfM preprocessing. Our approach introduces a hierarchical training strategy that trains and merges multiple 3D Gaussian representations -- each optimized for specific scene regions -- into a single, unified 3DGS model representing the entire scene. To compensate for large camera motions, we leverage video frame interpolation models. Additionally, we incorporate multi-source supervision to reduce overfitting and enhance representation. Experimental results reveal that our approach significantly surpasses state-of-the-art SfM-free novel view synthesis methods. On the Tanks and Temples dataset, we improve PSNR by an average of 2.25dB, with a maximum gain of 3.72dB in the best scene. On the CO3D-V2 dataset, we achieve an average PSNR boost of 1.74dB, with a top gain of 3.90dB.
+ 
+![image](https://github.com/user-attachments/assets/cc2b68dc-5dee-4a2a-8e6b-fe7067d06ae9)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.01553) | [⌨️ Code](https://github.com/jibo27/3DGS_Hierarchical_Training) | [🌐 Project Page]
+
+
+#### <summary>RelayGS: Reconstructing Dynamic Scenes with Large-Scale and Complex Motions via Relay Gaussians
+> *introduce a learnable mask to distinguish high dynamic foreground Gaussians, Relay Gaussians, employ an additional set of MLPs and introduce a learnable scaling factor for position offsets*
+
+Authors: Qiankun Gao, Yanmin Wu, Chengxiang Wen, Jiarui Meng, Luyang Tang, Jie Chen, Ronggang Wang, Jian Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+Reconstructing dynamic scenes with large-scale and complex motions remains a significant challenge. Recent techniques like Neural Radiance Fields and 3D Gaussian Splatting (3DGS) have shown promise but still struggle with scenes involving substantial movement. This paper proposes RelayGS, a novel method based on 3DGS, specifically designed to represent and reconstruct highly dynamic scenes. Our RelayGS learns a complete 4D representation with canonical 3D Gaussians and a compact motion field, consisting of three stages. First, we learn a fundamental 3DGS from all frames, ignoring temporal scene variations, and use a learnable mask to separate the highly dynamic foreground from the minimally moving background. Second, we replicate multiple copies of the decoupled foreground Gaussians from the first stage, each corresponding to a temporal segment, and optimize them using pseudo-views constructed from multiple frames within each segment. These Gaussians, termed Relay Gaussians, act as explicit relay nodes, simplifying and breaking down large-scale motion trajectories into smaller, manageable segments. Finally, we jointly learn the scene's temporal motion and refine the canonical Gaussians learned from the first two stages. We conduct thorough experiments on two dynamic scene datasets featuring large and complex motions, where our RelayGS outperforms state-of-the-arts by more than 1 dB in PSNR, and successfully reconstructs real-world basketball game scenes in a much more complete and coherent manner, whereas previous methods usually struggle to capture the complex motion of players.
+ 
+![image](https://github.com/user-attachments/assets/68e486e3-6b2c-4f35-ac6e-530fb6ac6b27)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.02493) | [⌨️ Code](https://github.com/gqk/RelayGS) | [🌐 Project Page]
+
+
+#### <summary>HybridGS: Decoupling Transients and Statics with 2D and 3D Gaussian Splatting
+> *distractor, decompose the whole scene into 2D Gaussians for transient objects and 3D Gaussians for static scenes*
+
+Authors: Jingyu Lin, Jiaqi Gu, Lubin Fan, Bojian Wu, Yujing Lou, Renjie Chen, Ligang Liu, Jieping Ye
+<details span>
+<summary><b>Abstract</b></summary>
+Generating high-quality novel view renderings of 3D Gaussian Splatting (3DGS) in scenes featuring transient objects is challenging. We propose a novel hybrid representation, termed as HybridGS, using 2D Gaussians for transient objects per image and maintaining traditional 3D Gaussians for the whole static scenes. Note that, the 3DGS itself is better suited for modeling static scenes that assume multi-view consistency, but the transient objects appear occasionally and do not adhere to the assumption, thus we model them as planar objects from a single view, represented with 2D Gaussians. Our novel representation decomposes the scene from the perspective of fundamental viewpoint consistency, making it more reasonable. Additionally, we present a novel multi-view regulated supervision method for 3DGS that leverages information from co-visible regions, further enhancing the distinctions between the transients and statics. Then, we propose a straightforward yet effective multi-stage training strategy to ensure robust training and high-quality view synthesis across various settings. Experiments on benchmark datasets show our state-of-the-art performance of novel view synthesis in both indoor and outdoor scenes, even in the presence of distracting elements.
+ 
+![image](https://github.com/user-attachments/assets/05ada036-115a-4923-acb0-c2ed4438ff1f)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.03844) | [⌨️ Code](https://github.com/Yeyuqqwx/HybridGS) | [🌐 Project Page](https://gujiaqivadin.github.io/hybridgs/)
+
+
+#### <summary>Pushing Rendering Boundaries: Hard Gaussian Splatting
+> *leverages multi-view significant positional gradients to uncover hard Gaussians, helps to resolve blurring and needle-like artifacts*
+
+Authors: Qingshan Xu, Jiequan Cui, Xuanyu Yi, Yuxuan Wang, Yuan Zhou, Yew-Soon Ong, Hanwang Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has demonstrated impressive Novel View Synthesis (NVS) results in a real-time rendering manner. During training, it relies heavily on the average magnitude of view-space positional gradients to grow Gaussians to reduce rendering loss. However, this average operation smooths the positional gradients from different viewpoints and rendering errors from different pixels, hindering the growth and optimization of many defective Gaussians. This leads to strong spurious artifacts in some areas. To address this problem, we propose Hard Gaussian Splatting, dubbed HGS, which considers multi-view significant positional gradients and rendering errors to grow hard Gaussians that fill the gaps of classical Gaussian Splatting on 3D scenes, thus achieving superior NVS results. In detail, we present positional gradient driven HGS, which leverages multi-view significant positional gradients to uncover hard Gaussians. Moreover, we propose rendering error guided HGS, which identifies noticeable pixel rendering errors and potentially over-large Gaussians to jointly mine hard Gaussians. By growing and optimizing these hard Gaussians, our method helps to resolve blurring and needle-like artifacts. Experiments on various datasets demonstrate that our method achieves state-of-the-art rendering quality while maintaining real-time efficiency.
+ 
+![image](https://github.com/user-attachments/assets/0cb36185-2597-422e-9abe-47a0be878b46)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.04826) | [⌨️ Code] | [🌐 Project Page]
 
 
 <br>
@@ -7698,6 +7911,7 @@ Authors: Duolikun Danier, Mehmet Aygün, Changjian Li, Hakan Bilen, Oisin Mac Ao
 <summary><b>Abstract</b></summary>
 Large-scale pre-trained vision models are becoming increasingly prevalent, offering expressive and generalizable visual representations that benefit various downstream tasks. Recent studies on the emergent properties of these models have revealed their high-level geometric understanding, in particular in the context of depth perception. However, it remains unclear how depth perception arises in these models without explicit depth supervision provided during pre-training. To investigate this, we examine whether the monocular depth cues, similar to those used by the human visual system, emerge in these models. We introduce a new benchmark, DepthCues, designed to evaluate depth cue understanding, and present findings across 20 diverse and representative pre-trained vision models. Our analysis shows that human-like depth cues emerge in more recent larger models. We also explore enhancing depth perception in large vision models by fine-tuning on DepthCues, and find that even without dense depth supervision, this improves depth estimation. To support further research, our benchmark and evaluation code will be made publicly available for studying depth perception in vision models.
 
+
 ![image](https://github.com/user-attachments/assets/92fd966b-c655-4b42-a2ec-996857ebf6b8)
 
 </details>
@@ -7719,6 +7933,35 @@ There has been extensive progress in the reconstruction and generation of 4D sce
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.18650) | [⌨️ Code] | [🌐 Project Page](https://romosfm.github.io/)
 
+
+#### <summary>Align3R: Aligned Monocular Depth Estimation for Dynamic Videos
+>*fine-tuning DUSt3R?*
+
+Authors: Jiahao Lu, Tianyu Huang, Peng Li, Zhiyang Dou, Cheng Lin, Zhiming Cui, Zhen Dong, Sai-Kit Yeung, Wenping Wang, Yuan Liu
+<details span>
+<summary><b>Abstract</b></summary>
+Recent developments in monocular depth estimation methods enable high-quality depth estimation of single-view images but fail to estimate consistent video depth across different frames. Recent works address this problem by applying a video diffusion model to generate video depth conditioned on the input video, which is training-expensive and can only produce scale-invariant depth values without camera poses. In this paper, we propose a novel video-depth estimation method called Align3R to estimate temporal consistent depth maps for a dynamic video. Our key idea is to utilize the recent DUSt3R model to align estimated monocular depth maps of different timesteps. First, we fine-tune the DUSt3R model with additional estimated monocular depth as inputs for the dynamic scenes. Then, we apply optimization to reconstruct both depth maps and camera poses. Extensive experiments demonstrate that Align3R estimates consistent video depth and camera poses for a monocular video with superior performance than baseline methods.
+
+![image](https://github.com/user-attachments/assets/e38302b5-11c8-491e-805b-c7636d3e0053)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.03079) | [⌨️ Code](https://github.com/jiah-cloud/Align3R.git) | [🌐 Project Page](https://igl-hkust.github.io/Align3R.github.io/)
+
+
+#### <summary>MV-DUSt3R+: Single-Stage Scene Reconstruction from Sparse Views In 2 Seconds
+>*dealing with more than two views*
+
+Authors: Zhenggang Tang, Yuchen Fan, Dilin Wang, Hongyu Xu, Rakesh Ranjan, Alexander Schwing, Zhicheng Yan
+<details span>
+<summary><b>Abstract</b></summary>
+Recent sparse multi-view scene reconstruction advances like DUSt3R and MASt3R no longer require camera calibration and camera pose estimation. However, they only process a pair of views at a time to infer pixel-aligned pointmaps. When dealing with more than two views, a combinatorial number of error prone pairwise reconstructions are usually followed by an expensive global optimization, which often fails to rectify the pairwise reconstruction errors. To handle more views, reduce errors, and improve inference time, we propose the fast single-stage feed-forward network MV-DUSt3R. At its core are multi-view decoder blocks which exchange information across any number of views while considering one reference view. To make our method robust to reference view selection, we further propose MV-DUSt3R+, which employs cross-reference-view blocks to fuse information across different reference view choices. To further enable novel view synthesis, we extend both by adding and jointly training Gaussian splatting heads. Experiments on multi-view stereo reconstruction, multi-view pose estimation, and novel view synthesis confirm that our methods improve significantly upon prior art.
+
+![image](https://github.com/user-attachments/assets/4ccc0d6e-67ad-4fe9-9844-49b6a17e104c)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.06974) | [⌨️ Code] | [🌐 Project Page](https://mv-dust3rp.github.io/)
 
 
 
