@@ -2353,19 +2353,6 @@ Sparse Multi-view Images can be Learned to predict explicit radiance fields via 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.18072) | [⌨️ Code](https://github.com/yanyan-li/SmileSplat) | [🌐 Project Page](https://yanyan-li.github.io/project/gs/smilesplat)
 
 
-#### <summary>CATSplat: Context-Aware Transformer with Spatial Guidance for Generalizable 3D Gaussian Splatting from A Single-View Image
->*generalizable framework for monocular 3D scene reconstruction*
-
-Authors: Wonseok Roh, Hwanhee Jung, Jong Wook Kim, Seunggwan Lee, Innfarn Yoo, Andreas Lugmayr, Seunggeun Chi, Karthik Ramani, Sangpil Kim
-<details span>
-<summary><b>Abstract</b></summary>
-Recently, generalizable feed-forward methods based on 3D Gaussian Splatting have gained significant attention for their potential to reconstruct 3D scenes using finite resources. These approaches create a 3D radiance field, parameterized by per-pixel 3D Gaussian primitives, from just a few images in a single forward pass. However, unlike multi-view methods that benefit from cross-view correspondences, 3D scene reconstruction with a single-view image remains an underexplored area. In this work, we introduce CATSplat, a novel generalizable transformer-based framework designed to break through the inherent constraints in monocular settings. First, we propose leveraging textual guidance from a visual-language model to complement insufficient information from a single image. By incorporating scene-specific contextual details from text embeddings through cross-attention, we pave the way for context-aware 3D scene reconstruction beyond relying solely on visual cues. Moreover, we advocate utilizing spatial guidance from 3D point features toward comprehensive geometric understanding under single-view settings. With 3D priors, image features can capture rich structural insights for predicting 3D Gaussians without multi-view techniques. Extensive experiments on large-scale datasets demonstrate the state-of-the-art performance of CATSplat in single-view 3D scene reconstruction with high-quality novel view synthesis.
-
-![image](https://github.com/user-attachments/assets/96430bd2-629b-44f8-89ae-6a33968d097b)
-
-</details>
-
-[📃 arXiv:2412](https://arxiv.org/pdf/2412.12906) | [⌨️ Code] | [🌐 Project Page]
 
 
 
@@ -2398,6 +2385,22 @@ Existing sparse-view reconstruction models heavily rely on accurate known camera
 </details>
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.09573) | [⌨️ Code](https://github.com/TencentARC/FreeSplatter) | [🌐 Project Page](https://bluestyle97.github.io/projects/freesplatter/)
+
+
+#### <summary>CATSplat: Context-Aware Transformer with Spatial Guidance for Generalizable 3D Gaussian Splatting from A Single-View Image
+>*generalizable framework for monocular 3D scene reconstruction*
+
+Authors: Wonseok Roh, Hwanhee Jung, Jong Wook Kim, Seunggwan Lee, Innfarn Yoo, Andreas Lugmayr, Seunggeun Chi, Karthik Ramani, Sangpil Kim
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, generalizable feed-forward methods based on 3D Gaussian Splatting have gained significant attention for their potential to reconstruct 3D scenes using finite resources. These approaches create a 3D radiance field, parameterized by per-pixel 3D Gaussian primitives, from just a few images in a single forward pass. However, unlike multi-view methods that benefit from cross-view correspondences, 3D scene reconstruction with a single-view image remains an underexplored area. In this work, we introduce CATSplat, a novel generalizable transformer-based framework designed to break through the inherent constraints in monocular settings. First, we propose leveraging textual guidance from a visual-language model to complement insufficient information from a single image. By incorporating scene-specific contextual details from text embeddings through cross-attention, we pave the way for context-aware 3D scene reconstruction beyond relying solely on visual cues. Moreover, we advocate utilizing spatial guidance from 3D point features toward comprehensive geometric understanding under single-view settings. With 3D priors, image features can capture rich structural insights for predicting 3D Gaussians without multi-view techniques. Extensive experiments on large-scale datasets demonstrate the state-of-the-art performance of CATSplat in single-view 3D scene reconstruction with high-quality novel view synthesis.
+
+![image](https://github.com/user-attachments/assets/96430bd2-629b-44f8-89ae-6a33968d097b)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.12906) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 
