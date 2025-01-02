@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/c4e765c1-8384-4b28-879f-8aa5f163f2a2)# AwesomeGaussian
+# AwesomeGaussian
 
 <br>
 
@@ -838,6 +838,22 @@ Despite the substantial progress of novel view synthesis, existing methods, eith
 </details>
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.03637) | [⌨️ Code](https://github.com/prstrive/SCGaussian/security) | [🌐 Project Page]
+
+#### <summary>SolidGS: Consolidating Gaussian Surfel Splatting for Sparse-View Surface Reconstruction
+>*MVSFormer for initialization? Eq. 6 is interesing*
+
+Authors: Zhuowen Shen, Yuan Liu, Zhang Chen, Zhong Li, Jiepeng Wang, Yongqing Liang, Zhengming Yu, Jingdong Zhang, Yi Xu, Scott Schaefer, Xin Li, Wenping Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Gaussian splatting has achieved impressive improvements for both novel-view synthesis and surface reconstruction from multi-view images. However, current methods still struggle to reconstruct high-quality surfaces from only sparse view input images using Gaussian splatting. In this paper, we propose a novel method called SolidGS to address this problem. We observed that the reconstructed geometry can be severely inconsistent across multi-views, due to the property of Gaussian function in geometry rendering. This motivates us to consolidate all Gaussians by adopting a more solid kernel function, which effectively improves the surface reconstruction quality. With the additional help of geometrical regularization and monocular normal estimation, our method achieves superior performance on the sparse view surface reconstruction than all the Gaussian splatting methods and neural field methods on the widely used DTU, Tanks-and-Temples, and LLFF datasets.
+
+![image](https://github.com/user-attachments/assets/c2a3043f-05bf-43d8-a46b-c9f6a7d49c05)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.15400) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 
 <br>
@@ -2418,6 +2434,20 @@ Recently, generalizable feed-forward methods based on 3D Gaussian Splatting have
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.12906) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>GaussTR: Foundation Model-Aligned Gaussian Transformer for Self-Supervised 3D Spatial Understanding
+> *attains 3D Gaussian representations aligned with knowledge from foundation models, lower densification interval, existing densification method relies solely on Gaussian positional error but ignores appearance, resulting in poor performance in texture-less areas, selectively adds Gaussians only to the most frequently visited regions*
+
+Authors: Haoyi Jiang, Liu Liu, Tianheng Cheng, Xinjie Wang, Tianwei Lin, Zhizhong Su, Wenyu Liu, Xinggang Wang
+<details span>
+<summary><b>Abstract</b></summary>
+3D Semantic Occupancy Prediction is fundamental for spatial understanding as it provides a comprehensive semantic cognition of surrounding environments. However, prevalent approaches primarily rely on extensive labeled data and computationally intensive voxel-based modeling, restricting the scalability and generalizability of 3D representation learning. In this paper, we introduce GaussTR, a novel Gaussian Transformer that leverages alignment with foundation models to advance self-supervised 3D spatial understanding. GaussTR adopts a Transformer architecture to predict sparse sets of 3D Gaussians that represent scenes in a feed-forward manner. Through aligning rendered Gaussian features with diverse knowledge from pre-trained foundation models, GaussTR facilitates the learning of versatile 3D representations and enables open-vocabulary occupancy prediction without explicit annotations. Empirical evaluations on the Occ3D-nuScenes dataset showcase GaussTR's state-of-the-art zero-shot performance, achieving 11.70 mIoU while reducing training duration by approximately 50%. These experimental results highlight the significant potential of GaussTR for scalable and holistic 3D spatial understanding, with promising implications for autonomous driving and embodied agents.
+
+![image](https://github.com/user-attachments/assets/857f96d5-260d-42a9-a7e9-d9275e73f941)
+
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.13193) | [⌨️ Code](https://github.com/hustvl/GaussTR) | [🌐 Project Page]
 
 
 
@@ -5569,6 +5599,9 @@ Recent advances in large-scale pretraining have yielded visual foundation models
 
 
 
+
+
+
 #### <summary>Feat2GS: Probing Visual Foundation Models with Gaussian Splatting
 > *MASt3R*
 
@@ -5623,28 +5656,55 @@ Authors: Luca Savant Aira, Gabriele Facciolo, Thibaud Ehret
 <summary><b>Abstract</b></summary>
 Recently, Gaussian splatting has emerged as a strong alternative to NeRF, demonstrating impressive 3D modeling capabilities while requiring only a fraction of the training and rendering time. In this paper, we show how the standard Gaussian splatting framework can be adapted for remote sensing, retaining its high efficiency. This enables us to achieve state-of-the-art performance in just a few minutes, compared to the day-long optimization required by the best-performing NeRF-based Earth observation methods. The proposed framework incorporates remote-sensing improvements from EO-NeRF, such as radiometric correction and shadow modeling, while introducing novel components, including sparsity, view consistency, and opacity regularizations.
 
-
+![image](https://github.com/user-attachments/assets/72403720-8037-4dc0-a4e0-52c9a945d7e1)
 
 </details>
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.13047) | [⌨️ Code] | [🌐 Project Page]
 
 
-#### <summary>GaussTR: Foundation Model-Aligned Gaussian Transformer for Self-Supervised 3D Spatial Understanding
-> *remote sensing + 3DGS*
+#### <summary>GAGS: Granularity-Aware Feature Distillation for Language Gaussian Splatting
+> *fine-grain feature rendering*
 
-Authors: Haoyi Jiang, Liu Liu, Tianheng Cheng, Xinjie Wang, Tianwei Lin, Zhizhong Su, Wenyu Liu, Xinggang Wang
+Authors: Yuning Peng, Haiping Wang, Yuan Liu, Chenglu Wen, Zhen Dong, Bisheng Yang
 <details span>
 <summary><b>Abstract</b></summary>
-3D Semantic Occupancy Prediction is fundamental for spatial understanding as it provides a comprehensive semantic cognition of surrounding environments. However, prevalent approaches primarily rely on extensive labeled data and computationally intensive voxel-based modeling, restricting the scalability and generalizability of 3D representation learning. In this paper, we introduce GaussTR, a novel Gaussian Transformer that leverages alignment with foundation models to advance self-supervised 3D spatial understanding. GaussTR adopts a Transformer architecture to predict sparse sets of 3D Gaussians that represent scenes in a feed-forward manner. Through aligning rendered Gaussian features with diverse knowledge from pre-trained foundation models, GaussTR facilitates the learning of versatile 3D representations and enables open-vocabulary occupancy prediction without explicit annotations. Empirical evaluations on the Occ3D-nuScenes dataset showcase GaussTR's state-of-the-art zero-shot performance, achieving 11.70 mIoU while reducing training duration by approximately 50%. These experimental results highlight the significant potential of GaussTR for scalable and holistic 3D spatial understanding, with promising implications for autonomous driving and embodied agents.
+3D open-vocabulary scene understanding, which accurately perceives complex semantic properties of objects in space, has gained significant attention in recent years. In this paper, we propose GAGS, a framework that distills 2D CLIP features into 3D Gaussian splatting, enabling open-vocabulary queries for renderings on arbitrary viewpoints. The main challenge of distilling 2D features for 3D fields lies in the multiview inconsistency of extracted 2D features, which provides unstable supervision for the 3D feature field. GAGS addresses this challenge with two novel strategies. First, GAGS associates the prompt point density of SAM with the camera distances, which significantly improves the multiview consistency of segmentation results. Second, GAGS further decodes a granularity factor to guide the distillation process and this granularity factor can be learned in a unsupervised manner to only select the multiview consistent 2D features in the distillation process. Experimental results on two datasets demonstrate significant performance and stability improvements of GAGS in visual grounding and semantic segmentation, with an inference speed 2× faster than baseline methods. 
 
-
+![image](https://github.com/user-attachments/assets/73a9a458-e80a-4e0f-8952-467787a08a68)
 
 </details>
 
-[📃 arXiv:2412](https://arxiv.org/pdf/2412.13193) | [⌨️ Code](https://github.com/hustvl/GaussTR) | [🌐 Project Page]
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.13654) | [⌨️ Code](https://github.com/WHU-USI3DV/GAGS) | [🌐 Project Page](https://pz0826.github.io/GAGS-Webpage/)
 
 
+#### <summary>EnvGS: Modeling View-Dependent Appearance with Environment Gaussian
+> *ray-tracing-based Gaussian renderer to capture the reflection colors*
+
+Authors: Tao Xie, Xi Chen, Zhen Xu, Yiman Xie, Yudong Jin, Yujun Shen, Sida Peng, Hujun Bao, Xiaowei Zhou
+<details span>
+<summary><b>Abstract</b></summary>
+Reconstructing complex reflections in real-world scenes from 2D images is essential for achieving photorealistic novel view synthesis. Existing methods that utilize environment maps to model reflections from distant lighting often struggle with high-frequency reflection details and fail to account for near-field reflections. In this work, we introduce EnvGS, a novel approach that employs a set of Gaussian primitives as an explicit 3D representation for capturing reflections of environments. These environment Gaussian primitives are incorporated with base Gaussian primitives to model the appearance of the whole scene. To efficiently render these environment Gaussian primitives, we developed a ray-tracing-based renderer that leverages the GPU's RT core for fast rendering. This allows us to jointly optimize our model for high-quality reconstruction while maintaining real-time rendering speeds. Results from multiple real-world and synthetic datasets demonstrate that our method produces significantly more detailed reflections, achieving the best rendering quality in real-time novel view synthesis.
+
+![image](https://github.com/user-attachments/assets/ba513008-d908-4a41-9a44-48130ae59d4c)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.15215) | [⌨️ Code](https://github.com/zju3dv/EnvGS) | [🌐 Project Page](https://zju3dv.github.io/envgs/)
+
+#### <summary>LiHi-GS: LiDAR-Supervised Gaussian Splatting for Highway Driving Scene Reconstruction
+> *cool*
+
+Authors: Pou-Chun Kung, Xianling Zhang, Katherine A. Skinner, Nikita Jaipuria
+<details span>
+<summary><b>Abstract</b></summary>
+Photorealistic 3D scene reconstruction plays an important role in autonomous driving, enabling the generation of novel data from existing datasets to simulate safety-critical scenarios and expand training data without additional acquisition costs. Gaussian Splatting (GS) facilitates real-time, photorealistic rendering with an explicit 3D Gaussian representation of the scene, providing faster processing and more intuitive scene editing than the implicit Neural Radiance Fields (NeRFs). While extensive GS research has yielded promising advancements in autonomous driving applications, they overlook two critical aspects: First, existing methods mainly focus on low-speed and feature-rich urban scenes and ignore the fact that highway scenarios play a significant role in autonomous driving. Second, while LiDARs are commonplace in autonomous driving platforms, existing methods learn primarily from images and use LiDAR only for initial estimates or without precise sensor modeling, thus missing out on leveraging the rich depth information LiDAR offers and limiting the ability to synthesize LiDAR data. In this paper, we propose a novel GS method for dynamic scene synthesis and editing with improved scene reconstruction through LiDAR supervision and support for LiDAR rendering. Unlike prior works that are tested mostly on urban datasets, to the best of our knowledge, we are the first to focus on the more challenging and highly relevant highway scenes for autonomous driving, with sparse sensor views and monotone backgrounds. 
+
+![image](https://github.com/user-attachments/assets/38b2553d-b832-445c-b933-aab3416ad7d9)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.15447) | [⌨️ Code] | [🌐 Project Page](https://umautobots.github.io/lihi_gs)
 
 <br>
 <br>
@@ -6211,6 +6271,21 @@ Neural surface reconstruction relies heavily on accurate camera poses as input. 
 </details>
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.13620) | [⌨️ Code] | [🌐 Project Page](https://rsg-nerf.github.io/RSG-NeRF/)
+
+
+#### <summary>RelationField: Relate Anything in Radiance Fields
+> *maybe for 3DGS?*
+
+Authors: Sebastian Koch, Johanna Wald, Mirco Colosi, Narunas Vaskevicius, Pedro Hermosilla, Federico Tombari, Timo Ropinski
+<details span>
+<summary><b>Abstract</b></summary>
+Neural radiance fields are an emerging 3D scene representation and recently even been extended to learn features for scene understanding by distilling open-vocabulary features from vision-language models. However, current method primarily focus on object-centric representations, supporting object segmentation or detection, while understanding semantic relationships between objects remains largely unexplored. To address this gap, we propose RelationField, the first method to extract inter-object relationships directly from neural radiance fields. RelationField represents relationships between objects as pairs of rays within a neural radiance field, effectively extending its formulation to include implicit relationship queries. To teach RelationField complex, open-vocabulary relationships, relationship knowledge is distilled from multi-modal LLMs. To evaluate RelationField, we solve open-vocabulary 3D scene graph generation tasks and relationship-guided instance segmentation, achieving state-of-the-art performance in both tasks.
+
+![image](https://github.com/user-attachments/assets/7185fb32-efa0-4e9d-8551-0fa1982450da)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.13652) | [⌨️ Code] | [🌐 Project Page](https://relationfield.github.io/)
 
 
 <br>
