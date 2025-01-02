@@ -1,4 +1,4 @@
-# AwesomeGaussian
+![image](https://github.com/user-attachments/assets/c4e765c1-8384-4b28-879f-8aa5f163f2a2)# AwesomeGaussian
 
 <br>
 
@@ -1820,6 +1820,23 @@ Applying style transfer to a full 3D environment is a challenging task that has 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.03371) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>EditSplat: Multi-View Fusion and Attention-Guided Optimization for View-Consistent 3D Scene Editing with 3D Gaussian Splatting
+>*Attention Guided Trimming for 3DGS, introduce an Attention-Guided Trimming (AGT) technique that prunes 3D Gaussians with high attention weight and selectively optimizes them, enhancing optimization efficiency and enabling semantic local editing*
+
+Authors: Dong In Lee, Hyeongcheol Park, Jiyoung Seo, Eunbyung Park, Hyunje Park, Ha Dam Baek, Shin Sangheon, Sangmin kim, Sangpil Kim
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advancements in 3D editing have highlighted the potential of text-driven methods in real-time, user-friendly AR/VR applications. However, current methods rely on 2D diffusion models without adequately considering multi-view information, resulting in multi-view inconsistency. While 3D Gaussian Splatting (3DGS) significantly improves rendering quality and speed, its 3D editing process encounters difficulties with inefficient optimization, as pre-trained Gaussians retain excessive source information, hindering optimization. To address these limitations, we propose \textbf{EditSplat}, a novel 3D editing framework that integrates Multi-view Fusion Guidance (MFG) and Attention-Guided Trimming (AGT). Our MFG ensures multi-view consistency by incorporating essential multi-view information into the diffusion process, leveraging classifier-free guidance from the text-to-image diffusion model and the geometric properties of 3DGS. Additionally, our AGT leverages the explicit representation of 3DGS to selectively prune and optimize 3D Gaussians, enhancing optimization efficiency and enabling precise, semantically rich local edits. Through extensive qualitative and quantitative evaluations, EditSplat achieves superior multi-view consistency and editing quality over existing methods, significantly enhancing overall efficiency.
+ 
+![image](https://github.com/user-attachments/assets/de026164-246a-4f10-9b2d-1951bc128fb9)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.11520) | [⌨️ Code] | [🌐 Project Page](https://kuai-lab.github.io/editsplat2024/)
+
+
+
+
 <br>
 <br>
 
@@ -2598,6 +2615,23 @@ We propose a novel cross-spectral rendering framework based on 3D Gaussian Splat
 
 [📃 arXiv:2408](https://arxiv.org/pdf/2408.06975) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>HyperGS: Hyperspectral 3D Gaussian Splatting
+>*integrates view-dependent hyperspectral material information with 3DGS*
+
+Authors: Christopher Thirgood, Oscar Mendez, Erin Chao Ling, Jon Storey, Simon Hadfield
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce HyperGS, a novel framework for Hyperspectral Novel View Synthesis (HNVS), based on a new latent 3D Gaussian Splatting (3DGS) technique. Our approach enables simultaneous spatial and spectral renderings by encoding material properties from multi-view 3D hyperspectral datasets. HyperGS reconstructs high-fidelity views from arbitrary perspectives with improved accuracy and speed, outperforming currently existing methods. To address the challenges of high-dimensional data, we perform view synthesis in a learned latent space, incorporating a pixel-wise adaptive density function and a pruning technique for increased training stability and efficiency. Additionally, we introduce the first HNVS benchmark, implementing a number of new baselines based on recent SOTA RGB-NVS techniques, alongside the small number of prior works on HNVS. We demonstrate HyperGS's robustness through extensive evaluation of real and simulated hyperspectral scenes with a 14db accuracy improvement upon previously published models.
+
+![image](https://github.com/user-attachments/assets/4c4ce979-d888-446b-b13f-9a642ed1d820)
+
+</details>
+
+[📃 arXiv:2408](https://arxiv.org/pdf/2412.12849) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+
 
 <br>
 <br>
@@ -2688,8 +2722,6 @@ Authors: Wenhao Xu, Wenming Weng, Yueyi Zhang, Ruikang Xu, Zhiwei Xiong
 </details>
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.16180) | [⌨ Code] | [🌐 Project Page]
-
-
 
 
 
@@ -5554,6 +5586,64 @@ Given that visual foundation models (VFMs) are trained on extensive datasets but
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.09606) | [⌨️ Code] | [🌐 Project Page](https://fanegg.github.io/Feat2GS/)
 
 
+#### <summary>PanSplat: 4K Panorama Synthesis with Feed-Forward Gaussian Splatting
+> *MVS for depth + feed forward + Panorama*
+
+Authors: Cheng Zhang, Haofei Xu, Qianyi Wu, Camilo Cruz Gambardella, Dinh Phung, Jianfei Cai
+<details span>
+<summary><b>Abstract</b></summary>
+With the advent of portable 360° cameras, panorama has gained significant attention in applications like virtual reality (VR), virtual tours, robotics, and autonomous driving. As a result, wide-baseline panorama view synthesis has emerged as a vital task, where high resolution, fast inference, and memory efficiency are essential. Nevertheless, existing methods are typically constrained to lower resolutions (512 × 1024) due to demanding memory and computational requirements. In this paper, we present PanSplat, a generalizable, feed-forward approach that efficiently supports resolution up to 4K (2048 × 4096). Our approach features a tailored spherical 3D Gaussian pyramid with a Fibonacci lattice arrangement, enhancing image quality while reducing information redundancy. To accommodate the demands of high resolution, we propose a pipeline that integrates a hierarchical spherical cost volume and Gaussian heads with local operations, enabling two-step deferred backpropagation for memory-efficient training on a single A100 GPU. Experiments demonstrate that PanSplat achieves state-of-the-art results with superior efficiency and image quality across both synthetic and real-world datasets. 
+
+![image](https://github.com/user-attachments/assets/4fb5222d-3462-40d3-a861-b7341c1d2066)
+
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.12096) | [⌨️ Code](https://github.com/chengzhag/PanSplat?tab=readme-ov-file) | [🌐 Project Page](https://chengzhag.github.io/publication/pansplat/)
+
+#### <summary>Gaussian Billboards: Expressive 2D Gaussian Splatting with Textures
+> *billboards are more expressive, modulating the color with a uv-parameterized texture, Gaussian Billboards, a modification of 2DGS to add spatially-varying color achieved using per splat texture interpolation. similar with 2411.08508, both using billboards*
+
+Authors: Sebastian Weiss, Derek Bradley
+<details span>
+<summary><b>Abstract</b></summary>
+Gaussian Splatting has recently emerged as the go-to representation for reconstructing and rendering 3D scenes. The transition from 3D to 2D Gaussian primitives has further improved multi-view consistency and surface reconstruction accuracy. In this work we highlight the similarity between 2D Gaussian Splatting (2DGS) and billboards from traditional computer graphics. Both use flat semi-transparent 2D geometry that is positioned, oriented and scaled in 3D space. However 2DGS uses a solid color per splat and an opacity modulated by a Gaussian distribution, where billboards are more expressive, modulating the color with a uv-parameterized texture. We propose to unify these concepts by presenting Gaussian Billboards, a modification of 2DGS to add spatially-varying color achieved using per-splat texture interpolation. The result is a mixture of the two representations, which benefits from both the robust scene optimization power of 2DGS and the expressiveness of texture mapping. We show that our method can improve the sharpness and quality of the scene representation in a wide range of qualitative and quantitative evaluations compared to the original 2DGS implementation.
+
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.12734) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>EOGS: Gaussian Splatting for Earth Observation
+> *remote sensing + 3DGS*
+
+Authors: Luca Savant Aira, Gabriele Facciolo, Thibaud Ehret
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, Gaussian splatting has emerged as a strong alternative to NeRF, demonstrating impressive 3D modeling capabilities while requiring only a fraction of the training and rendering time. In this paper, we show how the standard Gaussian splatting framework can be adapted for remote sensing, retaining its high efficiency. This enables us to achieve state-of-the-art performance in just a few minutes, compared to the day-long optimization required by the best-performing NeRF-based Earth observation methods. The proposed framework incorporates remote-sensing improvements from EO-NeRF, such as radiometric correction and shadow modeling, while introducing novel components, including sparsity, view consistency, and opacity regularizations.
+
+
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.13047) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>GaussTR: Foundation Model-Aligned Gaussian Transformer for Self-Supervised 3D Spatial Understanding
+> *remote sensing + 3DGS*
+
+Authors: Haoyi Jiang, Liu Liu, Tianheng Cheng, Xinjie Wang, Tianwei Lin, Zhizhong Su, Wenyu Liu, Xinggang Wang
+<details span>
+<summary><b>Abstract</b></summary>
+3D Semantic Occupancy Prediction is fundamental for spatial understanding as it provides a comprehensive semantic cognition of surrounding environments. However, prevalent approaches primarily rely on extensive labeled data and computationally intensive voxel-based modeling, restricting the scalability and generalizability of 3D representation learning. In this paper, we introduce GaussTR, a novel Gaussian Transformer that leverages alignment with foundation models to advance self-supervised 3D spatial understanding. GaussTR adopts a Transformer architecture to predict sparse sets of 3D Gaussians that represent scenes in a feed-forward manner. Through aligning rendered Gaussian features with diverse knowledge from pre-trained foundation models, GaussTR facilitates the learning of versatile 3D representations and enables open-vocabulary occupancy prediction without explicit annotations. Empirical evaluations on the Occ3D-nuScenes dataset showcase GaussTR's state-of-the-art zero-shot performance, achieving 11.70 mIoU while reducing training duration by approximately 50%. These experimental results highlight the significant potential of GaussTR for scalable and holistic 3D spatial understanding, with promising implications for autonomous driving and embodied agents.
+
+
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.13193) | [⌨️ Code](https://github.com/hustvl/GaussTR) | [🌐 Project Page]
+
 
 
 <br>
@@ -8033,6 +8123,38 @@ In this paper, we introduce SLAM3R, a novel and effective monocular RGB SLAM sys
 </details>
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.09401) | [⌨️ Code](https://github.com/PKU-VCL-3DV/SLAM3R) | [🌐 Project Page]
+
+
+#### <summary>MASt3R-SLAM: Real-Time Dense SLAM with 3D Reconstruction Priors
+>*MASt3R for SLAM*
+
+Authors: Riku Murai, Eric Dexheimer, Andrew J. Davison
+<details span>
+<summary><b>Abstract</b></summary>
+We present a real-time monocular dense SLAM system designed bottom-up from MASt3R, a two-view 3D reconstruction and matching prior. Equipped with this strong prior, our system is robust on in-the-wild video sequences despite making no assumption on a fixed or parametric camera model beyond a unique camera centre. We introduce efficient methods for pointmap matching, camera tracking and local fusion, graph construction and loop closure, and second-order global optimisation. With known calibration, a simple modification to the system achieves state-of-the-art performance across various benchmarks. Altogether, we propose a plug-and-play monocular SLAM system capable of producing globally-consistent poses and dense geometry while operating at 15 FPS.
+
+![image](https://github.com/user-attachments/assets/416af218-b130-4fe7-a7d0-da858617e28f)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.12392) | [⌨️ Code] | [🌐 Project Page](https://edexheim.github.io/mast3r-slam/)
+
+
+
+
+#### <summary>DVP-MVS: Synergize Depth-Edge and Visibility Prior for Multi-View Stereo
+
+Authors: Zhenlong Yuan, Jinguo Luo, Fei Shen, Zhaoxin Li, Cong Liu, Tianlu Mao, Zhaoqi Wang
+<details span>
+<summary><b>Abstract</b></summary>
+Patch deformation-based methods have recently exhibited substantial effectiveness in multi-view stereo, due to the incorporation of deformable and expandable perception to reconstruct textureless areas. However, such approaches typically focus on exploring correlative reliable pixels to alleviate match ambiguity during patch deformation, but ignore the deformation instability caused by mistaken edge-skipping and visibility occlusion, leading to potential estimation deviation. To remedy the above issues, we propose DVP-MVS, which innovatively synergizes depth-edge aligned and cross-view prior for robust and visibility-aware patch deformation. Specifically, to avoid unexpected edge-skipping, we first utilize Depth Anything V2 followed by the Roberts operator to initialize coarse depth and edge maps respectively, both of which are further aligned through an erosion-dilation strategy to generate fine-grained homogeneous boundaries for guiding patch deformation. In addition, we reform view selection weights as visibility maps and restore visible areas by cross-view depth reprojection, then regard them as cross-view prior to facilitate visibility-aware patch deformation. Finally, we improve propagation and refinement with multi-view geometry consistency by introducing aggregated visible hemispherical normals based on view selection and local projection depth differences based on epipolar lines, respectively. Extensive evaluations on ETH3D and Tanks & Temples benchmarks demonstrate that our method can achieve state-of-the-art performance with excellent robustness and generalization.
+
+![image](https://github.com/user-attachments/assets/a1f64c33-0865-44d1-a8e5-ff38524d39a1)
+
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.11578) | [⌨️ Code] | [🌐 Project Page]
 
 
 
