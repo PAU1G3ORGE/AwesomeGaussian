@@ -5706,6 +5706,22 @@ Photorealistic 3D scene reconstruction plays an important role in autonomous dri
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.15447) | [⌨️ Code] | [🌐 Project Page](https://umautobots.github.io/lihi_gs)
 
+
+#### <summary>CoCoGaussian: Leveraging Circle of Confusion for Gaussian Splatting from Defocused Images
+> *for motion blur*
+
+Authors: Jungho Lee, Suhwan Cho, Taeoh Kim, Ho-Deok Jang, Minhyeok Lee, Geonho Cha, Dongyoon Wee, Dogyoon Lee, Sangyoun Lee
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has attracted significant attention for its high-quality novel view rendering, inspiring research to address real-world challenges. While conventional methods depend on sharp images for accurate scene reconstruction, real-world scenarios are often affected by defocus blur due to finite depth of field, making it essential to account for realistic 3D scene representation. In this study, we propose CoCoGaussian, a Circle of Confusion-aware Gaussian Splatting that enables precise 3D scene representation using only defocused images. CoCoGaussian addresses the challenge of defocus blur by modeling the Circle of Confusion (CoC) through a physically grounded approach based on the principles of photographic defocus. Exploiting 3D Gaussians, we compute the CoC diameter from depth and learnable aperture information, generating multiple Gaussians to precisely capture the CoC shape. Furthermore, we introduce a learnable scaling factor to enhance robustness and provide more flexibility in handling unreliable depth in scenes with reflective or refractive surfaces. Experiments on both synthetic and real-world datasets demonstrate that CoCoGaussian achieves state-of-the-art performance across multiple benchmarks.
+
+![image](https://github.com/user-attachments/assets/ddfa7831-ec2c-4452-aa9d-c1b7592f70fa)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.16028) | [⌨️ Code](https://github.com/Jho-Yonsei/CoCoGaussian) | [🌐 Project Page](https://jho-yonsei.github.io/CoCoGaussian/)
+
+
 <br>
 <br>
 
