@@ -1080,7 +1080,7 @@ Self-supervised learning has made substantial strides in image processing, while
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.12452) | [⌨️ Code](https://github.com/Public-BOTs/GaussianPretrain) | [🌐 Project Page]
 
 #### <summary>4D Scaffold Gaussian Splatting for Memory Efficient Dynamic Scene Reconstruction
-> *dynamic*
+> *dynamic + scaffold GS*
 
 Authors: Woong Oh Cho, In Cho, Seoha Kim, Jeongmin Bae, Youngjung Uh, Seon Joo Kim
 <details span>
@@ -1092,6 +1092,67 @@ Existing 4D Gaussian methods for dynamic scene reconstruction offer high visual 
 </details>
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.17044) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+#### <summary>Pushing Rendering Boundaries: Hard Gaussian Splatting
+> *leverages multi-view significant positional gradients to uncover hard Gaussians, helps to resolve blurring and needle-like artifacts*
+
+Authors: Qingshan Xu, Jiequan Cui, Xuanyu Yi, Yuxuan Wang, Yuan Zhou, Yew-Soon Ong, Hanwang Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has demonstrated impressive Novel View Synthesis (NVS) results in a real-time rendering manner. During training, it relies heavily on the average magnitude of view-space positional gradients to grow Gaussians to reduce rendering loss. However, this average operation smooths the positional gradients from different viewpoints and rendering errors from different pixels, hindering the growth and optimization of many defective Gaussians. This leads to strong spurious artifacts in some areas. To address this problem, we propose Hard Gaussian Splatting, dubbed HGS, which considers multi-view significant positional gradients and rendering errors to grow hard Gaussians that fill the gaps of classical Gaussian Splatting on 3D scenes, thus achieving superior NVS results. In detail, we present positional gradient driven HGS, which leverages multi-view significant positional gradients to uncover hard Gaussians. Moreover, we propose rendering error guided HGS, which identifies noticeable pixel rendering errors and potentially over-large Gaussians to jointly mine hard Gaussians. By growing and optimizing these hard Gaussians, our method helps to resolve blurring and needle-like artifacts. Experiments on various datasets demonstrate that our method achieves state-of-the-art rendering quality while maintaining real-time efficiency.
+ 
+![image](https://github.com/user-attachments/assets/0cb36185-2597-422e-9abe-47a0be878b46)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.04826) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>SfM-Free 3D Gaussian Splatting via Hierarchical Training
+> *merging essential Gaussians from different base 3DGS models*
+
+Authors: Bo Ji, Angela Yao
+<details span>
+<summary><b>Abstract</b></summary>
+Standard 3D Gaussian Splatting (3DGS) relies on known or pre-computed camera poses and a sparse point cloud, obtained from structure-from-motion (SfM) preprocessing, to initialize and grow 3D Gaussians. We propose a novel SfM-Free 3DGS (SFGS) method for video input, eliminating the need for known camera poses and SfM preprocessing. Our approach introduces a hierarchical training strategy that trains and merges multiple 3D Gaussian representations -- each optimized for specific scene regions -- into a single, unified 3DGS model representing the entire scene. To compensate for large camera motions, we leverage video frame interpolation models. Additionally, we incorporate multi-source supervision to reduce overfitting and enhance representation. Experimental results reveal that our approach significantly surpasses state-of-the-art SfM-free novel view synthesis methods. On the Tanks and Temples dataset, we improve PSNR by an average of 2.25dB, with a maximum gain of 3.72dB in the best scene. On the CO3D-V2 dataset, we achieve an average PSNR boost of 1.74dB, with a top gain of 3.90dB.
+ 
+![image](https://github.com/user-attachments/assets/cc2b68dc-5dee-4a2a-8e6b-fe7067d06ae9)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.01553) | [⌨️ Code](https://github.com/jibo27/3DGS_Hierarchical_Training) | [🌐 Project Page]
+
+
+#### <summary>Topology-Aware 3D Gaussian Splatting: Leveraging Persistent Homology for Optimized Structural Integrity
+> *the resulting point clouds from sfm often exhibit notably sparse geometric coverage in areas with low curvature, LPVI adaptively increasing point coverage in these areas*
+
+Authors: Tianqi Shen, Shaohua Liu, Jiaqi Feng, Ziye Ma, Ning An
+<details span>
+<summary><b>Abstract</b></summary>
+Gaussian Splatting (GS) has emerged as a crucial technique for representing discrete volumetric radiance fields. It leverages unique parametrization to mitigate computational demands in scene optimization. This work introduces Topology-Aware 3D Gaussian Splatting (Topology-GS), which addresses two key limitations in current approaches: compromised pixel-level structural integrity due to incomplete initial geometric coverage, and inadequate feature-level integrity from insufficient topological constraints during optimization. To overcome these limitations, Topology-GS incorporates a novel interpolation strategy, Local Persistent Voronoi Interpolation (LPVI), and a topology-focused regularization term based on persistent barcodes, named PersLoss. LPVI utilizes persistent homology to guide adaptive interpolation, enhancing point coverage in low-curvature areas while preserving topological structure. PersLoss aligns the visual perceptual similarity of rendered images with ground truth by constraining distances between their topological features. Comprehensive experiments on three novel-view synthesis benchmarks demonstrate that Topology-GS outperforms existing methods in terms of PSNR, SSIM, and LPIPS metrics, while maintaining efficient memory usage. This study pioneers the integration of topology with 3D-GS, laying the groundwork for future research in this area.
+
+![image](https://github.com/user-attachments/assets/8cdea14c-7da1-4f52-9fbb-171d1b07b334)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.16619) | [⌨️ Code](https://github.com/AmadeusSTQ/Topology-GS/tree/main) | [🌐 Project Page]
+
+#### <summary>GeoTexDensifier: Geometry-Texture-Aware Densification for High-Quality Photorealistic 3D Gaussian Splatting
+> *propose a geometry-aware splitting strategy that takes normal and relative depth priors to more reasonably guide the position*
+
+Authors: Hanqing Jiang, Xiaojun Xiang, Han Sun, Hongjie Li, Liyang Zhou, Xiaoyu Zhang, Guofeng Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has recently attracted wide attentions in various areas such as 3D navigation, Virtual Reality (VR) and 3D simulation, due to its photorealistic and efficient rendering performance. High-quality reconstrution of 3DGS relies on sufficient splats and a reasonable distribution of these splats to fit real geometric surface and texture details, which turns out to be a challenging problem. We present GeoTexDensifier, a novel geometry-texture-aware densification strategy to reconstruct high-quality Gaussian splats which better comply with the geometric structure and texture richness of the scene. Specifically, our GeoTexDensifier framework carries out an auxiliary texture-aware densification method to produce a denser distribution of splats in fully textured areas, while keeping sparsity in low-texture regions to maintain the quality of Gaussian point cloud. Meanwhile, a geometry-aware splitting strategy takes depth and normal priors to guide the splitting sampling and filter out the noisy splats whose initial positions are far from the actual geometric surfaces they aim to fit, under a Validation of Depth Ratio Change checking. With the help of relative monocular depth prior, such geometry-aware validation can effectively reduce the influence of scattered Gaussians to the final rendering quality, especially in regions with weak textures or without sufficient training views. The texture-aware densification and geometry-aware splitting strategies are fully combined to obtain a set of high-quality Gaussian splats. We experiment our GeoTexDensifier framework on various datasets and compare our Novel View Synthesis results to other state-of-the-art 3DGS approaches, with detailed quantitative and qualitative evaluations to demonstrate the effectiveness of our method in producing more photorealistic 3DGS models.
+
+![image](https://github.com/user-attachments/assets/793b9b8b-1208-4228-8823-0c652ba95c6a)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.16809) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 
@@ -1629,6 +1690,35 @@ Authors: Jixuan Fan, Wanhua Li, Yifei Han, Yansong Tang
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.04887) | [⌨️ Code](https://github.com/Jixuan-Fan/Momentum-GS) | [🌐 Project Page](https://jixuan-fan.github.io/Momentum-GS_Page/)
 
 
+#### <summary>CoSurfGS:Collaborative 3D Surface Gaussian Splatting with Distributed Learning for Large Scene Reconstruction
+>*each device is responsible for reconstructing an individual area by capturing images, Model Aggregation Scheme (MAS) module uses a self-distillation technique to aggregate the area into a global area*
+
+Authors: Yuanyuan Gao, Yalun Dai, Hao Li, Weicai Ye, Junyi Chen, Danpeng Chen, Dingwen Zhang, Tong He, Guofeng Zhang, Junwei Han
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has demonstrated impressive performance in scene reconstruction. However, most existing GS-based surface reconstruction methods focus on 3D objects or limited scenes. Directly applying these methods to large-scale scene reconstruction will pose challenges such as high memory costs, excessive time consumption, and lack of geometric detail, which makes it difficult to implement in practical applications. To address these issues, we propose a multi-agent collaborative fast 3DGS surface reconstruction framework based on distributed learning for large-scale surface reconstruction. Specifically, we develop local model compression (LMC) and model aggregation schemes (MAS) to achieve high-quality surface representation of large scenes while reducing GPU memory consumption. Extensive experiments on Urban3d, MegaNeRF, and BlendedMVS demonstrate that our proposed method can achieve fast and scalable high-fidelity surface reconstruction and photorealistic rendering. 
+
+![image](https://github.com/user-attachments/assets/bf66627e-05d1-476f-92d4-f87490c01855)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.17612) | [⌨️ Code](https://github.com/zju3dv/CoSurfGS) | [🌐 Project Page](https://gyy456.github.io/CoSurfGS/)
+
+#### <summary>RSGaussian:3D Gaussian Splatting with LiDAR for Aerial Remote Sensing Novel View Synthesis
+>*LiDAR point clouds for high-precision depth, constrain the densification of the Gaussian distribution based on the long-axis direction of the LiDAR point clouds*
+
+Authors: Yiling Yao, Wenjuan Zhang, Bing Zhang, Bocheng Li, Yaning Wang, Bowen Wang
+<details span>
+<summary><b>Abstract</b></summary>
+This study presents RSGaussian, an innovative novel view synthesis (NVS) method for aerial remote sensing scenes that incorporate LiDAR point cloud as constraints into the 3D Gaussian Splatting method, which ensures that Gaussians grow and split along geometric benchmarks, addressing the overgrowth and floaters issues occurs. Additionally, the approach introduces coordinate transformations with distortion parameters for camera models to achieve pixel-level alignment between LiDAR point clouds and 2D images, facilitating heterogeneous data fusion and achieving the high-precision geo-alignment required in aerial remote sensing. Depth and plane consistency losses are incorporated into the loss function to guide Gaussians towards real depth and plane representations, significantly improving depth estimation accuracy. Experimental results indicate that our approach has achieved novel view synthesis that balances photo-realistic visual quality and high-precision geometric estimation under aerial remote sensing datasets. Finally, we have also established and open-sourced a dense LiDAR point cloud dataset along with its corresponding aerial multi-view images, AIR-LONGYAN.
+
+![image](https://github.com/user-attachments/assets/290b8fa7-329e-4b6c-a958-480c28f97f2e)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.18380) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 <br>
 <br>
@@ -1850,6 +1940,19 @@ Recent advancements in 3D editing have highlighted the potential of text-driven 
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.11520) | [⌨️ Code] | [🌐 Project Page](https://kuai-lab.github.io/editsplat2024/)
 
+#### <summary>GaussianPainter: Painting Point Cloud into 3D Gaussians with Normal Guidance
+>*treat the problem of 3D Gaussian generation as painting given point clouds into 3D Gaussians with a feed forward neural network*
+
+Authors: Jingqiu Zhou, Lue Fan, Xuesong Chen, Linjiang Huang, Si Liu, Hongsheng Li
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper, we present GaussianPainter, the first method to paint a point cloud into 3D Gaussians given a reference image. GaussianPainter introduces an innovative feed-forward approach to overcome the limitations of time-consuming test-time optimization in 3D Gaussian splatting. Our method addresses a critical challenge in the field: the non-uniqueness problem inherent in the large parameter space of 3D Gaussian splatting. This space, encompassing rotation, anisotropic scales, and spherical harmonic coefficients, introduces the challenge of rendering similar images from substantially different Gaussian fields. As a result, feed-forward networks face instability when attempting to directly predict high-quality Gaussian fields, struggling to converge on consistent parameters for a given output. To address this issue, we propose to estimate a surface normal for each point to determine its Gaussian rotation. This strategy enables the network to effectively predict the remaining Gaussian parameters in the constrained space. We further enhance our approach with an appearance injection module, incorporating reference image appearance into Gaussian fields via a multiscale triplane representation. Our method successfully balances efficiency and fidelity in 3D Gaussian generation, achieving high-quality, diverse, and robust 3D content creation from point clouds in a single forward pass.
+ 
+![image](https://github.com/user-attachments/assets/69266865-336f-40ef-b45d-e2ab1da514b4)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.17715) | [⌨️ Code](https://github.com/zhou745/GaussianPainter) | [🌐 Project Page]
 
 
 
@@ -2420,6 +2523,26 @@ Existing sparse-view reconstruction models heavily rely on accurate known camera
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.09573) | [⌨️ Code](https://github.com/TencentARC/FreeSplatter) | [🌐 Project Page](https://bluestyle97.github.io/projects/freesplatter/)
 
 
+
+
+#### <summary>PanSplat: 4K Panorama Synthesis with Feed-Forward Gaussian Splatting
+> *MVS for depth + feed forward + Panorama*
+
+Authors: Cheng Zhang, Haofei Xu, Qianyi Wu, Camilo Cruz Gambardella, Dinh Phung, Jianfei Cai
+<details span>
+<summary><b>Abstract</b></summary>
+With the advent of portable 360° cameras, panorama has gained significant attention in applications like virtual reality (VR), virtual tours, robotics, and autonomous driving. As a result, wide-baseline panorama view synthesis has emerged as a vital task, where high resolution, fast inference, and memory efficiency are essential. Nevertheless, existing methods are typically constrained to lower resolutions (512 × 1024) due to demanding memory and computational requirements. In this paper, we present PanSplat, a generalizable, feed-forward approach that efficiently supports resolution up to 4K (2048 × 4096). Our approach features a tailored spherical 3D Gaussian pyramid with a Fibonacci lattice arrangement, enhancing image quality while reducing information redundancy. To accommodate the demands of high resolution, we propose a pipeline that integrates a hierarchical spherical cost volume and Gaussian heads with local operations, enabling two-step deferred backpropagation for memory-efficient training on a single A100 GPU. Experiments demonstrate that PanSplat achieves state-of-the-art results with superior efficiency and image quality across both synthetic and real-world datasets. 
+
+![image](https://github.com/user-attachments/assets/4fb5222d-3462-40d3-a861-b7341c1d2066)
+
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.12096) | [⌨️ Code](https://github.com/chengzhag/PanSplat?tab=readme-ov-file) | [🌐 Project Page](https://chengzhag.github.io/publication/pansplat/)
+
+
+
+
 #### <summary>CATSplat: Context-Aware Transformer with Spatial Guidance for Generalizable 3D Gaussian Splatting from A Single-View Image
 >*generalizable framework for monocular 3D scene reconstruction*
 
@@ -2448,6 +2571,24 @@ Authors: Haoyi Jiang, Liu Liu, Tianheng Cheng, Xinjie Wang, Tianwei Lin, Zhizhon
 </details>
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.13193) | [⌨️ Code](https://github.com/hustvl/GaussTR) | [🌐 Project Page]
+
+
+
+#### <summary>OmniSplat: Taming Feed-Forward 3D Gaussian Splatting for Omnidirectional Images with Editable Capabilities
+> *feed forward + Omnidirectional Images*
+
+Authors: Suyoung Lee, Jaeyoung Chung, Kihoon Kim, Jaeyoo Huh, Gunhee Lee, Minsoo Lee, Kyoung Mu Lee
+<details span>
+<summary><b>Abstract</b></summary>
+Feed-forward 3D Gaussian Splatting (3DGS) models have gained significant popularity due to their ability to generate scenes immediately without needing per-scene optimization. Although omnidirectional images are getting more popular since they reduce the computation for image stitching to composite a holistic scene, existing feed-forward models are only designed for perspective images. The unique optical properties of omnidirectional images make it difficult for feature encoders to correctly understand the context of the image and make the Gaussian non-uniform in space, which hinders the image quality synthesized from novel views. We propose OmniSplat, a pioneering work for fast feed-forward 3DGS generation from a few omnidirectional images. We introduce Yin-Yang grid and decompose images based on it to reduce the domain gap between omnidirectional and perspective images. The Yin-Yang grid can use the existing CNN structure as it is, but its quasi-uniform characteristic allows the decomposed image to be similar to a perspective image, so it can exploit the strong prior knowledge of the learned feed-forward network. OmniSplat demonstrates higher reconstruction accuracy than existing feed-forward networks trained on perspective images. Furthermore, we enhance the segmentation consistency between omnidirectional images by leveraging attention from the encoder of OmniSplat, providing fast and clean 3DGS editing results.
+
+![image](https://github.com/user-attachments/assets/ff107462-712b-4231-984d-24dc2327164c)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.16604) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 
 
@@ -5521,19 +5662,7 @@ Authors: Alex Hanson, Allen Tu, Geng Lin, Vasu Singla, Matthias Zwicker, Tom Gol
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.00578) | [⌨️ Code] | [🌐 Project Page]
 
-#### <summary>SfM-Free 3D Gaussian Splatting via Hierarchical Training
-> *merging essential Gaussians from different base 3DGS models*
 
-Authors: Bo Ji, Angela Yao
-<details span>
-<summary><b>Abstract</b></summary>
-Standard 3D Gaussian Splatting (3DGS) relies on known or pre-computed camera poses and a sparse point cloud, obtained from structure-from-motion (SfM) preprocessing, to initialize and grow 3D Gaussians. We propose a novel SfM-Free 3DGS (SFGS) method for video input, eliminating the need for known camera poses and SfM preprocessing. Our approach introduces a hierarchical training strategy that trains and merges multiple 3D Gaussian representations -- each optimized for specific scene regions -- into a single, unified 3DGS model representing the entire scene. To compensate for large camera motions, we leverage video frame interpolation models. Additionally, we incorporate multi-source supervision to reduce overfitting and enhance representation. Experimental results reveal that our approach significantly surpasses state-of-the-art SfM-free novel view synthesis methods. On the Tanks and Temples dataset, we improve PSNR by an average of 2.25dB, with a maximum gain of 3.72dB in the best scene. On the CO3D-V2 dataset, we achieve an average PSNR boost of 1.74dB, with a top gain of 3.90dB.
- 
-![image](https://github.com/user-attachments/assets/cc2b68dc-5dee-4a2a-8e6b-fe7067d06ae9)
-
-</details>
-
-[📃 arXiv:2412](https://arxiv.org/pdf/2412.01553) | [⌨️ Code](https://github.com/jibo27/3DGS_Hierarchical_Training) | [🌐 Project Page]
 
 
 #### <summary>RelayGS: Reconstructing Dynamic Scenes with Large-Scale and Complex Motions via Relay Gaussians
@@ -5566,19 +5695,6 @@ Generating high-quality novel view renderings of 3D Gaussian Splatting (3DGS) in
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.03844) | [⌨️ Code](https://github.com/Yeyuqqwx/HybridGS) | [🌐 Project Page](https://gujiaqivadin.github.io/hybridgs/)
 
 
-#### <summary>Pushing Rendering Boundaries: Hard Gaussian Splatting
-> *leverages multi-view significant positional gradients to uncover hard Gaussians, helps to resolve blurring and needle-like artifacts*
-
-Authors: Qingshan Xu, Jiequan Cui, Xuanyu Yi, Yuxuan Wang, Yuan Zhou, Yew-Soon Ong, Hanwang Zhang
-<details span>
-<summary><b>Abstract</b></summary>
-3D Gaussian Splatting (3DGS) has demonstrated impressive Novel View Synthesis (NVS) results in a real-time rendering manner. During training, it relies heavily on the average magnitude of view-space positional gradients to grow Gaussians to reduce rendering loss. However, this average operation smooths the positional gradients from different viewpoints and rendering errors from different pixels, hindering the growth and optimization of many defective Gaussians. This leads to strong spurious artifacts in some areas. To address this problem, we propose Hard Gaussian Splatting, dubbed HGS, which considers multi-view significant positional gradients and rendering errors to grow hard Gaussians that fill the gaps of classical Gaussian Splatting on 3D scenes, thus achieving superior NVS results. In detail, we present positional gradient driven HGS, which leverages multi-view significant positional gradients to uncover hard Gaussians. Moreover, we propose rendering error guided HGS, which identifies noticeable pixel rendering errors and potentially over-large Gaussians to jointly mine hard Gaussians. By growing and optimizing these hard Gaussians, our method helps to resolve blurring and needle-like artifacts. Experiments on various datasets demonstrate that our method achieves state-of-the-art rendering quality while maintaining real-time efficiency.
- 
-![image](https://github.com/user-attachments/assets/0cb36185-2597-422e-9abe-47a0be878b46)
-
-</details>
-
-[📃 arXiv:2412](https://arxiv.org/pdf/2412.04826) | [⌨️ Code] | [🌐 Project Page]
 
 
 
@@ -5619,20 +5735,6 @@ Given that visual foundation models (VFMs) are trained on extensive datasets but
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.09606) | [⌨️ Code] | [🌐 Project Page](https://fanegg.github.io/Feat2GS/)
 
 
-#### <summary>PanSplat: 4K Panorama Synthesis with Feed-Forward Gaussian Splatting
-> *MVS for depth + feed forward + Panorama*
-
-Authors: Cheng Zhang, Haofei Xu, Qianyi Wu, Camilo Cruz Gambardella, Dinh Phung, Jianfei Cai
-<details span>
-<summary><b>Abstract</b></summary>
-With the advent of portable 360° cameras, panorama has gained significant attention in applications like virtual reality (VR), virtual tours, robotics, and autonomous driving. As a result, wide-baseline panorama view synthesis has emerged as a vital task, where high resolution, fast inference, and memory efficiency are essential. Nevertheless, existing methods are typically constrained to lower resolutions (512 × 1024) due to demanding memory and computational requirements. In this paper, we present PanSplat, a generalizable, feed-forward approach that efficiently supports resolution up to 4K (2048 × 4096). Our approach features a tailored spherical 3D Gaussian pyramid with a Fibonacci lattice arrangement, enhancing image quality while reducing information redundancy. To accommodate the demands of high resolution, we propose a pipeline that integrates a hierarchical spherical cost volume and Gaussian heads with local operations, enabling two-step deferred backpropagation for memory-efficient training on a single A100 GPU. Experiments demonstrate that PanSplat achieves state-of-the-art results with superior efficiency and image quality across both synthetic and real-world datasets. 
-
-![image](https://github.com/user-attachments/assets/4fb5222d-3462-40d3-a861-b7341c1d2066)
-
-
-</details>
-
-[📃 arXiv:2412](https://arxiv.org/pdf/2412.12096) | [⌨️ Code](https://github.com/chengzhag/PanSplat?tab=readme-ov-file) | [🌐 Project Page](https://chengzhag.github.io/publication/pansplat/)
 
 #### <summary>Gaussian Billboards: Expressive 2D Gaussian Splatting with Textures
 > *billboards are more expressive, modulating the color with a uv-parameterized texture, Gaussian Billboards, a modification of 2DGS to add spatially-varying color achieved using per splat texture interpolation. similar with 2411.08508, both using billboards*
@@ -5720,6 +5822,38 @@ Authors: Jungho Lee, Suhwan Cho, Taeoh Kim, Ho-Deok Jang, Minhyeok Lee, Geonho C
 </details>
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.16028) | [⌨️ Code](https://github.com/Jho-Yonsei/CoCoGaussian) | [🌐 Project Page](https://jho-yonsei.github.io/CoCoGaussian/)
+
+
+
+#### <summary>GSemSplat: Generalizable Semantic 3D Gaussian Splatting from Uncalibrated Image Pairs
+> *Splatt3R, generalizable 3D semantic field modeling from sparse, uncalibrated (pose-free) images*
+
+Authors: Xingrui Wang, Cuiling Lan, Hanxin Zhu, Zhibo Chen, Yan Lu
+<details span>
+<summary><b>Abstract</b></summary>
+Modeling and understanding the 3D world is crucial for various applications, from augmented reality to robotic navigation. Recent advancements based on 3D Gaussian Splatting have integrated semantic information from multi-view images into Gaussian primitives. However, these methods typically require costly per-scene optimization from dense calibrated images, limiting their practicality. In this paper, we consider the new task of generalizable 3D semantic field modeling from sparse, uncalibrated image pairs. Building upon the Splatt3R architecture, we introduce GSemSplat, a framework that learns open-vocabulary semantic representations linked to 3D Gaussians without the need for per-scene optimization, dense image collections or calibration. To ensure effective and reliable learning of semantic features in 3D space, we employ a dual-feature approach that leverages both region-specific and context-aware semantic features as supervision in the 2D space. This allows us to capitalize on their complementary strengths. Experimental results on the ScanNet++ dataset demonstrate the effectiveness and superiority of our approach compared to the traditional scene-specific method. We hope our work will inspire more research into generalizable 3D understanding.
+
+![image](https://github.com/user-attachments/assets/83823dbf-beb2-4a33-aaa6-fa7e8be072ad)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.16932) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>LangSurf: Language-Embedded Surface Gaussians for 3D Scene Understanding
+> *ensures a more spatially coherent semantic field*
+
+Authors: Hao Li, Roy Qin, Zhengyu Zou, Diqi He, Bohan Li, Bingquan Dai, Dingewn Zhang, Junwei Han
+<details span>
+<summary><b>Abstract</b></summary>
+Applying Gaussian Splatting to perception tasks for 3D scene understanding is becoming increasingly popular. Most existing works primarily focus on rendering 2D feature maps from novel viewpoints, which leads to an imprecise 3D language field with outlier languages, ultimately failing to align objects in 3D space. By utilizing masked images for feature extraction, these approaches also lack essential contextual information, leading to inaccurate feature representation. To this end, we propose a Language-Embedded Surface Field (LangSurf), which accurately aligns the 3D language fields with the surface of objects, facilitating precise 2D and 3D segmentation with text query, widely expanding the downstream tasks such as removal and editing. The core of LangSurf is a joint training strategy that flattens the language Gaussian on the object surfaces using geometry supervision and contrastive losses to assign accurate language features to the Gaussians of objects. In addition, we also introduce the Hierarchical-Context Awareness Module to extract features at the image level for contextual information then perform hierarchical mask pooling using masks segmented by SAM to obtain fine-grained language features in different hierarchies. Extensive experiments on open-vocabulary 2D and 3D semantic segmentation demonstrate that LangSurf outperforms the previous state-of-the-art method LangSplat by a large margin. As shown in Fig. 1, our method is capable of segmenting objects in 3D space, thus boosting the effectiveness of our approach in instance recognition, removal, and editing, which is also supported by comprehensive experiments.
+
+![image](https://github.com/user-attachments/assets/d5e6b3c1-8eee-4ec8-ae10-5afaee9be30c)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.17635) | [⌨️ Code](https://github.com/lifuguan/LangSurf) | [🌐 Project Page](https://langsurf.github.io/)
+
+
 
 
 <br>
