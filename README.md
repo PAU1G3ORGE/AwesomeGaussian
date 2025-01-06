@@ -1155,6 +1155,19 @@ Authors: Hanqing Jiang, Xiaojun Xiang, Han Sun, Hongjie Li, Liyang Zhou, Xiaoyu 
 
 
 
+#### <summary>MaskGaussian: Adaptive 3D Gaussian Representation from Probabilistic Masks
+> *model Gaussians as probabilistic entities rather than permanently removing them. provide the mathematical derivation and analysis for the mask gradient*
+
+Authors: Yifei Liu, Zhihang Zhong, Yifan Zhan, Sheng Xu, Xiao Sun
+<details span>
+<summary><b>Abstract</b></summary>
+While 3D Gaussian Splatting (3DGS) has demonstrated remarkable performance in novel view synthesis and real-time rendering, the high memory consumption due to the use of millions of Gaussians limits its practicality. To mitigate this issue, improvements have been made by pruning unnecessary Gaussians, either through a hand-crafted criterion or by using learned masks. However, these methods deterministically remove Gaussians based on a snapshot of the pruning moment, leading to sub-optimized reconstruction performance from a long-term perspective. To address this issue, we introduce MaskGaussian, which models Gaussians as probabilistic entities rather than permanently removing them, and utilize them according to their probability of existence. To achieve this, we propose a masked-rasterization technique that enables unused yet probabilistically existing Gaussians to receive gradients, allowing for dynamic assessment of their contribution to the evolving scene and adjustment of their probability of existence. Hence, the importance of Gaussians iteratively changes and the pruned Gaussians are selected diversely. Extensive experiments demonstrate the superiority of the proposed method in achieving better rendering quality with fewer Gaussians than previous pruning methods, pruning over 60% of Gaussians on average with only a 0.02 PSNR decline.
+
+![image](https://github.com/user-attachments/assets/e08f81e0-30b4-414b-b1d9-c1be48c83121)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.20522) | [⌨️ Code](https://github.com/kaikai23/MaskGaussian) | [🌐 Project Page]
 
 
 
@@ -2089,7 +2102,44 @@ Recent progress in scene synthesis makes standalone SLAM systems purely based on
 
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.17660) | [⌨️ Code](https://github.com/ChenHoy/DROID-Splat) | [🌐 Project Page]
 
+#### <summary>MVS-GS: High-Quality 3D Gaussian Splatting Mapping via Online Multi-View Stereo
+>*The frontend initially estimates the camera pose of keyframes using SLAM, The backend generates new Gaussian points from the refined depth map and integrates them into the 3DGS model.*
 
+Authors: Byeonggwon Lee, Junkyu Park, Khang Truong Giang, Sungho Jo, Soohwan Song
+<details span>
+<summary><b>Abstract</b></summary>
+This study addresses the challenge of online 3D model generation for neural rendering using an RGB image stream. Previous research has tackled this issue by incorporating Neural Radiance Fields (NeRF) or 3D Gaussian Splatting (3DGS) as scene representations within dense SLAM methods. However, most studies focus primarily on estimating coarse 3D scenes rather than achieving detailed reconstructions. Moreover, depth estimation based solely on images is often ambiguous, resulting in low-quality 3D models that lead to inaccurate renderings. To overcome these limitations, we propose a novel framework for high-quality 3DGS modeling that leverages an online multi-view stereo (MVS) approach. Our method estimates MVS depth using sequential frames from a local time window and applies comprehensive depth refinement techniques to filter out outliers, enabling accurate initialization of Gaussians in 3DGS. Furthermore, we introduce a parallelized backend module that optimizes the 3DGS model efficiently, ensuring timely updates with each new keyframe. Experimental results demonstrate that our method outperforms state-of-the-art dense SLAM methods, particularly excelling in challenging outdoor environments.
+ 
+![image](https://github.com/user-attachments/assets/2b5850be-8f37-41fd-a8eb-159e6ce62bc1)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.19130) | [⌨️ Code](https://github.com/lbg030/MVS-GS) | [🌐 Project Page]
+
+#### <summary>NeRF and Gaussian Splatting SLAM in the Wild
+>*slam. outdoor scenes. traditional SLAM methods struggle with adaptability. Extensive evaluations demonstrate that neural SLAM methods achieve superior robustness, particularly under challenging conditions such as low light, but at a high computational cost. At the same time, traditional methods perform the best across seasons but are highly sensitive to variations in lighting conditions.*
+
+Authors: Fabian Schmidt, Markus Enzweiler, Abhinav Valada
+<details span>
+<summary><b>Abstract</b></summary>
+Navigating outdoor environments with visual Simultaneous Localization and Mapping (SLAM) systems poses significant challenges due to dynamic scenes, lighting variations, and seasonal changes, requiring robust solutions. While traditional SLAM methods struggle with adaptability, deep learning-based approaches and emerging neural radiance fields as well as Gaussian Splatting-based SLAM methods, offer promising alternatives. However, these methods have primarily been evaluated in controlled indoor environments with stable conditions, leaving a gap in understanding their performance in unstructured and variable outdoor settings. This study addresses this gap by evaluating these methods in natural outdoor environments, focusing on camera tracking accuracy, robustness to environmental factors, and computational efficiency, highlighting distinct trade-offs. Extensive evaluations demonstrate that neural SLAM methods achieve superior robustness, particularly under challenging conditions such as low light, but at a high computational cost. At the same time, traditional methods perform the best across seasons but are highly sensitive to variations in lighting conditions. 
+ 
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.03263) | [⌨️ Code](https://github.com/iis-esslingen/nerf-3dgs-benchmark) | [🌐 Project Page]
+
+
+#### <summary>NeRF and Gaussian Splatting SLAM in the Wild
+>*slam. outdoor scenes. traditional SLAM methods struggle with adaptability. Extensive evaluations demonstrate that neural SLAM methods achieve superior robustness, particularly under challenging conditions such as low light, but at a high computational cost. At the same time, traditional methods perform the best across seasons but are highly sensitive to variations in lighting conditions.*
+
+Authors: Fabian Schmidt, Markus Enzweiler, Abhinav Valada
+<details span>
+<summary><b>Abstract</b></summary>
+Navigating outdoor environments with visual Simultaneous Localization and Mapping (SLAM) systems poses significant challenges due to dynamic scenes, lighting variations, and seasonal changes, requiring robust solutions. While traditional SLAM methods struggle with adaptability, deep learning-based approaches and emerging neural radiance fields as well as Gaussian Splatting-based SLAM methods, offer promising alternatives. However, these methods have primarily been evaluated in controlled indoor environments with stable conditions, leaving a gap in understanding their performance in unstructured and variable outdoor settings. This study addresses this gap by evaluating these methods in natural outdoor environments, focusing on camera tracking accuracy, robustness to environmental factors, and computational efficiency, highlighting distinct trade-offs. Extensive evaluations demonstrate that neural SLAM methods achieve superior robustness, particularly under challenging conditions such as low light, but at a high computational cost. At the same time, traditional methods perform the best across seasons but are highly sensitive to variations in lighting conditions. 
+ 
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.03263) | [⌨️ Code](https://github.com/iis-esslingen/nerf-3dgs-benchmark) | [🌐 Project Page]
 
 
 <br>
@@ -2588,6 +2638,35 @@ Feed-forward 3D Gaussian Splatting (3DGS) models have gained significant popular
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.16604) | [⌨️ Code] | [🌐 Project Page]
 
+
+#### <summary>GSemSplat: Generalizable Semantic 3D Gaussian Splatting from Uncalibrated Image Pairs
+> *Splatt3R, generalizable 3D semantic field modeling from sparse, uncalibrated (pose-free) images*
+
+Authors: Xingrui Wang, Cuiling Lan, Hanxin Zhu, Zhibo Chen, Yan Lu
+<details span>
+<summary><b>Abstract</b></summary>
+Modeling and understanding the 3D world is crucial for various applications, from augmented reality to robotic navigation. Recent advancements based on 3D Gaussian Splatting have integrated semantic information from multi-view images into Gaussian primitives. However, these methods typically require costly per-scene optimization from dense calibrated images, limiting their practicality. In this paper, we consider the new task of generalizable 3D semantic field modeling from sparse, uncalibrated image pairs. Building upon the Splatt3R architecture, we introduce GSemSplat, a framework that learns open-vocabulary semantic representations linked to 3D Gaussians without the need for per-scene optimization, dense image collections or calibration. To ensure effective and reliable learning of semantic features in 3D space, we employ a dual-feature approach that leverages both region-specific and context-aware semantic features as supervision in the 2D space. This allows us to capitalize on their complementary strengths. Experimental results on the ScanNet++ dataset demonstrate the effectiveness and superiority of our approach compared to the traditional scene-specific method. We hope our work will inspire more research into generalizable 3D understanding.
+
+![image](https://github.com/user-attachments/assets/83823dbf-beb2-4a33-aaa6-fa7e8be072ad)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.16932) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>CLIP-GS: Unifying Vision-Language Representation with 3D Gaussian Splatting
+> *generating triplets comprising 3DGS, rendered images, and text to enable CLIP-GS to learn unified multimodal representations. Multimodal Retrieval, zero-shot 3D classification, and few-shot 3D classification*
+
+Authors: Siyu Jiao, Haoye Dong, Yuyang Yin, Zequn Jie, Yinlong Qian, Yao Zhao, Humphrey Shi, Yunchao Wei
+<details span>
+<summary><b>Abstract</b></summary>
+Recent works in 3D multimodal learning have made remarkable progress. However, typically 3D multimodal models are only capable of handling point clouds. Compared to the emerging 3D representation technique, 3D Gaussian Splatting (3DGS), the spatially sparse point cloud cannot depict the texture information of 3D objects, resulting in inferior reconstruction capabilities. This limitation constrains the potential of point cloud-based 3D multimodal representation learning. In this paper, we present CLIP-GS, a novel multimodal representation learning framework grounded in 3DGS. We introduce the GS Tokenizer to generate serialized gaussian tokens, which are then processed through transformer layers pre-initialized with weights from point cloud models, resulting in the 3DGS embeddings. CLIP-GS leverages contrastive loss between 3DGS and the visual-text embeddings of CLIP, and we introduce an image voting loss to guide the directionality and convergence of gradient optimization. Furthermore, we develop an efficient way to generate triplets of 3DGS, images, and text, facilitating CLIP-GS in learning unified multimodal representations. Leveraging the well-aligned multimodal representations, CLIP-GS demonstrates versatility and outperforms point cloud-based models on various 3D tasks, including multimodal retrieval, zero-shot, and few-shot classification.
+
+![image](https://github.com/user-attachments/assets/d9f9708d-da2f-4fc7-b35c-5d8bced7264f)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.19142) | [⌨️ Code] | [🌐 Project Page]
 
 
 
@@ -5825,19 +5904,7 @@ Authors: Jungho Lee, Suhwan Cho, Taeoh Kim, Ho-Deok Jang, Minhyeok Lee, Geonho C
 
 
 
-#### <summary>GSemSplat: Generalizable Semantic 3D Gaussian Splatting from Uncalibrated Image Pairs
-> *Splatt3R, generalizable 3D semantic field modeling from sparse, uncalibrated (pose-free) images*
 
-Authors: Xingrui Wang, Cuiling Lan, Hanxin Zhu, Zhibo Chen, Yan Lu
-<details span>
-<summary><b>Abstract</b></summary>
-Modeling and understanding the 3D world is crucial for various applications, from augmented reality to robotic navigation. Recent advancements based on 3D Gaussian Splatting have integrated semantic information from multi-view images into Gaussian primitives. However, these methods typically require costly per-scene optimization from dense calibrated images, limiting their practicality. In this paper, we consider the new task of generalizable 3D semantic field modeling from sparse, uncalibrated image pairs. Building upon the Splatt3R architecture, we introduce GSemSplat, a framework that learns open-vocabulary semantic representations linked to 3D Gaussians without the need for per-scene optimization, dense image collections or calibration. To ensure effective and reliable learning of semantic features in 3D space, we employ a dual-feature approach that leverages both region-specific and context-aware semantic features as supervision in the 2D space. This allows us to capitalize on their complementary strengths. Experimental results on the ScanNet++ dataset demonstrate the effectiveness and superiority of our approach compared to the traditional scene-specific method. We hope our work will inspire more research into generalizable 3D understanding.
-
-![image](https://github.com/user-attachments/assets/83823dbf-beb2-4a33-aaa6-fa7e8be072ad)
-
-</details>
-
-[📃 arXiv:2412](https://arxiv.org/pdf/2412.16932) | [⌨️ Code] | [🌐 Project Page]
 
 #### <summary>LangSurf: Language-Embedded Surface Gaussians for 3D Scene Understanding
 > *ensures a more spatially coherent semantic field*
@@ -5853,6 +5920,94 @@ Applying Gaussian Splatting to perception tasks for 3D scene understanding is be
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.17635) | [⌨️ Code](https://github.com/lifuguan/LangSurf) | [🌐 Project Page](https://langsurf.github.io/)
 
+#### <summary>WeatherGS: 3D Scene Reconstruction in Adverse Weather Conditions via Gaussian Splatting
+> *under adverse weather conditions, text prompt with diffusion for desnow and derain*
+
+Authors: Chenghao Qian, Yuhu Guo, Wenjing Li, Gustav Markkula
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has gained significant attention for 3D scene reconstruction, but still suffers from complex outdoor environments, especially under adverse weather. This is because 3DGS treats the artifacts caused by adverse weather as part of the scene and will directly reconstruct them, largely reducing the clarity of the reconstructed scene. To address this challenge, we propose WeatherGS, a 3DGS-based framework for reconstructing clear scenes from multi-view images under different weather conditions. Specifically, we explicitly categorize the multi-weather artifacts into the dense particles and lens occlusions that have very different characters, in which the former are caused by snowflakes and raindrops in the air, and the latter are raised by the precipitation on the camera lens. In light of this, we propose a dense-to-sparse preprocess strategy, which sequentially removes the dense particles by an Atmospheric Effect Filter (AEF) and then extracts the relatively sparse occlusion masks with a Lens Effect Detector (LED). Finally, we train a set of 3D Gaussians by the processed images and generated masks for excluding occluded areas, and accurately recover the underlying clear scene by Gaussian splatting. We conduct a diverse and challenging benchmark to facilitate the evaluation of 3D reconstruction under complex weather scenarios. Extensive experiments on this benchmark demonstrate that our WeatherGS consistently produces high-quality, clean scenes across various weather scenarios, outperforming existing state-of-the-art methods.
+
+![image](https://github.com/user-attachments/assets/2d9b65fc-e075-4e0e-918d-3cfb723520ab)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.18862) | [⌨️ Code](https://github.com/Jumponthemoon/WeatherGS) | [🌐 Project Page](https://jumponthemoon.github.io/weather-gs/)
+
+
+#### <summary>DAS3R: Dynamics-Aware Gaussian Splatting for Static Scene Reconstruction
+> *predict dynamic mask directly from deep network with image pair as input. The predicted dynamic masks are then used for dynamic-aware Gaussian splatting training*
+
+Authors: Kai Xu, Tze Ho Elden Tse, Jizong Peng, Angela Yao
+<details span>
+<summary><b>Abstract</b></summary>
+We propose a novel framework for scene decomposition and static background reconstruction from everyday videos. By integrating the trained motion masks and modeling the static scene as Gaussian splats with dynamics-aware optimization, our method achieves more accurate background reconstruction results than previous works. Our proposed method is termed DAS3R, an abbreviation for Dynamics-Aware Gaussian Splatting for Static Scene Reconstruction. Compared to existing methods, DAS3R is more robust in complex motion scenarios, capable of handling videos where dynamic objects occupy a significant portion of the scene, and does not require camera pose inputs or point cloud data from SLAM-based methods. We compared DAS3R against recent distractor-free approaches on the DAVIS and Sintel datasets; DAS3R demonstrates enhanced performance and robustness with a margin of more than 2 dB in PSNR.
+
+![image](https://github.com/user-attachments/assets/bd76163c-6dad-438b-b286-763c8b6dd2e6)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.19584) | [⌨️ Code](https://github.com/kai422/das3r) | [🌐 Project Page](https://kai422.github.io/DAS3R/)
+
+#### <summary>KeyGS: A Keyframe-Centric Gaussian Splatting Method for Monocular Image Sequences
+> *initially uses SfM to quickly obtain rough camera poses within seconds, and then refines these poses by leveraging the dense representation in 3DGS. coarse-to-fine frequency-aware densification to reconstruct different levels of details*
+
+Authors: Keng-Wei Chang, Zi-Ming Wang, Shang-Hong Lai
+<details span>
+<summary><b>Abstract</b></summary>
+Reconstructing high-quality 3D models from sparse 2D images has garnered significant attention in computer vision. Recently, 3D Gaussian Splatting (3DGS) has gained prominence due to its explicit representation with efficient training speed and real-time rendering capabilities. However, existing methods still heavily depend on accurate camera poses for reconstruction. Although some recent approaches attempt to train 3DGS models without the Structure-from-Motion (SfM) preprocessing from monocular video datasets, these methods suffer from prolonged training times, making them impractical for many applications.
+In this paper, we present an efficient framework that operates without any depth or matching model. Our approach initially uses SfM to quickly obtain rough camera poses within seconds, and then refines these poses by leveraging the dense representation in 3DGS. This framework effectively addresses the issue of long training times. Additionally, we integrate the densification process with joint refinement and propose a coarse-to-fine frequency-aware densification to reconstruct different levels of details. This approach prevents camera pose estimation from being trapped in local minima or drifting due to high-frequency signals. Our method significantly reduces training time from hours to minutes while achieving more accurate novel view synthesis and camera pose estimation compared to previous methods.
+
+![image](https://github.com/user-attachments/assets/0b2aea15-71a5-45bf-8a5a-fcacc97ccc04)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.20767) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>DSplats: 3D Generation by Denoising Splats-Based Multiview Diffusion Models
+> *incorporate a pretrained Latent Diffusion Model into the reconstructor backbone to predict a set of 3D Gaussians. the explicit 3D representation embedded in the denoising network provides a strong inductive bias, ensuring geometrically consistent novel view generation*
+
+Authors: Kevin Miao, Harsh Agrawal, Qihang Zhang, Federico Semeraro, Marco Cavallo, Jiatao Gu, Alexander Toshev
+<details span>
+<summary><b>Abstract</b></summary>
+Generating high-quality 3D content requires models capable of learning robust distributions of complex scenes and the real-world objects within them. Recent Gaussian-based 3D reconstruction techniques have achieved impressive results in recovering high-fidelity 3D assets from sparse input images by predicting 3D Gaussians in a feed-forward manner. However, these techniques often lack the extensive priors and expressiveness offered by Diffusion Models. On the other hand, 2D Diffusion Models, which have been successfully applied to denoise multiview images, show potential for generating a wide range of photorealistic 3D outputs but still fall short on explicit 3D priors and consistency. In this work, we aim to bridge these two approaches by introducing DSplats, a novel method that directly denoises multiview images using Gaussian Splat-based Reconstructors to produce a diverse array of realistic 3D assets. To harness the extensive priors of 2D Diffusion Models, we incorporate a pretrained Latent Diffusion Model into the reconstructor backbone to predict a set of 3D Gaussians. Additionally, the explicit 3D representation embedded in the denoising network provides a strong inductive bias, ensuring geometrically consistent novel view generation. Our qualitative and quantitative experiments demonstrate that DSplats not only produces high-quality, spatially consistent outputs, but also sets a new standard in single-image to 3D reconstruction. When evaluated on the Google Scanned Objects dataset, DSplats achieves a PSNR of 20.38, an SSIM of 0.842, and an LPIPS of 0.109.
+
+![image](https://github.com/user-attachments/assets/0ce02fa4-4c18-4663-ba3f-edd67b89f661)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.09648) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>GaussianProperty: Integrating Physical Properties to 3D Gaussians with LMMs
+> *Estimating physical properties by foundation model*
+
+Authors: Xinli Xu, Wenhang Ge, Dicong Qiu, ZhiFei Chen, Dongyu Yan, Zhuoyun Liu, Haoyu Zhao, Hanfeng Zhao, Shunsi Zhang, Junwei Liang, Ying-Cong Chen
+<details span>
+<summary><b>Abstract</b></summary>
+Estimating physical properties for visual data is a crucial task in computer vision, graphics, and robotics, underpinning applications such as augmented reality, physical simulation, and robotic grasping. However, this area remains under-explored due to the inherent ambiguities in physical property estimation. To address these challenges, we introduce GaussianProperty, a training-free framework that assigns physical properties of materials to 3D Gaussians. Specifically, we integrate the segmentation capability of SAM with the recognition capability of GPT-4V(ision) to formulate a global-local physical property reasoning module for 2D images. Then we project the physical properties from multi-view 2D images to 3D Gaussians using a voting strategy. We demonstrate that 3D Gaussians with physical property annotations enable applications in physics-based dynamic simulation and robotic grasping. For physics-based dynamic simulation, we leverage the Material Point Method (MPM) for realistic dynamic simulation. For robot grasping, we develop a grasping force prediction strategy that estimates a safe force range required for object grasping based on the estimated physical properties. Extensive experiments on material segmentation, physics-based dynamic simulation, and robotic grasping validate the effectiveness of our proposed method, highlighting its crucial role in understanding physical properties from visual data. 
+
+![image](https://github.com/user-attachments/assets/7025fa49-71a5-4550-80a0-9987a4a7a7f3)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.11258) | [⌨️ Code](https://github.com/xxlbigbrother/Gaussian-Property) | [🌐 Project Page](https://gaussian-property.github.io/)
+
+
+
+#### <summary>ActiveGS: Active Scene Reconstruction using Gaussian Splatting
+> *an effective confidence modelling technique for the Gaussian splatting map to identify under-reconstructed areas, while utilising spatial information from the voxel map to target unexplored areas and assist in collision-free path planning*
+
+Authors: Liren Jin, Xingguang Zhong, Yue Pan, Jens Behley, Cyrill Stachniss, Marija Popović
+<details span>
+<summary><b>Abstract</b></summary>
+Robotics applications often rely on scene reconstructions to enable downstream tasks. In this work, we tackle the challenge of actively building an accurate map of an unknown scene using an on-board RGB-D camera. We propose a hybrid map representation that combines a Gaussian splatting map with a coarse voxel map, leveraging the strengths of both representations: the high-fidelity scene reconstruction capabilities of Gaussian splatting and the spatial modelling strengths of the voxel map. The core of our framework is an effective confidence modelling technique for the Gaussian splatting map to identify under-reconstructed areas, while utilising spatial information from the voxel map to target unexplored areas and assist in collision-free path planning. By actively collecting scene information in under-reconstructed and unexplored areas for map updates, our approach achieves superior Gaussian splatting reconstruction results compared to state-of-the-art approaches. Additionally, we demonstrate the applicability of our active scene reconstruction framework in the real world using an unmanned aerial vehicle.
+
+![image](https://github.com/user-attachments/assets/7d8da2bb-0069-486d-b924-16cb4760c851)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.17769) | [⌨️ Code](https://github.com/dmar-bonn/active-gs) | [🌐 Project Page]
 
 
 
@@ -8381,6 +8536,35 @@ Patch deformation-based methods have recently exhibited substantial effectivenes
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.11578) | [⌨️ Code] | [🌐 Project Page]
 
+
+#### <summary>Explanatory Instructions: Towards Unified Vision Tasks Understanding and Zero-shot Generalization
+>*previous terminological instructions are consisted of discrete and symbolic task definitions that do not convey the objective behind each task, clarify the true objectives of various vision tasks. construct the Dataset of Explanatory Computer Vison Tasks (DECVT) that contains 12 million “image input → explanatory instruction → output” triplets*
+
+Authors: Yang Shen, Xiu-Shen Wei, Yifan Sun, Yuxin Song, Tao Yuan, Jian Jin, Heyang Xu, Yazhou Yao, Errui Ding
+<details span>
+<summary><b>Abstract</b></summary>
+Computer Vision (CV) has yet to fully achieve the zero-shot task generalization observed in Natural Language Processing (NLP), despite following many of the milestones established in NLP, such as large transformer models, extensive pre-training, and the auto-regression paradigm, among others. In this paper, we explore the idea that CV adopts discrete and terminological task definitions (\eg, ``image segmentation''), which may be a key barrier to zero-shot task generalization. Our hypothesis is that without truly understanding previously-seen tasks--due to these terminological definitions--deep models struggle to generalize to novel tasks. To verify this, we introduce Explanatory Instructions, which provide an intuitive way to define CV task objectives through detailed linguistic transformations from input images to outputs. We create a large-scale dataset comprising 12 million ``image input → explanatory instruction → output'' triplets, and train an auto-regressive-based vision-language model (AR-based VLM) that takes both images and explanatory instructions as input. By learning to follow these instructions, the AR-based VLM achieves instruction-level zero-shot capabilities for previously-seen tasks and demonstrates strong zero-shot generalization for unseen CV tasks.
+
+![image](https://github.com/user-attachments/assets/83885b9d-f7b5-4e15-a244-514059814c06)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.18525) | [⌨️ Code](https://github.com/SEU-VIPGroup/Understanding_Vision_Tasks) | [🌐 Project Page]
+
+
+
+#### <summary>Cross-View Image Set Geo-Localization
+
+Authors: Qiong Wu, Panwang Xia, Lei Yu, Yi Liu, Mingtao Xiong, Liheng Zhong, Jingdong Chen, Ming Yang, Yongjun Zhang, Yi Wan
+<details span>
+<summary><b>Abstract</b></summary>
+Cross-view geo-localization (CVGL) has been widely applied in fields such as robotic navigation and augmented reality. Existing approaches primarily use single images or fixed-view image sequences as queries, which limits perspective diversity. In contrast, when humans determine their location visually, they typically move around to gather multiple perspectives. This behavior suggests that integrating diverse visual cues can improve geo-localization reliability. Therefore, we propose a novel task: Cross-View Image Set Geo-Localization (Set-CVGL), which gathers multiple images with diverse perspectives as a query set for localization. To support this task, we introduce SetVL-480K, a benchmark comprising 480,000 ground images captured worldwide and their corresponding satellite images, with each satellite image corresponds to an average of 40 ground images from varied perspectives and locations. Furthermore, we propose FlexGeo, a flexible method designed for Set-CVGL that can also adapt to single-image and image-sequence inputs. FlexGeo includes two key modules: the Similarity-guided Feature Fuser (SFF), which adaptively fuses image features without prior content dependency, and the Individual-level Attributes Learner (IAL), leveraging geo-attributes of each image for comprehensive scene perception. FlexGeo consistently outperforms existing methods on SetVL-480K and two public datasets, SeqGeo and KITTI-CVL, achieving a localization accuracy improvement of over 22% on SetVL-480K.
+
+![image](https://github.com/user-attachments/assets/b11c2ee5-a669-4511-9090-e1057921dd62)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.18852) | [⌨️ Code](https://github.com/SEU-VIPGroup/Understanding_Vision_Tasks) | [🌐 Project Page]
 
 
 
