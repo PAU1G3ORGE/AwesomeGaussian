@@ -8537,6 +8537,25 @@ Patch deformation-based methods have recently exhibited substantial effectivenes
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.11578) | [⌨️ Code] | [🌐 Project Page]
 
 
+
+#### <summary>DINO-Foresight: Looking into the Future with DINO
+>*the intermediate features within our masked transformer can further improve the performance of downstream tasks. This finding illustrates the promise of our method as a self-supervised visual learning strategy that enhances the already strong VFM features*
+
+Authors: Efstathios Karypidis, Ioannis Kakogeorgiou, Spyros Gidaris, Nikos Komodakis
+<details span>
+<summary><b>Abstract</b></summary>
+Predicting future dynamics is crucial for applications like autonomous driving and robotics, where understanding the environment is key. Existing pixel-level methods are computationally expensive and often focus on irrelevant details. To address these challenges, we introduce DINO-Foresight, a novel framework that operates in the semantic feature space of pretrained Vision Foundation Models (VFMs). Our approach trains a masked feature transformer in a self-supervised manner to predict the evolution of VFM features over time. By forecasting these features, we can apply off-the-shelf, task-specific heads for various scene understanding tasks. In this framework, VFM features are treated as a latent space, to which different heads attach to perform specific tasks for future-frame analysis. Extensive experiments show that our framework outperforms existing methods, demonstrating its robustness and scalability. Additionally, we highlight how intermediate transformer representations in DINO-Foresight improve downstream task performance, offering a promising path for the self-supervised enhancement of VFM features.
+
+![image](https://github.com/user-attachments/assets/b9751a43-b6a1-4d5f-8e0e-f94a873cb2cb)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.11673) | [⌨️ Code](https://github.com/Sta8is/DINO-Foresight) | [🌐 Project Page]
+
+
+
+
+
 #### <summary>Explanatory Instructions: Towards Unified Vision Tasks Understanding and Zero-shot Generalization
 >*previous terminological instructions are consisted of discrete and symbolic task definitions that do not convey the objective behind each task, clarify the true objectives of various vision tasks. construct the Dataset of Explanatory Computer Vison Tasks (DECVT) that contains 12 million “image input → explanatory instruction → output” triplets*
 
