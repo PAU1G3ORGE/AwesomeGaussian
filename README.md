@@ -2670,6 +2670,23 @@ Recent works in 3D multimodal learning have made remarkable progress. However, t
 
 
 
+#### <summary>OVGaussian: Generalizable 3D Gaussian Segmentation with Open Vocabularies
+> *Generalizable Semantic Rasterization augments each 3D Gaussian with a semantic vector that carries consistent semantic information across scenes. GSR employs a multi-granularity fusion 3D neural network to predict this semantic vector for each Gaussian, facilitating multi-view consistent semantic rendering and establishing a shared semantic space across diverse scenes*
+
+Authors: Runnan Chen, Xiangyu Sun, Zhaoqing Wang, Youquan Liu, Jiepeng Wang, Lingdong Kong, Jiankang Deng, Mingming Gong, Liang Pan, Wenping Wang, Tongliang Liu
+<details span>
+<summary><b>Abstract</b></summary>
+Open-vocabulary scene understanding using 3D Gaussian (3DGS) representations has garnered considerable attention. However, existing methods mostly lift knowledge from large 2D vision models into 3DGS on a scene-by-scene basis, restricting the capabilities of open-vocabulary querying within their training scenes so that lacking the generalizability to novel scenes. In this work, we propose \textbf{OVGaussian}, a generalizable \textbf{O}pen-\textbf{V}ocabulary 3D semantic segmentation framework based on the 3D \textbf{Gaussian} representation. We first construct a large-scale 3D scene dataset based on 3DGS, dubbed \textbf{SegGaussian}, which provides detailed semantic and instance annotations for both Gaussian points and multi-view images. To promote semantic generalization across scenes, we introduce Generalizable Semantic Rasterization (GSR), which leverages a 3D neural network to learn and predict the semantic property for each 3D Gaussian point, where the semantic property can be rendered as multi-view consistent 2D semantic maps. In the next, we propose a Cross-modal Consistency Learning (CCL) framework that utilizes open-vocabulary annotations of 2D images and 3D Gaussians within SegGaussian to train the 3D neural network capable of open-vocabulary semantic segmentation across Gaussian-based 3D scenes. Experimental results demonstrate that OVGaussian significantly outperforms baseline methods, exhibiting robust cross-scene, cross-domain, and novel-view generalization capabilities. 
+
+![image](https://github.com/user-attachments/assets/2122176f-85f7-462a-a432-9b1258057d0e)
+
+</details>
+
+[📃 arXiv:2501](https://arxiv.org/pdf/2501.00326) | [⌨️ Code](https://github.com/runnanchen/OVGaussian) | [🌐 Project Page]
+
+
+
+
 
 <br>
 <br>
