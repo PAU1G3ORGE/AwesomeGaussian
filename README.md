@@ -1170,6 +1170,22 @@ While 3D Gaussian Splatting (3DGS) has demonstrated remarkable performance in no
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.20522) | [⌨️ Code](https://github.com/kaikai23/MaskGaussian) | [🌐 Project Page]
 
 
+#### <summary>EasySplat: View-Adaptive Learning makes 3D Gaussian Splatting Easy
+> *an adaptive densification strategy using KNN algorithm*
+
+Authors: Ao Gao, Luosong Guo, Tao Chen, Zhao Wang, Ying Tai, Jian Yang, Zhenyu Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) techniques have achieved satisfactory 3D scene representation. Despite their impressive performance, they confront challenges due to the limitation of structure-from-motion (SfM) methods on acquiring accurate scene initialization, or the inefficiency of densification strategy. In this paper, we introduce a novel framework EasySplat to achieve high-quality 3DGS modeling. Instead of using SfM for scene initialization, we employ a novel method to release the power of large-scale pointmap approaches. Specifically, we propose an efficient grouping strategy based on view similarity, and use robust pointmap priors to obtain high-quality point clouds and camera poses for 3D scene initialization. After obtaining a reliable scene structure, we propose a novel densification approach that adaptively splits Gaussian primitives based on the average shape of neighboring Gaussian ellipsoids, utilizing KNN scheme. In this way, the proposed method tackles the limitation on initialization and optimization, leading to an efficient and accurate 3DGS modeling. Extensive experiments demonstrate that EasySplat outperforms the current state-of-the-art (SOTA) in handling novel view synthesis.
+
+![image](https://github.com/user-attachments/assets/76cd0008-663f-4bd8-ad91-e1085e3c2d74)
+
+</details>
+
+[📃 arXiv:2501](https://arxiv.org/pdf/2501.01003) | [⌨️ Code] | [🌐 Project Page]
+
+
+
 
 <br>
 <br>
@@ -6025,6 +6041,7 @@ Robotics applications often rely on scene reconstructions to enable downstream t
 </details>
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.17769) | [⌨️ Code](https://github.com/dmar-bonn/active-gs) | [🌐 Project Page]
+
 
 
 
