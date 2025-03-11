@@ -5492,6 +5492,21 @@ Authors: Florian Hahlbohm, Fabian Friederichs, Tim Weyrich, Linus Franke, Moritz
 [📃 arXiv:2410](https://arxiv.org/pdf/2410.08129) | [⌨️ Code] | [🌐 Project Page](https://fhahlbohm.github.io/htgs/)
 
 
+#### <summary>3DGS-Enhancer: Enhancing Unbounded 3D Gaussian Splatting with View-consistent 2D Diffusion Priors
+>*we observed that well-reconstructed areas are typically represented by Gaussians with very small volumes, calculated using the scaling vector s*
+
+Authors: Xi Liu, Chaoyi Zhou, Siyu Huang
+<details span>
+<summary><b>Abstract</b></summary>
+Novel-view synthesis aims to generate novel views of a scene from multiple input images or videos, and recent advancements like 3D Gaussian splatting (3DGS) have achieved notable success in producing photorealistic renderings with efficient pipelines. However, generating high-quality novel views under challenging settings, such as sparse input views, remains difficult due to insufficient information in under-sampled areas, often resulting in noticeable artifacts. This paper presents 3DGS-Enhancer, a novel pipeline for enhancing the representation quality of 3DGS representations. We leverage 2D video diffusion priors to address the challenging 3D view consistency problem, reformulating it as achieving temporal consistency within a video generation process. 3DGS-Enhancer restores view-consistent latent features of rendered novel views and integrates them with the input views through a spatial-temporal decoder. The enhanced views are then used to fine-tune the initial 3DGS model, significantly improving its rendering performance. Extensive experiments on large-scale datasets of unbounded scenes demonstrate that 3DGS-Enhancer yields superior reconstruction performance and high-fidelity rendering results compared to state-of-the-art methods. 
+
+![image](https://github.com/user-attachments/assets/556c6bd1-b185-49c6-82d1-31bb6c948e32)
+
+</details>
+
+[📃 arXiv:2410](https://arxiv.org/pdf/2410.16266) | [⌨️ Code](https://github.com/xiliu8006/3DGS-Enhancer) | [🌐 Project Page](https://xiliu8006.github.io/3DGS-Enhancer-project/)
+
+
 #### <summary>AG-SLAM: Active Gaussian Splatting SLAM
 >*The best path and action along the path is selected with respect to both the information gain and localization accuracy. Frontier-based exploration, view selection*
 
