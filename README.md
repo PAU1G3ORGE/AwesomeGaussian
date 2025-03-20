@@ -6089,6 +6089,19 @@ Recently, Gaussian splatting has emerged as a robust technique for representing 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.11752) | [⌨️ Code](https://github.com/VAST-AI-Research/Deformable-Radial-Kernel-Splatting) | [🌐 Project Page](https://yihua7.github.io/DRK-web/)
 
 
+#### <summary>Stable Virtual Camera: Generative View Synthesis with Diffusion Models
+> *Existing works struggle to generate either large viewpoint changes or temporally smooth samples, while relying on specific task configurations. our method can generate high-quality videos lasting up to half a minute with seamless loop closure*
+
+Authors: Jensen (Jinghao)Zhou, Hang Gao, Vikram Voleti, Aaryaman Vasishta, Chun-Han Yao, Mark Boss, Philip Torr, Christian Rupprecht, Varun Jampani
+<details span>
+<summary><b>Abstract</b></summary>
+We present Stable Virtual Camera (Seva), a generalist diffusion model that creates novel views of a scene, given any number of input views and target cameras. Existing works struggle to generate either large viewpoint changes or temporally smooth samples, while relying on specific task configurations. Our approach overcomes these limitations through simple model design, optimized training recipe, and flexible sampling strategy that generalize across view synthesis tasks at test time. As a result, our samples maintain high consistency without requiring additional 3D representation-based distillation, thus streamlining view synthesis in the wild. Furthermore, we show that our method can generate high-quality videos lasting up to half a minute with seamless loop closure. Extensive benchmarking demonstrates that Seva outperforms existing methods across different datasets and settings.
+
+![image](https://github.com/user-attachments/assets/2faea9e9-bc8f-4f2f-b699-26b4e7bc34f5)
+
+</details>
+
+[📃 arXiv:2503](https://arxiv.org/pdf/2503.14489) | [⌨️ Code](https://github.com/Stability-AI/stable-virtual-camera/tree/main) | [🌐 Project Page](https://stable-virtual-camera.github.io/)
 
 
 
