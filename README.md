@@ -1139,6 +1139,23 @@ Gaussian Splatting (GS) has emerged as a crucial technique for representing disc
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.16619) | [⌨️ Code](https://github.com/AmadeusSTQ/Topology-GS/tree/main) | [🌐 Project Page]
 
+
+#### <summary>Radiant Foam: Real-Time Differentiable Ray Tracing
+> *fill the space with Voronoi patterns*
+
+Authors: Shrisudhan Govindarajan, Daniel Rebain, Kwang Moo Yi, Andrea Tagliasacchi
+<details span>
+<summary><b>Abstract</b></summary>
+Research on differentiable scene representations is consistently moving towards more efficient, real-time models. Recently, this has led to the popularization of splatting methods, which eschew the traditional ray-based rendering of radiance fields in favor of rasterization. This has yielded a significant improvement in rendering speeds due to the efficiency of rasterization algorithms and hardware, but has come at a cost: the approximations that make rasterization efficient also make implementation of light transport phenomena like reflection and refraction much more difficult. We propose a novel scene representation which avoids these approximations, but keeps the efficiency and reconstruction quality of splatting by leveraging a decades-old efficient volumetric mesh ray tracing algorithm which has been largely overlooked in recent computer vision research. The resulting model, which we name Radiant Foam, achieves rendering speed and quality comparable to Gaussian Splatting, without the constraints of rasterization. Unlike ray traced Gaussian models that use hardware ray tracing acceleration, our method requires no special hardware or APIs beyond the standard features of a programmable GPU.
+
+![image](https://github.com/user-attachments/assets/9ccacecf-6d84-4b0d-bb62-61a08151ae76)
+
+</details>
+
+[📃 arXiv:2502](https://arxiv.org/pdf/2502.01157) | [⌨️ Code](https://github.com/theialab/radfoam) | [🌐 Project Page](https://radfoam.github.io/)
+
+
+
 #### <summary>GeoTexDensifier: Geometry-Texture-Aware Densification for High-Quality Photorealistic 3D Gaussian Splatting
 > *propose a geometry-aware splitting strategy that takes normal and relative depth priors to more reasonably guide the position*
 
@@ -5021,7 +5038,7 @@ Authors: Yichen Zhang, Zihan Wang, Jiali Han, Peilin Li, Jiaxun Zhang, Jianqiang
 
 
 #### <summary>GStex: Per-Primitive Texturing of 2D Gaussian Splatting for Decoupled Appearance and Geometry Modeling
-> *Conventional graphics representations have a clear separation between appearance and geometry. For example, vertices and faces of a triangle mesh are used to parameterize geometry, and a 2D texture map is used to parameterize appearance. decouples appearance and geometry through use of per-Gaussian texture maps. each Gaussian represents a single viewdependent color, many Gaussians are needed to model regions of a scene with high-frequency texture or spatially varying reflectance—even if the underlying geometry is simple.*
+> *Conventional graphics representations have a clear separation between appearance and geometry. For example, vertices and faces of a triangle mesh are used to parameterize geometry, and a 2D texture map is used to parameterize appearance. decouples appearance and geometry through use of per-Gaussian texture maps. each Gaussian represents a single view dependent color, many Gaussians are needed to model regions of a scene with high-frequency texture or spatially varying reflectance—even if the underlying geometry is simple.*
 
 Authors: Victor Rong, Jingxiang Chen, Sherwin Bahmani, Kiriakos N. Kutulakos, David B. Lindell
 <details span>
@@ -6044,7 +6061,7 @@ Estimating physical properties for visual data is a crucial task in computer vis
 
 
 #### <summary>ActiveGS: Active Scene Reconstruction using Gaussian Splatting
-> *an effective confidence modelling technique for the Gaussian splatting map to identify under-reconstructed areas, while utilising spatial information from the voxel map to target unexplored areas and assist in collision-free path planning*
+> *an effective confidence modeling technique for the Gaussian splatting map to identify under-reconstructed areas, while utilising spatial information from the voxel map to target unexplored areas and assist in collision-free path planning*
 
 Authors: Liren Jin, Xingguang Zhong, Yue Pan, Jens Behley, Cyrill Stachniss, Marija Popović
 <details span>
@@ -6056,6 +6073,21 @@ Robotics applications often rely on scene reconstructions to enable downstream t
 </details>
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.17769) | [⌨️ Code](https://github.com/dmar-bonn/active-gs) | [🌐 Project Page]
+
+#### <summary>Deformable Radial Kernel Splatting
+> *Gaussians’ inherent radial symmetry and smoothness constraints limit their ability to represent complex shapes. Through learnable radial bases with adjustable angles and scales, DRK efficiently models diverse shape primitives while enabling precise control over edge sharpness and boundary curvature*
+
+Authors: Yi-Hua Huang, Ming-Xian Lin, Yang-Tian Sun, Ziyi Yang, Xiaoyang Lyu, Yan-Pei Cao, Xiaojuan Qi
+<details span>
+<summary><b>Abstract</b></summary>
+Recently, Gaussian splatting has emerged as a robust technique for representing 3D scenes, enabling real-time rasterization and high-fidelity rendering. However, Gaussians' inherent radial symmetry and smoothness constraints limit their ability to represent complex shapes, often requiring thousands of primitives to approximate detailed geometry. We introduce Deformable Radial Kernel (DRK), which extends Gaussian splatting into a more general and flexible framework. Through learnable radial bases with adjustable angles and scales, DRK efficiently models diverse shape primitives while enabling precise control over edge sharpness and boundary curvature. iven DRK's planar nature, we further develop accurate ray-primitive intersection computation for depth sorting and introduce efficient kernel culling strategies for improved rasterization efficiency. Extensive experiments demonstrate that DRK outperforms existing methods in both representation efficiency and rendering quality, achieving state-of-the-art performance while dramatically reducing primitive count.
+
+![image](https://github.com/user-attachments/assets/5cfdc54c-9c33-495b-877c-59006b3aeabc)
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2412.11752) | [⌨️ Code](https://github.com/VAST-AI-Research/Deformable-Radial-Kernel-Splatting) | [🌐 Project Page](https://yihua7.github.io/DRK-web/)
+
 
 
 
