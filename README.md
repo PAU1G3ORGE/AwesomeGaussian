@@ -2718,6 +2718,19 @@ Open-vocabulary scene understanding using 3D Gaussian (3DGS) representations has
 [📃 arXiv:2501](https://arxiv.org/pdf/2501.00326) | [⌨️ Code](https://github.com/runnanchen/OVGaussian) | [🌐 Project Page]
 
 
+#### <summary>Gaussian Graph Network: Learning Efficient and Generalizable Gaussian Representations from Multi-view Images
+> *directly combine Gaussian groups obtained from different views as scene representations. However, such combination of Gaussians leads to superfluous representations, where the overlapped regions are covered by similar Gaussians predicted separately from multiple images. *
+
+Authors: Shengjun Zhang, Xin Fei, Fangfu Liu, Haixu Song, Yueqi Duan
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has demonstrated impressive novel view synthesis performance. While conventional methods require per-scene optimization, more recently several feed-forward methods have been proposed to generate pixel-aligned Gaussian representations with a learnable network, which are generalizable to different scenes. However, these methods simply combine pixel-aligned Gaussians from multiple views as scene representations, thereby leading to artifacts and extra memory cost without fully capturing the relations of Gaussians from different images. In this paper, we propose Gaussian Graph Network (GGN) to generate efficient and generalizable Gaussian representations. Specifically, we construct Gaussian Graphs to model the relations of Gaussian groups from different views. To support message passing at Gaussian level, we reformulate the basic graph operations over Gaussian representations, enabling each Gaussian to benefit from its connected Gaussian groups with Gaussian feature fusion. Furthermore, we design a Gaussian pooling layer to aggregate various Gaussian groups for efficient representations. We conduct experiments on the large-scale RealEstate10K and ACID datasets to demonstrate the efficiency and generalization of our method. Compared to the state-of-the-art methods, our model uses fewer Gaussians and achieves better image quality with higher rendering speed.
+
+![image](https://github.com/user-attachments/assets/e8b71295-b989-45b9-b1e0-c0ab66ed8378)
+
+</details>
+
+[📃 arXiv:2501](https://arxiv.org/pdf/2503.16338) | [⌨️ Code](https://github.com/shengjun-zhang/GGN) | [🌐 Project Page](https://shengjun-zhang.github.io/GGN/)
 
 
 
