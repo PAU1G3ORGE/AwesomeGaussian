@@ -2730,7 +2730,22 @@ Authors: Shengjun Zhang, Xin Fei, Fangfu Liu, Haixu Song, Yueqi Duan
 
 </details>
 
-[📃 arXiv:2501](https://arxiv.org/pdf/2503.16338) | [⌨️ Code](https://github.com/shengjun-zhang/GGN) | [🌐 Project Page](https://shengjun-zhang.github.io/GGN/)
+[📃 arXiv:2503](https://arxiv.org/pdf/2503.16338) | [⌨️ Code](https://github.com/shengjun-zhang/GGN) | [🌐 Project Page](https://shengjun-zhang.github.io/GGN/)
+
+
+#### <summary>EVolSplat: Efficient Volume-based Gaussian Splatting for Urban View Synthesis
+> *predicts 3D Gaussians across multiple frames within a unified volume using a 3D convolutional network*
+
+Authors: Sheng Miao, Jiaxin Huang, Dongfeng Bai, Xu Yan, Hongyu Zhou, Yue Wang, Bingbing Liu, Andreas Geiger, Yiyi Liao
+<details span>
+<summary><b>Abstract</b></summary>
+Novel view synthesis of urban scenes is essential for autonomous driving-related this http URL NeRF and 3DGS-based methods show promising results in achieving photorealistic renderings but require slow, per-scene optimization. We introduce EVolSplat, an efficient 3D Gaussian Splatting model for urban scenes that works in a feed-forward manner. Unlike existing feed-forward, pixel-aligned 3DGS methods, which often suffer from issues like multi-view inconsistencies and duplicated content, our approach predicts 3D Gaussians across multiple frames within a unified volume using a 3D convolutional network. This is achieved by initializing 3D Gaussians with noisy depth predictions, and then refining their geometric properties in 3D space and predicting color based on 2D textures. Our model also handles distant views and the sky with a flexible hemisphere background model. This enables us to perform fast, feed-forward reconstruction while achieving real-time rendering. Experimental evaluations on the KITTI-360 and Waymo datasets show that our method achieves state-of-the-art quality compared to existing feed-forward 3DGS- and NeRF-based methods.
+
+![image](https://github.com/user-attachments/assets/49192b54-e0a0-4a87-9f71-0b48f68a4b95)
+
+</details>
+
+[📃 arXiv:2503](https://arxiv.org/pdf/2503.20168) | [⌨️ Code] | [🌐 Project Page]
 
 
 
