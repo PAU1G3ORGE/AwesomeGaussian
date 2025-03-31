@@ -6131,6 +6131,20 @@ We present Stable Virtual Camera (Seva), a generalist diffusion model that creat
 
 [📃 arXiv:2503](https://arxiv.org/pdf/2503.14489) | [⌨️ Code](https://github.com/Stability-AI/stable-virtual-camera/tree/main) | [🌐 Project Page](https://stable-virtual-camera.github.io/)
 
+#### <summary>FLARE: Feed-forward Geometry, Appearance and Camera Estimation from Uncalibrated Sparse Views
+> *similar to VGGT*
+
+Authors: Shangzhan Zhang, Jianyuan Wang, Yinghao Xu, Nan Xue, Christian Rupprecht, Xiaowei Zhou, Yujun Shen, Gordon Wetzstein 
+<details span>
+<summary><b>Abstract</b></summary>
+We present FLARE, a feed-forward model designed to infer high-quality camera poses and 3D geometry from uncalibrated sparse-view images (i.e., as few as 2-8 inputs), which is a challenging yet practical setting in real-world applications. Our solution features a cascaded learning paradigm with camera pose serving as the critical bridge, recognizing its essential role in mapping 3D structures onto 2D image planes. Concretely, FLARE starts with camera pose estimation, whose results condition the subsequent learning of geometric structure and appearance, optimized through the objectives of geometry reconstruction and novel-view synthesis. Utilizing large-scale public datasets for training, our method delivers state-of-the-art performance in the tasks of pose estimation, geometry reconstruction, and novel view synthesis, while maintaining the inference efficiency (i.e., less than 0.5 seconds).
+
+![image](https://github.com/user-attachments/assets/a782a7ae-052a-4364-a9e0-0aaee40729fa)
+
+</details>
+
+[📃 arXiv:2503](https://arxiv.org/pdf/2502.12138) | [⌨️ Code](https://github.com/ant-research/FLARE) | [🌐 Project Page](https://zhanghe3z.github.io/FLARE/)
+
 
 
 <br>
