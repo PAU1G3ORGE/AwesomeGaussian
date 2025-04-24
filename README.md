@@ -1203,6 +1203,21 @@ Authors: Ao Gao, Luosong Guo, Tao Chen, Zhao Wang, Ying Tai, Jian Yang, Zhenyu Z
 
 
 
+#### <summary>EG-Gaussian: Epipolar Geometry and Graph Network Enhanced 3D Gaussian Splatting
+> *graph + Spatial Encoding*
+
+Authors: Beizhen Zhao, Yifan Zhou, Zijian Wang, Hao Wang
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper, we explore an open research problem concerning the reconstruction of 3D scenes from images. Recent methods have adopt 3D Gaussian Splatting (3DGS) to produce 3D scenes due to its efficient training process. However, these methodologies may generate incomplete 3D scenes or blurred multiviews. This is because of (1) inaccurate 3DGS point initialization and (2) the tendency of 3DGS to flatten 3D Gaussians with the sparse-view input. To address these issues, we propose a novel framework EG-Gaussian, which utilizes epipolar geometry and graph networks for 3D scene reconstruction. Initially, we integrate epipolar geometry into the 3DGS initialization phase to enhance initial 3DGS point construction. Then, we specifically design a graph learning module to refine 3DGS spatial features, in which we incorporate both spatial coordinates and angular relationships among neighboring points. Experiments on indoor and outdoor benchmark datasets demonstrate that our approach significantly improves reconstruction accuracy compared to 3DGS-based methods.
+
+![image](https://github.com/user-attachments/assets/5b25c9af-ae9e-4455-bb1c-75c5d7d08d8c)
+
+</details>
+
+[📃 arXiv:2504](https://arxiv.org/pdf/2504.13540) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 <br>
 <br>
@@ -6132,7 +6147,7 @@ We present Stable Virtual Camera (Seva), a generalist diffusion model that creat
 [📃 arXiv:2503](https://arxiv.org/pdf/2503.14489) | [⌨️ Code](https://github.com/Stability-AI/stable-virtual-camera/tree/main) | [🌐 Project Page](https://stable-virtual-camera.github.io/)
 
 #### <summary>FLARE: Feed-forward Geometry, Appearance and Camera Estimation from Uncalibrated Sparse Views
-> *similar to VGGT*
+> *similar to VGGT, but with gaussian splatting*
 
 Authors: Shangzhan Zhang, Jianyuan Wang, Yinghao Xu, Nan Xue, Christian Rupprecht, Xiaowei Zhou, Yujun Shen, Gordon Wetzstein 
 <details span>
@@ -6144,6 +6159,21 @@ We present FLARE, a feed-forward model designed to infer high-quality camera pos
 </details>
 
 [📃 arXiv:2503](https://arxiv.org/pdf/2502.12138) | [⌨️ Code](https://github.com/ant-research/FLARE) | [🌐 Project Page](https://zhanghe3z.github.io/FLARE/)
+
+
+#### <summary>AerialMegaDepth: Learning Aerial-Ground Reconstruction and View Synthesis
+> *combining pseudo-synthetic renderings from 3D city-wide meshes (e.g., Google Earth) with real, ground-level crowd-sourced images (e.g., MegaDepth)*
+
+Authors: Khiem Vuong, Anurag Ghosh, Deva Ramanan, Srinivasa Narasimhan, Shubham Tulsiani
+<details span>
+<summary><b>Abstract</b></summary>
+We explore the task of geometric reconstruction of images captured from a mixture of ground and aerial views. Current state-of-the-art learning-based approaches fail to handle the extreme viewpoint variation between aerial-ground image pairs. Our hypothesis is that the lack of high-quality, co-registered aerial-ground datasets for training is a key reason for this failure. Such data is difficult to assemble precisely because it is difficult to reconstruct in a scalable way. To overcome this challenge, we propose a scalable framework combining pseudo-synthetic renderings from 3D city-wide meshes (e.g., Google Earth) with real, ground-level crowd-sourced images (e.g., MegaDepth). The pseudo-synthetic data simulates a wide range of aerial viewpoints, while the real, crowd-sourced images help improve visual fidelity for ground-level images where mesh-based renderings lack sufficient detail, effectively bridging the domain gap between real images and pseudo-synthetic renderings. Using this hybrid dataset, we fine-tune several state-of-the-art algorithms and achieve significant improvements on real-world, zero-shot aerial-ground tasks. For example, we observe that baseline DUSt3R localizes fewer than 5% of aerial-ground pairs within 5 degrees of camera rotation error, while fine-tuning with our data raises accuracy to nearly 56%, addressing a major failure point in handling large viewpoint changes. Beyond camera estimation and scene reconstruction, our dataset also improves performance on downstream tasks like novel-view synthesis in challenging aerial-ground scenarios, demonstrating the practical value of our approach in real-world applications.
+
+
+</details>
+
+[📃 arXiv:2504](https://arxiv.org/pdf/2504.13157) | [⌨️ Code](https://github.com/kvuong2711/aerial-megadepth?tab=readme-ov-file) | [🌐 Project Page](https://aerial-megadepth.github.io/)
+
 
 
 
