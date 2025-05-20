@@ -1765,7 +1765,7 @@ Authors: Yuanyuan Gao, Yalun Dai, Hao Li, Weicai Ye, Junyi Chen, Danpeng Chen, D
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.17612) | [⌨️ Code](https://github.com/zju3dv/CoSurfGS) | [🌐 Project Page](https://gyy456.github.io/CoSurfGS/)
 
-#### <summary>RSGaussian:3D Gaussian Splatting with LiDAR for Aerial Remote Sensing Novel View Synthesis
+#### <summary>RSGaussian: 3D Gaussian Splatting with LiDAR for Aerial Remote Sensing Novel View Synthesis
 >*LiDAR point clouds for high-precision depth, constrain the densification of the Gaussian distribution based on the long-axis direction of the LiDAR point clouds*
 
 Authors: Yiling Yao, Wenjuan Zhang, Bing Zhang, Bocheng Li, Yaning Wang, Bowen Wang
@@ -1778,6 +1778,21 @@ This study presents RSGaussian, an innovative novel view synthesis (NVS) method 
 </details>
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.18380) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>On-the-fly Reconstruction for Large-Scale Novel View Synthesis from Unposed Images
+>*on-the-fly processing: GPU-friendly mini bundle adjustment, sampling of Gaussian primitive positions and shapes(incrementally spawning primitives), incremental approach handles large-scale scenes*
+
+Authors: Andreas Meuleman, Ishaan Shah, Alexandre Lanvin, Bernhard Kerbl, George Drettakis
+<details span>
+<summary><b>Abstract</b></summary>
+Radiance field methods such as 3D Gaussian Splatting (3DGS) allow easy reconstruction from photos, enabling free-viewpoint navigation. Nonetheless, pose estimation using Structure from Motion and 3DGS optimization can still each take between minutes and hours of computation after capture is complete. SLAM methods combined with 3DGS are fast but struggle with wide camera baselines and large scenes. We present an on-the-fly method to produce camera poses and a trained 3DGS immediately after capture. Our method can handle dense and wide-baseline captures of ordered photo sequences and large-scale scenes. To do this, we first introduce fast initial pose estimation, exploiting learned features and a GPU-friendly mini bundle adjustment. We then introduce direct sampling of Gaussian primitive positions and shapes, incrementally spawning primitives where required, significantly accelerating training. These two efficient steps allow fast and robust joint optimization of poses and Gaussian primitives. Our incremental approach handles large-scale scenes by introducing scalable radiance field construction, progressively clustering 3DGS primitives, storing them in anchors, and offloading them from the GPU. Clustered primitives are progressively merged, keeping the required scale of 3DGS at any viewpoint. We evaluate our solution on a variety of datasets and show that it can provide on-the-fly processing of all the capture scenarios and scene sizes we target. At the same time our method remains competitive -- in speed, image quality, or both -- with other methods that only handle specific capture styles or scene sizes.
+
+![image](https://github.com/user-attachments/assets/af52c28d-4f11-41fe-8fe5-bbbdea3dd632)
+
+</details>
+
+[📃 arXiv:2505](https://repo-sam.inria.fr/nerphys/on-the-fly-nvs/onthefly_nvs.pdf) | [⌨️ Code] | [🌐 Project Page](https://repo-sam.inria.fr/nerphys/on-the-fly-nvs/)
 
 
 
