@@ -3088,6 +3088,22 @@ Authors: Wenhao Xu, Wenming Weng, Yueyi Zhang, Ruikang Xu, Zhiwei Xiong
 
 ## Dynamic
 
+#### <summary>3DGStream: On-the-Fly Training of 3D Gaussians for Efficient Streaming of Photo-Realistic Free-Viewpoint Videos
+
+>  *Neural Transformation Cache=hash grid+MLP, SHs also updated by rotation, Adaptive 3DG Addition*
+
+Authors: Jiakai Sun, Han Jiao, Guangyuan Li, Zhanjie Zhang, Lei Zhao, Wei Xing
+<details span>
+<summary><b>Abstract</b></summary>
+Constructing photo-realistic Free-Viewpoint Videos (FVVs) of dynamic scenes from multi-view videos remains a challenging endeavor. Despite the remarkable advancements achieved by current neural rendering techniques, these methods generally require complete video sequences for offline training and are not capable of real-time rendering. To address these constraints, we introduce 3DGStream, a method designed for efficient FVV streaming of real-world dynamic scenes. Our method achieves fast on-the-fly per-frame reconstruction within 12 seconds and real-time rendering at 200 FPS. Specifically, we utilize 3D Gaussians (3DGs) to represent the scene. Instead of the naïve approach of directly optimizing 3DGs per-frame, we employ a compact Neural Transformation Cache (NTC) to model the translations and rotations of 3DGs, markedly reducing the training time and storage required for each FVV frame. Furthermore, we propose an adaptive 3DG addition strategy to handle emerging objects in dynamic scenes. Experiments demonstrate that 3DGStream achieves competitive performance in terms of rendering speed, image quality, training time, and model storage when compared with state-of-the-art methods.
+
+![image](https://github.com/user-attachments/assets/b3ee6644-d375-4b00-bfdf-09f29e151d91)
+
+</details>
+
+[📃 arXiv:2403](https://arxiv.org/pdf/2403.01444) | [⌨️ Code](https://github.com/SJoJoK/3DGStream?tab=readme-ov-file) | [🌐 Project Page](https://sjojok.top/3dgstream/)
+
+
 
 #### <summary>MGStream: Motion-aware 3D Gaussian for Streamable Dynamic Scene Reconstruction
 
