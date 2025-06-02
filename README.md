@@ -6187,20 +6187,6 @@ Recently, Gaussian splatting has emerged as a robust technique for representing 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.11752) | [⌨️ Code](https://github.com/VAST-AI-Research/Deformable-Radial-Kernel-Splatting) | [🌐 Project Page](https://yihua7.github.io/DRK-web/)
 
 
-#### <summary>Stable Virtual Camera: Generative View Synthesis with Diffusion Models
-> *Existing works struggle to generate either large viewpoint changes or temporally smooth samples, while relying on specific task configurations. our method can generate high-quality videos lasting up to half a minute with seamless loop closure*
-
-Authors: Jensen (Jinghao)Zhou, Hang Gao, Vikram Voleti, Aaryaman Vasishta, Chun-Han Yao, Mark Boss, Philip Torr, Christian Rupprecht, Varun Jampani
-<details span>
-<summary><b>Abstract</b></summary>
-We present Stable Virtual Camera (Seva), a generalist diffusion model that creates novel views of a scene, given any number of input views and target cameras. Existing works struggle to generate either large viewpoint changes or temporally smooth samples, while relying on specific task configurations. Our approach overcomes these limitations through simple model design, optimized training recipe, and flexible sampling strategy that generalize across view synthesis tasks at test time. As a result, our samples maintain high consistency without requiring additional 3D representation-based distillation, thus streamlining view synthesis in the wild. Furthermore, we show that our method can generate high-quality videos lasting up to half a minute with seamless loop closure. Extensive benchmarking demonstrates that Seva outperforms existing methods across different datasets and settings.
-
-![image](https://github.com/user-attachments/assets/2faea9e9-bc8f-4f2f-b699-26b4e7bc34f5)
-
-</details>
-
-[📃 arXiv:2503](https://arxiv.org/pdf/2503.14489) | [⌨️ Code](https://github.com/Stability-AI/stable-virtual-camera/tree/main) | [🌐 Project Page](https://stable-virtual-camera.github.io/)
-
 #### <summary>FLARE: Feed-forward Geometry, Appearance and Camera Estimation from Uncalibrated Sparse Views
 > *similar to VGGT, but with gaussian splatting*
 
@@ -6216,6 +6202,38 @@ We present FLARE, a feed-forward model designed to infer high-quality camera pos
 [📃 arXiv:2503](https://arxiv.org/pdf/2502.12138) | [⌨️ Code](https://github.com/ant-research/FLARE) | [🌐 Project Page](https://zhanghe3z.github.io/FLARE/)
 
 
+
+#### <summary>Stable Virtual Camera: Generative View Synthesis with Diffusion Models
+> *Existing works struggle to generate either large viewpoint changes or temporally smooth samples, while relying on specific task configurations. our method can generate high-quality videos lasting up to half a minute with seamless loop closure*
+
+Authors: Jensen (Jinghao)Zhou, Hang Gao, Vikram Voleti, Aaryaman Vasishta, Chun-Han Yao, Mark Boss, Philip Torr, Christian Rupprecht, Varun Jampani
+<details span>
+<summary><b>Abstract</b></summary>
+We present Stable Virtual Camera (Seva), a generalist diffusion model that creates novel views of a scene, given any number of input views and target cameras. Existing works struggle to generate either large viewpoint changes or temporally smooth samples, while relying on specific task configurations. Our approach overcomes these limitations through simple model design, optimized training recipe, and flexible sampling strategy that generalize across view synthesis tasks at test time. As a result, our samples maintain high consistency without requiring additional 3D representation-based distillation, thus streamlining view synthesis in the wild. Furthermore, we show that our method can generate high-quality videos lasting up to half a minute with seamless loop closure. Extensive benchmarking demonstrates that Seva outperforms existing methods across different datasets and settings.
+
+![image](https://github.com/user-attachments/assets/2faea9e9-bc8f-4f2f-b699-26b4e7bc34f5)
+
+</details>
+
+[📃 arXiv:2503](https://arxiv.org/pdf/2503.14489) | [⌨️ Code](https://github.com/Stability-AI/stable-virtual-camera/tree/main) | [🌐 Project Page](https://stable-virtual-camera.github.io/)
+
+
+#### <summary>Scene Splatter: Momentum 3D Scene Generation from Single Image with Video Diffusion Model
+>*We use the final results to supervise the optimization of Gaussian representations*
+
+Authors: Shengjun Zhang, Jinzhao Li, Xin Fei, Hao Liu, Yueqi Duan
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper, we propose Scene Splatter, a momentum-based paradigm for video diffusion to generate generic scenes from single image. Existing methods, which employ video generation models to synthesize novel views, suffer from limited video length and scene inconsistency, leading to artifacts and distortions during further reconstruction. To address this issue, we construct noisy samples from original features as momentum to enhance video details and maintain scene consistency. However, for latent features with the perception field that spans both known and unknown regions, such latent-level momentum restricts the generative ability of video diffusion in unknown regions. Therefore, we further introduce the aforementioned consistent video as a pixel-level momentum to a directly generated video without momentum for better recovery of unseen regions. Our cascaded momentum enables video diffusion models to generate both high-fidelity and consistent novel views. We further finetune the global Gaussian representations with enhanced frames and render new frames for momentum update in the next step. In this manner, we can iteratively recover a 3D scene, avoiding the limitation of video length. Extensive experiments demonstrate the generalization capability and superior performance of our method in high-fidelity and consistent scene generation.
+
+![image](https://github.com/user-attachments/assets/0f99b9a1-18c2-4f99-911b-329561683dad)
+
+</details>
+
+[📃 arXiv:2504](https://arxiv.org/pdf/2504.02764) | [⌨️ Code] | [🌐 Project Page](https://shengjun-zhang.github.io/SceneSplatter/)
+
+
+
 #### <summary>AerialMegaDepth: Learning Aerial-Ground Reconstruction and View Synthesis
 > *combining pseudo-synthetic renderings from 3D city-wide meshes (e.g., Google Earth) with real, ground-level crowd-sourced images (e.g., MegaDepth)*
 
@@ -6229,6 +6247,8 @@ We explore the task of geometric reconstruction of images captured from a mixtur
 </details>
 
 [📃 arXiv:2504](https://arxiv.org/pdf/2504.13157) | [⌨️ Code](https://github.com/kvuong2711/aerial-megadepth?tab=readme-ov-file) | [🌐 Project Page](https://aerial-megadepth.github.io/)
+
+
 
 
 
