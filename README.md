@@ -6249,6 +6249,22 @@ We explore the task of geometric reconstruction of images captured from a mixtur
 [📃 arXiv:2504](https://arxiv.org/pdf/2504.13157) | [⌨️ Code](https://github.com/kvuong2711/aerial-megadepth?tab=readme-ov-file) | [🌐 Project Page](https://aerial-megadepth.github.io/)
 
 
+#### <summary>WarpRF: Multi-View Consistency for Training-Free Uncertainty Quantification and Applications in Radiance Fields
+> *training-free uncertainty map*
+
+Authors: Sadra Safadoust, Fabio Tosi, Fatma Güney, Matteo Poggi
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce WarpRF, a training-free general-purpose framework for quantifying the uncertainty of radiance fields. Built upon the assumption that photometric and geometric consistency should hold among images rendered by an accurate model, WarpRF quantifies its underlying uncertainty from an unseen point of view by leveraging backward warping across viewpoints, projecting reliable renderings to the unseen viewpoint and measuring the consistency with images rendered there. WarpRF is simple and inexpensive, does not require any training, and can be applied to any radiance field implementation for free. WarpRF excels at both uncertainty quantification and downstream tasks, e.g., active view selection and active mapping, outperforming any existing method tailored to specific frameworks.
+
+![image](https://github.com/user-attachments/assets/d6a0f8d9-e25e-46bf-a3fc-db70383fa30a)
+
+</details>
+
+[📃 arXiv:2506](https://arxiv.org/pdf/2506.22433) | [⌨️ Code] | [🌐 Project Page](https://kuis-ai.github.io/WarpRF/)
+
+
+
 
 
 
