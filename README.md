@@ -6264,6 +6264,23 @@ We introduce WarpRF, a training-free general-purpose framework for quantifying t
 [📃 arXiv:2506](https://arxiv.org/pdf/2506.22433) | [⌨️ Code] | [🌐 Project Page](https://kuis-ai.github.io/WarpRF/)
 
 
+#### <summary>BézierGS: Dynamic Urban Scene Reconstruction with Bézier Curve Gaussian Splatting
+>*learnable Bezier curves eliminate the dependence on the accuracy of manual annotations, while effectively representing the complete trajectories*
+
+Authors: Zipei Ma, Junzhe Jiang, Yurui Chen, Li Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+The realistic reconstruction of street scenes is critical for developing real-world simulators in autonomous driving. Most existing methods rely on object pose annotations, using these poses to reconstruct dynamic objects and move them during the rendering process. This dependence on high-precision object annotations limits large-scale and extensive scene reconstruction. To address this challenge, we propose Bézier curve Gaussian splatting (BézierGS), which represents the motion trajectories of dynamic objects using learnable Bézier curves. This approach fully leverages the temporal information of dynamic objects and, through learnable curve modeling, automatically corrects pose errors. By introducing additional supervision on dynamic object rendering and inter-curve consistency constraints, we achieve reasonable and accurate separation and reconstruction of scene elements. Extensive experiments on the Waymo Open Dataset and the nuPlan benchmark demonstrate that BézierGS outperforms state-of-the-art alternatives in both dynamic and static scene components reconstruction and novel view synthesis.
+
+![image](https://github.com/user-attachments/assets/7262238b-9260-4ecb-b034-5457dae095c1)
+
+</details>
+
+[📃 arXiv:2506](https://arxiv.org/pdf/2506.22099) | [⌨️ Code](https://github.com/fudan-zvg/BezierGS) | [🌐 Project Page]
+
+
+
+
 
 
 
