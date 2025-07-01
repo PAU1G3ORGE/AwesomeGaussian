@@ -1065,19 +1065,7 @@ Recent advances in structured 3D Gaussians for view-adaptive rendering, particul
 [📃 arXiv:2411](https://arxiv.org/pdf/2411.05731) | [⌨️ Code] | [🌐 Project Page]
 
 
-#### <summary>GaussianPretrain: A Simple Unified 3D Gaussian Representation for Visual Pre-training in Autonomous Driving
-> *leveraging 3D Gaussian anchors as volumetric LiDAR points, combined with Ray-based guidance and MAE method*
 
-Authors: Shaoqing Xu, Fang Li, Shengyin Jiang, Ziying Song, Li Liu, Zhi-xin Yang
-<details span>
-<summary><b>Abstract</b></summary>
-Self-supervised learning has made substantial strides in image processing, while visual pre-training for autonomous driving is still in its infancy. Existing methods often focus on learning geometric scene information while neglecting texture or treating both aspects separately, hindering comprehensive scene understanding. In this context, we are excited to introduce GaussianPretrain, a novel pre-training paradigm that achieves a holistic understanding of the scene by uniformly integrating geometric and texture representations. Conceptualizing 3D Gaussian anchors as volumetric LiDAR points, our method learns a deepened understanding of scenes to enhance pre-training performance with detailed spatial structure and texture, achieving that 40.6% faster than NeRF-based method UniPAD with 70% GPU memory only. We demonstrate the effectiveness of GaussianPretrain across multiple 3D perception tasks, showing significant performance improvements, such as a 7.05% increase in NDS for 3D object detection, boosts mAP by 1.9% in HD map construction and 0.8% improvement on Occupancy prediction. These significant gains highlight GaussianPretrain's theoretical innovation and strong practical potential, promoting visual pre-training development for autonomous driving.
-
-![image](https://github.com/user-attachments/assets/00e6bd28-a1e4-4592-a460-42947dfda1c1)
-
-</details>
-
-[📃 arXiv:2411](https://arxiv.org/pdf/2411.12452) | [⌨️ Code](https://github.com/Public-BOTs/GaussianPretrain) | [🌐 Project Page]
 
 #### <summary>4D Scaffold Gaussian Splatting for Memory Efficient Dynamic Scene Reconstruction
 > *dynamic + scaffold GS*
