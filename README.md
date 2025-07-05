@@ -6251,6 +6251,23 @@ We introduce WarpRF, a training-free general-purpose framework for quantifying t
 
 [📃 arXiv:2506](https://arxiv.org/pdf/2506.22433) | [⌨️ Code] | [🌐 Project Page](https://kuis-ai.github.io/WarpRF/)
 
+#### <summary>VoteSplat: Hough Voting Gaussian Splatting for 3D Scene Understanding
+> *3D points vote for 2d center*
+
+Authors: Minchao Jiang, Shunyu Jia, Jiaming Gu, Xiaoyuan Lu, Guangming Zhu, Anqi Dong, Liang Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has become horsepower in high-quality, real-time rendering for novel view synthesis of 3D scenes. However, existing methods focus primarily on geometric and appearance modeling, lacking deeper scene understanding while also incurring high training costs that complicate the originally streamlined differentiable rendering pipeline. To this end, we propose VoteSplat, a novel 3D scene understanding framework that integrates Hough voting with 3DGS. Specifically, Segment Anything Model (SAM) is utilized for instance segmentation, extracting objects, and generating 2D vote maps. We then embed spatial offset vectors into Gaussian primitives. These offsets construct 3D spatial votes by associating them with 2D image votes, while depth distortion constraints refine localization along the depth axis. For open-vocabulary object localization, VoteSplat maps 2D image semantics to 3D point clouds via voting points, reducing training costs associated with high-dimensional CLIP features while preserving semantic unambiguity. Extensive experiments demonstrate effectiveness of VoteSplat in open-vocabulary 3D instance localization, 3D point cloud understanding, click-based 3D object localization, hierarchical segmentation, and ablation studies. 
+
+![image](https://github.com/user-attachments/assets/77480463-446c-432f-8a8f-6cb12d000a6a)
+
+</details>
+
+[📃 arXiv:2506](https://arxiv.org/pdf/2506.22799) | [⌨️ Code] | [🌐 Project Page](https://sy-ja.github.io/votesplat/)
+
+
+
+
 #### <summary>Masks make discriminative models great again!
 > *We extend the depth decoder head of DAV2 by adding additional channels to its final convolution layer for predicting {δi,αi,θi,si,ci}. Our method employs visibility masks derived from optimized 3D Gaussian splats to exclude areas not visible from the source view during training*
 
@@ -6266,6 +6283,19 @@ We present Image2GS, a novel approach that addresses the challenging problem of 
 [📃 arXiv:2507](https://arxiv.org/pdf/2507.00916) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>DiGA3D: Coarse-to-Fine Diffusional Propagation of Geometry and Appearance for Versatile 3D Inpainting
+> *Coarse Stage for replacement between views, Fine Stage propagates texture and geometric information from reference views to other views*
+
+Authors: Jingyi Pan, Dan Xu, Qiong Luo
+<details span>
+<summary><b>Abstract</b></summary>
+Developing a unified pipeline that enables users to remove, re-texture, or replace objects in a versatile manner is crucial for text-guided 3D inpainting. However, there are still challenges in performing multiple 3D inpainting tasks within a unified framework: 1) Single reference inpainting methods lack robustness when dealing with views that are far from the reference view. 2) Appearance inconsistency arises when independently inpainting multi-view images with 2D diffusion priors; 3) Geometry inconsistency limits performance when there are significant geometric changes in the inpainting regions. To tackle these challenges, we introduce DiGA3D, a novel and versatile 3D inpainting pipeline that leverages diffusion models to propagate consistent appearance and geometry in a coarse-to-fine manner. First, DiGA3D develops a robust strategy for selecting multiple reference views to reduce errors during propagation. Next, DiGA3D designs an Attention Feature Propagation (AFP) mechanism that propagates attention features from the selected reference views to other views via diffusion models to maintain appearance consistency. Furthermore, DiGA3D introduces a Texture-Geometry Score Distillation Sampling (TG-SDS) loss to further improve the geometric consistency of inpainted 3D scenes. Extensive experiments on multiple 3D inpainting tasks demonstrate the effectiveness of our method. 
+
+![image](https://github.com/user-attachments/assets/4c905257-8786-43ae-b917-7b486710d649)
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2507.00429) | [⌨️ Code] | [🌐 Project Page](https://rorisis.github.io/DiGA3D/)
 
 
 
