@@ -6251,6 +6251,21 @@ We introduce WarpRF, a training-free general-purpose framework for quantifying t
 
 [📃 arXiv:2506](https://arxiv.org/pdf/2506.22433) | [⌨️ Code] | [🌐 Project Page](https://kuis-ai.github.io/WarpRF/)
 
+#### <summary>Masks make discriminative models great again!
+> *We extend the depth decoder head of DAV2 by adding additional channels to its final convolution layer for predicting {δi,αi,θi,si,ci}. Our method employs visibility masks derived from optimized 3D Gaussian splats to exclude areas not visible from the source view during training*
+
+Authors: Tianshi Cao, Marie-Julie Rakotosaona, Ben Poole, Federico Tombari, Michael Niemeyer
+<details span>
+<summary><b>Abstract</b></summary>
+We present Image2GS, a novel approach that addresses the challenging problem of reconstructing photorealistic 3D scenes from a single image by focusing specifically on the image-to-3D lifting component of the reconstruction process. By decoupling the lifting problem (converting an image to a 3D model representing what is visible) from the completion problem (hallucinating content not present in the input), we create a more deterministic task suitable for discriminative models. Our method employs visibility masks derived from optimized 3D Gaussian splats to exclude areas not visible from the source view during training. This masked training strategy significantly improves reconstruction quality in visible regions compared to strong baselines. Notably, despite being trained only on masked regions, Image2GS remains competitive with state-of-the-art discriminative models trained on full target images when evaluated on complete scenes. Our findings highlight the fundamental struggle discriminative models face when fitting unseen regions and demonstrate the advantages of addressing image-to-3D lifting as a distinct problem with specialized techniques.
+
+![image](https://github.com/user-attachments/assets/ae082369-5b2d-4378-be48-5f2f6402cbd5)
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2507.00916) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 
 
