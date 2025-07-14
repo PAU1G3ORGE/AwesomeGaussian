@@ -6298,6 +6298,20 @@ Developing a unified pipeline that enables users to remove, re-texture, or repla
 [📃 arXiv:2507](https://arxiv.org/pdf/2507.00429) | [⌨️ Code] | [🌐 Project Page](https://rorisis.github.io/DiGA3D/)
 
 
+#### <summary>Point3R: Streaming 3D Reconstruction with Explicit Spatial Pointer Memory
+> *propose an explicit spatial pointer memory M that stores a set of 3D pointers corresponding to the explored regions of the current scene, along with their associated spatial features*
+
+Authors: Yuqi Wu, Wenzhao Zheng, Jie Zhou, Jiwen Lu
+<details span>
+<summary><b>Abstract</b></summary>
+Dense 3D scene reconstruction from an ordered sequence or unordered image collections is a critical step when bringing research in computer vision into practical scenarios. Following the paradigm introduced by DUSt3R, which unifies an image pair densely into a shared coordinate system, subsequent methods maintain an implicit memory to achieve dense 3D reconstruction from more images. However, such implicit memory is limited in capacity and may suffer from information loss of earlier frames. We propose Point3R, an online framework targeting dense streaming 3D reconstruction. To be specific, we maintain an explicit spatial pointer memory directly associated with the 3D structure of the current scene. Each pointer in this memory is assigned a specific 3D position and aggregates scene information nearby in the global coordinate system into a changing spatial feature. Information extracted from the latest frame interacts explicitly with this pointer memory, enabling dense integration of the current observation into the global coordinate system. We design a 3D hierarchical position embedding to promote this interaction and design a simple yet effective fusion mechanism to ensure that our pointer memory is uniform and efficient. Our method achieves competitive or state-of-the-art performance on various tasks with low training costs.
+
+<img width="1597" height="546" alt="image" src="https://github.com/user-attachments/assets/3f43c667-fdbc-46d8-837e-c9eacfde6a6a" />
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2507.02863) | [⌨️ Code](https://github.com/YkiWu/Point3R) | [🌐 Project Page](https://ykiwu.github.io/Point3R/)
+
 
 
 
