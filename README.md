@@ -6298,6 +6298,22 @@ Developing a unified pipeline that enables users to remove, re-texture, or repla
 [📃 arXiv:2507](https://arxiv.org/pdf/2507.00429) | [⌨️ Code] | [🌐 Project Page](https://rorisis.github.io/DiGA3D/)
 
 
+#### <summary>Cameras as Relative Positional Encoding
+> *a study on camera conditioning that includes absolute positional encodings (e.g, raymaps), relative pose encodings (e.g., GTA), and a new method (PRoPE) uses relative projective transformation to capture 3D relationship between image tokens*
+
+Authors: Ruilong Li, Brent Yi, Junchen Liu, Hang Gao, Yi Ma, Angjoo Kanazawa
+<details span>
+<summary><b>Abstract</b></summary>
+Transformers are increasingly prevalent for multi-view computer vision tasks, where geometric relationships between viewpoints are critical for 3D perception. To leverage these relationships, multi-view transformers must use camera geometry to ground visual tokens in 3D space. In this work, we compare techniques for conditioning transformers on cameras: token-level raymap encodings, attention-level relative pose encodings, and a new relative encoding we propose -- Projective Positional Encoding (PRoPE) -- that captures complete camera frustums, both intrinsics and extrinsics, as a relative positional encoding. Our experiments begin by showing how relative camera conditioning improves performance in feedforward novel view synthesis, with further gains from PRoPE. This holds across settings: scenes with both shared and varying intrinsics, when combining token- and attention-level conditioning, and for generalization to inputs with out-of-distribution sequence lengths and camera intrinsics. We then verify that these benefits persist for different tasks, stereo depth estimation and discriminative spatial cognition, as well as larger model sizes.
+
+<img width="1674" height="527" alt="image" src="https://github.com/user-attachments/assets/0d61d3a7-abfe-4dcf-a4bc-a032f22a5476" />
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2507.10496) | [⌨️ Code](https://github.com/liruilong940607/prope) | [🌐 Project Page](https://www.liruilong.cn/prope/)
+
+
+
 
 
 
