@@ -6326,24 +6326,6 @@ Humans can naturally identify and mentally complete occluded objects in cluttere
 [📃 arXiv:2507](https://arxiv.org/pdf/2507.08416) | [⌨️ Code] | [🌐 Project Page](https://zju3dv.github.io/instascene/)
 
 
-#### <summary>Cameras as Relative Positional Encoding
-> *a study on camera conditioning that includes absolute positional encodings (e.g, raymaps), relative pose encodings (e.g., GTA), and a new method (PRoPE) uses relative projective transformation to capture 3D relationship between image tokens*
-
-Authors: Ruilong Li, Brent Yi, Junchen Liu, Hang Gao, Yi Ma, Angjoo Kanazawa
-<details span>
-<summary><b>Abstract</b></summary>
-Transformers are increasingly prevalent for multi-view computer vision tasks, where geometric relationships between viewpoints are critical for 3D perception. To leverage these relationships, multi-view transformers must use camera geometry to ground visual tokens in 3D space. In this work, we compare techniques for conditioning transformers on cameras: token-level raymap encodings, attention-level relative pose encodings, and a new relative encoding we propose -- Projective Positional Encoding (PRoPE) -- that captures complete camera frustums, both intrinsics and extrinsics, as a relative positional encoding. Our experiments begin by showing how relative camera conditioning improves performance in feedforward novel view synthesis, with further gains from PRoPE. This holds across settings: scenes with both shared and varying intrinsics, when combining token- and attention-level conditioning, and for generalization to inputs with out-of-distribution sequence lengths and camera intrinsics. We then verify that these benefits persist for different tasks, stereo depth estimation and discriminative spatial cognition, as well as larger model sizes.
-
-<img width="1674" height="527" alt="image" src="https://github.com/user-attachments/assets/0d61d3a7-abfe-4dcf-a4bc-a032f22a5476" />
-
-</details>
-
-[📃 arXiv:2507](https://arxiv.org/pdf/2507.10496) | [⌨️ Code](https://github.com/liruilong940607/prope) | [🌐 Project Page](https://www.liruilong.cn/prope/)
-
-
-
-
-
 
 
 <br>
@@ -8936,7 +8918,35 @@ Dense 3D scene reconstruction from an ordered sequence or unordered image collec
 [📃 arXiv:2507](https://arxiv.org/pdf/2507.02863) | [⌨️ Code](https://github.com/YkiWu/Point3R) | [🌐 Project Page](https://ykiwu.github.io/Point3R/)
 
 
+#### <summary>Cameras as Relative Positional Encoding
+> *a study on camera conditioning that includes absolute positional encodings (e.g, raymaps), relative pose encodings (e.g., GTA), and a new method (PRoPE) uses relative projective transformation to capture 3D relationship between image tokens*
 
+Authors: Ruilong Li, Brent Yi, Junchen Liu, Hang Gao, Yi Ma, Angjoo Kanazawa
+<details span>
+<summary><b>Abstract</b></summary>
+Transformers are increasingly prevalent for multi-view computer vision tasks, where geometric relationships between viewpoints are critical for 3D perception. To leverage these relationships, multi-view transformers must use camera geometry to ground visual tokens in 3D space. In this work, we compare techniques for conditioning transformers on cameras: token-level raymap encodings, attention-level relative pose encodings, and a new relative encoding we propose -- Projective Positional Encoding (PRoPE) -- that captures complete camera frustums, both intrinsics and extrinsics, as a relative positional encoding. Our experiments begin by showing how relative camera conditioning improves performance in feedforward novel view synthesis, with further gains from PRoPE. This holds across settings: scenes with both shared and varying intrinsics, when combining token- and attention-level conditioning, and for generalization to inputs with out-of-distribution sequence lengths and camera intrinsics. We then verify that these benefits persist for different tasks, stereo depth estimation and discriminative spatial cognition, as well as larger model sizes.
+
+<img width="1674" height="527" alt="image" src="https://github.com/user-attachments/assets/0d61d3a7-abfe-4dcf-a4bc-a032f22a5476" />
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2507.10496) | [⌨️ Code](https://github.com/liruilong940607/prope) | [🌐 Project Page](https://www.liruilong.cn/prope/)
+
+
+
+#### <summary>Streaming 4D Visual Geometry Transformer
+> *from Dense-view to streaming, metric worse than VGGT in KITTI*
+
+Authors: Dong Zhuo, Wenzhao Zheng, Jiahe Guo, Yuqi Wu, Jie Zhou, Jiwen Lu
+<details span>
+<summary><b>Abstract</b></summary>
+Perceiving and reconstructing 4D spatial-temporal geometry from videos is a fundamental yet challenging computer vision task. To facilitate interactive and real-time applications, we propose a streaming 4D visual geometry transformer that shares a similar philosophy with autoregressive large language models. We explore a simple and efficient design and employ a causal transformer architecture to process the input sequence in an online manner. We use temporal causal attention and cache the historical keys and values as implicit memory to enable efficient streaming long-term 4D reconstruction. This design can handle real-time 4D reconstruction by incrementally integrating historical information while maintaining high-quality spatial consistency. For efficient training, we propose to distill knowledge from the dense bidirectional visual geometry grounded transformer (VGGT) to our causal model. For inference, our model supports the migration of optimized efficient attention operator (e.g., FlashAttention) from the field of large language models. Extensive experiments on various 4D geometry perception benchmarks demonstrate that our model increases the inference speed in online scenarios while maintaining competitive performance, paving the way for scalable and interactive 4D vision systems.
+
+<img width="1660" height="600" alt="image" src="https://github.com/user-attachments/assets/2275b6df-e2f9-4cce-95cd-19350f518e2f" />
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2507.11539) | [⌨️ Code](https://github.com/wzzheng/StreamVGGT) | [🌐 Project Page](https://wzzheng.net/StreamVGGT/)
 
 
 
