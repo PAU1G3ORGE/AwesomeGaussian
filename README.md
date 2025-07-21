@@ -8950,7 +8950,7 @@ Transformers are increasingly prevalent for multi-view computer vision tasks, wh
 
 
 #### <summary>Streaming 4D Visual Geometry Transformer
-> *from Dense-view to streaming, metric worse than VGGT in KITTI*
+> *from Dense-view to streaming, metrics on KITTI are worse than VGGT*
 
 Authors: Dong Zhuo, Wenzhao Zheng, Jiahe Guo, Yuqi Wu, Jie Zhou, Jiwen Lu
 <details span>
@@ -8962,6 +8962,24 @@ Perceiving and reconstructing 4D spatial-temporal geometry from videos is a fund
 </details>
 
 [📃 arXiv:2507](https://arxiv.org/pdf/2507.11539) | [⌨️ Code](https://github.com/wzzheng/StreamVGGT) | [🌐 Project Page](https://wzzheng.net/StreamVGGT/)
+
+
+#### <summary>Scalable Permutation-Equivariant Visual Geometry Learning
+> *invariant to the arbitrary ordering of input views*
+
+Authors: Yifan Wang, Jianjun Zhou, Haoyi Zhu, Wenzheng Chang, Yang Zhou, Zizun Li, Junyi Chen, Jiangmiao Pang, Chunhua Shen, Tong He
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce , a feed-forward neural network that offers a novel approach to visual geometry reconstruction, breaking the reliance on a conventional fixed reference view. Previous methods often anchor their reconstructions to a designated viewpoint, an inductive bias that can lead to instability and failures if the reference is suboptimal. In contrast,  employs a fully permutation-equivariant architecture to predict affine-invariant camera poses and scale-invariant local point maps without any reference frames. This design makes our model inherently robust to input ordering and highly scalable. These advantages enable our simple and bias-free approach to achieve state-of-the-art performance on a wide range of tasks, including camera pose estimation, monocular/video depth estimation, and dense point map reconstruction. Code and models are publicly available.
+
+<img width="1829" height="860" alt="image" src="https://github.com/user-attachments/assets/21c55c1c-f1ef-437e-9909-17fbe4580cff" />
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2507.13347) | [⌨️ Code](https://github.com/yyfz/Pi3) | [🌐 Project Page](https://yyfz.github.io/pi3/)
+
+
+
 
 
 
