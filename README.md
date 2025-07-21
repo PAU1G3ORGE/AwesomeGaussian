@@ -6326,6 +6326,21 @@ Humans can naturally identify and mentally complete occluded objects in cluttere
 [📃 arXiv:2507](https://arxiv.org/pdf/2507.08416) | [⌨️ Code] | [🌐 Project Page](https://zju3dv.github.io/instascene/)
 
 
+#### <summary>PCR-GS: COLMAP-Free 3D Gaussian Splatting via Pose Co-Regularizations
+> *a wavelet-based frequency regularization to ensure the accurate estimation of the rotation matrix of camera poses*
+
+Authors: Yu Wei, Jiahui Zhang, Xiaoqin Zhang, Ling Shao, Shijian Lu
+<details span>
+<summary><b>Abstract</b></summary>
+COLMAP-free 3D Gaussian Splatting (3D-GS) has recently attracted increasing attention due to its remarkable performance in reconstructing high-quality 3D scenes from unposed images or videos. However, it often struggles to handle scenes with complex camera trajectories as featured by drastic rotation and translation across adjacent camera views, leading to degraded estimation of camera poses and further local minima in joint optimization of camera poses and 3D-GS. We propose PCR-GS, an innovative COLMAP-free 3DGS technique that achieves superior 3D scene modeling and camera pose estimation via camera pose co-regularization. PCR-GS achieves regularization from two perspectives. The first is feature reprojection regularization which extracts view-robust DINO features from adjacent camera views and aligns their semantic information for camera pose regularization. The second is wavelet-based frequency regularization which exploits discrepancy in high-frequency details to further optimize the rotation matrix in camera poses. Extensive experiments over multiple real-world scenes show that the proposed PCR-GS achieves superior pose-free 3D-GS scene modeling under dramatic changes of camera trajectories.
+
+<img width="2187" height="889" alt="image" src="https://github.com/user-attachments/assets/cd0a9063-7f39-46db-94b8-e183169fbf3d" />
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2507.13891) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 
 <br>
