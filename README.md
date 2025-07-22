@@ -8979,6 +8979,20 @@ We introduce , a feed-forward neural network that offers a novel approach to vis
 [📃 arXiv:2507](https://arxiv.org/pdf/2507.13347) | [⌨️ Code](https://github.com/yyfz/Pi3) | [🌐 Project Page](https://yyfz.github.io/pi3/)
 
 
+#### <summary>An Evaluation of DUSt3R/MASt3R/VGGT 3D Reconstruction on Photogrammetric Aerial Blocks
+> *COLMAP remains the most robust and versatile solution for aerial photogrammetry datasets, particularly in standard, high-overlap scenarios. Nevertheless, VGGT exhibits distinct advantages in situations with extremely limited input images and superior computational efficiency*
+
+Authors: Xinyi Wu, Steven Landgraf, Markus Ulrich, Rongjun Qin
+<details span>
+<summary><b>Abstract</b></summary>
+State-of-the-art 3D computer vision algorithms continue to advance in handling sparse, unordered image sets. Recently developed foundational models for 3D reconstruction, such as Dense and Unconstrained Stereo 3D Reconstruction (DUSt3R), Matching and Stereo 3D Reconstruction (MASt3R), and Visual Geometry Grounded Transformer (VGGT), have attracted attention due to their ability to handle very sparse image overlaps. Evaluating DUSt3R/MASt3R/VGGT on typical aerial images matters, as these models may handle extremely low image overlaps, stereo occlusions, and textureless regions. For redundant collections, they can accelerate 3D reconstruction by using extremely sparsified image sets. Despite tests on various computer vision benchmarks, their potential on photogrammetric aerial blocks remains unexplored. This paper conducts a comprehensive evaluation of the pre-trained DUSt3R/MASt3R/VGGT models on the aerial blocks of the UseGeo dataset for pose estimation and dense 3D reconstruction. Results show these methods can accurately reconstruct dense point clouds from very sparse image sets (fewer than 10 images, up to 518 pixels resolution), with completeness gains up to +50% over COLMAP. VGGT also demonstrates higher computational efficiency, scalability, and more reliable camera pose estimation. However, all exhibit limitations with high-resolution images and large sets, as pose reliability declines with more images and geometric complexity. These findings suggest transformer-based methods cannot fully replace traditional SfM and MVS, but offer promise as complementary approaches, especially in challenging, low-resolution, and sparse scenarios.
+
+<img width="1610" height="737" alt="image" src="https://github.com/user-attachments/assets/f4a7e91c-0c6d-4960-ae68-8e3dad1cca50" />
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2507.14798) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 
