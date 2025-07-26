@@ -6340,6 +6340,36 @@ COLMAP-free 3D Gaussian Splatting (3D-GS) has recently attracted increasing atte
 
 [📃 arXiv:2507](https://arxiv.org/pdf/2507.13891) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>LongSplat: Online Generalizable 3D Gaussian Splatting from Long Sequence Images
+> *adopts a sparse rendering strategy in which each pixel is associated with only a single dominant Gaussian*
+
+Authors: Guichen Huang, Ruoyu Wang, Xiangjun Gao, Che Sun, Yuwei Wu, Shenghua Gao, Yunde Jia
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting achieves high-fidelity novel view synthesis, but its application to online long-sequence scenarios is still limited. Existing methods either rely on slow per-scene optimization or fail to provide efficient incremental updates, hindering continuous performance. In this paper, we propose LongSplat, an online real-time 3D Gaussian reconstruction framework designed for long-sequence image input. The core idea is a streaming update mechanism that incrementally integrates current-view observations while selectively compressing redundant historical Gaussians. Crucial to this mechanism is our Gaussian-Image Representation (GIR), a representation that encodes 3D Gaussian parameters into a structured, image-like 2D format. GIR simultaneously enables efficient fusion of current-view and historical Gaussians and identity-aware redundancy compression. These functions enable online reconstruction and adapt the model to long sequences without overwhelming memory or computational costs. Furthermore, we leverage an existing image compression method to guide the generation of more compact and higher-quality 3D Gaussians. Extensive evaluations demonstrate that LongSplat achieves state-of-the-art efficiency-quality trade-offs in real-time novel view synthesis, delivering real-time reconstruction while reducing Gaussian counts by 44\% compared to existing per-pixel Gaussian prediction methods.
+
+<img width="1684" height="698" alt="image" src="https://github.com/user-attachcments/assets/9c87f367-fb33-4757-a971-6e0e5bc93858" />
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2507.16144) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+
+#### <summary>Unposed 3DGS Reconstruction with Probabilistic Procrustes Mapping
+> *similar with VGGT Long, Overlapping-frame correspondences are constructed to reformulate large-scale submap alignment as a probabilistic Procrustes problem.*
+
+Authors: Chong Cheng, Zijian Wang, Sicheng Yu, Yu Hu, Nanjie Yao, Hao Wang
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has emerged as a core technique for 3D representation. Its effectiveness largely depends on precise camera poses and accurate point cloud initialization, which are often derived from pretrained Multi-View Stereo (MVS) models. However, in unposed reconstruction task from hundreds of outdoor images, existing MVS models may struggle with memory limits and lose accuracy as the number of input images grows. To address this limitation, we propose a novel unposed 3DGS reconstruction framework that integrates pretrained MVS priors with the probabilistic Procrustes mapping strategy. The method partitions input images into subsets, maps submaps into a global space, and jointly optimizes geometry and poses with 3DGS. Technically, we formulate the mapping of tens of millions of point clouds as a probabilistic Procrustes problem and solve a closed-form alignment. By employing probabilistic coupling along with a soft dustbin mechanism to reject uncertain correspondences, our method globally aligns point clouds and poses within minutes across hundreds of images. Moreover, we propose a joint optimization framework for 3DGS and camera poses. It constructs Gaussians from confidence-aware anchor points and integrates 3DGS differentiable rendering with an analytical Jacobian to jointly refine scene and poses, enabling accurate reconstruction and pose estimation. Experiments on Waymo and KITTI datasets show that our method achieves accurate reconstruction from unposed image sequences, setting a new state of the art for unposed 3DGS reconstruction.
+
+<img width="1988" height="658" alt="image" src="https://github.com/user-attachments/assets/03afad6a-0efc-4396-9066-e326af13a018" />
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2507.18541) | [⌨️ Code] | [🌐 Project Page]
 
 
 
@@ -8994,6 +9024,63 @@ State-of-the-art 3D computer vision algorithms continue to advance in handling s
 [📃 arXiv:2507](https://arxiv.org/pdf/2507.14798) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Yume: An Interactive World Generation Model
+> *wasd for moving*
+
+Authors: Xiaofeng Mao, Shaoheng Lin, Zhen Li, Chuanhao Li, Wenshuo Peng, Tong He, Jiangmiao Pang, Mingmin Chi, Yu Qiao, Kaipeng Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+Yume aims to use images, text, or videos to create an interactive, realistic, and dynamic world, which allows exploration and control using peripheral devices or neural signals. In this report, we present a preview version of \method, which creates a dynamic world from an input image and allows exploration of the world using keyboard actions. To achieve this high-fidelity and interactive video world generation, we introduce a well-designed framework, which consists of four main components, including camera motion quantization, video generation architecture, advanced sampler, and model acceleration. First, we quantize camera motions for stable training and user-friendly interaction using keyboard inputs. Then, we introduce the Masked Video Diffusion Transformer~(MVDT) with a memory module for infinite video generation in an autoregressive manner. After that, training-free Anti-Artifact Mechanism (AAM) and Time Travel Sampling based on Stochastic Differential Equations (TTS-SDE) are introduced to the sampler for better visual quality and more precise control. Moreover, we investigate model acceleration by synergistic optimization of adversarial distillation and caching mechanisms. We use the high-quality world exploration dataset \sekai to train \method, and it achieves remarkable results in diverse scenes and applications.
+
+<img width="1610" height="737" alt="image" src="https://github.com/user-attachments/assets/f4a7e91c-0c6d-4960-ae68-8e3dad1cca50" />
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2507.17744) | [⌨️ Code](https://github.com/stdstu12/YUME) | [🌐 Project Page](https://stdstu12.github.io/YUME-Project/)
+
+
+
+#### <summary>VGGT-Long: Chunk it, Loop it, Align it -- Pushing VGGT's Limits on Kilometer-scale Long RGB Sequences
+> *a chunk-based processing strategy combined with overlapping alignment and lightweight loop closure optimization*
+
+Authors: Kai Deng, Zexin Ti, Jiawei Xu, Jian Yang, Jin Xie
+<details span>
+<summary><b>Abstract</b></summary>
+Foundation models for 3D vision have recently demonstrated remarkable capabilities in 3D perception. However, extending these models to large-scale RGB stream 3D reconstruction remains challenging due to memory limitations. In this work, we propose VGGT-Long, a simple yet effective system that pushes the limits of monocular 3D reconstruction to kilometer-scale, unbounded outdoor environments. Our approach addresses the scalability bottlenecks of existing models through a chunk-based processing strategy combined with overlapping alignment and lightweight loop closure optimization. Without requiring camera calibration, depth supervision or model retraining, VGGT-Long achieves trajectory and reconstruction performance comparable to traditional methods. We evaluate our method on KITTI, Waymo, and Virtual KITTI datasets. VGGT-Long not only runs successfully on long RGB sequences where foundation models typically fail, but also produces accurate and consistent geometry across various conditions. Our results highlight the potential of leveraging foundation models for scalable monocular 3D scene in real-world settings, especially for autonomous driving scenarios.
+
+<img width="2348" height="714" alt="image" src="https://github.com/user-attachments/assets/acb61aa3-a3d8-430a-92f4-d36b1eb39a13" />
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2507.16443) | [⌨️ Code](https://github.com/DengKaiCQ/VGGT-Long) | [🌐 Project Page]
+
+#### <summary>Dens3R: A Foundation Model for 3D Geometry Prediction
+> *3R for normal*
+
+Authors: Xianze Fang, Jingnan Gao, Zhe Wang, Zhuo Chen, Xingyu Ren, Jiangjing Lyu, Qiaomu Ren, Zhonglei Yang, Xiaokang Yang, Yichao Yan, Chengfei Lyu
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advances in dense 3D reconstruction have led to significant progress, yet achieving accurate unified geometric prediction remains a major challenge. Most existing methods are limited to predicting a single geometry quantity from input images. However, geometric quantities such as depth, surface normals, and point maps are inherently correlated, and estimating them in isolation often fails to ensure consistency, thereby limiting both accuracy and practical applicability. This motivates us to explore a unified framework that explicitly models the structural coupling among different geometric properties to enable joint regression. In this paper, we present Dens3R, a 3D foundation model designed for joint geometric dense prediction and adaptable to a wide range of downstream tasks. Dens3R adopts a two-stage training framework to progressively build a pointmap representation that is both generalizable and intrinsically invariant. Specifically, we design a lightweight shared encoder-decoder backbone and introduce position-interpolated rotary positional encoding to maintain expressive power while enhancing robustness to high-resolution inputs. By integrating image-pair matching features with intrinsic invariance modeling, Dens3R accurately regresses multiple geometric quantities such as surface normals and depth, achieving consistent geometry perception from single-view to multi-view inputs. Additionally, we propose a post-processing pipeline that supports geometrically consistent multi-view inference. Extensive experiments demonstrate the superior performance of Dens3R across various dense 3D prediction tasks and highlight its potential for broader applications.
+
+<img width="2124" height="722" alt="image" src="https://github.com/user-attachments/assets/ef271bb9-ae35-447f-8261-f8af6ad6b5df" />
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2507.16290) | [⌨️ Code](https://github.com/G-1nOnly/Dens3R) | [🌐 Project Page](https://g-1nonly.github.io/Dens3R/)
+
+#### <summary>LONG3R: Long Sequence Streaming 3D Reconstruction
+> *memory gating*
+
+Authors: Zhuoguang Chen, Minghui Qin, Tianyuan Yuan, Zhe Liu, Hang Zhao
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advancements in multi-view scene reconstruction have been significant, yet existing methods face limitations when processing streams of input images. These methods either rely on time-consuming offline optimization or are restricted to shorter sequences, hindering their applicability in real-time scenarios. In this work, we propose LONG3R (LOng sequence streaming 3D Reconstruction), a novel model designed for streaming multi-view 3D scene reconstruction over longer sequences. Our model achieves real-time processing by operating recurrently, maintaining and updating memory with each new observation. We first employ a memory gating mechanism to filter relevant memory, which, together with a new observation, is fed into a dual-source refined decoder for coarse-to-fine interaction. To effectively capture long-sequence memory, we propose a 3D spatio-temporal memory that dynamically prunes redundant spatial information while adaptively adjusting resolution along the scene. To enhance our model's performance on long sequences while maintaining training efficiency, we employ a two-stage curriculum training strategy, each stage targeting specific capabilities. Experiments demonstrate that LONG3R outperforms state-of-the-art streaming methods, particularly for longer sequences, while maintaining real-time inference speed. 
+
+<img width="1840" height="920" alt="image" src="https://github.com/user-attachments/assets/2a616235-8f03-4efc-8d98-e7f93fdeaf43" />
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2507.18255) | [⌨️ Code](https://github.com/zgchen33/LONG3R/) | [🌐 Project Page](https://zgchen33.github.io/LONG3R/)
 
 
 
