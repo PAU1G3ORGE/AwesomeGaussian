@@ -609,6 +609,19 @@ we propose GBR: Generative Bundle Refinement, a method for high-fidelity Gaussia
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.05908) | [⌨️ Code] | [🌐 Project Page](https://gbrnvs.github.io/)
 
+#### <summary>Gaussian Set Surface Reconstruction through Per-Gaussian Optimization
+>*enforce single-view normal consistency and multi-view photometric consistency on each Gaussian instance*
+
+Authors: Zhentao Huang, Di Wu, Zhenbang He, Minglun Gong
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) effectively synthesizes novel views through its flexible representation, yet fails to accurately reconstruct scene geometry. While modern variants like PGSR introduce additional losses to ensure proper depth and normal maps through Gaussian fusion, they still neglect individual placement optimization. This results in unevenly distributed Gaussians that deviate from the latent surface, complicating both reconstruction refinement and scene editing. Motivated by pioneering work on Point Set Surfaces, we propose Gaussian Set Surface Reconstruction (GSSR), a method designed to distribute Gaussians evenly along the latent surface while aligning their dominant normals with the surface normal. GSSR enforces fine-grained geometric alignment through a combination of pixel-level and Gaussian-level single-view normal consistency and multi-view photometric consistency, optimizing both local and global perspectives. To further refine the representation, we introduce an opacity regularization loss to eliminate redundant Gaussians and apply periodic depth- and normal-guided Gaussian reinitialization for a cleaner, more uniform spatial distribution. Our reconstruction results demonstrate significantly improved geometric precision in Gaussian placement, enabling intuitive scene editing and efficient generation of novel Gaussian-based 3D environments. Extensive experiments validate GSSR's effectiveness, showing enhanced geometric accuracy while preserving high-quality rendering performance.
+
+<img width="970" height="854" alt="image" src="https://github.com/user-attachments/assets/52b12e57-8eab-4761-849b-06c7b8cd4d13" />
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2507.18923) | [⌨️ Code] | [🌐 Project Page]
 
 
 
