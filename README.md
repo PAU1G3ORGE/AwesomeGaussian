@@ -6385,6 +6385,21 @@ Authors: Chong Cheng, Zijian Wang, Sicheng Yu, Yu Hu, Nanjie Yao, Hao Wang
 [📃 arXiv:2507](https://arxiv.org/pdf/2507.18541) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>Decomposing Densification in Gaussian Splatting for Faster 3D Scene Reconstruction
+> *the clone operation is mainly responsible for local refinement, while the split operation takes charge of the global diffusion. Coarse-to-fine: Qualitative and quantitative experiments have proved that the clone operation used for local refinement has led to the generation of a large number of redundant Gaussian primitives. Coarse:clone, fine:split and clone*
+
+Authors: Binxiao Huang, Zhengwu Liu, Ngai Wong
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (GS) has emerged as a powerful representation for high-quality scene reconstruction, offering compelling rendering quality. However, the training process of GS often suffers from slow convergence due to inefficient densification and suboptimal spatial distribution of Gaussian primitives. In this work, we present a comprehensive analysis of the split and clone operations during the densification phase, revealing their distinct roles in balancing detail preservation and computational efficiency. Building upon this analysis, we propose a global-to-local densification strategy, which facilitates more efficient growth of Gaussians across the scene space, promoting both global coverage and local refinement. To cooperate with the proposed densification strategy and promote sufficient diffusion of Gaussian primitives in space, we introduce an energy-guided coarse-to-fine multi-resolution training framework, which gradually increases resolution based on energy density in 2D images. Additionally, we dynamically prune unnecessary Gaussian primitives to speed up the training. Extensive experiments on MipNeRF-360, Deep Blending, and Tanks & Temples datasets demonstrate that our approach significantly accelerates training,achieving over 2x speedup with fewer Gaussian primitives and superior reconstruction performance.
+
+<img width="1848" height="547" alt="image" src="https://github.com/user-attachments/assets/45b1065a-8f95-47a5-acfc-c30c1eca8d2f" />
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2507.20239) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 <br>
 <br>
@@ -9095,6 +9110,18 @@ Recent advancements in multi-view scene reconstruction have been significant, ye
 
 [📃 arXiv:2507](https://arxiv.org/pdf/2507.18255) | [⌨️ Code](https://github.com/zgchen33/LONG3R/) | [🌐 Project Page](https://zgchen33.github.io/LONG3R/)
 
+
+#### <summary>Viser: Imperative, Web-based 3D Visualization in Python
+
+Authors: Brent Yi, Chung Min Kim, Justin Kerr, Gina Wu, Rebecca Feng, Anthony Zhang, Jonas Kulhanek, Hongsuk Choi, Yi Ma, Matthew Tancik, Angjoo Kanazawa
+<details span>
+<summary><b>Abstract</b></summary>
+We present Viser, a 3D visualization library for computer vision and robotics. Viser aims to bring easy and extensible 3D visualization to Python: we provide a comprehensive set of 3D scene and 2D GUI primitives, which can be used independently with minimal setup or composed to build specialized interfaces. This technical report describes Viser's features, interface, and implementation. Key design choices include an imperative-style API and a web-based viewer, which improve compatibility with modern programming patterns and workflows.
+
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2507.22885) | [⌨️ Code] | [🌐 Project Page](https://viser.studio/main/)
 
 
 #### <summary>
