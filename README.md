@@ -2795,6 +2795,19 @@ Novel view synthesis of urban scenes is essential for autonomous driving-related
 [📃 arXiv:2503](https://arxiv.org/pdf/2503.20168) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>No Pose at All: Self-Supervised Pose-Free 3D Gaussian Splatting from Sparse Views
+> *This unified architecture not only enhances computational efficiency but also facilitates joint feature learning for scene reconstruction and pose estimation, improving geometric consistency and mitigating the destabilizing feedback loop.*
+
+Authors: Ranran Huang, Krystian Mikolajczyk
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce SPFSplat, an efficient framework for 3D Gaussian splatting from sparse multi-view images, requiring no ground-truth poses during training or inference. It employs a shared feature extraction backbone, enabling simultaneous prediction of 3D Gaussian primitives and camera poses in a canonical space from unposed inputs within a single feed-forward step. Alongside the rendering loss based on estimated novel-view poses, a reprojection loss is integrated to enforce the learning of pixel-aligned Gaussian primitives for enhanced geometric constraints. This pose-free training paradigm and efficient one-step feed-forward design make SPFSplat well-suited for practical applications. Remarkably, despite the absence of pose supervision, SPFSplat achieves state-of-the-art performance in novel view synthesis even under significant viewpoint changes and limited image overlap. It also surpasses recent methods trained with geometry priors in relative pose estimation. 
+
+<img width="1820" height="486" alt="image" src="https://github.com/user-attachments/assets/fe98d378-656a-4403-836f-22c53ee1063c" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.01171) | [⌨️ Code](https://github.com/ranrhuang/SPFSplat) | [🌐 Project Page](https://ranrhuang.github.io/spfsplat/)
 
 <br>
 <br>
@@ -6399,6 +6412,20 @@ Authors: Binxiao Huang, Zhengwu Liu, Ngai Wong
 
 [📃 arXiv:2507](https://arxiv.org/pdf/2507.20239) | [⌨️ Code] | [🌐 Project Page]
 
+
+#### <summary>Can3Tok: Canonical 3D Tokenization and Latent Modeling of Scene-Level 3D Gaussians
+> *diffusion for denoising gaussians*
+
+Authors: Quankai Gao, Iliyan Georgiev, Tuanfeng Y. Wang, Krishna Kumar Singh, Ulrich Neumann, Jae Shin Yoon
+<details span>
+<summary><b>Abstract</b></summary>
+3D generation has made significant progress, however, it still largely remains at the object-level. Feedforward 3D scene-level generation has been rarely explored due to the lack of models capable of scaling-up latent representation learning on 3D scene-level data. Unlike object-level generative models, which are trained on well-labeled 3D data in a bounded canonical space, scene-level generations with 3D scenes represented by 3D Gaussian Splatting (3DGS) are unbounded and exhibit scale inconsistency across different scenes, making unified latent representation learning for generative purposes extremely challenging. In this paper, we introduce Can3Tok, the first 3D scene-level variational autoencoder (VAE) capable of encoding a large number of Gaussian primitives into a low-dimensional latent embedding, which effectively captures both semantic and spatial information of the inputs. Beyond model design, we propose a general pipeline for 3D scene data processing to address scale inconsistency issue. We validate our method on the recent scene-level 3D dataset DL3DV-10K, where we found that only Can3Tok successfully generalizes to novel 3D scenes, while compared methods fail to converge on even a few hundred scene inputs during training and exhibit zero generalization ability during inference. Finally, we demonstrate image-to-3DGS and text-to-3DGS generation as our applications to demonstrate its ability to facilitate downstream generation tasks.
+
+<img width="2086" height="532" alt="image" src="https://github.com/user-attachments/assets/af5c1715-c33e-4836-b89e-8d729eb0f7a5" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.01464) | [⌨️ Code](https://github.com/Zerg-Overmind/Can3Tok) | [🌐 Project Page](https://zerg-overmind.github.io/Can3Tok.github.io/)
 
 
 <br>
