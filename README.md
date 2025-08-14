@@ -6509,6 +6509,21 @@ Authors: Zexu Huang, Min Xu, Stuart Perry
 [📃 arXiv:2508](https://arxiv.org/pdf/2508.04099) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>CF3: Compact and Fast 3D Feature Fields
+>*merging redundant Gaussians*
+
+Authors: Hyunjoon Lee, Joonkyu Min, Jaesik Park
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has begun incorporating rich information from 2D foundation models. However, most approaches rely on a bottom-up optimization process that treats raw 2D features as ground truth, incurring increased computational costs. We propose a top-down pipeline for constructing compact and fast 3D Gaussian feature fields, namely, CF3. We first perform a fast weighted fusion of multi-view 2D features with pre-trained Gaussians. This approach enables training a per-Gaussian autoencoder directly on the lifted features, instead of training autoencoders in the 2D domain. As a result, the autoencoder better aligns with the feature distribution. More importantly, we introduce an adaptive sparsification method that optimizes the Gaussian attributes of the feature field while pruning and merging the redundant Gaussians, constructing an efficient representation with preserved geometric details. Our approach achieves a competitive 3D feature field using as little as 5% of the Gaussians compared to Feature-3DGS.
+
+<img width="2012" height="746" alt="image" src="https://github.com/user-attachments/assets/abd91988-8e7f-4928-8d81-2bbbc8db8c31" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.05254) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 <br>
 <br>
