@@ -885,6 +885,7 @@ Authors: Chong Cheng, Yu Hu, Sicheng Yu, Beizhen Zhao, Zijian Wang, Hao Wang
 
 
 
+
 <br>
 <br>
 
@@ -2808,6 +2809,38 @@ We introduce SPFSplat, an efficient framework for 3D Gaussian splatting from spa
 </details>
 
 [📃 arXiv:2508](https://arxiv.org/pdf/2508.01171) | [⌨️ Code](https://github.com/ranrhuang/SPFSplat) | [🌐 Project Page](https://ranrhuang.github.io/spfsplat/)
+
+
+#### <summary>MuGS: Multi-Baseline Generalizable Gaussian Splatting Reconstruction
+> *fuses multi-view stereo and monocular depth features, employs a projection–sampling mechanism to build fine-grained probability volumes*
+
+Authors: Yaopeng Lou, Liao Shen, Tianqi Liu, Jiaqi Li, Zihao Huang, Huiqiang Sun, Zhiguo Cao
+<details span>
+<summary><b>Abstract</b></summary>
+We present Multi-Baseline Gaussian Splatting (MuRF), a generalized feed-forward approach for novel view synthesis that effectively handles diverse baseline settings, including sparse input views with both small and large baselines. Specifically, we integrate features from Multi-View Stereo (MVS) and Monocular Depth Estimation (MDE) to enhance feature representations for generalizable reconstruction. Next, We propose a projection-and-sampling mechanism for deep depth fusion, which constructs a fine probability volume to guide the regression of the feature map. Furthermore, We introduce a reference-view loss to improve geometry and optimization efficiency. We leverage 3D Gaussian representations to accelerate training and inference time while enhancing rendering quality. MuRF achieves state-of-the-art performance across multiple baseline settings and diverse scenarios ranging from simple objects (DTU) to complex indoor and outdoor scenes (RealEstate10K). We also demonstrate promising zero-shot performance on the LLFF and Mip-NeRF 360 datasets.
+
+<img width="2380" height="736" alt="image" src="https://github.com/user-attachments/assets/f5c7d4b5-4437-48db-9fdb-0d5e49074c0c" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.04297) | [⌨️ Code] | [🌐 Project Page]
+
+
+#### <summary>CF3: Compact and Fast 3D Feature Fields
+> *merging redundant Gaussians*
+
+Authors: Hyunjoon Lee, Joonkyu Min, Jaesik Park
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has begun incorporating rich information from 2D foundation models. However, most approaches rely on a bottom-up optimization process that treats raw 2D features as ground truth, incurring increased computational costs. We propose a top-down pipeline for constructing compact and fast 3D Gaussian feature fields, namely, CF3. We first perform a fast weighted fusion of multi-view 2D features with pre-trained Gaussians. This approach enables training a per-Gaussian autoencoder directly on the lifted features, instead of training autoencoders in the 2D domain. As a result, the autoencoder better aligns with the feature distribution. More importantly, we introduce an adaptive sparsification method that optimizes the Gaussian attributes of the feature field while pruning and merging the redundant Gaussians, constructing an efficient representation with preserved geometric details. Our approach achieves a competitive 3D feature field using as little as 5% of the Gaussians compared to Feature-3DGS.
+
+<img width="1984" height="720" alt="image" src="https://github.com/user-attachments/assets/ab4045dc-cfed-4a84-a36b-8369d34b8561" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.05254) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 <br>
 <br>
@@ -6458,6 +6491,22 @@ Hyperparameter tuning in 3D Gaussian Splatting (3DGS) is a labor-intensive and e
 </details>
 
 [📃 arXiv:2508](https://arxiv.org/pdf/2508.04078) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+#### <summary>DET-GS: Depth- and Edge-Aware Regularization for High-Fidelity 3D Gaussian Splatting
+>*integrates multi-level depth consistency with edge-aware regularization—using Canny-generated semantic masks and edge-preserving TV smoothing*
+
+Authors: Zexu Huang, Min Xu, Stuart Perry
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) represents a significant advancement in the field of efficient and high-fidelity novel view synthesis. Despite recent progress, achieving accurate geometric reconstruction under sparse-view conditions remains a fundamental challenge. Existing methods often rely on non-local depth regularization, which fails to capture fine-grained structures and is highly sensitive to depth estimation noise. Furthermore, traditional smoothing methods neglect semantic boundaries and indiscriminately degrade essential edges and textures, consequently limiting the overall quality of reconstruction. In this work, we propose DET-GS, a unified depth and edge-aware regularization framework for 3D Gaussian Splatting. DET-GS introduces a hierarchical geometric depth supervision framework that adaptively enforces multi-level geometric consistency, significantly enhancing structural fidelity and robustness against depth estimation noise. To preserve scene boundaries, we design an edge-aware depth regularization guided by semantic masks derived from Canny edge detection. Furthermore, we introduce an RGB-guided edge-preserving Total Variation loss that selectively smooths homogeneous regions while rigorously retaining high-frequency details and textures. Extensive experiments demonstrate that DET-GS achieves substantial improvements in both geometric accuracy and visual fidelity, outperforming state-of-the-art (SOTA) methods on sparse-view novel view synthesis benchmarks.
+
+<img width="2202" height="720" alt="image" src="https://github.com/user-attachments/assets/797f40b0-abe4-4162-a4c4-7307e95f425f" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.04099) | [⌨️ Code] | [🌐 Project Page]
 
 
 
