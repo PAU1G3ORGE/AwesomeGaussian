@@ -2984,6 +2984,22 @@ Recent advancements in neural rendering, particularly 2D Gaussian Splatting (2DG
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.01823) | [⌨️ Code](https://github.com/TimSong412/HDGS) | [🌐 Project Page](https://timsong412.github.io/HDGS-ProjPage/)
 
 
+#### <summary>Low-Frequency First: Eliminating Floating Artifacts in 3D Gaussian Splatting
+> *selectively expands under-optimized Gaussians to prioritize low-frequency learning, thereby eliminating floating artifacts in 3D Gaussian Splatting*
+
+Authors: Jianchao Wang, Peng Zhou, Cen Li, Rong Quan, Jie Qin
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) is a powerful and computationally efficient representation for 3D reconstruction. Despite its strengths, 3DGS often produces floating artifacts, which are erroneous structures detached from the actual geometry and significantly degrade visual fidelity. The underlying mechanisms causing these artifacts, particularly in low-quality initialization scenarios, have not been fully explored. In this paper, we investigate the origins of floating artifacts from a frequency-domain perspective and identify under-optimized Gaussians as the primary source. Based on our analysis, we propose \textit{Eliminating-Floating-Artifacts} Gaussian Splatting (EFA-GS), which selectively expands under-optimized Gaussians to prioritize accurate low-frequency learning. Additionally, we introduce complementary depth-based and scale-based strategies to dynamically refine Gaussian expansion, effectively mitigating detail erosion. Extensive experiments on both synthetic and real-world datasets demonstrate that EFA-GS substantially reduces floating artifacts while preserving high-frequency details, achieving an improvement of 1.68 dB in PSNR over baseline method on our RWLQ dataset. Furthermore, we validate the effectiveness of our approach in downstream 3D editing tasks.
+
+<img width="1046" height="586" alt="image" src="https://github.com/user-attachments/assets/52be8aa6-9aa3-4037-ba6a-30f8c3335ab4" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.02493) | [⌨️ Code](https://github.com/jcwang-gh/EFA-GS) | [🌐 Project Page](https://jcwang-gh.github.io/EFA-GS/)
+
+
+
 <br>
 <br>
 
@@ -6426,6 +6442,23 @@ Authors: Quankai Gao, Iliyan Georgiev, Tuanfeng Y. Wang, Krishna Kumar Singh, Ul
 </details>
 
 [📃 arXiv:2508](https://arxiv.org/pdf/2508.01464) | [⌨️ Code](https://github.com/Zerg-Overmind/Can3Tok) | [🌐 Project Page](https://zerg-overmind.github.io/Can3Tok.github.io/)
+
+
+
+#### <summary>RLGS: Reinforcement Learning-Based Adaptive Hyperparameter Tuning for Gaussian Splatting
+> *adaptively tunes key hyperparameters in 3D Gaussian Splatting during training, boosting reconstruction quality without manual parameter search*
+
+Authors: Zhan Li, Huangying Zhan, Changyang Li, Qingan Yan, Yi Xu
+<details span>
+<summary><b>Abstract</b></summary>
+Hyperparameter tuning in 3D Gaussian Splatting (3DGS) is a labor-intensive and expert-driven process, often resulting in inconsistent reconstructions and suboptimal results. We propose RLGS, a plug-and-play reinforcement learning framework for adaptive hyperparameter tuning in 3DGS through lightweight policy modules, dynamically adjusting critical hyperparameters such as learning rates and densification thresholds. The framework is model-agnostic and seamlessly integrates into existing 3DGS pipelines without architectural modifications. We demonstrate its generalization ability across multiple state-of-the-art 3DGS variants, including Taming-3DGS and 3DGS-MCMC, and validate its robustness across diverse datasets. RLGS consistently enhances rendering quality. For example, it improves Taming-3DGS by 0.7dB PSNR on the Tanks and Temple (TNT) dataset, under a fixed Gaussian budget, and continues to yield gains even when baseline performance saturates. Our results suggest that RLGS provides an effective and general solution for automating hyperparameter tuning in 3DGS training, bridging a gap in applying reinforcement learning to 3DGS.
+
+<img width="2120" height="784" alt="image" src="https://github.com/user-attachments/assets/3ee29f5e-460c-4197-9ec8-d56c3cd11423" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.04078) | [⌨️ Code] | [🌐 Project Page]
+
 
 
 <br>
