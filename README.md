@@ -6525,6 +6525,35 @@ Authors: Hyunjoon Lee, Joonkyu Min, Jaesik Park
 
 
 
+#### <summary>ReferSplat: Referring Segmentation in 3D Gaussian Splatting
+>*Gaussian Position Feature Extraction*
+
+Authors: Shuting He, Guangquan Jie, Changshuo Wang, Yun Zhou, Shuming Hu, Guanbin Li, Henghui Ding
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce Referring 3D Gaussian Splatting Segmentation (R3DGS), a new task that aims to segment target objects in a 3D Gaussian scene based on natural language descriptions, which often contain spatial relationships or object attributes. This task requires the model to identify newly described objects that may be occluded or not directly visible in a novel view, posing a significant challenge for 3D multi-modal understanding. Developing this capability is crucial for advancing embodied AI. To support research in this area, we construct the first R3DGS dataset, Ref-LERF. Our analysis reveals that 3D multi-modal understanding and spatial relationship modeling are key challenges for R3DGS. To address these challenges, we propose ReferSplat, a framework that explicitly models 3D Gaussian points with natural language expressions in a spatially aware paradigm. ReferSplat achieves state-of-the-art performance on both the newly proposed R3DGS task and 3D open-vocabulary segmentation benchmarks.
+
+<img width="1556" height="538" alt="image" src="https://github.com/user-attachments/assets/1d9cbc19-8105-40b9-99c8-d4cdb9d3303a" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.08252) | [⌨️ Code](https://github.com/heshuting555/ReferSplat) | [🌐 Project Page]
+
+
+#### <summary>ExploreGS: Explorable 3D Scene Reconstruction with Virtual Camera Samplings and Diffusion Priors
+>*a novel view sampling strategy that strategically positions virtual cameras based on information gain. a high view frustum overlap between a training viewpoint and a virtual viewpoint implies many co-visible 3D Gaussians, leading to more conflicts. For the pixel level confidence, we define it as the perceptual distance between the rendered image IV and the output of the diffusion model IG*
+
+Authors: Minsu Kim, Subin Jeon, In Cho, Mijin Yoo, Seon Joo Kim
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advances in novel view synthesis (NVS) have enabled real-time rendering with 3D Gaussian Splatting (3DGS). However, existing methods struggle with artifacts and missing regions when rendering from viewpoints that deviate from the training trajectory, limiting seamless scene exploration. To address this, we propose a 3DGS-based pipeline that generates additional training views to enhance reconstruction. We introduce an information-gain-driven virtual camera placement strategy to maximize scene coverage, followed by video diffusion priors to refine rendered results. Fine-tuning 3D Gaussians with these enhanced views significantly improves reconstruction quality. To evaluate our method, we present Wild-Explore, a benchmark designed for challenging scene exploration. Experiments demonstrate that our approach outperforms existing 3DGS-based methods, enabling high-quality, artifact-free rendering from arbitrary viewpoints.
+
+ <img width="2074" height="762" alt="image" src="https://github.com/user-attachments/assets/86474539-3029-419d-bae7-fa6eacbde750" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.06014) | [⌨️ Code] | [🌐 Project Page](https://exploregs.github.io/)
+
 <br>
 <br>
 
