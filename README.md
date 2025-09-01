@@ -2,7 +2,7 @@
 
 <br>
 
-[Surface](#Surface) | [Sparse View](#Sparse-View) | [Structured](#Structured) | [Large Scale](#Large-Scale) | [Edit](#Edit) | [SLAM](#SLAM) | [Noisy Poses](#Noisy-Poses) | [Generalizable](#Generalizable) | [High Frequency Details](#High-Frequency-Details) | [Anti-Aliasing](#Anti-Aliasing) | [Hyperspectral](#Hyperspectral) | [Event Camera](#Event-Camera) | [Dynamic](#Dynamic) | [Others](#Others)  | [Not Gaussian](#Not-Gaussian)
+[Surface](#Surface) | [Sparse View](#Sparse-View) | [Continual Learning](#Continua-Learning)| [Structured](#Structured) | [Large Scale](#Large-Scale) | [Edit](#Edit) | [SLAM](#SLAM) | [Noisy Poses](#Noisy-Poses) | [Generalizable](#Generalizable) | [High Frequency Details](#High-Frequency-Details) | [Anti-Aliasing](#Anti-Aliasing) | [Hyperspectral](#Hyperspectral) | [Event Camera](#Event-Camera) | [Dynamic](#Dynamic) | [Others](#Others)  | [Not Gaussian](#Not-Gaussian)
 
 <br>
 
@@ -882,7 +882,40 @@ Authors: Chong Cheng, Yu Hu, Sicheng Yu, Beizhen Zhao, Zijian Wang, Hao Wang
 [📃 arXiv:2507](https://arxiv.org/pdf/2507.08136) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>GSFixer: Improving 3D Gaussian Splatting with Reference-Guided Video Diffusion Priors
+>*conditioned on VGGT and Dino features*
 
+Authors: Xingyilang Yin, Qi Zhang, Jiahao Chang, Ying Feng, Qingnan Fan, Xi Yang, Chi-Man Pun, Huaqi Zhang, Xiaodong Cun
+<details span>
+<summary><b>Abstract</b></summary>
+Reconstructing 3D scenes using 3D Gaussian Splatting (3DGS) from sparse views is an ill-posed problem due to insufficient information, often resulting in noticeable artifacts. While recent approaches have sought to leverage generative priors to complete information for under-constrained regions, they struggle to generate content that remains consistent with input observations. To address this challenge, we propose GSFixer, a novel framework designed to improve the quality of 3DGS representations reconstructed from sparse inputs. The core of our approach is the reference-guided video restoration model, built upon a DiT-based video diffusion model trained on paired artifact 3DGS renders and clean frames with additional reference-based conditions. Considering the input sparse views as references, our model integrates both 2D semantic features and 3D geometric features of reference views extracted from the visual geometry foundation model, enhancing the semantic coherence and 3D consistency when fixing artifact novel views. Furthermore, considering the lack of suitable benchmarks for 3DGS artifact restoration evaluation, we present DL3DV-Res which contains artifact frames rendered using low-quality 3DGS. Extensive experiments demonstrate our GSFixer outperforms current state-of-the-art methods in 3DGS artifact restoration and sparse-view 3D reconstruction.
+
+<img width="1508" height="1094" alt="image" src="https://github.com/user-attachments/assets/3b7b59c0-cbfe-414e-a126-aeec4f6fd28b" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.09667) | [⌨️ Code](https://github.com/GVCLab/GSFixer) | [🌐 Project Page]
+
+
+
+<br>
+<br>
+
+## Continual Learning
+
+#### <summary>GaussianUpdate: Continual 3D Gaussian Splatting Update for Changing Environments
+>*combines 3D Gaussian representation with continual learning for the first time*
+
+Authors: Lin Zeng, Boming Zhao, Jiarui Hu, Xujie Shen, Ziqiang Dang, Hujun Bao, Zhaopeng Cui
+<details span>
+<summary><b>Abstract</b></summary>
+Novel view synthesis with neural models has advanced rapidly in recent years, yet adapting these models to scene changes remains an open problem. Existing methods are either labor-intensive, requiring extensive model retraining, or fail to capture detailed types of changes over time. In this paper, we present GaussianUpdate, a novel approach that combines 3D Gaussian representation with continual learning to address these challenges. Our method effectively updates the Gaussian radiance fields with current data while preserving information from past scenes. Unlike existing methods, GaussianUpdate explicitly models different types of changes through a novel multi-stage update strategy. Additionally, we introduce a visibility-aware continual learning approach with generative replay, enabling self-aware updating without the need to store images. The experiments on the benchmark dataset demonstrate our method achieves superior and real-time rendering with the capability of visualizing changes over different times.
+
+<img width="1580" height="902" alt="image" src="https://github.com/user-attachments/assets/151b0536-d753-4cfd-8607-b3bf0cd348d8" />
+
+</details>
+
+[📃 arXiv:2507](https://arxiv.org/pdf/2508.08867) | [⌨️ Code] | [🌐 Project Page]
 
 
 
@@ -6554,6 +6587,37 @@ Recent advances in novel view synthesis (NVS) have enabled real-time rendering w
 
 [📃 arXiv:2508](https://arxiv.org/pdf/2508.06014) | [⌨️ Code] | [🌐 Project Page](https://exploregs.github.io/)
 
+#### <summary>Novel View Synthesis with Gaussian Splatting: Impact on Photogrammetry Model Accuracy and Resolution
+>*The integration of GSplat-rendered images into the photogrammetry workflow*
+
+Authors: Pranav Chougule
+<details span>
+<summary><b>Abstract</b></summary>
+In this paper, I present a comprehensive study comparing Photogrammetry and Gaussian Splatting techniques for 3D model reconstruction and view synthesis. I created a dataset of images from a real-world scene and constructed 3D models using both methods. To evaluate the performance, I compared the models using structural similarity index (SSIM), peak signal-to-noise ratio (PSNR), learned perceptual image patch similarity (LPIPS), and lp/mm resolution based on the USAF resolution chart. A significant contribution of this work is the development of a modified Gaussian Splatting repository, which I forked and enhanced to enable rendering images from novel camera poses generated in the Blender environment. This innovation allows for the synthesis of high-quality novel views, showcasing the flexibility and potential of Gaussian Splatting. My investigation extends to an augmented dataset that includes both original ground images and novel views synthesized via Gaussian Splatting. This augmented dataset was employed to generate a new photogrammetry model, which was then compared against the original photogrammetry model created using only the original images. The results demonstrate the efficacy of using Gaussian Splatting to generate novel high-quality views and its potential to improve photogrammetry-based 3D reconstructions. The comparative analysis highlights the strengths and limitations of both approaches, providing valuable information for applications in extended reality (XR), photogrammetry, and autonomous vehicle simulations.
+
+<img width="2046" height="1026" alt="image" src="https://github.com/user-attachments/assets/c154a7fc-a179-4f16-b436-102fcf41db79" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.07483) | [⌨️ Code](https://github.com/pranavc2255/gaussian-splatting-novel-view-render) | [🌐 Project Page]
+
+#### <summary>SkySplat: Generalizable 3D Gaussian Splatting from Multi-Temporal Sparse Satellite Images
+>*Interesting!*
+
+Authors: Xuejun Huang, Xinyi Liu, Yi Wan, Zhi Zheng, Bin Zhang, Mingtao Xiong, Yingying Pei, Yongjun Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+Three-dimensional scene reconstruction from sparse-view satellite images is a long-standing and challenging task. While 3D Gaussian Splatting (3DGS) and its variants have recently attracted attention for its high efficiency, existing methods remain unsuitable for satellite images due to incompatibility with rational polynomial coefficient (RPC) models and limited generalization capability. Recent advances in generalizable 3DGS approaches show potential, but they perform poorly on multi-temporal sparse satellite images due to limited geometric constraints, transient objects, and radiometric inconsistencies. To address these limitations, we propose SkySplat, a novel self-supervised framework that integrates the RPC model into the generalizable 3DGS pipeline, enabling more effective use of sparse geometric cues for improved reconstruction. SkySplat relies only on RGB images and radiometric-robust relative height supervision, thereby eliminating the need for ground-truth height maps. Key components include a Cross-Self Consistency Module (CSCM), which mitigates transient object interference via consistency-based masking, and a multi-view consistency aggregation strategy that refines reconstruction results. Compared to per-scene optimization methods, SkySplat achieves an 86 times speedup over EOGS with higher accuracy. It also outperforms generalizable 3DGS baselines, reducing MAE from 13.18 m to 1.80 m on the DFC19 dataset significantly, and demonstrates strong cross-dataset generalization on the MVS3D benchmark.
+
+<img width="1834" height="826" alt="image" src="https://github.com/user-attachments/assets/ee7b207e-2e04-42b9-b3b4-86da57b1cf9f" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.09479) | [⌨️ Code] | [🌐 Project Page]
+
+
+
+
 <br>
 <br>
 
@@ -9275,6 +9339,36 @@ We present Viser, a 3D visualization library for computer vision and robotics. V
 </details>
 
 [📃 arXiv:2507](https://arxiv.org/pdf/2507.22885) | [⌨️ Code] | [🌐 Project Page](https://viser.studio/main/)
+
+
+#### <summary>STream3R: Scalable Sequential 3D Reconstruction with Causal Transformer
+> *streaming, like CUT3R*
+
+Authors: Yushi Lan, Yihang Luo, Fangzhou Hong, Shangchen Zhou, Honghua Chen, Zhaoyang Lyu, Shuai Yang, Bo Dai, Chen Change Loy, Xingang Pan
+<details span>
+<summary><b>Abstract</b></summary>
+We present STream3R, a novel approach to 3D reconstruction that reformulates pointmap prediction as a decoder-only Transformer problem. Existing state-of-the-art methods for multi-view reconstruction either depend on expensive global optimization or rely on simplistic memory mechanisms that scale poorly with sequence length. In contrast, STream3R introduces an streaming framework that processes image sequences efficiently using causal attention, inspired by advances in modern language modeling. By learning geometric priors from large-scale 3D datasets, STream3R generalizes well to diverse and challenging scenarios, including dynamic scenes where traditional methods often fail. Extensive experiments show that our method consistently outperforms prior work across both static and dynamic scene benchmarks. Moreover, STream3R is inherently compatible with LLM-style training infrastructure, enabling efficient large-scale pretraining and fine-tuning for various downstream 3D tasks. Our results underscore the potential of causal Transformer models for online 3D perception, paving the way for real-time 3D understanding in streaming environments.
+
+<img width="1936" height="1006" alt="image" src="https://github.com/user-attachments/assets/59ce39a6-e43c-4c15-9eda-c597d910ab9d" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.10893) | [⌨️ Code](https://github.com/NIRVANALAN/STream3R) | [🌐 Project Page](https://nirvanalan.github.io/projects/stream3r/)
+
+
+#### <summary>DINOv3
+> *streaming, like CUT3R*
+
+Authors: Oriane Siméoni, Huy V. Vo, Maximilian Seitzer, Federico Baldassarre, Maxime Oquab, Cijo Jose, Vasil Khalidov, Marc Szafraniec, Seungeun Yi, Michaël Ramamonjisoa, Francisco Massa, Daniel Haziza, Luca Wehrstedt, Jianyuan Wang, Timothée Darcet, Théo Moutakanni, Leonel Sentana, Claire Roberts, Andrea Vedaldi, Jamie Tolan, John Brandt, Camille Couprie, Julien Mairal, Hervé Jégou, Patrick Labatut, Piotr Bojanowski
+<details span>
+<summary><b>Abstract</b></summary>
+Self-supervised learning holds the promise of eliminating the need for manual data annotation, enabling models to scale effortlessly to massive datasets and larger architectures. By not being tailored to specific tasks or domains, this training paradigm has the potential to learn visual representations from diverse sources, ranging from natural to aerial images -- using a single algorithm. This technical report introduces DINOv3, a major milestone toward realizing this vision by leveraging simple yet effective strategies. First, we leverage the benefit of scaling both dataset and model size by careful data preparation, design, and optimization. Second, we introduce a new method called Gram anchoring, which effectively addresses the known yet unsolved issue of dense feature maps degrading during long training schedules. Finally, we apply post-hoc strategies that further enhance our models' flexibility with respect to resolution, model size, and alignment with text. As a result, we present a versatile vision foundation model that outperforms the specialized state of the art across a broad range of settings, without fine-tuning. DINOv3 produces high-quality dense features that achieve outstanding performance on various vision tasks, significantly surpassing previous self- and weakly-supervised foundation models. We also share the DINOv3 suite of vision models, designed to advance the state of the art on a wide spectrum of tasks and data by providing scalable solutions for diverse resource constraints and deployment scenarios.
+
+<img width="1268" height="950" alt="image" src="https://github.com/user-attachments/assets/623989d7-ff04-4b90-8716-33ed46e7519f" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.10104) | [⌨️ Code](https://github.com/facebookresearch/dinov3) | [🌐 Project Page](https://ai.meta.com/dinov3/)
 
 
 #### <summary>
