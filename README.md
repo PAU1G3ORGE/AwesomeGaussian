@@ -6616,6 +6616,19 @@ Three-dimensional scene reconstruction from sparse-view satellite images is a lo
 [📃 arXiv:2508](https://arxiv.org/pdf/2508.09479) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>G-CUT3R: Guided 3D Reconstruction with Camera and Depth Prior Integration
+>*CUT3R + camera pose token*
+
+Authors: Ramil Khafizov, Artem Komarichev, Ruslan Rakhimov, Peter Wonka, Evgeny Burnaev
+<details span>
+<summary><b>Abstract</b></summary>
+We introduce G-CUT3R, a novel feed-forward approach for guided 3D scene reconstruction that enhances the CUT3R model by integrating prior information. Unlike existing feed-forward methods that rely solely on input images, our method leverages auxiliary data, such as depth, camera calibrations, or camera positions, commonly available in real-world scenarios. We propose a lightweight modification to CUT3R, incorporating a dedicated encoder for each modality to extract features, which are fused with RGB image tokens via zero convolution. This flexible design enables seamless integration of any combination of prior information during inference. Evaluated across multiple benchmarks, including 3D reconstruction and other multi-view tasks, our approach demonstrates significant performance improvements, showing its ability to effectively utilize available priors while maintaining compatibility with varying input modalities.
+
+<img width="1920" height="855" alt="image" src="https://github.com/user-attachments/assets/5c05eceb-164b-4666-983e-f90a9bc4bf7e" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.11379) | [⌨️ Code] | [🌐 Project Page]
 
 
 <br>
