@@ -1861,6 +1861,19 @@ Radiance field methods such as 3D Gaussian Splatting (3DGS) allow easy reconstru
 
 [📃 arXiv:2505](https://repo-sam.inria.fr/nerphys/on-the-fly-nvs/onthefly_nvs.pdf) | [⌨️ Code] | [🌐 Project Page](https://repo-sam.inria.fr/nerphys/on-the-fly-nvs/)
 
+#### <summary>LongSplat: Robust Unposed 3D Gaussian Splatting for Casual Long Videos
+>*gpu friendly, unposed large scale gaussian*
+
+Authors: Chin-Yang Lin, Cheng Sun, Fu-En Yang, Min-Hung Chen, Yen-Yu Lin, Yu-Lun Liu
+<details span>
+<summary><b>Abstract</b></summary>
+LongSplat addresses critical challenges in novel view synthesis (NVS) from casually captured long videos characterized by irregular camera motion, unknown camera poses, and expansive scenes. Current methods often suffer from pose drift, inaccurate geometry initialization, and severe memory limitations. To address these issues, we introduce LongSplat, a robust unposed 3D Gaussian Splatting framework featuring: (1) Incremental Joint Optimization that concurrently optimizes camera poses and 3D Gaussians to avoid local minima and ensure global consistency; (2) a robust Pose Estimation Module leveraging learned 3D priors; and (3) an efficient Octree Anchor Formation mechanism that converts dense point clouds into anchors based on spatial density. Extensive experiments on challenging benchmarks demonstrate that LongSplat achieves state-of-the-art results, substantially improving rendering quality, pose accuracy, and computational efficiency compared to prior approaches.
+
+<img width="1900" height="625" alt="image" src="https://github.com/user-attachments/assets/45165524-8970-4fe2-9b31-2e3f2aa630a0" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.14041) | [⌨️ Code](https://github.com/NVlabs/LongSplat) | [🌐 Project Page](https://linjohnss.github.io/longsplat/)
 
 
 <br>
@@ -6646,6 +6659,21 @@ We introduce G-CUT3R, a novel feed-forward approach for guided 3D scene reconstr
 
 [📃 arXiv:2508](https://arxiv.org/pdf/2508.11379) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>Enhancing Novel View Synthesis from extremely sparse views with SfM-free 3D Gaussian Splatting Framework
+>*gpu friendly*
+
+Authors: Zongqi He, Hanmin Li, Kin-Chung Chan, Yushen Zuo, Hao Xie, Zhe Xiao, Jun Xiao, Kin-Man Lam
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3DGS) has demonstrated remarkable real-time performance in novel view synthesis, yet its effectiveness relies heavily on dense multi-view inputs with precisely known camera poses, which are rarely available in real-world scenarios. When input views become extremely sparse, the Structure-from-Motion (SfM) method that 3DGS depends on for initialization fails to accurately reconstruct the 3D geometric structures of scenes, resulting in degraded rendering quality. In this paper, we propose a novel SfM-free 3DGS-based method that jointly estimates camera poses and reconstructs 3D scenes from extremely sparse-view inputs. Specifically, instead of SfM, we propose a dense stereo module to progressively estimates camera pose information and reconstructs a global dense point cloud for initialization. To address the inherent problem of information scarcity in extremely sparse-view settings, we propose a coherent view interpolation module that interpolates camera poses based on training view pairs and generates viewpoint-consistent content as additional supervision signals for training. Furthermore, we introduce multi-scale Laplacian consistent regularization and adaptive spatial-aware multi-scale geometry regularization to enhance the quality of geometrical structures and rendered content. Experiments show that our method significantly outperforms other state-of-the-art 3DGS-based approaches, achieving a remarkable 2.75dB improvement in PSNR under extremely sparse-view conditions (using only 2 training views). The images synthesized by our method exhibit minimal distortion while preserving rich high-frequency details, resulting in superior visual quality compared to existing techniques.
+
+<img width="2116" height="780" alt="image" src="https://github.com/user-attachments/assets/cdc95199-ae34-4959-a750-00c2464289c8" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.15457) | [⌨️ Code] | [🌐 Project Page]
+
+
 
 <br>
 <br>
@@ -9411,6 +9439,20 @@ Monocular 3D object detectors, while effective on data from one ego camera heigh
 </details>
 
 [📃 arXiv:2508](https://arxiv.org/pdf/2508.11185) | [⌨️ Code] | [🌐 Project Page]
+
+#### <summary>GSFix3D: Diffusion-Guided Repair of Novel Views in Gaussian Splatting
+> *need mesh*
+
+Authors: Jiaxin Wei, Stefan Leutenegger, Simon Schaefer
+<details span>
+<summary><b>Abstract</b></summary>
+Recent developments in 3D Gaussian Splatting have significantly enhanced novel view synthesis, yet generating high-quality renderings from extreme novel viewpoints or partially observed regions remains challenging. Meanwhile, diffusion models exhibit strong generative capabilities, but their reliance on text prompts and lack of awareness of specific scene information hinder accurate 3D reconstruction tasks. To address these limitations, we introduce GSFix3D, a novel framework that improves the visual fidelity in under-constrained regions by distilling prior knowledge from diffusion models into 3D representations, while preserving consistency with observed scene details. At its core is GSFixer, a latent diffusion model obtained via our customized fine-tuning protocol that can leverage both mesh and 3D Gaussians to adapt pretrained generative models to a variety of environments and artifact types from different reconstruction methods, enabling robust novel view repair for unseen camera poses. Moreover, we propose a random mask augmentation strategy that empowers GSFixer to plausibly inpaint missing regions. Experiments on challenging benchmarks demonstrate that our GSFix3D and GSFixer achieve state-of-the-art performance, requiring only minimal scene-specific fine-tuning on captured data. Real-world test further confirms its resilience to potential pose errors. Our code and data will be made publicly available. 
+
+<img width="1780" height="416" alt="image" src="https://github.com/user-attachments/assets/dd450b10-968d-44fd-ba17-093089d10d8f" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.14717) | [⌨️ Code] | [🌐 Project Page](https://gsfix3d.github.io/)
 
 
 
