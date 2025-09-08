@@ -9370,7 +9370,6 @@ We present STream3R, a novel approach to 3D reconstruction that reformulates poi
 
 
 #### <summary>DINOv3
-> *streaming, like CUT3R*
 
 Authors: Oriane Siméoni, Huy V. Vo, Maximilian Seitzer, Federico Baldassarre, Maxime Oquab, Cijo Jose, Vasil Khalidov, Marc Szafraniec, Seungeun Yi, Michaël Ramamonjisoa, Francisco Massa, Daniel Haziza, Luca Wehrstedt, Jianyuan Wang, Timothée Darcet, Théo Moutakanni, Leonel Sentana, Claire Roberts, Andrea Vedaldi, Jamie Tolan, John Brandt, Camille Couprie, Julien Mairal, Hervé Jégou, Patrick Labatut, Piotr Bojanowski
 <details span>
@@ -9382,6 +9381,23 @@ Self-supervised learning holds the promise of eliminating the need for manual da
 </details>
 
 [📃 arXiv:2508](https://arxiv.org/pdf/2508.10104) | [⌨️ Code](https://github.com/facebookresearch/dinov3) | [🌐 Project Page](https://ai.meta.com/dinov3/)
+
+#### <summary>CHARM3R: Towards Unseen Camera Height Robust Monocular 3D Detector
+> *mathematically prove and also empirically observe consistent negative and positive trends in mean depth error of regressed and ground-based depth models, respectively, under camera height changes*
+
+Authors: Abhinav Kumar, Yuliang Guo, Zhihao Zhang, Xinyu Huang, Liu Ren, Xiaoming Liu
+<details span>
+<summary><b>Abstract</b></summary>
+Monocular 3D object detectors, while effective on data from one ego camera height, struggle with unseen or out-of-distribution camera heights. Existing methods often rely on Plucker embeddings, image transformations or data augmentation. This paper takes a step towards this understudied problem by first investigating the impact of camera height variations on state-of-the-art (SoTA) Mono3D models. With a systematic analysis on the extended CARLA dataset with multiple camera heights, we observe that depth estimation is a primary factor influencing performance under height variations. We mathematically prove and also empirically observe consistent negative and positive trends in mean depth error of regressed and ground-based depth models, respectively, under camera height changes. To mitigate this, we propose Camera Height Robust Monocular 3D Detector (CHARM3R), which averages both depth estimates within the model. CHARM3R improves generalization to unseen camera heights by more than 45%, achieving SoTA performance on the CARLA dataset.
+
+<img width="1070" height="637" alt="image" src="https://github.com/user-attachments/assets/a902e055-58cc-41fa-aa84-ad0148af1861" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.11185) | [⌨️ Code] | [🌐 Project Page]
+
+
+
 
 
 #### <summary>
