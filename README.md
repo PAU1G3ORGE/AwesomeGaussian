@@ -623,6 +623,22 @@ Authors: Zhentao Huang, Di Wu, Zhenbang He, Minglun Gong
 
 [📃 arXiv:2507](https://arxiv.org/pdf/2507.18923) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>MeshSplat: Generalizable Sparse-View Surface Reconstruction via Gaussian Splatting
+>*Weighted Chamfer Distance Loss*
+
+Authors: Hanzhi Chang, Ruijie Zhu, Wenjie Chang, Mulin Yu, Yanzhe Liang, Jiahao Lu, Zhuoyuan Li, Tianzhu Zhang
+<details span>
+<summary><b>Abstract</b></summary>
+Surface reconstruction has been widely studied in computer vision and graphics. However, existing surface reconstruction works struggle to recover accurate scene geometry when the input views are extremely sparse. To address this issue, we propose MeshSplat, a generalizable sparse-view surface reconstruction framework via Gaussian Splatting. Our key idea is to leverage 2DGS as a bridge, which connects novel view synthesis to learned geometric priors and then transfers these priors to achieve surface reconstruction. Specifically, we incorporate a feed-forward network to predict per-view pixel-aligned 2DGS, which enables the network to synthesize novel view images and thus eliminates the need for direct 3D ground-truth supervision. To improve the accuracy of 2DGS position and orientation prediction, we propose a Weighted Chamfer Distance Loss to regularize the depth maps, especially in overlapping areas of input views, and also a normal prediction network to align the orientation of 2DGS with normal vectors predicted by a monocular normal estimator. Extensive experiments validate the effectiveness of our proposed improvement, demonstrating that our method achieves state-of-the-art performance in generalizable sparse-view mesh reconstruction tasks.
+
+<img width="1540" height="675" alt="image" src="https://github.com/user-attachments/assets/0b06f73d-0b3c-439d-9d18-d68fb6146828" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2508.17811) | [⌨️ Code](https://github.com/HanzhiChang/MeshSplat) | [🌐 Project Page](https://hanzhichang.github.io/meshsplat_web/)
+
+
+
 
 
 <br>
