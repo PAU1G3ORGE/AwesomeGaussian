@@ -2920,6 +2920,8 @@ Authors: Hyunjoon Lee, Joonkyu Min, Jaesik Park
 
 
 
+
+
 <br>
 <br>
 
@@ -6690,6 +6692,23 @@ Authors: Zongqi He, Hanmin Li, Kin-Chung Chan, Yushen Zuo, Hao Xie, Zhe Xiao, Ju
 [📃 arXiv:2508](https://arxiv.org/pdf/2508.15457) | [⌨️ Code] | [🌐 Project Page]
 
 
+#### <summary>CoRe-GS: Coarse-to-Refined Gaussian Splatting with Semantic Object Focus
+>*Point-of-Interest refinement*
+
+Authors: Hannah Schieber, Dominik Frischmann, Simon Boche, Victor Schaack, Angela Schoellig, Stefan Leutenegger, Daniel Roth
+<details span>
+<summary><b>Abstract</b></summary>
+Mobile reconstruction for autonomous aerial robotics holds strong potential for critical applications such as tele-guidance and disaster response. These tasks demand both accurate 3D reconstruction and fast scene processing. Instead of reconstructing the entire scene in detail, it is often more efficient to focus on specific objects, i.e., points of interest (PoIs). Mobile robots equipped with advanced sensing can usually detect these early during data acquisition or preliminary analysis, reducing the need for full-scene optimization. Gaussian Splatting (GS) has recently shown promise in delivering high-quality novel view synthesis and 3D representation by an incremental learning process. Extending GS with scene editing, semantics adds useful per-splat features to isolate objects effectively.
+Semantic 3D Gaussian editing can already be achieved before the full training cycle is completed, reducing the overall training time. Moreover, the semantically relevant area, the PoI, is usually already known during capturing. To balance high-quality reconstruction with reduced training time, we propose CoRe-GS. We first generate a coarse segmentation-ready scene with semantic GS and then refine it for the semantic object using our novel color-based effective filtering for effective object isolation. This is speeding up the training process to be about a quarter less than a full training cycle for semantic GS. We evaluate our approach on two datasets, SCRREAM (real-world, outdoor) and NeRDS 360 (synthetic, indoor), showing reduced runtime and higher novel-view-synthesis quality.
+
+<img width="1930" height="793" alt="image" src="https://github.com/user-attachments/assets/62fee32e-a270-469f-9ec4-605dce40f4e0" />
+
+</details>
+
+[📃 arXiv:2509](https://arxiv.org/pdf/2509.04859) | [⌨️ Code] | [🌐 Project Page]
+
+
+
 
 <br>
 <br>
@@ -9470,6 +9489,21 @@ Recent developments in 3D Gaussian Splatting have significantly enhanced novel v
 
 [📃 arXiv:2508](https://arxiv.org/pdf/2508.14717) | [⌨️ Code] | [🌐 Project Page](https://gsfix3d.github.io/)
 
+
+
+#### <summary>WinT3R: Window-Based Streaming Reconstruction with Camera Token Pool
+> *CUT3R with sliding window*
+
+Authors: Zizun Li, Jianjun Zhou, Yifan Wang, Haoyu Guo, Wenzheng Chang, Yang Zhou, Haoyi Zhu, Junyi Chen, Chunhua Shen, Tong He
+<details span>
+<summary><b>Abstract</b></summary>
+We present WinT3R, a feed-forward reconstruction model capable of online prediction of precise camera poses and high-quality point maps. Previous methods suffer from a trade-off between reconstruction quality and real-time performance. To address this, we first introduce a sliding window mechanism that ensures sufficient information exchange among frames within the window, thereby improving the quality of geometric predictions without large computation. In addition, we leverage a compact representation of cameras and maintain a global camera token pool, which enhances the reliability of camera pose estimation without sacrificing efficiency. These designs enable WinT3R to achieve state-of-the-art performance in terms of online reconstruction quality, camera pose estimation, and reconstruction speed, as validated by extensive experiments on diverse datasets.
+
+<img width="1640" height="733" alt="image" src="https://github.com/user-attachments/assets/13249b68-9c04-4036-96a4-b4601460814a" />
+
+</details>
+
+[📃 arXiv:2508](https://arxiv.org/pdf/2509.05296) | [⌨️ Code](https://github.com/LiZizun/WinT3R?tab=readme-ov-file) | [🌐 Project Page](https://lizizun.github.io/WinT3R.github.io/)
 
 
 
