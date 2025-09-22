@@ -6691,6 +6691,21 @@ Authors: Zongqi He, Hanmin Li, Kin-Chung Chan, Yushen Zuo, Hao Xie, Zhe Xiao, Ju
 
 [📃 arXiv:2508](https://arxiv.org/pdf/2508.15457) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>SSGaussian: Semantic-Aware and Structure-Preserving 3D Style Transfer
+>*Style Transfer, 3090Ti*
+
+Authors: Jimin Xu, Bosheng Qin, Tao Jin, Zhou Zhao, Zhenhui Ye, Jun Yu, Fei Wu
+<details span>
+<summary><b>Abstract</b></summary>
+Recent advancements in neural representations, such as Neural Radiance Fields and 3D Gaussian Splatting, have increased interest in applying style transfer to 3D scenes. While existing methods can transfer style patterns onto 3D-consistent neural representations, they struggle to effectively extract and transfer high-level style semantics from the reference style image. Additionally, the stylized results often lack structural clarity and separation, making it difficult to distinguish between different instances or objects within the 3D scene. To address these limitations, we propose a novel 3D style transfer pipeline that effectively integrates prior knowledge from pretrained 2D diffusion models. Our pipeline consists of two key stages: First, we leverage diffusion priors to generate stylized renderings of key viewpoints. Then, we transfer the stylized key views onto the 3D representation. This process incorporates two innovative designs. The first is cross-view style alignment, which inserts cross-view attention into the last upsampling block of the UNet, allowing feature interactions across multiple key views. This ensures that the diffusion model generates stylized key views that maintain both style fidelity and instance-level consistency. The second is instance-level style transfer, which effectively leverages instance-level consistency across stylized key views and transfers it onto the 3D representation. This results in a more structured, visually coherent, and artistically enriched stylization. Extensive qualitative and quantitative experiments demonstrate that our 3D style transfer pipeline significantly outperforms state-of-the-art methods across a wide range of scenes, from forward-facing to challenging 360-degree environments. 
+
+<img width="1670" height="1173" alt="image" src="https://github.com/user-attachments/assets/74b97a8b-1b41-43c6-bfce-71bf3135893d" />
+
+</details>
+
+[📃 arXiv:2509](https://arxiv.org/pdf/2509.04379) | [⌨️ Code] | [🌐 Project Page](https://jm-xu.github.io/SSGaussian/)
+
+
 
 #### <summary>CoRe-GS: Coarse-to-Refined Gaussian Splatting with Semantic Object Focus
 >*Point-of-Interest refinement*
