@@ -2918,7 +2918,19 @@ Authors: Hyunjoon Lee, Joonkyu Min, Jaesik Park
 
 [📃 arXiv:2508](https://arxiv.org/pdf/2508.05254) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>Segmentation-Driven Initialization for Sparse-view 3D Gaussian Splatting
+> *leveraging region-based segmentation to identify and retain only structurally significant regions*
 
+Authors: Yi-Hsin Li, Thomas Sikora, Sebastian Knorr, Måarten Sjöström
+<details span>
+<summary><b>Abstract</b></summary>
+Sparse-view synthesis remains a challenging problem due to the difficulty of recovering accurate geometry and appearance from limited observations. While recent advances in 3D Gaussian Splatting (3DGS) have enabled real-time rendering with competitive quality, existing pipelines often rely on Structure-from-Motion (SfM) for camera pose estimation, an approach that struggles in genuinely sparse-view settings. Moreover, several SfM-free methods replace SfM with multi-view stereo (MVS) models, but generate massive numbers of 3D Gaussians by back-projecting every pixel into 3D space, leading to high memory costs. We propose Segmentation-Driven Initialization for Gaussian Splatting (SDI-GS), a method that mitigates inefficiency by leveraging region-based segmentation to identify and retain only structurally significant regions. This enables selective downsampling of the dense point cloud, preserving scene fidelity while substantially reducing Gaussian count. Experiments across diverse benchmarks show that SDI-GS reduces Gaussian count by up to 50% and achieves comparable or superior rendering quality in PSNR and SSIM, with only marginal degradation in LPIPS. It further enables faster training and lower memory footprint, advancing the practicality of 3DGS for constrained-view scenarios.
+
+<img width="2128" height="993" alt="image" src="https://github.com/user-attachments/assets/ffb9f15b-6e61-466a-bfa6-859d6a8b49de" />
+
+</details>
+
+[📃 arXiv:2509](https://arxiv.org/pdf/2509.11853) | [⌨️ Code] | [🌐 Project Page]
 
 
 
