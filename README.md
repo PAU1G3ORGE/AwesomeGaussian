@@ -3024,6 +3024,18 @@ Recently, 3D Gaussian Splatting (3D-GS) has prevailed in novel view synthesis, a
 
 [📃 arXiv:2412](https://arxiv.org/pdf/2412.07494) | [⌨️ Code] | [🌐 Project Page]
 
+#### <summary>Re-Activating Frozen Primitives for 3D Gaussian Splatting
+
+Authors: Yuxin Cheng, Binxiao Huang, Wenyong Zhou, Taiqiang Wu, Zhengwu Liu, Graziano Chesi, Ngai Wong
+<details span>
+<summary><b>Abstract</b></summary>
+3D Gaussian Splatting (3D-GS) achieves real-time photorealistic novel view synthesis, yet struggles with complex scenes due to over-reconstruction artifacts, manifesting as local blurring and needle-shape distortions. While recent approaches attribute these issues to insufficient splitting of large-scale Gaussians, we identify two fundamental limitations: gradient magnitude dilution during densification and the primitive frozen phenomenon, where essential Gaussian densification is inhibited in complex regions while suboptimally scaled Gaussians become trapped in local optima. To address these challenges, we introduce ReAct-GS, a method founded on the principle of re-activation. Our approach features: (1) an importance-aware densification criterion incorporating -blending weights from multiple viewpoints to re-activate stalled primitive growth in complex regions, and (2) a re-activation mechanism that revitalizes frozen primitives through adaptive parameter perturbations. Comprehensive experiments across diverse real-world datasets demonstrate that ReAct-GS effectively eliminates over-reconstruction artifacts and achieves state-of-the-art performance on standard novel view synthesis metrics while preserving intricate geometric details. Additionally, our re-activation mechanism yields consistent improvements when integrated with other 3D-GS variants such as Pixel-GS, demonstrating its broad applicability.
+
+<img width="2061" height="711" alt="image" src="https://github.com/user-attachments/assets/8e84b928-2f91-4235-8afe-ebe4a3ae59dc" />
+
+</details>
+
+[📃 arXiv:2412](https://arxiv.org/pdf/2510.19653) | [⌨️ Code] | [🌐 Project Page](https://react-gs.github.io/)
 
 
 <br>
